@@ -1,0 +1,10 @@
+Current Working Dir is[\\10.184.129.235\Kiosk K1\Gavin\AutoInstall\Puma\AutoInstall\AutoIT\].
+$_szCurPath is \\10.184.129.235\Kiosk K1\Gavin\AutoInstall\Puma\AutoInstall\AutoIT\
+$strCfgFileName is AutoBat.cfg
+$strPlatformCfg is Global
+$_InstallToolName is PrinterServer2.0-Setup.exe
+$_InstallToolPath is E:\AutoInstall\BuildPath\
+$_IsSkip is 1
+$_InstallationLanguage is 0
+$_delay is 250
+Skip installing RadSuite.

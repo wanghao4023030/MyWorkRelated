@@ -1,0 +1,5 @@
+bcp "select * from [OCRConfigDB].[dbo].[KeyField]                   "   queryout FolderPath\KeyField.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from [OCRConfigDB].[dbo].[KeyFields]                   "   queryout FolderPath\KeyFields.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from [OCRConfigDB].[dbo].[ROI]                   "   queryout FolderPath\ROI.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from [OCRConfigDB].[dbo].[ROICoord]                   "   queryout FolderPath\ROICoord.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from [OCRConfigDB].[dbo].[SCUIdentity]                   "   queryout FolderPath\SCUIdentity.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$

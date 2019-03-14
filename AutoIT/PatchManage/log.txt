@@ -1,0 +1,20 @@
+**********************Search file****************************
+Start query the patch files, the file list is follow:
+Windows6.1-KB2656356-x64.msu
+Windows6.1-KB2871997-v2-x64.msu
+Windows6.1-KB2894844-x64.msu
+Windows6.1-KB3072305-x64.msu
+******************************************************
+**********************Install patch****************************
+Start install the patch files, the file list is follow:
+Try to install patch Windows6.1-KB2656356-x64.msu
+Try to install patch Windows6.1-KB2871997-v2-x64.msu
+Try to install patch Windows6.1-KB2894844-x64.msu
+Try to install patch Windows6.1-KB3072305-x64.msu
+******************************************************
+**********************Install Check****************************
+Windows6.1-KB2656356-x64.msu install successfully.
+Windows6.1-KB2871997-v2-x64.msu install successfully.
+Windows6.1-KB2894844-x64.msu install successfully.
+Windows6.1-KB3072305-x64.msu install successfully.
+******************************************************

@@ -1,0 +1,57 @@
+
+主机名:           WIN-PL9OCPPDP2R
+OS 名称:          Microsoft Windows Server 2008 R2 Standard 
+OS 版本:          6.1.7601 Service Pack 1 Build 7601
+OS 制造商:        Microsoft Corporation
+OS 配置:          独立服务器
+OS 构件类型:      Multiprocessor Free
+注册的所有人:     Windows 用户
+注册的组织:       
+产品 ID:          00477-001-0000421-84352
+初始安装日期:     2018/7/20, 18:55:32
+系统启动时间:     2018/7/23, 16:50:10
+系统制造商:       Dell Inc.
+系统型号:         OptiPlex 990
+系统类型:         x64-based PC
+处理器:           安装了 1 个处理器。
+                  [01]: Intel64 Family 6 Model 42 Stepping 7 GenuineIntel ~3401 Mhz
+BIOS 版本:        Dell Inc. A13, 2012/4/2
+Windows 目录:     C:\Windows
+系统目录:         C:\Windows\system32
+启动设备:         \Device\HarddiskVolume1
+系统区域设置:     zh-cn;中文(中国)
+输入法区域设置:   zh-cn;中文(中国)
+时区:             (UTC+08:00) 北京，重庆，香港特别行政区，乌鲁木齐
+物理内存总量:     18,313 MB
+可用的物理内存:   14,972 MB
+虚拟内存: 最大值: 36,624 MB
+虚拟内存: 可用:   33,281 MB
+虚拟内存: 使用中: 3,343 MB
+页面文件位置:     C:\pagefile.sys
+域:               WORKGROUP
+登录服务器:       \\WIN-PL9OCPPDP2R
+修补程序:         安装了 16 个修补程序。
+                  [01]: KB2849697
+                  [02]: KB2849696
+                  [03]: KB2841134
+                  [04]: KB2841134
+                  [05]: KB2670838
+                  [06]: KB2656356
+                  [07]: KB2685811
+                  [08]: KB2729094
+                  [09]: KB2786081
+                  [10]: KB2834140
+                  [11]: KB2871997
+                  [12]: KB2882822
+                  [13]: KB2894844
+                  [14]: KB3072305
+                  [15]: KB976902
+                  [16]: KB4019264
+网卡:             安装了 1 个 NIC。
+                  [01]: Intel(R) 82579LM Gigabit Network Connection
+                      连接名:      本地连接
+                      启用 DHCP:   是
+                      DHCP 服务器: 10.127.254.89
+                      IP 地址
+                        [01]: 10.112.8.181
+                        [02]: fe80::d565:1516:3a:7984

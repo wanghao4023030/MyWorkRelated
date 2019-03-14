@@ -1,0 +1,5 @@
+bcp OCRConfigDB.dbo.KeyField     IN FolderPath\KeyField.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp OCRConfigDB.dbo.KeyFields                     IN FolderPath\KeyFields.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp OCRConfigDB.dbo.ROI   IN FolderPath\ROI.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp OCRConfigDB.dbo.ROICoord                   IN FolderPath\ROICoord.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp OCRConfigDB.dbo.SCUIdentity                    IN FolderPath\SCUIdentity.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$

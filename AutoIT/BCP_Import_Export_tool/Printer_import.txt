@@ -1,0 +1,8 @@
+bcp printer.dbo.AutoForwardRule IN FolderPath\AutoForwardRule.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp printer.dbo.DeliveryJob     IN FolderPath\DeliveryJob.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp printer.dbo.ImageBox        IN FolderPath\ImageBox.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp printer.dbo.Media           IN FolderPath\Media.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp printer.dbo.OCRCache        IN FolderPath\OCRCache.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp printer.dbo.Page            IN FolderPath\Page.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp printer.dbo.PLut            IN FolderPath\PLut.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp printer.dbo.Session         IN FolderPath\Session.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$

@@ -1,0 +1,23 @@
+**********************Search file****************************
+Start query the patch files, the file list is follow:
+1: windows10.0-kb3211320-x64.msu
+2: windows10.0-kb4010672-x64.msu
+3: windows10.0-kb4091664-v5-x64.msu
+4: windows10.0-kb4132216-x64.msu
+5: windows10.0-kb4462917-x64.msu
+******************************************************
+**********************Install patch****************************
+Start install the patch files, the file list is follow:
+1: Try to install patch windows10.0-kb3211320-x64.msu
+2: Try to install patch windows10.0-kb4010672-x64.msu
+3: Try to install patch windows10.0-kb4091664-v5-x64.msu
+4: Try to install patch windows10.0-kb4132216-x64.msu
+5: Try to install patch windows10.0-kb4462917-x64.msu
+******************************************************
+**********************Install Check****************************
+1: windows10.0-kb3211320-x64.msu install successfully.
+2: windows10.0-kb4010672-x64.msu install successfully.
+3: windows10.0-kb4091664-v5-x64.msu install failed.
+4: windows10.0-kb4132216-x64.msu install successfully.
+5: windows10.0-kb4462917-x64.msu install successfully.
+******************************************************

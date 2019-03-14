@@ -1,0 +1,7 @@
+1. 使用相应的exe进行数据的导入到入。
+2. 按照txt内容中的格式进行数据准备 FolderPath会被程序自动替换
+3. 文件格式为 folder_flag， 
+	比如 aaa_import.txt，表示根据txt文中的内容，从aaa folder中读取数据导入import到数据库中。
+	比如 aaa_export.txt，表示根据txt文中的内容，出数据库中export到folder aaa中， 数据的名称根据txt文中的内容进行命名。
+
+注意： 导入操作不会触发约束和触发器

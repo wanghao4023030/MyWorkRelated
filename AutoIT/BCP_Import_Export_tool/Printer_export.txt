@@ -1,0 +1,8 @@
+bcp "select * from printer.dbo.AutoForwardRule " queryout FolderPath\AutoForwardRule.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from printer.dbo.DeliveryJob     " queryout FolderPath\DeliveryJob.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from printer.dbo.ImageBox        " queryout FolderPath\ImageBox.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from printer.dbo.Media           " queryout FolderPath\Media.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from printer.dbo.OCRCache        " queryout FolderPath\OCRCache.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from printer.dbo.Page            " queryout FolderPath\Page.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from printer.dbo.PLut            " queryout FolderPath\PLut.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from printer.dbo.Session         " queryout FolderPath\Session.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$

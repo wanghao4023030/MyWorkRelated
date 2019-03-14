@@ -1,0 +1,22 @@
+bcp wggc.dbo.Patient                   IN FolderPath\Patient.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.Study                     IN FolderPath\Study.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.AFP_PrintTerminalInfo     IN FolderPath\AFP_PrintTerminalInfo.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.Series                    IN FolderPath\Series.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.Image                     IN FolderPath\Image.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.AFP_Department            IN FolderPath\AFP_Department.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.AFP_FilmInfo              IN FolderPath\AFP_FilmInfo.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.AFP_PrintTaskOfFilm       IN FolderPath\AFP_PrintTaskOfFilm.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.AFP_ReportInfo            IN FolderPath\AFP_ReportInfo.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.AFP_ExamInfo              IN FolderPath\AFP_ExamInfo.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.AFP_PrintTaskOfReport     IN FolderPath\AFP_PrintTaskOfReport.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.AFP_PrintTask             IN FolderPath\AFP_PrintTask.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.users                     IN FolderPath\users.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.UserProfile               IN FolderPath\UserProfile.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.T_Integration_ExamInfo    IN FolderPath\T_Integration_ExamInfo.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.T_Integration_Dictionary  IN FolderPath\T_Integration_Dictionary.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.AFP_PrintMode 	       IN FolderPath\AFP_PrintMode.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.AFP_Parameters            IN FolderPath\AFP_Parameters.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.AFP_ModalityTypeExt       IN FolderPath\AFP_ModalityTypeExt.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.PrinterReg                IN FolderPath\PrinterReg.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.NetAE                     IN FolderPath\NetAE.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.vi_KIOSK_ExamInfo_Order   IN FolderPath\vi_KIOSK_ExamInfo_Order.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$

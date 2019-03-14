@@ -1,0 +1,48 @@
+
+主机名:           WIN-2NPOL9V2GUH
+OS 名称:          Microsoft Windows Server 2016 Standard Evaluation
+OS 版本:          10.0.14393 暂缺 Build 14393
+OS 制造商:        Microsoft Corporation
+OS 配置:          独立服务器
+OS 构件类型:      Multiprocessor Free
+注册的所有人:     Windows 用户
+注册的组织:       
+产品 ID:          00378-00000-00000-AA739
+初始安装日期:     2018/10/8, 16:39:42
+系统启动时间:     2018/10/17, 12:31:27
+系统制造商:       Microsoft Corporation
+系统型号:         Virtual Machine
+系统类型:         x64-based PC
+处理器:           安装了 1 个处理器。
+                  [01]: Intel64 Family 6 Model 63 Stepping 2 GenuineIntel ~2397 Mhz
+BIOS 版本:        American Megatrends Inc. 090006 , 2012/5/23
+Windows 目录:     C:\Windows
+系统目录:         C:\Windows\system32
+启动设备:         \Device\HarddiskVolume1
+系统区域设置:     zh-cn;中文(中国)
+输入法区域设置:   zh-cn;中文(中国)
+时区:             (UTC+08:00) 北京，重庆，香港特别行政区，乌鲁木齐
+物理内存总量:     8,096 MB
+可用的物理内存:   5,436 MB
+虚拟内存: 最大值: 9,376 MB
+虚拟内存: 可用:   6,540 MB
+虚拟内存: 使用中: 2,836 MB
+页面文件位置:     C:\pagefile.sys
+域:               WORKGROUP
+登录服务器:       \\WIN-2NPOL9V2GUH
+修补程序:         安装了 6 个修补程序。
+                  [01]: KB3192137
+                  [02]: KB3211320
+                  [03]: KB4132216
+                  [04]: KB4462917
+                  [05]: KB3213986
+                  [06]: KB4010672
+网卡:             安装了 1 个 NIC。
+                  [01]: Microsoft Hyper-V Network Adapter
+                      连接名:      以太网
+                      启用 DHCP:   是
+                      DHCP 服务器: 10.127.254.137
+                      IP 地址
+                        [01]: 10.184.129.245
+                        [02]: fe80::4ef:22db:9067:d120
+Hyper-V 要求:     已检测到虚拟机监控程序。将不显示 Hyper-V 所需的功能。

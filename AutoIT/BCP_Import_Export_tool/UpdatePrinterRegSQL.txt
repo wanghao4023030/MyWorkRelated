@@ -1,0 +1,18 @@
+USE WGGC
+GO
+
+DECLARE @PrinterRegPrinterName             VARCHAR(100)
+DECLARE @NetAEDBID             VARCHAR(100)
+Declare cursor_printer cursor forward_only For 
+select PrinterName from wggc.dbo.PrinterReg;
+open cursor_printer
+fetch next from cursor_printer into @PrinterRegPrinterName
+while @@FETCH_STATUS =0 
+begin
+	Set @NetAEDBID = (select NetAEDBID from wggc.dbo.NetAE where NetAEName = @PrinterRegPrinterName)
+	update  wggc.dbo.PrinterReg set NetAEConfigDBID = @NetAEDBID where printerName =@PrinterRegPrinterName
+	fetch next from cursor_printer into @PrinterRegPrinterName
+end 
+close cursor_printer
+deallocate cursor_printer
+go
