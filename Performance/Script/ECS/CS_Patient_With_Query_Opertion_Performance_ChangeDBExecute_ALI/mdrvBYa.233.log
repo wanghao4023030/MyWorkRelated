@@ -1,0 +1,32 @@
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Starting action A_Patient_Register.	[MsgId: MMSG-15919]
+A_Patient_Register.c(25): web_set_max_html_param_len started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(25): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(42): web_reg_save_param started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(42): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+A_Patient_Register.c(44): Notify: Transaction "Patient operations_ Get2DCodeImage" started.	[MsgId: MMSG-16999]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(46): Continuing after Error -26377: No match found for the requested parameter "Get2DCodeImageResult". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 10240 bytes. The total length of the response is 300 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") highest severity level was "continue on error", 300 body bytes, 231 header bytes  	[MsgId: MMSG-26388]
+A_Patient_Register.c(46): Continuing after error in Vuser script.	[MsgId: MMSG-10678]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(74): Error: Get2DCodeImage from CS operations failed. The http response content size is 0!	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 9.	[MsgId: MMSG-10545]
+B_Patient_ReportOperation_Query.c(51): Notify: Transaction "Report Create Paper report" started.	[MsgId: MMSG-16999]
+B_Patient_ReportOperation_Query.c(53): web_custom_request("Create_PaperReport") started  	[MsgId: MMSG-26355]
+B_Patient_ReportOperation_Query.c(53): web_custom_request("Create_PaperReport") was successful, 377 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+B_Patient_ReportOperation_Query.c(69): Notify: Transaction "Report Create Paper report" ended with a "Pass" status (Duration: 0.1862 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+B_Patient_ReportOperation_Query.c(72): web_get_int_property started  	[MsgId: MMSG-26355]
+B_Patient_ReportOperation_Query.c(72): web_get_int_property was successful  	[MsgId: MMSG-26392]
+B_Patient_ReportOperation_Query.c(84): Error: PS Synchronize Create Paper report failed. The http response content is not true!	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

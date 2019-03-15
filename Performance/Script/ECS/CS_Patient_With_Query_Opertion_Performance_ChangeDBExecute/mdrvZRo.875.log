@@ -1,0 +1,7 @@
+Start auto log messages stack.	[MsgId: MMSG-10546]
+Virtual User Script started at : 2018/3/22 10:18:18	[MsgId: MMSG-15967]
+Starting action vuser_init.	[MsgId: MMSG-15919]
+vuser_init.c(23): Error: Can't connect to MySQL server on '10.184.129.203' (10061)	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

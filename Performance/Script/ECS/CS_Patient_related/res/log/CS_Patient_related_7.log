@@ -1,0 +1,1984 @@
+Virtual User Script started at : 2018/3/9 14:43:25	[MsgId: MMSG-15967]
+Starting action vuser_init.	[MsgId: MMSG-15919]
+Web Services replay version 12.53.0 for Windows 10; Toolkit: ".Net"; build 1203	[MsgId: MMSG-108728]
+Run-Time Settings file: "C:\Users\19007296_local\AppData\Local\Temp\lr5tmpdirOd0.730\lrcfgU1I.737\cfgFkW.738"	[MsgId: MMSG-108727]
+Vuser directory: "D:\ECS\CS_Patient_related"	[MsgId: MMSG-108726]
+Vuser output directory: "D:\ECS\CS_Patient_related"	[MsgId: MMSG-108725]
+LOCAL start date/time : 2018-03-09 14:43:25	[MsgId: MMSG-108724]
+Ending action vuser_init.	[MsgId: MMSG-15918]
+Running Vuser...	[MsgId: MMSG-15964]
+Starting iteration 1.	[MsgId: MMSG-15968]
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(38): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309144325.134"	[MsgId: MMSG-13992]
+Action.c(39): Notify: Saving Parameter "strCurrentDateTime = 20180309144325134".	[MsgId: MMSG-13798]
+Action.c(43): Warning: The string 'RandForLoop' with parameter delimiters is not a parameter.	[MsgId: MWAR-13987]
+Action.c(51): Notify: Transaction "Patient Get2DCodeImage" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "1"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180309144325134"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "1"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "QRCodeErrorCorrect" =  "0"	[MsgId: MMSG-13992]
+Action.c(53): t=44668ms: Connecting [0] to host 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(53): t=44668ms: Connected socket [0] from 127.0.0.1:36591 to 127.0.0.1:8888 in 0 ms  	[MsgId: MMSG-26000]
+Action.c(53): t=44668ms: 340-byte request headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=1)
+Action.c(53):     POST http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx HTTP/1.1\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Cache-Control: no-cache\r\n
+Action.c(53):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)\r\n
+Action.c(53):     Accept-Encoding: gzip, deflate\r\n
+Action.c(53):     Accept: */*\r\n
+Action.c(53):     Proxy-Connection: Keep-Alive\r\n
+Action.c(53):     Host: 10.184.129.203\r\n
+Action.c(53):     Content-Length: 886\r\n
+Action.c(53):     \r\n
+Action.c(53): t=44668ms: 886-byte request body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=1)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(53):     oap:Header><wsa:Action>http://tempuri.org/Get2DCodeImage</wsa:Action><wsa:MessageID>uuid:8
+Action.c(53):     1afdc9a-7c24-4600-8714-05e9250c0a31</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+Action.c(53):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+Action.c(53):     ://10.184.129.203/CenterInfoServer/CenterPrintService.asmx</wsa:To></soap:Header><soap:Bod
+Action.c(53):     y><Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>1</hospitalID><patientID>E201803
+Action.c(53):     091443251341</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>0</QR
+Action.c(53):     CodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+Action.c(53): t=44994ms: 231-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=1)
+Action.c(53):     HTTP/1.1 200 OK\r\n
+Action.c(53):     Cache-Control: private, max-age=0\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Server: Microsoft-IIS/7.5\r\n
+Action.c(53):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(53):     X-Powered-By: ASP.NET\r\n
+Action.c(53):     Date: Fri, 09 Mar 2018 06:43:38 GMT\r\n
+Action.c(53):     Content-Length: 2636\r\n
+Action.c(53):     \r\n
+Action.c(53): t=44994ms: 2636-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=1)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema"><soap:Body><Get2DCodeImageResponse xmlns="http://tempuri.org/">
+Action.c(53):     <Get2DCodeImageResult>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U
+Action.c(53):     HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMj
+Action.c(53):     IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAmACYDASIAAhEBAxEB/8QAHwAAAQUB
+Action.c(53):     AQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBka
+Action.c(53):     EII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqD
+Action.c(53):     hIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09f
+Action.c(53):     b3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+Action.c(53):     BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZG
+Action.c(53):     VmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+Action.c(53):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guEltTO7zm3UYwk5JMh
+Action.c(53):     BDflbs7q9v9Fs/DWu3/wDZmnXHl6c9toIjtRI7TshdleAFWkLpmNSOIbrcFaNohQ0y1vtK0fUovD9lpVzaeUbhYdOW
+Action.c(53):     5uLkNIyXNrE5WJHC+WQUmdWZSkirLCzgpPYS3E3h620D/hKII9An2XGh6ne6cJ7u0RUDSDf5iqjQblQyIH2b2IKCJ/
+Action.c(53):     KAGXc2taN45imstPtNOjkt7qKxudSgNtHADbW+biJC0jKFY9DGTHFlHYJGRDPY2B8y+tb/AE+SUzXo1F7O8sJDqM9v
+Action.c(53):     LeWEssskUbPEyEAoVVFOYThc+Yqmk3mq6Z45vU8LaDd362yT6fi3lkFvHcxW0QjWeRkjWVIyHhXc+SoDhQ53S4nijU
+Action.c(53):     p/D1nHrFpNAratdzXaapZW8qvBHdna7xQzfNHIyWu5XaRQfOkWPcFLoAdv8LdHv9P8QwyahZQC6FpeCW6tNEksIyjP
+Action.c(53):     aeUhLQRBmykx6HAzzRVz4TJJI82qvpMek2+rvcXdjYtHADFCFtl3RlAjhGI5GwghI2JB+aUoA5fWJJptev2szaXPiH
+Action.c(53):     RLKY3U+oAiW3nMkEkc0bTo4aIcrkRwxp+9kzEsiYuWWpa2niOx1XwvZz6/YXenzx2MlnHLa2qOibYxLGyoixpIkyLE
+Action.c(53):     ZDhWDAeYS8sfhrQfC1ta6ddPp8hnvHgiiu1sLmKKEGWGOIxTm0XLyRqpMpKkSEmMx+YWXI2rF4f2alrUeqXFo9joEe
+Action.c(53):     luGZrSUGIyQtGkLK4LxyMHCvn7JGuZgzpQBb1Q6ddWN1rx1Gx1H+1bu3t4LO2sGt42aSZWLeSom8zzfKMpkbLb7ZYm
+Action.c(53):     V8PCKljf6VDp9osNzH5c6S3kt7Z6jHLqMbpaGae45YyxSzquxkDhY3gG4yI5V9u18R67F4c0CDW9M+xy20S3cEetRC
+Action.c(53):     4uby4t3dpnEssmYFI8sb2QmMTMwxHGXXM1XQ7nXbC38E29tqVtrEaPJql1dXLwRX7q6xiUQxI3nI00qN58kalkhOXy
+Action.c(53):     GZQDs/hnoMS+Jta8TQXvmNfxKl9FbF4oFvvNkM6mGX96rJiPG/H+tcgAMFUrD+C+lrbXun6jb2EbQXuju73yKxCurw
+Action.c(53):     xmPIgiUEmJiVLSnKFgw3M0hQBc0f4W6xp+rWmoSQWK3Qi0+2uZV1R3Qx20luxZIvsyncwthwXwNxrUHw716TQW0ldT
+Action.c(53):     0ay81Le5lvUsHuLr7eI1SWdXeQBXOwESBQ2XY8MNzFFABpXw91Wx8RSSJLHY6VPZNbN9h1ORZ4z5CRxn/VASGIK6IX
+Action.c(53):     ONpV9ok3tJXk+F17La6l9sXTdUmjeM6Kl5NL5VqqyqSjIQ0aoyxRFhEiZ3yRrsTaQUUAaHwz8G694UQx68NNu5Y7cW
+Action.c(53):     8F9DcvLKkQbKxDzIwVT2DhBsXCAlmYoooA//2Q==</Get2DCodeImageResult></Get2DCodeImageResponse></
+Action.c(53):     soap:Body></soap:Envelope>
+Action.c(53): t=44995ms: Request done "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+Action.c(53): web_custom_request("Get2DCodeImage") was successful, 2636 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+Action.c(68): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(68): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(72): Error: Patient Get2DCodeImage failed.	[MsgId: MERR-17999]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" ended with a "Fail" status (Duration: 0.3275).	[MsgId: MMSG-16873]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" has 0 error message(s).	[MsgId: MMSG-16818]
+Action.c(78): lr_think_time: 1.00 seconds.	[MsgId: MMSG-15948]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 1.	[MsgId: MMSG-15965]
+Starting iteration 2.	[MsgId: MMSG-15968]
+t=45996ms: Closed connection [0] to 127.0.0.1:8888 after completing 1 request(s)  	[MsgId: MMSG-26000]
+Resetting all proxy auto-configuration information  	[MsgId: MMSG-26000]
+Notify: Next row for parameter QRCodeErrorCorrect = 3 [table  = QRCodeErrorCorrect].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeErrorCorrect': table = 'QRCodeErrorCorrect.dat' column = '0' row = '3'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter QRCodeScale = 4 [table  = QRCodeScale].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeScale': table = 'QRCodeScale.dat' column = '0' row = '4'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter HospitalID = 2 [table  = HospitalID].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '2'.	[MsgId: MMSG-13877]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(38): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309144326.464"	[MsgId: MMSG-13992]
+Action.c(39): Notify: Saving Parameter "strCurrentDateTime = 20180309144326464".	[MsgId: MMSG-13798]
+Action.c(43): Warning: The string 'RandForLoop' with parameter delimiters is not a parameter.	[MsgId: MWAR-13987]
+Action.c(51): Notify: Transaction "Patient Get2DCodeImage" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "2"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180309144326464"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "2"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "QRCodeErrorCorrect" =  "10"	[MsgId: MMSG-13992]
+Action.c(53): t=45997ms: Connecting [0] to host 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(53): t=45997ms: Connected socket [0] from 127.0.0.1:36601 to 127.0.0.1:8888 in 0 ms  	[MsgId: MMSG-26000]
+Action.c(53): t=45997ms: 340-byte request headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=2)
+Action.c(53):     POST http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx HTTP/1.1\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Cache-Control: no-cache\r\n
+Action.c(53):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)\r\n
+Action.c(53):     Accept-Encoding: gzip, deflate\r\n
+Action.c(53):     Accept: */*\r\n
+Action.c(53):     Proxy-Connection: Keep-Alive\r\n
+Action.c(53):     Host: 10.184.129.203\r\n
+Action.c(53):     Content-Length: 887\r\n
+Action.c(53):     \r\n
+Action.c(53): t=45997ms: 887-byte request body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=2)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(53):     oap:Header><wsa:Action>http://tempuri.org/Get2DCodeImage</wsa:Action><wsa:MessageID>uuid:8
+Action.c(53):     1afdc9a-7c24-4600-8714-05e9250c0a31</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+Action.c(53):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+Action.c(53):     ://10.184.129.203/CenterInfoServer/CenterPrintService.asmx</wsa:To></soap:Header><soap:Bod
+Action.c(53):     y><Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>2</hospitalID><patientID>E201803
+Action.c(53):     091443264642</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>10</Q
+Action.c(53):     RCodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+Action.c(53): t=48945ms: 231-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=2)
+Action.c(53):     HTTP/1.1 200 OK\r\n
+Action.c(53):     Cache-Control: private, max-age=0\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Server: Microsoft-IIS/7.5\r\n
+Action.c(53):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(53):     X-Powered-By: ASP.NET\r\n
+Action.c(53):     Date: Fri, 09 Mar 2018 06:43:42 GMT\r\n
+Action.c(53):     Content-Length: 2636\r\n
+Action.c(53):     \r\n
+Action.c(53): t=48945ms: 2636-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=2)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema"><soap:Body><Get2DCodeImageResponse xmlns="http://tempuri.org/">
+Action.c(53):     <Get2DCodeImageResult>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U
+Action.c(53):     HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMj
+Action.c(53):     IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAmACYDASIAAhEBAxEB/8QAHwAAAQUB
+Action.c(53):     AQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBka
+Action.c(53):     EII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqD
+Action.c(53):     hIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09f
+Action.c(53):     b3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+Action.c(53):     BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZG
+Action.c(53):     VmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+Action.c(53):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guEltTO7zm3UYwk5JMh
+Action.c(53):     BDflp3mv8Aim30ez0HwreX3iGaS0SQ37ZXzt7W5ZCHYTR/u54nMokO3z3ACBQYTXNYurXwNp9r/wAJD51i9o228sTB
+Action.c(53):     +8mhDCRbaBLXJjgMG9ZN0QG9f3g4Za9tZ6N4evNN1HQr37bp8N3/AGUllqVk8xtTGAwuPJQeb5yXUrj5kUk3IRfLVl
+Action.c(53):     cgBsSfxVomqaJ4fsYNPvbS0EugrAsaXMs0MgErMI8GFY7uUFgpZvIl+QrGzpJpunwy6T9ot7CO7sNRTT5760sNICrA
+Action.c(53):     sc1lMIpVjQidzFcSPuRUz+8BUgKsVCOa38Y29p4ni0u7gvCjXf8AatmbaUQXEYRpFl85f3YjkiR41kmUGGRlDgYhqn
+Action.c(53):     qlnY6tdS3mk3OufbvB379jeRWw8gxyzO9qWiiITAhLRN+8iGdmFyAQDr/hbo9/p/iGGTULKAXQtLwS3VpoklhGUZ7T
+Action.c(53):     ykJaCIM2UmPQ4GeaKk+HviLRdW+Ilwvh+KOC3uNMmkuFikEn2gRXOyGeUsokE7B5mYOSSrxkknOCgDHTXlt9bs5PEu
+Action.c(53):     tWmsapYPHLcT21yxS3tCkM4kSNYws4JR3wkLlQY2aWPyleq93qk1wdY1y0eRxb6Za3sMGsRE362aSJND9neIOGQMWY
+Action.c(53):     yyGX5lRZUAVnYWwjnuLaTRoLTS7W71iO7ttSj0qdY/mMsdqwR7LygQJ4uDJtJTIKM7SVc1O1hvYhd3PhyDQ4bCWMs9
+Action.c(53):     5Ha6vDJEFlM8Kh2BSOEwSDyoH3BSxESk/KAV7e71S+nge9s/tul6hFG2m6LYzZmshcJAFK+ZHHAY0hSUKoBDAzq+5B
+Action.c(53):     Oy854p8S6/FG3m6npun3Nvbx3Pl214sm4S2caLIs6S+dJPujwp2sQsh3ytC/zbev3+maDoc/9k6PY6XJbafKZ4JIob
+Action.c(53):     qKC8+S2ELPCGMrLG9zkzZUNdReZguqiSHw1d2GuJoWki0mgN7PqsEEuoI7QTxXUVutyEtrbERwXARt8a8l1HlMpAOg
+Action.c(53):     +EzGS9gudQnkGrahZTX5jl8yQzQyPEFZWlkeRQgRYySqCUbMGQRByVqeA5dR1jXLLXZ7GCy02Tw/bw2kcWlLEC3ytI
+Action.c(53):     qy5LrGrYCo21XDZUMELsUAY+j/AAt1jT9WtNQkgsVuhFp9tcyrqjuhjtpLdiyRfZlO5hbDgvgbjUms/CXV9Yv4tWud
+Action.c(53):     XtJ7wXst19nmhEkUcciNuhzIrrIQREiytGCqDJVgkaKUUAdRceDLmzsra206S01GzsreCK30/Vt5TeiGCRzIpIAe3Z
+Action.c(53):     0KeWV3YbGS2eXi+DMdzrv9uasLS8v5Hj8yO6uJ7mBNtso3AOwkkIuF+67lTESODjBRQB0HgPwbq/hS9vPtDaMtpcXF
+Action.c(53):     3Iy6faiEsrPG0APy5ATNwNpdtodQCwAwUUUAf//Z</Get2DCodeImageResult></Get2DCodeImageResponse></
+Action.c(53):     soap:Body></soap:Envelope>
+Action.c(53): t=48945ms: Request done "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+Action.c(53): web_custom_request("Get2DCodeImage") was successful, 2636 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+Action.c(68): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(68): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(72): Error: Patient Get2DCodeImage failed.	[MsgId: MERR-17999]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" ended with a "Fail" status (Duration: 2.9488).	[MsgId: MMSG-16873]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" has 0 error message(s).	[MsgId: MMSG-16818]
+Action.c(78): lr_think_time: 1.00 seconds.	[MsgId: MMSG-15948]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 2.	[MsgId: MMSG-15965]
+Starting iteration 3.	[MsgId: MMSG-15968]
+t=49947ms: Closed connection [0] to 127.0.0.1:8888 after completing 1 request(s)  	[MsgId: MMSG-26000]
+Resetting all proxy auto-configuration information  	[MsgId: MMSG-26000]
+Notify: Next row for parameter QRCodeErrorCorrect = 1 [table  = QRCodeErrorCorrect].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeErrorCorrect': table = 'QRCodeErrorCorrect.dat' column = '0' row = '1'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter QRCodeScale = 6 [table  = QRCodeScale].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeScale': table = 'QRCodeScale.dat' column = '0' row = '6'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter HospitalID = 3 [table  = HospitalID].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '3'.	[MsgId: MMSG-13877]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(38): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309144330.414"	[MsgId: MMSG-13992]
+Action.c(39): Notify: Saving Parameter "strCurrentDateTime = 20180309144330414".	[MsgId: MMSG-13798]
+Action.c(43): Warning: The string 'RandForLoop' with parameter delimiters is not a parameter.	[MsgId: MWAR-13987]
+Action.c(51): Notify: Transaction "Patient Get2DCodeImage" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "3"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180309144330414"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "3"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "QRCodeErrorCorrect" =  "0"	[MsgId: MMSG-13992]
+Action.c(53): t=49947ms: Connecting [0] to host 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(53): t=49947ms: Connected socket [0] from 127.0.0.1:36619 to 127.0.0.1:8888 in 0 ms  	[MsgId: MMSG-26000]
+Action.c(53): t=49947ms: 340-byte request headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=3)
+Action.c(53):     POST http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx HTTP/1.1\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Cache-Control: no-cache\r\n
+Action.c(53):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)\r\n
+Action.c(53):     Accept-Encoding: gzip, deflate\r\n
+Action.c(53):     Accept: */*\r\n
+Action.c(53):     Proxy-Connection: Keep-Alive\r\n
+Action.c(53):     Host: 10.184.129.203\r\n
+Action.c(53):     Content-Length: 886\r\n
+Action.c(53):     \r\n
+Action.c(53): t=49947ms: 886-byte request body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=3)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(53):     oap:Header><wsa:Action>http://tempuri.org/Get2DCodeImage</wsa:Action><wsa:MessageID>uuid:8
+Action.c(53):     1afdc9a-7c24-4600-8714-05e9250c0a31</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+Action.c(53):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+Action.c(53):     ://10.184.129.203/CenterInfoServer/CenterPrintService.asmx</wsa:To></soap:Header><soap:Bod
+Action.c(53):     y><Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>3</hospitalID><patientID>E201803
+Action.c(53):     091443304143</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>0</QR
+Action.c(53):     CodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+Action.c(53): t=50545ms: 231-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=3)
+Action.c(53):     HTTP/1.1 200 OK\r\n
+Action.c(53):     Cache-Control: private, max-age=0\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Server: Microsoft-IIS/7.5\r\n
+Action.c(53):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(53):     X-Powered-By: ASP.NET\r\n
+Action.c(53):     Date: Fri, 09 Mar 2018 06:43:43 GMT\r\n
+Action.c(53):     Content-Length: 2628\r\n
+Action.c(53):     \r\n
+Action.c(53): t=50545ms: 2628-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=3)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema"><soap:Body><Get2DCodeImageResponse xmlns="http://tempuri.org/">
+Action.c(53):     <Get2DCodeImageResult>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U
+Action.c(53):     HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMj
+Action.c(53):     IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAmACYDASIAAhEBAxEB/8QAHwAAAQUB
+Action.c(53):     AQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBka
+Action.c(53):     EII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqD
+Action.c(53):     hIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09f
+Action.c(53):     b3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+Action.c(53):     BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZG
+Action.c(53):     VmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+Action.c(53):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guEltTO7zm3UYwk5JMh
+Action.c(53):     BDflbs7q9v9Fs/DWu3/wDZmnXHl6c9toIjtRI7TshdleAFWkLpmNSOIbrcFaNohzl3b2mjXV/NomqyT3tqjT6nZR2z
+Action.c(53):     2o8yCIK0bxWyPGBHLtdZR5QUsdszv+8i6u61Uapp0Hhu3kg8O6LBtj069urSa7mjlhGbiSJ52jeJYGYRb9hZRuYbFj
+Action.c(53):     cxgGZdza1o3jmKay0+006OS3uorG51KA20cANtb5uIkLSMoVj0MZMcWUdgkZEL7K1cXt3Y32kTzLcXZ1OSC7sGN/JB
+Action.c(53):     JeafJI8sMbujKy7lISMf8e7cA71Emk3mq6Z45vU8LaDd362yT6fi3lkFvHcxW0QjWeRkjWVIyHhXc+SoDhQ53S5HiP
+Action.c(53):     WLjwzpcupWc8a/29em9/tSzW5U28c/mIzw2szYjldImYSsykiV0jJVS6gHZ/C3R7/T/EMMmoWUAuhaXglurTRJLCMo
+Action.c(53):     z2nlIS0EQZspMehwM80Vc+EySSPNqr6THpNvq73F3Y2LRwAxQhbZd0ZQI4RiORsIISNiQfmlKAOf8RahY+GtN0qzbU
+Action.c(53):     tS1HVYElWG9Fj5TWZSKK7mllgZD50rM8T4kGBhSzxyI8psRWur+FvFlrB4Z0yTW2WyuYJJrCxFham8VflafYscMoVx
+Action.c(53):     ImPMO0ErgSIWlz7G1eSwUxiQHVngUX8KXloHYuFt3eZrFlmlJYv57bcyTkgAxxMuZCtvF4fuVuLaC1W31BdGs9CN6b
+Action.c(53):     x4C135rq6okm7c6yMCUz/ocQImV2DAF/VDp11Y3WvHUbHUf7Vu7e3gs7awa3jZpJlYt5KibzPN8oymRstvtliZXw8I
+Action.c(53):     gsrLRNPt5tQikzcy4F3qem6lFdXSmK1nuJZ/MEheKaYb12K2wNASXkQ7ZNNdc1ebwnoun+I9HjgVLcTpba9bi6nv5o
+Action.c(53):     Wcztvmk/coV8tSzRkoszsP3cZdeYk8H3Oo3B8FwWkdvqFvbjzbh7V7OSRFKQkExQsLm3a48qVJHUMBFJuK8PQB6X8M
+Action.c(53):     9BiXxNrXiaC98xr+JUvorYvFAt95shnUwy/vVZMR434/1rkABgqlYfwX0tba90/UbewjaC90d3e+RWIV1eGMx5EESg
+Action.c(53):     kxMSpaU5QsGG5mkKALmj/C3WNP1a01CSCxW6EWn21zKuqO6GO2kt2LJF9mU7mFsOC+BuNaFt8PPEjeF10GTUNDsduy
+Action.c(53):     5bUorOS6u5bwkmS43yOuyTkKH+ZurDy/lVSigAsvh/ren61czWhgtbCbT3tlS11aWKVX8hI4ssIfn8ra0aM2cKVfZ5
+Action.c(53):     gcyV/+Fa6tfQavLq1hodxOssb6Hate3E1tZIHRmiKyKVWM+UgIRF3AugKKQFKKANT4Z+Dde8KIY9eGm3csduLeC+hu
+Action.c(53):     XllSINlYh5kYKp7Bwg2LhASzMUUUAf/Z</Get2DCodeImageResult></Get2DCodeImageResponse></soap:Bod
+Action.c(53):     y></soap:Envelope>
+Action.c(53): t=50545ms: Request done "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+Action.c(53): web_custom_request("Get2DCodeImage") was successful, 2628 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+Action.c(68): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(68): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(72): Error: Patient Get2DCodeImage failed.	[MsgId: MERR-17999]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" ended with a "Fail" status (Duration: 0.5985).	[MsgId: MMSG-16873]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" has 0 error message(s).	[MsgId: MMSG-16818]
+Action.c(78): lr_think_time: 1.00 seconds.	[MsgId: MMSG-15948]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 3.	[MsgId: MMSG-15965]
+Starting iteration 4.	[MsgId: MMSG-15968]
+t=51546ms: Closed connection [0] to 127.0.0.1:8888 after completing 1 request(s)  	[MsgId: MMSG-26000]
+Resetting all proxy auto-configuration information  	[MsgId: MMSG-26000]
+Notify: Next row for parameter QRCodeErrorCorrect = 2 [table  = QRCodeErrorCorrect].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeErrorCorrect': table = 'QRCodeErrorCorrect.dat' column = '0' row = '2'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter QRCodeScale = 10 [table  = QRCodeScale].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeScale': table = 'QRCodeScale.dat' column = '0' row = '10'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter HospitalID = 4 [table  = HospitalID].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '4'.	[MsgId: MMSG-13877]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(38): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309144332.014"	[MsgId: MMSG-13992]
+Action.c(39): Notify: Saving Parameter "strCurrentDateTime = 20180309144332014".	[MsgId: MMSG-13798]
+Action.c(43): Warning: The string 'RandForLoop' with parameter delimiters is not a parameter.	[MsgId: MWAR-13987]
+Action.c(51): Notify: Transaction "Patient Get2DCodeImage" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "4"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180309144332014"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "4"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "QRCodeErrorCorrect" =  "5"	[MsgId: MMSG-13992]
+Action.c(53): t=51547ms: Connecting [0] to host 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(53): t=51547ms: Connected socket [0] from 127.0.0.1:36628 to 127.0.0.1:8888 in 0 ms  	[MsgId: MMSG-26000]
+Action.c(53): t=51547ms: 340-byte request headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=4)
+Action.c(53):     POST http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx HTTP/1.1\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Cache-Control: no-cache\r\n
+Action.c(53):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)\r\n
+Action.c(53):     Accept-Encoding: gzip, deflate\r\n
+Action.c(53):     Accept: */*\r\n
+Action.c(53):     Proxy-Connection: Keep-Alive\r\n
+Action.c(53):     Host: 10.184.129.203\r\n
+Action.c(53):     Content-Length: 886\r\n
+Action.c(53):     \r\n
+Action.c(53): t=51547ms: 886-byte request body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=4)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(53):     oap:Header><wsa:Action>http://tempuri.org/Get2DCodeImage</wsa:Action><wsa:MessageID>uuid:8
+Action.c(53):     1afdc9a-7c24-4600-8714-05e9250c0a31</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+Action.c(53):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+Action.c(53):     ://10.184.129.203/CenterInfoServer/CenterPrintService.asmx</wsa:To></soap:Header><soap:Bod
+Action.c(53):     y><Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>4</hospitalID><patientID>E201803
+Action.c(53):     091443320144</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>5</QR
+Action.c(53):     CodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+Action.c(53): t=51901ms: 231-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=4)
+Action.c(53):     HTTP/1.1 200 OK\r\n
+Action.c(53):     Cache-Control: private, max-age=0\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Server: Microsoft-IIS/7.5\r\n
+Action.c(53):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(53):     X-Powered-By: ASP.NET\r\n
+Action.c(53):     Date: Fri, 09 Mar 2018 06:43:45 GMT\r\n
+Action.c(53):     Content-Length: 2644\r\n
+Action.c(53):     \r\n
+Action.c(53): t=51901ms: 2644-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=4)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema"><soap:Body><Get2DCodeImageResponse xmlns="http://tempuri.org/">
+Action.c(53):     <Get2DCodeImageResult>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U
+Action.c(53):     HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMj
+Action.c(53):     IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAmACYDASIAAhEBAxEB/8QAHwAAAQUB
+Action.c(53):     AQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBka
+Action.c(53):     EII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqD
+Action.c(53):     hIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09f
+Action.c(53):     b3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+Action.c(53):     BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZG
+Action.c(53):     VmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+Action.c(53):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guEltTO7zm3UYwk5JMh
+Action.c(53):     BDflXsJzo9vHrNv4ok16SB5N84u5LWF7eQRxtCg3KElZrm1lmldlKOQw8x0krX0XU4IfDFrcaJJqWpfYriSP8AsppZ
+Action.c(53):     bve1nJ+5CFWlVC0csZZkjeHcE2tCwRq0EtbmHWdYmTwnIrwWUqw2u979PKRo4yBayOgCHfeCAq0W6PzAIznBAI9Qt9
+Action.c(53):     /xHtL+DSYI7e5iiW70dbTb9tu5YZgJZC6K3k7bqUMxUyHyZsxERMUp6bp8Muk/aLewju7DUU0+e+tLDSAqwLHNZTCK
+Action.c(53):     VY0IncxXEj7kVM/vAVICrFHJZ6J40vP+EigN9FNa+ffWWvWSRNG1zCFLLcLKMwqDGJIkmlxsk270GEXI1SzsdWupbz
+Action.c(53):     SbnXPt3g79+xvIrYeQY5Zne1LRREJgQlom/eRDOzC5AIB1/wALdHv9P8QwyahZQC6FpeCW6tNEksIyjPaeUhLQRBmy
+Action.c(53):     kx6HAzzRR8NNS8O3Hjy8fwzJ5cOo2l1PdwfapLlpfKuVSG4kaVd6SOJJiU3H5ShPJooA5zRtOu7611O/W103QdMtXe
+Action.c(53):     6ktdGvEknRJ5V6mQOkRAt4Jo5l8uMKqspVWLxU9S1Pwn4flvL26utVuL94obq2uJNQSa5nuY2iaE7GEqpsRf8AXsQH
+Action.c(53):     E0vlK8bKF37hJvEWqXmoyarPZQalsg0+6tdLuoVmeW5/0e4mkNuqM0cTRJGGLfMNyyRsQ4z/AAhqmsaDa6r4c8ZXdj
+Action.c(53):     Dp8dpG0TGyeVJvJiCSRjyFX7R5eIlmBdsLC6EFSzIAST6br+tQ6Zqt2t2dDuLiJ9M0jS7pRLGZ4YQI9s0SQyQJAJfl
+Action.c(53):     VSPmkDsV81xgeKfEuvxRt5up6bp9zb28dz5dteLJuEtnGiyLOkvnST7o8KdrELId8rQv82h4h17S4vh9a3fhmKTTI4
+Action.c(53):     LcXi2MVva3VuJpBHbNHK4DM5WFpC3mAnNxHvZWKRm/D4au7DXE0LSRaTQG9n1WCCXUEdoJ4rqK3W5CW1tiI4LgI2+N
+Action.c(53):     eS6jymUgHQfCZjJewXOoTyDVtQspr8xy+ZIZoZHiCsrSyPIoQIsZJVBKNmDIIg5KueA9Ul1jxbZXs6WNlHJ4atzaWU
+Action.c(53):     WnJE5XcvmFWyZFhV8Kobar7sqGCF2KAM/R/hbrGn6taahJBYrdCLT7a5lXVHdDHbSW7Fki+zKdzC2HBfA3GtzXfAWq
+Action.c(53):     6pYSWFtd2lvp91cf2nc2cryTbbvertFG7fIYHYOxEkTgMS2xsgIUUAaknhO807To7PTHsdRsYLS3t4bDWELruQeVI4
+Action.c(53):     lGdm+3LIVEe3dzj5nDcnF8GY7nXf7c1YWl5fyPH5kd1cT3MCbbZRuAdhJIRcL913KmIkcHGCigDoPA3g3V/DF7N9rb
+Action.c(53):     RvshuL6SNbG1ERVZngaMD5cqB5cgK72wPLGWCjaUUUAf/9k=</Get2DCodeImageResult></Get2DCodeImageRes
+Action.c(53):     ponse></soap:Body></soap:Envelope>
+Action.c(53): t=51901ms: Request done "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+Action.c(53): web_custom_request("Get2DCodeImage") was successful, 2644 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+Action.c(68): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(68): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(72): Error: Patient Get2DCodeImage failed.	[MsgId: MERR-17999]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" ended with a "Fail" status (Duration: 0.3552).	[MsgId: MMSG-16873]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" has 0 error message(s).	[MsgId: MMSG-16818]
+Action.c(78): lr_think_time: 1.00 seconds.	[MsgId: MMSG-15948]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 4.	[MsgId: MMSG-15965]
+Starting iteration 5.	[MsgId: MMSG-15968]
+t=52902ms: Closed connection [0] to 127.0.0.1:8888 after completing 1 request(s)  	[MsgId: MMSG-26000]
+Resetting all proxy auto-configuration information  	[MsgId: MMSG-26000]
+Notify: Next row for parameter QRCodeErrorCorrect = 6 [table  = QRCodeErrorCorrect].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeErrorCorrect': table = 'QRCodeErrorCorrect.dat' column = '0' row = '6'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter QRCodeScale = 2 [table  = QRCodeScale].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeScale': table = 'QRCodeScale.dat' column = '0' row = '2'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter HospitalID = 5 [table  = HospitalID].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '5'.	[MsgId: MMSG-13877]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(38): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309144333.369"	[MsgId: MMSG-13992]
+Action.c(39): Notify: Saving Parameter "strCurrentDateTime = 20180309144333369".	[MsgId: MMSG-13798]
+Action.c(43): Warning: The string 'RandForLoop' with parameter delimiters is not a parameter.	[MsgId: MWAR-13987]
+Action.c(51): Notify: Transaction "Patient Get2DCodeImage" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "5"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180309144333369"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "5"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "QRCodeErrorCorrect" =  "25"	[MsgId: MMSG-13992]
+Action.c(53): t=52902ms: Connecting [0] to host 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(53): t=52902ms: Connected socket [0] from 127.0.0.1:36637 to 127.0.0.1:8888 in 0 ms  	[MsgId: MMSG-26000]
+Action.c(53): t=52902ms: 340-byte request headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=5)
+Action.c(53):     POST http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx HTTP/1.1\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Cache-Control: no-cache\r\n
+Action.c(53):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)\r\n
+Action.c(53):     Accept-Encoding: gzip, deflate\r\n
+Action.c(53):     Accept: */*\r\n
+Action.c(53):     Proxy-Connection: Keep-Alive\r\n
+Action.c(53):     Host: 10.184.129.203\r\n
+Action.c(53):     Content-Length: 887\r\n
+Action.c(53):     \r\n
+Action.c(53): t=52903ms: 887-byte request body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=5)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(53):     oap:Header><wsa:Action>http://tempuri.org/Get2DCodeImage</wsa:Action><wsa:MessageID>uuid:8
+Action.c(53):     1afdc9a-7c24-4600-8714-05e9250c0a31</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+Action.c(53):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+Action.c(53):     ://10.184.129.203/CenterInfoServer/CenterPrintService.asmx</wsa:To></soap:Header><soap:Bod
+Action.c(53):     y><Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>5</hospitalID><patientID>E201803
+Action.c(53):     091443333695</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>25</Q
+Action.c(53):     RCodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+Action.c(53): t=53285ms: 231-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=5)
+Action.c(53):     HTTP/1.1 200 OK\r\n
+Action.c(53):     Cache-Control: private, max-age=0\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Server: Microsoft-IIS/7.5\r\n
+Action.c(53):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(53):     X-Powered-By: ASP.NET\r\n
+Action.c(53):     Date: Fri, 09 Mar 2018 06:43:46 GMT\r\n
+Action.c(53):     Content-Length: 2640\r\n
+Action.c(53):     \r\n
+Action.c(53): t=53285ms: 2640-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=5)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema"><soap:Body><Get2DCodeImageResponse xmlns="http://tempuri.org/">
+Action.c(53):     <Get2DCodeImageResult>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U
+Action.c(53):     HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMj
+Action.c(53):     IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAmACYDASIAAhEBAxEB/8QAHwAAAQUB
+Action.c(53):     AQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBka
+Action.c(53):     EII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqD
+Action.c(53):     hIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09f
+Action.c(53):     b3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+Action.c(53):     BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZG
+Action.c(53):     VmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+Action.c(53):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guEltTO7zm3UYwk5JMh
+Action.c(53):     BDflb826stF+waeuq+IdRuos6e07QG3la4h2mcxSxjCuknmc72LxXQZgomkkseKby9vNMVdFvZ9NsViv0062tJ47uz
+Action.c(53):     uYopIilx56q32Xa7KV3fLGItoeD71V7yfWJ4ho41rSriO2u2u7bR7DT3u/MtQpm8qCWTykm/dXEaNFGV/cABeCyOAb
+Action.c(53):     Gp29n/AMLMF7aaTus7qKONtM+yCA3l3KkoWedWTPk+XdTKx5kzHKSjLC5GXpunwy6T9ot7CO7sNRTT5760sNICrAsc
+Action.c(53):     1lMIpVjQidzFcSPuRUz+8BUgKsQq6L4qvz4hgsJJ3iS5ubXX4mASK4iQEtKjYMZV4keKO4l2eXMRuXCxjE1SzsdWup
+Action.c(53):     bzSbnXPt3g79+xvIrYeQY5Zne1LRREJgQlom/eRDOzC5AIB1/wt0e/0/xDDJqFlALoWl4Jbq00SSwjKM9p5SEtBEGb
+Action.c(53):     KTHocDPNFSfDW+0W98danfaBdRx2+pW8sktr9qEzSiCVIopyCgkjdgZHYSElvOVgXO/YUAcw17NrV1H4Tu9IjudY1i
+Action.c(53):     3jn1C4027LwLEYolt2ll23LuVXjc4VFaQSDJ2zURWd2fD8/ii5sLvRJ9OuJl1fZOiwzTQFnVoGmeXLtPb2iSOUcyOF
+Action.c(53):     wTiTdPFo2n39xeapmTz9QvVGj3kOmzWkcFu5hito1laxZYztC4kByhRNhHmSMdjStFu9N0a4sZNLjuNc+0JeaofsqT
+Action.c(53):     ypDIrInnl48XY8rzxIbfa7uGUfNJJJQBh3H/CS6rFaTrHBNpN9Lam00m1uVNzZRXCwsBHHLEkLxiGGaMADaBJOHLAS
+Action.c(53):     msTxT4l1+KNvN1PTdPube3jufLtrxZNwls40WRZ0l86SfdHhTtYhZDvlaF/m1NX8QaZomkwjRdCg0yM6Vcy3ltPawy
+Action.c(53):     pBcCNLdIXkSGRmkTzHJWUof9IUSMofy6tw+Gruw1xNC0kWk0BvZ9Vggl1BHaCeK6it1uQltbYiOC4CNvjXkuo8plIB
+Action.c(53):     0HwmYyXsFzqE8g1bULKa/McvmSGaGR4grK0sjyKECLGSVQSjZgyCIOSrngPVJdY8W2V7OljZRyeGrc2llFpyROV3L5
+Action.c(53):     hVsmRYVfCqG2q+7KhghdigDP0f4W6xp+rWmoSQWK3Qi0+2uZV1R3Qx20luxZIvsyncwthwXwNxq5/whPiu38Z3PiHT
+Action.c(53):     bbRtPN07STQ298AzO0TxsfM+x7iC3lSbW3LvRmKsWBUooA3L7wVqNtp1rZ6PfwXFjZxW0cdhqcSyLJ5Y8qTMrK+xZL
+Action.c(53):     cshVIx83II3OG5uL4Mx3Ou/wBuasLS8v5Hj8yO6uJ7mBNtso3AOwkkIuF+67lTESODjBRQB0Hgbwbq/hi9m+1to32Q
+Action.c(53):     3F9JGtjaiIqszwNGB8uVA8uQFd7YHljLBRtKKKAP/9k=</Get2DCodeImageResult></Get2DCodeImageRespons
+Action.c(53):     e></soap:Body></soap:Envelope>
+Action.c(53): t=53286ms: Request done "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+Action.c(53): web_custom_request("Get2DCodeImage") was successful, 2640 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+Action.c(68): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(68): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(72): Error: Patient Get2DCodeImage failed.	[MsgId: MERR-17999]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" ended with a "Fail" status (Duration: 0.3854).	[MsgId: MMSG-16873]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" has 0 error message(s).	[MsgId: MMSG-16818]
+Action.c(78): lr_think_time: 1.00 seconds.	[MsgId: MMSG-15948]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 5.	[MsgId: MMSG-15965]
+Starting iteration 6.	[MsgId: MMSG-15968]
+t=54289ms: Closed connection [0] to 127.0.0.1:8888 after completing 1 request(s)  	[MsgId: MMSG-26000]
+Resetting all proxy auto-configuration information  	[MsgId: MMSG-26000]
+Notify: Next row for parameter QRCodeErrorCorrect = 1 [table  = QRCodeErrorCorrect].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeErrorCorrect': table = 'QRCodeErrorCorrect.dat' column = '0' row = '1'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter QRCodeScale = 9 [table  = QRCodeScale].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeScale': table = 'QRCodeScale.dat' column = '0' row = '9'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter HospitalID = 6 [table  = HospitalID].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '6'.	[MsgId: MMSG-13877]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(38): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309144334.757"	[MsgId: MMSG-13992]
+Action.c(39): Notify: Saving Parameter "strCurrentDateTime = 20180309144334757".	[MsgId: MMSG-13798]
+Action.c(43): Warning: The string 'RandForLoop' with parameter delimiters is not a parameter.	[MsgId: MWAR-13987]
+Action.c(51): Notify: Transaction "Patient Get2DCodeImage" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "6"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180309144334757"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "6"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "QRCodeErrorCorrect" =  "0"	[MsgId: MMSG-13992]
+Action.c(53): t=54290ms: Connecting [0] to host 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(53): t=54291ms: Connected socket [0] from 127.0.0.1:36644 to 127.0.0.1:8888 in 1 ms  	[MsgId: MMSG-26000]
+Action.c(53): t=54291ms: 340-byte request headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=6)
+Action.c(53):     POST http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx HTTP/1.1\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Cache-Control: no-cache\r\n
+Action.c(53):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)\r\n
+Action.c(53):     Accept-Encoding: gzip, deflate\r\n
+Action.c(53):     Accept: */*\r\n
+Action.c(53):     Proxy-Connection: Keep-Alive\r\n
+Action.c(53):     Host: 10.184.129.203\r\n
+Action.c(53):     Content-Length: 886\r\n
+Action.c(53):     \r\n
+Action.c(53): t=54291ms: 886-byte request body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=6)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(53):     oap:Header><wsa:Action>http://tempuri.org/Get2DCodeImage</wsa:Action><wsa:MessageID>uuid:8
+Action.c(53):     1afdc9a-7c24-4600-8714-05e9250c0a31</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+Action.c(53):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+Action.c(53):     ://10.184.129.203/CenterInfoServer/CenterPrintService.asmx</wsa:To></soap:Header><soap:Bod
+Action.c(53):     y><Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>6</hospitalID><patientID>E201803
+Action.c(53):     091443347576</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>0</QR
+Action.c(53):     CodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+Action.c(53): t=54897ms: 231-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=6)
+Action.c(53):     HTTP/1.1 200 OK\r\n
+Action.c(53):     Cache-Control: private, max-age=0\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Server: Microsoft-IIS/7.5\r\n
+Action.c(53):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(53):     X-Powered-By: ASP.NET\r\n
+Action.c(53):     Date: Fri, 09 Mar 2018 06:43:48 GMT\r\n
+Action.c(53):     Content-Length: 2640\r\n
+Action.c(53):     \r\n
+Action.c(53): t=54898ms: 2640-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=6)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema"><soap:Body><Get2DCodeImageResponse xmlns="http://tempuri.org/">
+Action.c(53):     <Get2DCodeImageResult>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U
+Action.c(53):     HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMj
+Action.c(53):     IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAmACYDASIAAhEBAxEB/8QAHwAAAQUB
+Action.c(53):     AQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBka
+Action.c(53):     EII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqD
+Action.c(53):     hIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09f
+Action.c(53):     b3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+Action.c(53):     BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZG
+Action.c(53):     VmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+Action.c(53):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guEltTO7zm3UYwk5JMh
+Action.c(53):     BDflbs7q9v9Fs/DWu3/wDZmnXHl6c9toIjtRI7TshdleAFWkLpmNSOIbrcFaNohieHzcaBca1Y6bZx2M+opbx2UVrZ
+Action.c(53):     XMojmQvNHNMkkVwQ6lJYyiOSskLjb8vmptx63qXiHw9p+nX17Y6LpdxFG+k6g9nb3EgEKbZJ41ikVbXZhcrh3iMshD
+Action.c(53):     KkZaMAqXc2taN45imstPtNOjkt7qKxudSgNtHADbW+biJC0jKFY9DGTHFlHYJGRDbstGvxHdtfeHb6awuNQN5I13pk
+Action.c(53):     hu5Eku9Pmk81I3eNtybgURB/x7twDvUR6Tearpnjm9TwtoN3frbJPp+LeWQW8dzFbRCNZ5GSNZUjIeFdz5KgOFDndL
+Action.c(53):     meKNS1Pw1ocesWk3lWeu6hNdpqllbzIE8/5XeKGblZvLh3K7SLxcyLHlcuoB1/wt0e/wBP8QwyahZQC6FpeCW6tNEk
+Action.c(53):     sIyjPaeUhLQRBmykx6HAzzRVz4TJJI82qvpMek2+rvcXdjYtHADFCFtl3RlAjhGI5GwghI2JB+aUoAx57nSpbe/uNP
+Action.c(53):     t9Ns9U0Z4llXfGJru5wS8knmJKsc8bwzgSSNKQnnOWVHE1Z+j2vjLwn4zuLO3S78TXcSXUIlt/MhgjlMSSQG5JREYn
+Action.c(53):     czMplf5p3YYkJMh4X09bLS9KhiFoludTiuLG5n0u/mRM+WlsBLJCiEFpbhzkBS0v7vyi4eM1nSLLTNOl1C4uJJrjUL
+Action.c(53):     iCwTSriaKZomW4ESr5VtE0QDR2qtgIdr2ioRKC6EAg1y50j+yb/wATXOr6bdwahcQxJbxWRtYRvmVmkMQEwcSCEymR
+Action.c(53):     ssHtRGyvh4RftBbWHg52WeRLRr0yTahp2qpdXEs6WU01xcZXJindVClRMVDf3o9wmF1zV5vCei6f4j0eOBUtxOltr1
+Action.c(53):     uLqe/mhZzO2+aT9yhXy1LNGSizOw/dxl15x/Cl1eQQ/D7TrT7DdW0UkuoTSpPbyXpDpGjHZGyz24nkLI7LkIhB8raX
+Action.c(53):     cA9H+GegxL4m1rxNBe+Y1/EqX0VsXigW+82QzqYZf3qsmI8b8f61yAAwVSsP4L6Wtte6fqNvYRtBe6O7vfIrEK6vDG
+Action.c(53):     Y8iCJQSYmJUtKcoWDDczSFAFzR/hbrGn6taahJBYrdCLT7a5lXVHdDHbSW7Fki+zKdzC2HBfA3GtiTwF4kvPD0elz6
+Action.c(53):     zpUFw0VvNcaj9ikubk3iJ5ZljaSQBGEaRKJANxO9gEJFFFAFey+H+t6frVzNaGC1sJtPe2VLXVpYpVfyEjiywh+fyt
+Action.c(53):     rRozZwpV9nmBzJHP8ADTULs65JfWmjXey4R/D8E11cPBaRCRWMbRuGREIijysajILoGVSu0ooA0Phn4N17wohj14ab
+Action.c(53):     dyx24t4L6G5eWVIg2ViHmRgqnsHCDYuEBLMxRRQB/9k=</Get2DCodeImageResult></Get2DCodeImageRespons
+Action.c(53):     e></soap:Body></soap:Envelope>
+Action.c(53): t=54899ms: Request done "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+Action.c(53): web_custom_request("Get2DCodeImage") was successful, 2640 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+Action.c(68): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(68): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(72): Error: Patient Get2DCodeImage failed.	[MsgId: MERR-17999]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" ended with a "Fail" status (Duration: 0.6102).	[MsgId: MMSG-16873]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" has 0 error message(s).	[MsgId: MMSG-16818]
+Action.c(78): lr_think_time: 1.00 seconds.	[MsgId: MMSG-15948]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 6.	[MsgId: MMSG-15965]
+Starting iteration 7.	[MsgId: MMSG-15968]
+t=55901ms: Closed connection [0] to 127.0.0.1:8888 after completing 1 request(s)  	[MsgId: MMSG-26000]
+Resetting all proxy auto-configuration information  	[MsgId: MMSG-26000]
+Notify: Next row for parameter QRCodeErrorCorrect = 6 [table  = QRCodeErrorCorrect].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeErrorCorrect': table = 'QRCodeErrorCorrect.dat' column = '0' row = '6'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter QRCodeScale = 11 [table  = QRCodeScale].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeScale': table = 'QRCodeScale.dat' column = '0' row = '11'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter HospitalID = 7 [table  = HospitalID].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '7'.	[MsgId: MMSG-13877]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(38): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309144336.368"	[MsgId: MMSG-13992]
+Action.c(39): Notify: Saving Parameter "strCurrentDateTime = 20180309144336368".	[MsgId: MMSG-13798]
+Action.c(43): Warning: The string 'RandForLoop' with parameter delimiters is not a parameter.	[MsgId: MWAR-13987]
+Action.c(51): Notify: Transaction "Patient Get2DCodeImage" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "7"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180309144336368"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "7"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "QRCodeErrorCorrect" =  "25"	[MsgId: MMSG-13992]
+Action.c(53): t=55902ms: Connecting [0] to host 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(53): t=55903ms: Connected socket [0] from 127.0.0.1:36653 to 127.0.0.1:8888 in 1 ms  	[MsgId: MMSG-26000]
+Action.c(53): t=55903ms: 340-byte request headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=7)
+Action.c(53):     POST http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx HTTP/1.1\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Cache-Control: no-cache\r\n
+Action.c(53):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)\r\n
+Action.c(53):     Accept-Encoding: gzip, deflate\r\n
+Action.c(53):     Accept: */*\r\n
+Action.c(53):     Proxy-Connection: Keep-Alive\r\n
+Action.c(53):     Host: 10.184.129.203\r\n
+Action.c(53):     Content-Length: 887\r\n
+Action.c(53):     \r\n
+Action.c(53): t=55903ms: 887-byte request body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=7)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(53):     oap:Header><wsa:Action>http://tempuri.org/Get2DCodeImage</wsa:Action><wsa:MessageID>uuid:8
+Action.c(53):     1afdc9a-7c24-4600-8714-05e9250c0a31</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+Action.c(53):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+Action.c(53):     ://10.184.129.203/CenterInfoServer/CenterPrintService.asmx</wsa:To></soap:Header><soap:Bod
+Action.c(53):     y><Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>7</hospitalID><patientID>E201803
+Action.c(53):     091443363687</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>25</Q
+Action.c(53):     RCodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+Action.c(53): t=56444ms: 231-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=7)
+Action.c(53):     HTTP/1.1 200 OK\r\n
+Action.c(53):     Cache-Control: private, max-age=0\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Server: Microsoft-IIS/7.5\r\n
+Action.c(53):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(53):     X-Powered-By: ASP.NET\r\n
+Action.c(53):     Date: Fri, 09 Mar 2018 06:43:49 GMT\r\n
+Action.c(53):     Content-Length: 2636\r\n
+Action.c(53):     \r\n
+Action.c(53): t=56445ms: 2636-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=7)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema"><soap:Body><Get2DCodeImageResponse xmlns="http://tempuri.org/">
+Action.c(53):     <Get2DCodeImageResult>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U
+Action.c(53):     HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMj
+Action.c(53):     IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAmACYDASIAAhEBAxEB/8QAHwAAAQUB
+Action.c(53):     AQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBka
+Action.c(53):     EII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqD
+Action.c(53):     hIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09f
+Action.c(53):     b3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+Action.c(53):     BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZG
+Action.c(53):     VmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+Action.c(53):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guEltTO7zm3UYwk5JMh
+Action.c(53):     BDflf0e/hj03UUXxdpurWciIk2pSWoUwRPFEpE0sqykPPK8CsJA6LHBJjaY9iUNOvJvEyEaNrF3qEFtpkMFtpVncm1
+Action.c(53):     lWTdG32loz5kcZEpnjACYhxAy7U2ypb8J2Es/g6KwgtIFis8ROYY01uG5he5kn8qdY9qGSJYwchiQs52KJJUAALiaR
+Action.c(53):     Y6V4zsI7HSI2sBZW9p/Zcdn9nF5dNFIqzyrIrP5Hl3MytktJmKUlXELkV9N0+GXSftFvYR3dhqKafPfWlhpAVYFjms
+Action.c(53):     phFKsaETuYriR9yKmf3gKkBVip217B4qs4vE0GhYv5YmuBq6eVMtncIY3l37yvltG0IeITTbPKlYZIAgNDVLOx1a6l
+Action.c(53):     vNJudc+3eDv37G8ith5Bjlmd7UtFEQmBCWib95EM7MLkAgHX/C3R7/AE/xDDJqFlALoWl4Jbq00SSwjKM9p5SEtBEG
+Action.c(53):     bKTHocDPNFSfDO+8N3PjO/n8NXUcKX9vcS3Vmbqa5knEdwFhuXaRMo7bpSyFycPGcHJIKAMfVpNKm8OHUPDXmahb2m
+Action.c(53):     ptPc6xdWkbrvlgkuZJt8ELTxEM1ursFjK+WiqyFSwoatrS/b7a68PQalqGn2yXGp3ckYaQWbRpJ5ewziS2B3xOWuVM
+Action.c(53):     jySecVPO1rdjpWjXd0/2nT57nTNV1DEN3I+owwrazyxrFEkRtPJVdiQIMtwVQq6bUKdJpd7aTa34l0WXSI11C1t45I
+Action.c(53):     4dTu31RzFsPmMV2tLlY7oL5Qco5Z1jPMjkA5u3l1jVJ4PtKwSabqEUcunaTAzySWizJAQqho44SohjmRAAVy8wk3xr
+Action.c(53):     cMvOeKfEuvxRt5up6bp9zb28dz5dteLJuEtnGiyLOkvnST7o8KdrELId8rQv83R+ItX0fQfCX2bTLWDTbq3tLmU6Y9
+Action.c(53):     ql3bWt0FhtXWSaEMHk2PKAJd2TOpl2/ItRw+Gruw1xNC0kWk0BvZ9Vggl1BHaCeK6it1uQltbYiOC4CNvjXkuo8plI
+Action.c(53):     B0HwmYyXsFzqE8g1bULKa/McvmSGaGR4grK0sjyKECLGSVQSjZgyCIOStTwHLqOsa5Za7PYwWWmyeH7eG0ji0pYgW+
+Action.c(53):     VpFWXJdY1bAVG2q4bKhghdigDH0f4W6xp+rWmoSQWK3Qi0+2uZV1R3Qx20luxZIvsyncwthwXwNxq5rnw91nXXuLu4
+Action.c(53):     sdNluJb2KdYbzV57iKJAr7vLzAMEMwKpIJY13yYQBmViigDYh8I61a6NZW8LabNFa28MI0m/Y3ELFFMDnzzGCoe3Yg
+Action.c(53):     qsQG8Z5DSB+fi+DMdzrv8AbmrC0vL+R4/Mjurie5gTbbKNwDsJJCLhfuu5UxEjg4wUUAdB4D8G6v4Uvbz7Q2jLaXFx
+Action.c(53):     dyMun2ohLKzxtAD8uQEzcDaXbaHUAsAMFFFAH//Z</Get2DCodeImageResult></Get2DCodeImageResponse></
+Action.c(53):     soap:Body></soap:Envelope>
+Action.c(53): t=56445ms: Request done "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+Action.c(53): web_custom_request("Get2DCodeImage") was successful, 2636 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+Action.c(68): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(68): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(72): Error: Patient Get2DCodeImage failed.	[MsgId: MERR-17999]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" ended with a "Fail" status (Duration: 0.5436).	[MsgId: MMSG-16873]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" has 0 error message(s).	[MsgId: MMSG-16818]
+Action.c(78): lr_think_time: 1.00 seconds.	[MsgId: MMSG-15948]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 7.	[MsgId: MMSG-15965]
+Starting iteration 8.	[MsgId: MMSG-15968]
+t=57447ms: Closed connection [0] to 127.0.0.1:8888 after completing 1 request(s)  	[MsgId: MMSG-26000]
+Resetting all proxy auto-configuration information  	[MsgId: MMSG-26000]
+Notify: Next row for parameter QRCodeErrorCorrect = 1 [table  = QRCodeErrorCorrect].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeErrorCorrect': table = 'QRCodeErrorCorrect.dat' column = '0' row = '1'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter QRCodeScale = 7 [table  = QRCodeScale].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeScale': table = 'QRCodeScale.dat' column = '0' row = '7'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter HospitalID = 8 [table  = HospitalID].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '8'.	[MsgId: MMSG-13877]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(38): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309144337.914"	[MsgId: MMSG-13992]
+Action.c(39): Notify: Saving Parameter "strCurrentDateTime = 20180309144337914".	[MsgId: MMSG-13798]
+Action.c(43): Warning: The string 'RandForLoop' with parameter delimiters is not a parameter.	[MsgId: MWAR-13987]
+Action.c(51): Notify: Transaction "Patient Get2DCodeImage" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "8"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180309144337914"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "8"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "QRCodeErrorCorrect" =  "0"	[MsgId: MMSG-13992]
+Action.c(53): t=57447ms: Connecting [0] to host 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(53): t=57447ms: Connected socket [0] from 127.0.0.1:36659 to 127.0.0.1:8888 in 0 ms  	[MsgId: MMSG-26000]
+Action.c(53): t=57447ms: 340-byte request headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=8)
+Action.c(53):     POST http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx HTTP/1.1\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Cache-Control: no-cache\r\n
+Action.c(53):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)\r\n
+Action.c(53):     Accept-Encoding: gzip, deflate\r\n
+Action.c(53):     Accept: */*\r\n
+Action.c(53):     Proxy-Connection: Keep-Alive\r\n
+Action.c(53):     Host: 10.184.129.203\r\n
+Action.c(53):     Content-Length: 886\r\n
+Action.c(53):     \r\n
+Action.c(53): t=57448ms: 886-byte request body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=8)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(53):     oap:Header><wsa:Action>http://tempuri.org/Get2DCodeImage</wsa:Action><wsa:MessageID>uuid:8
+Action.c(53):     1afdc9a-7c24-4600-8714-05e9250c0a31</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+Action.c(53):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+Action.c(53):     ://10.184.129.203/CenterInfoServer/CenterPrintService.asmx</wsa:To></soap:Header><soap:Bod
+Action.c(53):     y><Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>8</hospitalID><patientID>E201803
+Action.c(53):     091443379148</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>0</QR
+Action.c(53):     CodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+Action.c(53): t=57646ms: 231-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=8)
+Action.c(53):     HTTP/1.1 200 OK\r\n
+Action.c(53):     Cache-Control: private, max-age=0\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Server: Microsoft-IIS/7.5\r\n
+Action.c(53):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(53):     X-Powered-By: ASP.NET\r\n
+Action.c(53):     Date: Fri, 09 Mar 2018 06:43:50 GMT\r\n
+Action.c(53):     Content-Length: 2628\r\n
+Action.c(53):     \r\n
+Action.c(53): t=57647ms: 2628-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=8)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema"><soap:Body><Get2DCodeImageResponse xmlns="http://tempuri.org/">
+Action.c(53):     <Get2DCodeImageResult>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U
+Action.c(53):     HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMj
+Action.c(53):     IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAmACYDASIAAhEBAxEB/8QAHwAAAQUB
+Action.c(53):     AQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBka
+Action.c(53):     EII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqD
+Action.c(53):     hIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09f
+Action.c(53):     b3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+Action.c(53):     BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZG
+Action.c(53):     VmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+Action.c(53):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guEltTO7zm3UYwk5JMh
+Action.c(53):     BDflbs7q9v9Fs/DWu3/wDZmnXHl6c9toIjtRI7TshdleAFWkLpmNSOIbrcFaNohITd6J4qTSdCs9N0mfU7hpBo91ZJ
+Action.c(53):     IiSI4khHnW8UpLqR5zq7ARx3CBCuBIscM0s3hfS/Di+IIINEaJX0jWruwS4uCYy3mzRkXB8lY8qASokjRzkKIXkABU
+Action.c(53):     u5ta0bxzFNZafaadHJb3UVjc6lAbaOAG2t83ESFpGUKx6GMmOLKOwSMiG3p+kztHqK3ukzzQvqCX01vd6bK1/LDNd2
+Action.c(53):     UzySxxs8RVlR1KhFP+jthciVVj0m81XTPHN6nhbQbu/W2SfT8W8sgt47mK2iEazyMkaypGQ8K7nyVAcKHO6XE8S6rP
+Action.c(53):     4as21Wz1SCJtdu2vBc2jyo6RzlkaeCymbcsmyEnztyj/SWRSRtdQDt/hbo9/p/iGGTULKAXQtLwS3VpoklhGUZ7Tyk
+Action.c(53):     JaCIM2UmPQ4GeaKufCZJJHm1V9Jj0m31d7i7sbFo4AYoQtsu6MoEcIxHI2EEJGxIPzSlAHN6MwvpSGN94nW6u4Tqdv
+Action.c(53):     eaFMzreo0pkB8wNBbMImhhIGQcAZiX94updP4m0H4gzQ6P4f1LUNqX4hlTdDbySylrmJ5SVRHRGmki2tK3IZlVGID5
+Action.c(53):     drZ2+pQaPNfWcF4vmxyR3Nxa35XUJHdYoEuZ57V0lXy3bEpUEM6rGIlBLVL23sbfSZZ7iO0S+kuLbTp9KS4+1MLySZ
+Action.c(53):     ZJjIEa5MhkdHcM4Dj7JEhSRSysAGuXOkf2Tf8Aia51fTbuDULiGJLeKyNrCN8ys0hiAmDiQQmUyNlg9qI2V8PCMuBE
+Action.c(53):     0/WoSbv7PataTyXjW+pLLqa3KQGaa5KMfMtppFVo2RXAEkYDl0AWTo113WpPCei2OvabJYtHbi4iTVlMl3dzwM5mkS
+Action.c(53):     eSUNbAjyx5hTdGJmdcJGXXI1/w3e+KdUt9ASPUrbWIrLy9Rmu7mVEvZI/JgM4UCVniaRbdg5jjBELksSMxAHd/DPQY
+Action.c(53):     l8Ta14mgvfMa/iVL6K2LxQLfebIZ1MMv71WTEeN+P9a5AAYKpWH8F9LW2vdP1G3sI2gvdHd3vkViFdXhjMeRBEoJMT
+Action.c(53):     EqWlOULBhuZpCgC5o/wt1jT9WtNQkgsVuhFp9tcyrqjuhjtpLdiyRfZlO5hbDgvgbjWhbfDLWIPC66JBq9jbtLsvrr
+Action.c(53):     UZ7Z7y7OosT5s0bs6iPAChWC7+WOQ3zEooAjh+HviGx1G+k0uW0sbefTJLaHydTmV45fs6RwltsQMgiKsilj90q+0S
+Action.c(53):     b2kjHwz1a6s9SfV7fQ7+7X7O+kQme4+y2hBjaWIRyb1SHdGoAQAspZcxqQFKKANT4Z+Dde8KIY9eGm3csduLeC+huX
+Action.c(53):     llSINlYh5kYKp7Bwg2LhASzMUUUAf//Z</Get2DCodeImageResult></Get2DCodeImageResponse></soap:Bod
+Action.c(53):     y></soap:Envelope>
+Action.c(53): t=57647ms: Request done "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+Action.c(53): web_custom_request("Get2DCodeImage") was successful, 2628 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+Action.c(68): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(68): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(72): Error: Patient Get2DCodeImage failed.	[MsgId: MERR-17999]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" ended with a "Fail" status (Duration: 0.2005).	[MsgId: MMSG-16873]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" has 0 error message(s).	[MsgId: MMSG-16818]
+Action.c(78): lr_think_time: 1.00 seconds.	[MsgId: MMSG-15948]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 8.	[MsgId: MMSG-15965]
+Starting iteration 9.	[MsgId: MMSG-15968]
+t=58648ms: Closed connection [0] to 127.0.0.1:8888 after completing 1 request(s)  	[MsgId: MMSG-26000]
+Resetting all proxy auto-configuration information  	[MsgId: MMSG-26000]
+Notify: Next row for parameter QRCodeErrorCorrect = 1 [table  = QRCodeErrorCorrect].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeErrorCorrect': table = 'QRCodeErrorCorrect.dat' column = '0' row = '1'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter QRCodeScale = 9 [table  = QRCodeScale].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeScale': table = 'QRCodeScale.dat' column = '0' row = '9'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter HospitalID = 9 [table  = HospitalID].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '9'.	[MsgId: MMSG-13877]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(38): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309144339.116"	[MsgId: MMSG-13992]
+Action.c(39): Notify: Saving Parameter "strCurrentDateTime = 20180309144339116".	[MsgId: MMSG-13798]
+Action.c(43): Warning: The string 'RandForLoop' with parameter delimiters is not a parameter.	[MsgId: MWAR-13987]
+Action.c(51): Notify: Transaction "Patient Get2DCodeImage" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "9"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180309144339116"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "9"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "QRCodeErrorCorrect" =  "0"	[MsgId: MMSG-13992]
+Action.c(53): t=58650ms: Connecting [0] to host 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(53): t=58650ms: Connected socket [0] from 127.0.0.1:36667 to 127.0.0.1:8888 in 0 ms  	[MsgId: MMSG-26000]
+Action.c(53): t=58650ms: 340-byte request headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=9)
+Action.c(53):     POST http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx HTTP/1.1\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Cache-Control: no-cache\r\n
+Action.c(53):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)\r\n
+Action.c(53):     Accept-Encoding: gzip, deflate\r\n
+Action.c(53):     Accept: */*\r\n
+Action.c(53):     Proxy-Connection: Keep-Alive\r\n
+Action.c(53):     Host: 10.184.129.203\r\n
+Action.c(53):     Content-Length: 886\r\n
+Action.c(53):     \r\n
+Action.c(53): t=58651ms: 886-byte request body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=9)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(53):     oap:Header><wsa:Action>http://tempuri.org/Get2DCodeImage</wsa:Action><wsa:MessageID>uuid:8
+Action.c(53):     1afdc9a-7c24-4600-8714-05e9250c0a31</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+Action.c(53):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+Action.c(53):     ://10.184.129.203/CenterInfoServer/CenterPrintService.asmx</wsa:To></soap:Header><soap:Bod
+Action.c(53):     y><Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>9</hospitalID><patientID>E201803
+Action.c(53):     091443391169</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>0</QR
+Action.c(53):     CodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+Action.c(53): t=58948ms: 231-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=9)
+Action.c(53):     HTTP/1.1 200 OK\r\n
+Action.c(53):     Cache-Control: private, max-age=0\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Server: Microsoft-IIS/7.5\r\n
+Action.c(53):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(53):     X-Powered-By: ASP.NET\r\n
+Action.c(53):     Date: Fri, 09 Mar 2018 06:43:52 GMT\r\n
+Action.c(53):     Content-Length: 2624\r\n
+Action.c(53):     \r\n
+Action.c(53): t=58948ms: 2624-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=9)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema"><soap:Body><Get2DCodeImageResponse xmlns="http://tempuri.org/">
+Action.c(53):     <Get2DCodeImageResult>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U
+Action.c(53):     HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMj
+Action.c(53):     IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAmACYDASIAAhEBAxEB/8QAHwAAAQUB
+Action.c(53):     AQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBka
+Action.c(53):     EII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqD
+Action.c(53):     hIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09f
+Action.c(53):     b3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+Action.c(53):     BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZG
+Action.c(53):     VmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+Action.c(53):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guEltTO7zm3UYwk5JMh
+Action.c(53):     BDflP4etINUt9O0/xpqV3ZpoD+VBD50ttMqKLea0lkjjZkicRNcBmyGCBzn907pzl2+uwWunQ6lYeVBZWkuqxmytQN
+Action.c(53):     gWLDNbXEULwpvMiSHYgjTZExkEpdq6efx3YXl9a3sf8AZWoTWcsd/FqH2e6imjDQozLcyWyMom8mOVWC7o2EZLBBD5
+Action.c(53):     bgFS2m1/TdetfE9oJLDwvqrxJqCTRrbJHaSyCKHbJGFCiO3a1KkPlWeTbnEwWexttQuhs8TWcep6iEtreVYbe4mlW2
+Action.c(53):     t7mxeTzEcF5DLHLHIUwAm1vlDySgSQJq2h6i+vatPPe2cUUJOoTQxTxvbwkPErXcjH5WeWJt0MJeQRoyqJvMVbko1K
+Action.c(53):     Ga6WDTrTREvdHtgsE9u1pDFZrNm4LRBJ4d7PM+4OP3MciMScyBQC58LdHv9P8AEMMmoWUAuhaXglurTRJLCMoz2nlI
+Action.c(53):     S0EQZspMehwM80VJ8IrW2/4SDW7m2hjRGt7e4V7mFHvZkuB5iyyziaQh32ktGQo4jcKm5hRQBz+tz/ZPG/2Say00aT
+Action.c(53):     dXrmOylntRDEkCeT82wTObd1tQZFaJBE8SfMpjLVBY+Kr+3h02TW7WO4u7N49SsL+8e9d1tpIUcBpoYzz5KTIwCbHM
+Action.c(53):     UjuAYz5z4fDGmtplzNFfQa1ca3Kshu9W8LXECSzzyYVo7kRnyY33xjAz32NEX3LcufFtnG+lzpZWmbNxf25kNxILIl
+Action.c(53):     f3yC7tVcTBxFcuWJcOTIZNphKSABY2uuabrK6tfNd6lFsgVLxreK4WaGJg0KfapGOQ0ksJzBCXl2IyqJvMVchdJm1v
+Action.c(53):     WYP+JfaW51LTPsOrW1hCZlsoUaK5MsT4lE5aIARiMEQ+ZbpkEJm3cQ63o/2zW7++vpYEtE2astnbXn7mH54cT3Eqo2
+Action.c(53):     ZJYXHloDL5aEbZfNCHh2XU0vbjSvDi+XcPtmi07W2mVtOaO8SQtLaJGYx5omhZXjWNY1DYIKM7AHeeBIVh8Y6/bQaN
+Action.c(53):     aWNvapH/AK27aW/jll/eSCbLyBi/yt5ityqxqSxQrEVn/BuA6jHqniW9ijbUrhLO0a4kWRp2VLOAkl3wSHJDcKMnnd
+Action.c(53):     INpBQBT0f4W6xp+rWmoSQWK3Qi0+2uZV1R3Qx20luxZIvsyncwthwXwNxrQ0vwBq2jWdobbSPDjX1tqDaiJY7q4twJ
+Action.c(53):     ZSPNWPYp8uNUHlBPmVxtdgNpRiigCOD4aeI5HvLm/wDEUcs8lvHbo4XzLpo41Zo0+0yKwiIlZcukQLGFJMK5atDVvh
+Action.c(53):     3N4sS1u/E0emvd70FzaWilYSu6LzHWUr5nmsIUGT/yzHlDBPm0UUAanhfw1qmg+KtcupV0r+zL+K1EP2SPynjeGFYi
+Action.c(53):     uzacRnBKr5h2Y4HzMaKKKAP/2Q==</Get2DCodeImageResult></Get2DCodeImageResponse></soap:Body></
+Action.c(53):     soap:Envelope>
+Action.c(53): t=58948ms: Request done "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+Action.c(53): web_custom_request("Get2DCodeImage") was successful, 2624 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+Action.c(68): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(68): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(72): Error: Patient Get2DCodeImage failed.	[MsgId: MERR-17999]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" ended with a "Fail" status (Duration: 0.2993).	[MsgId: MMSG-16873]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" has 0 error message(s).	[MsgId: MMSG-16818]
+Action.c(78): lr_think_time: 1.00 seconds.	[MsgId: MMSG-15948]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 9.	[MsgId: MMSG-15965]
+Starting iteration 10.	[MsgId: MMSG-15968]
+t=59950ms: Closed connection [0] to 127.0.0.1:8888 after completing 1 request(s)  	[MsgId: MMSG-26000]
+Resetting all proxy auto-configuration information  	[MsgId: MMSG-26000]
+Notify: Next row for parameter QRCodeErrorCorrect = 5 [table  = QRCodeErrorCorrect].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeErrorCorrect': table = 'QRCodeErrorCorrect.dat' column = '0' row = '5'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter QRCodeScale = 6 [table  = QRCodeScale].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeScale': table = 'QRCodeScale.dat' column = '0' row = '6'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter HospitalID = 10 [table  = HospitalID].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '10'.	[MsgId: MMSG-13877]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(38): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309144340.417"	[MsgId: MMSG-13992]
+Action.c(39): Notify: Saving Parameter "strCurrentDateTime = 20180309144340417".	[MsgId: MMSG-13798]
+Action.c(43): Warning: The string 'RandForLoop' with parameter delimiters is not a parameter.	[MsgId: MWAR-13987]
+Action.c(51): Notify: Transaction "Patient Get2DCodeImage" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "10"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180309144340417"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "10"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "QRCodeErrorCorrect" =  "20"	[MsgId: MMSG-13992]
+Action.c(53): t=59950ms: Connecting [0] to host 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(53): t=59951ms: Connected socket [0] from 127.0.0.1:36678 to 127.0.0.1:8888 in 1 ms  	[MsgId: MMSG-26000]
+Action.c(53): t=59951ms: 340-byte request headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=10)
+Action.c(53):     POST http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx HTTP/1.1\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Cache-Control: no-cache\r\n
+Action.c(53):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)\r\n
+Action.c(53):     Accept-Encoding: gzip, deflate\r\n
+Action.c(53):     Accept: */*\r\n
+Action.c(53):     Proxy-Connection: Keep-Alive\r\n
+Action.c(53):     Host: 10.184.129.203\r\n
+Action.c(53):     Content-Length: 889\r\n
+Action.c(53):     \r\n
+Action.c(53): t=59951ms: 889-byte request body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=10)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(53):     oap:Header><wsa:Action>http://tempuri.org/Get2DCodeImage</wsa:Action><wsa:MessageID>uuid:8
+Action.c(53):     1afdc9a-7c24-4600-8714-05e9250c0a31</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+Action.c(53):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+Action.c(53):     ://10.184.129.203/CenterInfoServer/CenterPrintService.asmx</wsa:To></soap:Header><soap:Bod
+Action.c(53):     y><Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>10</hospitalID><patientID>E20180
+Action.c(53):     30914434041710</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>20<
+Action.c(53):     /QRCodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+Action.c(53): t=60570ms: 231-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=10)
+Action.c(53):     HTTP/1.1 200 OK\r\n
+Action.c(53):     Cache-Control: private, max-age=0\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Server: Microsoft-IIS/7.5\r\n
+Action.c(53):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(53):     X-Powered-By: ASP.NET\r\n
+Action.c(53):     Date: Fri, 09 Mar 2018 06:43:53 GMT\r\n
+Action.c(53):     Content-Length: 2632\r\n
+Action.c(53):     \r\n
+Action.c(53): t=60570ms: 2632-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=10)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema"><soap:Body><Get2DCodeImageResponse xmlns="http://tempuri.org/">
+Action.c(53):     <Get2DCodeImageResult>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U
+Action.c(53):     HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMj
+Action.c(53):     IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAmACYDASIAAhEBAxEB/8QAHwAAAQUB
+Action.c(53):     AQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBka
+Action.c(53):     EII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqD
+Action.c(53):     hIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09f
+Action.c(53):     b3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+Action.c(53):     BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZG
+Action.c(53):     VmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+Action.c(53):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guEltTO7zm3UYwk5JMh
+Action.c(53):     BDflHpmoXWqz2Wta1ZT2x8qKJEtreCOysFhSO5tmt8yn98EckGT5VWeQt+7hkVtPS9ItrXw1otw/8AaXiW2a3SUrb3
+Action.c(53):     CXMLRQiJWihtpRJK0TmTDrhcTQRkiFQrJQu9J8OeGdLt7y8t49UeZ5o72we68yWKay3TQoIle4UIsaiByWYpG6cruk
+Action.c(53):     3AGOq6rpgjSx16S4udNe0t7u6W1trSytf3aRxm5LBpJTFK8IXzowy+VNjaysU1PDZia21DSNQ8IQWl/Nd29/e2Nszz
+Action.c(53):     mGEXNi7qtntYxxvHIrEAkkxMCAEVVtwXWueHLewmmmj1DUJL2WS2s2mub7+2rZAJVYlYSjzoPIMdwuBtwrBfLKjIv7
+Action.c(53):     zw5qml759MjPhmS3Nwl3d6f/ZUVveNtRhaSW8UhkPJBjdZP+PfcXcKTQB2fwt0e/0/xDDJqFlALoWl4Jbq00SSwjKM
+Action.c(53):     9p5SEtBEGbKTHocDPNFXPhVbzW2pXsFtpd2miwJKlq2oQm3uNMZpfMNmY2diwKvHJ5o+8NoYnaoQoAw7qPSdW06CG4
+Action.c(53):     0jVbGHSttxHFbNb3NhLER9mjk3yRN5i+VbSMks6KozzIisjVTi0m3tvBUD3unyPLcohW1sYbbUzHqG1mj+zxKChiaJ
+Action.c(53):     57hon+RROpiKkkixpek2cWpWuvNqsmqz3FxDcW7SeHbjTre6u5JUEc8kvlSR5KsUU7MAyFlKuzSGnpfiey8G3Im/s+
+Action.c(53):     fS1WWKUNdXskcF6gtvJZGJhllPkNsX7OryeXJI+SViyACDUv7UisdXuP7T0NLqCJbPVZbSLzY7K1gmlPkxLIyCPJWO
+Action.c(53):     AWzJtmG1gzZkKz2ln5VrDDcabrlr9m/0y8utTb7SiI8T3EwuyqPu2YIEeYHdbx1Kr5ju9y+vte8NJpJuobu51WZ/m0
+Action.c(53):     +aN57m88lopQhREaGWVFWJftgZW2FvkMkYAzBof/CQ6janwzdQHTLyVp1ns9L/ALJkPkGAEQyxRO7Q+fcIf3iHabfl
+Action.c(53):     vkLkA7f4PR+GpbO5ufD5nucRRtc3c1m0AFzIWaZEG7y0wFhykSgALHln42lSfB25ttS0a4vLTSNNtLJXH2R7MJ+5DK
+Action.c(53):     oeBj/rGdRFEzySAF2bgFFRiUAZej/C3WNP1a01CSCxW6EWn21zKuqO6GO2kt2LJF9mU7mFsOC+BuNbCfDi/kvG1Nb2
+Action.c(53):     x07UIsxWaRxSXUFvCQjqAjspLRyL8gz5K7FZYUYnBRQBX/4VjrovNQlbxHYyLqMSWrFdLEZsbeMM0cMC72XyS/lq8T
+Action.c(53):     DDpuyc8nLvfg9qut38sOqahaHSVS2mtVllkuZY50RRMG4jykzGVpGUozvsc4IIoooA7jw14Um8OazO6C0ms5rcN5vK
+Action.c(53):     yRXBbEixoQdkBjSBFQPhRAgwTlqKKKAP/9k=</Get2DCodeImageResult></Get2DCodeImageResponse></soap
+Action.c(53):     :Body></soap:Envelope>
+Action.c(53): t=60571ms: Request done "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+Action.c(53): web_custom_request("Get2DCodeImage") was successful, 2632 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+Action.c(68): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(68): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(72): Error: Patient Get2DCodeImage failed.	[MsgId: MERR-17999]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" ended with a "Fail" status (Duration: 0.6208).	[MsgId: MMSG-16873]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" has 0 error message(s).	[MsgId: MMSG-16818]
+Action.c(78): lr_think_time: 1.00 seconds.	[MsgId: MMSG-15948]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 10.	[MsgId: MMSG-15965]
+Starting iteration 11.	[MsgId: MMSG-15968]
+t=61572ms: Closed connection [0] to 127.0.0.1:8888 after completing 1 request(s)  	[MsgId: MMSG-26000]
+Resetting all proxy auto-configuration information  	[MsgId: MMSG-26000]
+Notify: Next row for parameter QRCodeErrorCorrect = 4 [table  = QRCodeErrorCorrect].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeErrorCorrect': table = 'QRCodeErrorCorrect.dat' column = '0' row = '4'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter QRCodeScale = 10 [table  = QRCodeScale].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeScale': table = 'QRCodeScale.dat' column = '0' row = '10'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter HospitalID = 1 [table  = HospitalID].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '1'.	[MsgId: MMSG-13877]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(38): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309144342.039"	[MsgId: MMSG-13992]
+Action.c(39): Notify: Saving Parameter "strCurrentDateTime = 20180309144342039".	[MsgId: MMSG-13798]
+Action.c(43): Warning: The string 'RandForLoop' with parameter delimiters is not a parameter.	[MsgId: MWAR-13987]
+Action.c(51): Notify: Transaction "Patient Get2DCodeImage" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "1"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180309144342039"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "1"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "QRCodeErrorCorrect" =  "15"	[MsgId: MMSG-13992]
+Action.c(53): t=61572ms: Connecting [0] to host 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(53): t=61573ms: Connected socket [0] from 127.0.0.1:36686 to 127.0.0.1:8888 in 1 ms  	[MsgId: MMSG-26000]
+Action.c(53): t=61573ms: 340-byte request headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=11)
+Action.c(53):     POST http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx HTTP/1.1\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Cache-Control: no-cache\r\n
+Action.c(53):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)\r\n
+Action.c(53):     Accept-Encoding: gzip, deflate\r\n
+Action.c(53):     Accept: */*\r\n
+Action.c(53):     Proxy-Connection: Keep-Alive\r\n
+Action.c(53):     Host: 10.184.129.203\r\n
+Action.c(53):     Content-Length: 887\r\n
+Action.c(53):     \r\n
+Action.c(53): t=61573ms: 887-byte request body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=11)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(53):     oap:Header><wsa:Action>http://tempuri.org/Get2DCodeImage</wsa:Action><wsa:MessageID>uuid:8
+Action.c(53):     1afdc9a-7c24-4600-8714-05e9250c0a31</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+Action.c(53):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+Action.c(53):     ://10.184.129.203/CenterInfoServer/CenterPrintService.asmx</wsa:To></soap:Header><soap:Bod
+Action.c(53):     y><Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>1</hospitalID><patientID>E201803
+Action.c(53):     091443420391</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>15</Q
+Action.c(53):     RCodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+Action.c(53): t=62108ms: 231-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=11)
+Action.c(53):     HTTP/1.1 200 OK\r\n
+Action.c(53):     Cache-Control: private, max-age=0\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Server: Microsoft-IIS/7.5\r\n
+Action.c(53):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(53):     X-Powered-By: ASP.NET\r\n
+Action.c(53):     Date: Fri, 09 Mar 2018 06:43:55 GMT\r\n
+Action.c(53):     Content-Length: 2628\r\n
+Action.c(53):     \r\n
+Action.c(53): t=62109ms: 2628-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=11)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema"><soap:Body><Get2DCodeImageResponse xmlns="http://tempuri.org/">
+Action.c(53):     <Get2DCodeImageResult>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U
+Action.c(53):     HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMj
+Action.c(53):     IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAmACYDASIAAhEBAxEB/8QAHwAAAQUB
+Action.c(53):     AQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBka
+Action.c(53):     EII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqD
+Action.c(53):     hIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09f
+Action.c(53):     b3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+Action.c(53):     BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZG
+Action.c(53):     VmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+Action.c(53):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guEltTO7zm3UYwk5JMh
+Action.c(53):     BDflT8XRXF7r9jpF0s6efp7W5fVZxciwiluI5nuovtAWV9sTmMlo0ZBE/znymKyPbXPh66sLXw9f3epnTkaU295YPH
+Action.c(53):     Pc3aRRFIjFLH5rIFSJtsW4KqQbhEVFwbD6VqUV1bnxRY+J57g295YXV4bhntWAiFtFPJIYgkMAD3j7irSAN5jbw/zA
+Action.c(53):     G3c6tf2HhzxSfCNtlDdxnnzLeO3CuqSxsSzGJlhNuDmSEIhO1YXgkFU9Iu1m0JvDEemyXljp6ad/aKRQtdmSWK5txK
+Action.c(53):     ZE2+ahMYOI2D5jjCgRNDJHRpWmzeGLy40vUNXjtdQvrhLG1ktJjay3MMVq1nbllaQyKGlfIZIXCvEz5ZNjKTyzeEfD
+Action.c(53):     Wj6Jaa3dvd+IXa2TU7DMYMMAaJZVR924mE24VYVV5DGNsrlkJANT4W6Pf6f4hhk1CygF0LS8Et1aaJJYRlGe08pCWg
+Action.c(53):     iDNlJj0OBnmitzw1aalpfxLn0t7a7bS7PRxFBerE0cEh87eFfKBWdVcBVRvLQB9ipvKIUAc+66f/AGtD4jsNLjujfJ
+Action.c(53):     a3NnNJdTSXA2w27tBOEilLuVWCRYysjALNMHQgEc5ougabfSpoem2/+inSrN4Ln7NcPOZJ2tTcZRWRFUxyL5uJGdY5
+Action.c(53):     QBIUHlpp6WLqa7fF1HFo9+kcVrcR2Goxrczy3ELR3EpaIJv4IWQOJfmUGcsBMKGsWnivTLXSidIksdR+z2do1vptyH
+Action.c(53):     aF2lmtoQJHnf7MPILKkmx1LzuT84UqAGoyX3i7xHqbFrS60kXE9iz3Wo/abL7GJ47h5o/LlR4zGvkuxZyhz5e6MiOI
+Action.c(53):     27RdTtvHknim5WDXdWsZb22Wwju5nayX7SgIQxQP5qxpdZOfm2y7QimEio9Gnm8NQ2fhy11qRV8RIoW5ac288SpCkE
+Action.c(53):     XlAyzjEspRBKi8LHIyBo1jZI9M0fU10eXw1b2djqE2v6UDJqF3bTRoYIWNtb4KeajyIZIH3IoQKobfIGEoAO48Badb
+Action.c(53):     xa4lxZPv0uC0ltNPWxiJs1C/ZxNJ5hd8tK6qVVWIASQsfNMmCsP4OQTzXcGoXNrqUUT2VydP2zxS2SQSXAkYfuokSO
+Action.c(53):     XdgbQS37t8pGAi0UASaP8AC3WNP1a01CSCxW6EWn21zKuqO6GO2kt2LJF9mU7mFsOC+BuNXH+GmtSiwjS/tLaBbdkn
+Action.c(53):     XeXeGUXMUyyI8SQlwVt4Ygo8ry1RdhO3FFFAFfxf8MPEvi3UrG6m1i0jgVwtxZNPcNAYXl82RMbtzkMqchkDgIAsPl
+Action.c(53):     ru6S58O634ls9Sj8W6P4UuscaZGiyyFEYnzEaVlDIxUIBIgGD8204C0UUAHhbwfqeheI4p7qeC4sLLSo9Ps5EuZt5w
+Action.c(53):     kIctC+6NMmEEGMr/ALQcnKlFFAH/2Q==</Get2DCodeImageResult></Get2DCodeImageResponse></soap:Bod
+Action.c(53):     y></soap:Envelope>
+Action.c(53): t=62109ms: Request done "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+Action.c(53): web_custom_request("Get2DCodeImage") was successful, 2628 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+Action.c(68): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(68): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(72): Error: Patient Get2DCodeImage failed.	[MsgId: MERR-17999]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" ended with a "Fail" status (Duration: 0.5370).	[MsgId: MMSG-16873]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" has 0 error message(s).	[MsgId: MMSG-16818]
+Action.c(78): lr_think_time: 1.00 seconds.	[MsgId: MMSG-15948]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 11.	[MsgId: MMSG-15965]
+Starting iteration 12.	[MsgId: MMSG-15968]
+t=63110ms: Closed connection [0] to 127.0.0.1:8888 after completing 1 request(s)  	[MsgId: MMSG-26000]
+Resetting all proxy auto-configuration information  	[MsgId: MMSG-26000]
+Notify: Next row for parameter QRCodeErrorCorrect = 1 [table  = QRCodeErrorCorrect].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeErrorCorrect': table = 'QRCodeErrorCorrect.dat' column = '0' row = '1'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter QRCodeScale = 6 [table  = QRCodeScale].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeScale': table = 'QRCodeScale.dat' column = '0' row = '6'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter HospitalID = 2 [table  = HospitalID].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '2'.	[MsgId: MMSG-13877]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(38): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309144343.577"	[MsgId: MMSG-13992]
+Action.c(39): Notify: Saving Parameter "strCurrentDateTime = 20180309144343577".	[MsgId: MMSG-13798]
+Action.c(43): Warning: The string 'RandForLoop' with parameter delimiters is not a parameter.	[MsgId: MWAR-13987]
+Action.c(51): Notify: Transaction "Patient Get2DCodeImage" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "2"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180309144343577"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "2"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "QRCodeErrorCorrect" =  "0"	[MsgId: MMSG-13992]
+Action.c(53): t=63111ms: Connecting [0] to host 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(53): t=63111ms: Connected socket [0] from 127.0.0.1:36710 to 127.0.0.1:8888 in 0 ms  	[MsgId: MMSG-26000]
+Action.c(53): t=63111ms: 340-byte request headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=12)
+Action.c(53):     POST http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx HTTP/1.1\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Cache-Control: no-cache\r\n
+Action.c(53):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)\r\n
+Action.c(53):     Accept-Encoding: gzip, deflate\r\n
+Action.c(53):     Accept: */*\r\n
+Action.c(53):     Proxy-Connection: Keep-Alive\r\n
+Action.c(53):     Host: 10.184.129.203\r\n
+Action.c(53):     Content-Length: 886\r\n
+Action.c(53):     \r\n
+Action.c(53): t=63111ms: 886-byte request body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=12)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(53):     oap:Header><wsa:Action>http://tempuri.org/Get2DCodeImage</wsa:Action><wsa:MessageID>uuid:8
+Action.c(53):     1afdc9a-7c24-4600-8714-05e9250c0a31</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+Action.c(53):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+Action.c(53):     ://10.184.129.203/CenterInfoServer/CenterPrintService.asmx</wsa:To></soap:Header><soap:Bod
+Action.c(53):     y><Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>2</hospitalID><patientID>E201803
+Action.c(53):     091443435772</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>0</QR
+Action.c(53):     CodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+Action.c(53): t=63457ms: 231-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=12)
+Action.c(53):     HTTP/1.1 200 OK\r\n
+Action.c(53):     Cache-Control: private, max-age=0\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Server: Microsoft-IIS/7.5\r\n
+Action.c(53):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(53):     X-Powered-By: ASP.NET\r\n
+Action.c(53):     Date: Fri, 09 Mar 2018 06:43:56 GMT\r\n
+Action.c(53):     Content-Length: 2632\r\n
+Action.c(53):     \r\n
+Action.c(53): t=63457ms: 2632-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=12)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema"><soap:Body><Get2DCodeImageResponse xmlns="http://tempuri.org/">
+Action.c(53):     <Get2DCodeImageResult>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U
+Action.c(53):     HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMj
+Action.c(53):     IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAmACYDASIAAhEBAxEB/8QAHwAAAQUB
+Action.c(53):     AQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBka
+Action.c(53):     EII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqD
+Action.c(53):     hIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09f
+Action.c(53):     b3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+Action.c(53):     BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZG
+Action.c(53):     VmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+Action.c(53):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guEltTO7zm3UYwk5JMh
+Action.c(53):     BDflP4etINUt9O0/xpqV3ZpoD+VBD50ttMqKLea0lkjjZkicRNcBmyGCBzn907pHYeE9Y0v/hFbHXNK+w6jY749Gls
+Action.c(53):     rp5YWmby5GEyNBcIkmXnfzAAMwtwFRHGhq2uw6Z4jln8mC8ij1BtX07UblLkMInRd/723jLeWVhuVQMHV44wx/dxIJ
+Action.c(53):     QDMtptf03XrXxPaCSw8L6q8Sagk0a2yR2ksgih2yRhQojt2tSpD5Vnk25xMFt2Gn6teWzzeJdO/tW6i+yWlw8FrcTv
+Action.c(53):     HBDc2UjCVXBZ2midZSmBt8tztDvKAQJq2h6i+vatPPe2cUUJOoTQxTxvbwkPErXcjH5WeWJt0MJeQRoyqJvMVdSUau
+Action.c(53):     lrdLBp2m6Jb3GmWwWCe3FmsVqZc3BaIJOjEsz7g4K26SoxOZJBQBJ8LdHv9P8AEMMmoWUAuhaXglurTRJLCMoz2nlI
+Action.c(53):     S0EQZspMehwM80VJ8IrW2/4SDW7m2hjRGt7e4V7mFHvZkuB5iyyziaQh32ktGQo4jcKm5hRQBl393qlxpmmtZXc8Vj
+Action.c(53):     HLeRtaNb4udXlSRXmuEgDGRZPtAZljVUaMI582Hcu3E0LWv7H0vSmuINNlNtcPqFi6C6CWKLmOWJZLYSAIRbXRHMgl
+Action.c(53):     AaWTBUrJf06x+yRaZ/Z3l3SO8Edtqs9hdWkRLzySxPFE1nJBC/mXO1XJcBOF2byRHF4y02S8W+t7KAPBqEmpJ589xM
+Action.c(53):     LGVgPtEaT2vmYjfyrlwpG1wWdkVEUTAFyxtdc03WV1a+a71KLZAqXjW8Vws0MTBoU+1SMchpJYTmCEvLsRlUTeYqxt
+Action.c(53):     bXGp+ZoF1pV9p95dxJb6tY2mJbKziXbNI6JiUy3HlpGqFFKxLPbx5DKu6pf2Wq2NvqOp6vc3d3ZNZKjak1hbXytbxD
+Action.c(53):     dEPOuZVjcM8sTYjjBm8tD8svmhbdhea3dawln4Y0r+z4TaRqLPWVlVLe5gu4mLG1jQojSRy20jFI1C+YWV1KuSAdp4
+Action.c(53):     EhWHxjr9tBo1pY29qkf+tu2lv45Zf3kgmy8gYv8AK3mK3KrGpLFCsRWf8G4DqMeqeJb2KNtSuEs7RriRZGnZUs4CSX
+Action.c(53):     fBIckNwoyed0g2kFAFPR/hbrGn6taahJBYrdCLT7a5lXVHdDHbSW7Fki+zKdzC2HBfA3GtDTvBHieyigu7m28OXepw
+Action.c(53):     6gL2HypJrVLUbUi8qJo1yIxDCqbWBDbxuB8r96UUAV/+FZeKZotQnn8TQG+ltEt4JniM8+2NWaJTcOPkxKylmjjVm8
+Action.c(53):     lJBtdmroPFfw5s/FWoi6vvInh81A1r5QiBjJhMj+YAX84iFV3ZwYx5YCkmQFFAFjwv4a1TQfFWuXUq6V/Zl/FaiH7J
+Action.c(53):     H5TxvDCsRXZtOIzglV8w7McD5mNFFFAH/9k=</Get2DCodeImageResult></Get2DCodeImageResponse></soap
+Action.c(53):     :Body></soap:Envelope>
+Action.c(53): t=63458ms: Request done "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+Action.c(53): web_custom_request("Get2DCodeImage") was successful, 2632 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+Action.c(68): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(68): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(72): Error: Patient Get2DCodeImage failed.	[MsgId: MERR-17999]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" ended with a "Fail" status (Duration: 0.3484).	[MsgId: MMSG-16873]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" has 0 error message(s).	[MsgId: MMSG-16818]
+Action.c(78): lr_think_time: 1.00 seconds.	[MsgId: MMSG-15948]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 12.	[MsgId: MMSG-15965]
+Starting iteration 13.	[MsgId: MMSG-15968]
+t=64461ms: Closed connection [0] to 127.0.0.1:8888 after completing 1 request(s)  	[MsgId: MMSG-26000]
+Resetting all proxy auto-configuration information  	[MsgId: MMSG-26000]
+Notify: Next row for parameter QRCodeErrorCorrect = 6 [table  = QRCodeErrorCorrect].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeErrorCorrect': table = 'QRCodeErrorCorrect.dat' column = '0' row = '6'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter QRCodeScale = 6 [table  = QRCodeScale].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeScale': table = 'QRCodeScale.dat' column = '0' row = '6'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter HospitalID = 3 [table  = HospitalID].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '3'.	[MsgId: MMSG-13877]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(38): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309144344.928"	[MsgId: MMSG-13992]
+Action.c(39): Notify: Saving Parameter "strCurrentDateTime = 20180309144344928".	[MsgId: MMSG-13798]
+Action.c(43): Warning: The string 'RandForLoop' with parameter delimiters is not a parameter.	[MsgId: MWAR-13987]
+Action.c(51): Notify: Transaction "Patient Get2DCodeImage" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "3"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180309144344928"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "3"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "QRCodeErrorCorrect" =  "25"	[MsgId: MMSG-13992]
+Action.c(53): t=64462ms: Connecting [0] to host 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(53): t=64462ms: Connected socket [0] from 127.0.0.1:36715 to 127.0.0.1:8888 in 0 ms  	[MsgId: MMSG-26000]
+Action.c(53): t=64462ms: 340-byte request headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=13)
+Action.c(53):     POST http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx HTTP/1.1\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Cache-Control: no-cache\r\n
+Action.c(53):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)\r\n
+Action.c(53):     Accept-Encoding: gzip, deflate\r\n
+Action.c(53):     Accept: */*\r\n
+Action.c(53):     Proxy-Connection: Keep-Alive\r\n
+Action.c(53):     Host: 10.184.129.203\r\n
+Action.c(53):     Content-Length: 887\r\n
+Action.c(53):     \r\n
+Action.c(53): t=64462ms: 887-byte request body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=13)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(53):     oap:Header><wsa:Action>http://tempuri.org/Get2DCodeImage</wsa:Action><wsa:MessageID>uuid:8
+Action.c(53):     1afdc9a-7c24-4600-8714-05e9250c0a31</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+Action.c(53):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+Action.c(53):     ://10.184.129.203/CenterInfoServer/CenterPrintService.asmx</wsa:To></soap:Header><soap:Bod
+Action.c(53):     y><Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>3</hospitalID><patientID>E201803
+Action.c(53):     091443449283</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>25</Q
+Action.c(53):     RCodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+Action.c(53): t=64895ms: 231-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=13)
+Action.c(53):     HTTP/1.1 200 OK\r\n
+Action.c(53):     Cache-Control: private, max-age=0\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Server: Microsoft-IIS/7.5\r\n
+Action.c(53):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(53):     X-Powered-By: ASP.NET\r\n
+Action.c(53):     Date: Fri, 09 Mar 2018 06:43:58 GMT\r\n
+Action.c(53):     Content-Length: 2628\r\n
+Action.c(53):     \r\n
+Action.c(53): t=64896ms: 2628-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=13)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema"><soap:Body><Get2DCodeImageResponse xmlns="http://tempuri.org/">
+Action.c(53):     <Get2DCodeImageResult>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U
+Action.c(53):     HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMj
+Action.c(53):     IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAmACYDASIAAhEBAxEB/8QAHwAAAQUB
+Action.c(53):     AQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBka
+Action.c(53):     EII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqD
+Action.c(53):     hIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09f
+Action.c(53):     b3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+Action.c(53):     BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZG
+Action.c(53):     VmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+Action.c(53):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guEltTO7zm3UYwk5JMh
+Action.c(53):     BDflt6T9q1eXSNXm1PFovlaZFq8MU73FzCWSNt8qtGqLKxjwp86SOSaQ5Rom8vH0nVbW78Fz2Og+IsR38W22tL+eeW
+Action.c(53):     fSY7cqiTySKJY4FyqyH93GF8z5ZAI1I0NfsY/C15Dbx+BfMjMrwxX8iafEblQCMBIVRpGfzCPs4ZGlSFV6NKKAI4bW
+Action.c(53):     E+LtGvdP0zTfsFxZW6T6VY2Iigv7mW3lCzYZQRb7bqQFiGciKX92wiZlNN0+GXSftFvYR3dhqKafPfWlhpAVYFjmsp
+Action.c(53):     hFKsaETuYriR9yKmf3gKkBVirodN8ZPF4ltdNkjuFSa8g1tgrLbzxqrSCZAw8t1aJWiSecxhJj82FWKszVLOx1a6lv
+Action.c(53):     NJudc+3eDv37G8ith5Bjlmd7UtFEQmBCWib95EM7MLkAgHX/C3R7/T/EMMmoWUAuhaXglurTRJLCMoz2nlIS0EQZsp
+Action.c(53):     MehwM80UfC+70K58b6pdaFqu9dSinmnsnlMrskUyxwTE+SpRiDKWV3Zz5iMxYsSCgCO8sbe61uy0qK8014Ly3sAsmi
+Action.c(53):     29sZ7aZEwrvOIyQTE5aIxxKdqEjyUjkc8ZqWuRab4jGtWmp6VqN7c/a55rfTIXMEc0aW7SOiiWQDJhdklkiIMkYkZS
+Action.c(53):     mx01ILHUJ728ktry0bQ9VvY0tIn0W4iSW2kdvIjeaSzeLCs1uE3o4UDajRrkN0+nN4kht7yTW7SOby3FpNNqUsM7RJ
+Action.c(53):     OJpJIZI4nk84bpLYLHGkDS5iXAVQAAc3/aOqXt5aQzpBcWuqRRzaXoVtLvntYphaglFdIoTGkIlVcBl+eYPvQTkYni
+Action.c(53):     nxLr8Ubebqem6fc29vHc+XbXiybhLZxosizpL50k+6PCnaxCyHfK0L/NqeL76HQPC7P4b0+x0mS3iC39kYLW62S5W3
+Action.c(53):     MRkWKTzNimbeZGVh9rTc2XEdW4fDV3Ya4mhaSLSaA3s+qwQS6gjtBPFdRW63IS2tsRHBcBG3xryXUeUykA6D4TMZL2
+Action.c(53):     C51CeQatqFlNfmOXzJDNDI8QVlaWR5FCBFjJKoJRswZBEHJWh4EvbvVvEun6rcW9pY2lx4chWxtotMSEvtKGbY5JkE
+Action.c(53):     SM6BVO1WDgqGC72KAMvR/hbrGn6taahJBYrdCLT7a5lXVHdDHbSW7Fki+zKdzC2HBfA3Gus1zw74j163tpXv47Cdbh
+Action.c(53):     ZZbS0ud0RWIGSHDyRN84nVGLCNfkJUh9iklFAFeHwfq8GjWVsJbSSC1t4Yl0q4kE8bNGphbNxJC21JIDtdUhXJzgru
+Action.c(53):     ctz8XwZjudd/tzVhaXl/I8fmR3VxPcwJttlG4B2EkhFwv3XcqYiRwcYKKAOk8C+Fdd8LS3NvdXGlDTZLu8uBDYW4iH
+Action.c(53):     7xoTD8u3I2hZhgs2AyLlgo2lFFAH/9k=</Get2DCodeImageResult></Get2DCodeImageResponse></soap:Bod
+Action.c(53):     y></soap:Envelope>
+Action.c(53): t=64896ms: Request done "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+Action.c(53): web_custom_request("Get2DCodeImage") was successful, 2628 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+Action.c(68): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(68): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(72): Error: Patient Get2DCodeImage failed.	[MsgId: MERR-17999]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" ended with a "Fail" status (Duration: 0.4353).	[MsgId: MMSG-16873]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" has 0 error message(s).	[MsgId: MMSG-16818]
+Action.c(78): lr_think_time: 1.00 seconds.	[MsgId: MMSG-15948]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 13.	[MsgId: MMSG-15965]
+Starting iteration 14.	[MsgId: MMSG-15968]
+t=65898ms: Closed connection [0] to 127.0.0.1:8888 after completing 1 request(s)  	[MsgId: MMSG-26000]
+Resetting all proxy auto-configuration information  	[MsgId: MMSG-26000]
+Notify: Next row for parameter QRCodeErrorCorrect = 3 [table  = QRCodeErrorCorrect].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeErrorCorrect': table = 'QRCodeErrorCorrect.dat' column = '0' row = '3'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter QRCodeScale = 7 [table  = QRCodeScale].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeScale': table = 'QRCodeScale.dat' column = '0' row = '7'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter HospitalID = 4 [table  = HospitalID].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '4'.	[MsgId: MMSG-13877]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(38): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309144346.365"	[MsgId: MMSG-13992]
+Action.c(39): Notify: Saving Parameter "strCurrentDateTime = 20180309144346365".	[MsgId: MMSG-13798]
+Action.c(43): Warning: The string 'RandForLoop' with parameter delimiters is not a parameter.	[MsgId: MWAR-13987]
+Action.c(51): Notify: Transaction "Patient Get2DCodeImage" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "4"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180309144346365"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "4"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "QRCodeErrorCorrect" =  "10"	[MsgId: MMSG-13992]
+Action.c(53): t=65899ms: Connecting [0] to host 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(53): t=65899ms: Connected socket [0] from 127.0.0.1:36727 to 127.0.0.1:8888 in 0 ms  	[MsgId: MMSG-26000]
+Action.c(53): t=65899ms: 340-byte request headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=14)
+Action.c(53):     POST http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx HTTP/1.1\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Cache-Control: no-cache\r\n
+Action.c(53):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)\r\n
+Action.c(53):     Accept-Encoding: gzip, deflate\r\n
+Action.c(53):     Accept: */*\r\n
+Action.c(53):     Proxy-Connection: Keep-Alive\r\n
+Action.c(53):     Host: 10.184.129.203\r\n
+Action.c(53):     Content-Length: 887\r\n
+Action.c(53):     \r\n
+Action.c(53): t=65899ms: 887-byte request body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=14)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(53):     oap:Header><wsa:Action>http://tempuri.org/Get2DCodeImage</wsa:Action><wsa:MessageID>uuid:8
+Action.c(53):     1afdc9a-7c24-4600-8714-05e9250c0a31</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+Action.c(53):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+Action.c(53):     ://10.184.129.203/CenterInfoServer/CenterPrintService.asmx</wsa:To></soap:Header><soap:Bod
+Action.c(53):     y><Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>4</hospitalID><patientID>E201803
+Action.c(53):     091443463654</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>10</Q
+Action.c(53):     RCodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+Action.c(53): t=66757ms: 231-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=14)
+Action.c(53):     HTTP/1.1 200 OK\r\n
+Action.c(53):     Cache-Control: private, max-age=0\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Server: Microsoft-IIS/7.5\r\n
+Action.c(53):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(53):     X-Powered-By: ASP.NET\r\n
+Action.c(53):     Date: Fri, 09 Mar 2018 06:43:59 GMT\r\n
+Action.c(53):     Content-Length: 2632\r\n
+Action.c(53):     \r\n
+Action.c(53): t=66757ms: 2632-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=14)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema"><soap:Body><Get2DCodeImageResponse xmlns="http://tempuri.org/">
+Action.c(53):     <Get2DCodeImageResult>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U
+Action.c(53):     HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMj
+Action.c(53):     IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAmACYDASIAAhEBAxEB/8QAHwAAAQUB
+Action.c(53):     AQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBka
+Action.c(53):     EII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqD
+Action.c(53):     hIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09f
+Action.c(53):     b3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+Action.c(53):     BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZG
+Action.c(53):     VmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+Action.c(53):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guEltTO7zm3UYwk5JMh
+Action.c(53):     BDflOdPlhsLie48XXYSy0yJ7LV40mg85LtwxYoskKo5cwkSSOwdvNMjNsZYNi6sL68v9KOi32pf2DoqQadbw2TefLd
+Action.c(53):     Sxoh/wBIiYGO3lQt8vmRDDxne8WYyM+G+17w4mnW13DpuuSroQ07+ybKN7uWOJWjjkZoVRlyjiRH/fIk2xR8pSgAh0
+Action.c(53):     0Wni7RnttLjW2ayt4LrSX0yO1a+unt5VE0sagrHFtupQ+3e37mYBGWJmU03T4ZdJ+0W9hHd2Gopp899aWGkBVgWOay
+Action.c(53):     mEUqxoRO5iuJH3IqZ/eAqQFWKnBdWvi3TB4mi0WddTeIXMWq27QSLbXMckLz+a0o/deX5RkjWWTDRSMgdNyqtDVLOx
+Action.c(53):     1a6lvNJudc+3eDv37G8ith5Bjlmd7UtFEQmBCWib95EM7MLkAgHX/C3R7/AE/xDDJqFlALoWl4Jbq00SSwjKM9p5SE
+Action.c(53):     tBEGbKTHocDPNFXPh7rWgat4zuJ/D89pAlxZTfaLOJmkkuEiuNsN1KzRgiVt8xYO5Yh4yc8kFAHER2E15qQstQ1KRx
+Action.c(53):     9nNuIDCbiPVbV5XzdRwb5JSWNskzvCAzl1I8oZuDTh1Jd+ueNdPuoIZraIW95Hdrb+Y8i3FvK0sDw2xhmYyHyw5UlS
+Action.c(53):     0UjMAygb/wBgh1K/1C+R8Q6/dokFy2m3MVsiPOxgkeM2nkXLN5yjExPKhllBcFKGp6jYWPiMCPTINOu38uHVreS2ur
+Action.c(53):     iHT4lSWR4pWiSMzR+WilIwWiZRIGJijhKAGmmn6/rUNnqF48kegXjxtp2l2MqmWMywwsIVEsAiaJYUkUBFx+8kWR9h
+Action.c(53):     mccx4p8S6/FG3m6npun3Nvbx3Pl214sm4S2caLIs6S+dJPujwp2sQsh3ytC/zbfiXUrXR/Dyw6TZwaRHp9pcTTWLxw
+Action.c(53):     XVvHesiWhhdolcyMI2mJaTjfPB5hAdUEkPhq7sNcTQtJFpNAb2fVYIJdQR2gniuordbkJbW2IjguAjb415LqPKZSAd
+Action.c(53):     B8JmMl7Bc6hPINW1CymvzHL5khmhkeIKytLI8ihAixklUEo2YMgiDkrQ8CXt3q3iXT9VuLe0sbS48OQrY20WmJCX2l
+Action.c(53):     DNsckyCJGdAqnarBwVDBd7FAGXo/wt1jT9WtNQkgsVuhFp9tcyrqjuhjtpLdiyRfZlO5hbDgvgbjW5H4AvTf6teK0e
+Action.c(53):     mGS4TUrJNO1CXP24ofNeRpUZQCS6Dam1o3O5CQm0ooAsQ+D9Xg0aythLaSQWtvDEulXEgnjZo1MLZuJIW2pJAdrqkK
+Action.c(53):     5OcFdzlufi+DMdzrv9uasLS8v5Hj8yO6uJ7mBNtso3AOwkkIuF+67lTESODjBRQB0ngXwrrvhaW5t7q40oabJd3lwI
+Action.c(53):     bC3EQ/eNCYfl25G0LMMFmwGRcsFG0oooA//Z</Get2DCodeImageResult></Get2DCodeImageResponse></soap
+Action.c(53):     :Body></soap:Envelope>
+Action.c(53): t=66757ms: Request done "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+Action.c(53): web_custom_request("Get2DCodeImage") was successful, 2632 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+Action.c(68): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(68): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(72): Error: Patient Get2DCodeImage failed.	[MsgId: MERR-17999]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" ended with a "Fail" status (Duration: 0.8590).	[MsgId: MMSG-16873]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" has 0 error message(s).	[MsgId: MMSG-16818]
+Action.c(78): lr_think_time: 1.00 seconds.	[MsgId: MMSG-15948]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 14.	[MsgId: MMSG-15965]
+Starting iteration 15.	[MsgId: MMSG-15968]
+t=67758ms: Closed connection [0] to 127.0.0.1:8888 after completing 1 request(s)  	[MsgId: MMSG-26000]
+Resetting all proxy auto-configuration information  	[MsgId: MMSG-26000]
+Notify: Next row for parameter QRCodeErrorCorrect = 2 [table  = QRCodeErrorCorrect].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeErrorCorrect': table = 'QRCodeErrorCorrect.dat' column = '0' row = '2'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter QRCodeScale = 5 [table  = QRCodeScale].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeScale': table = 'QRCodeScale.dat' column = '0' row = '5'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter HospitalID = 5 [table  = HospitalID].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '5'.	[MsgId: MMSG-13877]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(38): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309144348.226"	[MsgId: MMSG-13992]
+Action.c(39): Notify: Saving Parameter "strCurrentDateTime = 20180309144348226".	[MsgId: MMSG-13798]
+Action.c(43): Warning: The string 'RandForLoop' with parameter delimiters is not a parameter.	[MsgId: MWAR-13987]
+Action.c(51): Notify: Transaction "Patient Get2DCodeImage" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "5"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180309144348226"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "5"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "QRCodeErrorCorrect" =  "5"	[MsgId: MMSG-13992]
+Action.c(53): t=67759ms: Connecting [0] to host 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(53): t=67759ms: Connected socket [0] from 127.0.0.1:36741 to 127.0.0.1:8888 in 0 ms  	[MsgId: MMSG-26000]
+Action.c(53): t=67759ms: 340-byte request headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=15)
+Action.c(53):     POST http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx HTTP/1.1\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Cache-Control: no-cache\r\n
+Action.c(53):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)\r\n
+Action.c(53):     Accept-Encoding: gzip, deflate\r\n
+Action.c(53):     Accept: */*\r\n
+Action.c(53):     Proxy-Connection: Keep-Alive\r\n
+Action.c(53):     Host: 10.184.129.203\r\n
+Action.c(53):     Content-Length: 886\r\n
+Action.c(53):     \r\n
+Action.c(53): t=67759ms: 886-byte request body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=15)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(53):     oap:Header><wsa:Action>http://tempuri.org/Get2DCodeImage</wsa:Action><wsa:MessageID>uuid:8
+Action.c(53):     1afdc9a-7c24-4600-8714-05e9250c0a31</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+Action.c(53):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+Action.c(53):     ://10.184.129.203/CenterInfoServer/CenterPrintService.asmx</wsa:To></soap:Header><soap:Bod
+Action.c(53):     y><Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>5</hospitalID><patientID>E201803
+Action.c(53):     091443482265</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>5</QR
+Action.c(53):     CodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+Action.c(53): t=68126ms: 231-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=15)
+Action.c(53):     HTTP/1.1 200 OK\r\n
+Action.c(53):     Cache-Control: private, max-age=0\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Server: Microsoft-IIS/7.5\r\n
+Action.c(53):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(53):     X-Powered-By: ASP.NET\r\n
+Action.c(53):     Date: Fri, 09 Mar 2018 06:44:01 GMT\r\n
+Action.c(53):     Content-Length: 2628\r\n
+Action.c(53):     \r\n
+Action.c(53): t=68127ms: 1460-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=15)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema"><soap:Body><Get2DCodeImageResponse xmlns="http://tempuri.org/">
+Action.c(53):     <Get2DCodeImageResult>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U
+Action.c(53):     HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMj
+Action.c(53):     IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAmACYDASIAAhEBAxEB/8QAHwAAAQUB
+Action.c(53):     AQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBka
+Action.c(53):     EII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqD
+Action.c(53):     hIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09f
+Action.c(53):     b3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+Action.c(53):     BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZG
+Action.c(53):     VmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+Action.c(53):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guEltTO7zm3UYwk5JMh
+Action.c(53):     BDfkWtzfS6It//AMJlqV5A7/2amqIu630hC6L9qcyykmeVbiPkMrRLNMOPK2LtyXGunTLfSGvoLbSJNKUmDyhENNmt
+Action.c(53):     JIYJo4rn9667JSXMrxuFCKVccyJXtNbfVdce10m9nk8M28Vk+gwJZtKhjizuZlMkbybJLRyEyZm8vKAxiRXAA6Tb6f
+Action.c(53):     420r+zNFgt9N+yQW0uiLbEfarh4JVWSRpEDGEJcyKzspkPkzExEROUj03T4ZdJ+0W9hHd2Gopp899aWGkBVgWOaymE
+Action.c(53):     UqxoRO5iuJH3IqZ/eAqQ
+Action.c(53): t=68127ms: 1168-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=15)
+Action.c(53):     FWKgtzF4tsIPFNppEkeqbPtKalGIZooZ0eI3AmL4MJi8szQiSbaUYJuCHyqp6pZ2OrXUt5pNzrn27wd+/Y3kVsPIMc
+Action.c(53):     szvalooiEwIS0TfvIhnZhcgEA6/wCFuj3+n+IYZNQsoBdC0vBLdWmiSWEZRntPKQloIgzZSY9DgZ5oqx8OdU8O6j43
+Action.c(53):     vrrw7cwQLfWkz3Vks0kzzrDMscN05eMFJGBlLKXLHejEEsTRQBzdymm6F4M0ez1aWRpFeRmsLi0WW4MMdvCzOYTHOk
+Action.c(53):     dwiLHtEzELHI43RKVWLMur+1sdR8UanJFPLDZ/ZdTtvItYI/sJUxRQW0gUsEmQkoA4Bj+zsdsiyyxtv2ds1zrun6km
+Action.c(53):     v30ekyZtdOij0e4jhhjlvkkt9rz28kX3SgBCoAYoVDYG4R6tY31oNPXUWkOtwamsMEuoaX9vub+zaMK0PySEyJFbyO
+Action.c(53):     ZtiBGfIUl8uwBQv4vFeqDSLpYpDomo3EL2emWTBpLeKWO3LRoJYFgdFhDqFXHEk25nRZ6x/FPiXX4o283U9N0+5t7e
+Action.c(53):     O58u2vFk3CWzjRZFnSXzpJ90eFO1iFkO+VoX+bY8QeLLLQvByx+GtM02KA2Ujy2bRRXsFvM/lW5KTRI6SOibtxlcEi
+Action.c(53):     6TduyIxPD4au7DXE0LSRaTQG9n1WCCXUEdoJ4rqK3W5CW1tiI4LgI2+NeS6jymUgHQfCZjJewXOoTyDVtQspr8xy+Z
+Action.c(53):     IZoZHiCsrSyPIoQIsZJVBKNmDIIg5K1PAcuo6xrllrs9jBZabJ4ft4bSOLSliBb5WkVZcl1jVsBUbarhsqGCF2KAMf
+Action.c(53):     R/hbrGn6taahJBYrdCLT7a5lXVHdDHbSW7Fki+zKdzC2HBfA3Gus1jw3r2sJpV6t1HY6tYvcSGSG9cgq7ZWAFY0BQ4
+Action.c(53):     jO50baYlDJKC2SigCO18LaxZaHBaxxaVdRwWkFuml6i73ESsn7l3WfYCu+3JUqItu4k4wz7ubi+DMdzrv9uasLS8v5
+Action.c(53):     Hj8yO6uJ7mBNtso3AOwkkIuF+67lTESODjBRQB0HgPwbq/hS9vPtDaMtpcXF3Iy6faiEsrPG0APy5ATNwNpdtodQCw
+Action.c(53):     AwUUUAf/2Q==</Get2DCodeImageResult></Get2DCodeImageResponse></soap:Body></soap:Envelope>
+Action.c(53): t=68127ms: Request done "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+Action.c(53): web_custom_request("Get2DCodeImage") was successful, 2628 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+Action.c(68): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(68): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(72): Error: Patient Get2DCodeImage failed.	[MsgId: MERR-17999]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" ended with a "Fail" status (Duration: 0.3686).	[MsgId: MMSG-16873]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" has 0 error message(s).	[MsgId: MMSG-16818]
+Action.c(78): lr_think_time: 1.00 seconds.	[MsgId: MMSG-15948]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 15.	[MsgId: MMSG-15965]
+Starting iteration 16.	[MsgId: MMSG-15968]
+t=69128ms: Closed connection [0] to 127.0.0.1:8888 after completing 1 request(s)  	[MsgId: MMSG-26000]
+Resetting all proxy auto-configuration information  	[MsgId: MMSG-26000]
+Notify: Next row for parameter QRCodeErrorCorrect = 3 [table  = QRCodeErrorCorrect].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeErrorCorrect': table = 'QRCodeErrorCorrect.dat' column = '0' row = '3'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter QRCodeScale = 4 [table  = QRCodeScale].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeScale': table = 'QRCodeScale.dat' column = '0' row = '4'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter HospitalID = 6 [table  = HospitalID].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '6'.	[MsgId: MMSG-13877]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(38): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309144349.595"	[MsgId: MMSG-13992]
+Action.c(39): Notify: Saving Parameter "strCurrentDateTime = 20180309144349595".	[MsgId: MMSG-13798]
+Action.c(43): Warning: The string 'RandForLoop' with parameter delimiters is not a parameter.	[MsgId: MWAR-13987]
+Action.c(51): Notify: Transaction "Patient Get2DCodeImage" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "6"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180309144349595"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "6"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "QRCodeErrorCorrect" =  "10"	[MsgId: MMSG-13992]
+Action.c(53): t=69129ms: Connecting [0] to host 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(53): t=69129ms: Connected socket [0] from 127.0.0.1:36753 to 127.0.0.1:8888 in 0 ms  	[MsgId: MMSG-26000]
+Action.c(53): t=69129ms: 340-byte request headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=16)
+Action.c(53):     POST http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx HTTP/1.1\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Cache-Control: no-cache\r\n
+Action.c(53):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)\r\n
+Action.c(53):     Accept-Encoding: gzip, deflate\r\n
+Action.c(53):     Accept: */*\r\n
+Action.c(53):     Proxy-Connection: Keep-Alive\r\n
+Action.c(53):     Host: 10.184.129.203\r\n
+Action.c(53):     Content-Length: 887\r\n
+Action.c(53):     \r\n
+Action.c(53): t=69129ms: 887-byte request body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=16)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(53):     oap:Header><wsa:Action>http://tempuri.org/Get2DCodeImage</wsa:Action><wsa:MessageID>uuid:8
+Action.c(53):     1afdc9a-7c24-4600-8714-05e9250c0a31</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+Action.c(53):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+Action.c(53):     ://10.184.129.203/CenterInfoServer/CenterPrintService.asmx</wsa:To></soap:Header><soap:Bod
+Action.c(53):     y><Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>6</hospitalID><patientID>E201803
+Action.c(53):     091443495956</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>10</Q
+Action.c(53):     RCodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+Action.c(53): t=69660ms: 231-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=16)
+Action.c(53):     HTTP/1.1 200 OK\r\n
+Action.c(53):     Cache-Control: private, max-age=0\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Server: Microsoft-IIS/7.5\r\n
+Action.c(53):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(53):     X-Powered-By: ASP.NET\r\n
+Action.c(53):     Date: Fri, 09 Mar 2018 06:44:02 GMT\r\n
+Action.c(53):     Content-Length: 2636\r\n
+Action.c(53):     \r\n
+Action.c(53): t=69661ms: 2636-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=16)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema"><soap:Body><Get2DCodeImageResponse xmlns="http://tempuri.org/">
+Action.c(53):     <Get2DCodeImageResult>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U
+Action.c(53):     HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMj
+Action.c(53):     IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAmACYDASIAAhEBAxEB/8QAHwAAAQUB
+Action.c(53):     AQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBka
+Action.c(53):     EII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqD
+Action.c(53):     hIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09f
+Action.c(53):     b3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+Action.c(53):     BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZG
+Action.c(53):     VmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+Action.c(53):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guEltTO7zm3UYwk5JMh
+Action.c(53):     BDflb8L39xq2uNpRmvh5Hmstlb3otHhhj2x28Nx9njaYNvuCzKGWGLcwAHltGlTQ9b1K8sotNuNK023e8eG6TRHDSP
+Action.c(53):     q8bIJIURWieKOAYkHmYyiwwxMybA9FhqenzXVvqUpu11C2vbU+ZeaXNeySXSRLbSRyxq6ljB51qRI4VjK0pjH7zZQB
+Action.c(53):     b0PSNLewtYP7V+1a3f3dkbqbTrTz3cSQMGecXACOskFy7cRBx87MJjFK1SaJoMul+Fv7LutMtLwq9lHqQ0/SZnMqQ3
+Action.c(53):     VvMvnKVX5/IuTlPKZmCMWckFRgaYv/CCeFb201aw1JIba4hvoMta3UEspT7Jdo6rncgZ5Aylxx5aFondS+3Zy6B4Ss
+Action.c(53):     ZdI8P28F0Bp8GoXUz30EdtqapNJaShpWZkVXLBtjl1wSFWKT5qANj4W6Pf6f4hhk1CygF0LS8Et1aaJJYRlGe08pCW
+Action.c(53):     giDNlJj0OBnmitzwZHaXXi++vQ1219A99aytPcO5dVmij81l8lUBdoHwQ3AQou5Y9kJQBweg2+ieLdHF9d299e2z3a
+Action.c(53):     y/YJ4Lm4+wW7tIgitUjhYJGQsyFlJH+jx48p2Uw3J7y282WXTf7SuLzQ7I3F9DNpSWcFq0EGEnMUiFFlkEaGEqu9Az
+Action.c(53):     Fi0aCER6vpaeMIohfaxO1rN9kt9OvDo12sUiuskOWaWJgeZ0ZGkkkYsHKyReaStTXJdMu7qK81BJNG0O0vYJYdI1TT
+Action.c(53):     ZIrfT4vKnAL2qOnnvNPvYeWHwqHewXclAF/UbrStX8Y6m+nQyaheack81g0enxht58u8Ro5QE3FmSYRAJMWzJIxkjY
+Action.c(53):     qafjTxL/AMVfPo0V7tdrS6s7rTLbTtnkfao188+dJsV40aNrgyEJncvzbGZo6nh3W7Twn4Qllu9Pu7jR50W8t5JbW0
+Action.c(53):     mikBhe0Y+VHyST5ZkBkQrv2M+4j7Rt+GrCz0z+wNL0axsdRh+XV44pL8HbcR4tGmkWJLn77y7wyuEXyuiGN2cA0Phh
+Action.c(53):     Yw2fje8tpI57q4tNPZbPU4GuTayWLzDyosT5xt8v92Y2ZGUt8zFSxK1PAl3FqXiDS9Ql027tfN0ILp0jwworwKLbzV
+Action.c(53):     JRUbCyFdg8sL80jKSrqqFAGXo/wt1jT9WtNQkgsVuhFp9tcyrqjuhjtpLdiyRfZlO5hbDgvgbjW5rPhLxhd3GkXtrr
+Action.c(53):     8jXdsjJMTdRwEIxSQoHW1YOTLGmW2IDHGFKEs7EooAr6r8OtT1i7t9Ynk0231C0d5bWC0jjRldrhZgWumhbcFYMRiB
+Action.c(53):     T87Bmbc7NHqXwuuNVn+1v/AGVFeNdtIHurcXqQxOlxI4Csqh2FxdORnC7Y4iQWUhiigDQ+HPgfWPBkCWd7qn2q0t/t
+Action.c(53):     EcCQ3DiMq7xsrtEynEhw4OH2qOgZndiUUUAf/9k=</Get2DCodeImageResult></Get2DCodeImageResponse></
+Action.c(53):     soap:Body></soap:Envelope>
+Action.c(53): t=69662ms: Request done "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+Action.c(53): web_custom_request("Get2DCodeImage") was successful, 2636 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+Action.c(68): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(68): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(72): Error: Patient Get2DCodeImage failed.	[MsgId: MERR-17999]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" ended with a "Fail" status (Duration: 0.5351).	[MsgId: MMSG-16873]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" has 0 error message(s).	[MsgId: MMSG-16818]
+Action.c(78): lr_think_time: 1.00 seconds.	[MsgId: MMSG-15948]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 16.	[MsgId: MMSG-15965]
+Starting iteration 17.	[MsgId: MMSG-15968]
+t=70666ms: Closed connection [0] to 127.0.0.1:8888 after completing 1 request(s)  	[MsgId: MMSG-26000]
+Resetting all proxy auto-configuration information  	[MsgId: MMSG-26000]
+Notify: Next row for parameter QRCodeErrorCorrect = 1 [table  = QRCodeErrorCorrect].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeErrorCorrect': table = 'QRCodeErrorCorrect.dat' column = '0' row = '1'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter QRCodeScale = 2 [table  = QRCodeScale].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeScale': table = 'QRCodeScale.dat' column = '0' row = '2'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter HospitalID = 7 [table  = HospitalID].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '7'.	[MsgId: MMSG-13877]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(38): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309144351.133"	[MsgId: MMSG-13992]
+Action.c(39): Notify: Saving Parameter "strCurrentDateTime = 20180309144351133".	[MsgId: MMSG-13798]
+Action.c(43): Warning: The string 'RandForLoop' with parameter delimiters is not a parameter.	[MsgId: MWAR-13987]
+Action.c(51): Notify: Transaction "Patient Get2DCodeImage" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "7"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180309144351133"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "7"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "QRCodeErrorCorrect" =  "0"	[MsgId: MMSG-13992]
+Action.c(53): t=70666ms: Connecting [0] to host 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(53): t=70667ms: Connected socket [0] from 127.0.0.1:36763 to 127.0.0.1:8888 in 1 ms  	[MsgId: MMSG-26000]
+Action.c(53): t=70667ms: 340-byte request headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=17)
+Action.c(53):     POST http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx HTTP/1.1\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Cache-Control: no-cache\r\n
+Action.c(53):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)\r\n
+Action.c(53):     Accept-Encoding: gzip, deflate\r\n
+Action.c(53):     Accept: */*\r\n
+Action.c(53):     Proxy-Connection: Keep-Alive\r\n
+Action.c(53):     Host: 10.184.129.203\r\n
+Action.c(53):     Content-Length: 886\r\n
+Action.c(53):     \r\n
+Action.c(53): t=70667ms: 886-byte request body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=17)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(53):     oap:Header><wsa:Action>http://tempuri.org/Get2DCodeImage</wsa:Action><wsa:MessageID>uuid:8
+Action.c(53):     1afdc9a-7c24-4600-8714-05e9250c0a31</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+Action.c(53):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+Action.c(53):     ://10.184.129.203/CenterInfoServer/CenterPrintService.asmx</wsa:To></soap:Header><soap:Bod
+Action.c(53):     y><Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>7</hospitalID><patientID>E201803
+Action.c(53):     091443511337</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>0</QR
+Action.c(53):     CodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+Action.c(53): t=70809ms: 231-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=17)
+Action.c(53):     HTTP/1.1 200 OK\r\n
+Action.c(53):     Cache-Control: private, max-age=0\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Server: Microsoft-IIS/7.5\r\n
+Action.c(53):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(53):     X-Powered-By: ASP.NET\r\n
+Action.c(53):     Date: Fri, 09 Mar 2018 06:44:03 GMT\r\n
+Action.c(53):     Content-Length: 2628\r\n
+Action.c(53):     \r\n
+Action.c(53): t=70809ms: 2628-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=17)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema"><soap:Body><Get2DCodeImageResponse xmlns="http://tempuri.org/">
+Action.c(53):     <Get2DCodeImageResult>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U
+Action.c(53):     HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMj
+Action.c(53):     IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAmACYDASIAAhEBAxEB/8QAHwAAAQUB
+Action.c(53):     AQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBka
+Action.c(53):     EII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqD
+Action.c(53):     hIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09f
+Action.c(53):     b3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+Action.c(53):     BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZG
+Action.c(53):     VmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+Action.c(53):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guEltTO7zm3UYwk5JMh
+Action.c(53):     BDflP4etINUt9O0/xpqV3ZpoD+VBD50ttMqKLea0lkjjZkicRNcBmyGCBzn907pBa+DJdE1RdGE8klyX36HYarPMDZ
+Action.c(53):     n5CXSWO3Ku5MpMiwMojA37yyLLHfufFlxv0vUtU0zTRcBxq1jePFcpP9mK4V7iS1RlWWSCCQlQGQqpLBBEEcAoW02v
+Action.c(53):     6br1r4ntBJYeF9VeJNQSaNbZI7SWQRQ7ZIwoUR27WpUh8qzybc4mC27Cyvru2dvE8MGpaon2S1kgitrmac2sFzZPI0
+Action.c(53):     iOpMnmRyRSMnG3k7N8kwUgTVtD1F9e1aee9s4ooSdQmhinje3hIeJWu5GPys8sTboYS8gjRlUTeYq3JdP1JZrq+g0O
+Action.c(53):     00ZJ9HtoFaeya1htrMzbrhWQR3EKvI7OWV/wDVRlGO795tALnwt0e/0/xDDJqFlALoWl4Jbq00SSwjKM9p5SEtBEGb
+Action.c(53):     KTHocDPNFSfCK1tv+Eg1u5toY0Rre3uFe5hR72ZLgeYsss4mkId9pLRkKOI3CpuYUUAcxZx2mh+OrpLjwhdyT/aP7Y
+Action.c(53):     sikT3d5JH5pCyjdG8iBkVg6TMT50kZXyeXSdfHOnTPZNb2EZbTLg38NzfQXkcsfnKJ5GeSBDgyRmZyoTyj8/GyFDPc
+Action.c(53):     0eNmgvLW7v8A+0rHxBd2ss2tXei3CyXTO6qigS2zQJGNyeWGLqCCBt8wGLI0fVtE8P6ToltY6JBBdadsvpryaW5lR7
+Action.c(53):     jywJ5I57XzR5bpDMNoyh8uQuqeTtkAL8Catoeovr2rTz3tnFFCTqE0MU8b28JDxK13Ix+VnlibdDCXkEaMqibzFXM0
+Action.c(53):     7VV8S3EnhxtGjgl1XTLSa6SztmlXTrYFpZ2XIkJeSIWwjCrhcwR5BhXMmr6ZqUWnatea3dX1zp8+niF9TW0t7vdbRj
+Action.c(53):     MYFxPKqtl5omHlIDL5aMNkvmhJNBfV31y6s9Cgu0uWRXt7PXtOEUGm+XdQHaI4oCN8gaGV/LWNUEiuzOyh1AO/8CQr
+Action.c(53):     D4x1+2g0a0sbe1SP/W3bS38csv7yQTZeQMX+VvMVuVWNSWKFYis/4NwHUY9U8S3sUbalcJZ2jXEiyNOypZwEku+CQ5
+Action.c(53):     IbhRk87pBtIKAKej/C3WNP1a01CSCxW6EWn21zKuqO6GO2kt2LJF9mU7mFsOC+BuNbEHhDX4IrGZNF8OR3Vjdpc28c
+Action.c(53):     N9PFFAxVFlEOyJTFGwRiYiHVmlLMTt2uUUAZ/wDwrLxTNFqE8/iaA30tolvBM8Rnn2xqzRKbhx8mJWUs0cas3kpINr
+Action.c(53):     s1dB4r+HNn4q1EXV95E8PmoGtfKEQMZMJkfzAC/nEQqu7ODGPLAUkyAooAseF/DWqaD4q1y6lXSv7Mv4rUQ/ZI/KeN
+Action.c(53):     4YViK7NpxGcEqvmHZjgfMxooooA//9k=</Get2DCodeImageResult></Get2DCodeImageResponse></soap:Bod
+Action.c(53):     y></soap:Envelope>
+Action.c(53): t=70810ms: Request done "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+Action.c(53): web_custom_request("Get2DCodeImage") was successful, 2628 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+Action.c(68): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(68): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(72): Error: Patient Get2DCodeImage failed.	[MsgId: MERR-17999]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" ended with a "Fail" status (Duration: 0.1438).	[MsgId: MMSG-16873]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" has 0 error message(s).	[MsgId: MMSG-16818]
+Action.c(78): lr_think_time: 1.00 seconds.	[MsgId: MMSG-15948]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 17.	[MsgId: MMSG-15965]
+Starting iteration 18.	[MsgId: MMSG-15968]
+t=71812ms: Closed connection [0] to 127.0.0.1:8888 after completing 1 request(s)  	[MsgId: MMSG-26000]
+Resetting all proxy auto-configuration information  	[MsgId: MMSG-26000]
+Notify: Next row for parameter QRCodeErrorCorrect = 1 [table  = QRCodeErrorCorrect].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeErrorCorrect': table = 'QRCodeErrorCorrect.dat' column = '0' row = '1'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter QRCodeScale = 4 [table  = QRCodeScale].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeScale': table = 'QRCodeScale.dat' column = '0' row = '4'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter HospitalID = 8 [table  = HospitalID].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '8'.	[MsgId: MMSG-13877]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(38): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309144352.279"	[MsgId: MMSG-13992]
+Action.c(39): Notify: Saving Parameter "strCurrentDateTime = 20180309144352279".	[MsgId: MMSG-13798]
+Action.c(43): Warning: The string 'RandForLoop' with parameter delimiters is not a parameter.	[MsgId: MWAR-13987]
+Action.c(51): Notify: Transaction "Patient Get2DCodeImage" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "8"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180309144352279"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "8"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "QRCodeErrorCorrect" =  "0"	[MsgId: MMSG-13992]
+Action.c(53): t=71813ms: Connecting [0] to host 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(53): t=71813ms: Connected socket [0] from 127.0.0.1:36771 to 127.0.0.1:8888 in 0 ms  	[MsgId: MMSG-26000]
+Action.c(53): t=71813ms: 340-byte request headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=18)
+Action.c(53):     POST http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx HTTP/1.1\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Cache-Control: no-cache\r\n
+Action.c(53):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)\r\n
+Action.c(53):     Accept-Encoding: gzip, deflate\r\n
+Action.c(53):     Accept: */*\r\n
+Action.c(53):     Proxy-Connection: Keep-Alive\r\n
+Action.c(53):     Host: 10.184.129.203\r\n
+Action.c(53):     Content-Length: 886\r\n
+Action.c(53):     \r\n
+Action.c(53): t=71813ms: 886-byte request body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=18)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(53):     oap:Header><wsa:Action>http://tempuri.org/Get2DCodeImage</wsa:Action><wsa:MessageID>uuid:8
+Action.c(53):     1afdc9a-7c24-4600-8714-05e9250c0a31</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+Action.c(53):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+Action.c(53):     ://10.184.129.203/CenterInfoServer/CenterPrintService.asmx</wsa:To></soap:Header><soap:Bod
+Action.c(53):     y><Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>8</hospitalID><patientID>E201803
+Action.c(53):     091443522798</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>0</QR
+Action.c(53):     CodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+Action.c(53): t=72062ms: 231-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=18)
+Action.c(53):     HTTP/1.1 200 OK\r\n
+Action.c(53):     Cache-Control: private, max-age=0\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Server: Microsoft-IIS/7.5\r\n
+Action.c(53):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(53):     X-Powered-By: ASP.NET\r\n
+Action.c(53):     Date: Fri, 09 Mar 2018 06:44:05 GMT\r\n
+Action.c(53):     Content-Length: 2640\r\n
+Action.c(53):     \r\n
+Action.c(53): t=72062ms: 1460-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=18)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema"><soap:Body><Get2DCodeImageResponse xmlns="http://tempuri.org/">
+Action.c(53):     <Get2DCodeImageResult>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U
+Action.c(53):     HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMj
+Action.c(53):     IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAmACYDASIAAhEBAxEB/8QAHwAAAQUB
+Action.c(53):     AQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBka
+Action.c(53):     EII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqD
+Action.c(53):     hIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09f
+Action.c(53):     b3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+Action.c(53):     BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZG
+Action.c(53):     VmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+Action.c(53):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guEltTO7zm3UYwk5JMh
+Action.c(53):     BDflbS+1TwjZss9vfamuo5WPTdRufsYELFLq4by5hIjLm58qUyM8iiORt+3d5XOaJ4dtpNNfQILC7u5bm3IsdSgtkj
+Action.c(53):     aWGaK1mdJolV9zxtLFtMriMeYT5kZRGG3Euj+C/Di6bqdl/aWkSxSWgtoLNGuZGDie5mnikWGeFjEsJXDMsYRGYthC
+Action.c(53):     QAtdC1HX57TU9M1C+srqLFlNDZaaqtZzBIrRpHYMywSGGdJGiiVQFhKFleLeC20dr3WLu+gs/tegLFZtJBb21xciZp
+Action.c(53):     ru0u5mO7e8zeS8e53CM4
+Action.c(53): t=72062ms: 1180-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=18)
+Action.c(53):     AAjxGdtiW38V+JJ7HUtLvYJYbSURpb3IubprS/jQWrP5br+7UO8co85mkVVaXGTIhoX1hb6R4lSS4lsbLSda0/Z5dx
+Action.c(53):     dESXMX2eSPfDNhrRZAkoAAMaqQI0xG2+UA6f4W6Pf6f4hhk1CygF0LS8Et1aaJJYRlGe08pCWgiDNlJj0OBnmitz4d
+Action.c(53):     3bSX9ybxJI7u+Q3cE0aqbe/gKQuJEJiRwVM2WG1VMk8zAZJWMoA80kt/Dthavpttb2Nvo19dtHNexQSG8bTWikulGx
+Action.c(53):     4ZQ2wNG/mId4UQCQRHlLkPiTT4NLvjrFzJ4j8PzvJZ2VrbabbgQxDZczhE83zViWLyth3/ALorh0UxoDPANSXUornS
+Action.c(53):     ZY00ma9E2lpJBqEFnukl/wBGUxfZfs4i+aM8AOZPnEwJGKGmTDw94fup/FmkSXOn608pSyiijuJy2VlvXkDzGZSvlr
+Action.c(53):     GGEnyGAPKgcDIBfvB4l1oWutWepWn2PT35jvTcXH2G9ijFs8rJIuIkVmSb9+zSKqtLjJkQ0J7zUNM11dUsLSRbCzt7
+Action.c(53):     ezWwi8lrd5p7aO4X7OwDo1wZxEwEEAQlEdsAsTrpDrniK/0zVMyalpNlcKk+nJJcy3EV1Gi2svlhynkks6SKZpPMQA
+Action.c(53):     zDBMi1kJFc+IPH2o22i2+mtaXemR297ps0bx21wqw26RSbImlZQsk6lWQKgSLKSkF3oA9H8P2l9YfFKWK7sbTT4pNH
+Action.c(53):     3w21q/mwYV4o/wB032ePaVVEDgsSQ0I6IoUrn/hFbaKmsw3ttZyaVq19o6zT2UluP9LTdHm7jIGIUMvmqIlIDKI2Cq
+Action.c(53):     AKKAJNH+Fusafq1pqEkFit0ItPtrmVdUd0MdtJbsWSL7Mp3MLYcF8Dca0PCfwx1HTdBbQtfvLHUdMW0W3igaFXUeZL
+Action.c(53):     5txg7EkXkIEPmH5l3kcKilFAFfVfAnjfUtVspjf6VJaWsUcywXd5dTKl2tqYi0eNrKpfaQ5dpEYGRSGZlJP8Kp7jVp
+Action.c(53):     tVubHSr2dfIaOC9upZknYyCWcOTHiPMjTNmNArZQbEXzUlKKANzwJ4PvfClwscek6Nplm9u32sWF3LcNc3GY9jZljD
+Action.c(53):     IigS4Xew/edzzRRRQB//2Q==</Get2DCodeImageResult></Get2DCodeImageResponse></soap:Body></soap
+Action.c(53):     :Envelope>
+Action.c(53): t=72063ms: Request done "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+Action.c(53): web_custom_request("Get2DCodeImage") was successful, 2640 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+Action.c(68): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(68): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(72): Error: Patient Get2DCodeImage failed.	[MsgId: MERR-17999]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" ended with a "Fail" status (Duration: 0.2502).	[MsgId: MMSG-16873]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" has 0 error message(s).	[MsgId: MMSG-16818]
+Action.c(78): lr_think_time: 1.00 seconds.	[MsgId: MMSG-15948]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 18.	[MsgId: MMSG-15965]
+Starting iteration 19.	[MsgId: MMSG-15968]
+t=73063ms: Closed connection [0] to 127.0.0.1:8888 after completing 1 request(s)  	[MsgId: MMSG-26000]
+Resetting all proxy auto-configuration information  	[MsgId: MMSG-26000]
+Notify: Next row for parameter QRCodeErrorCorrect = 3 [table  = QRCodeErrorCorrect].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeErrorCorrect': table = 'QRCodeErrorCorrect.dat' column = '0' row = '3'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter QRCodeScale = 1 [table  = QRCodeScale].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeScale': table = 'QRCodeScale.dat' column = '0' row = '1'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter HospitalID = 9 [table  = HospitalID].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '9'.	[MsgId: MMSG-13877]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(38): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309144353.530"	[MsgId: MMSG-13992]
+Action.c(39): Notify: Saving Parameter "strCurrentDateTime = 20180309144353530".	[MsgId: MMSG-13798]
+Action.c(43): Warning: The string 'RandForLoop' with parameter delimiters is not a parameter.	[MsgId: MWAR-13987]
+Action.c(51): Notify: Transaction "Patient Get2DCodeImage" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "9"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180309144353530"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "9"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "QRCodeErrorCorrect" =  "10"	[MsgId: MMSG-13992]
+Action.c(53): t=73063ms: Connecting [0] to host 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(53): t=73063ms: Connected socket [0] from 127.0.0.1:36785 to 127.0.0.1:8888 in 0 ms  	[MsgId: MMSG-26000]
+Action.c(53): t=73063ms: 340-byte request headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=19)
+Action.c(53):     POST http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx HTTP/1.1\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Cache-Control: no-cache\r\n
+Action.c(53):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)\r\n
+Action.c(53):     Accept-Encoding: gzip, deflate\r\n
+Action.c(53):     Accept: */*\r\n
+Action.c(53):     Proxy-Connection: Keep-Alive\r\n
+Action.c(53):     Host: 10.184.129.203\r\n
+Action.c(53):     Content-Length: 887\r\n
+Action.c(53):     \r\n
+Action.c(53): t=73063ms: 887-byte request body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=19)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(53):     oap:Header><wsa:Action>http://tempuri.org/Get2DCodeImage</wsa:Action><wsa:MessageID>uuid:8
+Action.c(53):     1afdc9a-7c24-4600-8714-05e9250c0a31</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+Action.c(53):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+Action.c(53):     ://10.184.129.203/CenterInfoServer/CenterPrintService.asmx</wsa:To></soap:Header><soap:Bod
+Action.c(53):     y><Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>9</hospitalID><patientID>E201803
+Action.c(53):     091443535309</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>10</Q
+Action.c(53):     RCodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+Action.c(53): t=73638ms: 231-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=19)
+Action.c(53):     HTTP/1.1 200 OK\r\n
+Action.c(53):     Cache-Control: private, max-age=0\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Server: Microsoft-IIS/7.5\r\n
+Action.c(53):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(53):     X-Powered-By: ASP.NET\r\n
+Action.c(53):     Date: Fri, 09 Mar 2018 06:44:06 GMT\r\n
+Action.c(53):     Content-Length: 2632\r\n
+Action.c(53):     \r\n
+Action.c(53): t=73638ms: 2632-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=19)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema"><soap:Body><Get2DCodeImageResponse xmlns="http://tempuri.org/">
+Action.c(53):     <Get2DCodeImageResult>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U
+Action.c(53):     HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMj
+Action.c(53):     IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAmACYDASIAAhEBAxEB/8QAHwAAAQUB
+Action.c(53):     AQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBka
+Action.c(53):     EII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqD
+Action.c(53):     hIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09f
+Action.c(53):     b3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+Action.c(53):     BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZG
+Action.c(53):     VmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+Action.c(53):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guEltTO7zm3UYwk5JMh
+Action.c(53):     BDflr6JJaW2jXVxYXsmqRvpl3aLr9hG/m2DMsUjGWSR13GSSUT/MR5LtIpbYruhF4og8Q2+yaSO3sdMeO0s443l02C
+Action.c(53):     csFmSVolEzRRCGJ2SRwojCb1YM2YMtvtD3Om2UmmT3lv5txd2OnXkovLOS0t7aSFBbqyr5+Mq8YTa8gcmTACTMASTQ
+Action.c(53):     NL4n0PUPDulaalldW9ks2kHT1gjvXljcGZlXdti8m6mGQZDmGT5HSJ3Wxpunwy6T9ot7CO7sNRTT5760sNICrAsc1l
+Action.c(53):     MIpVjQidzFcSPuRUz+8BUgKsVe8isvF5fX9I8yK6idru21+OCJ4jJDJE0yzCRS1uQIfMhWWUDZIELqp2DM1SzsdWup
+Action.c(53):     bzSbnXPt3g79+xvIrYeQY5Zne1LRREJgQlom/eRDOzC5AIB1/wt0e/0/xDDJqFlALoWl4Jbq00SSwjKM9p5SEtBEGb
+Action.c(53):     KTHocDPNFWPhzqnh3UfG99deHbmCBb60me6slmkmedYZljhunLxgpIwMpZS5Y70YgliaKAOM0yCGz8S+F7bSbm016G
+Action.c(53):     O4FvatdMElE0BlDTgBJS0T7FRZkBRY4lVsPEkiadn4y8T6X4BMkc0EE9ttgl062aDOlwwoGVFBaaUyOkUykSoxUhmb
+Action.c(53):     y1iJfQs7pGuLO7js4L+1N3GujyXdndxQ2sbXTSQGKSSzdI96yxQkLtCrDHtf7uznI20qMatr/iGKPRLu61hLW5FzBH
+Action.c(53):     epmGMg+bCkaiWKaWO5LMhUebFGVGULKAW3tfEGu3Ol3bvAdHllimtNGt7xvOt47i2UKixNEkUsYijlRFA2Bmk81mRZ
+Action.c(53):     qxPFPiXX4o283U9N0+5t7eO58u2vFk3CWzjRZFnSXzpJ90eFO1iFkO+VoX+a54k8QWOiaHbjw/oX9mKdPklvbb7LbS
+Action.c(53):     iCceXbrDJIYZCzIJJC6ylHxcYZlLiOtOHw1d2GuJoWki0mgN7PqsEEuoI7QTxXUVutyEtrbERwXARt8a8l1HlMpAOg
+Action.c(53):     +EzGS9gudQnkGrahZTX5jl8yQzQyPEFZWlkeRQgRYySqCUbMGQRByVc8B6pLrHi2yvZ0sbKOTw1bm0sotOSJyu5fMK
+Action.c(53):     tkyLCr4VQ21X3ZUMELsUAZ+j/C3WNP1a01CSCxW6EWn21zKuqO6GO2kt2LJF9mU7mFsOC+BuNajfD7WpxJdTXGmxTP
+Action.c(53):     e3d2un2+fs6m4jdHMrOjfaHKkAMyAIZH+V0VYiUUAajeENUs9Ot7WxlsbqztIooItM1MedHIEDQMxlKkx77dsFEjwH
+Action.c(53):     HUq0gk5uL4Mx3Ou/25qwtLy/kePzI7q4nuYE22yjcA7CSQi4X7ruVMRI4OMFFAHQeBvBur+GL2b7W2jfZDcX0ka2Nq
+Action.c(53):     IiqzPA0YHy5UDy5AV3tgeWMsFG0oooA//9k=</Get2DCodeImageResult></Get2DCodeImageResponse></soap
+Action.c(53):     :Body></soap:Envelope>
+Action.c(53): t=73639ms: Request done "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+Action.c(53): web_custom_request("Get2DCodeImage") was successful, 2632 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+Action.c(68): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(68): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(72): Error: Patient Get2DCodeImage failed.	[MsgId: MERR-17999]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" ended with a "Fail" status (Duration: 0.5759).	[MsgId: MMSG-16873]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" has 0 error message(s).	[MsgId: MMSG-16818]
+Action.c(78): lr_think_time: 1.00 seconds.	[MsgId: MMSG-15948]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 19.	[MsgId: MMSG-15965]
+Starting iteration 20.	[MsgId: MMSG-15968]
+t=74640ms: Closed connection [0] to 127.0.0.1:8888 after completing 1 request(s)  	[MsgId: MMSG-26000]
+Resetting all proxy auto-configuration information  	[MsgId: MMSG-26000]
+Notify: Next row for parameter QRCodeErrorCorrect = 1 [table  = QRCodeErrorCorrect].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeErrorCorrect': table = 'QRCodeErrorCorrect.dat' column = '0' row = '1'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter QRCodeScale = 1 [table  = QRCodeScale].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeScale': table = 'QRCodeScale.dat' column = '0' row = '1'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter HospitalID = 10 [table  = HospitalID].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '10'.	[MsgId: MMSG-13877]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(38): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309144355.107"	[MsgId: MMSG-13992]
+Action.c(39): Notify: Saving Parameter "strCurrentDateTime = 20180309144355107".	[MsgId: MMSG-13798]
+Action.c(43): Warning: The string 'RandForLoop' with parameter delimiters is not a parameter.	[MsgId: MWAR-13987]
+Action.c(51): Notify: Transaction "Patient Get2DCodeImage" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "10"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180309144355107"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "10"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "QRCodeErrorCorrect" =  "0"	[MsgId: MMSG-13992]
+Action.c(53): t=74640ms: Connecting [0] to host 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(53): t=74640ms: Connected socket [0] from 127.0.0.1:36793 to 127.0.0.1:8888 in 0 ms  	[MsgId: MMSG-26000]
+Action.c(53): t=74640ms: 340-byte request headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=20)
+Action.c(53):     POST http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx HTTP/1.1\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Cache-Control: no-cache\r\n
+Action.c(53):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)\r\n
+Action.c(53):     Accept-Encoding: gzip, deflate\r\n
+Action.c(53):     Accept: */*\r\n
+Action.c(53):     Proxy-Connection: Keep-Alive\r\n
+Action.c(53):     Host: 10.184.129.203\r\n
+Action.c(53):     Content-Length: 888\r\n
+Action.c(53):     \r\n
+Action.c(53): t=74641ms: 888-byte request body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=20)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(53):     oap:Header><wsa:Action>http://tempuri.org/Get2DCodeImage</wsa:Action><wsa:MessageID>uuid:8
+Action.c(53):     1afdc9a-7c24-4600-8714-05e9250c0a31</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+Action.c(53):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+Action.c(53):     ://10.184.129.203/CenterInfoServer/CenterPrintService.asmx</wsa:To></soap:Header><soap:Bod
+Action.c(53):     y><Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>10</hospitalID><patientID>E20180
+Action.c(53):     30914435510710</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>0</
+Action.c(53):     QRCodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+Action.c(53): t=75046ms: 231-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=20)
+Action.c(53):     HTTP/1.1 200 OK\r\n
+Action.c(53):     Cache-Control: private, max-age=0\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Server: Microsoft-IIS/7.5\r\n
+Action.c(53):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(53):     X-Powered-By: ASP.NET\r\n
+Action.c(53):     Date: Fri, 09 Mar 2018 06:44:08 GMT\r\n
+Action.c(53):     Content-Length: 2632\r\n
+Action.c(53):     \r\n
+Action.c(53): t=75046ms: 2632-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=20)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema"><soap:Body><Get2DCodeImageResponse xmlns="http://tempuri.org/">
+Action.c(53):     <Get2DCodeImageResult>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U
+Action.c(53):     HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMj
+Action.c(53):     IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAmACYDASIAAhEBAxEB/8QAHwAAAQUB
+Action.c(53):     AQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBka
+Action.c(53):     EII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqD
+Action.c(53):     hIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09f
+Action.c(53):     b3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+Action.c(53):     BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZG
+Action.c(53):     VmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+Action.c(53):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guEltTO7zm3UYwk5JMh
+Action.c(53):     BDflbs7q9v9Fs/DWu3/wDZmnXHl6c9toIjtRI7TshdleAFWkLpmNSOIbrcFaNohmWmteGrvw/qzaNYalpl5Lbtf3A0
+Action.c(53):     w27Q2qqUkVtiOzsYvPO0sF+djzCIVNvrzXN3cWQ8N3XiLTbOy3rJY3n9npcPZMqB2aGUSqoRI3hkEqINq3JKrCkTCI
+Action.c(53):     AoXc2taN45imstPtNOjkt7qKxudSgNtHADbW+biJC0jKFY9DGTHFlHYJGRDPaabcpJcQ6hod3Lb3l69+VvNOc3s0TX
+Action.c(53):     mmyzNJHG7xuCr7SqRjHkHgEuoNJvNV0zxzep4W0G7v1tkn0/FvLILeO5itohGs8jJGsqRkPCu58lQHChzulxPEuoN4
+Action.c(53):     bs21q0MAn1u7a6TWLSO4V7WG4LK7QW0zfu5JFg3+YzKW3ssZKoXUA7f4W6Pf6f4hhk1CygF0LS8Et1aaJJYRlGe08p
+Action.c(53):     CWgiDNlJj0OBnmirnwmSSR5tVfSY9Jt9Xe4u7GxaOAGKELbLujKBHCMRyNhBCRsSD80pQBxFxZGyutVtNTt9S0i3Fw
+Action.c(53):     rJqGo2Ul4LvETGTegt2idxtEsjD5ZDaxEFiDcVb8O6n4ii8Ri/0SG+8StLFd28c6NGqLIiAW/2uWMKk7KqlSZJCTvL
+Action.c(53):     IMeW82pYWunalpNiLyS7Z7x7aI3k9neXEc6vMyhjLcW3ls7q1tlpAyOYo1CxeXG65esS2d4uqaxdLffbbvUINKbT9R
+Action.c(53):     YSM8ySpGXWOGN0ZZFtg5IQgS2ZQCVCUIAaodOurG6146jY6j/at3b28FnbWDW8bNJMrFvJUTeZ5vlGUyNlt9ssTK+H
+Action.c(53):     hFSaw03RNRsTM+pQXhS/W7u7PV1uHEkFvHNcT7ckxXT8oyrKApQZ82MkPpy6rql94L0rSPE2kfZ4jaeaINaj865vpY
+Action.c(53):     i/nsJpJQ1upUxrvKFoxMzLiOMuuZqmja94juG8HSPqQvFt0e8ur66eH7VLERAWEUSN50Bka3ZZ5Iw5WJwZMLlADu/h
+Action.c(53):     noMS+Jta8TQXvmNfxKl9FbF4oFvvNkM6mGX96rJiPG/H+tcgAMFUrD+C+lrbXun6jb2EbQXuju73yKxCurwxmPIgiU
+Action.c(53):     EmJiVLSnKFgw3M0hQBc0f4W6xp+rWmoSQWK3Qi0+2uZV1R3Qx20luxZIvsyncwthwXwNxq5afDPxHHoNxpL+INNT7S
+Action.c(53):     8N616+nefdRXvlqkrxvuQA/JlZdvmEyMSQw3EooAksvh/ren61czWhgtbCbT3tlS11aWKVX8hI4ssIfn8ra0aM2cKV
+Action.c(53):     fZ5gcyRz/DTULs65JfWmjXey4R/D8E11cPBaRCRWMbRuGREIijysajILoGVSu0ooA0Phn4N17wohj14abdyx24t4L6
+Action.c(53):     G5eWVIg2ViHmRgqnsHCDYuEBLMxRRQB//9k=</Get2DCodeImageResult></Get2DCodeImageResponse></soap
+Action.c(53):     :Body></soap:Envelope>
+Action.c(53): t=75046ms: Request done "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+Action.c(53): web_custom_request("Get2DCodeImage") was successful, 2632 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+Action.c(68): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(68): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(72): Error: Patient Get2DCodeImage failed.	[MsgId: MERR-17999]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" ended with a "Fail" status (Duration: 0.4068).	[MsgId: MMSG-16873]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" has 0 error message(s).	[MsgId: MMSG-16818]
+Action.c(78): lr_think_time: 1.00 seconds.	[MsgId: MMSG-15948]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 20.	[MsgId: MMSG-15965]
+Starting iteration 21.	[MsgId: MMSG-15968]
+t=76048ms: Closed connection [0] to 127.0.0.1:8888 after completing 1 request(s)  	[MsgId: MMSG-26000]
+Resetting all proxy auto-configuration information  	[MsgId: MMSG-26000]
+Notify: Next row for parameter QRCodeErrorCorrect = 3 [table  = QRCodeErrorCorrect].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeErrorCorrect': table = 'QRCodeErrorCorrect.dat' column = '0' row = '3'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter QRCodeScale = 1 [table  = QRCodeScale].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'QRCodeScale': table = 'QRCodeScale.dat' column = '0' row = '1'.	[MsgId: MMSG-13877]
+Notify: Next row for parameter HospitalID = 1 [table  = HospitalID].	[MsgId: MMSG-13876]
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '1'.	[MsgId: MMSG-13877]
+Starting action Action.	[MsgId: MMSG-15919]
+Action.c(38): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309144356.516"	[MsgId: MMSG-13992]
+Action.c(39): Notify: Saving Parameter "strCurrentDateTime = 20180309144356516".	[MsgId: MMSG-13798]
+Action.c(43): Warning: The string 'RandForLoop' with parameter delimiters is not a parameter.	[MsgId: MWAR-13987]
+Action.c(51): Notify: Transaction "Patient Get2DCodeImage" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "1"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180309144356516"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "1"	[MsgId: MMSG-13992]
+Action.c(53): Notify: Parameter Substitution: parameter "QRCodeErrorCorrect" =  "10"	[MsgId: MMSG-13992]
+Action.c(53): t=76050ms: Connecting [0] to host 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(53): t=76050ms: Connected socket [0] from 127.0.0.1:36803 to 127.0.0.1:8888 in 0 ms  	[MsgId: MMSG-26000]
+Action.c(53): t=76050ms: 340-byte request headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=21)
+Action.c(53):     POST http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx HTTP/1.1\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Cache-Control: no-cache\r\n
+Action.c(53):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)\r\n
+Action.c(53):     Accept-Encoding: gzip, deflate\r\n
+Action.c(53):     Accept: */*\r\n
+Action.c(53):     Proxy-Connection: Keep-Alive\r\n
+Action.c(53):     Host: 10.184.129.203\r\n
+Action.c(53):     Content-Length: 887\r\n
+Action.c(53):     \r\n
+Action.c(53): t=76051ms: 887-byte request body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=21)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(53):     oap:Header><wsa:Action>http://tempuri.org/Get2DCodeImage</wsa:Action><wsa:MessageID>uuid:8
+Action.c(53):     1afdc9a-7c24-4600-8714-05e9250c0a31</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+Action.c(53):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+Action.c(53):     ://10.184.129.203/CenterInfoServer/CenterPrintService.asmx</wsa:To></soap:Header><soap:Bod
+Action.c(53):     y><Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>1</hospitalID><patientID>E201803
+Action.c(53):     091443565161</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>10</Q
+Action.c(53):     RCodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+Action.c(53): t=76582ms: 231-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=21)
+Action.c(53):     HTTP/1.1 200 OK\r\n
+Action.c(53):     Cache-Control: private, max-age=0\r\n
+Action.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(53):     Server: Microsoft-IIS/7.5\r\n
+Action.c(53):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(53):     X-Powered-By: ASP.NET\r\n
+Action.c(53):     Date: Fri, 09 Mar 2018 06:44:10 GMT\r\n
+Action.c(53):     Content-Length: 2624\r\n
+Action.c(53):     \r\n
+Action.c(53): t=76583ms: 2624-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=21)
+Action.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(53):     www.w3.org/2001/XMLSchema"><soap:Body><Get2DCodeImageResponse xmlns="http://tempuri.org/">
+Action.c(53):     <Get2DCodeImageResult>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U
+Action.c(53):     HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMj
+Action.c(53):     IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAmACYDASIAAhEBAxEB/8QAHwAAAQUB
+Action.c(53):     AQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBka
+Action.c(53):     EII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqD
+Action.c(53):     hIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09f
+Action.c(53):     b3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+Action.c(53):     BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZG
+Action.c(53):     VmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+Action.c(53):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guEltTO7zm3UYwk5JMh
+Action.c(53):     BDflrtfQap4ljsb5btbPTkjnsHi1SX7cZZDFHLHFI8YlKGZ1tyJXjwXlycxhYJNFS30uVNVtXsbrRJdKs5rYBjLMxt
+Action.c(53):     WtVlkV3UxquBGrsywHdChIiEZlHKPp81ja3mlanBdz6JeW8mo3b3cBsroGWWZLZbu5JXdKJljxvR48zSMcpGrUAbdt
+Action.c(53):     qniSw8DasdAlnuroSwG/nvxJHJuUKk6yP5r+VMENsXYzKqoX2rE8MhEmkXazaE3hiPTZLyx09NO/tFIoWuzJLFc24l
+Action.c(53):     MibfNQmMHEbB8xxhQImhkjrM0y08QeH7e2sLm5sdM1zU7u1s3Rb1reQ2sdqbRONzOWMjnY6RMoeMyEtHsI055ZvCPh
+Action.c(53):     rR9EtNbu3u/ELtbJqdhmMGGANEsqo+7cTCbcKsKq8hjG2VyyEgGp8LdHv9P8QwyahZQC6FpeCW6tNEksIyjPaeUhLQ
+Action.c(53):     RBmykx6HAzzRXQeF9F1TQ/G7Wk0s9zpkOny28FwE8sEiZZVWRREqnak4SMIxRRFLtVdzKpQBwepakupDSbG2a7nvPE
+Action.c(53):     73GoNHLas29zHAI2FrJK6eViNgPODruiJRooyJU0I/Cra5b6TdXPhPTbU6g9ykrNAt9HBbuI1g2PCfniClQDvR0J3J
+Action.c(53):     tgRkrI0bQbUzWcTxWkuhB1GkPc6bqEsXmzzIFYieIxLEwdwEVhu3IGkLqsy5/iO8vLLxnLo+pXEllf3bnUDJcRW9tF
+Action.c(53):     ABFJIEglYsivJISBLyYJDJteUvI7gFy/u7zxh4r1aIGC80yKWW0mkuL03VhHZtOk5mDRSK0DBUR/nk2vsdFKeWsVX7
+Action.c(53):     RdTtvHknim5WDXdWsZb22Wwju5nayX7SgIQxQP5qxpdZOfm2y7QimEipPDlnY+G7QWY1iQXmuJDDbzef9mnKi3a3hx
+Action.c(53):     i5lYoZJMLIkciAozAGMROtPTNH1NdHl8NW9nY6hNr+lAyahd200aGCFjbW+Cnmo8iGSB9yKECqG3yBhKADuPAWnW8W
+Action.c(53):     uJcWT79LgtJbTT1sYibNQv2cTSeYXfLSuqlVViAEkLHzTJgrm/g5cRTa5B9pN3FcPplzcafbLdwy26Wkl0GZtkUaLG
+Action.c(53):     +/C4BJzG4KxgItFAFzR/hbrGn6taahJBYrdCLT7a5lXVHdDHbSW7Fki+zKdzC2HBfA3Gix+FGs295PdtNpUPmyxCO3
+Action.c(53):     hRFECoCRLujgjVpAzvjbHHIBgLOnOSigDQ8VfDTVvEniGC7n1KC501fNieymnuI42ikdpPmUOSzI4ibAdVcIigRCMF
+Action.c(53):     ti58O634ls9Sj8W6P4UuscaZGiyyFEYnzEaVlDIxUIBIgGD8204C0UUAHhTwfqfh7xGZ554JbCHSrfT4JIrmYPL5SI
+Action.c(53):     MyQtujXBEhUoRje2QxckFFFAH//Z</Get2DCodeImageResult></Get2DCodeImageResponse></soap:Body></
+Action.c(53):     soap:Envelope>
+Action.c(53): t=76583ms: Request done "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+Action.c(53): web_custom_request("Get2DCodeImage") was successful, 2624 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+Action.c(68): web_get_int_property started  	[MsgId: MMSG-26355]
+Action.c(68): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(72): Error: Patient Get2DCodeImage failed.	[MsgId: MERR-17999]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" ended with a "Fail" status (Duration: 0.5352).	[MsgId: MMSG-16873]
+Action.c(76): Notify: Transaction "Patient Get2DCodeImage" has 0 error message(s).	[MsgId: MMSG-16818]
+Action.c(78): lr_think_time: 1.00 seconds.	[MsgId: MMSG-15948]
+Ending action Action.	[MsgId: MMSG-15918]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+t=77586ms: Closed connection [0] to 127.0.0.1:8888 after completing 1 request(s)  	[MsgId: MMSG-26000]

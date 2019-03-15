@@ -1,0 +1,741 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE Report
+[
+<!ELEMENT Report (General ,(Doc|BPT)) >
+<!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
+
+<!ELEMENT General ( DocLocation ) >
+<!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED qcserver CDATA #IMPLIED qcproject CDATA #IMPLIED SolManSolutionId CDATA #IMPLIED SolManProjectId CDATA #IMPLIED SolManTestPlanId CDATA #IMPLIED SolManTestPackageId CDATA #IMPLIED SolManUserInfoData CDATA #IMPLIED  >
+
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,AdditionalInfo*,Doc*) >
+<!ATTLIST BPT rID ID #REQUIRED >
+
+<!ELEMENT Doc (DName,ConfName?,Res,DVer?,TSet?,TInst?,RunType?,DT?,AdditionalInfo*,Step*,DIter*,Step*,Action*,Doc*,Summary?,TestMaintenanceSummary*,NodeArgs?) >
+<!ATTLIST Doc rID ID #REQUIRED type (Test|BC|BPTWrapperTest|Flow|Group|Action) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
+
+<!ELEMENT RunType ( #PCDATA )>
+<!ATTLIST RunType fmStep (False|True) "False" batch (False|True) "False" upDesc (False|True) "False" upChk (False|True) "False" upAS (False|True) "False">
+
+<!ELEMENT DName ( #PCDATA ) >
+
+<!ELEMENT ConfName ( #PCDATA ) >
+
+<!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT AdditionalInfo (AdditionalDataName,AdditionalDataValue ) >
+
+<!ELEMENT AdditionalDataName ( #PCDATA ) >
+
+<!ELEMENT AdditionalDataValue ( #PCDATA ) >
+
+<!ELEMENT DVer ( #PCDATA ) >
+
+<!ELEMENT TSet ( #PCDATA ) >
+
+<!ELEMENT TInst ( #PCDATA ) >
+
+<!ELEMENT DIter (Step*,Action+,Summary?,NodeArgs)>
+<!ATTLIST DIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT DocLocation ( #PCDATA )>
+
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*, Summary,ActionMaintenanceSummary*, NodeArgs ) >
+<!ATTLIST Action rID ID #REQUIRED>
+
+<!ELEMENT AIter ((Step|HtmlStep|Action)*,DataMapping?, Summary?,NodeArgs) >
+<!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED isCountable (False|True) "False" >
+
+<!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT TestMaintenanceSummary (ActionMaintenanceSummary*) >
+<!ATTLIST TestMaintenanceSummary ObjectsAdded CDATA #REQUIRED ObjectsUpdated CDATA #REQUIRED StepsUpdated CDATA #REQUIRED StepsComments CDATA #REQUIRED><!ELEMENT ActionMaintenanceSummary (ObjectChange* ) >
+<!ATTLIST ActionMaintenanceSummary Action CDATA #REQUIRED Objects CDATA #REQUIRED Updated CDATA #REQUIRED LinesTotal CDATA #REQUIRED Added CDATA #REQUIRED LinesUpdated CDATA #REQUIRED>
+
+<!ELEMENT ObjectChange  (Hierarchy, PropertyChangeList* ) >
+<!ATTLIST ObjectChange Operation CDATA #IMPLIED OriginalRepository CDATA #IMPLIED>
+
+<!ELEMENT PropertyChangeList (PropertyDef*) >
+
+<!ELEMENT PropertyDef (OriginalValue, NewValue) >
+<!ATTLIST PropertyDef PropName CDATA #REQUIRED OriginRegularExpression (True|False) "False" NewRegularExpression (True|False) "False" AddedProperty (True|False) "False" >
+
+<!ELEMENT OriginalValue ( #PCDATA )>
+
+<!ELEMENT NewValue ( #PCDATA )>
+
+<!ELEMENT Hierarchy  (ObjectName, Hierarchy*) >
+<!ATTLIST Hierarchy MicClass CDATA #REQUIRED>
+
+<!ELEMENT ObjectName  ( #PCDATA ) >
+
+<!ELEMENT Step (Obj,Details,Time,TimeTick* ,(Step|HtmlStep|Doc)*, DataMapping?, NodeArgs) >
+<!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
+
+<!ELEMENT HtmlStep (HTML,TimeTick*,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST HtmlStep rID ID #REQUIRED >
+
+<!ELEMENT Obj ( #PCDATA ) >
+<!ATTLIST Obj plainTxt (False|True) "True">
+
+<!ELEMENT Details ( #PCDATA ) >
+<!ATTLIST Details plainTxt (False|True) "True">
+
+<!ELEMENT Time ( #PCDATA ) >
+
+<!ELEMENT HTML ( #PCDATA ) >
+
+<!ELEMENT Disp ( #PCDATA ) >
+
+<!ELEMENT TimeTick ( #PCDATA ) >
+
+<!ELEMENT DataMapping ( DataMappedItem* )>
+<!ELEMENT DataMappedItem EMPTY >
+<!ATTLIST DataMappedItem dsName CDATA #REQUIRED >
+<!ATTLIST DataMappedItem rowId CDATA #REQUIRED >
+
+<!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?,ExtendedInfo? )>
+<!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED UserNote CDATA #IMPLIED filter (False|True) "True">
+<!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED MovieMarker CDATA "">
+<!ATTLIST NodeArgs Source CDATA #IMPLIED SourceLine CDATA #IMPLIED StepFlowItemKey CDATA #IMPLIED >
+
+<!ELEMENT TopPane (Path)>
+
+<!ELEMENT BtmPane ( (Path|WR)?,ASHilite?)>
+<!ATTLIST BtmPane vType CDATA "HTML">
+
+<!ELEMENT Path ( #PCDATA ) >
+
+<!ELEMENT ASHilite ( #PCDATA ) >
+
+<!ELEMENT WR ( #PCDATA ) >
+
+<!ELEMENT ExtendedInfo ( StepData ) >
+
+<!ATTLIST ExtendedInfo StepType CDATA #REQUIRED>
+<!ELEMENT DT (NodeArgs) >
+<!ATTLIST DT rID ID #REQUIRED>
+
+<!ELEMENT Summary (Param*)>
+<!ATTLIST Summary sTime CDATA #IMPLIED eTime CDATA #IMPLIED passed CDATA #IMPLIED failed CDATA #IMPLIED warnings CDATA #IMPLIED retval CDATA #IMPLIED stopped (False|True) "False" >
+
+<!ELEMENT Param (ParamName,ParamVal)+ >
+<!ATTLIST Param paramInOut (In|Out) "In">
+
+<!ELEMENT ParamName ( #PCDATA ) >
+
+<!ELEMENT ParamVal ( #PCDATA ) >
+
+]
+>
+<Report ver="2.0" tmZone="China Standard Time">
+<General productName="Vugen" productVer="12" os="" host="CNWCNBWDRZH2"><DocLocation><![CDATA[D:\ECS\CS_Patient_related]]></DocLocation></General>
+<Doc rID="T1"   productName= "Vugen"  >
+<DName><![CDATA[CS_Patient_related]]></DName>
+<Res><![CDATA[result1]]></Res>
+<Action rID="T2">
+<AName><![CDATA[vuser_init]]></AName>
+<Summary sTime="2018/3/19 - 9:38:11" eTime="2018/3/19 - 9:38:11" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="5" >
+<Disp><![CDATA[vuser_init Summary]]></Disp>
+</NodeArgs>
+</Action>
+<DIter rID="T3" iterID="1" >
+<Action rID="T4">
+<AName><![CDATA[PatientOperations]]></AName>
+<Step rID="T5">
+<Obj plainTxt="False" ><![CDATA[Service: Set Max Html Param Len]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Maximum length of a HTML string that can be retrieved and saved set to <STRONG><FONT COLOR=#00AF00>10240</FONT></STRONG> characters</CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:11]]></Time>
+<TimeTick>1521423491</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="9" >
+<Disp><![CDATA[Service: Set Max Html Param Len]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T6">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>Get2DCodeImageResult</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=<Get2DCodeImageResult></FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=</Get2DCodeImageResult></FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:11]]></Time>
+<TimeTick>1521423491</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="10" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T7">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Get2DCodeImage]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:12]]></Time>
+<TimeTick>1521423492</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="11" status="Passed" >
+<Disp><![CDATA[Custom Request: Get2DCodeImage]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T8">
+<Obj plainTxt="False" ><![CDATA[Service: Get Int Property]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>HTTP return code : <STRONG><FONT COLOR=#00AF00>200</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:12]]></Time>
+<TimeTick>1521423492</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="12" >
+<Disp><![CDATA[Service: Get Int Property]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T9">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:13]]></Time>
+<TimeTick>1521423493</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="13" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t20598305.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T10">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:13]]></Time>
+<TimeTick>1521423493</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="14" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t50863007.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T11">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:13]]></Time>
+<TimeTick>1521423493</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="15" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t19258948.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T12">
+<Obj plainTxt="False" ><![CDATA[Custom Request: web_Subscribe_Patinet]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:14]]></Time>
+<TimeTick>1521423494</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="16" status="Passed" >
+<Disp><![CDATA[Custom Request: web_Subscribe_Patinet]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T13">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>HttpResult</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=<SynchronizeInfoResult></FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=</SynchronizeInfoResult></FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:14]]></Time>
+<TimeTick>1521423494</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="17" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T14">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:16]]></Time>
+<TimeTick>1521423496</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="18" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t3.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T15">
+<Obj plainTxt="False" ><![CDATA[Service: Get Int Property]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>HTTP return code : <STRONG><FONT COLOR=#00AF00>200</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:16]]></Time>
+<TimeTick>1521423496</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="19" >
+<Disp><![CDATA[Service: Get Int Property]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T16">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>HttpResult</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=<SynchronizeInfoResult></FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=</SynchronizeInfoResult></FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:17]]></Time>
+<TimeTick>1521423497</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="20" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T17">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:18]]></Time>
+<TimeTick>1521423498</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="21" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T18">
+<Obj plainTxt="False" ><![CDATA[Service: Get Int Property]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>HTTP return code : <STRONG><FONT COLOR=#00AF00>200</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:18]]></Time>
+<TimeTick>1521423498</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="22" >
+<Disp><![CDATA[Service: Get Int Property]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T19">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>HttpResult</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=<SynchronizeInfoResult></FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=</SynchronizeInfoResult></FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:19]]></Time>
+<TimeTick>1521423499</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="23" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T20">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:20]]></Time>
+<TimeTick>1521423500</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="24" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T21">
+<Obj plainTxt="False" ><![CDATA[Service: Get Int Property]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>HTTP return code : <STRONG><FONT COLOR=#00AF00>200</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:20]]></Time>
+<TimeTick>1521423500</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="25" >
+<Disp><![CDATA[Service: Get Int Property]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T22">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>HttpResult</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=<Content><![CDATA[</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=]></Content></FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:21]]></Time>
+<TimeTick>1521423501</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="26" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T23">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:21]]></Time>
+<TimeTick>1521423501</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="27" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t6733261.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T24">
+<Obj plainTxt="False" ><![CDATA[Custom Request: web_QueryReportFilmStatus]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#FF0031>Step failed</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:21]]></Time>
+<TimeTick>1521423501</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="28" status="Failed" >
+<Disp><![CDATA[Custom Request: web_QueryReportFilmStatus]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t6.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T25">
+<Obj plainTxt="False" ><![CDATA[Service: Get Int Property]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>HTTP return code : <STRONG><FONT COLOR=#00AF00>200</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:21]]></Time>
+<TimeTick>1521423501</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="29" >
+<Disp><![CDATA[Service: Get Int Property]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T26">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:21]]></Time>
+<TimeTick>1521423501</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="30" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t86375267.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T27">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:21]]></Time>
+<TimeTick>1521423501</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="31" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t69612869.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T28">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>HttpResult</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=<SynchronizeInfoResult></FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=</SynchronizeInfoResult></FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:22]]></Time>
+<TimeTick>1521423502</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="32" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T29">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:22]]></Time>
+<TimeTick>1521423502</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="33" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t7.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T30">
+<Obj plainTxt="False" ><![CDATA[Service: Get Int Property]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>HTTP return code : <STRONG><FONT COLOR=#00AF00>200</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:22]]></Time>
+<TimeTick>1521423502</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="34" >
+<Disp><![CDATA[Service: Get Int Property]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T31">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>HttpResult</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=<SynchronizeInfoResult></FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=</SynchronizeInfoResult></FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:22]]></Time>
+<TimeTick>1521423502</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="35" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T32">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:22]]></Time>
+<TimeTick>1521423502</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="36" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t8.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T33">
+<Obj plainTxt="False" ><![CDATA[Service: Get Int Property]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>HTTP return code : <STRONG><FONT COLOR=#00AF00>200</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:22]]></Time>
+<TimeTick>1521423502</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="37" >
+<Disp><![CDATA[Service: Get Int Property]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T34">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>HttpResult</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=<SynchronizeInfoResult></FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=</SynchronizeInfoResult></FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:22]]></Time>
+<TimeTick>1521423502</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="38" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T35">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:22]]></Time>
+<TimeTick>1521423502</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="39" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t9.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T36">
+<Obj plainTxt="False" ><![CDATA[Service: Get Int Property]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>HTTP return code : <STRONG><FONT COLOR=#00AF00>200</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:22]]></Time>
+<TimeTick>1521423502</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="40" >
+<Disp><![CDATA[Service: Get Int Property]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T37">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>HttpResult</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=<Content><![CDATA[</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=]></Content></FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:22]]></Time>
+<TimeTick>1521423502</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="41" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T38">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:22]]></Time>
+<TimeTick>1521423502</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="42" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t73153979.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T39">
+<Obj plainTxt="False" ><![CDATA[Custom Request: web_QueryReportFilmStatus]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#FF0031>Step failed</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:23]]></Time>
+<TimeTick>1521423503</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="43" status="Failed" >
+<Disp><![CDATA[Custom Request: web_QueryReportFilmStatus]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t10.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T40">
+<Obj plainTxt="False" ><![CDATA[Service: Get Int Property]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>HTTP return code : <STRONG><FONT COLOR=#00AF00>200</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:23]]></Time>
+<TimeTick>1521423503</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="44" >
+<Disp><![CDATA[Service: Get Int Property]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T41">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:23]]></Time>
+<TimeTick>1521423503</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="45" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t76094111.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T42">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:23]]></Time>
+<TimeTick>1521423503</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="46" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t255768.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T43">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>HttpResult</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=<SynchronizeInfoResult></FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=</SynchronizeInfoResult></FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:23]]></Time>
+<TimeTick>1521423503</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="47" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T44">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:23]]></Time>
+<TimeTick>1521423503</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="48" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t13925803.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T45">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:23]]></Time>
+<TimeTick>1521423503</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="49" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t11.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T46">
+<Obj plainTxt="False" ><![CDATA[Service: Get Int Property]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>HTTP return code : <STRONG><FONT COLOR=#00AF00>200</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:23]]></Time>
+<TimeTick>1521423503</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="50" >
+<Disp><![CDATA[Service: Get Int Property]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T47">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>HttpResult</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=<SynchronizeInfoResult></FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=</SynchronizeInfoResult></FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:23]]></Time>
+<TimeTick>1521423503</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="51" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T48">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:23]]></Time>
+<TimeTick>1521423503</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="52" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t85317729.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T49">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:23]]></Time>
+<TimeTick>1521423503</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="53" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t12.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T50">
+<Obj plainTxt="False" ><![CDATA[Service: Get Int Property]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>HTTP return code : <STRONG><FONT COLOR=#00AF00>200</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:23]]></Time>
+<TimeTick>1521423503</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="54" >
+<Disp><![CDATA[Service: Get Int Property]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T51">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>HttpResult</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=<SynchronizeInfoResult></FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=</SynchronizeInfoResult></FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:23]]></Time>
+<TimeTick>1521423503</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="55" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T52">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:23]]></Time>
+<TimeTick>1521423503</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="56" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t24246704.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T53">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:23]]></Time>
+<TimeTick>1521423503</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="57" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t13.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T54">
+<Obj plainTxt="False" ><![CDATA[Service: Get Int Property]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>HTTP return code : <STRONG><FONT COLOR=#00AF00>200</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:23]]></Time>
+<TimeTick>1521423503</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="58" >
+<Disp><![CDATA[Service: Get Int Property]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T55">
+<Obj plainTxt="False" ><![CDATA[Custom Request: QueryExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:23]]></Time>
+<TimeTick>1521423503</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="59" status="Passed" >
+<Disp><![CDATA[Custom Request: QueryExamReservation]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T56">
+<Obj plainTxt="False" ><![CDATA[Service: Get Int Property]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>HTTP return code : <STRONG><FONT COLOR=#00AF00>200</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:23]]></Time>
+<TimeTick>1521423503</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="60" >
+<Disp><![CDATA[Service: Get Int Property]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T57">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:23]]></Time>
+<TimeTick>1521423503</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="61" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t8379114.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T58">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/19 - 9:38:23]]></Time>
+<TimeTick>1521423503</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="62" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t39427825.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/19 - 9:38:11" eTime="2018/3/19 - 9:38:23" passed="26" failed="2" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="8" status="Failed" >
+<Disp><![CDATA[PatientOperations Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T59">
+<AName><![CDATA[Action1]]></AName>
+<Summary sTime="2018/3/19 - 9:38:23" eTime="2018/3/19 - 9:38:23" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="64" >
+<Disp><![CDATA[Action1 Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="7" status="Failed" >
+<Disp><![CDATA[CS_Patient_related Iteration 1 (Row 1)]]></Disp>
+</NodeArgs>
+</DIter>
+<Action rID="T60">
+<AName><![CDATA[vuser_end]]></AName>
+<Summary sTime="2018/3/19 - 9:38:23" eTime="2018/3/19 - 9:38:23" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="67" >
+<Disp><![CDATA[vuser_end Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Summary sTime="2018/3/19 - 9:38:09" eTime="2018/3/19 - 9:38:24" passed="26" failed="2" warnings="0" ></Summary>
+<NodeArgs eType="StartTest" icon="1" nRep="4" status="Failed" >
+<Disp><![CDATA[Test CS_Patient_related Summary]]></Disp>
+</NodeArgs>
+</Doc>
+</Report>

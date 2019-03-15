@@ -1,0 +1,12 @@
+[C_Patient_FilmOperation_Query]
+SnapshotIndex=I1_C_Patient_FilmOperation_Query
+[vuser_init]
+SnapshotIndex=I1_vuser_init
+[A_Patient_Register]
+SnapshotIndex=I1_A_Patient_Register
+[vuser_end]
+SnapshotIndex=I1_vuser_end
+[D_Patient_Reservation_Query]
+SnapshotIndex=I1_D_Patient_Reservation_Query
+[B_Patient_ReportOperation_Query]
+SnapshotIndex=I1_B_Patient_ReportOperation_Query

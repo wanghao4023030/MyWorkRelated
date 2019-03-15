@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-ID:\ECS\WebHttpHtml_ECSDEMO2
+-IC:\Program Files (x86)\HP\LoadRunner\include
+-ed:\ecs\webhttphtml_ecsdemo2\\logfile.log
+d:\ecs\webhttphtml_ecsdemo2\\combined_WebHttpHtml_ECSDEMO2.c
+d:\ecs\webhttphtml_ecsdemo2\\pre_cci.c

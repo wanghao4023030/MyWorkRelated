@@ -1,0 +1,87 @@
+[General]
+Type=Multi
+DefaultCfg=default.cfg
+ParameterFile=CS_Patient_With_Query_Opertion_Performance.prm
+GlobalParameterFile=
+NewFunctionHeader=1
+RunType=cci
+ActionLogicExt=action_logic
+LastActiveAction=Action
+MajorVersion=12
+MinorVersion=53
+ScriptExitOK=1
+ActiveTypes=QTWeb,WS_SOAP
+GenerateTypes=QTWeb,WS_SOAP
+AdditionalTypes=QTWeb,WS_SOAP
+DevelopTool=Vugen
+LastModifyVer=12.53.0.1203
+ParamLeftBrace={
+ParamRightBrace=}
+ScriptLanguage=C
+LastCodeGenerationVer=
+DisableRegenerate=0
+Description=
+ScriptLocale=zh-CN
+[Actions]
+vuser_init=vuser_init.c
+A_Patient_Register=A_Patient_Register.c
+B_Patient_ReportOperation_Query=B_Patient_ReportOperation_Query.c
+C_Patient_FilmOperation_Query=C_Patient_FilmOperation_Query.c
+D_Patient_Reservation_Query=D_Patient_Reservation_Query.c
+vuser_end=vuser_end.c
+[RunLogicFiles]
+Default Profile=default.usp
+[VuserProfiles]
+Profiles=Default Profile
+[CfgFiles]
+Default Profile=default.cfg
+[ExtraFiles]
+globals.h=
+[Modified Actions]
+vuser_init=1
+A_Patient_Register=1
+B_Patient_ReportOperation_Query=1
+C_Patient_FilmOperation_Query=1
+D_Patient_Reservation_Query=1
+vuser_end=0
+[Recorded Actions]
+vuser_init=0
+A_Patient_Register=0
+B_Patient_ReportOperation_Query=0
+C_Patient_FilmOperation_Query=0
+D_Patient_Reservation_Query=0
+vuser_end=0
+[Replayed Actions]
+vuser_init=1
+A_Patient_Register=1
+B_Patient_ReportOperation_Query=1
+C_Patient_FilmOperation_Query=1
+D_Patient_Reservation_Query=1
+vuser_end=1
+[Interpreters]
+vuser_init=cci
+A_Patient_Register=cci
+B_Patient_ReportOperation_Query=cci
+C_Patient_FilmOperation_Query=cci
+D_Patient_Reservation_Query=cci
+vuser_end=cci
+[TransactionsOrder]
+Order="Patient operations_ Get2DCodeImage__*delimiter*__Subscribe_Patinet__*delimiter*__Create Paper report__*delimiter*__QueryReportFilmStatus__*delimiter*__QueryReportFilmStatus_Pass__*delimiter*__Update Paper report__*delimiter*__QueryReportFilmStatus__*delimiter*__QueryReportFilmStatus_Pass__*delimiter*__Create Film__*delimiter*__QueryReportFilmStatus__*delimiter*__QueryReportFilmStatus_Pass__*delimiter*__Update Film__*delimiter*__QueryReportFilmStatus__*delimiter*__QueryReportFilmStatus_Pass__*delimiter*__Create ExamReservation__*delimiter*__QueryReservation__*delimiter*__QueryReservation_Pass__*delimiter*__Update ExamReservation__*delimiter*__QueryReservation__*delimiter*__QueryReservation_Pass"
+[StateManagement]
+LastReplayStatus=1
+[ActiveReplay]
+LastReplayedRunName=result1
+ActiveRunName=result1
+[Transactions]
+"Patient operations_ Get2DCodeImage"=
+Subscribe_Patinet=
+"Create Paper report"=
+QueryReportFilmStatus=
+QueryReportFilmStatus_Pass=
+"Update Paper report"=
+"Create Film"=
+"Update Film"=
+"Create ExamReservation"=
+QueryReservation=
+QueryReservation_Pass=
+"Update ExamReservation"=

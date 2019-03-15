@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-ID:\ECS\CS_Patient_With_Query_Opertion_Performance_ChangeDBExecute_ALI
+-IC:\Program Files (x86)\HP\LoadRunner\include
+-ed:\ecs\cs_patient_with_query_opertion_performance_changedbexecute_ali\\logfile.log
+d:\ecs\cs_patient_with_query_opertion_performance_changedbexecute_ali\\combined_CS_Patient_With_Query_Opertion_Performance_ChangeDBExecute_ALI.c
+d:\ecs\cs_patient_with_query_opertion_performance_changedbexecute_ali\\pre_cci.c

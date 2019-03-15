@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-ID:\ECS\CS_Patient_Query_opertion
+-IC:\Program Files (x86)\HP\LoadRunner\include
+-ed:\ecs\cs_patient_query_opertion\\logfile.log
+d:\ecs\cs_patient_query_opertion\\combined_CS_Patient_Query_opertion.c
+d:\ecs\cs_patient_query_opertion\\pre_cci.c

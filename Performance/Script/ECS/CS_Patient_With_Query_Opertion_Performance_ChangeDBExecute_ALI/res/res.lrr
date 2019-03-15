@@ -1,0 +1,40 @@
+[Scenario]
+Product=HP LoadRunner Controller
+Version=12.53.0.0
+Path=D:\ECS\Scenario1.lrs
+Subject=Scenario1
+Result_file=D:\ECS\CS_Patient_With_Query_Opertion_Performance_ChangeDBExecute_ALI\res\res.lrr
+Description=
+ResultName=res
+Time_Zone=-28800
+Start_time=1525310516
+Daylight_Bias=0
+Stop_time=1525340903
+
+[Configuration]
+Public_local=1
+Is_mix=1
+Is_runner_file=0
+Runner_file=
+
+[Running_mode]
+Start_reason=By command
+Stop_reason=By a user
+
+[Data Collection]
+FullData=1
+SummaryEnded=1
+
+[Scenario_summary]
+Scenario Type=Manual Scenario
+Goal Profile Name=Schedule 1
+Mode=Scenario Scheduling
+Scenario Duration=Start 20 Vusers: 1 every 00:00:05 (HH:MM:SS); Run for 12:00:00 (HH:MM:SS); Stop all Vusers: 1 every 00:00:05 (HH:MM:SS)
+Load Behavior=Initialize each Vuser just before it runs
+
+[Scripts]
+CS_Patient_With_Query_Opertion_Performance_ChangeDBExecute_ALI=D:\ECS\CS_Patient_With_Query_Opertion_Performance_ChangeDBExecute_ALI\CS_Patient_With_Query_Opertion_Performance_ChangeDBExecute_ALI.usr
+
+[Scripts_types]
+CS_Patient_With_Query_Opertion_Performance_ChangeDBExecute_ALI=Multi+QTWeb+WS_SOAP
+

@@ -1,0 +1,87 @@
+[
+    {
+        "transactionName": "Create Paper report",
+        "rawStartTime": 1520564714383,
+        "rawEndTime": 1520564715615
+    },
+    {
+        "transactionName": "Create Paper report",
+        "rawStartTime": 1520564715618,
+        "rawEndTime": 1520564716613
+    },
+    {
+        "transactionName": "Update Paper report",
+        "rawStartTime": 1520564717616,
+        "rawEndTime": 1520564717869
+    },
+    {
+        "transactionName": "Update Paper report",
+        "rawStartTime": 1520564717872,
+        "rawEndTime": 1520564718013
+    },
+    {
+        "transactionName": "Create Film",
+        "rawStartTime": 1520564718025,
+        "rawEndTime": 1520564719167
+    },
+    {
+        "transactionName": "Create Film",
+        "rawStartTime": 1520564719169,
+        "rawEndTime": 1520564721047
+    },
+    {
+        "transactionName": "Create Film",
+        "rawStartTime": 1520564721049,
+        "rawEndTime": 1520564722639
+    },
+    {
+        "transactionName": "Create Film",
+        "rawStartTime": 1520564722641,
+        "rawEndTime": 1520564724291
+    },
+    {
+        "transactionName": "Update Film",
+        "rawStartTime": 1520564725294,
+        "rawEndTime": 1520564725444
+    },
+    {
+        "transactionName": "Update Film",
+        "rawStartTime": 1520564725445,
+        "rawEndTime": 1520564725606
+    },
+    {
+        "transactionName": "Update Film",
+        "rawStartTime": 1520564725608,
+        "rawEndTime": 1520564725750
+    },
+    {
+        "transactionName": "Update Film",
+        "rawStartTime": 1520564725752,
+        "rawEndTime": 1520564725905
+    },
+    {
+        "transactionName": "Create ExamReservation",
+        "rawStartTime": 1520564725923,
+        "rawEndTime": 1520564726253
+    },
+    {
+        "transactionName": "Create ExamReservation",
+        "rawStartTime": 1520564726256,
+        "rawEndTime": 1520564726343
+    },
+    {
+        "transactionName": "Create ExamReservation",
+        "rawStartTime": 1520564726345,
+        "rawEndTime": 1520564726480
+    },
+    {
+        "transactionName": "Create ExamReservation",
+        "rawStartTime": 1520564726482,
+        "rawEndTime": 1520564726595
+    },
+    {
+        "transactionName": "Create ExamReservation",
+        "rawStartTime": 1520564726598,
+        "rawEndTime": 1520564726779
+    }
+]

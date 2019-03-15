@@ -1,0 +1,37 @@
+[
+    {
+        "transactionName": "Patient operations_ Get2DCodeImage",
+        "rawStartTime": 1525249684343,
+        "rawEndTime": 1525249684836
+    },
+    {
+        "transactionName": "GetPatientQRID",
+        "rawStartTime": 1525249685878,
+        "rawEndTime": 1525249686101
+    },
+    {
+        "transactionName": "Patient Subscribe_Patinet",
+        "rawStartTime": 1525249687138,
+        "rawEndTime": 1525249687374
+    },
+    {
+        "transactionName": "Report Create Paper report",
+        "rawStartTime": 1525249687416,
+        "rawEndTime": 1525249688402
+    },
+    {
+        "transactionName": "Report QueryReportFilmStatus",
+        "rawStartTime": 1525249689415,
+        "rawEndTime": 1525249689660
+    },
+    {
+        "transactionName": "Report Update Paper report",
+        "rawStartTime": 1525249690678,
+        "rawEndTime": 1525249691624
+    },
+    {
+        "transactionName": "Report QueryReportFilmStatus",
+        "rawStartTime": 1525249692641,
+        "rawEndTime": 1525249692867
+    }
+]

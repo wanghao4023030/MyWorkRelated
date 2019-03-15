@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-ID:\ECS\CS_Patient_related
+-IC:\Program Files (x86)\HP\LoadRunner\include
+-ed:\ecs\cs_patient_related\\logfile.log
+d:\ecs\cs_patient_related\\combined_CS_Patient_related.c
+d:\ecs\cs_patient_related\\pre_cci.c

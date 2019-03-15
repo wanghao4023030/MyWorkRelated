@@ -1,0 +1,1634 @@
+Virtual User Script started at : 2018/3/9 11:03:00
+Starting action vuser_init.
+Web Services replay version 12.53.0 for Windows 10; Toolkit: ".Net"; build 1203
+Run-Time Settings file: "D:\ECS\WebHttpHtml_ECSDEMO\\default.cfg"
+Vuser directory: "D:\ECS\WebHttpHtml_ECSDEMO"
+Vuser output directory: "D:\ECS\WebHttpHtml_ECSDEMO\"
+LOCAL start date/time : 2018-03-09 11:03:00
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110258.472"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110258472".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "5"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 1.
+Starting iteration 2.
+Notify: Next row for parameter HospitalID = 2 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '2'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110300.293"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110300293".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "4"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 2.
+Starting iteration 3.
+Notify: Next row for parameter HospitalID = 3 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '3'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110300.405"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110300405".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "5"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 3.
+Starting iteration 4.
+Notify: Next row for parameter HospitalID = 4 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '4'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110300.478"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110300478".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "5"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "5"
+Ending action PUMA_examreservation.
+Ending iteration 4.
+Starting iteration 5.
+Notify: Next row for parameter HospitalID = 5 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '5'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110300.505"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110300505".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 5.
+Starting iteration 6.
+Notify: Next row for parameter HospitalID = 6 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '6'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110300.558"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110300558".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "4"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 6.
+Starting iteration 7.
+Notify: Next row for parameter HospitalID = 7 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '7'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110300.614"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110300614".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 7.
+Starting iteration 8.
+Notify: Next row for parameter HospitalID = 8 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '8'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110300.643"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110300643".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "4"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "2"
+Ending action PUMA_examreservation.
+Ending iteration 8.
+Starting iteration 9.
+Notify: Next row for parameter HospitalID = 9 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '9'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110300.675"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110300675".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "4"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 9.
+Starting iteration 10.
+Notify: Next row for parameter HospitalID = 10 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '10'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110300.704"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110300704".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "4"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 10.
+Starting iteration 11.
+Warning: Parameter 'HospitalID': No more unique values for this parameter in table 'HospitalID.dat' [unique range is 1-10]. The parameter continue to beginning of range in a cyclic manner according to "When Out Of Values" policy.
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '1'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110300.737"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110300737".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "2"
+Ending action PUMA_examreservation.
+Ending iteration 11.
+Starting iteration 12.
+Notify: Next row for parameter HospitalID = 2 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '2'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110300.760"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110300760".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "2"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "3"
+Ending action PUMA_examreservation.
+Ending iteration 12.
+Starting iteration 13.
+Notify: Next row for parameter HospitalID = 3 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '3'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110300.785"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110300785".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "2"
+Ending action PUMA_examreservation.
+Ending iteration 13.
+Starting iteration 14.
+Notify: Next row for parameter HospitalID = 4 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '4'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110300.815"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110300815".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "5"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 14.
+Starting iteration 15.
+Notify: Next row for parameter HospitalID = 5 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '5'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110300.849"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110300849".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "4"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 15.
+Starting iteration 16.
+Notify: Next row for parameter HospitalID = 6 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '6'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110300.873"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110300873".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "4"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "2"
+Ending action PUMA_examreservation.
+Ending iteration 16.
+Starting iteration 17.
+Notify: Next row for parameter HospitalID = 7 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '7'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110300.898"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110300898".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "2"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 17.
+Starting iteration 18.
+Notify: Next row for parameter HospitalID = 8 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '8'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110300.926"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110300926".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "3"
+Ending action PUMA_examreservation.
+Ending iteration 18.
+Starting iteration 19.
+Notify: Next row for parameter HospitalID = 9 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '9'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110300.964"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110300964".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 19.
+Starting iteration 20.
+Notify: Next row for parameter HospitalID = 10 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '10'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.031"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301031".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "2"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 20.
+Starting iteration 21.
+Warning: Parameter 'HospitalID': No more unique values for this parameter in table 'HospitalID.dat' [unique range is 1-10]. The parameter continue to beginning of range in a cyclic manner according to "When Out Of Values" policy.
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '1'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.063"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301063".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "5"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 21.
+Starting iteration 22.
+Notify: Next row for parameter HospitalID = 2 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '2'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.088"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301088".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "2"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 22.
+Starting iteration 23.
+Notify: Next row for parameter HospitalID = 3 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '3'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.111"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301111".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "5"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "3"
+Ending action PUMA_examreservation.
+Ending iteration 23.
+Starting iteration 24.
+Notify: Next row for parameter HospitalID = 4 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '4'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.161"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301161".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "4"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "2"
+Ending action PUMA_examreservation.
+Ending iteration 24.
+Starting iteration 25.
+Notify: Next row for parameter HospitalID = 5 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '5'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.196"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301196".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "2"
+Ending action PUMA_examreservation.
+Ending iteration 25.
+Starting iteration 26.
+Notify: Next row for parameter HospitalID = 6 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '6'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.227"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301227".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "5"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 26.
+Starting iteration 27.
+Notify: Next row for parameter HospitalID = 7 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '7'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.278"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301278".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "5"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "3"
+Ending action PUMA_examreservation.
+Ending iteration 27.
+Starting iteration 28.
+Notify: Next row for parameter HospitalID = 8 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '8'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.303"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301303".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "4"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "5"
+Ending action PUMA_examreservation.
+Ending iteration 28.
+Starting iteration 29.
+Notify: Next row for parameter HospitalID = 9 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '9'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.350"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301350".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "4"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 29.
+Starting iteration 30.
+Notify: Next row for parameter HospitalID = 10 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '10'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.402"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301402".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "4"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "2"
+Ending action PUMA_examreservation.
+Ending iteration 30.
+Starting iteration 31.
+Warning: Parameter 'HospitalID': No more unique values for this parameter in table 'HospitalID.dat' [unique range is 1-10]. The parameter continue to beginning of range in a cyclic manner according to "When Out Of Values" policy.
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '1'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.449"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301449".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 31.
+Starting iteration 32.
+Notify: Next row for parameter HospitalID = 2 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '2'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.508"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301508".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "2"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 32.
+Starting iteration 33.
+Notify: Next row for parameter HospitalID = 3 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '3'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.543"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301543".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "3"
+Ending action PUMA_examreservation.
+Ending iteration 33.
+Starting iteration 34.
+Notify: Next row for parameter HospitalID = 4 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '4'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.578"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301578".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 34.
+Starting iteration 35.
+Notify: Next row for parameter HospitalID = 5 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '5'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.627"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301627".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 35.
+Starting iteration 36.
+Notify: Next row for parameter HospitalID = 6 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '6'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.661"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301661".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "5"
+Ending action PUMA_examreservation.
+Ending iteration 36.
+Starting iteration 37.
+Notify: Next row for parameter HospitalID = 7 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '7'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.686"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301686".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 37.
+Starting iteration 38.
+Notify: Next row for parameter HospitalID = 8 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '8'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.741"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301741".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 38.
+Starting iteration 39.
+Notify: Next row for parameter HospitalID = 9 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '9'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.807"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301807".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "4"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 39.
+Starting iteration 40.
+Notify: Next row for parameter HospitalID = 10 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '10'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.846"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301846".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 40.
+Starting iteration 41.
+Warning: Parameter 'HospitalID': No more unique values for this parameter in table 'HospitalID.dat' [unique range is 1-10]. The parameter continue to beginning of range in a cyclic manner according to "When Out Of Values" policy.
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '1'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.874"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301874".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "2"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "2"
+Ending action PUMA_examreservation.
+Ending iteration 41.
+Starting iteration 42.
+Notify: Next row for parameter HospitalID = 2 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '2'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.916"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301916".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "4"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "3"
+Ending action PUMA_examreservation.
+Ending iteration 42.
+Starting iteration 43.
+Notify: Next row for parameter HospitalID = 3 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '3'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.942"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301942".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "5"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "2"
+Ending action PUMA_examreservation.
+Ending iteration 43.
+Starting iteration 44.
+Notify: Next row for parameter HospitalID = 4 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '4'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110301.977"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110301977".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "4"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "5"
+Ending action PUMA_examreservation.
+Ending iteration 44.
+Starting iteration 45.
+Notify: Next row for parameter HospitalID = 5 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '5'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110302.007"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110302007".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "5"
+Ending action PUMA_examreservation.
+Ending iteration 45.
+Starting iteration 46.
+Notify: Next row for parameter HospitalID = 6 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '6'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110302.041"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110302041".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "5"
+Ending action PUMA_examreservation.
+Ending iteration 46.
+Starting iteration 47.
+Notify: Next row for parameter HospitalID = 7 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '7'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110302.080"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110302080".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 47.
+Starting iteration 48.
+Notify: Next row for parameter HospitalID = 8 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '8'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110302.139"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110302139".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "4"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "2"
+Ending action PUMA_examreservation.
+Ending iteration 48.
+Starting iteration 49.
+Notify: Next row for parameter HospitalID = 9 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '9'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110302.173"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110302173".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "2"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 49.
+Starting iteration 50.
+Notify: Next row for parameter HospitalID = 10 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '10'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110302.207"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110302207".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 50.
+Starting iteration 51.
+Warning: Parameter 'HospitalID': No more unique values for this parameter in table 'HospitalID.dat' [unique range is 1-10]. The parameter continue to beginning of range in a cyclic manner according to "When Out Of Values" policy.
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '1'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110302.253"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110302253".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "5"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 51.
+Starting iteration 52.
+Notify: Next row for parameter HospitalID = 2 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '2'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110302.435"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110302435".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "5"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 52.
+Starting iteration 53.
+Notify: Next row for parameter HospitalID = 3 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '3'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110302.479"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110302479".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 53.
+Starting iteration 54.
+Notify: Next row for parameter HospitalID = 4 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '4'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110302.504"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110302504".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "2"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 54.
+Starting iteration 55.
+Notify: Next row for parameter HospitalID = 5 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '5'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110302.541"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110302541".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "5"
+Ending action PUMA_examreservation.
+Ending iteration 55.
+Starting iteration 56.
+Notify: Next row for parameter HospitalID = 6 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '6'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110302.579"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110302579".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "2"
+Ending action PUMA_examreservation.
+Ending iteration 56.
+Starting iteration 57.
+Notify: Next row for parameter HospitalID = 7 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '7'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110302.616"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110302616".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "5"
+Ending action PUMA_examreservation.
+Ending iteration 57.
+Starting iteration 58.
+Notify: Next row for parameter HospitalID = 8 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '8'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110302.649"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110302649".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "4"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 58.
+Starting iteration 59.
+Notify: Next row for parameter HospitalID = 9 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '9'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110302.697"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110302697".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "5"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "3"
+Ending action PUMA_examreservation.
+Ending iteration 59.
+Starting iteration 60.
+Notify: Next row for parameter HospitalID = 10 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '10'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110302.735"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110302735".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 60.
+Starting iteration 61.
+Warning: Parameter 'HospitalID': No more unique values for this parameter in table 'HospitalID.dat' [unique range is 1-10]. The parameter continue to beginning of range in a cyclic manner according to "When Out Of Values" policy.
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '1'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110302.793"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110302793".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "3"
+Ending action PUMA_examreservation.
+Ending iteration 61.
+Starting iteration 62.
+Notify: Next row for parameter HospitalID = 2 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '2'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110302.824"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110302824".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "4"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "2"
+Ending action PUMA_examreservation.
+Ending iteration 62.
+Starting iteration 63.
+Notify: Next row for parameter HospitalID = 3 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '3'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110302.863"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110302863".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "5"
+Ending action PUMA_examreservation.
+Ending iteration 63.
+Starting iteration 64.
+Notify: Next row for parameter HospitalID = 4 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '4'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110302.888"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110302888".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "4"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "3"
+Ending action PUMA_examreservation.
+Ending iteration 64.
+Starting iteration 65.
+Notify: Next row for parameter HospitalID = 5 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '5'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110302.937"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110302937".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "2"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "5"
+Ending action PUMA_examreservation.
+Ending iteration 65.
+Starting iteration 66.
+Notify: Next row for parameter HospitalID = 6 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '6'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110302.973"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110302973".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "4"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "3"
+Ending action PUMA_examreservation.
+Ending iteration 66.
+Starting iteration 67.
+Notify: Next row for parameter HospitalID = 7 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '7'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.018"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303018".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "5"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "3"
+Ending action PUMA_examreservation.
+Ending iteration 67.
+Starting iteration 68.
+Notify: Next row for parameter HospitalID = 8 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '8'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.044"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303044".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "4"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "3"
+Ending action PUMA_examreservation.
+Ending iteration 68.
+Starting iteration 69.
+Notify: Next row for parameter HospitalID = 9 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '9'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.085"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303085".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "2"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 69.
+Starting iteration 70.
+Notify: Next row for parameter HospitalID = 10 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '10'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.135"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303135".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "2"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "2"
+Ending action PUMA_examreservation.
+Ending iteration 70.
+Starting iteration 71.
+Warning: Parameter 'HospitalID': No more unique values for this parameter in table 'HospitalID.dat' [unique range is 1-10]. The parameter continue to beginning of range in a cyclic manner according to "When Out Of Values" policy.
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '1'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.169"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303169".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 71.
+Starting iteration 72.
+Notify: Next row for parameter HospitalID = 2 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '2'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.222"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303222".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "3"
+Ending action PUMA_examreservation.
+Ending iteration 72.
+Starting iteration 73.
+Notify: Next row for parameter HospitalID = 3 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '3'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.275"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303275".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 73.
+Starting iteration 74.
+Notify: Next row for parameter HospitalID = 4 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '4'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.335"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303335".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "2"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "5"
+Ending action PUMA_examreservation.
+Ending iteration 74.
+Starting iteration 75.
+Notify: Next row for parameter HospitalID = 5 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '5'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.383"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303383".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "5"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 75.
+Starting iteration 76.
+Notify: Next row for parameter HospitalID = 6 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '6'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.444"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303444".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "2"
+Ending action PUMA_examreservation.
+Ending iteration 76.
+Starting iteration 77.
+Notify: Next row for parameter HospitalID = 7 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '7'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.469"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303469".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 77.
+Starting iteration 78.
+Notify: Next row for parameter HospitalID = 8 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '8'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.516"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303516".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "3"
+Ending action PUMA_examreservation.
+Ending iteration 78.
+Starting iteration 79.
+Notify: Next row for parameter HospitalID = 9 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '9'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.551"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303551".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 79.
+Starting iteration 80.
+Notify: Next row for parameter HospitalID = 10 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '10'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.601"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303601".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 80.
+Starting iteration 81.
+Warning: Parameter 'HospitalID': No more unique values for this parameter in table 'HospitalID.dat' [unique range is 1-10]. The parameter continue to beginning of range in a cyclic manner according to "When Out Of Values" policy.
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '1'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.627"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303627".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "5"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "5"
+Ending action PUMA_examreservation.
+Ending iteration 81.
+Starting iteration 82.
+Notify: Next row for parameter HospitalID = 2 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '2'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.681"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303681".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "3"
+Ending action PUMA_examreservation.
+Ending iteration 82.
+Starting iteration 83.
+Notify: Next row for parameter HospitalID = 3 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '3'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.729"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303729".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 83.
+Starting iteration 84.
+Notify: Next row for parameter HospitalID = 4 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '4'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.788"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303788".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "2"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "3"
+Ending action PUMA_examreservation.
+Ending iteration 84.
+Starting iteration 85.
+Notify: Next row for parameter HospitalID = 5 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '5'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.824"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303824".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 85.
+Starting iteration 86.
+Notify: Next row for parameter HospitalID = 6 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '6'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.896"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303896".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "5"
+Ending action PUMA_examreservation.
+Ending iteration 86.
+Starting iteration 87.
+Notify: Next row for parameter HospitalID = 7 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '7'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.932"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303932".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "5"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "2"
+Ending action PUMA_examreservation.
+Ending iteration 87.
+Starting iteration 88.
+Notify: Next row for parameter HospitalID = 8 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '8'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.967"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303967".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "2"
+Ending action PUMA_examreservation.
+Ending iteration 88.
+Starting iteration 89.
+Notify: Next row for parameter HospitalID = 9 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '9'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110303.992"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110303992".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "4"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 89.
+Starting iteration 90.
+Notify: Next row for parameter HospitalID = 10 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '10'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110304.068"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110304068".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "5"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "5"
+Ending action PUMA_examreservation.
+Ending iteration 90.
+Starting iteration 91.
+Warning: Parameter 'HospitalID': No more unique values for this parameter in table 'HospitalID.dat' [unique range is 1-10]. The parameter continue to beginning of range in a cyclic manner according to "When Out Of Values" policy.
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '1'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110304.093"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110304093".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "2"
+Ending action PUMA_examreservation.
+Ending iteration 91.
+Starting iteration 92.
+Notify: Next row for parameter HospitalID = 2 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '2'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110304.146"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110304146".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "2"
+Ending action PUMA_examreservation.
+Ending iteration 92.
+Starting iteration 93.
+Notify: Next row for parameter HospitalID = 3 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '3'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110304.190"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110304190".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "2"
+Ending action PUMA_examreservation.
+Ending iteration 93.
+Starting iteration 94.
+Notify: Next row for parameter HospitalID = 4 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '4'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110304.234"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110304234".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "5"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 94.
+Starting iteration 95.
+Notify: Next row for parameter HospitalID = 5 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '5'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110304.260"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110304260".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 95.
+Starting iteration 96.
+Notify: Next row for parameter HospitalID = 6 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '6'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110304.292"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110304292".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "5"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "2"
+Ending action PUMA_examreservation.
+Ending iteration 96.
+Starting iteration 97.
+Notify: Next row for parameter HospitalID = 7 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '7'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110304.324"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110304324".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "3"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "1"
+PUMA_examreservation.c(29): 1
+Ending action PUMA_examreservation.
+Ending iteration 97.
+Starting iteration 98.
+Notify: Next row for parameter HospitalID = 8 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '8'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110304.372"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110304372".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "2"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "3"
+Ending action PUMA_examreservation.
+Ending iteration 98.
+Starting iteration 99.
+Notify: Next row for parameter HospitalID = 9 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '9'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110304.396"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110304396".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+Ending action PUMA_examreservation.
+Ending iteration 99.
+Starting iteration 100.
+Notify: Next row for parameter HospitalID = 10 [table  = HospitalID].
+Notify: Getting new value for parameter 'HospitalID': table = 'HospitalID.dat' column = '0' row = '10'.
+Notify: Next row for parameter ItemModalityType = 4 [table  = ItemModalityType].
+Notify: Getting new value for parameter 'ItemModalityType': table = 'ItemModalityType.dat' column = '0' row = '4'.
+Starting action PUMA_PaperReport.
+Ending action PUMA_PaperReport.
+Starting action PUMA_Film.
+Ending action PUMA_Film.
+Starting action PUMA_examreservation.
+PUMA_examreservation.c(17): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180309110304.432"
+PUMA_examreservation.c(18): Notify: Saving Parameter "strCurrentDateTime = 20180309110304432".
+PUMA_examreservation.c(22): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+PUMA_examreservation.c(25): Notify: Parameter Substitution: parameter "RandForExecute" =  "3"
+Ending action PUMA_examreservation.
+Ending iteration 100.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

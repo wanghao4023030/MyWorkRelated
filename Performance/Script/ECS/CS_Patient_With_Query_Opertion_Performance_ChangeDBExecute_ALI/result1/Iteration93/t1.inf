@@ -1,0 +1,13 @@
+[t1]
+SnapshotXmlFile=snapshot_1.xml
+ContentType=application/xml
+StepName=Custom Request: Get2DCodeImage
+Total=1
+FileName1=t1.xml
+RequestHeaderFile=t1_RequestHeader.txt
+ResponseHeaderFile=t1_ResponseHeader.txt
+RawStepEndTime=0
+RawStepName=Get2DCodeImage
+RequestBodyFile=t1_RequestBody.txt
+RawStepStartTime=1525250764737
+URL1=http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx

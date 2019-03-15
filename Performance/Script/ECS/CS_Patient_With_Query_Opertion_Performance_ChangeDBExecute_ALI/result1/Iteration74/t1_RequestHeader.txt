@@ -1,0 +1,10 @@
+POST /CenterInfoServer/CenterPrintService.asmx HTTP/1.1
+Content-Type: text/xml; charset=utf-8
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: Keep-Alive
+Host: 47.98.102.85
+Content-Length: 885
+

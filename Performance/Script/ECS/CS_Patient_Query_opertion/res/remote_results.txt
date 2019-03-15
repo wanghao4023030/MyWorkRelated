@@ -1,0 +1,2 @@
+[Hosts]
+localhost=D:\ECS\CS_Patient_Query_opertion\res\localhost_1.eve

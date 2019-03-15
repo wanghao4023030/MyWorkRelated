@@ -1,0 +1,72 @@
+[General]
+Type=Multi
+DefaultCfg=default.cfg
+ParameterFile=CS_Patient_related.prm
+GlobalParameterFile=
+NewFunctionHeader=1
+RunType=cci
+ActionLogicExt=action_logic
+LastActiveAction=Action
+MajorVersion=12
+MinorVersion=53
+ScriptExitOK=1
+ActiveTypes=QTWeb,WS_SOAP
+GenerateTypes=QTWeb,WS_SOAP
+AdditionalTypes=QTWeb,WS_SOAP
+DevelopTool=Vugen
+LastModifyVer=12.53.0.1203
+ParamLeftBrace={
+ParamRightBrace=}
+ScriptLanguage=C
+LastCodeGenerationVer=
+DisableRegenerate=0
+Description=
+ScriptLocale=zh-CN
+[Actions]
+vuser_init=vuser_init.c
+PatientOperations=PatientOperations.c
+Action1=Action1.c
+vuser_end=vuser_end.c
+[RunLogicFiles]
+Default Profile=default.usp
+[VuserProfiles]
+Profiles=Default Profile
+[CfgFiles]
+Default Profile=default.cfg
+[ExtraFiles]
+globals.h=
+[Modified Actions]
+vuser_init=1
+PatientOperations=1
+Action1=1
+vuser_end=0
+[Recorded Actions]
+vuser_init=0
+PatientOperations=0
+Action1=0
+vuser_end=0
+[Replayed Actions]
+vuser_init=1
+PatientOperations=1
+Action1=1
+vuser_end=1
+[Interpreters]
+vuser_init=cci
+PatientOperations=cci
+Action1=cci
+vuser_end=cci
+[TransactionsOrder]
+Order="Patient operations_ Get2DCodeImage__*delimiter*__Subscribe_Patinet__*delimiter*__Create Paper report__*delimiter*__QueryReportFilmStatus__*delimiter*__Update Paper report__*delimiter*__QueryReportFilmStatus__*delimiter*__Create ExamReservation__*delimiter*__QueryExamReservation"
+[StateManagement]
+LastReplayStatus=2
+[ActiveReplay]
+LastReplayedRunName=result1
+ActiveRunName=result1
+[Transactions]
+"Patient operations_ Get2DCodeImage"=
+Subscribe_Patinet=
+"Create Paper report"=
+QueryReportFilmStatus=
+"Update Paper report"=
+"Create ExamReservation"=
+QueryExamReservation=

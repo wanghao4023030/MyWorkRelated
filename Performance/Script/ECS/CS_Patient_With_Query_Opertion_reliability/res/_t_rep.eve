@@ -1,0 +1,42 @@
+28 11 1521449281 2 151980624 -1438573922 1699588
+28 4 CS_Patient_Query_opertion 1 1521449281 0 CS_Patient_Query_opertion localhost 0 1
+28 10 localhost 28 0 0
+28 4 CS_Patient_Query_opertion 2 1521449281 0 CS_Patient_Query_opertion localhost 0 1
+28 0 CS_Patient_Query_opertion 2 1521449281 0 localhost 0
+28 8 CS_Patient_Query_opertion 2  0 0
+28 0 CS_Patient_Query_opertion 1 1521449281 0 localhost 0
+28 8 CS_Patient_Query_opertion 1  0 0
+28 2 CS_Patient_Query_opertion 1 1521449281 0 p 0 0
+28 2 CS_Patient_Query_opertion 2 1521449281 0 p 0 0
+28 4 CS_Patient_Query_opertion 3 1521449296 0 CS_Patient_Query_opertion localhost 0 1
+28 4 CS_Patient_Query_opertion 4 1521449296 0 CS_Patient_Query_opertion localhost 0 1
+28 0 CS_Patient_Query_opertion 3 1521449296 0 localhost 0
+28 8 CS_Patient_Query_opertion 3  0 0
+28 0 CS_Patient_Query_opertion 4 1521449296 0 localhost 0
+28 8 CS_Patient_Query_opertion 4  0 0
+28 2 CS_Patient_Query_opertion 4 1521449296 0 p 0 0
+28 2 CS_Patient_Query_opertion 3 1521449296 0 p 0 0
+28 4 CS_Patient_Query_opertion 5 1521449311 0 CS_Patient_Query_opertion localhost 0 1
+28 4 CS_Patient_Query_opertion 6 1521449311 0 CS_Patient_Query_opertion localhost 0 1
+28 0 CS_Patient_Query_opertion 6 1521449311 0 localhost 0
+28 8 CS_Patient_Query_opertion 6  0 0
+28 0 CS_Patient_Query_opertion 5 1521449311 0 localhost 0
+28 8 CS_Patient_Query_opertion 5  0 0
+28 2 CS_Patient_Query_opertion 5 1521449311 0 p 0 0
+28 2 CS_Patient_Query_opertion 6 1521449311 0 p 0 0
+28 4 CS_Patient_Query_opertion 7 1521449326 0 CS_Patient_Query_opertion localhost 0 1
+28 4 CS_Patient_Query_opertion 8 1521449326 0 CS_Patient_Query_opertion localhost 0 1
+28 0 CS_Patient_Query_opertion 8 1521449326 0 localhost 0
+28 8 CS_Patient_Query_opertion 8  0 0
+28 0 CS_Patient_Query_opertion 7 1521449326 0 localhost 0
+28 8 CS_Patient_Query_opertion 7  0 0
+28 2 CS_Patient_Query_opertion 7 1521449326 0 p 0 0
+28 2 CS_Patient_Query_opertion 8 1521449326 0 p 0 0
+28 4 CS_Patient_Query_opertion 9 1521449341 0 CS_Patient_Query_opertion localhost 0 1
+28 4 CS_Patient_Query_opertion 10 1521449341 0 CS_Patient_Query_opertion localhost 0 1
+28 0 CS_Patient_Query_opertion 9 1521449341 0 localhost 0
+28 8 CS_Patient_Query_opertion 9  0 0
+28 0 CS_Patient_Query_opertion 10 1521449341 0 localhost 0
+28 8 CS_Patient_Query_opertion 10  0 0
+28 2 CS_Patient_Query_opertion 10 1521449341 0 p 0 0
+28 2 CS_Patient_Query_opertion 9 1521449341 0 p 0 0

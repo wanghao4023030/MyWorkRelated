@@ -1,0 +1,13 @@
+[t4]
+SnapshotXmlFile=snapshot_4.xml
+ContentType=application/xml
+StepName=Custom Request: Create_PaperReport
+Total=1
+FileName1=t4.xml
+RequestHeaderFile=t4_RequestHeader.txt
+ResponseHeaderFile=t4_ResponseHeader.txt
+RawStepEndTime=0
+RawStepName=Create_PaperReport
+RequestBodyFile=t4_RequestBody.txt
+RawStepStartTime=1525250420241
+URL1=http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx

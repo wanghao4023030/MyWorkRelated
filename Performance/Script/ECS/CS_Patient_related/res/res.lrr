@@ -1,0 +1,32 @@
+[Scenario]
+Product=HP LoadRunner Controller
+Version=12.53.0.0
+Path=Scenario2
+Subject=
+Result_file=D:\ECS\CS_Patient_related\res\res.lrr
+Description=
+ResultName=res
+Time_Zone=-28800
+Start_time=1520577759
+Daylight_Bias=0
+Stop_time=1520577838
+[Configuration]
+Public_local=1
+Is_mix=1
+Is_runner_file=0
+Runner_file=
+[Running_mode]
+Start_reason=By command
+Stop_reason=By command
+[Data Collection]
+FullData=1
+[Scenario_summary]
+Scenario Type=Manual Scenario
+Goal Profile Name=Schedule 1
+Mode=Scenario Scheduling
+Scenario Duration=Start 10 Vusers: 2 every 00:00:15 (HH:MM:SS); Run for 00:05:00 (HH:MM:SS); Stop all Vusers: 5 every 00:00:30 (HH:MM:SS)
+Load Behavior=Initialize each Vuser just before it runs
+[Scripts]
+CS_Patient_related=D:\ECS\CS_Patient_related\CS_Patient_related.usr
+[Scripts_types]
+CS_Patient_related=Multi+QTWeb+WS_SOAP

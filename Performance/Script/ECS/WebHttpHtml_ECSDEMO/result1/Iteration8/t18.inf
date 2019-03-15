@@ -1,0 +1,13 @@
+[t18]
+SnapshotXmlFile=snapshot_18.xml
+ContentType=application/xml
+StepName=Custom Request: Update_ExamReservation
+Total=1
+FileName1=t18.xml
+RequestHeaderFile=t18_RequestHeader.txt
+ResponseHeaderFile=t18_ResponseHeader.txt
+RawStepEndTime=0
+RawStepName=Update_ExamReservation
+RequestBodyFile=t18_RequestBody.txt
+RawStepStartTime=1520564845291
+URL1=http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx

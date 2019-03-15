@@ -1,0 +1,13 @@
+[END_TRANSACTION]
+1="Patient operations_ Get2DCodeImage"
+2="Subscribe_Patinet"
+3="Create Paper report"
+4="Create Film"
+5="QueryReportFilmStatus"
+6="QueryReportFilmStatus_Pass"
+7="Update Film"
+8="Update Paper report"
+9="Create ExamReservation"
+10="QueryReservation"
+11="QueryReservation_Pass"
+12="Update ExamReservation"

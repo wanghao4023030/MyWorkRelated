@@ -1,0 +1,1896 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE Report
+[
+<!ELEMENT Report (General ,(Doc|BPT)) >
+<!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
+
+<!ELEMENT General ( DocLocation ) >
+<!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED qcserver CDATA #IMPLIED qcproject CDATA #IMPLIED SolManSolutionId CDATA #IMPLIED SolManProjectId CDATA #IMPLIED SolManTestPlanId CDATA #IMPLIED SolManTestPackageId CDATA #IMPLIED SolManUserInfoData CDATA #IMPLIED  >
+
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,AdditionalInfo*,Doc*) >
+<!ATTLIST BPT rID ID #REQUIRED >
+
+<!ELEMENT Doc (DName,ConfName?,Res,DVer?,TSet?,TInst?,RunType?,DT?,AdditionalInfo*,Step*,DIter*,Step*,Action*,Doc*,Summary?,TestMaintenanceSummary*,NodeArgs?) >
+<!ATTLIST Doc rID ID #REQUIRED type (Test|BC|BPTWrapperTest|Flow|Group|Action) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
+
+<!ELEMENT RunType ( #PCDATA )>
+<!ATTLIST RunType fmStep (False|True) "False" batch (False|True) "False" upDesc (False|True) "False" upChk (False|True) "False" upAS (False|True) "False">
+
+<!ELEMENT DName ( #PCDATA ) >
+
+<!ELEMENT ConfName ( #PCDATA ) >
+
+<!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT AdditionalInfo (AdditionalDataName,AdditionalDataValue ) >
+
+<!ELEMENT AdditionalDataName ( #PCDATA ) >
+
+<!ELEMENT AdditionalDataValue ( #PCDATA ) >
+
+<!ELEMENT DVer ( #PCDATA ) >
+
+<!ELEMENT TSet ( #PCDATA ) >
+
+<!ELEMENT TInst ( #PCDATA ) >
+
+<!ELEMENT DIter (Step*,Action+,Summary?,NodeArgs)>
+<!ATTLIST DIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT DocLocation ( #PCDATA )>
+
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*, Summary,ActionMaintenanceSummary*, NodeArgs ) >
+<!ATTLIST Action rID ID #REQUIRED>
+
+<!ELEMENT AIter ((Step|HtmlStep|Action)*,DataMapping?, Summary?,NodeArgs) >
+<!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED isCountable (False|True) "False" >
+
+<!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT TestMaintenanceSummary (ActionMaintenanceSummary*) >
+<!ATTLIST TestMaintenanceSummary ObjectsAdded CDATA #REQUIRED ObjectsUpdated CDATA #REQUIRED StepsUpdated CDATA #REQUIRED StepsComments CDATA #REQUIRED><!ELEMENT ActionMaintenanceSummary (ObjectChange* ) >
+<!ATTLIST ActionMaintenanceSummary Action CDATA #REQUIRED Objects CDATA #REQUIRED Updated CDATA #REQUIRED LinesTotal CDATA #REQUIRED Added CDATA #REQUIRED LinesUpdated CDATA #REQUIRED>
+
+<!ELEMENT ObjectChange  (Hierarchy, PropertyChangeList* ) >
+<!ATTLIST ObjectChange Operation CDATA #IMPLIED OriginalRepository CDATA #IMPLIED>
+
+<!ELEMENT PropertyChangeList (PropertyDef*) >
+
+<!ELEMENT PropertyDef (OriginalValue, NewValue) >
+<!ATTLIST PropertyDef PropName CDATA #REQUIRED OriginRegularExpression (True|False) "False" NewRegularExpression (True|False) "False" AddedProperty (True|False) "False" >
+
+<!ELEMENT OriginalValue ( #PCDATA )>
+
+<!ELEMENT NewValue ( #PCDATA )>
+
+<!ELEMENT Hierarchy  (ObjectName, Hierarchy*) >
+<!ATTLIST Hierarchy MicClass CDATA #REQUIRED>
+
+<!ELEMENT ObjectName  ( #PCDATA ) >
+
+<!ELEMENT Step (Obj,Details,Time,TimeTick* ,(Step|HtmlStep|Doc)*, DataMapping?, NodeArgs) >
+<!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
+
+<!ELEMENT HtmlStep (HTML,TimeTick*,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST HtmlStep rID ID #REQUIRED >
+
+<!ELEMENT Obj ( #PCDATA ) >
+<!ATTLIST Obj plainTxt (False|True) "True">
+
+<!ELEMENT Details ( #PCDATA ) >
+<!ATTLIST Details plainTxt (False|True) "True">
+
+<!ELEMENT Time ( #PCDATA ) >
+
+<!ELEMENT HTML ( #PCDATA ) >
+
+<!ELEMENT Disp ( #PCDATA ) >
+
+<!ELEMENT TimeTick ( #PCDATA ) >
+
+<!ELEMENT DataMapping ( DataMappedItem* )>
+<!ELEMENT DataMappedItem EMPTY >
+<!ATTLIST DataMappedItem dsName CDATA #REQUIRED >
+<!ATTLIST DataMappedItem rowId CDATA #REQUIRED >
+
+<!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?,ExtendedInfo? )>
+<!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED UserNote CDATA #IMPLIED filter (False|True) "True">
+<!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED MovieMarker CDATA "">
+<!ATTLIST NodeArgs Source CDATA #IMPLIED SourceLine CDATA #IMPLIED StepFlowItemKey CDATA #IMPLIED >
+
+<!ELEMENT TopPane (Path)>
+
+<!ELEMENT BtmPane ( (Path|WR)?,ASHilite?)>
+<!ATTLIST BtmPane vType CDATA "HTML">
+
+<!ELEMENT Path ( #PCDATA ) >
+
+<!ELEMENT ASHilite ( #PCDATA ) >
+
+<!ELEMENT WR ( #PCDATA ) >
+
+<!ELEMENT ExtendedInfo ( StepData ) >
+
+<!ATTLIST ExtendedInfo StepType CDATA #REQUIRED>
+<!ELEMENT DT (NodeArgs) >
+<!ATTLIST DT rID ID #REQUIRED>
+
+<!ELEMENT Summary (Param*)>
+<!ATTLIST Summary sTime CDATA #IMPLIED eTime CDATA #IMPLIED passed CDATA #IMPLIED failed CDATA #IMPLIED warnings CDATA #IMPLIED retval CDATA #IMPLIED stopped (False|True) "False" >
+
+<!ELEMENT Param (ParamName,ParamVal)+ >
+<!ATTLIST Param paramInOut (In|Out) "In">
+
+<!ELEMENT ParamName ( #PCDATA ) >
+
+<!ELEMENT ParamVal ( #PCDATA ) >
+
+]
+>
+<Report ver="2.0" tmZone="China Standard Time">
+<General productName="Vugen" productVer="12" os="" host="CNWCNBWDRZH2"><DocLocation><![CDATA[D:\ECS\WebHttpHtml_ECSDEMO]]></DocLocation></General>
+<Doc rID="T1"   productName= "Vugen"  >
+<DName><![CDATA[WebHttpHtml_ECSDEMO]]></DName>
+<Res><![CDATA[result1]]></Res>
+<Action rID="T2">
+<AName><![CDATA[vuser_init]]></AName>
+<Summary sTime="2018/3/9 - 11:05:14" eTime="2018/3/9 - 11:05:14" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="5" >
+<Disp><![CDATA[vuser_init Summary]]></Disp>
+</NodeArgs>
+</Action>
+<DIter rID="T3" iterID="1" >
+<Action rID="T4">
+<AName><![CDATA[PUMA_PaperReport]]></AName>
+<Step rID="T5">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:15]]></Time>
+<TimeTick>1520564715</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="9" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T6">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:16]]></Time>
+<TimeTick>1520564716</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="10" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T7">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:17]]></Time>
+<TimeTick>1520564717</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="11" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t3.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T8">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:18]]></Time>
+<TimeTick>1520564718</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="12" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:05:14" eTime="2018/3/9 - 11:05:18" passed="4" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="8" status="Passed" >
+<Disp><![CDATA[PUMA_PaperReport Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T9">
+<AName><![CDATA[PUMA_Film]]></AName>
+<Step rID="T10">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:19]]></Time>
+<TimeTick>1520564719</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="15" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T11">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:21]]></Time>
+<TimeTick>1520564721</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="16" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t6.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T12">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:22]]></Time>
+<TimeTick>1520564722</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="17" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t7.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T13">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:24]]></Time>
+<TimeTick>1520564724</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="18" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t8.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T14">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:25]]></Time>
+<TimeTick>1520564725</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="19" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t9.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T15">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:25]]></Time>
+<TimeTick>1520564725</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="20" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t10.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T16">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:25]]></Time>
+<TimeTick>1520564725</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="21" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t11.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T17">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:25]]></Time>
+<TimeTick>1520564725</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="22" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t12.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:05:18" eTime="2018/3/9 - 11:05:25" passed="8" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="14" status="Passed" >
+<Disp><![CDATA[PUMA_Film Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T18">
+<AName><![CDATA[PUMA_examreservation]]></AName>
+<Step rID="T19">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:26]]></Time>
+<TimeTick>1520564726</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="25" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t13.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T20">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:26]]></Time>
+<TimeTick>1520564726</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="26" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t14.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T21">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:26]]></Time>
+<TimeTick>1520564726</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="27" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t15.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T22">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:26]]></Time>
+<TimeTick>1520564726</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="28" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t16.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T23">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:26]]></Time>
+<TimeTick>1520564726</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="29" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t17.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:05:25" eTime="2018/3/9 - 11:05:27" passed="5" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="24" status="Passed" >
+<Disp><![CDATA[PUMA_examreservation Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="7" status="Passed" >
+<Disp><![CDATA[WebHttpHtml_ECSDEMO Iteration 1 (Row 1)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T24" iterID="2" >
+<Action rID="T25">
+<AName><![CDATA[PUMA_PaperReport]]></AName>
+<Step rID="T26">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:28]]></Time>
+<TimeTick>1520564728</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="34" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T27">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:31]]></Time>
+<TimeTick>1520564731</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="35" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T28">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:32]]></Time>
+<TimeTick>1520564732</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="36" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t3.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T29">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:34]]></Time>
+<TimeTick>1520564734</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="37" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T30">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:35]]></Time>
+<TimeTick>1520564735</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="38" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T31">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:36]]></Time>
+<TimeTick>1520564736</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="39" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t6.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T32">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:36]]></Time>
+<TimeTick>1520564736</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="40" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t7.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T33">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:37]]></Time>
+<TimeTick>1520564737</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="41" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t8.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T34">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:37]]></Time>
+<TimeTick>1520564737</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="42" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t9.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T35">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:37]]></Time>
+<TimeTick>1520564737</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="43" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t10.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:05:27" eTime="2018/3/9 - 11:05:37" passed="10" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="33" status="Passed" >
+<Disp><![CDATA[PUMA_PaperReport Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T36">
+<AName><![CDATA[PUMA_Film]]></AName>
+<Step rID="T37">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:38]]></Time>
+<TimeTick>1520564738</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="46" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t11.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T38">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:39]]></Time>
+<TimeTick>1520564739</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="47" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t12.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T39">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:41]]></Time>
+<TimeTick>1520564741</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="48" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t13.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T40">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:43]]></Time>
+<TimeTick>1520564743</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="49" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t14.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T41">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:45]]></Time>
+<TimeTick>1520564745</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="50" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t15.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T42">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:45]]></Time>
+<TimeTick>1520564745</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="51" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t16.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T43">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:45]]></Time>
+<TimeTick>1520564745</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="52" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t17.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T44">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:45]]></Time>
+<TimeTick>1520564745</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="53" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t18.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:05:37" eTime="2018/3/9 - 11:05:45" passed="8" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="45" status="Passed" >
+<Disp><![CDATA[PUMA_Film Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T45">
+<AName><![CDATA[PUMA_examreservation]]></AName>
+<Step rID="T46">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:46]]></Time>
+<TimeTick>1520564746</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="56" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t19.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T47">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:46]]></Time>
+<TimeTick>1520564746</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="57" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t20.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:05:45" eTime="2018/3/9 - 11:05:47" passed="2" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="55" status="Passed" >
+<Disp><![CDATA[PUMA_examreservation Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="32" status="Passed" >
+<Disp><![CDATA[WebHttpHtml_ECSDEMO Iteration 2 (Row 2)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T48" iterID="3" >
+<Action rID="T49">
+<AName><![CDATA[PUMA_PaperReport]]></AName>
+<Step rID="T50">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:48]]></Time>
+<TimeTick>1520564748</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="62" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T51">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:49]]></Time>
+<TimeTick>1520564749</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="63" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T52">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:51]]></Time>
+<TimeTick>1520564751</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="64" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t3.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T53">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:52]]></Time>
+<TimeTick>1520564752</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="65" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T54">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:54]]></Time>
+<TimeTick>1520564754</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="66" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T55">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:56]]></Time>
+<TimeTick>1520564756</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="67" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t6.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T56">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:56]]></Time>
+<TimeTick>1520564756</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="68" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t7.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T57">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:56]]></Time>
+<TimeTick>1520564756</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="69" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t8.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T58">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:56]]></Time>
+<TimeTick>1520564756</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="70" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t9.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T59">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:57]]></Time>
+<TimeTick>1520564757</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="71" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t10.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:05:47" eTime="2018/3/9 - 11:05:57" passed="10" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="61" status="Passed" >
+<Disp><![CDATA[PUMA_PaperReport Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T60">
+<AName><![CDATA[PUMA_Film]]></AName>
+<Step rID="T61">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:58]]></Time>
+<TimeTick>1520564758</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="74" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t11.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T62">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:05:59]]></Time>
+<TimeTick>1520564759</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="75" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t12.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:05:57" eTime="2018/3/9 - 11:05:59" passed="2" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="73" status="Passed" >
+<Disp><![CDATA[PUMA_Film Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T63">
+<AName><![CDATA[PUMA_examreservation]]></AName>
+<Step rID="T64">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:00]]></Time>
+<TimeTick>1520564760</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="78" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t13.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T65">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:00]]></Time>
+<TimeTick>1520564760</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="79" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t14.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:05:59" eTime="2018/3/9 - 11:06:01" passed="2" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="77" status="Passed" >
+<Disp><![CDATA[PUMA_examreservation Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="60" status="Passed" >
+<Disp><![CDATA[WebHttpHtml_ECSDEMO Iteration 3 (Row 3)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T66" iterID="4" >
+<Action rID="T67">
+<AName><![CDATA[PUMA_PaperReport]]></AName>
+<Step rID="T68">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:02]]></Time>
+<TimeTick>1520564762</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="84" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration4\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T69">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:04]]></Time>
+<TimeTick>1520564764</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="85" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration4\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T70">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:05]]></Time>
+<TimeTick>1520564765</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="86" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration4\t3.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T71">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:05]]></Time>
+<TimeTick>1520564765</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="87" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration4\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:06:01" eTime="2018/3/9 - 11:06:05" passed="4" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="83" status="Passed" >
+<Disp><![CDATA[PUMA_PaperReport Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T72">
+<AName><![CDATA[PUMA_Film]]></AName>
+<Step rID="T73">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:07]]></Time>
+<TimeTick>1520564767</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="90" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration4\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T74">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:08]]></Time>
+<TimeTick>1520564768</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="91" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration4\t6.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T75">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:10]]></Time>
+<TimeTick>1520564770</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="92" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration4\t7.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T76">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:10]]></Time>
+<TimeTick>1520564770</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="93" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration4\t8.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:06:05" eTime="2018/3/9 - 11:06:10" passed="4" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="89" status="Passed" >
+<Disp><![CDATA[PUMA_Film Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T77">
+<AName><![CDATA[PUMA_examreservation]]></AName>
+<Step rID="T78">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:11]]></Time>
+<TimeTick>1520564771</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="96" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration4\t9.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T79">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:11]]></Time>
+<TimeTick>1520564771</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="97" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration4\t10.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T80">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:11]]></Time>
+<TimeTick>1520564771</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="98" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration4\t11.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:06:10" eTime="2018/3/9 - 11:06:12" passed="3" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="95" status="Passed" >
+<Disp><![CDATA[PUMA_examreservation Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="82" status="Passed" >
+<Disp><![CDATA[WebHttpHtml_ECSDEMO Iteration 4 (Row 4)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T81" iterID="5" >
+<Action rID="T82">
+<AName><![CDATA[PUMA_PaperReport]]></AName>
+<Step rID="T83">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:13]]></Time>
+<TimeTick>1520564773</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="103" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration5\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T84">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:14]]></Time>
+<TimeTick>1520564774</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="104" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration5\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:06:12" eTime="2018/3/9 - 11:06:14" passed="2" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="102" status="Passed" >
+<Disp><![CDATA[PUMA_PaperReport Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T85">
+<AName><![CDATA[PUMA_Film]]></AName>
+<Step rID="T86">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:16]]></Time>
+<TimeTick>1520564776</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="107" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration5\t3.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T87">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:17]]></Time>
+<TimeTick>1520564777</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="108" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration5\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T88">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:22]]></Time>
+<TimeTick>1520564782</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="109" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration5\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T89">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:28]]></Time>
+<TimeTick>1520564788</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="110" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration5\t6.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T90">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:30]]></Time>
+<TimeTick>1520564790</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="111" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration5\t7.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T91">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:31]]></Time>
+<TimeTick>1520564791</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="112" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration5\t8.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T92">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:31]]></Time>
+<TimeTick>1520564791</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="113" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration5\t9.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T93">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:32]]></Time>
+<TimeTick>1520564792</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="114" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration5\t10.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:06:14" eTime="2018/3/9 - 11:06:32" passed="8" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="106" status="Passed" >
+<Disp><![CDATA[PUMA_Film Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T94">
+<AName><![CDATA[PUMA_examreservation]]></AName>
+<Step rID="T95">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:33]]></Time>
+<TimeTick>1520564793</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="117" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration5\t11.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:06:32" eTime="2018/3/9 - 11:06:34" passed="1" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="116" status="Passed" >
+<Disp><![CDATA[PUMA_examreservation Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="101" status="Passed" >
+<Disp><![CDATA[WebHttpHtml_ECSDEMO Iteration 5 (Row 5)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T96" iterID="6" >
+<Action rID="T97">
+<AName><![CDATA[PUMA_PaperReport]]></AName>
+<Step rID="T98">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:36]]></Time>
+<TimeTick>1520564796</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="122" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T99">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:37]]></Time>
+<TimeTick>1520564797</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="123" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T100">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:39]]></Time>
+<TimeTick>1520564799</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="124" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t3.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T101">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:40]]></Time>
+<TimeTick>1520564800</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="125" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T102">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:41]]></Time>
+<TimeTick>1520564801</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="126" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T103">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:41]]></Time>
+<TimeTick>1520564801</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="127" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t6.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:06:34" eTime="2018/3/9 - 11:06:41" passed="6" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="121" status="Passed" >
+<Disp><![CDATA[PUMA_PaperReport Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T104">
+<AName><![CDATA[PUMA_Film]]></AName>
+<Step rID="T105">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:42]]></Time>
+<TimeTick>1520564802</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="130" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t7.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T106">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:44]]></Time>
+<TimeTick>1520564804</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="131" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t8.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T107">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:45]]></Time>
+<TimeTick>1520564805</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="132" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t9.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T108">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:46]]></Time>
+<TimeTick>1520564806</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="133" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t10.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T109">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:48]]></Time>
+<TimeTick>1520564808</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="134" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t11.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T110">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:48]]></Time>
+<TimeTick>1520564808</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="135" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t12.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T111">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:49]]></Time>
+<TimeTick>1520564809</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="136" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t13.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T112">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:49]]></Time>
+<TimeTick>1520564809</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="137" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t14.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:06:41" eTime="2018/3/9 - 11:06:49" passed="8" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="129" status="Passed" >
+<Disp><![CDATA[PUMA_Film Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T113">
+<AName><![CDATA[PUMA_examreservation]]></AName>
+<Step rID="T114">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:50]]></Time>
+<TimeTick>1520564810</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="140" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t15.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T115">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:50]]></Time>
+<TimeTick>1520564810</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="141" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t16.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:06:49" eTime="2018/3/9 - 11:06:51" passed="2" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="139" status="Passed" >
+<Disp><![CDATA[PUMA_examreservation Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="120" status="Passed" >
+<Disp><![CDATA[WebHttpHtml_ECSDEMO Iteration 6 (Row 6)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T116" iterID="7" >
+<Action rID="T117">
+<AName><![CDATA[PUMA_PaperReport]]></AName>
+<Step rID="T118">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:53]]></Time>
+<TimeTick>1520564813</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="146" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T119">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:54]]></Time>
+<TimeTick>1520564814</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="147" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T120">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:55]]></Time>
+<TimeTick>1520564815</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="148" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t3.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T121">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:57]]></Time>
+<TimeTick>1520564817</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="149" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T122">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:58]]></Time>
+<TimeTick>1520564818</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="150" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T123">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:58]]></Time>
+<TimeTick>1520564818</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="151" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t6.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T124">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:58]]></Time>
+<TimeTick>1520564818</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="152" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t7.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T125">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:58]]></Time>
+<TimeTick>1520564818</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="153" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t8.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:06:51" eTime="2018/3/9 - 11:06:58" passed="8" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="145" status="Passed" >
+<Disp><![CDATA[PUMA_PaperReport Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T126">
+<AName><![CDATA[PUMA_Film]]></AName>
+<Step rID="T127">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:06:59]]></Time>
+<TimeTick>1520564819</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="156" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t9.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T128">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:01]]></Time>
+<TimeTick>1520564821</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="157" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t10.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T129">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:03]]></Time>
+<TimeTick>1520564823</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="158" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t11.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T130">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:06]]></Time>
+<TimeTick>1520564826</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="159" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t12.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T131">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:07]]></Time>
+<TimeTick>1520564827</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="160" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t13.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T132">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:07]]></Time>
+<TimeTick>1520564827</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="161" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t14.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T133">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:08]]></Time>
+<TimeTick>1520564828</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="162" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t15.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T134">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:08]]></Time>
+<TimeTick>1520564828</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="163" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t16.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:06:58" eTime="2018/3/9 - 11:07:08" passed="8" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="155" status="Passed" >
+<Disp><![CDATA[PUMA_Film Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T135">
+<AName><![CDATA[PUMA_examreservation]]></AName>
+<Step rID="T136">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:09]]></Time>
+<TimeTick>1520564829</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="166" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t17.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T137">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:09]]></Time>
+<TimeTick>1520564829</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="167" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t18.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T138">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:09]]></Time>
+<TimeTick>1520564829</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="168" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t19.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:07:08" eTime="2018/3/9 - 11:07:10" passed="3" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="165" status="Passed" >
+<Disp><![CDATA[PUMA_examreservation Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="144" status="Passed" >
+<Disp><![CDATA[WebHttpHtml_ECSDEMO Iteration 7 (Row 7)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T139" iterID="8" >
+<Action rID="T140">
+<AName><![CDATA[PUMA_PaperReport]]></AName>
+<Step rID="T141">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:12]]></Time>
+<TimeTick>1520564832</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="173" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T142">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:13]]></Time>
+<TimeTick>1520564833</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="174" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T143">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:14]]></Time>
+<TimeTick>1520564834</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="175" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t3.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T144">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:16]]></Time>
+<TimeTick>1520564836</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="176" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T145">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:18]]></Time>
+<TimeTick>1520564838</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="177" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T146">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:18]]></Time>
+<TimeTick>1520564838</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="178" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t6.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T147">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:18]]></Time>
+<TimeTick>1520564838</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="179" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t7.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T148">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:19]]></Time>
+<TimeTick>1520564839</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="180" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t8.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:07:10" eTime="2018/3/9 - 11:07:19" passed="8" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="172" status="Passed" >
+<Disp><![CDATA[PUMA_PaperReport Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T149">
+<AName><![CDATA[PUMA_Film]]></AName>
+<Step rID="T150">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_PaperReport]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:21]]></Time>
+<TimeTick>1520564841</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="183" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_PaperReport]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t9.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T151">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update Paper report Print status]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:22]]></Time>
+<TimeTick>1520564842</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="184" status="Passed" >
+<Disp><![CDATA[Custom Request: Update Paper report Print status]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t10.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:07:19" eTime="2018/3/9 - 11:07:22" passed="2" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="182" status="Passed" >
+<Disp><![CDATA[PUMA_Film Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T152">
+<AName><![CDATA[PUMA_examreservation]]></AName>
+<Step rID="T153">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:23]]></Time>
+<TimeTick>1520564843</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="187" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t11.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T154">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:23]]></Time>
+<TimeTick>1520564843</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="188" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t12.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T155">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:23]]></Time>
+<TimeTick>1520564843</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="189" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t13.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T156">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Create_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:23]]></Time>
+<TimeTick>1520564843</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="190" status="Passed" >
+<Disp><![CDATA[Custom Request: Create_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t14.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T157">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:24]]></Time>
+<TimeTick>1520564844</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="191" status="Passed" >
+<Disp><![CDATA[Custom Request: Update_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t15.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T158">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:25]]></Time>
+<TimeTick>1520564845</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="192" status="Passed" >
+<Disp><![CDATA[Custom Request: Update_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t16.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T159">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:25]]></Time>
+<TimeTick>1520564845</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="193" status="Passed" >
+<Disp><![CDATA[Custom Request: Update_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t17.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T160">
+<Obj plainTxt="False" ><![CDATA[Custom Request: Update_ExamReservation]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:25]]></Time>
+<TimeTick>1520564845</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="194" status="Passed" >
+<Disp><![CDATA[Custom Request: Update_ExamReservation]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t18.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:07:22" eTime="2018/3/9 - 11:07:25" passed="8" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="186" status="Passed" >
+<Disp><![CDATA[PUMA_examreservation Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="171" status="Passed" >
+<Disp><![CDATA[WebHttpHtml_ECSDEMO Iteration 8 (Row 8)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T161" iterID="9" >
+<Action rID="T162">
+<AName><![CDATA[PUMA_PaperReport]]></AName>
+<Step rID="T163">
+<Obj plainTxt="False" ><![CDATA[Script Aborted!]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Pass</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/3/9 - 11:07:25]]></Time>
+<TimeTick>1520564845</TimeTick>
+<NodeArgs eType="General" icon="1" nRep="199" >
+<Disp><![CDATA[Script Aborted!]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/3/9 - 11:07:25" eTime="2018/3/9 - 11:07:25" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="198" >
+<Disp><![CDATA[PUMA_PaperReport Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T164">
+<AName><![CDATA[vuser_end]]></AName>
+<Summary sTime="2018/3/9 - 11:07:25" eTime="2018/3/9 - 11:07:25" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="201" >
+<Disp><![CDATA[vuser_end Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="197" >
+<Disp><![CDATA[WebHttpHtml_ECSDEMO Iteration 9 (Row 9)]]></Disp>
+</NodeArgs>
+</DIter>
+<Summary sTime="2018/3/9 - 11:05:12" eTime="2018/3/9 - 11:07:26" passed="126" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartTest" icon="1" nRep="4" status="Passed" >
+<Disp><![CDATA[Test WebHttpHtml_ECSDEMO Summary]]></Disp>
+</NodeArgs>
+</Doc>
+</Report>

@@ -1,0 +1,13 @@
+[DATA_POINT]
+1="HTTP_200"
+2="tcp_connection_count"
+3="tcp_connect"
+4="tcp_shutdown"
+5="mic_recv"
+[END_TRANSACTION]
+1="vuser_init_Transaction"
+2="http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx"
+3="Get2DCodeImage_Action_53"
+4="Patient Get2DCodeImage"
+5="Action_Transaction"
+6="vuser_end_Transaction"

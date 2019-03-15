@@ -1,0 +1,13 @@
+[t3]
+SnapshotXmlFile=snapshot_3.xml
+ContentType=text/html
+StepName=Custom Request: web_Subscribe_Patinet
+Total=1
+FileName1=t3.html
+RequestHeaderFile=t3_RequestHeader.txt
+ResponseHeaderFile=t3_ResponseHeader.txt
+RawStepEndTime=0
+RawStepName=web_Subscribe_Patinet
+RequestBodyFile=t3_RequestBody.txt
+RawStepStartTime=1525250852123
+URL1=http://47.98.102.85/KioskWechatServer/WechatServer

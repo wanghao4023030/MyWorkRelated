@@ -1,0 +1,72 @@
+[
+    {
+        "transactionName": "Patient operations_ Get2DCodeImage",
+        "rawStartTime": 1521423491189,
+        "rawEndTime": 1521423492855
+    },
+    {
+        "transactionName": "Subscribe_Patinet",
+        "rawStartTime": 1521423493937,
+        "rawEndTime": 1521423494803
+    },
+    {
+        "transactionName": "Create Paper report",
+        "rawStartTime": 1521423494807,
+        "rawEndTime": 1521423496037
+    },
+    {
+        "transactionName": "Create Paper report",
+        "rawStartTime": 1521423497040,
+        "rawEndTime": 1521423498040
+    },
+    {
+        "transactionName": "Create Paper report",
+        "rawStartTime": 1521423499045,
+        "rawEndTime": 1521423500081
+    },
+    {
+        "transactionName": "QueryReportFilmStatus",
+        "rawStartTime": 1521423501114,
+        "rawEndTime": 1521423501451
+    },
+    {
+        "transactionName": "Update Paper report",
+        "rawStartTime": 1521423502505,
+        "rawEndTime": 1521423502638
+    },
+    {
+        "transactionName": "Update Paper report",
+        "rawStartTime": 1521423502641,
+        "rawEndTime": 1521423502775
+    },
+    {
+        "transactionName": "Update Paper report",
+        "rawStartTime": 1521423502779,
+        "rawEndTime": 1521423502937
+    },
+    {
+        "transactionName": "QueryReportFilmStatus",
+        "rawStartTime": 1521423502967,
+        "rawEndTime": 1521423503045
+    },
+    {
+        "transactionName": "Create ExamReservation",
+        "rawStartTime": 1521423503125,
+        "rawEndTime": 1521423503267
+    },
+    {
+        "transactionName": "Create ExamReservation",
+        "rawStartTime": 1521423503298,
+        "rawEndTime": 1521423503412
+    },
+    {
+        "transactionName": "Create ExamReservation",
+        "rawStartTime": 1521423503439,
+        "rawEndTime": 1521423503542
+    },
+    {
+        "transactionName": "QueryExamReservation",
+        "rawStartTime": 1521423503545,
+        "rawEndTime": 1521423503660
+    }
+]

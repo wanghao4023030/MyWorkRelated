@@ -1,0 +1,6 @@
+[vuser_init]
+SnapshotIndex=I1_vuser_init
+[A_Patient_Register]
+SnapshotIndex=I1_A_Patient_Register
+[B_Patient_ReportOperation_Query]
+SnapshotIndex=I1_B_Patient_ReportOperation_Query

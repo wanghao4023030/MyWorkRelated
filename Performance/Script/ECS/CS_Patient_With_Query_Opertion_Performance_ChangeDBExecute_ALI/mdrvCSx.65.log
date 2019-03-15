@@ -1,0 +1,2 @@
+Error: Exception was raised when calling per-thread-init function in extension cciext.dll: System Exceptions: EXCEPTION_ACCESS_VIOLATION	[MsgId: MERR-10490]
+Error: Vuser failed to initialize extension cciext.dll.	[MsgId: MERR-10700]

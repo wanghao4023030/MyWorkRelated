@@ -1,0 +1,8 @@
+"<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/so"
+"ap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.o"
+"rg/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><soap:Header><"
+"wsa:Action>http://tempuri.org/GetPatientQRID</wsa:Action><wsa:MessageID>uuid:4ba2a77e-fc41-483"
+"c-aa1a-1d71a25582f9</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schemas.xmlsoap.org/ws/200"
+"4/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http://47.98.102.85/CSServic"
+"e/CSService.asmx</wsa:To></soap:Header><soap:Body><GetPatientQRID xmlns="http://tempuri.org/">"
+"<strPID>P201805021634203921</strPID></GetPatientQRID></soap:Body></soap:Envelope>"

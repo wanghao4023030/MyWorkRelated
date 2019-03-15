@@ -1,0 +1,10 @@
+POST /KioskWechatServer/WechatServer HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+Accept-Encoding: gzip, deflate
+Accept: */*
+Host: 10.184.129.203
+Content-Length: 413
+Connection: Keep-Alive
+

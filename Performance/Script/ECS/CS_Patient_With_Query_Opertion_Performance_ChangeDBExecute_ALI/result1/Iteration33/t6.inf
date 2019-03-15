@@ -1,0 +1,13 @@
+[t6]
+SnapshotXmlFile=snapshot_6.xml
+ContentType=application/xml
+StepName=Custom Request: Update Paper report Print status
+Total=1
+FileName1=t6.xml
+RequestHeaderFile=t6_RequestHeader.txt
+ResponseHeaderFile=t6_ResponseHeader.txt
+RawStepEndTime=0
+RawStepName=Update Paper report Print status
+RequestBodyFile=t6_RequestBody.txt
+RawStepStartTime=1525250029682
+URL1=http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx

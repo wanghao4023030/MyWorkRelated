@@ -1,0 +1,4 @@
+"<xml><ToUserName><![CDATA[gh_645a789c296d]]></ToUserName><FromUserName><![CDATA[User2018050216"
+"374800321525250269]]></FromUserName><CreateTime>1525250269</CreateTime><MsgType><![CDATA[event"
+"]]></MsgType><Event><![CDATA[CLICK]]></Event><EventKey><![CDATA[BUTTON_QUERY_REPORT]]></EventK"
+"ey></xml>"

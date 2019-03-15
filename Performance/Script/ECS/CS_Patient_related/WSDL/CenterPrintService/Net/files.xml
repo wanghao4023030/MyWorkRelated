@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<services>
+  <service>
+    <name>CenterPrintService</name>
+    <id>0</id>
+    <ports>
+      <port>
+        <name>CenterPrintServiceSoap</name>
+        <id>0</id>
+      </port>
+      <port>
+        <name>CenterPrintServiceSoap12</name>
+        <id>1</id>
+      </port>
+    </ports>
+  </service>
+</services>

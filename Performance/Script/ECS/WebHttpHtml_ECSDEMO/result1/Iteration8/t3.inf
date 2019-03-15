@@ -1,0 +1,13 @@
+[t3]
+SnapshotXmlFile=snapshot_3.xml
+ContentType=application/xml
+StepName=Custom Request: Create_PaperReport
+Total=1
+FileName1=t3.xml
+RequestHeaderFile=t3_RequestHeader.txt
+ResponseHeaderFile=t3_ResponseHeader.txt
+RawStepEndTime=0
+RawStepName=Create_PaperReport
+RequestBodyFile=t3_RequestBody.txt
+RawStepStartTime=1520564833471
+URL1=http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx

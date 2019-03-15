@@ -1,0 +1,13 @@
+Start auto log messages stack - Iteration 2888.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     eResponse></soap:Body></soap:Envelope>
+A_Patient_Register.c(46): Notify: Message id [-13798] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(46): t=29482645ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") was successful, 2648 body bytes, 232 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(72): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(80): Notify: Transaction "Patient operations_ Get2DCodeImage" ended with a "Pass" status (Duration: 0.4478 Wasted Time: 0.0004).	[MsgId: MMSG-16871]
+A_Patient_Register.c(80): Error: C interpreter run time error: A_Patient_Register.c (80):  Error -- memory violation : Exception ACCESS_VIOLATION received.	[MsgId: MERR-19890]
+End auto log messages stack.	[MsgId: MMSG-10544]
+

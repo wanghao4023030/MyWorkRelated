@@ -1,0 +1,5 @@
+"<xml><ToUserName><![CDATA[gh_645a789c296d]]></ToUserName><FromUserName><![CDATA[User2018050216"
+"292331411525249764]]></FromUserName><CreateTime>1525249764</CreateTime><MsgType><![CDATA[event"
+"]]></MsgType><Event><![CDATA[subscribe]]></Event><EventKey><![CDATA[qrscene_2737]]></EventKey>"
+"<Ticket><![CDATA[gQHx8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyLXFwbTVoVXplWTAxVFNHZGhxM"
+"VAAAgT23aVaAwQAjScB]]></Ticket></xml>"

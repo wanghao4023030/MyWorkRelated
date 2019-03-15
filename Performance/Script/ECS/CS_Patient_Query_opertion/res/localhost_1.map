@@ -1,0 +1,17 @@
+[DATA_POINT]
+1="mic_recv"
+2="HTTP_200"
+3="mic_pgs"
+[END_TRANSACTION]
+1="Patient operations_ Get2DCodeImage"
+2="Subscribe_Patinet"
+3="Create Film"
+4="QueryReportFilmStatus"
+5="QueryReportFilmStatus_Pass"
+6="Update Film"
+7="Create Paper report"
+8="Update Paper report"
+10="QueryReservation"
+9="Create ExamReservation"
+11="QueryReservation_Pass"
+12="Update ExamReservation"

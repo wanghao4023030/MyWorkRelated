@@ -1,0 +1,76 @@
+[General]
+Type=Multi
+DefaultCfg=default.cfg
+ParameterFile=WebHttpHtml_ECSDEMO.prm
+GlobalParameterFile=
+NewFunctionHeader=1
+RunType=cci
+ActionLogicExt=action_logic
+LastActiveAction=Action
+MajorVersion=12
+MinorVersion=53
+ScriptExitOK=1
+ActiveTypes=QTWeb,WS_SOAP
+GenerateTypes=QTWeb,WS_SOAP
+AdditionalTypes=QTWeb,WS_SOAP
+DevelopTool=Vugen
+LastModifyVer=12.53.0.1203
+ParamLeftBrace={
+ParamRightBrace=}
+ScriptLanguage=C
+LastCodeGenerationVer=
+DisableRegenerate=0
+Description=
+ScriptLocale=zh-CN
+[Actions]
+vuser_init=vuser_init.c
+PUMA_PaperReport=PUMA_PaperReport.c
+PUMA_Film=PUMA_Film.c
+PUMA_examreservation=PUMA_examreservation.c
+vuser_end=vuser_end.c
+[RunLogicFiles]
+Default Profile=default.usp
+[VuserProfiles]
+Profiles=Default Profile
+[CfgFiles]
+Default Profile=default.cfg
+[ExtraFiles]
+globals.h=
+[Modified Actions]
+vuser_init=0
+PUMA_PaperReport=1
+PUMA_Film=1
+PUMA_examreservation=1
+vuser_end=0
+[Recorded Actions]
+vuser_init=0
+PUMA_PaperReport=0
+PUMA_Film=0
+PUMA_examreservation=0
+vuser_end=0
+[Replayed Actions]
+vuser_init=1
+PUMA_PaperReport=1
+PUMA_Film=1
+PUMA_examreservation=1
+vuser_end=1
+[Interpreters]
+vuser_init=cci
+PUMA_PaperReport=cci
+PUMA_Film=cci
+PUMA_examreservation=cci
+vuser_end=cci
+[TransactionsOrder]
+Order="Create Paper report__*delimiter*__Update Paper report__*delimiter*__Create Film__*delimiter*__Update Film__*delimiter*__Update ExamReservation__*delimiter*__Create ExamReservation"
+[StateManagement]
+LastReplayStatus=3
+[ActiveReplay]
+LastReplayedRunName=result1
+ActiveRunName=result1
+[Transactions]
+"Create Paper report"=
+"Update Paper report"=
+"Create Film"=
+"Update Film"=
+"Update ExamReservation"=
+"Create ExamReservation"=

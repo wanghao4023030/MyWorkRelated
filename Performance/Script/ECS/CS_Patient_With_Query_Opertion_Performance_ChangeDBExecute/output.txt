@@ -1,0 +1,567 @@
+Virtual User Script started at : 2018/3/27 15:58:25
+Starting action vuser_init.
+Web Services replay version 12.53.0 for Windows 10; Toolkit: ".Net"; build 1203
+Run-Time Settings file: "D:\ECS\CS_Patient_With_Query_Opertion_Performance_ChangeDBExecute\\default.cfg"
+Vuser directory: "D:\ECS\CS_Patient_With_Query_Opertion_Performance_ChangeDBExecute"
+Vuser output directory: "D:\ECS\CS_Patient_With_Query_Opertion_Performance_ChangeDBExecute\"
+LOCAL start date/time : 2018-03-27 15:58:25
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action A_Patient_Register.
+A_Patient_Register.c(19): web_set_max_html_param_len started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(19): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(27): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180327155823.573"
+A_Patient_Register.c(28): Notify: Saving Parameter "strCurrentDateTime = 20180327155823573".
+A_Patient_Register.c(36): web_reg_save_param started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(36): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+A_Patient_Register.c(38): Notify: Transaction "Patient operations_ Get2DCodeImage" started.
+A_Patient_Register.c(40): web_custom_request("Get2DCodeImage") started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(40): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+A_Patient_Register.c(40): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+A_Patient_Register.c(40): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+A_Patient_Register.c(40): Notify: Parameter Substitution: parameter "QRCodeErrorCorrect" =  "5"
+A_Patient_Register.c(40): t=2832ms: 231-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=1)
+A_Patient_Register.c(40):     HTTP/1.1 200 OK\r\n
+A_Patient_Register.c(40):     Cache-Control: private, max-age=0\r\n
+A_Patient_Register.c(40):     Content-Type: text/xml; charset=utf-8\r\n
+A_Patient_Register.c(40):     Server: Microsoft-IIS/7.5\r\n
+A_Patient_Register.c(40):     X-AspNet-Version: 4.0.30319\r\n
+A_Patient_Register.c(40):     X-Powered-By: ASP.NET\r\n
+A_Patient_Register.c(40):     Date: Tue, 27 Mar 2018 07:59:08 GMT\r\n
+A_Patient_Register.c(40):     Content-Length: 2628\r\n
+A_Patient_Register.c(40):     \r\n
+A_Patient_Register.c(40): t=2845ms: 2628-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=1)
+A_Patient_Register.c(40):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+A_Patient_Register.c(40):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+A_Patient_Register.c(40):     www.w3.org/2001/XMLSchema"><soap:Body><Get2DCodeImageResponse xmlns="http://tempuri.org/">
+A_Patient_Register.c(40):     <Get2DCodeImageResult>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U
+A_Patient_Register.c(40):     HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMj
+A_Patient_Register.c(40):     IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAmACYDASIAAhEBAxEB/8QAHwAAAQUB
+A_Patient_Register.c(40):     AQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBka
+A_Patient_Register.c(40):     EII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqD
+A_Patient_Register.c(40):     hIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09f
+A_Patient_Register.c(40):     b3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+A_Patient_Register.c(40):     BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZG
+A_Patient_Register.c(40):     VmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna
+A_Patient_Register.c(40):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guEltTO7zm3UYwk5JMh
+A_Patient_Register.c(40):     BDflb0dJY/DwlvvEU95p7y3CW97BZIWuVZIpTMk0m3yGGwEgHctxHJNIzLHJsk8FXVxPa2+maxrMd1b3bwQWC2puSl
+A_Patient_Register.c(40):     2xlWZ5bf91tiSKNVj2qg8lojhrctubI0e4udChe9W0u9UglsrSzSQ2bhLmDyYogwtibf7WnmTGJd29sPGSU2qJgDTs
+A_Patient_Register.c(40):     Y/tHiXQdTg02D7Peafai70tYM/b7ua3lAmkd9zGHbdShnJkkbypiUcRsyyabp8Muk/aLewju7DUU0+e+tLDSAqwLHN
+A_Patient_Register.c(40):     ZTCKVY0IncxXEj7kVM/vAVICrEagun65Ne6zZWEl1eRO722vWbW7xpPDNCZXkaTIiCCHzYlllKtFIyB1BVVxNUs7HV
+A_Patient_Register.c(40):     rqW80m51z7d4O/fsbyK2HkGOWZ3tS0URCYEJaJv3kQzswuQCAdf8LdHv8AT/EMMmoWUAuhaXglurTRJLCMoz2nlIS0
+A_Patient_Register.c(40):     EQZspMehwM80VH8M9Y0W8+Il+NAaQQ31lcXFzmcS+eIrkRwSPlFdJSrSkq2SVaNmLOzNRQBzk+iJ4tU+OJNRvn0yO0
+A_Patient_Register.c(40):     NyZ9TsVmELySzRzbI/Lm3wxeUGWAk7RJu8xOSTw54ifw54Qu9Z0jWNDhWeW7nvLKzZlDEyOEESTNshkCoDGCMvGzZi
+A_Patient_Register.c(40):     kMAD24dOluNSSS31ON9B1zWJ7m487w/MMpdSxeSEmntpI2BKQtghAWAG4/Ky3NXh07wrp2sSHSNkOk/Y5pI2Ro5DBc
+A_Patient_Register.c(40):     h1eOXa3lzx+eWdraIxwEr97JZQAFxY6jda9b2mq6l/xJ7vzZNJ0/RXWdm/dW+Ej86BIXtwmEGxfuzSByU89hyninxL
+A_Patient_Register.c(40):     r8Ubebqem6fc29vHc+XbXiybhLZxosizpL50k+6PCnaxCyHfK0L/ADdfq2taD4f8FXS6VbWlskdlcj+zns0mit7orF
+A_Patient_Register.c(40):     bgs/ll94XfkSruPnqsxi3otZ8Phq7sNcTQtJFpNAb2fVYIJdQR2gniuordbkJbW2IjguAjb415LqPKZSAdB8JmMl7B
+A_Patient_Register.c(40):     c6hPINW1CymvzHL5khmhkeIKytLI8ihAixklUEo2YMgiDkq54D1SXWPFtlezpY2Ucnhq3NpZRackTldy+YVbJkWFXw
+A_Patient_Register.c(40):     qhtqvuyoYIXYoAz9H+Fusafq1pqEkFit0ItPtrmVdUd0MdtJbsWSL7Mp3MLYcF8Dca0NW8C+LNdvJXkvdK03Tmla4/
+A_Patient_Register.c(40):     suBnuYpHwpIfzU8s+YxZiTC3lsiuqszyElFAFyx+H+pabpq2wvo9Rs4Uga00q/mZ1t5FiEMq/aGVt0TxtMpQwgfP8o
+A_Patient_Register.c(40):     jPNY8XwZjudd/tzVhaXl/I8fmR3VxPcwJttlG4B2EkhFwv3XcqYiRwcYKKAOg8DeDdX8MXs32ttG+yG4vpI1sbURFV
+A_Patient_Register.c(40):     meBowPlyoHlyArvbA8sZYKNpRRQB/9k=</Get2DCodeImageResult></Get2DCodeImageResponse></soap:Bod
+A_Patient_Register.c(40):     y></soap:Envelope>
+A_Patient_Register.c(40): Notify: Saving Parameter "Get2DCodeImageResult = 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".
+A_Patient_Register.c(40): web_custom_request("Get2DCodeImage") was successful, 2628 body bytes, 231 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(53): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(53): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(63): Notify: Parameter Substitution: parameter "Get2DCodeImageResult" =  "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"
+A_Patient_Register.c(66): Notify: Parameter Substitution: parameter "Get2DCodeImageResult" =  "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"
+A_Patient_Register.c(74): Notify: Transaction "Patient operations_ Get2DCodeImage" ended with a "Pass" status (Duration: 0.9344 Wasted Time: 0.0665).
+A_Patient_Register.c(84): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+A_Patient_Register.c(84): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+A_Patient_Register.c(84): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+A_Patient_Register.c(84): Notify: Saving Parameter "SQLECSQuery = SELECT ID FROM ecs.qrcodesceneinfo where PatientID = 'P201803271558235731' and HospitalID = '1' ;".
+A_Patient_Register.c(86): Notify: Parameter Substitution: parameter "SQLECSQuery" =  "SELECT ID FROM ecs.qrcodesceneinfo where PatientID = 'P201803271558235731' and HospitalID = '1' ;"
+A_Patient_Register.c(96): count is: 1
+A_Patient_Register.c(108): Notify: Saving Parameter "QrsenceID = 22553".
+A_Patient_Register.c(109): Notify: Parameter Substitution: parameter "QrsenceID" =  "22553"
+A_Patient_Register.c(109): Order ID is: 22553
+A_Patient_Register.c(111): Notify: Saving Parameter "Para = 1522137506".
+A_Patient_Register.c(112): Notify: Parameter Substitution: parameter "Para" =  "1522137506"
+A_Patient_Register.c(112): 1522137506
+A_Patient_Register.c(113): Notify: Parameter Substitution: parameter "Para" =  "1522137506"
+A_Patient_Register.c(113): Notify: Saving Parameter "TimeStamp = 1522137506".
+A_Patient_Register.c(119): web_reg_save_param started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(119): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+A_Patient_Register.c(121): Notify: Transaction "Patient Subscribe_Patinet" started.
+A_Patient_Register.c(123): web_custom_request("web_Subscribe_Patinet") started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(123): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+A_Patient_Register.c(123): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+A_Patient_Register.c(123): Notify: Parameter Substitution: parameter "TimeStamp" =  "1522137506"
+A_Patient_Register.c(123): Notify: Parameter Substitution: parameter "TimeStamp" =  "1522137506"
+A_Patient_Register.c(123): Notify: Parameter Substitution: parameter "QrsenceID" =  "22553"
+A_Patient_Register.c(123): t=3124ms: 246-byte response headers for "http://10.184.129.203/KioskWechatServer/WechatServer" (RelFrameId=1, Internal ID=2)
+A_Patient_Register.c(123):     HTTP/1.1 200 OK\r\n
+A_Patient_Register.c(123):     Cache-Control: private\r\n
+A_Patient_Register.c(123):     Content-Type: text/html; charset=utf-8\r\n
+A_Patient_Register.c(123):     Server: Microsoft-IIS/7.5\r\n
+A_Patient_Register.c(123):     X-AspNetMvc-Version: 4.0\r\n
+A_Patient_Register.c(123):     X-AspNet-Version: 4.0.30319\r\n
+A_Patient_Register.c(123):     X-Powered-By: ASP.NET\r\n
+A_Patient_Register.c(123):     Date: Tue, 27 Mar 2018 07:59:08 GMT\r\n
+A_Patient_Register.c(123):     Content-Length: 401\r\n
+A_Patient_Register.c(123):     \r\n
+A_Patient_Register.c(123): t=3133ms: 401-byte response body for "http://10.184.129.203/KioskWechatServer/WechatServer" (RelFrameId=1, Internal ID=2)
+A_Patient_Register.c(123):     <xml>\r\n
+A_Patient_Register.c(123):       <ToUserName><![CDATA[User2018032715582357311522137506]]></ToUserName>\r\n
+A_Patient_Register.c(123):       <FromUserName><![CDATA[gh_5e1ed4b61713]]></FromUserName>\r\n
+A_Patient_Register.c(123):       <CreateTime>-62135625600</CreateTime>\r\n
+A_Patient_Register.c(123):       <MsgType><![CDATA[text]]></MsgType>\r\n
+A_Patient_Register.c(123):       <Content><![CDATA[欢迎您关注全院�\x80�测试公众号�\x82\r\n
+A_Patient_Register.c(123):     请点击屏幕下方的【查询�\x80�按钮，查询您的就诊信息和报告信息，
+A_Patient_Register.c(123):     谢谢！]]></Content>\r\n
+A_Patient_Register.c(123):     </xml>
+A_Patient_Register.c(123): Notify: Saving Parameter "HttpResult = 欢迎您关注全院�\x80�测试公众号�\x82\r\n请点击屏幕下方的【查询�\x80�按钮，查询您的就诊信息和报告信息，谢谢！]".
+A_Patient_Register.c(123): web_custom_request("web_Subscribe_Patinet") was successful, 401 body bytes, 246 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(135): Notify: Transaction "Patient Subscribe_Patinet" ended with a "Pass" status (Duration: 0.1778 Wasted Time: 0.0097).
+A_Patient_Register.c(137): Notify: Parameter Substitution: parameter "HttpResult" =  "欢迎您关注全院�\x80�测试公众号�\x82\r\n请点击屏幕下方的【查询�\x80�按钮，查询您的就诊信息和报告信息，谢谢！]"
+A_Patient_Register.c(137): Notify: Saving Parameter "realMessage = ��ӭ����עȫԺͨ���Թ��ںš�\r\n������Ļ�·��ġ���ѯ����ť����ѯ���ľ�����Ϣ�ͱ�����Ϣ��лл��]\x00".
+A_Patient_Register.c(138): Notify: Parameter Substitution: parameter "realMessage" =  "��ӭ����עȫԺͨ���Թ��ںš�\r\n������Ļ�·��ġ���ѯ����ť����ѯ���ľ�����Ϣ�ͱ�����Ϣ��лл��]\x00"
+A_Patient_Register.c(138): Http request is: ��ӭ����עȫԺͨ���Թ��ںš�
+������Ļ�·��ġ���ѯ����ť����ѯ���ľ�����Ϣ�ͱ�����Ϣ��лл��]
+Ending action A_Patient_Register.
+Starting action B_Patient_ReportOperation_Query.
+B_Patient_ReportOperation_Query.c(20): web_set_max_html_param_len started  	[MsgId: MMSG-26355]
+B_Patient_ReportOperation_Query.c(20): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
+B_Patient_ReportOperation_Query.c(28): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180327155823.573"
+B_Patient_ReportOperation_Query.c(29): Notify: Saving Parameter "strCurrentDateTime = 20180327155823573".
+B_Patient_ReportOperation_Query.c(34): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+B_Patient_ReportOperation_Query.c(38): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+B_Patient_ReportOperation_Query.c(40): Notify: Saving Parameter "strMessage = 您报告已经审�\xb8,请到自助终端打印�\x81\x00".
+B_Patient_ReportOperation_Query.c(41): Notify: Parameter Substitution: parameter "strMessage" =  "您报告已经审�\xb8,请到自助终端打印�\x81\x00"
+B_Patient_ReportOperation_Query.c(42): Notify: Saving Parameter "strMessageUTF8 = 您报告已经审�\xb8,请到自助终端打印�\x81".
+B_Patient_ReportOperation_Query.c(47): Notify: Saving Parameter "EndNumber = 1".
+B_Patient_ReportOperation_Query.c(49): web_reg_save_param started  	[MsgId: MMSG-26355]
+B_Patient_ReportOperation_Query.c(49): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+B_Patient_ReportOperation_Query.c(51): Notify: Transaction "Report Create Paper report" started.
+B_Patient_ReportOperation_Query.c(53): web_custom_request("Create_PaperReport") started  	[MsgId: MMSG-26355]
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "EndNumber" =  "1"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "EndNumber" =  "1"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "ExamModalityType" =  "MR"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "strMessageUTF8" =  "您报告已经审�\xb8,请到自助终端打印�\x81"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "ExamCreateTime" =  "2018-03-27T15:58:26"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "StatusCreateTime" =  "2018-03-27T15:58:26"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "EndNumber" =  "1"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+B_Patient_ReportOperation_Query.c(53): Notify: Next row for parameter ItemModalityType = 7 [table  = ItemModalityType].
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "ItemModalityType" =  "MR"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "strMessageUTF8" =  "您报告已经审�\xb8,请到自助终端打印�\x81"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "ExamCreateTime" =  "2018-03-27T15:58:26"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "StatusCreateTime" =  "2018-03-27T15:58:26"
+B_Patient_ReportOperation_Query.c(53): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+B_Patient_ReportOperation_Query.c(53): t=4419ms: 230-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=3)
+B_Patient_ReportOperation_Query.c(53):     HTTP/1.1 200 OK\r\n
+B_Patient_ReportOperation_Query.c(53):     Cache-Control: private, max-age=0\r\n
+B_Patient_ReportOperation_Query.c(53):     Content-Type: text/xml; charset=utf-8\r\n
+B_Patient_ReportOperation_Query.c(53):     Server: Microsoft-IIS/7.5\r\n
+B_Patient_ReportOperation_Query.c(53):     X-AspNet-Version: 4.0.30319\r\n
+B_Patient_ReportOperation_Query.c(53):     X-Powered-By: ASP.NET\r\n
+B_Patient_ReportOperation_Query.c(53):     Date: Tue, 27 Mar 2018 07:59:10 GMT\r\n
+B_Patient_ReportOperation_Query.c(53):     Content-Length: 376\r\n
+B_Patient_ReportOperation_Query.c(53):     \r\n
+B_Patient_ReportOperation_Query.c(53): t=4429ms: 376-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=3)
+B_Patient_ReportOperation_Query.c(53):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+B_Patient_ReportOperation_Query.c(53):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+B_Patient_ReportOperation_Query.c(53):     www.w3.org/2001/XMLSchema"><soap:Body><SynchronizeInfoResponse xmlns="http://tempuri.org/"
+B_Patient_ReportOperation_Query.c(53):     ><SynchronizeInfoResult>true</SynchronizeInfoResult></SynchronizeInfoResponse></soap:Body>
+B_Patient_ReportOperation_Query.c(53):     </soap:Envelope>
+B_Patient_ReportOperation_Query.c(53): Notify: Saving Parameter "CreateReportHttpResult = true".
+B_Patient_ReportOperation_Query.c(53): web_custom_request("Create_PaperReport") was successful, 376 body bytes, 230 header bytes  	[MsgId: MMSG-26386]
+B_Patient_ReportOperation_Query.c(69): Notify: Transaction "Report Create Paper report" ended with a "Pass" status (Duration: 1.2579 Wasted Time: 0.0077).
+B_Patient_ReportOperation_Query.c(72): web_get_int_property started  	[MsgId: MMSG-26355]
+B_Patient_ReportOperation_Query.c(72): web_get_int_property was successful  	[MsgId: MMSG-26392]
+B_Patient_ReportOperation_Query.c(82): Notify: Parameter Substitution: parameter "CreateReportHttpResult" =  "true"
+B_Patient_ReportOperation_Query.c(102): Notify: Transaction "Report QueryReportFilmStatus" started.
+B_Patient_ReportOperation_Query.c(104): web_custom_request("web_QueryReportFilmStatus") started  	[MsgId: MMSG-26355]
+B_Patient_ReportOperation_Query.c(104): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+B_Patient_ReportOperation_Query.c(104): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+B_Patient_ReportOperation_Query.c(104): Notify: Parameter Substitution: parameter "TimeStamp" =  "1522137506"
+B_Patient_ReportOperation_Query.c(104): Notify: Parameter Substitution: parameter "TimeStamp" =  "1522137506"
+B_Patient_ReportOperation_Query.c(104): t=4799ms: 204-byte response headers for "http://10.184.129.203/KioskWechatServer/WechatServer" (RelFrameId=1, Internal ID=4)
+B_Patient_ReportOperation_Query.c(104):     HTTP/1.1 200 OK\r\n
+B_Patient_ReportOperation_Query.c(104):     Cache-Control: private\r\n
+B_Patient_ReportOperation_Query.c(104):     Server: Microsoft-IIS/7.5\r\n
+B_Patient_ReportOperation_Query.c(104):     X-AspNetMvc-Version: 4.0\r\n
+B_Patient_ReportOperation_Query.c(104):     X-AspNet-Version: 4.0.30319\r\n
+B_Patient_ReportOperation_Query.c(104):     X-Powered-By: ASP.NET\r\n
+B_Patient_ReportOperation_Query.c(104):     Date: Tue, 27 Mar 2018 07:59:10 GMT\r\n
+B_Patient_ReportOperation_Query.c(104):     Content-Length: 0\r\n
+B_Patient_ReportOperation_Query.c(104):     \r\n
+B_Patient_ReportOperation_Query.c(104): web_custom_request("web_QueryReportFilmStatus") was successful, 0 body bytes, 204 header bytes  	[MsgId: MMSG-26386]
+B_Patient_ReportOperation_Query.c(120): Notify: Transaction "Report QueryReportFilmStatus" ended with a "Pass" status (Duration: 0.3677 Wasted Time: 0.0083).
+B_Patient_ReportOperation_Query.c(123): web_get_int_property started  	[MsgId: MMSG-26355]
+B_Patient_ReportOperation_Query.c(123): web_get_int_property was successful  	[MsgId: MMSG-26392]
+B_Patient_ReportOperation_Query.c(184): Notify: Saving Parameter "strMessage = 您报告已经打印，谢谢�\x81\x00".
+B_Patient_ReportOperation_Query.c(185): Notify: Parameter Substitution: parameter "strMessage" =  "您报告已经打印，谢谢�\x81\x00"
+B_Patient_ReportOperation_Query.c(186): Notify: Saving Parameter "strMessageUTF8 = 您报告已经打印，谢谢�\x81".
+B_Patient_ReportOperation_Query.c(191): Notify: Saving Parameter "EndNumber = 1".
+B_Patient_ReportOperation_Query.c(193): web_reg_save_param started  	[MsgId: MMSG-26355]
+B_Patient_ReportOperation_Query.c(193): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+B_Patient_ReportOperation_Query.c(195): Notify: Transaction "Report Update Paper report" started.
+B_Patient_ReportOperation_Query.c(197): web_custom_request("Update Paper report Print status") started  	[MsgId: MMSG-26355]
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "EndNumber" =  "1"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "EndNumber" =  "1"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "ExamModalityType" =  "MR"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "strMessageUTF8" =  "您报告已经打印，谢谢�\x81"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "ExamCreateTime" =  "2018-03-27T15:58:28"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "StatusCreateTime" =  "2018-03-27T15:58:28"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "StatusUpdateTime" =  "2018-03-27T15:58:28"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "PrintTime" =  "2018-03-27T15:58:28"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "EndNumber" =  "1"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+B_Patient_ReportOperation_Query.c(197): Notify: Next row for parameter ItemModalityType = 7 [table  = ItemModalityType].
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "ItemModalityType" =  "MR"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "strMessageUTF8" =  "您报告已经打印，谢谢�\x81"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "ExamCreateTime" =  "2018-03-27T15:58:28"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "StatusCreateTime" =  "2018-03-27T15:58:28"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "StatusUpdateTime" =  "2018-03-27T15:58:28"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "PrintTime" =  "2018-03-27T15:58:28"
+B_Patient_ReportOperation_Query.c(197): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+B_Patient_ReportOperation_Query.c(197): t=4928ms: 230-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=5)
+B_Patient_ReportOperation_Query.c(197):     HTTP/1.1 200 OK\r\n
+B_Patient_ReportOperation_Query.c(197):     Cache-Control: private, max-age=0\r\n
+B_Patient_ReportOperation_Query.c(197):     Content-Type: text/xml; charset=utf-8\r\n
+B_Patient_ReportOperation_Query.c(197):     Server: Microsoft-IIS/7.5\r\n
+B_Patient_ReportOperation_Query.c(197):     X-AspNet-Version: 4.0.30319\r\n
+B_Patient_ReportOperation_Query.c(197):     X-Powered-By: ASP.NET\r\n
+B_Patient_ReportOperation_Query.c(197):     Date: Tue, 27 Mar 2018 07:59:10 GMT\r\n
+B_Patient_ReportOperation_Query.c(197):     Content-Length: 376\r\n
+B_Patient_ReportOperation_Query.c(197):     \r\n
+B_Patient_ReportOperation_Query.c(197): t=4934ms: 376-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=5)
+B_Patient_ReportOperation_Query.c(197):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+B_Patient_ReportOperation_Query.c(197):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+B_Patient_ReportOperation_Query.c(197):     www.w3.org/2001/XMLSchema"><soap:Body><SynchronizeInfoResponse xmlns="http://tempuri.org/"
+B_Patient_ReportOperation_Query.c(197):     ><SynchronizeInfoResult>true</SynchronizeInfoResult></SynchronizeInfoResponse></soap:Body>
+B_Patient_ReportOperation_Query.c(197):     </soap:Envelope>
+B_Patient_ReportOperation_Query.c(197): Notify: Saving Parameter "HttpResult = true".
+B_Patient_ReportOperation_Query.c(197): web_custom_request("Update Paper report Print status") was successful, 376 body bytes, 230 header bytes  	[MsgId: MMSG-26386]
+B_Patient_ReportOperation_Query.c(211): Notify: Transaction "Report Update Paper report" ended with a "Pass" status (Duration: 0.1325 Wasted Time: 0.0089).
+B_Patient_ReportOperation_Query.c(214): web_get_int_property started  	[MsgId: MMSG-26355]
+B_Patient_ReportOperation_Query.c(214): web_get_int_property was successful  	[MsgId: MMSG-26392]
+B_Patient_ReportOperation_Query.c(224): Notify: Parameter Substitution: parameter "HttpResult" =  "true"
+B_Patient_ReportOperation_Query.c(239): Notify: Transaction "Report QueryReportFilmStatus" started.
+B_Patient_ReportOperation_Query.c(241): web_custom_request("web_QueryReportFilmStatus") started  	[MsgId: MMSG-26355]
+B_Patient_ReportOperation_Query.c(241): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+B_Patient_ReportOperation_Query.c(241): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+B_Patient_ReportOperation_Query.c(241): Notify: Parameter Substitution: parameter "TimeStamp" =  "1522137506"
+B_Patient_ReportOperation_Query.c(241): Notify: Parameter Substitution: parameter "TimeStamp" =  "1522137506"
+B_Patient_ReportOperation_Query.c(241): t=5036ms: 204-byte response headers for "http://10.184.129.203/KioskWechatServer/WechatServer" (RelFrameId=1, Internal ID=6)
+B_Patient_ReportOperation_Query.c(241):     HTTP/1.1 200 OK\r\n
+B_Patient_ReportOperation_Query.c(241):     Cache-Control: private\r\n
+B_Patient_ReportOperation_Query.c(241):     Server: Microsoft-IIS/7.5\r\n
+B_Patient_ReportOperation_Query.c(241):     X-AspNetMvc-Version: 4.0\r\n
+B_Patient_ReportOperation_Query.c(241):     X-AspNet-Version: 4.0.30319\r\n
+B_Patient_ReportOperation_Query.c(241):     X-Powered-By: ASP.NET\r\n
+B_Patient_ReportOperation_Query.c(241):     Date: Tue, 27 Mar 2018 07:59:10 GMT\r\n
+B_Patient_ReportOperation_Query.c(241):     Content-Length: 0\r\n
+B_Patient_ReportOperation_Query.c(241):     \r\n
+B_Patient_ReportOperation_Query.c(241): web_custom_request("web_QueryReportFilmStatus") was successful, 0 body bytes, 204 header bytes  	[MsgId: MMSG-26386]
+B_Patient_ReportOperation_Query.c(257): Notify: Transaction "Report QueryReportFilmStatus" ended with a "Pass" status (Duration: 0.0829 Wasted Time: 0.0074).
+B_Patient_ReportOperation_Query.c(260): web_get_int_property started  	[MsgId: MMSG-26355]
+B_Patient_ReportOperation_Query.c(260): web_get_int_property was successful  	[MsgId: MMSG-26392]
+B_Patient_ReportOperation_Query.c(262): Notify: Parameter Substitution: parameter "HttpResult" =  "true"
+B_Patient_ReportOperation_Query.c(262): Http request is: true
+B_Patient_ReportOperation_Query.c(263): Notify: Parameter Substitution: parameter "HttpResult" =  "true"
+B_Patient_ReportOperation_Query.c(263): Notify: Saving Parameter "realMessage = true\x00".
+B_Patient_ReportOperation_Query.c(264): Notify: Parameter Substitution: parameter "realMessage" =  "true\x00"
+B_Patient_ReportOperation_Query.c(264): Http request is: true
+Ending action B_Patient_ReportOperation_Query.
+Starting action C_Patient_FilmOperation_Query.
+C_Patient_FilmOperation_Query.c(20): web_set_max_html_param_len started  	[MsgId: MMSG-26355]
+C_Patient_FilmOperation_Query.c(20): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
+C_Patient_FilmOperation_Query.c(28): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180327155823.573"
+C_Patient_FilmOperation_Query.c(29): Notify: Saving Parameter "strCurrentDateTime = 20180327155823573".
+C_Patient_FilmOperation_Query.c(34): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+C_Patient_FilmOperation_Query.c(39): Notify: Saving Parameter "strMessage = 您胶片已经准备好，但是报告尚未审核�\x80�请到自助终端打印！\x00".
+C_Patient_FilmOperation_Query.c(40): Notify: Parameter Substitution: parameter "strMessage" =  "您胶片已经准备好，但是报告尚未审核�\x80�请到自助终端打印！\x00"
+C_Patient_FilmOperation_Query.c(41): Notify: Saving Parameter "strMessageUTF8 = 您胶片已经准备好，但是报告尚未审核�\x80�请到自助终端打印！".
+C_Patient_FilmOperation_Query.c(46): Notify: Saving Parameter "EndNumber = 1".
+C_Patient_FilmOperation_Query.c(48): web_reg_save_param started  	[MsgId: MMSG-26355]
+C_Patient_FilmOperation_Query.c(48): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+C_Patient_FilmOperation_Query.c(50): Notify: Transaction "Film Create Film" started.
+C_Patient_FilmOperation_Query.c(52): web_custom_request("Create_PaperReport") started  	[MsgId: MMSG-26355]
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "EndNumber" =  "1"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "EndNumber" =  "1"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "ExamModalityType" =  "MR"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "strMessageUTF8" =  "您胶片已经准备好，但是报告尚未审核�\x80�请到自助终端打印！"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "ExamCreateTime" =  "2018-03-27T15:58:28"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "StatusCreateTime" =  "2018-03-27T15:58:28"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "EndNumber" =  "1"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+C_Patient_FilmOperation_Query.c(52): Notify: Next row for parameter ItemModalityType = 7 [table  = ItemModalityType].
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "ItemModalityType" =  "MR"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "strMessageUTF8" =  "您胶片已经准备好，但是报告尚未审核�\x80�请到自助终端打印！"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "ExamCreateTime" =  "2018-03-27T15:58:28"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "StatusCreateTime" =  "2018-03-27T15:58:28"
+C_Patient_FilmOperation_Query.c(52): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+C_Patient_FilmOperation_Query.c(52): t=6086ms: 230-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=7)
+C_Patient_FilmOperation_Query.c(52):     HTTP/1.1 200 OK\r\n
+C_Patient_FilmOperation_Query.c(52):     Cache-Control: private, max-age=0\r\n
+C_Patient_FilmOperation_Query.c(52):     Content-Type: text/xml; charset=utf-8\r\n
+C_Patient_FilmOperation_Query.c(52):     Server: Microsoft-IIS/7.5\r\n
+C_Patient_FilmOperation_Query.c(52):     X-AspNet-Version: 4.0.30319\r\n
+C_Patient_FilmOperation_Query.c(52):     X-Powered-By: ASP.NET\r\n
+C_Patient_FilmOperation_Query.c(52):     Date: Tue, 27 Mar 2018 07:59:11 GMT\r\n
+C_Patient_FilmOperation_Query.c(52):     Content-Length: 376\r\n
+C_Patient_FilmOperation_Query.c(52):     \r\n
+C_Patient_FilmOperation_Query.c(52): t=6096ms: 376-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=7)
+C_Patient_FilmOperation_Query.c(52):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+C_Patient_FilmOperation_Query.c(52):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+C_Patient_FilmOperation_Query.c(52):     www.w3.org/2001/XMLSchema"><soap:Body><SynchronizeInfoResponse xmlns="http://tempuri.org/"
+C_Patient_FilmOperation_Query.c(52):     ><SynchronizeInfoResult>true</SynchronizeInfoResult></SynchronizeInfoResponse></soap:Body>
+C_Patient_FilmOperation_Query.c(52):     </soap:Envelope>
+C_Patient_FilmOperation_Query.c(52): Notify: Saving Parameter "HttpResult = true".
+C_Patient_FilmOperation_Query.c(52): web_custom_request("Create_PaperReport") was successful, 376 body bytes, 230 header bytes  	[MsgId: MMSG-26386]
+C_Patient_FilmOperation_Query.c(67): Notify: Transaction "Film Create Film" ended with a "Pass" status (Duration: 1.0099 Wasted Time: 0.0099).
+C_Patient_FilmOperation_Query.c(70): web_get_int_property started  	[MsgId: MMSG-26355]
+C_Patient_FilmOperation_Query.c(70): web_get_int_property was successful  	[MsgId: MMSG-26392]
+C_Patient_FilmOperation_Query.c(80): Notify: Parameter Substitution: parameter "HttpResult" =  "true"
+C_Patient_FilmOperation_Query.c(99): Notify: Transaction "Film QueryReportFilmStatus" started.
+C_Patient_FilmOperation_Query.c(101): web_custom_request("web_QueryReportFilmStatus") started  	[MsgId: MMSG-26355]
+C_Patient_FilmOperation_Query.c(101): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+C_Patient_FilmOperation_Query.c(101): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+C_Patient_FilmOperation_Query.c(101): Notify: Parameter Substitution: parameter "TimeStamp" =  "1522137506"
+C_Patient_FilmOperation_Query.c(101): Notify: Parameter Substitution: parameter "TimeStamp" =  "1522137506"
+C_Patient_FilmOperation_Query.c(101): t=6175ms: 204-byte response headers for "http://10.184.129.203/KioskWechatServer/WechatServer" (RelFrameId=1, Internal ID=8)
+C_Patient_FilmOperation_Query.c(101):     HTTP/1.1 200 OK\r\n
+C_Patient_FilmOperation_Query.c(101):     Cache-Control: private\r\n
+C_Patient_FilmOperation_Query.c(101):     Server: Microsoft-IIS/7.5\r\n
+C_Patient_FilmOperation_Query.c(101):     X-AspNetMvc-Version: 4.0\r\n
+C_Patient_FilmOperation_Query.c(101):     X-AspNet-Version: 4.0.30319\r\n
+C_Patient_FilmOperation_Query.c(101):     X-Powered-By: ASP.NET\r\n
+C_Patient_FilmOperation_Query.c(101):     Date: Tue, 27 Mar 2018 07:59:11 GMT\r\n
+C_Patient_FilmOperation_Query.c(101):     Content-Length: 0\r\n
+C_Patient_FilmOperation_Query.c(101):     \r\n
+C_Patient_FilmOperation_Query.c(101): web_custom_request("web_QueryReportFilmStatus") was successful, 0 body bytes, 204 header bytes  	[MsgId: MMSG-26386]
+C_Patient_FilmOperation_Query.c(117): Notify: Transaction "Film QueryReportFilmStatus" ended with a "Pass" status (Duration: 0.0741 Wasted Time: 0.0078).
+C_Patient_FilmOperation_Query.c(120): web_get_int_property started  	[MsgId: MMSG-26355]
+C_Patient_FilmOperation_Query.c(120): web_get_int_property was successful  	[MsgId: MMSG-26392]
+C_Patient_FilmOperation_Query.c(181): Notify: Saving Parameter "strMessage = 您胶片已经打印，谢谢�\x81\x00".
+C_Patient_FilmOperation_Query.c(182): Notify: Parameter Substitution: parameter "strMessage" =  "您胶片已经打印，谢谢�\x81\x00"
+C_Patient_FilmOperation_Query.c(183): Notify: Saving Parameter "strMessageUTF8 = 您胶片已经打印，谢谢�\x81".
+C_Patient_FilmOperation_Query.c(188): Notify: Saving Parameter "EndNumber = 1".
+C_Patient_FilmOperation_Query.c(190): web_reg_save_param started  	[MsgId: MMSG-26355]
+C_Patient_FilmOperation_Query.c(190): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+C_Patient_FilmOperation_Query.c(192): Notify: Transaction "Film Update Film" started.
+C_Patient_FilmOperation_Query.c(194): web_custom_request("Update Paper report Print status") started  	[MsgId: MMSG-26355]
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "EndNumber" =  "1"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "EndNumber" =  "1"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "ExamModalityType" =  "MR"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "strMessageUTF8" =  "您胶片已经打印，谢谢�\x81"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "ExamCreateTime" =  "2018-03-27T15:58:29"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "StatusCreateTime" =  "2018-03-27T15:58:29"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "StatusUpdateTime" =  "2018-03-27T15:58:29"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "PrintTime" =  "2018-03-27T15:58:29"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "EndNumber" =  "1"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+C_Patient_FilmOperation_Query.c(194): Notify: Next row for parameter ItemModalityType = 7 [table  = ItemModalityType].
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "ItemModalityType" =  "MR"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "strMessageUTF8" =  "您胶片已经打印，谢谢�\x81"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "ExamCreateTime" =  "2018-03-27T15:58:29"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "StatusCreateTime" =  "2018-03-27T15:58:29"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "StatusUpdateTime" =  "2018-03-27T15:58:29"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "PrintTime" =  "2018-03-27T15:58:29"
+C_Patient_FilmOperation_Query.c(194): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+C_Patient_FilmOperation_Query.c(194): t=6353ms: 230-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=9)
+C_Patient_FilmOperation_Query.c(194):     HTTP/1.1 200 OK\r\n
+C_Patient_FilmOperation_Query.c(194):     Cache-Control: private, max-age=0\r\n
+C_Patient_FilmOperation_Query.c(194):     Content-Type: text/xml; charset=utf-8\r\n
+C_Patient_FilmOperation_Query.c(194):     Server: Microsoft-IIS/7.5\r\n
+C_Patient_FilmOperation_Query.c(194):     X-AspNet-Version: 4.0.30319\r\n
+C_Patient_FilmOperation_Query.c(194):     X-Powered-By: ASP.NET\r\n
+C_Patient_FilmOperation_Query.c(194):     Date: Tue, 27 Mar 2018 07:59:11 GMT\r\n
+C_Patient_FilmOperation_Query.c(194):     Content-Length: 376\r\n
+C_Patient_FilmOperation_Query.c(194):     \r\n
+C_Patient_FilmOperation_Query.c(194): t=6360ms: 376-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=9)
+C_Patient_FilmOperation_Query.c(194):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+C_Patient_FilmOperation_Query.c(194):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+C_Patient_FilmOperation_Query.c(194):     www.w3.org/2001/XMLSchema"><soap:Body><SynchronizeInfoResponse xmlns="http://tempuri.org/"
+C_Patient_FilmOperation_Query.c(194):     ><SynchronizeInfoResult>true</SynchronizeInfoResult></SynchronizeInfoResponse></soap:Body>
+C_Patient_FilmOperation_Query.c(194):     </soap:Envelope>
+C_Patient_FilmOperation_Query.c(194): Notify: Saving Parameter "HttpResult = true".
+C_Patient_FilmOperation_Query.c(194): web_custom_request("Update Paper report Print status") was successful, 376 body bytes, 230 header bytes  	[MsgId: MMSG-26386]
+C_Patient_FilmOperation_Query.c(208): Notify: Transaction "Film Update Film" ended with a "Pass" status (Duration: 0.1846 Wasted Time: 0.0089).
+C_Patient_FilmOperation_Query.c(211): web_get_int_property started  	[MsgId: MMSG-26355]
+C_Patient_FilmOperation_Query.c(211): web_get_int_property was successful  	[MsgId: MMSG-26392]
+C_Patient_FilmOperation_Query.c(221): Notify: Parameter Substitution: parameter "HttpResult" =  "true"
+C_Patient_FilmOperation_Query.c(236): Notify: Transaction "Film QueryReportFilmStatus" started.
+C_Patient_FilmOperation_Query.c(238): web_custom_request("web_QueryReportFilmStatus") started  	[MsgId: MMSG-26355]
+C_Patient_FilmOperation_Query.c(238): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+C_Patient_FilmOperation_Query.c(238): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+C_Patient_FilmOperation_Query.c(238): Notify: Parameter Substitution: parameter "TimeStamp" =  "1522137506"
+C_Patient_FilmOperation_Query.c(238): Notify: Parameter Substitution: parameter "TimeStamp" =  "1522137506"
+C_Patient_FilmOperation_Query.c(238): t=6522ms: 204-byte response headers for "http://10.184.129.203/KioskWechatServer/WechatServer" (RelFrameId=1, Internal ID=10)
+C_Patient_FilmOperation_Query.c(238):     HTTP/1.1 200 OK\r\n
+C_Patient_FilmOperation_Query.c(238):     Cache-Control: private\r\n
+C_Patient_FilmOperation_Query.c(238):     Server: Microsoft-IIS/7.5\r\n
+C_Patient_FilmOperation_Query.c(238):     X-AspNetMvc-Version: 4.0\r\n
+C_Patient_FilmOperation_Query.c(238):     X-AspNet-Version: 4.0.30319\r\n
+C_Patient_FilmOperation_Query.c(238):     X-Powered-By: ASP.NET\r\n
+C_Patient_FilmOperation_Query.c(238):     Date: Tue, 27 Mar 2018 07:59:12 GMT\r\n
+C_Patient_FilmOperation_Query.c(238):     Content-Length: 0\r\n
+C_Patient_FilmOperation_Query.c(238):     \r\n
+C_Patient_FilmOperation_Query.c(238): web_custom_request("web_QueryReportFilmStatus") was successful, 0 body bytes, 204 header bytes  	[MsgId: MMSG-26386]
+C_Patient_FilmOperation_Query.c(254): Notify: Transaction "Film QueryReportFilmStatus" ended with a "Pass" status (Duration: 0.1547 Wasted Time: 0.0082).
+C_Patient_FilmOperation_Query.c(257): web_get_int_property started  	[MsgId: MMSG-26355]
+C_Patient_FilmOperation_Query.c(257): web_get_int_property was successful  	[MsgId: MMSG-26392]
+C_Patient_FilmOperation_Query.c(259): Notify: Parameter Substitution: parameter "HttpResult" =  "true"
+C_Patient_FilmOperation_Query.c(259): Http request is: true
+C_Patient_FilmOperation_Query.c(260): Notify: Parameter Substitution: parameter "HttpResult" =  "true"
+C_Patient_FilmOperation_Query.c(260): Notify: Saving Parameter "realMessage = true\x00".
+C_Patient_FilmOperation_Query.c(261): Notify: Parameter Substitution: parameter "realMessage" =  "true\x00"
+C_Patient_FilmOperation_Query.c(261): Http request is: true
+Ending action C_Patient_FilmOperation_Query.
+Starting action D_Patient_Reservation_Query.
+D_Patient_Reservation_Query.c(31): web_set_max_html_param_len started  	[MsgId: MMSG-26355]
+D_Patient_Reservation_Query.c(31): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
+D_Patient_Reservation_Query.c(39): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180327155823.573"
+D_Patient_Reservation_Query.c(40): Notify: Saving Parameter "strCurrentDateTime = 20180327155823573".
+D_Patient_Reservation_Query.c(45): Notify: Parameter Substitution: parameter "RandForLoop" =  "1"
+D_Patient_Reservation_Query.c(49): Notify: Parameter Substitution: parameter "RandForExecute" =  "4"
+D_Patient_Reservation_Query.c(54): Notify: Saving Parameter "EndNumber = 1".
+D_Patient_Reservation_Query.c(57): Notify: Saving Parameter "ExamReservationBegin = 2018-03-28T15:58:29".
+D_Patient_Reservation_Query.c(59): web_reg_save_param started  	[MsgId: MMSG-26355]
+D_Patient_Reservation_Query.c(59): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+D_Patient_Reservation_Query.c(61): Notify: Transaction "Reservation Create ExamReservation" started.
+D_Patient_Reservation_Query.c(63): web_custom_request("Create_ExamReservation") started  	[MsgId: MMSG-26355]
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "EndNumber" =  "1"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "EndNumber" =  "1"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "EndNumber" =  "1"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "ExamModalityType" =  "MR"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "ExamModalityType" =  "MR"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "ExamCreateTime" =  "2018-03-27T15:58:29"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "ExamReservationBegin" =  "2018-03-28T15:58:29"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "EndNumber" =  "1"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "ExamModalityType" =  "MR"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "ExamModalityType" =  "MR"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "ExamCreateTime" =  "2018-03-27T15:58:29"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "ExamReservationBegin" =  "2018-03-28T15:58:29"
+D_Patient_Reservation_Query.c(63): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+D_Patient_Reservation_Query.c(63): t=7041ms: 230-byte response headers for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=11)
+D_Patient_Reservation_Query.c(63):     HTTP/1.1 200 OK\r\n
+D_Patient_Reservation_Query.c(63):     Cache-Control: private, max-age=0\r\n
+D_Patient_Reservation_Query.c(63):     Content-Type: text/xml; charset=utf-8\r\n
+D_Patient_Reservation_Query.c(63):     Server: Microsoft-IIS/7.5\r\n
+D_Patient_Reservation_Query.c(63):     X-AspNet-Version: 4.0.30319\r\n
+D_Patient_Reservation_Query.c(63):     X-Powered-By: ASP.NET\r\n
+D_Patient_Reservation_Query.c(63):     Date: Tue, 27 Mar 2018 07:59:12 GMT\r\n
+D_Patient_Reservation_Query.c(63):     Content-Length: 376\r\n
+D_Patient_Reservation_Query.c(63):     \r\n
+D_Patient_Reservation_Query.c(63): t=7051ms: 376-byte response body for "http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=11)
+D_Patient_Reservation_Query.c(63):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+D_Patient_Reservation_Query.c(63):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+D_Patient_Reservation_Query.c(63):     www.w3.org/2001/XMLSchema"><soap:Body><SynchronizeInfoResponse xmlns="http://tempuri.org/"
+D_Patient_Reservation_Query.c(63):     ><SynchronizeInfoResult>true</SynchronizeInfoResult></SynchronizeInfoResponse></soap:Body>
+D_Patient_Reservation_Query.c(63):     </soap:Envelope>
+D_Patient_Reservation_Query.c(63): Notify: Saving Parameter "HttpResultCreateExamReservation = true".
+D_Patient_Reservation_Query.c(63): web_custom_request("Create_ExamReservation") was successful, 376 body bytes, 230 header bytes  	[MsgId: MMSG-26386]
+D_Patient_Reservation_Query.c(79): Notify: Transaction "Reservation Create ExamReservation" ended with a "Pass" status (Duration: 0.4666 Wasted Time: 0.0091).
+D_Patient_Reservation_Query.c(82): web_get_int_property started  	[MsgId: MMSG-26355]
+D_Patient_Reservation_Query.c(82): web_get_int_property was successful  	[MsgId: MMSG-26392]
+D_Patient_Reservation_Query.c(92): Notify: Parameter Substitution: parameter "HttpResultCreateExamReservation" =  "true"
+D_Patient_Reservation_Query.c(109): Notify: Transaction "Reservation QueryReservation" started.
+D_Patient_Reservation_Query.c(111): web_custom_request("web_QueryReservation") started  	[MsgId: MMSG-26355]
+D_Patient_Reservation_Query.c(111): Notify: Parameter Substitution: parameter "strCurrentDateTime" =  "20180327155823573"
+D_Patient_Reservation_Query.c(111): Notify: Parameter Substitution: parameter "HospitalID" =  "1"
+D_Patient_Reservation_Query.c(111): Notify: Parameter Substitution: parameter "TimeStamp" =  "1522137506"
+D_Patient_Reservation_Query.c(111): Notify: Parameter Substitution: parameter "TimeStamp" =  "1522137506"
+D_Patient_Reservation_Query.c(111): t=7239ms: 204-byte response headers for "http://10.184.129.203/KioskWechatServer/WechatServer" (RelFrameId=1, Internal ID=12)
+D_Patient_Reservation_Query.c(111):     HTTP/1.1 200 OK\r\n
+D_Patient_Reservation_Query.c(111):     Cache-Control: private\r\n
+D_Patient_Reservation_Query.c(111):     Server: Microsoft-IIS/7.5\r\n
+D_Patient_Reservation_Query.c(111):     X-AspNetMvc-Version: 4.0\r\n
+D_Patient_Reservation_Query.c(111):     X-AspNet-Version: 4.0.30319\r\n
+D_Patient_Reservation_Query.c(111):     X-Powered-By: ASP.NET\r\n
+D_Patient_Reservation_Query.c(111):     Date: Tue, 27 Mar 2018 07:59:12 GMT\r\n
+D_Patient_Reservation_Query.c(111):     Content-Length: 0\r\n
+D_Patient_Reservation_Query.c(111):     \r\n
+D_Patient_Reservation_Query.c(111): web_custom_request("web_QueryReservation") was successful, 0 body bytes, 204 header bytes  	[MsgId: MMSG-26386]
+D_Patient_Reservation_Query.c(127): Notify: Transaction "Reservation QueryReservation" ended with a "Pass" status (Duration: 0.1827 Wasted Time: 0.0086).
+D_Patient_Reservation_Query.c(130): web_get_int_property started  	[MsgId: MMSG-26355]
+D_Patient_Reservation_Query.c(130): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Ending action D_Patient_Reservation_Query.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

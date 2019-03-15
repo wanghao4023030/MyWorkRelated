@@ -1,0 +1,6 @@
+[C_Patient_FilmOperation_Query]
+SnapshotIndex=I100_C_Patient_FilmOperation_Query
+[A_Patient_Register]
+SnapshotIndex=I100_A_Patient_Register
+[vuser_end]
+SnapshotIndex=I100_vuser_end

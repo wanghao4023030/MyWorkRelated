@@ -1,0 +1,2 @@
+[Hosts]
+localhost=D:\ECS\CS_Patient_related\res\localhost_24.eve

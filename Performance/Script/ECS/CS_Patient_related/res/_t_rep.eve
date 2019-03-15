@@ -1,0 +1,53 @@
+28 11 1520577759 2 53082936 1566174538 1699588
+28 4 CS_Patient_related 1 1520577760 0 CS_Patient_related localhost 0 1
+28 10 localhost 28 0 0
+28 4 CS_Patient_related 2 1520577760 0 CS_Patient_related localhost 0 1
+28 0 CS_Patient_related 1 1520577760 0 localhost 0
+28 8 CS_Patient_related 1  0 0
+28 0 CS_Patient_related 2 1520577760 0 localhost 0
+28 8 CS_Patient_related 2  0 0
+28 2 CS_Patient_related 2 1520577760 0 p 0 0
+28 2 CS_Patient_related 1 1520577760 0 p 0 0
+28 4 CS_Patient_related 3 1520577774 0 CS_Patient_related localhost 0 1
+28 4 CS_Patient_related 4 1520577774 0 CS_Patient_related localhost 0 1
+28 0 CS_Patient_related 3 1520577775 0 localhost 0
+28 8 CS_Patient_related 3  0 0
+28 0 CS_Patient_related 4 1520577775 0 localhost 0
+28 8 CS_Patient_related 4  0 0
+28 2 CS_Patient_related 4 1520577775 0 p 0 0
+28 2 CS_Patient_related 3 1520577775 0 p 0 0
+28 4 CS_Patient_related 5 1520577790 0 CS_Patient_related localhost 0 1
+28 4 CS_Patient_related 6 1520577790 0 CS_Patient_related localhost 0 1
+28 0 CS_Patient_related 6 1520577790 0 localhost 0
+28 8 CS_Patient_related 6  0 0
+28 0 CS_Patient_related 5 1520577790 0 localhost 0
+28 8 CS_Patient_related 5  0 0
+28 2 CS_Patient_related 5 1520577790 0 p 0 0
+28 2 CS_Patient_related 6 1520577790 0 p 0 0
+28 4 CS_Patient_related 7 1520577805 0 CS_Patient_related localhost 0 1
+28 4 CS_Patient_related 8 1520577805 0 CS_Patient_related localhost 0 1
+28 0 CS_Patient_related 8 1520577805 0 localhost 0
+28 8 CS_Patient_related 8  0 0
+28 0 CS_Patient_related 7 1520577805 0 localhost 0
+28 8 CS_Patient_related 7  0 0
+28 2 CS_Patient_related 7 1520577805 0 p 0 0
+28 2 CS_Patient_related 8 1520577805 0 p 0 0
+28 4 CS_Patient_related 9 1520577820 0 CS_Patient_related localhost 0 1
+28 4 CS_Patient_related 10 1520577820 0 CS_Patient_related localhost 0 1
+28 0 CS_Patient_related 10 1520577820 0 localhost 0
+28 8 CS_Patient_related 10  0 0
+28 0 CS_Patient_related 9 1520577820 0 localhost 0
+28 8 CS_Patient_related 9  0 0
+28 2 CS_Patient_related 9 1520577820 0 p 0 0
+28 2 CS_Patient_related 10 1520577820 0 p 0 0
+28 1 CS_Patient_related 1 1520577837 0 2
+28 1 CS_Patient_related 8 1520577837 0 2
+28 1 CS_Patient_related 10 1520577837 0 2
+28 1 CS_Patient_related 7 1520577838 0 2
+28 1 CS_Patient_related 4 1520577838 0 2
+28 1 CS_Patient_related 9 1520577838 0 2
+28 1 CS_Patient_related 3 1520577838 0 2
+28 1 CS_Patient_related 5 1520577838 0 2
+28 1 CS_Patient_related 6 1520577838 0 2
+28 1 CS_Patient_related 2 1520577838 0 2
+28 12 1520577838 0 1520577838 0 1520577838

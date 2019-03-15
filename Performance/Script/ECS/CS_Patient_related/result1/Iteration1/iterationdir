@@ -1,0 +1,8 @@
+[vuser_init]
+SnapshotIndex=I1_vuser_init
+[PatientOperations]
+SnapshotIndex=I1_PatientOperations
+[Action1]
+SnapshotIndex=I1_Action1
+[vuser_end]
+SnapshotIndex=I1_vuser_end

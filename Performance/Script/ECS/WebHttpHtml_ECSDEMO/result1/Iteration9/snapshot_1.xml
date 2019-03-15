@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HTTPSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="1">
+  <HTTPTask id="127" url="http://10.184.129.203/CenterInfoServer/CenterPrintService.asmx" ip="127.0.0.1" port="8888" client_ip="127.0.0.1" client_port="24279" connectionId="800" origin="Primary" startDateTime="2018-03-09T11:07:25.424+08:00" startTime="133128">
+    <HTTPRequest method="POST">
+      <HTTPHeaders>
+        <HTTPAllHeaders>
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>UE9TVCBodHRwOi8vMTAuMTg0LjEyOS4yMDMvQ2VudGVySW5mb1NlcnZlci9DZW50ZXJQcmludFNlcnZpY2UuYXNteCBIVFRQLzEuMQ0KQ29udGVudC1UeXBlOiB0ZXh0L3htbDsgY2hhcnNldD11dGYtOA0KQ2FjaGUtQ29udHJvbDogbm8tY2FjaGUNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChjb21wYXRpYmxlOyBNU0lFIDEwLjA7IFdpbmRvd3MgTlQgNi4xOyBUcmlkZW50LzYuMCkNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KQWNjZXB0OiAqLyoNClByb3h5LUNvbm5lY3Rpb246IEtlZXAtQWxpdmUNCkhvc3Q6IDEwLjE4NC4xMjkuMjAzDQpDb250ZW50LUxlbmd0aDogMTU1Nw0KDQo=</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPAllHeaders>
+      </HTTPHeaders>
+      <HTTPBody>
+        <HTTPDataSet>
+          <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+            <ActualData>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c29hcDpFbnZlbG9wZSB4bWxuczpzb2FwPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeG1sbnM6eHNkPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeG1sbnM6d3NhPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA0LzAzL2FkZHJlc3NpbmciPjxzb2FwOkhlYWRlcj48d3NhOkFjdGlvbj5odHRwOi8vdGVtcHVyaS5vcmcvU3luY2hyb25pemVJbmZvPC93c2E6QWN0aW9uPjx3c2E6TWVzc2FnZUlEPnV1aWQ6ODM2Y2U5OGItNWQ4NC00NWU0LThhNjYtNTQ5OTA4OWFhZjc5PC93c2E6TWVzc2FnZUlEPjx3c2E6UmVwbHlUbz48d3NhOkFkZHJlc3M+aHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNC8wMy9hZGRyZXNzaW5nL3JvbGUvYW5vbnltb3VzPC93c2E6QWRkcmVzcz48L3dzYTpSZXBseVRvPjx3c2E6VG8+aHR0cDovLzEwLjE4NC4xMjkuMjAzL0NlbnRlckluZm9TZXJ2ZXIvQ2VudGVyUHJpbnRTZXJ2aWNlLmFzbXg8L3dzYTpUbz48L3NvYXA6SGVhZGVyPjxzb2FwOkJvZHk+PFN5bmNocm9uaXplSW5mbyB4bWxucz0iaHR0cDovL3RlbXB1cmkub3JnLyI+PHRhYmxlX25hbWU+RmlsbVJlcG9ydFN0YXR1czwvdGFibGVfbmFtZT48dGFibGVfa2V5PkV4YW1JRDwvdGFibGVfa2V5Pjx0YWJsZV92YWx1ZT5FMjAxODAzMDkxMTA3MjU0MTcxOTwvdGFibGVfdmFsdWU+PGpzb25faW5wdXQ+eyJSb3dFcnJvciI6IiIsIlJvd1N0YXRlIjoxNiwiVGFibGUiOlt7IkV4YW1JRCI6IkUyMDE4MDMwOTExMDcyNTQxNzE5IiwiUGF0aWVudElEIjoiUDIwMTgwMzA5MTEwNzI1NDE3OSIsIlBhdGllbnROYW1lIjoiTjIwMTgwMzA5MTEwNzI1NDE3OSIsIlBhdGllbnRUeXBlIjoiMyIsIk1vZGFsaXR5IjoiVVMiLCJTdGF0dXNJRCI6MjQyLCJTdGF0dXNNZXNzYWdlIjoi5oKo5oql5ZGK5bey57uP5a6h5qC4LOivt+WIsOiHquWKqee7iOerr+aJk+WNsO+8gSIsIkV4YW1DcmVhdGVUaW1lIjoiMjAxOC0wMy0wOVQxMTowOToyNSIsIlN0YXR1c0NyZWF0ZVRpbWUiOiIyMDE4LTAzLTA5VDExOjA5OjI1IiwiU3RhdHVzVXBkYXRlVGltZSI6bnVsbCwiUHJpbnRUaW1lIjpudWxsLCJGaWxtQ291bnQiOjAsIlJlcG9ydENvdW50IjoxLCJBY3Rpb25JRCI6MCwiUHJpbnRMb2NhdGlvbiI6IiIsIkhvc3BpdGFsSUQiOiI5In1dLCJJdGVtQXJyYXkiOlsiRTIwMTgwMzA5MTEwNzI1NDE3MTkiLCJQMjAxODAzMDkxMTA3MjU0MTc5IiwiTjIwMTgwMzA5MTEwNzI1NDE3OSIsIjMiLCJVUyIsMjQyLCLmgqjmiqXlkYrlt7Lnu4/lrqHmoLgs6K+35Yiw6Ieq5Yqp57uI56uv5omT5Y2w77yBIiwiMjAxOC0wMy0wOVQxMTowOToyNSIsIjIwMTgtMDMtMDlUMTE6MDk6MjUiLG51bGwsbnVsbCwwLDEsMCwiIiwiOSJdLCJIYXNFcnJvcnMiOmZhbHNlfTwvanNvbl9pbnB1dD48L1N5bmNocm9uaXplSW5mbz48L3NvYXA6Qm9keT48L3NvYXA6RW52ZWxvcGU+</ActualData>
+          </HTTPData>
+        </HTTPDataSet>
+        <IsExternalData>false</IsExternalData>
+      </HTTPBody>
+    </HTTPRequest>
+  </HTTPTask>
+</HTTPSnapshot>

@@ -1,0 +1,616 @@
+Start auto log messages stack - Iteration 469.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guElt
+A_Patient_Register.c(46): t=4845879ms: Server 47.98.102.85 has shut down the connection [0]  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): t=4845879ms: Closed connection [0] to 47.98.102.85:80 after completing 0 request(s)  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): Warning -26652: Response body length (1156) does not match the expected length for "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx". Content-Length=2636 (Intennal: expected difference=0)  	[MsgId: MWAR-26652]
+A_Patient_Register.c(46): t=4845880ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): Continuing after Error -26377: No match found for the requested parameter "Get2DCodeImageResult". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 10240 bytes. The total length of the response is 1156 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 469.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46): Notify: Saving Parameter "Get2DCodeImageResult = ".	[MsgId: MMSG-13798]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") highest severity level was "continue on error", 1156 body bytes, 232 header bytes  	[MsgId: MMSG-26388]
+A_Patient_Register.c(46): Continuing after error in Vuser script.	[MsgId: MMSG-10678]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Parameter Substitution: parameter "Get2DCodeImageResult" =  ""	[MsgId: MMSG-13992]
+A_Patient_Register.c(72): Notify: Parameter Substitution: parameter "Get2DCodeImageResult" =  ""	[MsgId: MMSG-13992]
+A_Patient_Register.c(74): Error: Get2DCodeImage from CS operations failed. The http response content size is 0!	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 470.	[MsgId: MMSG-10545]
+Starting action A_Patient_Register.	[MsgId: MMSG-15919]
+A_Patient_Register.c(25): web_set_max_html_param_len started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(25): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(33): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180503104250.357"	[MsgId: MMSG-13992]
+A_Patient_Register.c(34): Notify: Saving Parameter "strCurrentDateTime = 20180503104250357".	[MsgId: MMSG-13798]
+A_Patient_Register.c(42): web_reg_save_param started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(42): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+A_Patient_Register.c(44): Error: Cannot start transaction "Patient operations_ Get2DCodeImage". This Vuser already started a transaction with the same name, and has not yet processed the corresponding lr_end_transaction statement.	[MsgId: MERR-16993]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 485.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     <Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>9</hospitalID><patientID>P20180503
+A_Patient_Register.c(46):     1045119579</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>10</QRC
+A_Patient_Register.c(46):     odeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+A_Patient_Register.c(46): t=5016287ms: Server 47.98.102.85 has shut down the connection [0] prematurely (empty response, no HTTP headers received). No retry attempted  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): t=5016287ms: Closed connection [0] to 47.98.102.85:80 after completing 0 request(s)  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): Continuing after Error -27787: Server "47.98.102.85" has shut down the connection prematurely  	[MsgId: MERR-27787]
+A_Patient_Register.c(46): Continuing after Error -26377: No match found for the requested parameter "Get2DCodeImageResult". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 10240 bytes. The total length of the response is 0 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 485.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46): Notify: Saving Parameter "Get2DCodeImageResult = ".	[MsgId: MMSG-13798]
+A_Patient_Register.c(46): Continuing after Error -26374: The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively.  	[MsgId: MERR-26374]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 485.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") highest severity level was "continue on error", 0 body bytes, 0 header bytes  	[MsgId: MMSG-26388]
+A_Patient_Register.c(46): Continuing after error in Vuser script.	[MsgId: MMSG-10678]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(63): Error: Get2DCodeImage from CS operations failed. The http return code is -1	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 486.	[MsgId: MMSG-10545]
+Starting action A_Patient_Register.	[MsgId: MMSG-15919]
+A_Patient_Register.c(25): web_set_max_html_param_len started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(25): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(33): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180503104541.669"	[MsgId: MMSG-13992]
+A_Patient_Register.c(34): Notify: Saving Parameter "strCurrentDateTime = 20180503104541669".	[MsgId: MMSG-13798]
+A_Patient_Register.c(42): web_reg_save_param started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(42): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+A_Patient_Register.c(44): Error: Cannot start transaction "Patient operations_ Get2DCodeImage". This Vuser already started a transaction with the same name, and has not yet processed the corresponding lr_end_transaction statement.	[MsgId: MERR-16993]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 495.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guElt
+A_Patient_Register.c(46): t=5166519ms: Server 47.98.102.85 has shut down the connection [0]  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): t=5166519ms: Closed connection [0] to 47.98.102.85:80 after completing 0 request(s)  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): Warning -26652: Response body length (1156) does not match the expected length for "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx". Content-Length=2628 (Intennal: expected difference=0)  	[MsgId: MWAR-26652]
+A_Patient_Register.c(46): t=5166519ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): Continuing after Error -26377: No match found for the requested parameter "Get2DCodeImageResult". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 10240 bytes. The total length of the response is 1156 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 495.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46): Notify: Saving Parameter "Get2DCodeImageResult = ".	[MsgId: MMSG-13798]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") highest severity level was "continue on error", 1156 body bytes, 232 header bytes  	[MsgId: MMSG-26388]
+A_Patient_Register.c(46): Continuing after error in Vuser script.	[MsgId: MMSG-10678]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Parameter Substitution: parameter "Get2DCodeImageResult" =  ""	[MsgId: MMSG-13992]
+A_Patient_Register.c(72): Notify: Parameter Substitution: parameter "Get2DCodeImageResult" =  ""	[MsgId: MMSG-13992]
+A_Patient_Register.c(74): Error: Get2DCodeImage from CS operations failed. The http response content size is 0!	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 496.	[MsgId: MMSG-10545]
+Starting action A_Patient_Register.	[MsgId: MMSG-15919]
+A_Patient_Register.c(25): web_set_max_html_param_len started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(25): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(33): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180503104811.981"	[MsgId: MMSG-13992]
+A_Patient_Register.c(34): Notify: Saving Parameter "strCurrentDateTime = 20180503104811981".	[MsgId: MMSG-13798]
+A_Patient_Register.c(42): web_reg_save_param started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(42): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+A_Patient_Register.c(44): Error: Cannot start transaction "Patient operations_ Get2DCodeImage". This Vuser already started a transaction with the same name, and has not yet processed the corresponding lr_end_transaction statement.	[MsgId: MERR-16993]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 500.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     1afdc9a-7c24-4600-8714-05e9250c0a31</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+A_Patient_Register.c(46):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+A_Patient_Register.c(46):     ://47.98.102.85/CenterInfoServer/CenterPrintService.asmx</wsa:To></soap:Header><soap:Body>
+A_Patient_Register.c(46):     <Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>2</hospitalID><patientID>P20180503
+A_Patient_Register.c(46):     1046428492</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>10</QRC
+A_Patient_Register.c(46):     odeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+A_Patient_Register.c(46): Continuing after Error -27724: Step download timeout (120 seconds) has expired  	[MsgId: MERR-27724]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 500.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46): Aborting pending download of URL="http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx" (RelFrameId=1, Internal ID=3390)  	[MsgId: MMSG-27652]
+A_Patient_Register.c(46): Continuing after Error -26377: No match found for the requested parameter "Get2DCodeImageResult". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 10240 bytes. The total length of the response is 0 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 500.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46): Notify: Saving Parameter "Get2DCodeImageResult = ".	[MsgId: MMSG-13798]
+A_Patient_Register.c(46): Continuing after Error -26374: The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively.  	[MsgId: MERR-26374]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 500.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") highest severity level was "continue on error", 0 body bytes, 0 header bytes  	[MsgId: MMSG-26388]
+A_Patient_Register.c(46): Continuing after error in Vuser script.	[MsgId: MMSG-10678]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(63): Error: Get2DCodeImage from CS operations failed. The http return code is -1	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 501.	[MsgId: MMSG-10545]
+Starting action A_Patient_Register.	[MsgId: MMSG-15919]
+A_Patient_Register.c(25): web_set_max_html_param_len started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(25): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(33): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180503104849.847"	[MsgId: MMSG-13992]
+A_Patient_Register.c(34): Notify: Saving Parameter "strCurrentDateTime = 20180503104849847".	[MsgId: MMSG-13798]
+A_Patient_Register.c(42): web_reg_save_param started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(42): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+A_Patient_Register.c(44): Error: Cannot start transaction "Patient operations_ Get2DCodeImage". This Vuser already started a transaction with the same name, and has not yet processed the corresponding lr_end_transaction statement.	[MsgId: MERR-16993]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 515.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     <Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>5</hospitalID><patientID>P20180503
+A_Patient_Register.c(46):     1049184515</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>15</QRC
+A_Patient_Register.c(46):     odeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+A_Patient_Register.c(46): t=5266692ms: Server 47.98.102.85 has shut down the connection [0] prematurely (empty response, no HTTP headers received). No retry attempted  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): t=5266692ms: Closed connection [0] to 47.98.102.85:80 after completing 0 request(s)  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): Continuing after Error -27787: Server "47.98.102.85" has shut down the connection prematurely  	[MsgId: MERR-27787]
+A_Patient_Register.c(46): Continuing after Error -26377: No match found for the requested parameter "Get2DCodeImageResult". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 10240 bytes. The total length of the response is 0 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 515.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46): Notify: Saving Parameter "Get2DCodeImageResult = ".	[MsgId: MMSG-13798]
+A_Patient_Register.c(46): Continuing after Error -26374: The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively.  	[MsgId: MERR-26374]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 515.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") highest severity level was "continue on error", 0 body bytes, 0 header bytes  	[MsgId: MMSG-26388]
+A_Patient_Register.c(46): Continuing after error in Vuser script.	[MsgId: MMSG-10678]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(63): Error: Get2DCodeImage from CS operations failed. The http return code is -1	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 516.	[MsgId: MMSG-10545]
+Starting action A_Patient_Register.	[MsgId: MMSG-15919]
+A_Patient_Register.c(25): web_set_max_html_param_len started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(25): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(33): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180503104954.235"	[MsgId: MMSG-13992]
+A_Patient_Register.c(34): Notify: Saving Parameter "strCurrentDateTime = 20180503104954235".	[MsgId: MMSG-13798]
+A_Patient_Register.c(42): web_reg_save_param started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(42): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+A_Patient_Register.c(44): Error: Cannot start transaction "Patient operations_ Get2DCodeImage". This Vuser already started a transaction with the same name, and has not yet processed the corresponding lr_end_transaction statement.	[MsgId: MERR-16993]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 513.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     <Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>10</hospitalID><patientID>P2018050
+A_Patient_Register.c(46):     310495775010</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>5</QR
+A_Patient_Register.c(46):     CodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+A_Patient_Register.c(46): t=5306784ms: Server 47.98.102.85 has shut down the connection [0] prematurely (empty response, no HTTP headers received). No retry attempted  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): t=5306785ms: Closed connection [0] to 47.98.102.85:80 after completing 0 request(s)  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): Continuing after Error -27787: Server "47.98.102.85" has shut down the connection prematurely  	[MsgId: MERR-27787]
+A_Patient_Register.c(46): Continuing after Error -26377: No match found for the requested parameter "Get2DCodeImageResult". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 10240 bytes. The total length of the response is 0 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 513.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46): Notify: Saving Parameter "Get2DCodeImageResult = ".	[MsgId: MMSG-13798]
+A_Patient_Register.c(46): Continuing after Error -26374: The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively.  	[MsgId: MERR-26374]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 513.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") highest severity level was "continue on error", 0 body bytes, 0 header bytes  	[MsgId: MMSG-26388]
+A_Patient_Register.c(46): Continuing after error in Vuser script.	[MsgId: MMSG-10678]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(63): Error: Get2DCodeImage from CS operations failed. The http return code is -1	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 514.	[MsgId: MMSG-10545]
+Starting action A_Patient_Register.	[MsgId: MMSG-15919]
+A_Patient_Register.c(25): web_set_max_html_param_len started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(25): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(33): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180503105032.203"	[MsgId: MMSG-13992]
+A_Patient_Register.c(34): Notify: Saving Parameter "strCurrentDateTime = 20180503105032203".	[MsgId: MMSG-13798]
+A_Patient_Register.c(42): web_reg_save_param started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(42): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+A_Patient_Register.c(44): Error: Cannot start transaction "Patient operations_ Get2DCodeImage". This Vuser already started a transaction with the same name, and has not yet processed the corresponding lr_end_transaction statement.	[MsgId: MERR-16993]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 513.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     <Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>12</hospitalID><patientID>P2018050
+A_Patient_Register.c(46):     310502805412</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>15</Q
+A_Patient_Register.c(46):     RCodeErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+A_Patient_Register.c(46): t=5336831ms: Server 47.98.102.85 has shut down the connection [0] prematurely (empty response, no HTTP headers received). No retry attempted  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): t=5336831ms: Closed connection [0] to 47.98.102.85:80 after completing 0 request(s)  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): Continuing after Error -27787: Server "47.98.102.85" has shut down the connection prematurely  	[MsgId: MERR-27787]
+A_Patient_Register.c(46): Continuing after Error -26377: No match found for the requested parameter "Get2DCodeImageResult". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 10240 bytes. The total length of the response is 0 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 513.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46): Notify: Saving Parameter "Get2DCodeImageResult = ".	[MsgId: MMSG-13798]
+A_Patient_Register.c(46): Continuing after Error -26374: The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively.  	[MsgId: MERR-26374]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 513.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") highest severity level was "continue on error", 0 body bytes, 0 header bytes  	[MsgId: MMSG-26388]
+A_Patient_Register.c(46): Continuing after error in Vuser script.	[MsgId: MMSG-10678]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(63): Error: Get2DCodeImage from CS operations failed. The http return code is -1	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 514.	[MsgId: MMSG-10545]
+Starting action A_Patient_Register.	[MsgId: MMSG-15919]
+A_Patient_Register.c(25): web_set_max_html_param_len started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(25): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(33): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180503105101.602"	[MsgId: MMSG-13992]
+A_Patient_Register.c(34): Notify: Saving Parameter "strCurrentDateTime = 20180503105101602".	[MsgId: MMSG-13798]
+A_Patient_Register.c(42): web_reg_save_param started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(42): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+A_Patient_Register.c(44): Error: Cannot start transaction "Patient operations_ Get2DCodeImage". This Vuser already started a transaction with the same name, and has not yet processed the corresponding lr_end_transaction statement.	[MsgId: MERR-16993]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 521.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCPw94evYdS0l30aNIETShFCvhyWK4guElt
+A_Patient_Register.c(46): t=5371879ms: Server 47.98.102.85 has shut down the connection [0]  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): t=5371879ms: Closed connection [0] to 47.98.102.85:80 after completing 0 request(s)  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): Warning -26652: Response body length (1156) does not match the expected length for "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx". Content-Length=2636 (Intennal: expected difference=0)  	[MsgId: MWAR-26652]
+A_Patient_Register.c(46): t=5371879ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): Continuing after Error -26377: No match found for the requested parameter "Get2DCodeImageResult". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 10240 bytes. The total length of the response is 1156 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 521.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46): Notify: Saving Parameter "Get2DCodeImageResult = ".	[MsgId: MMSG-13798]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") highest severity level was "continue on error", 1156 body bytes, 232 header bytes  	[MsgId: MMSG-26388]
+A_Patient_Register.c(46): Continuing after error in Vuser script.	[MsgId: MMSG-10678]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Parameter Substitution: parameter "Get2DCodeImageResult" =  ""	[MsgId: MMSG-13992]
+A_Patient_Register.c(72): Notify: Parameter Substitution: parameter "Get2DCodeImageResult" =  ""	[MsgId: MMSG-13992]
+A_Patient_Register.c(74): Error: Get2DCodeImage from CS operations failed. The http response content size is 0!	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 522.	[MsgId: MMSG-10545]
+Starting action A_Patient_Register.	[MsgId: MMSG-15919]
+A_Patient_Register.c(25): web_set_max_html_param_len started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(25): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(33): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180503105136.194"	[MsgId: MMSG-13992]
+A_Patient_Register.c(34): Notify: Saving Parameter "strCurrentDateTime = 20180503105136194".	[MsgId: MMSG-13798]
+A_Patient_Register.c(42): web_reg_save_param started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(42): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+A_Patient_Register.c(44): Error: Cannot start transaction "Patient operations_ Get2DCodeImage". This Vuser already started a transaction with the same name, and has not yet processed the corresponding lr_end_transaction statement.	[MsgId: MERR-16993]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 513.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     <Get2DCodeImage xmlns="http://tempuri.org/"><hospitalID>9</hospitalID><patientID>P20180503
+A_Patient_Register.c(46):     1051191379</patientID><qrcodeParam><QRCodeScale>1</QRCodeScale><QRCodeErrorCorrect>5</QRCo
+A_Patient_Register.c(46):     deErrorCorrect></qrcodeParam></Get2DCodeImage></soap:Body></soap:Envelope>
+A_Patient_Register.c(46): t=5386895ms: Server 47.98.102.85 has shut down the connection [0] prematurely (empty response, no HTTP headers received). No retry attempted  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): t=5386895ms: Closed connection [0] to 47.98.102.85:80 after completing 0 request(s)  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): Continuing after Error -27787: Server "47.98.102.85" has shut down the connection prematurely  	[MsgId: MERR-27787]
+A_Patient_Register.c(46): Continuing after Error -26377: No match found for the requested parameter "Get2DCodeImageResult". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 10240 bytes. The total length of the response is 0 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 513.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46): Notify: Saving Parameter "Get2DCodeImageResult = ".	[MsgId: MMSG-13798]
+A_Patient_Register.c(46): Continuing after Error -26374: The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively.  	[MsgId: MERR-26374]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 513.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") highest severity level was "continue on error", 0 body bytes, 0 header bytes  	[MsgId: MMSG-26388]
+A_Patient_Register.c(46): Continuing after error in Vuser script.	[MsgId: MMSG-10678]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(63): Error: Get2DCodeImage from CS operations failed. The http return code is -1	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 514.	[MsgId: MMSG-10545]
+Starting action A_Patient_Register.	[MsgId: MMSG-15919]
+A_Patient_Register.c(25): web_set_max_html_param_len started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(25): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(33): Notify: Parameter Substitution: parameter "CurrentDateTime" =  "20180503105151.869"	[MsgId: MMSG-13992]
+A_Patient_Register.c(34): Notify: Saving Parameter "strCurrentDateTime = 20180503105151869".	[MsgId: MMSG-13798]
+A_Patient_Register.c(42): web_reg_save_param started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(42): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+A_Patient_Register.c(44): Error: Cannot start transaction "Patient operations_ Get2DCodeImage". This Vuser already started a transaction with the same name, and has not yet processed the corresponding lr_end_transaction statement.	[MsgId: MERR-16993]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2858.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     :Body></soap:Envelope>
+A_Patient_Register.c(46): Notify: Message id [-13798] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(46): t=29114434ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") was successful, 2632 body bytes, 232 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(72): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(80): Notify: Transaction "Patient operations_ Get2DCodeImage" ended with a "Pass" status (Duration: 0.4222 Wasted Time: 0.0004).	[MsgId: MMSG-16871]
+A_Patient_Register.c(80): Error: C interpreter run time error: A_Patient_Register.c (80):  Error -- memory violation : Exception ACCESS_VIOLATION received.	[MsgId: MERR-19890]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2854.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     ponse></soap:Body></soap:Envelope>
+A_Patient_Register.c(46): Notify: Message id [-13798] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(46): t=29129957ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") was successful, 2644 body bytes, 232 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(72): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(80): Notify: Transaction "Patient operations_ Get2DCodeImage" ended with a "Pass" status (Duration: 0.4337 Wasted Time: 0.0004).	[MsgId: MMSG-16871]
+A_Patient_Register.c(80): Error: C interpreter run time error: A_Patient_Register.c (80):  Error -- memory violation : Exception ACCESS_VIOLATION received.	[MsgId: MERR-19890]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2863.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     esponse></soap:Body></soap:Envelope>
+A_Patient_Register.c(46): Notify: Message id [-13798] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(46): t=29149153ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") was successful, 2632 body bytes, 232 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(72): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(80): Notify: Transaction "Patient operations_ Get2DCodeImage" ended with a "Pass" status (Duration: 0.4446 Wasted Time: 0.0016).	[MsgId: MMSG-16871]
+A_Patient_Register.c(80): Error: C interpreter run time error: A_Patient_Register.c (80):  Error -- memory violation : Exception ACCESS_VIOLATION received.	[MsgId: MERR-19890]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2867.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     deImageResponse></soap:Body></soap:Envelope>
+A_Patient_Register.c(46): Notify: Message id [-13798] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(46): t=29165544ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") was successful, 2640 body bytes, 232 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(72): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(80): Notify: Transaction "Patient operations_ Get2DCodeImage" ended with a "Pass" status (Duration: 0.4199 Wasted Time: 0.0007).	[MsgId: MMSG-16871]
+A_Patient_Register.c(80): Error: C interpreter run time error: A_Patient_Register.c (80):  Error -- memory violation : Exception ACCESS_VIOLATION received.	[MsgId: MERR-19890]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2875.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     y></soap:Envelope>
+A_Patient_Register.c(46): Notify: Message id [-13798] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(46): t=29189825ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") was successful, 2628 body bytes, 232 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(72): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(80): Notify: Transaction "Patient operations_ Get2DCodeImage" ended with a "Pass" status (Duration: 0.4488 Wasted Time: 0.0004).	[MsgId: MMSG-16871]
+A_Patient_Register.c(80): Error: C interpreter run time error: A_Patient_Register.c (80):  Error -- memory violation : Exception ACCESS_VIOLATION received.	[MsgId: MERR-19890]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2873.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     soap:Envelope>
+A_Patient_Register.c(46): Notify: Message id [-13798] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(46): t=29210594ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") was successful, 2624 body bytes, 232 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(72): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(80): Notify: Transaction "Patient operations_ Get2DCodeImage" ended with a "Pass" status (Duration: 0.4235 Wasted Time: 0.0015).	[MsgId: MMSG-16871]
+A_Patient_Register.c(80): Error: C interpreter run time error: A_Patient_Register.c (80):  Error -- memory violation : Exception ACCESS_VIOLATION received.	[MsgId: MERR-19890]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2871.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     y></soap:Envelope>
+A_Patient_Register.c(46): Notify: Message id [-13798] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(46): t=29234301ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") was successful, 2628 body bytes, 232 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(72): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(80): Notify: Transaction "Patient operations_ Get2DCodeImage" ended with a "Pass" status (Duration: 0.4405 Wasted Time: 0.0015).	[MsgId: MMSG-16871]
+A_Patient_Register.c(80): Error: C interpreter run time error: A_Patient_Register.c (80):  Error -- memory violation : Exception ACCESS_VIOLATION received.	[MsgId: MERR-19890]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2867.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     deImageResponse></soap:Body></soap:Envelope>
+A_Patient_Register.c(46): Notify: Message id [-13798] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(46): t=29262173ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") was successful, 2640 body bytes, 232 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(72): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(80): Notify: Transaction "Patient operations_ Get2DCodeImage" ended with a "Pass" status (Duration: 0.4326 Wasted Time: 0.0015).	[MsgId: MMSG-16871]
+A_Patient_Register.c(80): Error: C interpreter run time error: A_Patient_Register.c (80):  Error -- memory violation : Exception ACCESS_VIOLATION received.	[MsgId: MERR-19890]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2868.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     esponse></soap:Body></soap:Envelope>
+A_Patient_Register.c(46): Notify: Message id [-13798] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(46): t=29289829ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") was successful, 2632 body bytes, 232 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(72): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(80): Notify: Transaction "Patient operations_ Get2DCodeImage" ended with a "Pass" status (Duration: 0.4372 Wasted Time: 0.0010).	[MsgId: MMSG-16871]
+A_Patient_Register.c(80): Error: C interpreter run time error: A_Patient_Register.c (80):  Error -- memory violation : Exception ACCESS_VIOLATION received.	[MsgId: MERR-19890]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2883.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     soap:Body></soap:Envelope>
+A_Patient_Register.c(46): Notify: Message id [-13798] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(46): t=29319306ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") was successful, 2636 body bytes, 232 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(72): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(80): Notify: Transaction "Patient operations_ Get2DCodeImage" ended with a "Pass" status (Duration: 0.4300 Wasted Time: 0.0015).	[MsgId: MMSG-16871]
+A_Patient_Register.c(80): Error: C interpreter run time error: A_Patient_Register.c (80):  Error -- memory violation : Exception ACCESS_VIOLATION received.	[MsgId: MERR-19890]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2873.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     esponse></soap:Body></soap:Envelope>
+A_Patient_Register.c(46): Notify: Message id [-13798] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(46): t=29353458ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") was successful, 2632 body bytes, 232 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(72): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(80): Notify: Transaction "Patient operations_ Get2DCodeImage" ended with a "Pass" status (Duration: 0.4995 Wasted Time: 0.0015).	[MsgId: MMSG-16871]
+A_Patient_Register.c(80): Error: C interpreter run time error: A_Patient_Register.c (80):  Error -- memory violation : Exception ACCESS_VIOLATION received.	[MsgId: MERR-19890]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2891.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     deImageResponse></soap:Body></soap:Envelope>
+A_Patient_Register.c(46): Notify: Message id [-13798] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(46): t=29391762ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") was successful, 2640 body bytes, 232 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(72): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(80): Notify: Transaction "Patient operations_ Get2DCodeImage" ended with a "Pass" status (Duration: 0.4263 Wasted Time: 0.0015).	[MsgId: MMSG-16871]
+A_Patient_Register.c(80): Error: C interpreter run time error: A_Patient_Register.c (80):  Error -- memory violation : Exception ACCESS_VIOLATION received.	[MsgId: MERR-19890]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2886.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     ponse></soap:Body></soap:Envelope>
+A_Patient_Register.c(46): Notify: Message id [-13798] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(46): t=29432121ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") was successful, 2644 body bytes, 232 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(72): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(80): Notify: Transaction "Patient operations_ Get2DCodeImage" ended with a "Pass" status (Duration: 0.4390 Wasted Time: 0.0007).	[MsgId: MMSG-16871]
+A_Patient_Register.c(80): Error: C interpreter run time error: A_Patient_Register.c (80):  Error -- memory violation : Exception ACCESS_VIOLATION received.	[MsgId: MERR-19890]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2888.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     eResponse></soap:Body></soap:Envelope>
+A_Patient_Register.c(46): Notify: Message id [-13798] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(46): t=29482645ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") was successful, 2648 body bytes, 232 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(72): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(80): Notify: Transaction "Patient operations_ Get2DCodeImage" ended with a "Pass" status (Duration: 0.4478 Wasted Time: 0.0004).	[MsgId: MMSG-16871]
+A_Patient_Register.c(80): Error: C interpreter run time error: A_Patient_Register.c (80):  Error -- memory violation : Exception ACCESS_VIOLATION received.	[MsgId: MERR-19890]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2898.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     e></soap:Body></soap:Envelope>
+A_Patient_Register.c(46): Notify: Message id [-13798] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(46): t=29537547ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") was successful, 2640 body bytes, 232 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(72): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(80): Notify: Transaction "Patient operations_ Get2DCodeImage" ended with a "Pass" status (Duration: 0.4299 Wasted Time: 0.0015).	[MsgId: MMSG-16871]
+A_Patient_Register.c(80): Error: C interpreter run time error: A_Patient_Register.c (80):  Error -- memory violation : Exception ACCESS_VIOLATION received.	[MsgId: MERR-19890]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2906.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     ponse></soap:Body></soap:Envelope>
+A_Patient_Register.c(46): Notify: Message id [-13798] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(46): t=29607634ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") was successful, 2644 body bytes, 232 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(72): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(80): Notify: Transaction "Patient operations_ Get2DCodeImage" ended with a "Pass" status (Duration: 0.4181 Wasted Time: 0.0004).	[MsgId: MMSG-16871]
+A_Patient_Register.c(80): Error: C interpreter run time error: A_Patient_Register.c (80):  Error -- memory violation : Exception ACCESS_VIOLATION received.	[MsgId: MERR-19890]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2897.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     :Body></soap:Envelope>
+A_Patient_Register.c(46): Notify: Message id [-13798] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(46): t=29698856ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") was successful, 2632 body bytes, 232 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(72): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(80): Notify: Transaction "Patient operations_ Get2DCodeImage" ended with a "Pass" status (Duration: 0.4461 Wasted Time: 0.0008).	[MsgId: MMSG-16871]
+A_Patient_Register.c(80): Error: C interpreter run time error: A_Patient_Register.c (80):  Error -- memory violation : Exception ACCESS_VIOLATION received.	[MsgId: MERR-19890]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2928.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     :Body></soap:Envelope>
+A_Patient_Register.c(46): Notify: Message id [-13798] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(46): t=29850329ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") was successful, 2632 body bytes, 232 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(72): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(80): Notify: Transaction "Patient operations_ Get2DCodeImage" ended with a "Pass" status (Duration: 0.4428 Wasted Time: 0.0015).	[MsgId: MMSG-16871]
+A_Patient_Register.c(80): Error: C interpreter run time error: A_Patient_Register.c (80):  Error -- memory violation : Exception ACCESS_VIOLATION received.	[MsgId: MERR-19890]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2956.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     y></soap:Envelope>
+A_Patient_Register.c(46): Notify: Message id [-13798] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(46): t=30029261ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") was successful, 2628 body bytes, 232 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(72): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(80): Notify: Transaction "Patient operations_ Get2DCodeImage" ended with a "Pass" status (Duration: 0.4570 Wasted Time: 0.0015).	[MsgId: MMSG-16871]
+A_Patient_Register.c(80): Error: C interpreter run time error: A_Patient_Register.c (80):  Error -- memory violation : Exception ACCESS_VIOLATION received.	[MsgId: MERR-19890]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2992.	[MsgId: MMSG-10545]
+A_Patient_Register.c(46):     eResponse></soap:Body></soap:Envelope>
+A_Patient_Register.c(46): Notify: Message id [-13798] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(46): t=30386460ms: Request done "http://47.98.102.85/CenterInfoServer/CenterPrintService.asmx"  	[MsgId: MMSG-26000]
+A_Patient_Register.c(46): web_custom_request("Get2DCodeImage") was successful, 2648 body bytes, 232 header bytes  	[MsgId: MMSG-26386]
+A_Patient_Register.c(59): web_get_int_property started  	[MsgId: MMSG-26355]
+A_Patient_Register.c(59): web_get_int_property was successful  	[MsgId: MMSG-26392]
+A_Patient_Register.c(69): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(72): Notify: Message id [-13992] was not saved - Auto Log cache is too small to contain the message.	[MsgId: MMSG-10547]
+A_Patient_Register.c(80): Notify: Transaction "Patient operations_ Get2DCodeImage" ended with a "Pass" status (Duration: 0.4530 Wasted Time: 0.0015).	[MsgId: MMSG-16871]
+A_Patient_Register.c(80): Error: C interpreter run time error: A_Patient_Register.c (80):  Error -- memory violation : Exception ACCESS_VIOLATION received.	[MsgId: MERR-19890]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
