@@ -1,0 +1,10 @@
+[t10]
+FileName1=t10_worklistcolumns.html
+URL1=http://10.184.129.208/webapi/api/worklist/worklistcolumns
+Total=1
+ContentType=
+SnapshotXmlFile=snapshot_10.xml
+RequestHeaderFile=t10_RequestHeader.txt
+RequestBodyFile=NONE
+[ProtocolInfo]
+ProtocolId=QTWeb

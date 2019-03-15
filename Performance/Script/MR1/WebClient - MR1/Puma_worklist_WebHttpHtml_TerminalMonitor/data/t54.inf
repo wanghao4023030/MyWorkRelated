@@ -1,0 +1,11 @@
+[t54]
+FileName1=t54.html
+URL1=http://clients2.google.com/service/update2?cup2key=7:456915423&cup2hreq=fe64f7670d6a702479c75698c3adc8e9fa4ab043eea0deb6c7250a539330f864
+Total=1
+RequestHeaderFile=t54_RequestHeader.txt
+RequestBodyFile=t54_RequestBody.txt
+ResponseHeaderFile=t54_ResponseHeader.txt
+ContentType=
+SnapshotXmlFile=snapshot_54.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

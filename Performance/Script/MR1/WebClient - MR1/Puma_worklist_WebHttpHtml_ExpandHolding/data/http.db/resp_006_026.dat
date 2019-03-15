@@ -1,0 +1,11 @@
+﻿// qclogService service proxy
+webservices.factory('qclogService', ['$http', 'apiConfig', function ($http, apiConfig) {
+    'use strict';
+
+    return {
+        getQCLogs: function (params) {
+            return $http.post('/api/qclog/get', JSON.stringify(params), apiConfig.create());
+        }
+    };
+}]);
+

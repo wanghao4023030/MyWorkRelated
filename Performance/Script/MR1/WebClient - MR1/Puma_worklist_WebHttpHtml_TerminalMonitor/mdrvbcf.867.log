@@ -1,0 +1,1593 @@
+Start auto log messages stack - Iteration 611.	[MsgId: MMSG-10545]
+Action.c(315):     ,"terminalID":null,"printerName":"Lower","printerModel":"Mono","statusCode":0,"statusDescr
+Action.c(315):     iption":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeTyp
+Action.c(315):     e":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain"
+Action.c(315):     ,"paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":0,"black
+Action.c(315):     InkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","error
+Action.c(315):     Description":null,"statusTime":"2018-09-22T02:13:33.993+08:00"},{"printerID":"Upper","term
+Action.c(315):     inalID":null,"printerName":"Upper","printerModel":"Color","statusCode":0,"statusDescriptio
+Action.c(315):     n":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A
+Action.c(315):     5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","pap
+Action.c(315):     erSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackInkLe
+Action.c(315):     vel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescr
+Action.c(315):     iption":null,"statusTime":"2018-09-22T02:13:39.013+08:00"}],"errorCode":null,"errorDescrip
+Action.c(315):     tion":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Ter
+Action.c(315):     minal35","terminalName":"Terminal35","terminalIP":"10.184.129.35","terminalDescription":nu
+Action.c(315):     ll,"terminalStatus":0,"terminalStatusLevel":"Normal","terminalStatusDescription":null,"ter
+Action.c(315):     minalStatusTime":"2018-09-22T02:15:51.543+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,1
+Action.c(315):     1,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo":null,"reportPri
+Action.c(315):     ntersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","printerModel":"M
+Action.c(315):     ono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"
+Action.c(315):     paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"draw
+Action.c(315):     erName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"
+Action.c(315):     Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowI
+Action.c(315):     nkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T02:15:02.54+08:
+Action.c(315):     00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerModel":"Color","
+Action.c(315):     statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperT
+Action.c(315):     ype":"Plain","paperSizeType":"A5","statu
+Action.c(315): t=36754746ms: 5840-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=3" (RelFrameId=1, Internal ID=14044)
+Action.c(315):     sCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeTyp
+Action.c(315):     e":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel":94,"
+Action.c(315):     cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":n
+Action.c(315):     ull,"statusTime":"2018-09-22T02:15:07.567+08:00"}],"errorCode":null,"errorDescription":nul
+Action.c(315):     l,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal36",
+Action.c(315):     "terminalName":"Terminal36","terminalIP":"10.184.129.36","terminalDescription":null,"termi
+Action.c(315):     nalStatus":0,"terminalStatusLevel":"Normal","terminalStatusDescription":null,"terminalStat
+Action.c(315):     usTime":"2018-09-22T02:17:08.897+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","c
+Action.c(315):     heckTermianlState":false,"checkFilmState":false,"filmPrinterInfo":null,"reportPrintersInfo
+Action.c(315):     ":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","printerModel":"Mono","sta
+Action.c(315):     tusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType
+Action.c(315):     ":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName":n
+Action.c(315):     ull,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}]
+Action.c(315):     ,"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":
+Action.c(315):     0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T02:16:19.103+08:00"},{"p
+Action.c(315):     rinterID":"Upper","terminalID":null,"printerName":"Upper","printerModel":"Color","statusCo
+Action.c(315):     de":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Pl
+Action.c(315):     ain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"
+Action.c(315):     paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"pri
+Action.c(315):     nterType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"er
+Action.c(315):     rorCode":"","errorDescription":null,"statusTime":"2018-09-22T02:16:24.113+08:00"}],"errorC
+Action.c(315):     ode":null,"errorDescription":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":fa
+Action.c(315):     lse},{"terminalID":"Terminal37","terminalName":"Terminal37","terminalIP":"10.184.129.37","
+Action.c(315):     terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Normal","terminalStatu
+Action.c(315):     sDescription":null,"terminalStatusTime":"2018-09-22T02:10:56.98+08:00","departmentIdList":
+Action.c(315):     "3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinte
+Action.c(315):     rInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lo
+Action.c(315):     wer","printerModel":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo"
+Action.c(315):     :[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDescri
+Action.c(315):     ption":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0
+Action.c(315):     ,"statusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magen
+Action.c(315):     taInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018
+Action.c(315):     -09-22T02:18:54.757+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","
+Action.c(315):     printerModel":"Color","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"d
+Action.c(315):     rawerName":null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription
+Action.c(315):     ":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"sta
+Action.c(315):     tusDescription":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInk
+Action.c(315):     Level":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-2
+Action.c(315):     2T02:18:59.83+08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"terminal
+Action.c(315):     EnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal38","terminalName":"Terminal38",
+Action.c(315):     "terminalIP":"10.184.129.38","terminalDescription":null,"terminalStatus":0,"terminalStatus
+Action.c(315):     Level":"Normal","terminalStatusDescription":null,"terminalStatusTime":"2018-09-22T02:12:32
+Action.c(315):     .36+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"che
+Action.c(315):     ckFilmState":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","term
+Action.c(315):     inalID":null,"printerName":"Lower","printerModel":"Mono","statusCode":0,"statusDescription
+Action.c(315):     ":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4
+Action.c(315):     ","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","pape
+Action.c(315):     rSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":0,"blackInkLev
+Action.c(315):     el":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescri
+Action.c(315):     ption":null,"statusTime":"2018-09-22T02:11:29.35+08:00"},{"printerID":"Upper","terminalID"
+Action.c(315):     :null,"printerName":"Upper","printerModel":"Color","statusCode":0,"statusDescription":"Nor
+Action.c(315):     mal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A5","sta
+Action.c(315):     tusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeT
+Action.c(315):     ype":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel":94
+Action.c(315):     ,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription"
+Action.c(315):     :null,"statusTime":"2018-09-22T02:11:34.36+08:00"}],"errorCode":null,"errorDescription":nu
+Action.c(315):     ll,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal39"
+Action.c(315):     ,"terminalName":"Terminal39","terminalIP":"10.184.129.39","terminalDescription":null,"term
+Action.c(315):     inalStatus":0,"terminalStatusLevel":"Normal","terminalStatusDescription":null,"terminalSta
+Action.c(315):     tusTime":"2018-09-22T02:13:54.993+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","
+Action.c(315):     checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo":null,"reportPrintersInf
+Action.c(315):     o":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","printerModel":"Mono","st
+Action.c(315):     atusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperTyp
+Action.c(315):     e":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName":
+Action.c(315):     null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription"
+Action.c(315): t=36754746ms: 4216-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=3" (RelFrameId=1, Internal ID=14044)
+Action.c(315):     :"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yello
+Action.c(315):     wInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T02:13:05.94+0
+Action.c(315):     8:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerModel":"Color"
+Action.c(315):     ,"statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"pape
+Action.c(315):     rType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerNa
+Action.c(315):     me":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Norm
+Action.c(315):     al"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLe
+Action.c(315):     vel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T02:13:10.953+08:00"
+Action.c(315):     }],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEnabledFlag":1,"isFo
+Action.c(315):     llowed":false},{"terminalID":"Terminal4","terminalName":"Terminal4","terminalIP":"10.184.1
+Action.c(315):     29.4","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Normal","termin
+Action.c(315):     alStatusDescription":null,"terminalStatusTime":"2018-09-22T02:15:32.46+08:00","departmentI
+Action.c(315):     dList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"fil
+Action.c(315):     mPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerNa
+Action.c(315):     me":"Lower","printerModel":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawe
+Action.c(315):     rsInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statu
+Action.c(315):     sDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","status
+Action.c(315):     Code":0,"statusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0
+Action.c(315):     ,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime
+Action.c(315):     ":"2018-09-22T02:14:42.8+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upp
+Action.c(315):     er","printerModel":"Color","statusCode":0,"statusDescription":"Normal","reportDrawersInfo"
+Action.c(315):     :[{"drawerName":null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescri
+Action.c(315):     ption":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0
+Action.c(315):     ,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magen
+Action.c(315):     taInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018
+Action.c(315):     -09-22T02:14:47.833+08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"te
+Action.c(315):     rminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal40","terminalName":"Termin
+Action.c(315):     al40","terminalIP":"10.184.129.40","terminalDescription":null,"terminalStatus":0,"terminal
+Action.c(315):     StatusLevel":"Normal","terminalStatusDescription":null,"terminalStatusTime":"2018-09-22T02
+Action.c(315):     :16:54.893+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":fal
+Action.c(315):     se,"checkFilmState":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower
+Action.c(315):     ","terminalID":null,"printerName":"Lower","printerModel":"Mono","statusCode":0,"statusDesc
+Action.c(315):     ription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeTy
+Action.c(315):     pe":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain
+Action.c(315):     ","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":0,"blac
+Action.c(315):     kInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","erro
+Action.c(315):     rDescription":null,"statusTime":"2018-09-22T02:16:05.423+08:00"},{"printerID":"Upper","ter
+Action.c(315):     minalID":null,"printerName":"Upper","printerModel":"Color","statusCode":0,"statusDescripti
+Action.c(315):     on":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"
+Action.c(315):     A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","pa
+Action.c(315):     perSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackInkL
+Action.c(315):     evel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDesc
+Action.c(315):     ription":null,"statusTime":"2018-09-22T02:16:10.44+08:00"}],"errorCode":null,"errorDescrip
+Action.c(315):     tion":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Ter
+Action.c(315):     minal41","terminalName":"Terminal41","terminalIP":"10.184.129.41","terminalDescription":nu
+Action.c(315):     ll,"terminalStatus":0,"terminalStatusLevel":"Normal","terminalStatusDescription":null,"ter
+Action.c(315):     minalStatusTime":"2018-09-22T02:18:12.39+08:00","departmentIdList":"3,12,4,5
+Action.c(315): t=36754746ms: 4380-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=3" (RelFrameId=1, Internal ID=14044)
+Action.c(315):     ,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo":nu
+Action.c(315):     ll,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","pri
+Action.c(315):     nterModel":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawe
+Action.c(315):     rName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"E
+Action.c(315):     mpty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusD
+Action.c(315):     escription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLeve
+Action.c(315):     l":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T02
+Action.c(315):     :17:22.957+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerMo
+Action.c(315):     del":"Color","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName
+Action.c(315):     ":null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"
+Action.c(315):     },{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescri
+Action.c(315):     ption":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,
+Action.c(315):     "yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T02:17:2
+Action.c(315):     8.04+08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEnabledFl
+Action.c(315):     ag":1,"isFollowed":false},{"terminalID":"Terminal42","terminalName":"Terminal42","terminal
+Action.c(315):     IP":"10.184.129.42","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"N
+Action.c(315):     ormal","terminalStatusDescription":null,"terminalStatusTime":"2018-09-22T02:11:21.957+08:0
+Action.c(315):     0","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmSt
+Action.c(315):     ate":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":
+Action.c(315):     null,"printerName":"Lower","printerModel":"Mono","statusCode":0,"statusDescription":"Norma
+Action.c(315):     l","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statu
+Action.c(315):     sCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeTyp
+Action.c(315):     e":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"
+Action.c(315):     cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":n
+Action.c(315):     ull,"statusTime":"2018-09-22T02:10:32.523+08:00"},{"printerID":"Upper","terminalID":null,"
+Action.c(315):     printerName":"Upper","printerModel":"Color","statusCode":0,"statusDescription":"Normal","r
+Action.c(315):     eportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A5","statusCode
+Action.c(315):     ":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A
+Action.c(315):     4","statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanI
+Action.c(315):     nkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"
+Action.c(315):     statusTime":"2018-09-22T02:10:37.543+08:00"}],"errorCode":null,"errorDescription":null,"te
+Action.c(315):     rminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal43","term
+Action.c(315):     inalName":"Terminal43","terminalIP":"10.184.129.43","terminalDescription":null,"terminalSt
+Action.c(315):     atus":0,"terminalStatusLevel":"Normal","terminalStatusDescription":null,"terminalStatusTim
+Action.c(315):     e":"2018-09-22T02:12:53.647+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkT
+Action.c(315):     ermianlState":false,"checkFilmState":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"
+Action.c(315):     printerID":"Lower","terminalID":null,"printerName":"Lower","printerModel":"Mono","statusCo
+Action.c(315):     de":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Pl
+Action.c(315):     ain","paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"
+Action.c(315):     paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"pri
+Action.c(315):     nterType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"er
+Action.c(315):     rorCode":"","errorDescription":null,"statusTime":"2018-09-22T02:12:01.683+08:00"},{"printe
+Action.c(315):     rID":"Upper","terminalID":null,"printerName":"Upper","printerModel":"Color","statusCode":0
+Action.c(315):     ,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain",
+Action.c(315):     "paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paper
+Action.c(315):     Type":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerT
+Action.c(315):     ype":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCo
+Action.c(315):     de":"","errorDescription":null,"statusTime":"2018-09-22T02:12:06.71+08:00"}],"errorCode":n
+Action.c(315):     ull,"errorDescription":null,"terminalType":2,"terminalEnable
+Action.c(315): t=36754747ms: 2920-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=3" (RelFrameId=1, Internal ID=14044)
+Action.c(315):     dFlag":1,"isFollowed":false},{"terminalID":"Terminal44","terminalName":"Terminal44","termi
+Action.c(315):     nalIP":"10.184.129.44","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel"
+Action.c(315):     :"Normal","terminalStatusDescription":null,"terminalStatusTime":"2018-09-22T02:14:20.603+0
+Action.c(315):     8:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFil
+Action.c(315):     mState":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalI
+Action.c(315):     D":null,"printerName":"Lower","printerModel":"Mono","statusCode":0,"statusDescription":"No
+Action.c(315):     rmal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","st
+Action.c(315):     atusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSize
+Action.c(315):     Type":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":0,"blackInkLevel":7
+Action.c(315):     1,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription
+Action.c(315):     ":null,"statusTime":"2018-09-22T02:13:27.943+08:00"},{"printerID":"Upper","terminalID":nul
+Action.c(315):     l,"printerName":"Upper","printerModel":"Color","statusCode":0,"statusDescription":"Normal"
+Action.c(315):     ,"reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A5","statusC
+Action.c(315):     ode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType"
+Action.c(315):     :"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel":94,"cy
+Action.c(315):     anInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":nul
+Action.c(315):     l,"statusTime":"2018-09-22T02:13:32.96+08:00"}],"errorCode":null,"errorDescription":null,"
+Action.c(315):     terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal45","te
+Action.c(315):     rminalName":"Terminal45","terminalIP":"10.184.129.45","terminalDescription":null,"terminal
+Action.c(315):     Status":0,"terminalStatusLevel":"Normal","terminalStatusDescription":null,"terminalStatusT
+Action.c(315):     ime":"2018-09-22T02:15:50.47+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","check
+Action.c(315):     TermianlState":false,"checkFilmState":false,"filmPrinterInfo":null,"reportPrintersInfo":[{
+Action.c(315):     "printerID":"Lower","terminalID":null,"printerName":"Lower","printerModel":"Mono","statusC
+Action.c(315):     ode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"P
+Action.c(315):     lain","paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,
+Action.c(315):     "paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"pr
+Action.c(315):     interType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"e
+Action.c(315):     rrorCode":"","errorDescription":null,"statusTime":"2018-09-22T02:15:01.173+08:00"},{"print
+Action.c(315):     erID":"Upper","terminalID":null,"printerName":"Upper","printerModel":"Color","statusCode":
+Action.c(315):     0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain"
+Action.c(315):     ,"paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"pape
+Action.c(315):     rType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printer
+Action.c(315):     Type":1,"blackInkLevel":94,"cyanInkLevel
+Action.c(315): t=36754747ms: 4380-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=3" (RelFrameId=1, Internal ID=14044)
+Action.c(315):     ":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusT
+Action.c(315):     ime":"2018-09-22T02:15:06.193+08:00"}],"errorCode":null,"errorDescription":null,"terminalT
+Action.c(315):     ype":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal46","terminalNam
+Action.c(315):     e":"Terminal46","terminalIP":"10.184.129.46","terminalDescription":null,"terminalStatus":0
+Action.c(315):     ,"terminalStatusLevel":"Normal","terminalStatusDescription":null,"terminalStatusTime":"201
+Action.c(315):     8-09-22T02:17:20.733+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianl
+Action.c(315):     State":false,"checkFilmState":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printer
+Action.c(315):     ID":"Lower","terminalID":null,"printerName":"Lower","printerModel":"Mono","statusCode":0,"
+Action.c(315):     statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","p
+Action.c(315):     aperSizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperTy
+Action.c(315):     pe":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerTyp
+Action.c(315):     e":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode
+Action.c(315):     ":"","errorDescription":null,"statusTime":"2018-09-22T02:16:30.403+08:00"},{"printerID":"U
+Action.c(315):     pper","terminalID":null,"printerName":"Upper","printerModel":"Color","statusCode":0,"statu
+Action.c(315):     sDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperS
+Action.c(315):     izeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"
+Action.c(315):     Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":1,
+Action.c(315):     "blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"",
+Action.c(315):     "errorDescription":null,"statusTime":"2018-09-22T02:16:35.423+08:00"}],"errorCode":null,"e
+Action.c(315):     rrorDescription":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"termi
+Action.c(315):     nalID":"Terminal47","terminalName":"Terminal47","terminalIP":"10.184.129.47","terminalDesc
+Action.c(315):     ription":null,"terminalStatus":0,"terminalStatusLevel":"Normal","terminalStatusDescription
+Action.c(315):     ":null,"terminalStatusTime":"2018-09-22T02:18:47.197+08:00","departmentIdList":"3,12,4,5,6
+Action.c(315):     ,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo":null
+Action.c(315):     ,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","print
+Action.c(315):     erModel":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerN
+Action.c(315):     ame":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"Emp
+Action.c(315):     ty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDes
+Action.c(315):     cription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel"
+Action.c(315):     :0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T02:1
+Action.c(315):     7:45.41+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerModel
+Action.c(315):     ":"Color","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":n
+Action.c(315):     ull,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{
+Action.c(315):     "drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescripti
+Action.c(315):     on":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"ye
+Action.c(315):     llowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T02:17:50.4
+Action.c(315):     27+08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEnabledFlag
+Action.c(315):     ":1,"isFollowed":false},{"terminalID":"Terminal48","terminalName":"Terminal48","terminalIP
+Action.c(315):     ":"10.184.129.48","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Nor
+Action.c(315):     mal","terminalStatusDescription":null,"terminalStatusTime":"2018-09-22T02:16:56.583+08:00"
+Action.c(315):     ,"departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmStat
+Action.c(315):     e":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":nu
+Action.c(315):     ll,"printerName":"Lower","printerModel":"Mono","statusCode":0,"statusDescription":"Normal"
+Action.c(315):     ,"reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusC
+Action.c(315):     ode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType"
+Action.c(315):     :"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"cy
+Action.c(315):     anInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":nul
+Action.c(315):     l,"statusTime":"2018-09-22T02:16:07.76+08:00"},{"printerID":"Upper","terminalID":null,"pri
+Action.c(315):     nterName":"Upper","printerModel":"Color","statusCode":0,"sta
+Action.c(315): t=36754748ms: 2920-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=3" (RelFrameId=1, Internal ID=14044)
+Action.c(315):     tusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","pape
+Action.c(315):     rSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType"
+Action.c(315):     :"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":
+Action.c(315):     1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"
+Action.c(315):     ","errorDescription":null,"statusTime":"2018-09-22T02:16:12.777+08:00"}],"errorCode":null,
+Action.c(315):     "errorDescription":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"ter
+Action.c(315):     minalID":"Terminal49","terminalName":"Terminal49","terminalIP":"10.184.129.49","terminalDe
+Action.c(315):     scription":null,"terminalStatus":0,"terminalStatusLevel":"Normal","terminalStatusDescripti
+Action.c(315):     on":null,"terminalStatusTime":"2018-09-22T02:18:32.96+08:00","departmentIdList":"3,12,4,5,
+Action.c(315):     6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo":nul
+Action.c(315):     l,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","prin
+Action.c(315):     terModel":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawer
+Action.c(315):     Name":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"Em
+Action.c(315):     pty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDe
+Action.c(315):     scription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel
+Action.c(315):     ":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T02:
+Action.c(315):     17:35.653+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerMod
+Action.c(315):     el":"Color","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName"
+Action.c(315):     :null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"}
+Action.c(315):     ,{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescrip
+Action.c(315):     tion":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"
+Action.c(315):     yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T02:17:40
+Action.c(315):     .673+08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEnabledFl
+Action.c(315):     ag":1,"isFollowed":false},{"terminalID":"Terminal5","terminalName":"Terminal5","terminalIP
+Action.c(315):     ":"10.184.129.5","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Norm
+Action.c(315):     al","terminalStatusDescription":null,"terminalStatusTime":"2018-09-22T02:11:10.227+08:00",
+Action.c(315):     "departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState
+Action.c(315):     ":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":nul
+Action.c(315):     l,"printerName":"Lower","printerModel":"Mono","statusCode":0,"statusDescription":"Normal",
+Action.c(315):     "reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCo
+Action.c(315):     de":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":
+Action.c(315):     "A4","statusCode":0,"statusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"cya
+Action.c(315):     nInkLevel":0,"magentaInkLevel":0,"yellow
+Action.c(315): t=36754752ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=3" (RelFrameId=1, Internal ID=14044)
+Action.c(315):     InkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T02:10:20.657+0
+Action.c(315):     8:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerModel":"Color"
+Action.c(315):     ,"statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"pape
+Action.c(315):     rType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerNa
+Action.c(315):     me":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Norm
+Action.c(315):     al"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLe
+Action.c(315):     vel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T02:10:25.67+08:00"}
+Action.c(315):     ],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEnabledFlag":1,"isFol
+Action.c(315):     lowed":false},{"terminalID":"Terminal50","terminalName":"Terminal50","terminalIP":"10.184.
+Action.c(315):     129.50","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Normal","term
+Action.c(315):     inalStatusDescription":null,"terminalStatusTime":"2018-09-22T02:12:37.75+08:00","departmen
+Action.c(315):     tIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"f
+Action.c(315):     ilmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printer
+Action.c(315):     Name":"Lower","printerModel":"Mono","statusCode":0,"statusDescription":"Normal","reportDra
+Action.c(315):     wersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"sta
+Action.c(315):     tusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","stat
+Action.c(315):     usCode":0,"statusDes
+Action.c(315): t=36754752ms: 2920-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=3" (RelFrameId=1, Internal ID=14044)
+Action.c(315):     cription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel"
+Action.c(315):     :0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T02:1
+Action.c(315):     1:33.367+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerMode
+Action.c(315):     l":"Color","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":
+Action.c(315):     null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},
+Action.c(315):     {"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescript
+Action.c(315):     ion":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"y
+Action.c(315):     ellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T02:11:38.
+Action.c(315):     383+08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEnabledFla
+Action.c(315):     g":1,"isFollowed":false},{"terminalID":"Terminal6","terminalName":"Terminal6","terminalIP"
+Action.c(315):     :"10.184.129.6","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Norma
+Action.c(315):     l","terminalStatusDescription":null,"terminalStatusTime":"2018-09-22T02:14:07.437+08:00","
+Action.c(315):     departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState"
+Action.c(315):     :false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null
+Action.c(315):     ,"printerName":"Lower","printerModel":"Mono","statusCode":0,"statusDescription":"Normal","
+Action.c(315):     reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCod
+Action.c(315):     e":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"
+Action.c(315):     A4","statusCode":0,"statusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyan
+Action.c(315):     InkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,
+Action.c(315):     "statusTime":"2018-09-22T02:13:16.867+08:00"},{"printerID":"Upper","terminalID":null,"prin
+Action.c(315):     terName":"Upper","printerModel":"Color","statusCode":0,"statusDescription":"Normal","repor
+Action.c(315):     tDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,
+Action.c(315):     "statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","
+Action.c(315):     statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLe
+Action.c(315):     vel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"stat
+Action.c(315):     usTime":"2018-09-22T02:13:21.87+08:00"}],"errorCode":null,"errorDescription":null,"termina
+Action.c(315):     lType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal7","terminalNa
+Action.c(315):     me":"Terminal7","terminalIP":"10.184.129.7","terminalDescription":null,"terminalStatus":0,
+Action.c(315):     "terminalStatusLevel":"Normal","terminalStatusDescription":null,"terminalStatusTime":"2018
+Action.c(315):     -09-22T02:15:33.213+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlS
+Action.c(315):     tate":false,"checkFilmState":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerI
+Action.c(315):     D":"Lower","terminalID":null,"printerName":"Lower","printerModel":"Mono","statusCode":0,"s
+Action.c(315):     tatusDescription":"Normal","reportDrawer
+Action.c(315): t=36754753ms: 3190-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=3" (RelFrameId=1, Internal ID=14044)
+Action.c(315):     sInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"status
+Action.c(315):     Description":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusC
+Action.c(315):     ode":0,"statusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,
+Action.c(315):     "magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime"
+Action.c(315):     :"2018-09-22T02:14:43.973+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Up
+Action.c(315):     per","printerModel":"Color","statusCode":0,"statusDescription":"Normal","reportDrawersInfo
+Action.c(315):     ":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescr
+Action.c(315):     iption":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":
+Action.c(315):     0,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"mage
+Action.c(315):     ntaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"201
+Action.c(315):     8-09-22T02:14:49.007+08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"t
+Action.c(315):     erminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal8","terminalName":"Termin
+Action.c(315):     al8","terminalIP":"10.184.129.8","terminalDescription":null,"terminalStatus":1,"terminalSt
+Action.c(315):     atusLevel":"Error","terminalStatusDescription":null,"terminalStatusTime":null,"departmentI
+Action.c(315):     dList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"fil
+Action.c(315):     mPrinterInfo":null,"reportPrintersInfo":[],"errorCode":"80005018","errorDescription":null,
+Action.c(315):     "terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal9","te
+Action.c(315):     rminalName":"Terminal9","terminalIP":"10.184.129.9","terminalDescription":null,"terminalSt
+Action.c(315):     atus":1,"terminalStatusLevel":"Error","terminalStatusDescription":null,"terminalStatusTime
+Action.c(315):     ":null,"departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFi
+Action.c(315):     lmState":false,"filmPrinterInfo":null,"reportPrintersInfo":[],"errorCode":"80005018","erro
+Action.c(315):     rDescription":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminal
+Action.c(315):     ID":"YF","terminalName":"YF","terminalIP":"1.1.1.3","terminalDescription":"","terminalStat
+Action.c(315):     us":0,"terminalStatusLevel":"Normal","terminalStatusDescription":null,"terminalStatusTime"
+Action.c(315):     :null,"departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFil
+Action.c(315):     mState":false,"filmPrinterInfo":{"filmPrinterID":25,"filmPrinterName":null,"filmPrinterMod
+Action.c(315):     el":"Unknown","filmPrinterPrintState":null,"filmDrawers":[{"mediaType":"Unknown","mediaSiz
+Action.c(315):     e":"Unknown","mediaStatusLevel":"Warning","totalFilmCount":125,"availableFilmCount":0,"ava
+Action.c(315):     ilablePercentage":0},{"mediaType":"Unknown","mediaSize":"Unknown","mediaStatusLevel":"Warn
+Action.c(315):     ing","totalFilmCount":125,"availableFilmCount":0,"availablePercentage":0},{"mediaType":"Un
+Action.c(315):     known","mediaSize":"Unknown","mediaStatusLevel":"Warning","totalFilmCount":125,"availableF
+Action.c(315):     ilmCount":0,"availablePercentage":0}],"filmPrinterStatus":8,"statusCode":null,"filmPrinter
+Action.c(315):     StatusLevel":"Warning","statusDescription":null,"filmPrinterStatusTime":null,"errorCode":n
+Action.c(315):     ull,"errorDescription":null,"rawErrorCodes":null,"pmDate":null,"pmCount":null,"frCount":nu
+Action.c(315):     ll},"reportPrintersInfo":[],"errorCode":null,"errorDescription":null,"terminalType":1,"ter
+Action.c(315):     minalEnabledFlag":1,"isFollowed":false}]
+Action.c(315): web_custom_request("terminalmonitoring") highest severity level was "warning", 88905 body bytes, 261 header bytes  	[MsgId: MMSG-26388]
+Action.c(326): web_url("CheckLoginStatus_5") started  	[MsgId: MMSG-26355]
+Action.c(326): t=36754769ms: 251-byte response headers for "http://10.184.129.108/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=14045)
+Action.c(326):     HTTP/1.1 200 OK\r\n
+Action.c(326):     Cache-Control: private\r\n
+Action.c(326):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(326):     Server: Microsoft-IIS/7.5\r\n
+Action.c(326):     X-AspNetMvc-Version: 5.2\r\n
+Action.c(326):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(326):     X-Powered-By: ASP.NET\r\n
+Action.c(326):     Date: Fri, 21 Sep 2018 18:19:01 GMT\r\n
+Action.c(326):     Content-Length: 4\r\n
+Action.c(326):     \r\n
+Action.c(326): t=36754769ms: 4-byte response body for "http://10.184.129.108/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=14045)
+Action.c(326):     true
+Action.c(326): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(326): web_url("CheckLoginStatus_5") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(342): Notify: Transaction "User_login" ended with a "Pass" status (Duration: 0.5979 Wasted Time: 0.0003).	[MsgId: MMSG-16871]
+Action.c(345): lr_think_time: 10.00 seconds.	[MsgId: MMSG-15948]
+Action.c(347): web_url("reconciliation-list.html") started  	[MsgId: MMSG-26355]
+Action.c(347): t=36764804ms: 248-byte response headers for "http://10.184.129.108/Platform/app/workarea/reconciliation/views/reconciliation-list.html" (RelFrameId=1, Internal ID=14046)
+Action.c(347):     HTTP/1.1 200 OK\r\n
+Action.c(347):     Content-Type: text/html\r\n
+Action.c(347):     Last-Modified: Wed, 19 Sep 2018 08:45:28 GMT\r\n
+Action.c(347):     Accept-Ranges: bytes\r\n
+Action.c(347):     ETag: "0446f1df54fd41:0"\r\n
+Action.c(347):     Server: Microsoft-IIS/7.5\r\n
+Action.c(347):     X-Powered-By: ASP.NET\r\n
+Action.c(347):     Date: Fri, 21 Sep 2018 18:19:12 GMT\r\n
+Action.c(347):     Content-Length: 19296\r\n
+Action.c(347):     \r\n
+Action.c(347): t=36764804ms: 2672-byte response body for "http://10.184.129.108/Platform/app/workarea/reconciliation/views/reconciliation-list.html" (RelFrameId=1, Internal ID=14046)
+Action.c(347):     �\xBF<div style="height:100%; width: 100%">\r\n
+Action.c(347):         <div class="sidenav" style="overflow: auto" ng-style="{'width': navWidth + 'px'}">\r\n
+Action.c(347):             <div class="title">\r\n
+Action.c(347):                 <span ng-class="{selected:seletedType=='film'}" style="position: absolute; lef
+Action.c(347):     t: 20px" ng-click="selectType('film')">胶片</span>\r\n
+Action.c(347):                 <span ng-class="{selected:seletedType=='report'}" style="position: absolute; r
+Action.c(347):     ight: 20px" ng-click="selectType('report')">报告</span>\r\n
+Action.c(347):             </div>\r\n
+Action.c(347):             <div id="unmatchContainer">\r\n
+Action.c(347):                 <select id="unmatchDropdown" ng-model="selectedShortcut" ng-options="t.value a
+Action.c(347):     s t.name for t in shortcuts" ng-change="searchUmatches()"></select>\r\n
+Action.c(347):             </div>\r\n
+Action.c(347):             <div>\r\n
+Action.c(347):                 <treecontrol class="tree-light" options="treeOptions" ng-class="{true: 'film-l
+Action.c(347):     eaf-icon', false: 'report-leaf-icon'}[isFilmTypeSelected]" tree-model="treedata" on-select
+Action.c(347):     ion="showSelected(node)" selected-node="selectedNode" expanded-nodes="expandedNodes">\r\n
+Action.c(347):                     <span>{{node.label}}<i style="padding-left:4px" ng-class="{true: node.icon
+Action.c(347):     }[node.icon != null]"></i></span>\r\n
+Action.c(347):                 </treecontrol>\r\n
+Action.c(347):             </div>\r\n
+Action.c(347):         </div>\r\n
+Action.c(347):         <div id="mianDiv" ng-style="{ 'margin-left': mainMargin + 'px'}" style="height:100%; m
+Action.c(347):     argin-right:0px; overflow-x:hidden; overflow-y: auto">\r\n
+Action.c(347):             <div id="searchAreaDiv">\r\n
+Action.c(347):                 <ul class="nav navbar-nav  worklist-navbar-nav" style="margin-right:auto; heig
+Action.c(347):     ht: 46px">\r\n
+Action.c(347):                     <li class="divider-vertical" ng-attr-title="{{openNav ? '收起左边�\x8F
+Action.c(347):     ':'展开左边�\x8F' }}">\r\n
+Action.c(347):                         <span class="icon-fontsize" ng-class="{true: 'icon-ico_sidepanel_colla
+Action.c(347):     pse', false: 'icon-ico_sidepanel_expand'}[openNav]" ng-click="toggleLeft()">\r\n
+Action.c(347):                             <span class="path1"></span><span class="path2"></span><span class=
+Action.c(347):     "path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"><
+Action.c(347):     /span><span class="path7"></span>\r\n
+Action.c(347):                         </span>\r\n
+Action.c(347):     \r\n
+Action.c(347):                     </li>\r\n
+Action.c(347):                     <li title="输入�\x80查编�\xB7"><input type="text" class="form-contro
+Action.c(347):     l" placeholder="{{'AccessionNumber' | translate}}" ng-model="accessionNumber" vt-enter="se
+Action.c(347):     archRecord()" /></li>\r\n
+Action.c(347):                     <li title="输入患�\x80�编�\xB7"><input type="text" class="form-contro
+Action.c(347):     l" placeholder="{{'PatientID' | translate}}" ng-model="patientId" vt-enter="searchRecord()
+Action.c(347):     " /></li>\r\n
+Action.c(347):                     <li title="搜索"><button type="button" class="btn btn-warning form-contr
+Action.c(347):     ol icon-ico_search" ng-click="searchRecord()" ng-disabled="isSearchDisabled()" vt-enter="s
+Action.c(347):     earchRecord()"></button></li>\r\n
+Action.c(347):                     <li class="divider-vertical divider-vertical-left" title="手工匹配">\r
+Action.c(347):     \n
+Action.c(347):                 
+Action.c(347): t=36764804ms: 4380-byte response body for "http://10.184.129.108/Platform/app/workarea/reconciliation/views/reconciliation-list.html" (RelFrameId=1, Internal ID=14046)
+Action.c(347):             <span class="icon-ico_record_add icon-fontsize nav-button" ng-disabled="isEditing"
+Action.c(347):      ng-click="isEditing || mannualEdit()"><span>手工匹配</span></span>\r\n
+Action.c(347):                     </li>\r\n
+Action.c(347):                     <li class="divider-vertical" title="作废">\r\n
+Action.c(347):                         <span class="icon-ico_litter-bin icon-fontsize nav-button" ng-disabled
+Action.c(347):     ="isObsoleteDisabled()" style="color: red" puma-confirm confirm-message="{{'ConfirmObsolet
+Action.c(347):     e' | translate}}" confirm="isObsoleteDisabled() || obsolete()"><span>作废</span></span>\r
+Action.c(347):     \n
+Action.c(347):                     </li>\r\n
+Action.c(347):                     <li title="选择打印�\xBA">\r\n
+Action.c(347):                         <div class="dropdown" style="display:inline-block">\r\n
+Action.c(347):                             <select class="form-control" ng-model="selectedPrinter" ng-options
+Action.c(347):     ="t for t in terminals" ng-disabled="isPrintDisabled()">\r\n
+Action.c(347):                                 <option value="" class="dropdown-menu-item">选择打印�\xBA
+Action.c(347):     </option>\r\n
+Action.c(347):                             </select>\r\n
+Action.c(347):                         </div>\r\n
+Action.c(347):                     </li>\r\n
+Action.c(347):                     <li title="打印">\r\n
+Action.c(347):                         <span class="icon-ico_print icon-fontsize" puma-confirm confirm-messag
+Action.c(347):     e="确认打印当前胶片?" confirm="printFilm()" ng-disabled="isPrintDisabled()">\r\n
+Action.c(347):                             <span class="path1"></span><span class="path2"></span>\r\n
+Action.c(347):                         </span>\r\n
+Action.c(347):                     </li>\r\n
+Action.c(347):                 </ul>\r\n
+Action.c(347):                 <span style="float: right; display: block; height: 46px">\r\n
+Action.c(347):                     <span class="icon-ico_refresh icon-fontsize" style="display: block; float:
+Action.c(347):     right;" title="刷新" ng-click="searchUmatches()"><span class="path1"></span><span class=
+Action.c(347):     "path2"></span><span class="path3"></span></span>\r\n
+Action.c(347):                     <span class="nav-button" style="float:right; padding:13px 0;" title="自动
+Action.c(347):     刷新"><input type="checkbox" class="btn-sm" ng-model="isAutoRefresh" ng-change="setAutoR
+Action.c(347):     efresh()" /><span>{{ 'AutoRefresh' | translate }}</span></span>\r\n
+Action.c(347):                 </span>\r\n
+Action.c(347):             </div>\r\n
+Action.c(347):             <div id="searchResultDiv">\r\n
+Action.c(347):                 <table class="table">\r\n
+Action.c(347):                     <thead>\r\n
+Action.c(347):                         <tr style="background-color: #e5e2e2">\r\n
+Action.c(347):                             <th>�\x80查编�\xB7</th>\r\n
+Action.c(347):                             <th>患�\x80�ID</th>\r\n
+Action.c(347):                             <th>患�\x80�姓�\x8D</th>\r\n
+Action.c(347):                             <th>设备类型</th>\r\n
+Action.c(347):                             <th>性别</th>\r\n
+Action.c(347):                             <th>病人类型</th>\r\n
+Action.c(347):                             <th>�\x80查名�\xB0</th>\r\n
+Action.c(347):                             <th>�\x80查科�\xA4</th>\r\n
+Action.c(347):                             <th>�\x80查日�\x9F</th>\r\n
+Action.c(347):                             <th colspan="2"></th>\r\n
+Action.c(347):                         </tr>\r\n
+Action.c(347):                     </thead>\r\n
+Action.c(347):                     <tbody>\r\n
+Action.c(347):                         <tr ng-repeat="item in records">\r\n
+Action.c(347):                             <td class="center_cell">{{item.accessionNumber}}</td>\r\n
+Action.c(347):                             <td class="center_cell">{{item.patientID}}</td>\r\n
+Action.c(347):                             <td class="center_cell">{{item.patientName}}</td>\r\n
+Action.c(347):                             <td class="center_cell">{{item.modalityType}}</td>\r\n
+Action.c(347):                             <td class="center_cell">{{item.gender}}</td>\r\n
+Action.c(347):                             <td class="center_cell">{{item.patientType}}</td>\r\n
+Action.c(347):                             <td class="center_cell">{{item.examName}}</td>\r\n
+Action.c(347):                             <td class="center_cell">{{item.referringDepartment}}</td>\r\n
+Action.c(347):                             <td class="center_cell">{{item.examDate}}</td>\r\n
+Action.c(347):                             <td colspan="2"><button class="round_button icon-ico_ok" style="wi
+Action.c(347):     dth: 100px; height: 30px; color: #6afa64" type="button" ng-click="saveRecord(item)" ng-dis
+Action.c(347):     abled="isSaveDisabled(item)"><span> 匹配</span></button></td>\r\n
+Action.c(347):                         </tr>\r\n
+Action.c(347):                         <tr ng-if="isEditing">\r\n
+Action.c(347):                             <td class="center_cell"><input type="text" class="form-control" ng
+Action.c(347):     -model="record.accessionNumber" maxlength="64" /></td>\r\n
+Action.c(347):                             <td class="center_cell"><input type="text" class="form-control" ng
+Action.c(347):     -model="record.patientID" maxlength="64" /></td>\r\n
+Action.c(347):                             <td class="center_cell"><input type="text" style="width: 120px" cl
+Action.c(347):     ass="form-control" ng-model="record.patientName" maxlength="64" /></td>\r\n
+Action.c(347):                             <td class="center_cell"><select class="form-control" style="paddin
+Action.c(347):     g: 6px 0px" ng-model="record.modalityType" ng-options="t for t in modalityTypes"></select>
+Action.c(347):     </td>\r\n
+Action.c(347):                             <td class="center_cell"><select class="
+Action.c(347): t=36764805ms: 4380-byte response body for "http://10.184.129.108/Platform/app/workarea/reconciliation/views/reconciliation-list.html" (RelFrameId=1, Internal ID=14046)
+Action.c(347):     form-control" style="padding: 6px 0px" ng-model="record.gender" ng-options="t.value as t.n
+Action.c(347):     ame for t in genders"></select></td>\r\n
+Action.c(347):                             <td class="center_cell"><select class="form-control" style="paddin
+Action.c(347):     g: 6px 0px" ng-model="record.patientType" ng-options="t.type as t.name for t in patientTyp
+Action.c(347):     es"></select></td>\r\n
+Action.c(347):                             <td class="center_cell"><input type="text" class="form-control" ng
+Action.c(347):     -model="record.examName" maxlength="256" /></td>\r\n
+Action.c(347):                             <td class="center_cell"><select class="form-control" style="paddin
+Action.c(347):     g: 6px 0px" ng-model="record.referringDepartment" ng-options="t.departmentName as t.depart
+Action.c(347):     mentName for t in examDepartments"></select></td>\r\n
+Action.c(347):                             <td class="center_cell">\r\n
+Action.c(347):                                 <p class="input-group" style="width: 150px">\r\n
+Action.c(347):                                     <input type="text" class="form-control" uib-datepicker-pop
+Action.c(347):     up="{{dateFormat}}" datepicker-options="examDateOptions" show-button-bar="false" is-open="
+Action.c(347):     examDatePicker.opened"\r\n
+Action.c(347):                                            ng-model="record.examDate" readonly="readonly">\r\n
+Action.c(347):                                     <span class="input-group-btn">\r\n
+Action.c(347):                                         <button type="button" class="btn btn-default" ng-click
+Action.c(347):     ="openExamDate()"><i class="glyphicon glyphicon-calendar"></i></button>\r\n
+Action.c(347):                                     </span>\r\n
+Action.c(347):                                 </p>\r\n
+Action.c(347):                             </td>\r\n
+Action.c(347):                             <td>\r\n
+Action.c(347):                                 <button class="round_button icon-ico_ok" style="width: 100px; 
+Action.c(347):     height: 30px; color: #6afa64" type="button" ng-click="saveRecord(record)" ng-disabled="isM
+Action.c(347):     annualSaveDisabled(record)"><span> 保存匹配</span></button>\r\n
+Action.c(347):                             </td>\r\n
+Action.c(347):                             <td>\r\n
+Action.c(347):                                 <button class="round_button" style="width: 60px; height: 30px"
+Action.c(347):      type="button" ng-click="cancelSave()" ng-disabled="item.saved">取消</button>\r\n
+Action.c(347):                             </td>\r\n
+Action.c(347):                         </tr>\r\n
+Action.c(347):                     </tbody>\r\n
+Action.c(347):                     <tfoot ng-if="hasNoData">\r\n
+Action.c(347):                         <tr>\r\n
+Action.c(347):                             <td colspan="11">未找到记�\x95!</td>\r\n
+Action.c(347):                         </tr>\r\n
+Action.c(347):                     </tfoot>\r\n
+Action.c(347):                 </table>\r\n
+Action.c(347):             </div>\r\n
+Action.c(347):             <div id="divFilmViewer" ng-if="isFilmTypeSelected" style="position:relative" ng-st
+Action.c(347):     yle="{'height': filmViewerHeight + 'px'}">\r\n
+Action.c(347):                 <div style="position:absolute; bottom:0; top:0">\r\n
+Action.c(347):                     <table style="border: none; width: 100%; height: 100%">\r\n
+Action.c(347):                         <tr>\r\n
+Action.c(347):                             <td style="width: 84px; height: 100%; padding: 0">\r\n
+Action.c(347):                                 <div id="divImgLeft" style="background-color: #666666; padding
+Action.c(347):     : 0px; margin: 0px; height: 100%">\r\n
+Action.c(347):                                     <div id="divFunction">\r\n
+Action.c(347):                                         <table class="film_img_viewer">\r\n
+Action.c(347):                                             <tr>\r\n
+Action.c(347):                                                 <td>\r\n
+Action.c(347):                                                     <div onmouseover="if(this.className=='PS_Z
+Action.c(347):     oom1X_active') return;this.className='PS_Zoom1X_hover';"\r\n
+Action.c(347):                                                          onmouseout="if(this.className=='PS_Zo
+Action.c(347):     om1X_active') return;this.className='PS_Zoom1X_common';"\r\n
+Action.c(347):                                                          id="imgZoom1" ng-click="zoomImg(1);" 
+Action.c(347):     class="PS_Zoom1X_active" title="显示原始尺寸" />\r\n
+Action.c(347):                                                 </td>\r\n
+Action.c(347):                                                 <td>\r\n
+Action.c(347):                                                     <div onmouseover="if(this.className=='PS_Z
+Action.c(347):     oom2X_active') return;this.className='PS_Zoom2X_hover';"\r\n
+Action.c(347):                                                          onmouseout="if(this.className=='PS_Zo
+Action.c(347):     om2X_active') return;this.className='PS_Zoom2X_common';"\r\n
+Action.c(347):                                                          id="imgZoom2" ng-click="zoomImg(2);" 
+Action.c(347):     class="PS_Zoom2X_common" title="显示2倍尺�\xB8" />\r\n
+Action.c(347):                                                 </td>\r\n
+Action.c(347):                                             </tr>\r\n
+Action.c(347):                                             <tr>\r\n
+Action.c(347):                                                 <td>\r\n
+Action.c(347):                                                     <div onmouseover="if(this.className=='PS_Z
+Action.c(347):     oomFit_active') return;this.className='PS_ZoomFit_hover';"\r\n
+Action.c(347):                                                          onmouseout="if(this
+Action.c(347): t=36764805ms: 4380-byte response body for "http://10.184.129.108/Platform/app/workarea/reconciliation/views/reconciliation-list.html" (RelFrameId=1, Internal ID=14046)
+Action.c(347):     .className=='PS_ZoomFit_active') return;this.className='PS_ZoomFit_common';"\r\n
+Action.c(347):                                                          id="imgZoomFit" ng-click="zoomImg(0);
+Action.c(347):     " class="PS_ZoomFit_common" title="适应窗口显示" />\r\n
+Action.c(347):                                                 </td>\r\n
+Action.c(347):                                                 <td></td>\r\n
+Action.c(347):                                             </tr>\r\n
+Action.c(347):                                         </table>\r\n
+Action.c(347):                                         <div style="text-align: center;">\r\n
+Action.c(347):                                             <div class="PS_Spliter"></div>\r\n
+Action.c(347):                                         </div>\r\n
+Action.c(347):                                         <table class="film_img_viewer">\r\n
+Action.c(347):                                             <tr>\r\n
+Action.c(347):                                                 <td>\r\n
+Action.c(347):                                                     <div onmouseover=" this.className = 'PS_In
+Action.c(347):     vertFit_hover';"\r\n
+Action.c(347):                                                          onmouseout=" this.className = 'PS_Inv
+Action.c(347):     ertFit_common';"\r\n
+Action.c(347):                                                          onmousedown="this.className = 'PS_Inv
+Action.c(347):     ertFit_active';"\r\n
+Action.c(347):                                                          onmouseup="this.className = 'PS_Inver
+Action.c(347):     tFit_common';"\r\n
+Action.c(347):                                                          id="iamgInvert" class="PS_InvertFit_c
+Action.c(347):     ommon" ng-click="invertImg()" title="反色" />\r\n
+Action.c(347):                                                 </td>\r\n
+Action.c(347):                                             </tr>\r\n
+Action.c(347):                                         </table>\r\n
+Action.c(347):                                         <div style="text-align: center;">\r\n
+Action.c(347):                                             <div class="PS_Spliter"></div>\r\n
+Action.c(347):                                         </div>\r\n
+Action.c(347):                                         <table class="film_img_viewer">\r\n
+Action.c(347):                                             <tr>\r\n
+Action.c(347):                                                 <td>\r\n
+Action.c(347):                                                     <div onmouseover=" this.className = 'PS_Ro
+Action.c(347):     tateLeftFit_hover';"\r\n
+Action.c(347):                                                          onmouseout=" this.className = 'PS_Rot
+Action.c(347):     ateLeftFit_common';"\r\n
+Action.c(347):                                                          onmousedown="this.className = 'PS_Rot
+Action.c(347):     ateLeftFit_active';"\r\n
+Action.c(347):                                                          onmouseup="this.className = 'PS_Rotat
+Action.c(347):     eLeftFit_common';"\r\n
+Action.c(347):                                                          id="iamgLeftRotate" class="PS_RotateL
+Action.c(347):     eftFit_common" ng-click="rotateImg('left')" title="左旋" />\r\n
+Action.c(347):                                                 </td>\r\n
+Action.c(347):                                                 <td>\r\n
+Action.c(347):                                                     <div onmouseover=" this.className = 'PS_Ro
+Action.c(347):     tateRightFit_hover';"\r\n
+Action.c(347):                                                          onmouseout=" this.className = 'PS_Rot
+Action.c(347):     ateRightFit_common';"\r\n
+Action.c(347):                                                          onmousedown="this.className = 'PS_Rot
+Action.c(347):     ateRightFit_active';"\r\n
+Action.c(347):                                                          onmouseup="this.className = 'PS_Rotat
+Action.c(347):     eRightFit_common';"\r\n
+Action.c(347):                                                          id="iamgRightRotate" class="PS_Rotate
+Action.c(347):     RightFit_common" ng-click="rotateImg('right')" title="右旋" />\r\n
+Action.c(347):                                                 </td>\r\n
+Action.c(347):                                             </tr>\r\n
+Action.c(347):                                         </table>\r\n
+Action.c(347):                                         <div style="text-align: center;">\r\n
+Action.c(347):                                             <div class="PS_Spliter"></div>\r\n
+Action.c(347):                                         </div>\r\n
+Action.c(347):                                         <table class="film_img_viewer">\r\n
+Action.c(347):                                             <tr>\r\n
+Action.c(347):                                                 <td>\r\n
+Action.c(347):                                                     <div id="imgPos1" ng-click="movePos(1);" c
+Action.c(347):     lass="PS_FitTL_active" title="对齐左上�\x92" />\r\n
+Action.c(347):                                                 </td>\r\n
+Action.c(347):                                                 <td>\r\n
+Action.c(347):                                                     <div id="imgPos2" ng-click="movePos(2);" c
+Action.c(347):     lass="PS_FitTR_common" title="对齐右上�\x92" />\r\n
+Action.c(347):                                                 </td>\r\n
+Action.c(347):                                             </tr>\r\n
+Action.c(347):                                             <tr>\r\n
+Action.c(347):                                                 <td>\r\n
+Action.c(347):                                                     <div id="imgPos3" ng-click="movePos(3);" c
+Action.c(347):     lass="PS_FitBL_common" title="对齐左下�\x92" />\r\n
+Action.c(347):                      
+Action.c(347): t=36764805ms: 3484-byte response body for "http://10.184.129.108/Platform/app/workarea/reconciliation/views/reconciliation-list.html" (RelFrameId=1, Internal ID=14046)
+Action.c(347):                                </td>\r\n
+Action.c(347):                                                 <td>\r\n
+Action.c(347):                                                     <div id="imgPos4" ng-click="movePos(4);" c
+Action.c(347):     lass="PS_FitBR_common" title="对齐右下�\x92" />\r\n
+Action.c(347):                                                 </td>\r\n
+Action.c(347):                                             </tr>\r\n
+Action.c(347):                                         </table>\r\n
+Action.c(347):                                         <div style="text-align: center;">\r\n
+Action.c(347):                                             <div class="PS_Spliter"></div>\r\n
+Action.c(347):                                         </div>\r\n
+Action.c(347):                                     </div>\r\n
+Action.c(347):                                     <div id="divNav" style="margin: auto;">\r\n
+Action.c(347):                                         <div onmouseover="this.className='PS_NavPrev_hover';" 
+Action.c(347):     onmouseout="this.className='PS_NavPrev_common';"\r\n
+Action.c(347):                                              ng-click="scrollNavList(-100);" class="PS_NavPrev
+Action.c(347):     _common">\r\n
+Action.c(347):                                         </div>\r\n
+Action.c(347):                                         <div>\r\n
+Action.c(347):                                             <div id="divImageList" style="width: 100%; overflo
+Action.c(347):     w: auto; overflow-x:hidden; font-size: large; color: White; text-align: center;" ng-style=
+Action.c(347):     "{'height': imageListHeight + 'px'}">\r\n
+Action.c(347):                                                 <div style="padding: 4px 0px" ng-repeat="image
+Action.c(347):      in images">\r\n
+Action.c(347):                                                     <img ng-src="{{image.thumbnailImagePath}}"
+Action.c(347):      ng-click="selectImage(image)" />\r\n
+Action.c(347):                                                     <span style="font-size: large; color: whit
+Action.c(347):     e">{{image.index}}</span>\r\n
+Action.c(347):                                                 </div>\r\n
+Action.c(347):                                             </div>\r\n
+Action.c(347):                                         </div>\r\n
+Action.c(347):                                         <div onmouseover="this.className='PS_NavNext_hover';" 
+Action.c(347):     onmouseout="this.className='PS_NavNext_common';"\r\n
+Action.c(347):                                              ng-click="scrollNavList(100);" class="PS_NavNext_
+Action.c(347):     common">\r\n
+Action.c(347):                                         </div>\r\n
+Action.c(347):                                     </div>\r\n
+Action.c(347):                                 </div>\r\n
+Action.c(347):                             </td>\r\n
+Action.c(347):                             <td width="100%">\r\n
+Action.c(347):                                 <div id="divImgRect" style="background-color: #343434; overflo
+Action.c(347):     w: auto; width: 100%" ng-style="{'height': filmViewerHeight + 'px', 'width': divImgRectWid
+Action.c(347):     th + 'px'}">\r\n
+Action.c(347):                                     <div id="divNoImg" ng-hide="isImageSelected" style="paddin
+Action.c(347):     g: 50px 0px 0px 50px; color: White; font-size: large; height: 100%; width: 100%">\r\n
+Action.c(347):                                         无图�\x8F\r\n
+Action.c(347):                                     </div>\r\n
+Action.c(347):                                     <div id="divImg" ng-if="isImageSelected">\r\n
+Action.c(347):                                         <img id="imgRaw" ng-src="{{originImagePath}}" ng-style
+Action.c(347):     ="imgRawAddition_Style" />\r\n
+Action.c(347):                                     </div>\r\n
+Action.c(347):                                 </div>\r\n
+Action.c(347):                             </td>\r\n
+Action.c(347):                         </tr>\r\n
+Action.c(347):                     </table>\r\n
+Action.c(347):     \r\n
+Action.c(347):                 </div>\r\n
+Action.c(347):             </div>\r\n
+Action.c(347):             <div ng-if="!isCanvasSupport" style="overflow:auto" ng-style="{'height': filmViewe
+Action.c(347):     rHeight + 'px'}">\r\n
+Action.c(347):                 <div>系统�\x80测到您的浏览器不支持直接查看PDF文件，请安�
+Action.c(347):     ��PDF插件�\x82</div>\r\n
+Action.c(347):                 <iframe id="pdfFrame" style="height: 100%; width: 100%"></iframe>\r\n
+Action.c(347):             </div>\r\n
+Action.c(347):             <div id="divReportViewer" ng-if="isCanvasSupport && !isFilmTypeSelected" style="ov
+Action.c(347):     erflow:auto" ng-style="{'height': filmViewerHeight + 'px'}">\r\n
+Action.c(347):             </div>\r\n
+Action.c(347):         </div>\r\n
+Action.c(347):     </div>
+Action.c(347): web_url("reconciliation-list.html") was successful, 19296 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Action.c(355): web_url("getUnmatchImages") started  	[MsgId: MMSG-26355]
+Action.c(355): t=36776980ms: 278-byte response headers for "http://10.184.129.108/webapi/api/reconciliation/getUnmatchImages?days=1" (RelFrameId=1, Internal ID=14047)
+Action.c(355):     HTTP/1.1 500 NullReferenceException\r\n
+Action.c(355):     Cache-Control: no-cache\r\n
+Action.c(355):     Pragma: no-cache\r\n
+Action.c(355):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(355):     Expires: -1\r\n
+Action.c(355):     Server: Microsoft-IIS/7.5\r\n
+Action.c(355):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(355):     X-Powered-By: ASP.NET\r\n
+Action.c(355):     Date: Fri, 21 Sep 2018 18:19:24 GMT\r\n
+Action.c(355):     Content-Length: 99\r\n
+Action.c(355):     \r\n
+Action.c(355): t=36776980ms: 99-byte response body for "http://10.184.129.108/webapi/api/reconciliation/getUnmatchImages?days=1" (RelFrameId=1, Internal ID=14047)
+Action.c(355):     {"name":"NullReferenceException","message":"Object reference not set to an instance of an 
+Action.c(355):     object."}
+Action.c(355): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/reconciliation/getUnmatchImages?days=1"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 1456.	[MsgId: MMSG-10545]
+Action.c(315):     e":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode
+Action.c(315):     ":"","errorDescription":null,"statusTime":"2018-09-22T16:41:47.04+08:00"},{"printerID":"Up
+Action.c(315):     per","terminalID":null,"printerName":"Upper","printerModel":"Color","statusCode":0,"status
+Action.c(315):     Description":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSi
+Action.c(315):     zeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"P
+Action.c(315):     lain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":1,"
+Action.c(315):     blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","
+Action.c(315):     errorDescription":null,"statusTime":"2018-09-22T16:41:52.063+08:00"}],"errorCode":null,"er
+Action.c(315):     rorDescription":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"termin
+Action.c(315):     alID":"Terminal35","terminalName":"Terminal35","terminalIP":"10.184.129.35","terminalDescr
+Action.c(315):     iption":null,"terminalStatus":0,"terminalStatusLevel":"Normal","terminalStatusDescription"
+Action.c(315):     :null,"terminalStatusTime":"2018-09-22T16:44:02.493+08:00","departmentIdList":"3,12,4,5,6,
+Action.c(315):     7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo":null,
+Action.c(315):     "reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","printe
+Action.c(315):     rModel":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerNa
+Action.c(315):     me":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"Empt
+Action.c(315):     y"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDesc
+Action.c(315):     ription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":
+Action.c(315):     0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T16:43
+Action.c(315):     :13.24+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerModel"
+Action.c(315):     :"Color","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":nu
+Action.c(315):     ll,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"
+Action.c(315):     drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescriptio
+Action.c(315):     n":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yel
+Action.c(315):     lowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T16:43:18.26
+Action.c(315):     +08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEnabledFlag":
+Action.c(315):     1,"isFollowed":false},{"terminalID":"Terminal36","terminalName":"Terminal36","terminalIP":
+Action.c(315):     "10.184.129.36","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Norma
+Action.c(315):     l","terminalStatusDescription":null,"terminalStatusTime":"2018-09-22T16:45:32.77+08:00","d
+Action.c(315):     epartmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":
+Action.c(315):     false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,
+Action.c(315):     "printerName":"Lower","printerModel":"Mono","statusCode":0,"statusDescription":"Normal","r
+Action.c(315):     eportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode
+Action.c(315):     ":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A
+Action.c(315):     4","statusCode":0,"statusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanI
+Action.c(315):     nkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"
+Action.c(315):     statusTime":"2018-09-22T16:44:42.563+08:00"},{"printerID":"Upper","terminalID":null,"print
+Action.c(315):     erName":"Upper","printerModel":"Color","statusCode":0,"statu
+Action.c(315): t=89024465ms: 4380-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=4" (RelFrameId=1, Internal ID=33479)
+Action.c(315):     sDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperS
+Action.c(315):     izeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"
+Action.c(315):     Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":1,
+Action.c(315):     "blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"",
+Action.c(315):     "errorDescription":null,"statusTime":"2018-09-22T16:44:47.587+08:00"}],"errorCode":null,"e
+Action.c(315):     rrorDescription":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"termi
+Action.c(315):     nalID":"Terminal37","terminalName":"Terminal37","terminalIP":"10.184.129.37","terminalDesc
+Action.c(315):     ription":null,"terminalStatus":0,"terminalStatusLevel":"Normal","terminalStatusDescription
+Action.c(315):     ":null,"terminalStatusTime":"2018-09-22T16:50:13.023+08:00","departmentIdList":"3,12,4,5,6
+Action.c(315):     ,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo":null
+Action.c(315):     ,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","print
+Action.c(315):     erModel":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerN
+Action.c(315):     ame":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"Emp
+Action.c(315):     ty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDes
+Action.c(315):     cription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel"
+Action.c(315):     :0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T16:4
+Action.c(315):     9:58.347+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerMode
+Action.c(315):     l":"Color","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":
+Action.c(315):     null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},
+Action.c(315):     {"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescript
+Action.c(315):     ion":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"y
+Action.c(315):     ellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T16:50:03.
+Action.c(315):     72+08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEnabledFlag
+Action.c(315):     ":1,"isFollowed":false},{"terminalID":"Terminal38","terminalName":"Terminal38","terminalIP
+Action.c(315):     ":"10.184.129.38","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Nor
+Action.c(315):     mal","terminalStatusDescription":null,"terminalStatusTime":"2018-09-22T16:43:38.76+08:00",
+Action.c(315):     "departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState
+Action.c(315):     ":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":nul
+Action.c(315):     l,"printerName":"Lower","printerModel":"Mono","statusCode":0,"statusDescription":"Normal",
+Action.c(315):     "reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCo
+Action.c(315):     de":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":
+Action.c(315):     "A4","statusCode":0,"statusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"cya
+Action.c(315):     nInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null
+Action.c(315):     ,"statusTime":"2018-09-22T16:42:49.17+08:00"},{"printerID":"Upper","terminalID":null,"prin
+Action.c(315):     terName":"Upper","printerModel":"Color","statusCode":0,"statusDescription":"Normal","repor
+Action.c(315):     tDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,
+Action.c(315):     "statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","
+Action.c(315):     statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLe
+Action.c(315):     vel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"stat
+Action.c(315):     usTime":"2018-09-22T16:42:54.193+08:00"}],"errorCode":null,"errorDescription":null,"termin
+Action.c(315):     alType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal39","terminal
+Action.c(315):     Name":"Terminal39","terminalIP":"10.184.129.39","terminalDescription":null,"terminalStatus
+Action.c(315):     ":0,"terminalStatusLevel":"Normal","terminalStatusDescription":null,"terminalStatusTime":"
+Action.c(315):     2018-09-22T16:45:01.763+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermi
+Action.c(315):     anlState":false,"checkFilmState":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"prin
+Action.c(315):     terID":"Lower","terminalID":null,"printerName":"Lower","printerModel":"Mono","statusCode":
+Action.c(315):     0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain"
+Action.c(315):     ,"paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"pape
+Action.c(315):     rType":"Plain","paperSizeType":"A4","statusCode":0,"statusDe
+Action.c(315): t=89024466ms: 5676-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=4" (RelFrameId=1, Internal ID=33479)
+Action.c(315):     scription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel
+Action.c(315):     ":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T16:
+Action.c(315):     44:12.157+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerMod
+Action.c(315):     el":"Color","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName"
+Action.c(315):     :null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"}
+Action.c(315):     ,{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescrip
+Action.c(315):     tion":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"
+Action.c(315):     yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T16:44:17
+Action.c(315):     .16+08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEnabledFla
+Action.c(315):     g":1,"isFollowed":false},{"terminalID":"Terminal4","terminalName":"Terminal4","terminalIP"
+Action.c(315):     :"10.184.129.4","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Norma
+Action.c(315):     l","terminalStatusDescription":null,"terminalStatusTime":"2018-09-22T16:46:33.497+08:00","
+Action.c(315):     departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState"
+Action.c(315):     :false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null
+Action.c(315):     ,"printerName":"Lower","printerModel":"Mono","statusCode":0,"statusDescription":"Normal","
+Action.c(315):     reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCod
+Action.c(315):     e":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"
+Action.c(315):     A4","statusCode":0,"statusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyan
+Action.c(315):     InkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,
+Action.c(315):     "statusTime":"2018-09-22T16:45:44.253+08:00"},{"printerID":"Upper","terminalID":null,"prin
+Action.c(315):     terName":"Upper","printerModel":"Color","statusCode":0,"statusDescription":"Normal","repor
+Action.c(315):     tDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,
+Action.c(315):     "statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","
+Action.c(315):     statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLe
+Action.c(315):     vel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"stat
+Action.c(315):     usTime":"2018-09-22T16:45:49.277+08:00"}],"errorCode":null,"errorDescription":null,"termin
+Action.c(315):     alType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal40","terminal
+Action.c(315):     Name":"Terminal40","terminalIP":"10.184.129.40","terminalDescription":null,"terminalStatus
+Action.c(315):     ":0,"terminalStatusLevel":"Normal","terminalStatusDescription":null,"terminalStatusTime":"
+Action.c(315):     2018-09-22T16:47:54.927+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermi
+Action.c(315):     anlState":false,"checkFilmState":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"prin
+Action.c(315):     terID":"Lower","terminalID":null,"printerName":"Lower","printerModel":"Mono","statusCode":
+Action.c(315):     0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain"
+Action.c(315):     ,"paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"pape
+Action.c(315):     rType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printer
+Action.c(315):     Type":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorC
+Action.c(315):     ode":"","errorDescription":null,"statusTime":"2018-09-22T16:47:05.107+08:00"},{"printerID"
+Action.c(315):     :"Upper","terminalID":null,"printerName":"Upper","printerModel":"Color","statusCode":0,"st
+Action.c(315):     atusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","pap
+Action.c(315):     erSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType
+Action.c(315):     ":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType"
+Action.c(315):     :1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":
+Action.c(315):     "","errorDescription":null,"statusTime":"2018-09-22T16:47:10.127+08:00"}],"errorCode":null
+Action.c(315):     ,"errorDescription":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"te
+Action.c(315):     rminalID":"Terminal41","terminalName":"Terminal41","terminalIP":"10.184.129.41","terminalD
+Action.c(315):     escription":null,"terminalStatus":0,"terminalStatusLevel":"Normal","terminalStatusDescript
+Action.c(315):     ion":null,"terminalStatusTime":"2018-09-22T16:49:14.31+08:00","departmentIdList":"3,12,4,5
+Action.c(315):     ,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo":nu
+Action.c(315):     ll,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","pri
+Action.c(315):     nterModel":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawe
+Action.c(315):     rName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"E
+Action.c(315):     mpty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusD
+Action.c(315):     escription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLeve
+Action.c(315):     l":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T16
+Action.c(315):     :48:24.757+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerMo
+Action.c(315):     del":"Color","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName
+Action.c(315):     ":null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"
+Action.c(315):     },{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescri
+Action.c(315):     ption":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,
+Action.c(315):     "yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T16:48:2
+Action.c(315):     9.777+08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEnabledF
+Action.c(315):     lag":1,"isFollowed":false},{"terminalID":"Terminal42","terminalName":"Terminal42","termina
+Action.c(315):     lIP":"10.184.129.42","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"
+Action.c(315):     Normal
+Action.c(315): t=89024466ms: 4380-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=4" (RelFrameId=1, Internal ID=33479)
+Action.c(315):     ","terminalStatusDescription":null,"terminalStatusTime":"2018-09-22T16:45:09.417+08:00","d
+Action.c(315):     epartmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":
+Action.c(315):     false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,
+Action.c(315):     "printerName":"Lower","printerModel":"Mono","statusCode":0,"statusDescription":"Normal","r
+Action.c(315):     eportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode
+Action.c(315):     ":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A
+Action.c(315):     4","statusCode":0,"statusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanI
+Action.c(315):     nkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"
+Action.c(315):     statusTime":"2018-09-22T16:44:20.18+08:00"},{"printerID":"Upper","terminalID":null,"printe
+Action.c(315):     rName":"Upper","printerModel":"Color","statusCode":0,"statusDescription":"Normal","reportD
+Action.c(315):     rawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"s
+Action.c(315):     tatusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","st
+Action.c(315):     atusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLeve
+Action.c(315):     l":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"status
+Action.c(315):     Time":"2018-09-22T16:44:25.207+08:00"}],"errorCode":null,"errorDescription":null,"terminal
+Action.c(315):     Type":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal43","terminalNa
+Action.c(315):     me":"Terminal43","terminalIP":"10.184.129.43","terminalDescription":null,"terminalStatus":
+Action.c(315):     0,"terminalStatusLevel":"Normal","terminalStatusDescription":null,"terminalStatusTime":"20
+Action.c(315):     18-09-22T16:46:30.243+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermian
+Action.c(315):     lState":false,"checkFilmState":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printe
+Action.c(315):     rID":"Lower","terminalID":null,"printerName":"Lower","printerModel":"Mono","statusCode":0,
+Action.c(315):     "statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","
+Action.c(315):     paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperT
+Action.c(315):     ype":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerTy
+Action.c(315):     pe":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCod
+Action.c(315):     e":"","errorDescription":null,"statusTime":"2018-09-22T16:45:40.517+08:00"},{"printerID":"
+Action.c(315):     Upper","terminalID":null,"printerName":"Upper","printerModel":"Color","statusCode":0,"stat
+Action.c(315):     usDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paper
+Action.c(315):     SizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":
+Action.c(315):     "Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":1
+Action.c(315):     ,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":""
+Action.c(315):     ,"errorDescription":null,"statusTime":"2018-09-22T16:45:45.54+08:00"}],"errorCode":null,"e
+Action.c(315):     rrorDescription":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"termi
+Action.c(315):     nalID":"Terminal44","terminalName":"Terminal44","terminalIP":"10.184.129.44","terminalDesc
+Action.c(315):     ription":null,"terminalStatus":0,"terminalStatusLevel":"Normal","terminalStatusDescription
+Action.c(315):     ":null,"terminalStatusTime":"2018-09-22T16:47:52.747+08:00","departmentIdList":"3,12,4,5,6
+Action.c(315):     ,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo":null
+Action.c(315):     ,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","print
+Action.c(315):     erModel":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerN
+Action.c(315):     ame":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"Emp
+Action.c(315):     ty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDes
+Action.c(315):     cription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel"
+Action.c(315):     :0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T16:4
+Action.c(315):     7:02.913+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerMode
+Action.c(315):     l":"Color","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":
+Action.c(315):     null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},
+Action.c(315):     {"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescript
+Action.c(315):     ion":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"y
+Action.c(315):     ellowInkLevel":0,"errorCode":"","errorDescription":null,"sta
+Action.c(315): t=89024467ms: 5840-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=4" (RelFrameId=1, Internal ID=33479)
+Action.c(315):     tusTime":"2018-09-22T16:47:07.94+08:00"}],"errorCode":null,"errorDescription":null,"termin
+Action.c(315):     alType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal45","terminal
+Action.c(315):     Name":"Terminal45","terminalIP":"10.184.129.45","terminalDescription":null,"terminalStatus
+Action.c(315):     ":0,"terminalStatusLevel":"Normal","terminalStatusDescription":null,"terminalStatusTime":"
+Action.c(315):     2018-09-22T16:49:22.04+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermia
+Action.c(315):     nlState":false,"checkFilmState":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"print
+Action.c(315):     erID":"Lower","terminalID":null,"printerName":"Lower","printerModel":"Mono","statusCode":0
+Action.c(315):     ,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain",
+Action.c(315):     "paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paper
+Action.c(315):     Type":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerT
+Action.c(315):     ype":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCo
+Action.c(315):     de":"","errorDescription":null,"statusTime":"2018-09-22T16:48:31.647+08:00"},{"printerID":
+Action.c(315):     "Upper","terminalID":null,"printerName":"Upper","printerModel":"Color","statusCode":0,"sta
+Action.c(315):     tusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","pape
+Action.c(315):     rSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType"
+Action.c(315):     :"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":
+Action.c(315):     1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"
+Action.c(315):     ","errorDescription":null,"statusTime":"2018-09-22T16:48:36.7+08:00"}],"errorCode":null,"e
+Action.c(315):     rrorDescription":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"termi
+Action.c(315):     nalID":"Terminal46","terminalName":"Terminal46","terminalIP":"10.184.129.46","terminalDesc
+Action.c(315):     ription":null,"terminalStatus":0,"terminalStatusLevel":"Normal","terminalStatusDescription
+Action.c(315):     ":null,"terminalStatusTime":"2018-09-22T16:42:38.43+08:00","departmentIdList":"3,12,4,5,6,
+Action.c(315):     7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo":null,
+Action.c(315):     "reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","printe
+Action.c(315):     rModel":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerNa
+Action.c(315):     me":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"Empt
+Action.c(315):     y"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDesc
+Action.c(315):     ription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":
+Action.c(315):     0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T16:41
+Action.c(315):     :48.95+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerModel"
+Action.c(315):     :"Color","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":nu
+Action.c(315):     ll,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"
+Action.c(315):     drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescriptio
+Action.c(315):     n":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yel
+Action.c(315):     lowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T16:41:53.98
+Action.c(315):     +08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEnabledFlag":
+Action.c(315):     1,"isFollowed":false},{"terminalID":"Terminal47","terminalName":"Terminal47","terminalIP":
+Action.c(315):     "10.184.129.47","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Norma
+Action.c(315):     l","terminalStatusDescription":null,"terminalStatusTime":"2018-09-22T16:43:53.293+08:00","
+Action.c(315):     departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState"
+Action.c(315):     :false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null
+Action.c(315):     ,"printerName":"Lower","printerModel":"Mono","statusCode":0,"statusDescription":"Normal","
+Action.c(315):     reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCod
+Action.c(315):     e":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"
+Action.c(315):     A4","statusCode":0,"statusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyan
+Action.c(315):     InkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,
+Action.c(315):     "statusTime":"2018-09-22T16:43:03.743+08:00"},{"printerID":"Upper","terminalID":null,"prin
+Action.c(315):     terName":"Upper","printerModel":"Color","statusCode":0,"statusDescription":"Normal","repor
+Action.c(315):     tDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,
+Action.c(315):     "statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","
+Action.c(315):     statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLe
+Action.c(315):     vel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"stat
+Action.c(315):     usTime":"2018-09-22T16:43:08.74+08:00"}],"errorCode":null,"errorDescription":null,"termina
+Action.c(315):     lType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal48","terminalN
+Action.c(315):     ame":"Terminal48","terminalIP":"10.184.129.48","terminalDescription":null,"terminalStatus"
+Action.c(315):     :0,"terminalStatusLevel":"Normal","terminalStatusDescription":null,"terminalStatusTime":"2
+Action.c(315):     018-09-22T16:48:27.98+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermian
+Action.c(315):     lState":false,"checkFilmState":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printe
+Action.c(315):     rID":"Lower","terminalID":null,"printerName":"Lower","printerModel":"Mono","statusCode":0,
+Action.c(315):     "statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","
+Action.c(315):     paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperT
+Action.c(315):     ype":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerTy
+Action.c(315):     pe":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCod
+Action.c(315):     e":"","errorDescription":null,"statusTime":"2018-09-22T16:47:38.61+08:00"},{"printerID":"U
+Action.c(315):     pper","terminalID":null,"printerName":"Upper","printerModel":"Color","statusCode
+Action.c(315): t=89024467ms: 2920-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=4" (RelFrameId=1, Internal ID=33479)
+Action.c(315):     ":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plai
+Action.c(315):     n","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"pa
+Action.c(315):     perType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"print
+Action.c(315):     erType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"erro
+Action.c(315):     rCode":"","errorDescription":null,"statusTime":"2018-09-22T16:47:43.627+08:00"}],"errorCod
+Action.c(315):     e":null,"errorDescription":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":fals
+Action.c(315):     e},{"terminalID":"Terminal49","terminalName":"Terminal49","terminalIP":"10.184.129.49","te
+Action.c(315):     rminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Normal","terminalStatusD
+Action.c(315):     escription":null,"terminalStatusTime":"2018-09-22T16:49:40.69+08:00","departmentIdList":"3
+Action.c(315):     ,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinterI
+Action.c(315):     nfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lowe
+Action.c(315):     r","printerModel":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[
+Action.c(315):     {"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDescript
+Action.c(315):     ion":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"
+Action.c(315):     statusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magenta
+Action.c(315):     InkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-0
+Action.c(315):     9-22T16:48:50.82+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","pri
+Action.c(315):     nterModel":"Color","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"draw
+Action.c(315):     erName":null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"
+Action.c(315):     Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"status
+Action.c(315):     Description":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLev
+Action.c(315):     el":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T1
+Action.c(315):     6:48:55.847+08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEn
+Action.c(315):     abledFlag":1,"isFollowed":false},{"terminalID":"Terminal5","terminalName":"Terminal5","ter
+Action.c(315):     minalIP":"10.184.129.5","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel
+Action.c(315):     ":"Normal","terminalStatusDescription":null,"terminalStatusTime":"2018-09-22T16:43:25.923+
+Action.c(315):     08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFi
+Action.c(315):     lmState":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminal
+Action.c(315):     ID":null,"printerName":"Lower","printerModel":"Mono","statusCode":0,"statusDescription":"N
+Action.c(315):     ormal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","s
+Action.c(315):     tatusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSiz
+Action.c(315):     eType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":0,"blackInkLevel":
+Action.c(315):     71,"cyanInkLevel":0,"magentaInkLevel":0,
+Action.c(315): t=89024468ms: 7300-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=4" (RelFrameId=1, Internal ID=33479)
+Action.c(315):     "yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T16:42:3
+Action.c(315):     6.5+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerModel":"C
+Action.c(315):     olor","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,
+Action.c(315):     "paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"dra
+Action.c(315):     werName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":
+Action.c(315):     "Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellow
+Action.c(315):     InkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T16:42:41.527+0
+Action.c(315):     8:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEnabledFlag":1,
+Action.c(315):     "isFollowed":false},{"terminalID":"Terminal50","terminalName":"Terminal50","terminalIP":"1
+Action.c(315):     0.184.129.50","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Normal"
+Action.c(315):     ,"terminalStatusDescription":null,"terminalStatusTime":"2018-09-22T16:44:44.49+08:00","dep
+Action.c(315):     artmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":fa
+Action.c(315):     lse,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"p
+Action.c(315):     rinterName":"Lower","printerModel":"Mono","statusCode":0,"statusDescription":"Normal","rep
+Action.c(315):     ortDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":
+Action.c(315):     3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4"
+Action.c(315):     ,"statusCode":0,"statusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInk
+Action.c(315):     Level":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"st
+Action.c(315):     atusTime":"2018-09-22T16:43:54.827+08:00"},{"printerID":"Upper","terminalID":null,"printer
+Action.c(315):     Name":"Upper","printerModel":"Color","statusCode":0,"statusDescription":"Normal","reportDr
+Action.c(315):     awersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"st
+Action.c(315):     atusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","sta
+Action.c(315):     tusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel
+Action.c(315):     ":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusT
+Action.c(315):     ime":"2018-09-22T16:43:59.843+08:00"}],"errorCode":null,"errorDescription":null,"terminalT
+Action.c(315):     ype":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal6","terminalName
+Action.c(315):     ":"Terminal6","terminalIP":"10.184.129.6","terminalDescription":null,"terminalStatus":0,"t
+Action.c(315):     erminalStatusLevel":"Normal","terminalStatusDescription":null,"terminalStatusTime":"2018-0
+Action.c(315):     9-22T16:46:00.99+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlStat
+Action.c(315):     e":false,"checkFilmState":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":
+Action.c(315):     "Lower","terminalID":null,"printerName":"Lower","printerModel":"Mono","statusCode":0,"stat
+Action.c(315):     usDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paper
+Action.c(315):     SizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":
+Action.c(315):     "Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":0
+Action.c(315):     ,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":""
+Action.c(315):     ,"errorDescription":null,"statusTime":"2018-09-22T16:45:10.79+08:00"},{"printerID":"Upper"
+Action.c(315):     ,"terminalID":null,"printerName":"Upper","printerModel":"Color","statusCode":0,"statusDesc
+Action.c(315):     ription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeTy
+Action.c(315):     pe":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain
+Action.c(315):     ","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blac
+Action.c(315):     kInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","erro
+Action.c(315):     rDescription":null,"statusTime":"2018-09-22T16:45:15.82+08:00"}],"errorCode":null,"errorDe
+Action.c(315):     scription":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID"
+Action.c(315):     :"Terminal7","terminalName":"Terminal7","terminalIP":"10.184.129.7","terminalDescription":
+Action.c(315):     null,"terminalStatus":0,"terminalStatusLevel":"Normal","terminalStatusDescription":null,"t
+Action.c(315):     erminalStatusTime":"2018-09-22T16:47:13.553+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10
+Action.c(315):     ,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo":null,"reportP
+Action.c(315):     rintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","printerModel":
+Action.c(315):     "Mono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null
+Action.c(315):     ,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"dr
+Action.c(315):     awerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription"
+Action.c(315):     :"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yello
+Action.c(315):     wInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T16:46:24.32+0
+Action.c(315):     8:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerModel":"Color"
+Action.c(315):     ,"statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"pape
+Action.c(315):     rType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerNa
+Action.c(315):     me":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Norm
+Action.c(315):     al"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLe
+Action.c(315):     vel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-22T16:46:29.35+08:00"}
+Action.c(315):     ],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEnabledFlag":1,"isFol
+Action.c(315):     lowed":false},{"terminalID":"Terminal8","terminalName":"Terminal8","terminalIP":"10.184.12
+Action.c(315):     9.8","terminalDescription":null,"terminalStatus":1,"terminalStatusLevel":"Error","terminal
+Action.c(315):     StatusDescription":null,"terminalStatusTime":null,"departmentIdList":"3,12,4,5,6,7,8,9,10,
+Action.c(315):     11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo":null,"reportPr
+Action.c(315):     intersInfo":[],"errorCode":"80005018","errorDescription":null,"terminalType":2,"terminalEn
+Action.c(315):     abledFlag":1,"isFollowed":false},{"terminalID":"Terminal9","terminalName":"Terminal9","ter
+Action.c(315):     minalIP":"10.184.129.9","terminalDescription":null,"terminalStatus":1,"terminalStatusLevel
+Action.c(315):     ":"Error","terminalStatusDescription":null,"terminalStatusTime":null,"departmentIdList":"3
+Action.c(315):     ,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinterI
+Action.c(315):     nfo":null,"reportPrintersInfo":[],"errorCode":"80005018","errorDescription":null,"terminal
+Action.c(315):     Type":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"YF","terminalName":"YF"
+Action.c(315):     ,"terminalIP":"1.1.1.3","terminalDescription":"","terminalStatus":0,"terminalStatusLevel":
+Action.c(315):     "Normal","terminalStatusDescription":null,"terminalStatusTime":null,"departmentIdList":"3,
+Action.c(315):     12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinterIn
+Action.c(315):     fo":{"filmPrinterID":25,"filmPrinterName":null,"filmPrinterModel":"Unknown","filmPrinterPr
+Action.c(315):     intState":null,"filmDrawers":[{"mediaType":"Unknown","mediaSize":"Unknown","mediaStatusLev
+Action.c(315):     el":"Warning","totalFilmCount":125,"availableFilmCount":0,"availablePercentage":0},{"media
+Action.c(315):     Type":"Unknown","mediaSize":"Unknown","mediaStatusLevel":"Warning","totalFilmCount":125,"a
+Action.c(315):     vailableFilmCount":0,"availablePercentage":0},{"mediaType":"Unknown","mediaSize":"Unknown"
+Action.c(315):     ,"mediaStatusLevel":"Warning","totalFilmCount":125,"availableFilmCount":0,"availablePercen
+Action.c(315):     tage":0}],"filmPrinterStatus":8,"statusCode":null,"filmPrinterStatusLevel":"Warning","stat
+Action.c(315):     usDescript
+Action.c(315): t=89024468ms: 272-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=4" (RelFrameId=1, Internal ID=33479)
+Action.c(315):     ion":null,"filmPrinterStatusTime":null,"errorCode":null,"errorDescription":null,"rawErrorC
+Action.c(315):     odes":null,"pmDate":null,"pmCount":null,"frCount":null},"reportPrintersInfo":[],"errorCode
+Action.c(315):     ":null,"errorDescription":null,"terminalType":1,"terminalEnabledFlag":1,"isFollowed":false
+Action.c(315):     }]
+Action.c(315): web_custom_request("terminalmonitoring") highest severity level was "warning", 88907 body bytes, 261 header bytes  	[MsgId: MMSG-26388]
+Action.c(326): web_url("CheckLoginStatus_5") started  	[MsgId: MMSG-26355]
+Action.c(326): t=89024475ms: 251-byte response headers for "http://10.184.129.108/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=33480)
+Action.c(326):     HTTP/1.1 200 OK\r\n
+Action.c(326):     Cache-Control: private\r\n
+Action.c(326):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(326):     Server: Microsoft-IIS/7.5\r\n
+Action.c(326):     X-AspNetMvc-Version: 5.2\r\n
+Action.c(326):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(326):     X-Powered-By: ASP.NET\r\n
+Action.c(326):     Date: Sat, 22 Sep 2018 08:50:14 GMT\r\n
+Action.c(326):     Content-Length: 4\r\n
+Action.c(326):     \r\n
+Action.c(326): t=89024475ms: 4-byte response body for "http://10.184.129.108/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=33480)
+Action.c(326):     true
+Action.c(326): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(326): web_url("CheckLoginStatus_5") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(342): Notify: Transaction "User_login" ended with a "Pass" status (Duration: 0.3936 Wasted Time: 0.0004).	[MsgId: MMSG-16871]
+Action.c(345): lr_think_time: 10.00 seconds.	[MsgId: MMSG-15948]
+Action.c(347): web_url("reconciliation-list.html") started  	[MsgId: MMSG-26355]
+Action.c(347): t=89034506ms: 248-byte response headers for "http://10.184.129.108/Platform/app/workarea/reconciliation/views/reconciliation-list.html" (RelFrameId=1, Internal ID=33481)
+Action.c(347):     HTTP/1.1 200 OK\r\n
+Action.c(347):     Content-Type: text/html\r\n
+Action.c(347):     Last-Modified: Wed, 19 Sep 2018 08:45:28 GMT\r\n
+Action.c(347):     Accept-Ranges: bytes\r\n
+Action.c(347):     ETag: "0446f1df54fd41:0"\r\n
+Action.c(347):     Server: Microsoft-IIS/7.5\r\n
+Action.c(347):     X-Powered-By: ASP.NET\r\n
+Action.c(347):     Date: Sat, 22 Sep 2018 08:50:24 GMT\r\n
+Action.c(347):     Content-Length: 19296\r\n
+Action.c(347):     \r\n
+Action.c(347): t=89034506ms: 1212-byte response body for "http://10.184.129.108/Platform/app/workarea/reconciliation/views/reconciliation-list.html" (RelFrameId=1, Internal ID=33481)
+Action.c(347):     �\xBF<div style="height:100%; width: 100%">\r\n
+Action.c(347):         <div class="sidenav" style="overflow: auto" ng-style="{'width': navWidth + 'px'}">\r\n
+Action.c(347):             <div class="title">\r\n
+Action.c(347):                 <span ng-class="{selected:seletedType=='film'}" style="position: absolute; lef
+Action.c(347):     t: 20px" ng-click="selectType('film')">胶片</span>\r\n
+Action.c(347):                 <span ng-class="{selected:seletedType=='report'}" style="position: absolute; r
+Action.c(347):     ight: 20px" ng-click="selectType('report')">报告</span>\r\n
+Action.c(347):             </div>\r\n
+Action.c(347):             <div id="unmatchContainer">\r\n
+Action.c(347):                 <select id="unmatchDropdown" ng-model="selectedShortcut" ng-options="t.value a
+Action.c(347):     s t.name for t in shortcuts" ng-change="searchUmatches()"></select>\r\n
+Action.c(347):             </div>\r\n
+Action.c(347):             <div>\r\n
+Action.c(347):                 <treecontrol class="tree-light" options="treeOptions" ng-class="{true: 'film-l
+Action.c(347):     eaf-icon', false: 'report-leaf-icon'}[isFilmTypeSelected]" tree-model="treedata" on-select
+Action.c(347):     ion="showSelected(node)" selected-node="selectedNode" expanded-nodes="expandedNodes">\r\n
+Action.c(347):                     <span>{{node.label}}<i style="padding-left:4px" ng-class="{true: node.icon
+Action.c(347):     }[node.icon != null]"></i></span>\r\n
+Action.c(347):                 </treecontrol>\r\n
+Action.c(347):             </div>\r\n
+Action.c(347):         </div>\r\n
+Action.c(347):         <div id="mianDiv" ng-style="{ 'margin-left': mainMargin + 'px'}"
+Action.c(347): t=89034506ms: 2920-byte response body for "http://10.184.129.108/Platform/app/workarea/reconciliation/views/reconciliation-list.html" (RelFrameId=1, Internal ID=33481)
+Action.c(347):      style="height:100%; margin-right:0px; overflow-x:hidden; overflow-y: auto">\r\n
+Action.c(347):             <div id="searchAreaDiv">\r\n
+Action.c(347):                 <ul class="nav navbar-nav  worklist-navbar-nav" style="margin-right:auto; heig
+Action.c(347):     ht: 46px">\r\n
+Action.c(347):                     <li class="divider-vertical" ng-attr-title="{{openNav ? '收起左边�\x8F
+Action.c(347):     ':'展开左边�\x8F' }}">\r\n
+Action.c(347):                         <span class="icon-fontsize" ng-class="{true: 'icon-ico_sidepanel_colla
+Action.c(347):     pse', false: 'icon-ico_sidepanel_expand'}[openNav]" ng-click="toggleLeft()">\r\n
+Action.c(347):                             <span class="path1"></span><span class="path2"></span><span class=
+Action.c(347):     "path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"><
+Action.c(347):     /span><span class="path7"></span>\r\n
+Action.c(347):                         </span>\r\n
+Action.c(347):     \r\n
+Action.c(347):                     </li>\r\n
+Action.c(347):                     <li title="输入�\x80查编�\xB7"><input type="text" class="form-contro
+Action.c(347):     l" placeholder="{{'AccessionNumber' | translate}}" ng-model="accessionNumber" vt-enter="se
+Action.c(347):     archRecord()" /></li>\r\n
+Action.c(347):                     <li title="输入患�\x80�编�\xB7"><input type="text" class="form-contro
+Action.c(347):     l" placeholder="{{'PatientID' | translate}}" ng-model="patientId" vt-enter="searchRecord()
+Action.c(347):     " /></li>\r\n
+Action.c(347):                     <li title="搜索"><button type="button" class="btn btn-warning form-contr
+Action.c(347):     ol icon-ico_search" ng-click="searchRecord()" ng-disabled="isSearchDisabled()" vt-enter="s
+Action.c(347):     earchRecord()"></button></li>\r\n
+Action.c(347):                     <li class="divider-vertical divider-vertical-left" title="手工匹配">\r
+Action.c(347):     \n
+Action.c(347):                         <span class="icon-ico_record_add icon-fontsize nav-button" ng-disabled
+Action.c(347):     ="isEditing" ng-click="isEditing || mannualEdit()"><span>手工匹配</span></span>\r\n
+Action.c(347):                     </li>\r\n
+Action.c(347):                     <li class="divider-vertical" title="作废">\r\n
+Action.c(347):                         <span class="icon-ico_litter-bin icon-fontsize nav-button" ng-disabled
+Action.c(347):     ="isObsoleteDisabled()" style="color: red" puma-confirm confirm-message="{{'ConfirmObsolet
+Action.c(347):     e' | translate}}" confirm="isObsoleteDisabled() || obsolete()"><span>作废</span></span>\r
+Action.c(347):     \n
+Action.c(347):                     </li>\r\n
+Action.c(347):                     <li title="选择打印�\xBA">\r\n
+Action.c(347):                         <div class="dropdown" style="display:inline-block">\r\n
+Action.c(347):                             <select class="form-control" ng-model="selectedPrinter" ng-options
+Action.c(347):     ="t for t in terminals" ng-disabled="isPrintDisabled()">\r\n
+Action.c(347):                                 <option value="" class="dropdown-menu-item">选择打印�\xBA
+Action.c(347):     </option>\r\n
+Action.c(347):                             </select>\r\n
+Action.c(347):                         </div>\r\n
+Action.c(347):                     </li>\r\n
+Action.c(347):                     <li title="打印">\r\n
+Action.c(347):                         <span class="icon-ico_print icon-fontsize" puma-confirm confirm-messag
+Action.c(347):     e="确认打印当前胶片?" confirm="printFilm()" ng-disabled="isPrintDisabled()">\r\n
+Action.c(347):                             <span class="path1"></span><span class="path2"></span>\r\n
+Action.c(347):                         </span>\r\n
+Action.c(347):                     </li>\r\n
+Action.c(347):                 </ul>\r\n
+Action.c(347):                 <span style="float: right; display: block; height: 46px">\r\n
+Action.c(347):                     <span class="ico
+Action.c(347): t=89034507ms: 2920-byte response body for "http://10.184.129.108/Platform/app/workarea/reconciliation/views/reconciliation-list.html" (RelFrameId=1, Internal ID=33481)
+Action.c(347):     n-ico_refresh icon-fontsize" style="display: block; float:right;" title="刷新" ng-click=
+Action.c(347):     "searchUmatches()"><span class="path1"></span><span class="path2"></span><span class="path
+Action.c(347):     3"></span></span>\r\n
+Action.c(347):                     <span class="nav-button" style="float:right; padding:13px 0;" title="自动
+Action.c(347):     刷新"><input type="checkbox" class="btn-sm" ng-model="isAutoRefresh" ng-change="setAutoR
+Action.c(347):     efresh()" /><span>{{ 'AutoRefresh' | translate }}</span></span>\r\n
+Action.c(347):                 </span>\r\n
+Action.c(347):             </div>\r\n
+Action.c(347):             <div id="searchResultDiv">\r\n
+Action.c(347):                 <table class="table">\r\n
+Action.c(347):                     <thead>\r\n
+Action.c(347):                         <tr style="background-color: #e5e2e2">\r\n
+Action.c(347):                             <th>�\x80查编�\xB7</th>\r\n
+Action.c(347):                             <th>患�\x80�ID</th>\r\n
+Action.c(347):                             <th>患�\x80�姓�\x8D</th>\r\n
+Action.c(347):                             <th>设备类型</th>\r\n
+Action.c(347):                             <th>性别</th>\r\n
+Action.c(347):                             <th>病人类型</th>\r\n
+Action.c(347):                             <th>�\x80查名�\xB0</th>\r\n
+Action.c(347):                             <th>�\x80查科�\xA4</th>\r\n
+Action.c(347):                             <th>�\x80查日�\x9F</th>\r\n
+Action.c(347):                             <th colspan="2"></th>\r\n
+Action.c(347):                         </tr>\r\n
+Action.c(347):                     </thead>\r\n
+Action.c(347):                     <tbody>\r\n
+Action.c(347):                         <tr ng-repeat="item in records">\r\n
+Action.c(347):                             <td class="center_cell">{{item.accessionNumber}}</td>\r\n
+Action.c(347):                             <td class="center_cell">{{item.patientID}}</td>\r\n
+Action.c(347):                             <td class="center_cell">{{item.patientName}}</td>\r\n
+Action.c(347):                             <td class="center_cell">{{item.modalityType}}</td>\r\n
+Action.c(347):                             <td class="center_cell">{{item.gender}}</td>\r\n
+Action.c(347):                             <td class="center_cell">{{item.patientType}}</td>\r\n
+Action.c(347):                             <td class="center_cell">{{item.examName}}</td>\r\n
+Action.c(347):                             <td class="center_cell">{{item.referringDepartment}}</td>\r\n
+Action.c(347):                             <td class="center_cell">{{item.examDate}}</td>\r\n
+Action.c(347):                             <td colspan="2"><button class="round_button icon-ico_ok" style="wi
+Action.c(347):     dth: 100px; height: 30px; color: #6afa64" type="button" ng-click="saveRecord(item)" ng-dis
+Action.c(347):     abled="isSaveDisabled(item)"><span> 匹配</span></button></td>\r\n
+Action.c(347):                         </tr>\r\n
+Action.c(347):                         <tr ng-if="isEditing">\r\n
+Action.c(347):                             <td class="center_cell"><input type="text" class="form-control" ng
+Action.c(347):     -model="record.accessionNumber" maxlength="64" /></td>\r\n
+Action.c(347):                             <td class="center_cell"><input type="text" class="form-control" ng
+Action.c(347):     -model="record.patientID" maxlength="64" /></td>\r\n
+Action.c(347):                             <td class="center_cell"><input type="text" style="width: 120px" cl
+Action.c(347):     ass="form-control" ng-model="record.patientName" maxlength="64" /></td>\r\n
+Action.c(347):                             <td class="center_cell"><select class="form-control" style="paddin
+Action.c(347):     g: 6px 0px" ng-model="record.modalityType" ng-options="t for t in modalityTypes"></select>
+Action.c(347):     </td>\r\n
+Action.c(347):                             <td class="center_cell"><select class="
+Action.c(347): t=89034507ms: 1460-byte response body for "http://10.184.129.108/Platform/app/workarea/reconciliation/views/reconciliation-list.html" (RelFrameId=1, Internal ID=33481)
+Action.c(347):     form-control" style="padding: 6px 0px" ng-model="record.gender" ng-options="t.value as t.n
+Action.c(347):     ame for t in genders"></select></td>\r\n
+Action.c(347):                             <td class="center_cell"><select class="form-control" style="paddin
+Action.c(347):     g: 6px 0px" ng-model="record.patientType" ng-options="t.type as t.name for t in patientTyp
+Action.c(347):     es"></select></td>\r\n
+Action.c(347):                             <td class="center_cell"><input type="text" class="form-control" ng
+Action.c(347):     -model="record.examName" maxlength="256" /></td>\r\n
+Action.c(347):                             <td class="center_cell"><select class="form-control" style="paddin
+Action.c(347):     g: 6px 0px" ng-model="record.referringDepartment" ng-options="t.departmentName as t.depart
+Action.c(347):     mentName for t in examDepartments"></select></td>\r\n
+Action.c(347):                             <td class="center_cell">\r\n
+Action.c(347):                                 <p class="input-group" style="width: 150px">\r\n
+Action.c(347):                                     <input type="text" class="form-control" uib-datepicker-pop
+Action.c(347):     up="{{dateFormat}}" datepicker-options="examDateOptions" show-button-bar="false" is-open="
+Action.c(347):     examDatePicker.opened"\r\n
+Action.c(347):                                            ng-model="record.examDate" readonly="readonly">\r\n
+Action.c(347):                                     <span class="input-group-btn">\r\n
+Action.c(347):                                         <button type="button" class="btn btn-default" ng-click
+Action.c(347):     ="openExamDate()"><i class="glyphicon glyphicon-calendar"></i></button>\r\n
+Action.c(347):                                     </span>\r\n
+Action.c(347):                                 </p>\r\n
+Action.c(347):                             </td>\r\n
+Action.c(347):                 
+Action.c(347): t=89034507ms: 2920-byte response body for "http://10.184.129.108/Platform/app/workarea/reconciliation/views/reconciliation-list.html" (RelFrameId=1, Internal ID=33481)
+Action.c(347):                 <td>\r\n
+Action.c(347):                                 <button class="round_button icon-ico_ok" style="width: 100px; 
+Action.c(347):     height: 30px; color: #6afa64" type="button" ng-click="saveRecord(record)" ng-disabled="isM
+Action.c(347):     annualSaveDisabled(record)"><span> 保存匹配</span></button>\r\n
+Action.c(347):                             </td>\r\n
+Action.c(347):                             <td>\r\n
+Action.c(347):                                 <button class="round_button" style="width: 60px; height: 30px"
+Action.c(347):      type="button" ng-click="cancelSave()" ng-disabled="item.saved">取消</button>\r\n
+Action.c(347):                             </td>\r\n
+Action.c(347):                         </tr>\r\n
+Action.c(347):                     </tbody>\r\n
+Action.c(347):                     <tfoot ng-if="hasNoData">\r\n
+Action.c(347):                         <tr>\r\n
+Action.c(347):                             <td colspan="11">未找到记�\x95!</td>\r\n
+Action.c(347):                         </tr>\r\n
+Action.c(347):                     </tfoot>\r\n
+Action.c(347):                 </table>\r\n
+Action.c(347):             </div>\r\n
+Action.c(347):             <div id="divFilmViewer" ng-if="isFilmTypeSelected" style="position:relative" ng-st
+Action.c(347):     yle="{'height': filmViewerHeight + 'px'}">\r\n
+Action.c(347):                 <div style="position:absolute; bottom:0; top:0">\r\n
+Action.c(347):                     <table style="border: none; width: 100%; height: 100%">\r\n
+Action.c(347):                         <tr>\r\n
+Action.c(347):                             <td style="width: 84px; height: 100%; padding: 0">\r\n
+Action.c(347):                                 <div id="divImgLeft" style="background-color: #666666; padding
+Action.c(347):     : 0px; margin: 0px; height: 100%">\r\n
+Action.c(347):                                     <div id="divFunction">\r\n
+Action.c(347):                                         <table class="film_img_viewer">\r\n
+Action.c(347):                                             <tr>\r\n
+Action.c(347):                                                 <td>\r\n
+Action.c(347):                                                     <div onmouseover="if(this.className=='PS_Z
+Action.c(347):     oom1X_active') return;this.className='PS_Zoom1X_hover';"\r\n
+Action.c(347):                                                          onmouseout="if(this.className=='PS_Zo
+Action.c(347):     om1X_active') return;this.className='PS_Zoom1X_common';"\r\n
+Action.c(347):                                                          id="imgZoom1" ng-click="zoomImg(1);" 
+Action.c(347):     class="PS_Zoom1X_active" title="显示原始尺寸" />\r\n
+Action.c(347):                                                 </td>\r\n
+Action.c(347):                                                 <td>\r\n
+Action.c(347):                                                     <div onmouseover="if(this.className=='PS_Z
+Action.c(347):     oom2X_active') return;this.className='PS_Zoom2X_hover';"\r\n
+Action.c(347):                                                          onmouseout="if(this.className=='PS_Zo
+Action.c(347):     om2X_active') return;this.className='PS_Zoom2X_common';"\r\n
+Action.c(347):                                                          id="imgZoom2" ng-click="zoomImg(2);" 
+Action.c(347):     class="PS_Zoom2X_common" title="显示2倍尺�\xB8" />\r\n
+Action.c(347):                                                 </td>\r\n
+Action.c(347):                                             </tr>\r\n
+Action.c(347):                                             <tr>\r\n
+Action.c(347):                                                 <td>\r\n
+Action.c(347):                                                     <div onmouseover="if(this.className=='PS_Z
+Action.c(347):     oomFit_active') return;this.className='PS_ZoomFit_hover';"\r\n
+Action.c(347):                                                          onmouseout="if(this
+Action.c(347): t=89034508ms: 1460-byte response body for "http://10.184.129.108/Platform/app/workarea/reconciliation/views/reconciliation-list.html" (RelFrameId=1, Internal ID=33481)
+Action.c(347):     .className=='PS_ZoomFit_active') return;this.className='PS_ZoomFit_common';"\r\n
+Action.c(347):                                                          id="imgZoomFit" ng-click="zoomImg(0);
+Action.c(347):     " class="PS_ZoomFit_common" title="适应窗口显示" />\r\n
+Action.c(347):                                                 </td>\r\n
+Action.c(347):                                                 <td></td>\r\n
+Action.c(347):                                             </tr>\r\n
+Action.c(347):                                         </table>\r\n
+Action.c(347):                                         <div style="text-align: center;">\r\n
+Action.c(347):                                             <div class="PS_Spliter"></div>\r\n
+Action.c(347):                                         </div>\r\n
+Action.c(347):                                         <table class="film_img_viewer">\r\n
+Action.c(347):                                             <tr>\r\n
+Action.c(347):                                                 <td>\r\n
+Action.c(347):                                                     <div onmouseover=" this.className = 'PS_In
+Action.c(347):     vertFit_hover';"\r\n
+Action.c(347):                                                          onmouseout=" this.className = 'PS_Inv
+Action.c(347):     ertFit_common';"\r\n
+Action.c(347):                                                          onmousedown="this.className = 'PS_Inv
+Action.c(347):     ertFit_active';"\r\n
+Action.c(347):                                                          onmouseup="this.className = 'PS_Inver
+Action.c(347):     tFit_common';"\r\n
+Action.c(347):                                                          id="iamgInvert" class="PS_InvertFit_c
+Action.c(347):     ommon" ng-click="invertImg()" title="反色" />\r\n
+Action.c(347):                                                 </td>\r\n
+Action.c(347):                                             </tr>\r\n
+Action.c(347):                    
+Action.c(347): t=89034508ms: 2920-byte response body for "http://10.184.129.108/Platform/app/workarea/reconciliation/views/reconciliation-list.html" (RelFrameId=1, Internal ID=33481)
+Action.c(347):                          </table>\r\n
+Action.c(347):                                         <div style="text-align: center;">\r\n
+Action.c(347):                                             <div class="PS_Spliter"></div>\r\n
+Action.c(347):                                         </div>\r\n
+Action.c(347):                                         <table class="film_img_viewer">\r\n
+Action.c(347):                                             <tr>\r\n
+Action.c(347):                                                 <td>\r\n
+Action.c(347):                                                     <div onmouseover=" this.className = 'PS_Ro
+Action.c(347):     tateLeftFit_hover';"\r\n
+Action.c(347):                                                          onmouseout=" this.className = 'PS_Rot
+Action.c(347):     ateLeftFit_common';"\r\n
+Action.c(347):                                                          onmousedown="this.className = 'PS_Rot
+Action.c(347):     ateLeftFit_active';"\r\n
+Action.c(347):                                                          onmouseup="this.className = 'PS_Rotat
+Action.c(347):     eLeftFit_common';"\r\n
+Action.c(347):                                                          id="iamgLeftRotate" class="PS_RotateL
+Action.c(347):     eftFit_common" ng-click="rotateImg('left')" title="左旋" />\r\n
+Action.c(347):                                                 </td>\r\n
+Action.c(347):                                                 <td>\r\n
+Action.c(347):                                                     <div onmouseover=" this.className = 'PS_Ro
+Action.c(347):     tateRightFit_hover';"\r\n
+Action.c(347):                                                          onmouseout=" this.className = 'PS_Rot
+Action.c(347):     ateRightFit_common';"\r\n
+Action.c(347):                                                          onmousedown="this.className = 'PS_Rot
+Action.c(347):     ateRightFit_active';"\r\n
+Action.c(347):                                                          onmouseup="this.className = 'PS_Rotat
+Action.c(347):     eRightFit_common';"\r\n
+Action.c(347):                                                          id="iamgRightRotate" class="PS_Rotate
+Action.c(347):     RightFit_common" ng-click="rotateImg('right')" title="右旋" />\r\n
+Action.c(347):                                                 </td>\r\n
+Action.c(347):                                             </tr>\r\n
+Action.c(347):                                         </table>\r\n
+Action.c(347):                                         <div style="text-align: center;">\r\n
+Action.c(347):                                             <div class="PS_Spliter"></div>\r\n
+Action.c(347):                                         </div>\r\n
+Action.c(347):                                         <table class="film_img_viewer">\r\n
+Action.c(347):                                             <tr>\r\n
+Action.c(347):                                                 <td>\r\n
+Action.c(347):                                                     <div id="imgPos1" ng-click="movePos(1);" c
+Action.c(347):     lass="PS_FitTL_active" title="对齐左上�\x92" />\r\n
+Action.c(347):                                                 </td>\r\n
+Action.c(347):                                                 <td>\r\n
+Action.c(347):                                                     <div id="imgPos2" ng-click="movePos(2);" c
+Action.c(347):     lass="PS_FitTR_common" title="对齐右上�\x92" />\r\n
+Action.c(347):                                                 </td>\r\n
+Action.c(347):                                             </tr>\r\n
+Action.c(347):                                             <tr>\r\n
+Action.c(347):                                                 <td>\r\n
+Action.c(347):                                                     <div id="imgPos3" ng-click="movePos(3);" c
+Action.c(347):     lass="PS_FitBL_common" title="对齐左下�\x92" />\r\n
+Action.c(347):                      
+Action.c(347): t=89034509ms: 2920-byte response body for "http://10.184.129.108/Platform/app/workarea/reconciliation/views/reconciliation-list.html" (RelFrameId=1, Internal ID=33481)
+Action.c(347):                                </td>\r\n
+Action.c(347):                                                 <td>\r\n
+Action.c(347):                                                     <div id="imgPos4" ng-click="movePos(4);" c
+Action.c(347):     lass="PS_FitBR_common" title="对齐右下�\x92" />\r\n
+Action.c(347):                                                 </td>\r\n
+Action.c(347):                                             </tr>\r\n
+Action.c(347):                                         </table>\r\n
+Action.c(347):                                         <div style="text-align: center;">\r\n
+Action.c(347):                                             <div class="PS_Spliter"></div>\r\n
+Action.c(347):                                         </div>\r\n
+Action.c(347):                                     </div>\r\n
+Action.c(347):                                     <div id="divNav" style="margin: auto;">\r\n
+Action.c(347):                                         <div onmouseover="this.className='PS_NavPrev_hover';" 
+Action.c(347):     onmouseout="this.className='PS_NavPrev_common';"\r\n
+Action.c(347):                                              ng-click="scrollNavList(-100);" class="PS_NavPrev
+Action.c(347):     _common">\r\n
+Action.c(347):                                         </div>\r\n
+Action.c(347):                                         <div>\r\n
+Action.c(347):                                             <div id="divImageList" style="width: 100%; overflo
+Action.c(347):     w: auto; overflow-x:hidden; font-size: large; color: White; text-align: center;" ng-style=
+Action.c(347):     "{'height': imageListHeight + 'px'}">\r\n
+Action.c(347):                                                 <div style="padding: 4px 0px" ng-repeat="image
+Action.c(347):      in images">\r\n
+Action.c(347):                                                     <img ng-src="{{image.thumbnailImagePath}}"
+Action.c(347):      ng-click="selectImage(image)" />\r\n
+Action.c(347):                                                     <span style="font-size: large; color: whit
+Action.c(347):     e">{{image.index}}</span>\r\n
+Action.c(347):                                                 </div>\r\n
+Action.c(347):                                             </div>\r\n
+Action.c(347):                                         </div>\r\n
+Action.c(347):                                         <div onmouseover="this.className='PS_NavNext_hover';" 
+Action.c(347):     onmouseout="this.className='PS_NavNext_common';"\r\n
+Action.c(347):                                              ng-click="scrollNavList(100);" class="PS_NavNext_
+Action.c(347):     common">\r\n
+Action.c(347):                                         </div>\r\n
+Action.c(347):                                     </div>\r\n
+Action.c(347):                                 </div>\r\n
+Action.c(347):                             </td>\r\n
+Action.c(347):                             <td width="100%">\r\n
+Action.c(347):                                 <div id="divImgRect" style="background-color: #343434; overflo
+Action.c(347):     w: auto; width: 100%" ng-style="{'height': filmViewerHeight + 'px', 'width': divImgRectWid
+Action.c(347):     th + 'px'}">\r\n
+Action.c(347):                                     <div id="divNoImg" ng-hide="isImageSelected" style="paddin
+Action.c(347):     g: 50px 0px 0px 50px; color: White; font-size: large; height: 100%; width: 100%">\r\n
+Action.c(347):                                         无图�\x8F\r\n
+Action.c(347):                                     </div>\r\n
+Action.c(347):                                     <div id="divImg" ng-if="isImageSelected">\r\n
+Action.c(347):                                         <img id="imgRaw" ng-src="{{originImagePath}}" ng-style
+Action.c(347):     ="imgRawAddition_Style" />\r\n
+Action.c(347):                                     </div>\r\n
+Action.c(347):                                 </div>\r\n
+Action.c(347):                             </td>\r\n
+Action.c(347):                         </tr>\r
+Action.c(347): t=89034509ms: 564-byte response body for "http://10.184.129.108/Platform/app/workarea/reconciliation/views/reconciliation-list.html" (RelFrameId=1, Internal ID=33481)
+Action.c(347):     \n
+Action.c(347):                     </table>\r\n
+Action.c(347):     \r\n
+Action.c(347):                 </div>\r\n
+Action.c(347):             </div>\r\n
+Action.c(347):             <div ng-if="!isCanvasSupport" style="overflow:auto" ng-style="{'height': filmViewe
+Action.c(347):     rHeight + 'px'}">\r\n
+Action.c(347):                 <div>系统�\x80测到您的浏览器不支持直接查看PDF文件，请安�
+Action.c(347):     ��PDF插件�\x82</div>\r\n
+Action.c(347):                 <iframe id="pdfFrame" style="height: 100%; width: 100%"></iframe>\r\n
+Action.c(347):             </div>\r\n
+Action.c(347):             <div id="divReportViewer" ng-if="isCanvasSupport && !isFilmTypeSelected" style="ov
+Action.c(347):     erflow:auto" ng-style="{'height': filmViewerHeight + 'px'}">\r\n
+Action.c(347):             </div>\r\n
+Action.c(347):         </div>\r\n
+Action.c(347):     </div>
+Action.c(347): web_url("reconciliation-list.html") was successful, 19296 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Action.c(355): web_url("getUnmatchImages") started  	[MsgId: MMSG-26355]
+Action.c(355): t=89052332ms: 278-byte response headers for "http://10.184.129.108/webapi/api/reconciliation/getUnmatchImages?days=1" (RelFrameId=1, Internal ID=33482)
+Action.c(355):     HTTP/1.1 500 NullReferenceException\r\n
+Action.c(355):     Cache-Control: no-cache\r\n
+Action.c(355):     Pragma: no-cache\r\n
+Action.c(355):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(355):     Expires: -1\r\n
+Action.c(355):     Server: Microsoft-IIS/7.5\r\n
+Action.c(355):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(355):     X-Powered-By: ASP.NET\r\n
+Action.c(355):     Date: Sat, 22 Sep 2018 08:50:42 GMT\r\n
+Action.c(355):     Content-Length: 99\r\n
+Action.c(355):     \r\n
+Action.c(355): t=89052332ms: 99-byte response body for "http://10.184.129.108/webapi/api/reconciliation/getUnmatchImages?days=1" (RelFrameId=1, Internal ID=33482)
+Action.c(355):     {"name":"NullReferenceException","message":"Object reference not set to an instance of an 
+Action.c(355):     object."}
+Action.c(355): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/reconciliation/getUnmatchImages?days=1"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

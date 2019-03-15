@@ -1,0 +1,22 @@
+﻿adminSettingModule.directive('qclogView', ['$log', function ($log) {
+    "use strict";
+    $log.debug('qclogView.directive()...');
+
+    return {
+        restrict: 'E',
+        templateUrl: 'app/workarea/adminsettings/log/views/qclog-view.html',
+        scope: {
+            expectedHeight: '@'
+        },
+        controller: 'qclogController',
+        link: function (scope, element) {
+            var qclogHeight = element.find("#qclog").height();
+            var searchHeight = element.find('#search').height();
+            var expectedHeight = qclogHeight - searchHeight - 25;
+            //var logGrid = element.find('#loggrid');
+            //logGrid.css('height', expectedHeight + 'px');
+            scope.expectedHeight = expectedHeight;
+            
+        }
+    };
+}]);

@@ -1,0 +1,10 @@
+GET /Platform/Account/CheckLoginStatus HTTP/1.1
+Authorization: bearer MSSAaEsxYtjhPmiTXg6zQ7gr209fLG_ySZGd2tNZfEITN0sC9LpRgBSJFjUtMNAiiPtzSHW1WHy-niJVdOeg6_tJuey44nmChJEUfaTyKFWrQjk1LMzt1XygQ5Zs7Rsvwut8GRngr4YBOh1WC1VUNqao0ZfzRJ-Mh7DFtlLHTRVVil9kc1sT4lnDKXFrFSnfoOEU-YSgidGEBdaCN3O2IA
+Referer: http://10.184.129.108/Platform/workarea/worklist
+User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: Keep-Alive
+Host: 10.184.129.108
+Cookie: ASP.NET_SessionId=ryea4fvqv14ww2szbrg2vzkb; ApiToken=%7B%22access_token%22%3A%22MSSAaEsxYtjhPmiTXg6zQ7gr209fLG_ySZGd2tNZfEITN0sC9LpRgBSJFjUtMNAiiPtzSHW1WHy-niJVdOeg6_tJuey44nmChJEUfaTyKFWrQjk1LMzt1XygQ5Zs7Rsvwut8GRngr4YBOh1WC1VUNqao0ZfzRJ-Mh7DFtlLHTRVVil9kc1sT4lnDKXFrFSnfoOEU-YSgidGEBdaCN3O2IA%22%2C%22token_type%22%3A%22bearer%22%2C%22expires_in%22%3A604799%2C%22refresh_token%22%3A%2217f2065b-babf-41d9-80bc-4b653f4bfd4f%22%2C%22userName%22%3A%22admin%22%2C%22currentRole%22%3A%22Administrator%2CRadiologist%2CTechnician%2CReceptionist%22%2C%22strDepartments%22%3A%22%22%2C%22strModalities%22%3Anull%2C%22onlyReport%22%3Anull%2C%22strUserPermissionList%22%3A%22%22%7D; .AspNet.ApplicationCookie=kwZehPPNEYn2ouxbIXhQxnInOUV5VEbX8IfXU4wFM6_iDonkIlyzwzazeq_qONwbicU1Cddspq0y5WyCF6b9X-ACCId7XmvVVSpRfPIpd_vhXm1S-2B2gw_oM0LdSh9h7Cb7fynWfAL-F7lTxUuUU-5ooK38m8QxIaklIcOAL5z5emDWDwV1p87ZSUIcf3aAh9-5x1Ny2phd0LoPKLqcC5QCwXo_BvqChVNZoVJYhax11BZhkZw7GSAeUDAiDbtMqGrX0nwXbV-GiVy-hVu-wxMp_C2KqzEISYcLlSw00Ugt1vCJBxyiX3F7g4dwBaOj
+

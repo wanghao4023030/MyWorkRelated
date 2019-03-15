@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HTTPSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="14">
+  <HTTPTask id="15" url="http://10.184.129.108/Platform/Account/CheckLoginStatus" origin="Primary" startDateTime="2018-09-12T15:44:39.349+08:00" startTime="108942">
+    <HTTPRequest method="GET" />
+  </HTTPTask>
+</HTTPSnapshot>

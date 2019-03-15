@@ -1,0 +1,6 @@
+Transaction Name,Flow Name,Packet List Name,Transaction Duration (seconds),Network Time (seconds) ,Throughput Up (KB),Throughput Down (KB),Number of Requests,Errors,Analysis Score (Desktop) ,Analysis Score (Mobile) ,Transaction HTML Report Name
+User_login,,,139.2,118.8,0.0,0.0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report0.html
+ExpandFilmRecord,,,0.6,0.0,0.0,0.0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report1.html
+ExpandReportRecord,,,8.4,0.9,0.0,0.0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report2.html
+SetTheHoldingTime,,,32.0,18.8,0.0,0.0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report3.html
+SetPrintMode,,,1.0,0.0,0.0,0.0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report4.html

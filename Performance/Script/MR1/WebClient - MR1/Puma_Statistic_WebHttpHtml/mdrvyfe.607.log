@@ -1,0 +1,14 @@
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(562): Notify: Transaction "Report_By_ModalityType" ended with a "Pass" status (Duration: 0.6194 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+The result is:  departmentID	[MsgId: MMSG-17999]
+Action.c(571): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(573): web_url("CheckLoginStatus_25") started  	[MsgId: MMSG-26355]
+Action.c(573): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.171/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(573): web_url("CheckLoginStatus_25") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(581): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(590): Notify: Transaction "Report_By_Terminal" started.	[MsgId: MMSG-16999]
+Action.c(592): web_custom_request("Report_By_Terminal") started  	[MsgId: MMSG-26355]
+Action.c(592): Continuing after Error -27492: "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http://10.184.129.171/webapi/api/statistics/getreportprintcountstatisticsbyterminal?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-11-03T16:00:00.000Z&StartDate=2016%2F01%2F01+00:00:00"  	[MsgId: MERR-27492]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

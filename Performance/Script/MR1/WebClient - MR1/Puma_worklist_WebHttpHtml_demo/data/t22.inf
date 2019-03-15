@@ -1,0 +1,10 @@
+[t22]
+FileName1=t22_allTerminals.html
+URL1=http://10.184.129.208/webapi/api/terminal/allTerminals
+Total=1
+ContentType=
+SnapshotXmlFile=snapshot_22.xml
+RequestHeaderFile=t22_RequestHeader.txt
+RequestBodyFile=NONE
+[ProtocolInfo]
+ProtocolId=QTWeb

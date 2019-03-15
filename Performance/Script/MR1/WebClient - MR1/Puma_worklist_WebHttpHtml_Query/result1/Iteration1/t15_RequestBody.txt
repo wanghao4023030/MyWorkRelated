@@ -1,0 +1,4 @@
+"{"patientName":null,"patientID":"P20171215100908955","accessionNumber":null,"createDateRange":"
+"{"startTime":null,"endTime":null},"shortcutDateRange":0,"patientSex":"","reportStatus":"","rep"
+"ortPrintStatus":"","filmPrintStatus":"","printMode":"","modalityType":"","patientType":"","dep"
+"artment":"","completeStatus":null,"pagination":{"pageIndex":1,"pageSize":50}}"

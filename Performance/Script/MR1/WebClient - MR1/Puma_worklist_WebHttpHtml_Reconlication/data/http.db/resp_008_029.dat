@@ -1,0 +1,273 @@
+﻿var popupApp = angular.module('PopupApp', ['ui.router', 'pascalprecht.translate', 'ui.bootstrap', 'ngAnimate', 'app.common', 'toaster', 'app.webservices']);
+popupApp.config(function ($stateProvider, $locationProvider, $urlRouterProvider) {
+    // use the HTML5 History API http://diveintohtml5.info/history.html 
+    $locationProvider.html5Mode(true); // must add set <base href="~/">
+    $stateProvider
+        .state("dicomviewer", {
+            url: "/popup/dicomviewer",
+            templateUrl: "app/workarea/dicomviewer/views/dicom-viewer.html",
+            controller: "dicomViewerCtrl"
+        })
+        .state("barcode", {
+            url: "/popup/barcode",
+            templateUrl: "app/workarea/barcode/views/barcode-view.html",
+            controller: "barcodeCtrl"
+        });
+    $urlRouterProvider.otherwise('popup/dicomviewer');
+});
+
+popupApp.controller("dicomViewerCtrl", ["$scope", "$location", '$interval', '$translate', 'toaster', 'constants', 'enums', 'permission', "worklistService", "reconciliationService",
+    function ($scope, $location, $interval, $translate, toaster, constants, enums, permission, worklistService, reconciliationService) {
+        var rawImgW = null;
+        var rawImgH = null;
+        var promise;
+        var isFit = false;
+
+        function clearCanvas(canvasContainer) {
+            if (canvasContainer.children != null) {
+                while (canvasContainer.children.length > 0) {
+                    canvasContainer.removeChild(canvasContainer.children[0]);
+                }
+            }
+        }
+
+        function renderPDF(url, canvasContainer) {
+            clearCanvas(canvasContainer);
+            var scale = 1;  //"zoom" factor for the PDF
+
+            function renderPage(page) {
+                var viewport = page.getViewport(scale);
+                var canvas = document.createElement('canvas');
+                var ctx = canvas.getContext('2d');
+                var renderContext = {
+                    canvasContext: ctx,
+                    viewport: viewport
+                };
+
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                canvasContainer.appendChild(canvas);
+
+                page.render(renderContext);
+            }
+
+            function renderPages(pdfDoc) {
+                for (var num = 1; num <= pdfDoc.numPages; num++)
+                    pdfDoc.getPage(num).then(renderPage);
+            }
+
+            PDFJS.workerSrc = 'Scripts/PDF.js.1.3.91/pdf.worker.js';
+            PDFJS.disableWorker = true;
+            PDFJS.getDocument(url).then(renderPages);
+        }
+
+        (function initialize() {
+            $scope.loadedPicture = false;
+            $scope.passData = window.opener.passData;
+            $scope.hasDeletePermission = permission.hasPermission('Delete');
+            $scope.hasChangePrintStatusPermission = permission.hasPermission('ChangePrintStatus');
+            $scope.isCanvasSupport = !!window.HTMLCanvasElement;
+            if ($scope.passData.isFilm) {
+                $scope.itemType = "胶片";
+                worklistService.getFilmImage($scope.passData.instanceId).success(function (data) {
+                    if (data != null) {
+                        $scope.originImagePath = $location.protocol() + '://' + $location.host() + ':' + $location.port() + '//' + data;
+                        $scope.loadedPicture = true;
+                    }
+                });
+            }
+            else {
+                $scope.itemType = "报告";
+                reconciliationService.getReport($scope.passData.instanceId).success(function (data) {
+                    var file = new Blob([data], { type: 'application/pdf' });
+                    var fileURL = URL.createObjectURL(file);
+                    $scope.pdfUrl = fileURL;
+                    if ($scope.isCanvasSupport) {
+                        renderPDF(fileURL, document.getElementById("divReportViewer"));
+                    }
+                    else {
+                        document.getElementById("pdfFrame").src = fileURL;
+                    }
+                });
+            }
+
+            window.onresize = function () {
+                if (isFit) {
+                    $scope.zoomImg(0);
+                }
+            }
+        }());
+
+        $scope.movePos = function (type) {
+            document.getElementById('imgPos1').className = "PS_FitTL_common";
+            document.getElementById('imgPos2').className = "PS_FitTR_common";
+            document.getElementById('imgPos3').className = "PS_FitBL_common";
+            document.getElementById('imgPos4').className = "PS_FitBR_common";
+            if (type == 1) {
+                // Left-Top
+                $("#divImg").scrollLeft(0);
+                $("#divImg").scrollTop(0);
+                document.getElementById('imgPos1').className = "PS_FitTL_active";
+            }
+            else if (type == 2) {
+                // Right-Top
+                $("#divImg").scrollLeft(document.getElementById('imgRaw').offsetWidth);
+                $("#divImg").scrollTop(0);
+                document.getElementById('imgPos2').className = "PS_FitTR_active";
+            }
+            else if (type == 3) {
+                // Left-Bottom
+                $("#divImg").scrollLeft(0);
+                $("#divImg").scrollTop(document.getElementById('imgRaw').offsetHeight);
+                document.getElementById('imgPos3').className = "PS_FitBL_active";
+            }
+            else if (type == 4) {
+                // Right-Bottom
+                $("#divImg").scrollLeft(document.getElementById('imgRaw').offsetWidth);
+                $("#divImg").scrollTop(document.getElementById('imgRaw').offsetHeight);
+                document.getElementById('imgPos4').className = "PS_FitBR_active";
+            }
+        }
+
+        $scope.zoomImg = function (type) {
+            if (rawImgH == null && rawImgW == null) {
+                rawImgW = document.getElementById("imgRaw").offsetWidth;
+                rawImgH = document.getElementById("imgRaw").offsetHeight;
+            }
+            document.getElementById('imgZoom1').className = "PS_Zoom1X_common";
+            document.getElementById('imgZoom2').className = "PS_Zoom2X_common";
+            document.getElementById('imgZoomFit').className = "PS_ZoomFit_common";
+            document.getElementById('imgRaw').style.left = "0px";
+            document.getElementById('imgRaw').style.right = "0px";
+            document.getElementById('imgRaw').style.position = "";
+            $scope.movePos(1) // Move to Left-Top
+
+            if (type == 0) {
+                isFit = true;
+                // Auto
+                var realW = document.getElementById('divFilmViewer').offsetWidth - 87;
+                var realH = document.getElementById('divFilmViewer').offsetHeight;
+                //alert(realW / realH);
+                var newH, newW, offsetX, offsetY;
+
+                if (realW / realH > rawImgW / rawImgH) {
+                    // Width too large
+                    newH = realH;
+                    newW = parseInt(newH * rawImgW / rawImgH);
+                    offsetX = (realW - newW) / 2;
+                    offsetY = 0;
+                }
+                else {
+                    // Height too large
+                    newW = realW;
+                    newH = parseInt(newW * rawImgH / rawImgW);
+                    offsetX = 0;
+                    offsetY = (realH - newH) / 2;
+                }
+                document.getElementById('imgRaw').style.width = newW + "px";
+                document.getElementById('imgRaw').style.height = newH + "px";
+                document.getElementById('imgRaw').style.left = offsetX + "px";
+                document.getElementById('imgRaw').style.right = offsetY + "px";
+                document.getElementById('imgRaw').style.position = "relative";
+                document.getElementById('imgZoomFit').className = "PS_ZoomFit_active";
+            }
+            else if (type == 1) {
+                isFit = false;
+                // 1X
+                document.getElementById('imgRaw').style.width = rawImgW + "px";
+                document.getElementById('imgRaw').style.height = rawImgH + "px";
+                document.getElementById('imgZoom1').className = "PS_Zoom1X_active";
+
+            }
+            else if (type == 2) {
+                isFit = false;
+                // 2X
+                document.getElementById('imgRaw').style.width = (rawImgW * 2) + "px";
+                document.getElementById('imgRaw').style.height = (rawImgH * 2) + "px";
+                document.getElementById('imgZoom2').className = "PS_Zoom2X_active";
+            }
+        }
+
+        $scope.removeItem = function (item) {
+            var type;
+            if (item.isFilm) {
+                type = "FilmDeleteStatus";
+            }
+            else {
+                type = "ReportDeleteStatus";
+            }
+            var data = {
+                StatusType: type,
+                StudyInstanceUID: item.instanceId,
+                PreStatusValue: 0,
+                NewStatusValue: 1
+            };
+            worklistService.updateStatusByStudyInstanceUID(data).success(function (result) {
+                if (result.isSucceed) {
+                    if (result.workItem == null) {
+                        window.opener.scopeToShare.refreshDeleteExam($scope.passData.parentEntity, $scope.passData.entity);
+                    }
+                    else {
+                        if (item.isFilm) {
+                            window.opener.scopeToShare.refreshDeleteSubFilm($scope.passData.parentEntity, $scope.passData.entity, result);
+                        }
+                        else {
+                            window.opener.scopeToShare.refreshDeleteSubReport($scope.passData.parentEntity, $scope.passData.entity, result);
+                        }
+                    }
+                    self.close();
+                }
+                else {
+                    toaster.warning({ title: $translate.instant("Failed"), body: result.message });
+                }
+            });
+        };
+
+        $scope.changePrintStatus = function (item) {
+            var type;
+            if (item.isFilm) {
+                type = "FilmPrintStatus";
+            }
+            else {
+                type = "ReportPrintStatus";
+            }
+            var data = {
+                StatusType: type,
+                StudyInstanceUID: item.instanceId,
+                PreStatusValue: item.printStatus,
+                NewStatusValue: (item.printStatus == 2 || item.printStatus == 1) ? 0 : 2
+            };
+            worklistService.updateStatusByStudyInstanceUID(data).success(function (result) {
+                if (result.isSucceed) {
+                    $scope.passData.printStatus = data.NewStatusValue;
+                    if (item.isFilm) {
+                        window.opener.scopeToShare.refreshFilmPrintStatus($scope.passData.parentEntity, $scope.passData.entity, data, result);
+                    }
+                    else {
+                        window.opener.scopeToShare.refreshReportPrintStatus($scope.passData.parentEntity, $scope.passData.entity, data, result);
+                    }
+                }
+            });
+        };
+    }
+]).controller("barcodeCtrl", ["$scope", '$log', "$location", '$interval', 'constants', 'enums',
+    function ($scope, $log, $location, $interval, constants, enums) {
+        $log.debug('enter barcode...');
+        $log.debug(window.opener.passData.barcodeValue);
+
+
+        $scope.barcodeData = window.opener.passData;
+        JsBarcode("#barcode", $scope.barcodeData.barcodeValue);
+
+
+        $scope.PrintBarcode = function () {
+            window.print();
+        }
+
+
+        $scope.CloseWindow = function () {
+            window.close();
+        }
+    }
+]);

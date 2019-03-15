@@ -1,0 +1,173 @@
+﻿worklistModule.controller('worklistController', ['$scope', '$log', '$timeout', '$mdSidenav', 'application', 'loginContext', 'worklistService',
+    function ($scope, $log, $timeout, $mdSidenav, application, loginContext, worklistService) {
+    var buildToggler = function (componentId) {
+        return function () {
+            $mdSidenav(componentId).toggle();
+        }
+    };
+    function getShortcuts() {
+        worklistService.getShortcuts(loginContext.userName, loginContext.roleName).success(function (data) {
+            $scope.shortcuts = data;
+        });
+    };
+
+    (function initialize() {
+        $log.debug('worklistController.initialize()...');
+
+        $scope.toggleLeft = buildToggler('left');
+
+        $scope.searchDateTypes = [
+            {
+                name: '今天',
+                value: 0
+            },
+            {
+                name: '最近两天',
+                value: 1
+            },
+            {
+                name: '最近一周',
+                value: 6
+            },
+            {
+                name: '最近一月',
+                value: 29
+            }
+        ];
+        $scope.isAddShortcut = false;
+        getShortcuts();
+        $scope.isEdit = false;
+    }());
+
+    $scope.quickSearch = function (value) {
+        var criteria = worklistService.searchCriteria(1, application.configuration.pageSizeDefault);
+        criteria.createDateRange.startTime.setDate(criteria.createDateRange.startTime.getDate() - value);
+        $scope.model = criteria;
+        $scope.searchWorklist();
+        $scope.toggleLeft();
+    };
+
+    $scope.addShortcut = function () {
+        $scope.isAddShortcut = true;
+        $scope.shortcutNameCache = '';
+        $scope.isEdit = true;
+    };
+
+    $scope.cancelAddShortcut = function () {
+        $scope.isAddShortcut = false;
+        $scope.isEdit = false;
+    };
+
+    function isNameDuplicate(type) {
+        var duplidateItem = $scope.shortcuts.find(function (item) {
+            return ((item.shortcutName == type.shortcutNameCache) && !item.isEdit);
+        });
+        if (duplidateItem == null) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+    $scope.saveShortcut = function () {
+        $scope.isEdit = false;
+        var type = worklistService.cloneShortcut($scope.model);
+        type.shortcutNameCache = $scope.shortcutNameCache;
+        type.shortcutName = '';
+
+        if (isNameDuplicate(type)) {
+            toaster.warning({ title: $translate.instant("Warn"), body: $translate.instant("DuplidateShortcut") });
+            return;
+        }
+
+        var data = {
+            UserName: loginContext.userName,
+            RoleName: loginContext.roleName,
+            Criteria: type
+        };
+        worklistService.saveShortcut(data).success(function (data) {
+            if (data.isSuccess) {
+                $scope.isAddShortcut = false;
+                type.shortcutName = type.shortcutNameCache;
+                type.isEdit = false;
+                $scope.shortcuts.splice(0, 0, type);
+            }
+            else {
+                toaster.warning({ title: $translate.instant("Failed"), body: data.message });
+            }
+        });
+    };
+
+    $scope.loadShortcut = function (type) {
+        if (typeof (type.createDateRange.startTime) == "string" && type.createDateRange.startTime != null) {
+            type.createDateRange.startTime = new Date(type.createDateRange.startTime);
+        }
+        if (typeof (type.createDateRange.endTime) == "string" && type.createDateRange.endTime != null) {
+            type.createDateRange.endTime = new Date(type.createDateRange.endTime);
+        }
+        $scope.model = worklistService.cloneShortcut(type);
+        $scope.model.pagination = {
+            pageIndex: 1,
+            pageSize: application.configuration.pageSizeDefault
+        };
+        $scope.searchWorklist();
+        $scope.toggleLeft();
+    };
+
+    $scope.editShortcut = function (type) {
+        type.isEdit = true;
+        $scope.isEdit = true;
+        type.shortcutNameCache = type.shortcutName;
+        if (typeof (type.createDateRange.startTime) == "string" && type.createDateRange.startTime != null) {
+            type.createDateRange.startTime = new Date(type.createDateRange.startTime);
+        }
+        if (typeof (type.createDateRange.endTime) == "string" && type.createDateRange.endTime != null) {
+            type.createDateRange.endTime = new Date(type.createDateRange.endTime);
+        }
+        worklistService.copyShortcut($scope.model, type);
+    };
+
+    $scope.cancelSaveShortcut = function (type) {
+        type.isEdit = false;
+        $scope.isEdit = false;
+    };
+
+    $scope.updateShortcut = function (type) {
+        worklistService.copyShortcut(type, $scope.model);
+        if (isNameDuplicate(type)) {
+            toaster.warning({ title: $translate.instant("Warn"), body: $translate.instant("DuplidateShortcut") });
+            return;
+        }
+        var data = {
+            Criteria: type,
+            UserName: loginContext.userName,
+            RoleName: loginContext.roleName
+        };
+        worklistService.saveShortcut(data).success(function (result) {
+            if (result.isSuccess) {
+                type.shortcutName = type.shortcutNameCache;
+                type.isEdit = false;
+                $scope.isEdit = false;
+            }
+        });
+    };
+
+    $scope.deleteShortcut = function (type) {
+        var data = {
+            UserName: loginContext.userName,
+            RoleName: loginContext.roleName,
+            ShortcutName: type.shortcutName
+        };
+        worklistService.deleteShortcut(data).success(function (result) {
+            if (result.isSuccess) {
+                for (var i = 0; i < $scope.shortcuts.length; i++) {
+                    if ($scope.shortcuts[i].shortcutName == type.shortcutName) {
+                        $scope.shortcuts.splice(i, 1);
+                        break;
+                    }
+                }
+            }
+        });
+    };
+}])

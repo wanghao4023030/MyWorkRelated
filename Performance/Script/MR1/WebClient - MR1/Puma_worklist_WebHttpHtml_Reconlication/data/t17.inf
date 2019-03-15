@@ -1,0 +1,12 @@
+[t17]
+FileName1=t17_terminalmonitor-template.html
+URL1=http://10.184.129.208/Platform/app/workarea/terminalmonitor/views/terminalmonitor-template.html
+Total=2
+ContentType=
+SnapshotXmlFile=snapshot_17.xml
+RequestHeaderFile=t17_RequestHeader.txt
+RequestBodyFile=NONE
+FileName2=t17_glyphicons-halflings-regular.html
+URL2=http://10.184.129.208/Platform/fonts/glyphicons-halflings-regular.woff2
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,13 @@
+[t37]
+SnapshotXmlFile=snapshot_37.xml
+ContentType=DummyContentType
+StepName=Custom Request: Report_By_Terminal
+Total=1
+FileName1=t37.UNK
+RequestHeaderFile=t37_RequestHeader.txt
+ResponseHeaderFile=t37_ResponseHeader.txt
+RawStepEndTime=1528192264739
+RawStepName=Report_By_Terminal
+RequestBodyFile=t37_RequestBody.txt
+RawStepStartTime=1528192259462
+URL1=file:

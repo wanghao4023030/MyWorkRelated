@@ -1,0 +1,11 @@
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(494): web_custom_request("Film_By_FilmSize") was successful, 93 body bytes, 258 header bytes  	[MsgId: MMSG-26386]
+Action.c(502): Notify: Transaction "Film_By_FilmSize" ended with a "Pass" status (Duration: 0.4079 Wasted Time: 0.0001).	[MsgId: MMSG-16871]
+The result is:  departmentID	[MsgId: MMSG-17999]
+Action.c(511): lr_think_time: 110.00 seconds.	[MsgId: MMSG-15948]
+Action.c(513): web_url("CheckLoginStatus_25") started  	[MsgId: MMSG-26355]
+Action.c(513): Connection to 10.184.129.108:80 closed after being inactive for 110 seconds, exceeding the "HTTP Keep-Alive timeout" Run-Time Setting (60 seconds). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-27650]
+Action.c(513): Continuing after Error -27778: Timeout (120 seconds) exceeded while waiting to receive data for URL "http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MERR-27778]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

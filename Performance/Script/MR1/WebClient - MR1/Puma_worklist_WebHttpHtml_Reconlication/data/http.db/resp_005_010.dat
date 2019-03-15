@@ -1,0 +1,641 @@
+﻿reconciliationModule.controller("reconciliationCtrl", ["$scope", "$stateParams", "$location", '$interval', '$translate', 'toaster', 'constants', 'enums', "reconciliationService", "worklistService",
+function ($scope, $stateParams, $location, $interval, $translate, toaster, constants, enums, reconciliationService, worklistService) {
+        var rawImgW = null;
+        var rawImgH = null;
+        var promise;
+        var isFromWorklist = false;
+
+        function clearCanvas(canvasContainer) {
+            if (canvasContainer.children != null) {
+                while (canvasContainer.children.length > 0) {
+                    canvasContainer.removeChild(canvasContainer.children[0]);
+                }
+            }
+        }
+
+        function renderPDF(url, canvasContainer) {
+            clearCanvas(canvasContainer);
+            var scale = 1;  //"zoom" factor for the PDF
+
+            function renderPages(pdfDoc) {
+                for (var num = 1; num <= pdfDoc.numPages; num++)
+                    pdfDoc.getPage(num).then(function (page) {
+                        var viewport = page.getViewport(scale);
+                        var div = document.createElement("div");
+
+                        // Set id attribute with page-#{pdf_page_number} format
+                        div.setAttribute("id", "page-" + (page.pageIndex + 1));
+
+                        // This will keep positions of child elements as per our needs
+                        div.setAttribute("style", "position: relative; width: " + viewport.width + "px; margin: 0 auto");
+
+                        // Append div within div#container
+                        canvasContainer.appendChild(div);
+
+                        // Create a new Canvas element
+                        var canvas = document.createElement("canvas");
+
+                        // Append Canvas within div#page-#{pdf_page_number}
+                        div.appendChild(canvas);
+
+                        var context = canvas.getContext('2d');
+                        canvas.height = viewport.height;
+                        canvas.width = viewport.width;
+
+                        var renderContext = {
+                            canvasContext: context,
+                            viewport: viewport
+                        };
+                        page.render(renderContext)
+                          .then(function () {
+                              // Get text-fragments
+                              return page.getTextContent();
+                          })
+                          .then(function (textContent) {
+                              // Create div which will hold text-fragments
+                              var textLayerDiv = document.createElement("div");
+
+                              // Set it's class to textLayer which have required CSS styles
+                              textLayerDiv.setAttribute("class", "textLayer");
+
+                              // Append newly created div in `div#page-#{pdf_page_number}`
+                              div.appendChild(textLayerDiv);
+
+                              // Create new instance of TextLayerBuilder class
+                              var textLayer = new TextLayerBuilder({
+                                  textLayerDiv: textLayerDiv,
+                                  pageIndex: page.pageIndex,
+                                  viewport: viewport
+                              });
+
+                              // Set text-fragments
+                              textLayer.setTextContent(textContent);
+
+                              // Render text-fragments
+                              textLayer.render();
+                          });
+                    });
+            }
+
+            PDFJS.workerSrc = 'Scripts/PDF.js.1.3.91/pdf.worker.js';
+            PDFJS.disableWorker = true;
+            PDFJS.getDocument(url).then(renderPages);
+        }
+
+        $scope.showSelected = function (node) {
+            if ($scope.isFilmTypeSelected) {
+                if (node != null) {
+                    if (node.data && node.images) {
+                        $scope.images = node.images;
+                        $("#divImageList").scrollTop(0);
+                        $scope.selectImage($scope.images[0]);
+                    }
+                }
+                else {
+                    $scope.images = [];
+                    $scope.originImagePath = '';
+                }
+            }
+            else {
+                if (node != null) {
+                    reconciliationService.getReport(node.instanceId).success(function (data) {
+                        var file = new Blob([data], { type: 'application/pdf' });
+                        var fileURL = URL.createObjectURL(file);
+                        $scope.pdfUrl = fileURL;
+                        if ($scope.isCanvasSupport) {
+                            renderPDF(fileURL, document.getElementById("divReportViewer"));
+                        }
+                        else {
+                            document.getElementById("pdfFrame").src = fileURL;
+                        }
+                    });
+                }
+                else {
+                    if ($scope.isCanvasSupport) {
+                        clearCanvas(document.getElementById("divReportViewer"));
+                    }
+                    else {
+                        document.getElementById("pdfFrame").src = '';
+                    }
+                }
+            }
+        };
+
+        function searchRecord() {
+            $scope.isEditing = false;
+            reconciliationService.getRecords($scope.accessionNumber, $scope.patientId).success(function (data) {
+                $scope.records = data;
+                if (data != null) {
+                    $scope.hasNoData = false;
+                    setHeight(data.length);
+                }
+                else {
+                    $scope.hasNoData = true;
+                    setHeight(0);
+                }
+            });
+        };
+
+        function createImageItem(imageLists, idPrefix) {
+            var items = [];
+            imageLists.forEach(function (value) {
+                value.images.forEach(function (item) {
+                    item.thumbnailImagePath = $location.protocol() + '://' + $location.host() + ':' + $location.port() + '//' + item.thumbnailImagePath;
+                });
+                var iconClass = null;
+                if (value.deliverJob.jobStatus == 9) {
+                    iconClass = "icon-ico_unconfig";
+                }
+                else if (value.deliverJob.jobStatus == 12) {
+                    iconClass = "icon-ico_OCRfailed";
+                }
+                items.push({ "label": value.deliverJob.createDateTime.substr(11, 5), "id": idPrefix + value.deliverJob.createDateTime, "data": value.deliverJob, "images": value.images,
+                    "icon": iconClass });
+                if ($scope.selectedNode == null) {
+                    $scope.selectedNode = items[0];
+                }
+            });
+            return items;
+        };
+
+        function createCallingAEItem(callingAEs, idPrefix) {
+            var items = [];
+            callingAEs.forEach(function (value) {
+                var item = { "label": value.callingAE, "id": idPrefix + value.callingAE, "children": createImageItem(value.imageLists, idPrefix + value.callingAE) };
+                items.push(item);
+                $scope.expandedNodes.push(item);
+            });
+            return items;
+        };
+
+        function searchUmatchImages() {
+            $scope.treedata.splice(0, $scope.treedata.length);
+            $scope.expandedNodes.splice(0, $scope.expandedNodes.length);
+            $scope.images = [];
+            $scope.selectedNode = null;
+            $scope.originImagePath = '';
+            $scope.isImageSelected = false;
+            reconciliationService.getUnmatchImages($scope.selectedShortcut, $scope.instanceId).success(function (data) {
+                if (data != null) {
+                    data.forEach(function (value) {
+                        var item = { "label": value.createDate, "id": value.createDate, "children": createCallingAEItem(value.callingAEs, value.createDate) };
+                        $scope.treedata.push(item);
+                        $scope.expandedNodes.push(item);
+                    });
+                }
+                $scope.showSelected($scope.selectedNode);
+            });
+        };
+
+        function createReportItem(reportLists, idPrefix) {
+            var items = [];
+            reportLists.forEach(function (value) {
+                var item = { "label": value.createTime, "id": idPrefix + value.createTime, "instanceId": value.studyInstanceUID, "accessionNumber": value.accessionNumber }
+                items.push(item);
+                if ($scope.selectedNode == null) {
+                    $scope.selectedNode = item;
+                }
+            });
+            return items;
+        };
+
+        function searchUmatchReports() {
+            $scope.treedata.splice(0, $scope.treedata.length);
+            $scope.expandedNodes.splice(0, $scope.expandedNodes.length);
+            $scope.selectedNode = null;
+            reconciliationService.getUnmatchReports($scope.selectedShortcut, $scope.instanceId).success(function (data) {
+                if (data != null) {
+                    data.forEach(function (value) {
+                        var item = { "label": value.createDate, "id": value.createDate, "children": createReportItem(value.reportLists, value.createDate) };
+                        $scope.treedata.push(item);
+                        $scope.expandedNodes.push(item);
+                    });
+                }
+                $scope.showSelected($scope.selectedNode);
+            });
+        };
+
+        function setHeight(count) {
+            if (document.getElementById("mianDiv") != null) {
+                var totalHeight = document.getElementById("mianDiv").clientHeight;
+                $scope.filmViewerHeight = totalHeight - document.getElementById("searchAreaDiv").clientHeight - 71 - count * 49; // inner table's margine is 20
+                if ($scope.isEditing) {
+                    $scope.filmViewerHeight -= 61;
+                }
+                else if ($scope.hasNoData) {
+                    $scope.filmViewerHeight -= 37; // footer
+                }
+
+                $scope.imageListHeight = $scope.filmViewerHeight - 192;
+            }
+        };
+
+        function initStyle() {
+            $scope.navWidth = 250;
+            $scope.mainMargin = 250;
+            $scope.mainWidth = (document.documentElement.clientWidth - 250) + 'px';
+        };
+
+        $scope.selectType = function (type) {
+            $scope.seletedType = type;
+            if (type == 'film') {
+                $scope.isFilmTypeSelected = true;
+                searchUmatchImages();
+            }
+            else {
+                $scope.isFilmTypeSelected = false;
+                searchUmatchReports();
+            }
+        };
+
+        (function initialize() {
+            initStyle();
+            $scope.isCanvasSupport = !!window.HTMLCanvasElement;
+            $scope.hasNoData = false;
+            $scope.shortcuts = [
+            {
+                name: '今天',
+                value: 0
+            },
+            {
+                name: '最近两天',
+                value: 1
+            },
+            {
+                name: '最近一周',
+                value: 6
+            },
+            {
+                name: '最近一月',
+                value: 29
+            },
+            {
+                name: '全部',
+                value: -1
+            }
+            ];
+            $scope.selectedShortcut = 1;
+            $scope.patientId = $stateParams.patientId;
+            $scope.accessionNumber = $stateParams.accessionNumber;
+            $scope.instanceId = $stateParams.instanceId;
+            $scope.openNav = true;
+            $scope.treedata = [];
+            $scope.expandedNodes = [];
+            $scope.treeOptions = {
+                allowDeselect: false,
+                multiSelection: false
+            };
+            if ($stateParams.type != null) {
+                $scope.selectType($stateParams.type);
+            }
+            else {
+                $scope.selectType('film');
+            }
+            if ($stateParams.type != null || $scope.accessionNumber != null || $scope.patientId != null) {
+                searchRecord();
+                isFromWorklist = true;
+            }
+            else {
+                setHeight(0);
+            }
+
+            window.onresize = function () {
+                setHeight(0);
+                document.getElementById('divFilmViewer').style.height = $scope.filmViewerHeight + 'px';
+                document.getElementById('divImgRect').style.height = $scope.filmViewerHeight + 'px';
+                document.getElementById('divImageList').style.height = $scope.imageListHeight + 'px';
+            }
+
+            $scope.selectedPrinter = null;
+            worklistService.getTerminal().success(function (data) {
+                $scope.terminals = data;
+            });
+        }());
+
+        $scope.toggleLeft = function () {
+            $scope.openNav = !$scope.openNav;
+            if ($scope.openNav) {
+                initStyle();
+            }
+            else {
+                $scope.navWidth = 0;
+                $scope.mainMargin = 0;
+                $scope.mainWidth = '100%';
+            }
+        }
+
+        $scope.searchRecord = searchRecord;
+
+        $scope.isSearchDisabled = function () {
+            return $scope.accessionNumber == null && $scope.patientId == null;
+        }
+
+        $scope.selectImage = function (image) {
+            if (image && image.originImagePath && image.originImagePath != null) {
+                $scope.originImagePath = $location.protocol() + '://' + $location.host() + ':' + $location.port() + '//' + image.originImagePath;
+                $scope.isImageSelected = true;
+            }
+            rawImgH = null;
+            rawImgW = null;
+            var imagRawItem = document.getElementById("imgRaw");
+            if (imagRawItem != null) {
+                imagRawItem.style.width = null;
+                imagRawItem.style.height = null;
+                imagRawItem.style.left = null;
+                imagRawItem.style.right = null;
+                imagRawItem.style.position = null;
+                document.getElementById('divImg').style.width = null;
+                document.getElementById('divImg').style.height = null;
+                document.getElementById('divImgRect').style.width = null;
+                document.getElementById('divImgRect').style.height = null;
+                document.getElementById('divImgRect').style.overflow = 'auto';
+                document.getElementById('imgZoom1').className = "PS_Zoom1X_active";
+                document.getElementById('imgZoom2').className = "PS_Zoom2X_common";
+                document.getElementById('imgZoomFit').className = "PS_ZoomFit_common";
+                $scope.movePos(1);
+            }
+        }
+
+        $scope.scrollNavList = function (offset) {
+            var currentTop = $("#divImageList").scrollTop();
+            $("#divImageList").scrollTop(currentTop + offset);
+        }
+
+        function clearPage() {
+            $scope.records = [];
+            $scope.selectedNode = null;
+            $scope.showSelected(null);
+            $scope.treedata.splice(0, $scope.treedata.length);
+        }
+
+        $scope.saveRecord = function (record) {
+            if ($scope.isEditing) {
+                $scope.isEditing = false;
+                $scope.record = null;
+            }
+            if ($scope.isFilmTypeSelected) {
+                if (isFromWorklist) {
+                    record.jobInstanceUID = $scope.instanceId;
+                    reconciliationService.reconciliationFilm(record).success(function (data) {
+                        if (data.isSuccess) {
+                            toaster.success({ title: $translate.instant("Success"), body: $translate.instant("SaveSuccess") });
+                            clearPage();
+                        }
+                        else {
+                            toaster.warning({ title: $translate.instant("Failed"), body: data.message });
+                        }
+                    });
+                }
+                else {
+                    record.jobInstanceUID = $scope.selectedNode.data.jobInstanceUID;
+                    reconciliationService.saveDeliveryJob(record).success(function (data) {
+                        if (data.isSuccess) {
+                            toaster.success({ title: $translate.instant("Success"), body: $translate.instant("SaveSuccess") });
+                            searchUmatchImages();
+                            $scope.records = [];
+                        }
+                        else {
+                            toaster.warning({ title: $translate.instant("Failed"), body: data.message });
+                        }
+                    });
+                }
+            }
+            else {
+                record.jobInstanceUID = $scope.selectedNode.instanceId;
+                reconciliationService.saveReport(record).success(function (data) {
+                    if (data.isSuccess) {
+                        toaster.success({ title: $translate.instant("Success"), body: $translate.instant("SaveSuccess") });
+                        if (!isFromWorklist) {
+                            searchUmatchReports();
+                            $scope.records = [];
+                        }
+                        else {
+                            clearPage();
+                        }
+                    }
+                    else {
+                        toaster.warning({ title: $translate.instant("Failed"), body: data.message });
+                    }
+                });
+            }
+        }
+
+        $scope.searchUmatches = function () {
+            if ($scope.isFilmTypeSelected) {
+                searchUmatchImages();
+            }
+            else {
+                searchUmatchReports();
+            }
+        }
+
+        $scope.setAutoRefresh = function () {
+            if ($scope.isAutoRefresh) {
+                promise = $interval(function () {
+                    $scope.searchUmatches();
+                }, constants.autoRefreshTime);
+            }
+            else {
+                $interval.cancel(promise);
+            }
+        }
+
+        $scope.movePos = function (type) {
+            document.getElementById('imgPos1').className = "PS_FitTL_common";
+            document.getElementById('imgPos2').className = "PS_FitTR_common";
+            document.getElementById('imgPos3').className = "PS_FitBL_common";
+            document.getElementById('imgPos4').className = "PS_FitBR_common";
+            if (type == 1) {
+                // Left-Top
+                $("#divImgRect").scrollLeft(0);
+                $("#divImgRect").scrollTop(0);
+                document.getElementById('imgPos1').className = "PS_FitTL_active";
+            }
+            else if (type == 2) {
+                // Right-Top
+                $("#divImgRect").scrollLeft(document.getElementById('divImg').offsetWidth);
+                $("#divImgRect").scrollTop(0);
+                document.getElementById('imgPos2').className = "PS_FitTR_active";
+            }
+            else if (type == 3) {
+                // Left-Bottom
+                $("#divImgRect").scrollLeft(0);
+                $("#divImgRect").scrollTop(document.getElementById('divImg').offsetHeight);
+                document.getElementById('imgPos3').className = "PS_FitBL_active";
+            }
+            else if (type == 4) {
+                // Right-Bottom
+                $("#divImgRect").scrollLeft(document.getElementById('divImg').offsetWidth);
+                $("#divImgRect").scrollTop(document.getElementById('divImg').offsetHeight);
+                document.getElementById('imgPos4').className = "PS_FitBR_active";
+            }
+        }
+
+        $scope.zoomImg = function (type) {
+            if ($scope.isImageSelected) {
+                if (rawImgH == null && rawImgW == null) {
+                    rawImgW = document.getElementById("imgRaw").offsetWidth;
+                    rawImgH = document.getElementById("imgRaw").offsetHeight;
+                }
+                document.getElementById('imgZoom1').className = "PS_Zoom1X_common";
+                document.getElementById('imgZoom2').className = "PS_Zoom2X_common";
+                document.getElementById('imgZoomFit').className = "PS_ZoomFit_common";
+                document.getElementById('imgRaw').style.left = "0px";
+                document.getElementById('imgRaw').style.right = "0px";
+                document.getElementById('imgRaw').style.position = "";
+                $scope.movePos(1) // Move to Left-Top
+
+                if (type == 0) {
+                    // Auto
+                    var realW = document.getElementById('divFilmViewer').offsetWidth - 87;
+                    var realH = document.getElementById('divFilmViewer').offsetHeight;
+                    //alert(realW / realH);
+                    var newH, newW, offsetX, offsetY;
+
+                    if (realW / realH > rawImgW / rawImgH) {
+                        // Width too large
+                        newH = realH;
+                        newW = parseInt(newH * rawImgW / rawImgH);
+                        offsetX = (realW - newW) / 2;
+                        offsetY = 0;
+                    }
+                    else {
+                        // Height too large
+                        newW = realW;
+                        newH = parseInt(newW * rawImgH / rawImgW);
+                        offsetX = 0;
+                        offsetY = (realH - newH) / 2;
+                    }
+                    //alert(newW + "," + newH);
+                    document.getElementById('imgRaw').style.width = newW + "px";
+                    document.getElementById('imgRaw').style.height = newH + "px";
+                    document.getElementById('divImgRect').style.width = realW + "px";
+                    document.getElementById('divImgRect').style.height = realH + "px";
+                    document.getElementById('divImgRect').style.overflow = 'hidden';
+                    document.getElementById('divImg').style.width = realW + "px";
+                    document.getElementById('divImg').style.height = realH + "px";
+                    document.getElementById('imgRaw').style.left = offsetX + "px";
+                    document.getElementById('imgRaw').style.right = offsetY + "px";
+                    document.getElementById('imgRaw').style.position = "relative";
+                    document.getElementById('imgZoomFit').className = "PS_ZoomFit_active";
+                }
+                else if (type == 1) {
+                    // 1X
+                    document.getElementById('imgRaw').style.width = rawImgW + "px";
+                    document.getElementById('imgRaw').style.height = rawImgH + "px";
+                    document.getElementById('divImg').style.width = rawImgW + "px";
+                    document.getElementById('divImg').style.height = rawImgH + "px";
+                    document.getElementById('divImgRect').style.overflow = 'auto';
+                    document.getElementById('imgZoom1').className = "PS_Zoom1X_active";
+
+                }
+                else if (type == 2) {
+                    // 2X
+                    document.getElementById('imgRaw').style.width = (rawImgW * 2) + "px";
+                    document.getElementById('imgRaw').style.height = (rawImgH * 2) + "px";
+                    document.getElementById('divImg').style.width = (rawImgW * 2) + "px";
+                    document.getElementById('divImg').style.height = (rawImgH * 2) + "px";
+                    document.getElementById('divImgRect').style.overflow = 'auto';
+                    document.getElementById('imgZoom2').className = "PS_Zoom2X_active";
+                }
+            }
+        }
+
+        $scope.isObsoleteDisabled = function () {
+            if (isFromWorklist) {
+                return true;
+            }
+            else {
+                return $scope.selectedNode == null;
+            }
+        }
+
+        $scope.obsolete = function () {
+            if ($scope.isFilmTypeSelected) {
+                reconciliationService.obsoleteJob({ jobId: $scope.selectedNode.data.jobInstanceUID }).success(function (data) {
+                    if (data.isSuccess) {
+                        toaster.success({ title: $translate.instant("Success"), body: $translate.instant("ObsoleteSuccess") });
+                        searchUmatchImages();
+                    }
+                    else {
+                        toaster.warning({ title: $translate.instant("Failed"), body: data.message });
+                    }
+                });
+            }
+            else {
+                reconciliationService.obsoleteReport({ instanceId: $scope.selectedNode.instanceId, accessionNumber: $scope.selectedNode.accessionNumber, isRemove: !isFromWorklist }).success(function (data) {
+                    if (data.isSuccess) {
+                        toaster.success({ title: $translate.instant("Success"), body: $translate.instant("ObsoleteSuccess") });
+                        searchUmatchReports();
+                    }
+                    else {
+                        toaster.warning({ title: $translate.instant("Failed"), body: data.message });
+                    }
+                });
+            }
+        }
+
+        $scope.isPrintDisabled = function () {
+            return $scope.selectedNode == null || !$scope.isFilmTypeSelected;
+        }
+
+        $scope.printFilm = function () {
+            reconciliationService.printFilm({ jobId: $scope.selectedNode.data.jobInstanceUID, terminalId: $scope.selectedPrinter })
+        }
+
+        $scope.mannualEdit = function () {
+            $scope.records = [];
+            $scope.isEditing = true;
+            $scope.record = null;
+            $scope.hasNoData = false;
+            worklistService.getModality().success(function (data) {
+                $scope.modalityTypes = data;
+            });
+            reconciliationService.getPatientType().success(function (data) {
+                $scope.patientTypes = data;
+            });
+            reconciliationService.getDepartments().success(function (data) {
+                $scope.examDepartments = data;
+            });
+            $scope.genders = enums.genders;
+            $scope.examDateOptions = {
+                showWeeks: false,
+                maxDate: new Date()
+            };
+            $scope.dateFormat = constants.dateFormat;
+            $scope.examDatePicker = {
+                opened: false
+            };
+            setHeight(0);
+        }
+
+        $scope.openExamDate = function () {
+            $scope.examDatePicker.opened = true;
+        };
+
+        $scope.cancelSave = function () {
+            $scope.isEditing = false;
+            $scope.record = null;
+            setHeight(0);
+        };
+
+        $scope.isMannualSaveDisabled = function (record) {
+            if (record != null && record.accessionNumber != null && record.patientID != null && record.patientName != null && record.modalityType != null && record.gender != null
+                && record.patientType != null && record.examName != null && record.examDepartment != null && record.examDate != null && $scope.selectedNode != null) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        };
+
+        $scope.isSaveDisabled = function (item) {
+            if ($scope.selectedNode == null) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    }
+]);

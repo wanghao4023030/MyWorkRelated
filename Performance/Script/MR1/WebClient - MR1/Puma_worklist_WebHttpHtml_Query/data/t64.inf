@@ -1,0 +1,10 @@
+[t64]
+FileName1=t64_CheckLoginStatus.html
+URL1=http://10.184.129.208/Platform/Account/CheckLoginStatus
+Total=1
+ContentType=
+SnapshotXmlFile=snapshot_64.xml
+RequestHeaderFile=t64_RequestHeader.txt
+RequestBodyFile=NONE
+[ProtocolInfo]
+ProtocolId=QTWeb

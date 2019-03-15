@@ -1,0 +1,747 @@
+Start auto log messages stack - Iteration 86.	[MsgId: MMSG-10545]
+Action.c(313):     cription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeT
+Action.c(313):     ype":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plai
+Action.c(313):     n","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":0,"bla
+Action.c(313):     ckInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","err
+Action.c(313):     orDescription":null,
+Action.c(313): t=6644144ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     "statusTime":"2018-09-14T18:35:25.007+08:00"},{"printerID":"Upper","terminalID":null,"prin
+Action.c(313):     terName":"Upper","printerModel":"Color","statusCode":0,"statusDescription":"Normal","repor
+Action.c(313):     tDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,
+Action.c(313):     "statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","
+Action.c(313):     statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLe
+Action.c(313):     vel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"stat
+Action.c(313):     usTime":"2018-09-14T18:35:30.367+08:00"}],"errorCode":null,"errorDescription":null,"termin
+Action.c(313):     alType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal25","terminal
+Action.c(313):     Name":"Terminal25","terminalIP":"10.184.129.25","terminalDescription":null,"terminalStatus
+Action.c(313):     ":0,"terminalStatusLevel":"Normal","terminalStatusDescription":null,"terminalStatusTime":"
+Action.c(313):     2018-09-14T18:37:27.547+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermi
+Action.c(313):     anlState":false,"checkFilmState":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"prin
+Action.c(313):     terID":"Lower","terminalID":null,"printerName":"Lower","printerModel":"Mono","statusCode":
+Action.c(313):     0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain"
+Action.c(313):     ,"paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"pape
+Action.c(313):     rType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printer
+Action.c(313):     Type":0,"blackInkLev
+Action.c(313): t=6644144ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     el":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescri
+Action.c(313):     ption":null,"statusTime":"2018-09-14T18:36:36.707+08:00"},{"printerID":"Upper","terminalID
+Action.c(313):     ":null,"printerName":"Upper","printerModel":"Color","statusCode":0,"statusDescription":"No
+Action.c(313):     rmal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A5","st
+Action.c(313):     atusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSize
+Action.c(313):     Type":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel":9
+Action.c(313):     4,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription
+Action.c(313):     ":null,"statusTime":"2018-09-14T18:36:42.867+08:00"}],"errorCode":null,"errorDescription":
+Action.c(313):     null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal2
+Action.c(313):     6","terminalName":"Terminal26","terminalIP":"10.184.129.26","terminalDescription":null,"te
+Action.c(313):     rminalStatus":0,"terminalStatusLevel":"Normal","terminalStatusDescription":null,"terminalS
+Action.c(313):     tatusTime":"2018-09-14T18:39:22.31+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2",
+Action.c(313):     "checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo":null,"reportPrintersIn
+Action.c(313):     fo":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","printerModel":"Mono","s
+Action.c(313):     tatusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperTy
+Action.c(313):     pe":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName"
+Action.c(313):     :null,"paperType":"P
+Action.c(313): t=6644144ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     lain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":0,"
+Action.c(313):     blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","
+Action.c(313):     errorDescription":null,"statusTime":"2018-09-14T18:38:24.33+08:00"},{"printerID":"Upper","
+Action.c(313):     terminalID":null,"printerName":"Upper","printerModel":"Color","statusCode":0,"statusDescri
+Action.c(313):     ption":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType
+Action.c(313):     ":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain",
+Action.c(313):     "paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackI
+Action.c(313):     nkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorD
+Action.c(313):     escription":null,"statusTime":"2018-09-14T18:38:29.38+08:00"}],"errorCode":null,"errorDesc
+Action.c(313):     ription":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"
+Action.c(313):     Terminal27","terminalName":"Terminal27","terminalIP":"10.184.129.27","terminalDescription"
+Action.c(313):     :null,"terminalStatus":0,"terminalStatusLevel":"Normal","terminalStatusDescription":null,"
+Action.c(313):     terminalStatusTime":"2018-09-14T18:32:07.673+08:00","departmentIdList":"3,12,4,5,6,7,8,9,1
+Action.c(313):     0,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo":null,"report
+Action.c(313):     PrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","printerModel"
+Action.c(313):     :"Mono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":nul
+Action.c(313):     l,"paperType":"Plain
+Action.c(313): t=6644144ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     ","paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"pap
+Action.c(313):     erType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printe
+Action.c(313):     rType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"error
+Action.c(313):     Code":"","errorDescription":null,"statusTime":"2018-09-14T18:31:18.213+08:00"},{"printerID
+Action.c(313):     ":"Upper","terminalID":null,"printerName":"Upper","printerModel":"Color","statusCode":0,"s
+Action.c(313):     tatusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","pa
+Action.c(313):     perSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperTyp
+Action.c(313):     e":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType
+Action.c(313):     ":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode"
+Action.c(313):     :"","errorDescription":null,"statusTime":"2018-09-14T18:31:23.25+08:00"}],"errorCode":null
+Action.c(313):     ,"errorDescription":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"te
+Action.c(313):     rminalID":"Terminal28","terminalName":"Terminal28","terminalIP":"10.184.129.28","terminalD
+Action.c(313):     escription":null,"terminalStatus":0,"terminalStatusLevel":"Normal","terminalStatusDescript
+Action.c(313):     ion":null,"terminalStatusTime":"2018-09-14T18:33:37.403+08:00","departmentIdList":"3,12,4,
+Action.c(313):     5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo":n
+Action.c(313):     ull,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","pr
+Action.c(313):     interModel":"Mono","
+Action.c(313): t=6644144ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperT
+Action.c(313):     ype":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName
+Action.c(313):     ":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal
+Action.c(313):     "}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLeve
+Action.c(313):     l":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:32:48.39+08:00"},{
+Action.c(313):     "printerID":"Upper","terminalID":null,"printerName":"Upper","printerModel":"Color","status
+Action.c(313):     Code":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"
+Action.c(313):     Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null
+Action.c(313):     ,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"p
+Action.c(313):     rinterType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"
+Action.c(313):     errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:32:53.48+08:00"}],"error
+Action.c(313):     Code":null,"errorDescription":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":f
+Action.c(313):     alse},{"terminalID":"Terminal29","terminalName":"Terminal29","terminalIP":"10.184.129.29",
+Action.c(313):     "terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Normal","terminalStat
+Action.c(313):     usDescription":null,"terminalStatusTime":"2018-09-14T18:35:03.253+08:00","departmentIdList
+Action.c(313):     ":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrin
+Action.c(313):     terInfo":null,"repor
+Action.c(313): t=6644144ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     tPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","printerModel
+Action.c(313):     ":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":nu
+Action.c(313):     ll,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"
+Action.c(313):     drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescriptio
+Action.c(313):     n":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yel
+Action.c(313):     lowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:34:12.89
+Action.c(313):     +08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerModel":"Colo
+Action.c(313):     r","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"pa
+Action.c(313):     perType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawer
+Action.c(313):     Name":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"No
+Action.c(313):     rmal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInk
+Action.c(313):     Level":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:34:17.96+08:00
+Action.c(313):     "}],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEnabledFlag":1,"isF
+Action.c(313):     ollowed":false},{"terminalID":"Terminal3","terminalName":"Terminal3","terminalIP":"10.184.
+Action.c(313):     129.3","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Normal","termi
+Action.c(313):     nalStatusDescription":null,"terminalStatusTime":"2018-09-14T18:36:31.277+08:00","departmen
+Action.c(313):     tIdList":"3,12,4,5,6
+Action.c(313): t=6644145ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     ,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo":null
+Action.c(313):     ,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","print
+Action.c(313):     erModel":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerN
+Action.c(313):     ame":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"Emp
+Action.c(313):     ty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDes
+Action.c(313):     cription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel"
+Action.c(313):     :0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:3
+Action.c(313):     5:41.49+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerModel
+Action.c(313):     ":"Color","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":n
+Action.c(313):     ull,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{
+Action.c(313):     "drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescripti
+Action.c(313):     on":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"ye
+Action.c(313):     llowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:35:46.5
+Action.c(313):     13+08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEnabledFlag
+Action.c(313):     ":1,"isFollowed":false},{"terminalID":"Terminal30","terminalName":"Terminal30","terminalIP
+Action.c(313):     ":"10.184.129.30","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Nor
+Action.c(313):     mal","terminalStatus
+Action.c(313): t=6644145ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     Description":null,"terminalStatusTime":"2018-09-14T18:37:51.12+08:00","departmentIdList":"
+Action.c(313):     3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinter
+Action.c(313):     Info":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Low
+Action.c(313):     er","printerModel":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":
+Action.c(313):     [{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDescrip
+Action.c(313):     tion":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,
+Action.c(313):     "statusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magent
+Action.c(313):     aInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-
+Action.c(313):     09-14T18:37:01.17+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","pr
+Action.c(313):     interModel":"Color","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"dra
+Action.c(313):     werName":null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":
+Action.c(313):     "Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statu
+Action.c(313):     sDescription":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLe
+Action.c(313):     vel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T
+Action.c(313):     18:37:06.203+08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalE
+Action.c(313):     nabledFlag":1,"isFollowed":false},{"terminalID":"Terminal31","terminalName":"Terminal31","
+Action.c(313):     terminalIP":"10.184.
+Action.c(313): t=6644145ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     129.31","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Normal","term
+Action.c(313):     inalStatusDescription":null,"terminalStatusTime":"2018-09-14T18:39:45.953+08:00","departme
+Action.c(313):     ntIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"
+Action.c(313):     filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printe
+Action.c(313):     rName":"Lower","printerModel":"Mono","statusCode":0,"statusDescription":"Normal","reportDr
+Action.c(313):     awersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"st
+Action.c(313):     atusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","sta
+Action.c(313):     tusCode":0,"statusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel
+Action.c(313):     ":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusT
+Action.c(313):     ime":"2018-09-14T18:38:59.897+08:00"},{"printerID":"Upper","terminalID":null,"printerName"
+Action.c(313):     :"Upper","printerModel":"Color","statusCode":0,"statusDescription":"Normal","reportDrawers
+Action.c(313):     Info":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusD
+Action.c(313):     escription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCo
+Action.c(313):     de":0,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"
+Action.c(313):     magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":
+Action.c(313):     "2018-09-14T18:39:04.987+08:00"}],"errorCode":null,"errorDescription":null,"terminalType":
+Action.c(313):     2,"terminalEnabledFl
+Action.c(313): t=6644145ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     ag":1,"isFollowed":false},{"terminalID":"Terminal32","terminalName":"Terminal32","terminal
+Action.c(313):     IP":"10.184.129.32","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"N
+Action.c(313):     ormal","terminalStatusDescription":null,"terminalStatusTime":"2018-09-14T18:33:11.27+08:00
+Action.c(313):     ","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmSta
+Action.c(313):     te":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":n
+Action.c(313):     ull,"printerName":"Lower","printerModel":"Mono","statusCode":0,"statusDescription":"Normal
+Action.c(313):     ","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","status
+Action.c(313):     Code":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType
+Action.c(313):     ":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"c
+Action.c(313):     yanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":nu
+Action.c(313):     ll,"statusTime":"2018-09-14T18:32:22.37+08:00"},{"printerID":"Upper","terminalID":null,"pr
+Action.c(313):     interName":"Upper","printerModel":"Color","statusCode":0,"statusDescription":"Normal","rep
+Action.c(313):     ortDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A5","statusCode":
+Action.c(313):     3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4"
+Action.c(313):     ,"statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInk
+Action.c(313):     Level":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"st
+Action.c(313):     atusTime":"2018-09-1
+Action.c(313): t=6644145ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     4T18:32:27.397+08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"termina
+Action.c(313):     lEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal33","terminalName":"Terminal33"
+Action.c(313):     ,"terminalIP":"10.184.129.33","terminalDescription":null,"terminalStatus":0,"terminalStatu
+Action.c(313):     sLevel":"Normal","terminalStatusDescription":null,"terminalStatusTime":"2018-09-14T18:34:3
+Action.c(313):     3.487+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"c
+Action.c(313):     heckFilmState":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","te
+Action.c(313):     rminalID":null,"printerName":"Lower","printerModel":"Mono","statusCode":0,"statusDescripti
+Action.c(313):     on":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"
+Action.c(313):     A4","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","pa
+Action.c(313):     perSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":0,"blackInkL
+Action.c(313):     evel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDesc
+Action.c(313):     ription":null,"statusTime":"2018-09-14T18:33:44.25+08:00"},{"printerID":"Upper","terminalI
+Action.c(313):     D":null,"printerName":"Upper","printerModel":"Color","statusCode":0,"statusDescription":"N
+Action.c(313):     ormal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A5","s
+Action.c(313):     tatusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSiz
+Action.c(313):     eType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel":
+Action.c(313):     94,"cyanInkLevel":0,
+Action.c(313): t=6644145ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     "magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime"
+Action.c(313):     :"2018-09-14T18:33:49.267+08:00"}],"errorCode":null,"errorDescription":null,"terminalType"
+Action.c(313):     :2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal34","terminalName":"
+Action.c(313):     Terminal34","terminalIP":"10.184.129.34","terminalDescription":null,"terminalStatus":0,"te
+Action.c(313):     rminalStatusLevel":"Normal","terminalStatusDescription":null,"terminalStatusTime":"2018-09
+Action.c(313):     -14T18:35:49.21+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState
+Action.c(313):     ":false,"checkFilmState":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"
+Action.c(313):     Lower","terminalID":null,"printerName":"Lower","printerModel":"Mono","statusCode":0,"statu
+Action.c(313):     sDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperS
+Action.c(313):     izeType":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"
+Action.c(313):     Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":0,
+Action.c(313):     "blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"",
+Action.c(313):     "errorDescription":null,"statusTime":"2018-09-14T18:34:59.383+08:00"},{"printerID":"Upper"
+Action.c(313):     ,"terminalID":null,"printerName":"Upper","printerModel":"Color","statusCode":0,"statusDesc
+Action.c(313):     ription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeTy
+Action.c(313):     pe":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain
+Action.c(313):     ","paperSizeType":"A
+Action.c(313): t=6644145ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     4","statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanI
+Action.c(313):     nkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"
+Action.c(313):     statusTime":"2018-09-14T18:35:04.39+08:00"}],"errorCode":null,"errorDescription":null,"ter
+Action.c(313):     minalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal35","termi
+Action.c(313):     nalName":"Terminal35","terminalIP":"10.184.129.35","terminalDescription":null,"terminalSta
+Action.c(313):     tus":0,"terminalStatusLevel":"Normal","terminalStatusDescription":null,"terminalStatusTime
+Action.c(313):     ":"2018-09-14T18:37:08.107+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTe
+Action.c(313):     rmianlState":false,"checkFilmState":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"p
+Action.c(313):     rinterID":"Lower","terminalID":null,"printerName":"Lower","printerModel":"Mono","statusCod
+Action.c(313):     e":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Pla
+Action.c(313):     in","paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"p
+Action.c(313):     aperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"prin
+Action.c(313):     terType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"err
+Action.c(313):     orCode":"","errorDescription":null,"statusTime":"2018-09-14T18:36:18.327+08:00"},{"printer
+Action.c(313):     ID":"Upper","terminalID":null,"printerName":"Upper","printerModel":"Color","statusCode":0,
+Action.c(313):     "statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","
+Action.c(313):     paperSizeType":"A5",
+Action.c(313): t=6644145ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     "statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperS
+Action.c(313):     izeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel
+Action.c(313):     ":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescript
+Action.c(313):     ion":null,"statusTime":"2018-09-14T18:36:23.35+08:00"}],"errorCode":null,"errorDescription
+Action.c(313):     ":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Termina
+Action.c(313):     l36","terminalName":"Terminal36","terminalIP":"10.184.129.36","terminalDescription":null,"
+Action.c(313):     terminalStatus":0,"terminalStatusLevel":"Normal","terminalStatusDescription":null,"termina
+Action.c(313):     lStatusTime":"2018-09-14T18:38:33.02+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2
+Action.c(313):     ","checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo":null,"reportPrinters
+Action.c(313):     Info":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","printerModel":"Mono",
+Action.c(313):     "statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paper
+Action.c(313):     Type":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerNam
+Action.c(313):     e":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Norma
+Action.c(313):     l"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLev
+Action.c(313):     el":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:37:43.667+08:00"}
+Action.c(313):     ,{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerModel":"Color","stat
+Action.c(313):     usCode":0,"statusDes
+Action.c(313): t=6644145ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     cription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeT
+Action.c(313):     ype":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plai
+Action.c(313):     n","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":1,"bla
+Action.c(313):     ckInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","err
+Action.c(313):     orDescription":null,"statusTime":"2018-09-14T18:37:48.683+08:00"}],"errorCode":null,"error
+Action.c(313):     Description":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalI
+Action.c(313):     D":"Terminal37","terminalName":"Terminal37","terminalIP":"10.184.129.37","terminalDescript
+Action.c(313):     ion":null,"terminalStatus":0,"terminalStatusLevel":"Normal","terminalStatusDescription":nu
+Action.c(313):     ll,"terminalStatusTime":"2018-09-14T18:39:47.297+08:00","departmentIdList":"3,12,4,5,6,7,8
+Action.c(313):     ,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo":null,"re
+Action.c(313):     portPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","printerMo
+Action.c(313):     del":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName"
+Action.c(313):     :null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"}
+Action.c(313):     ,{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescrip
+Action.c(313):     tion":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"
+Action.c(313):     yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:39:32
+Action.c(313):     +08:00"},{"printerID
+Action.c(313): t=6644146ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     ":"Upper","terminalID":null,"printerName":"Upper","printerModel":"Color","statusCode":0,"s
+Action.c(313):     tatusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","pa
+Action.c(313):     perSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperTyp
+Action.c(313):     e":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType
+Action.c(313):     ":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode"
+Action.c(313):     :"","errorDescription":null,"statusTime":"2018-09-14T18:39:37.02+08:00"}],"errorCode":null
+Action.c(313):     ,"errorDescription":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"te
+Action.c(313):     rminalID":"Terminal38","terminalName":"Terminal38","terminalIP":"10.184.129.38","terminalD
+Action.c(313):     escription":null,"terminalStatus":0,"terminalStatusLevel":"Normal","terminalStatusDescript
+Action.c(313):     ion":null,"terminalStatusTime":"2018-09-14T18:33:47.583+08:00","departmentIdList":"3,12,4,
+Action.c(313):     5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo":n
+Action.c(313):     ull,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","pr
+Action.c(313):     interModel":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"draw
+Action.c(313):     erName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"
+Action.c(313):     Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"status
+Action.c(313):     Description":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLev
+Action.c(313):     el":0,"yellowInkLeve
+Action.c(313): t=6644146ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     l":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:32:58.15+08:00"},{
+Action.c(313):     "printerID":"Upper","terminalID":null,"printerName":"Upper","printerModel":"Color","status
+Action.c(313):     Code":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"
+Action.c(313):     Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null
+Action.c(313):     ,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"p
+Action.c(313):     rinterType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"
+Action.c(313):     errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:33:03.193+08:00"}],"erro
+Action.c(313):     rCode":null,"errorDescription":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":
+Action.c(313):     false},{"terminalID":"Terminal39","terminalName":"Terminal39","terminalIP":"10.184.129.39"
+Action.c(313):     ,"terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Normal","terminalSta
+Action.c(313):     tusDescription":null,"terminalStatusTime":"2018-09-14T18:35:03.253+08:00","departmentIdLis
+Action.c(313):     t":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPri
+Action.c(313):     nterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":
+Action.c(313):     "Lower","printerModel":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawersIn
+Action.c(313):     fo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDes
+Action.c(313):     cription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode
+Action.c(313):     ":0,"statusDescripti
+Action.c(313): t=6644146ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     on":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"ye
+Action.c(313):     llowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:34:12.8
+Action.c(313):     47+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerModel":"Co
+Action.c(313):     lor","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"
+Action.c(313):     paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"draw
+Action.c(313):     erName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"
+Action.c(313):     Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowI
+Action.c(313):     nkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:34:17.93+08:
+Action.c(313):     00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEnabledFlag":1,"i
+Action.c(313):     sFollowed":false},{"terminalID":"Terminal4","terminalName":"Terminal4","terminalIP":"10.18
+Action.c(313):     4.129.4","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Normal","ter
+Action.c(313):     minalStatusDescription":null,"terminalStatusTime":"2018-09-14T18:36:16.573+08:00","departm
+Action.c(313):     entIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,
+Action.c(313):     "filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"print
+Action.c(313):     erName":"Lower","printerModel":"Mono","statusCode":0,"statusDescription":"Normal","reportD
+Action.c(313):     rawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"s
+Action.c(313):     tatusDescription":"E
+Action.c(313): t=6644146ms: 1296-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     mpty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusD
+Action.c(313):     escription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLeve
+Action.c(313):     l":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18
+Action.c(313):     :35:26.94+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerMod
+Action.c(313):     el":"Color","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName"
+Action.c(313):     :null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"}
+Action.c(313):     ,{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescrip
+Action.c(313):     tion":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"
+Action.c(313):     yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:35:32
+Action.c(313):     .07+08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEnabledFla
+Action.c(313):     g":1,"isFollowed":false},{"terminalID":"Terminal40","terminalName":"Terminal40","terminalI
+Action.c(313):     P":"10.184.129.40","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"No
+Action.c(313):     rmal","terminalStatusDescription":null,"terminalStatusTime":"2018-09-14T18:37:35.127+08:00
+Action.c(313):     ","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmSta
+Action.c(313):     te":false,"filmPrinterInfo":null,"re
+Action.c(313): t=6644146ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     portPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","printerMo
+Action.c(313):     del":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName"
+Action.c(313):     :null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"}
+Action.c(313):     ,{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescrip
+Action.c(313):     tion":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"
+Action.c(313):     yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:36:45
+Action.c(313):     .65+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerModel":"C
+Action.c(313):     olor","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,
+Action.c(313):     "paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"dra
+Action.c(313):     werName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":
+Action.c(313):     "Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellow
+Action.c(313):     InkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:36:50.713+0
+Action.c(313):     8:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEnabledFlag":1,
+Action.c(313):     "isFollowed":false},{"terminalID":"Terminal41","terminalName":"Terminal41","terminalIP":"1
+Action.c(313):     0.184.129.41","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Normal"
+Action.c(313):     ,"terminalStatusDescription":null,"terminalStatusTime":"2018-09-14T18:39:02.31+08:00","dep
+Action.c(313):     artmentIdList":"3,12
+Action.c(313): t=6644146ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     ,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo
+Action.c(313):     ":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lower",
+Action.c(313):     "printerModel":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"d
+Action.c(313):     rawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription
+Action.c(313):     ":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"sta
+Action.c(313):     tusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInk
+Action.c(313):     Level":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-1
+Action.c(313):     4T18:38:04.667+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","print
+Action.c(313):     erModel":"Color","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawer
+Action.c(313):     Name":null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Em
+Action.c(313):     pty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDe
+Action.c(313):     scription":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel
+Action.c(313):     ":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:
+Action.c(313):     38:09.73+08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEnabl
+Action.c(313):     edFlag":1,"isFollowed":false},{"terminalID":"Terminal42","terminalName":"Terminal42","term
+Action.c(313):     inalIP":"10.184.129.42","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel
+Action.c(313):     ":"Normal","terminal
+Action.c(313): t=6644146ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     StatusDescription":null,"terminalStatusTime":"2018-09-14T18:33:09.147+08:00","departmentId
+Action.c(313):     List":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"film
+Action.c(313):     PrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerNam
+Action.c(313):     e":"Lower","printerModel":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawer
+Action.c(313):     sInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"status
+Action.c(313):     Description":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusC
+Action.c(313):     ode":0,"statusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,
+Action.c(313):     "magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime"
+Action.c(313):     :"2018-09-14T18:32:19.357+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Up
+Action.c(313):     per","printerModel":"Color","statusCode":0,"statusDescription":"Normal","reportDrawersInfo
+Action.c(313):     ":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescr
+Action.c(313):     iption":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":
+Action.c(313):     0,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"mage
+Action.c(313):     ntaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"201
+Action.c(313):     8-09-14T18:32:24.377+08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"t
+Action.c(313):     erminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal43","terminalName":"Termi
+Action.c(313):     nal43","terminalIP":
+Action.c(313): t=6644146ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     "10.184.129.43","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Norma
+Action.c(313):     l","terminalStatusDescription":null,"terminalStatusTime":"2018-09-14T18:34:28.697+08:00","
+Action.c(313):     departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState"
+Action.c(313):     :false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null
+Action.c(313):     ,"printerName":"Lower","printerModel":"Mono","statusCode":0,"statusDescription":"Normal","
+Action.c(313):     reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCod
+Action.c(313):     e":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"
+Action.c(313):     A4","statusCode":0,"statusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyan
+Action.c(313):     InkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,
+Action.c(313):     "statusTime":"2018-09-14T18:33:39.437+08:00"},{"printerID":"Upper","terminalID":null,"prin
+Action.c(313):     terName":"Upper","printerModel":"Color","statusCode":0,"statusDescription":"Normal","repor
+Action.c(313):     tDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,
+Action.c(313):     "statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","
+Action.c(313):     statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLe
+Action.c(313):     vel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"stat
+Action.c(313):     usTime":"2018-09-14T18:33:44.493+08:00"}],"errorCode":null,"errorDescription":null,"termin
+Action.c(313):     alType":2,"terminalE
+Action.c(313): t=6644147ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     nabledFlag":1,"isFollowed":false},{"terminalID":"Terminal44","terminalName":"Terminal44","
+Action.c(313):     terminalIP":"10.184.129.44","terminalDescription":null,"terminalStatus":0,"terminalStatusL
+Action.c(313):     evel":"Normal","terminalStatusDescription":null,"terminalStatusTime":"2018-09-14T18:35:51.
+Action.c(313):     943+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"che
+Action.c(313):     ckFilmState":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","term
+Action.c(313):     inalID":null,"printerName":"Lower","printerModel":"Mono","statusCode":0,"statusDescription
+Action.c(313):     ":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4
+Action.c(313):     ","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","pape
+Action.c(313):     rSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":0,"blackInkLev
+Action.c(313):     el":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescri
+Action.c(313):     ption":null,"statusTime":"2018-09-14T18:35:02.203+08:00"},{"printerID":"Upper","terminalID
+Action.c(313):     ":null,"printerName":"Upper","printerModel":"Color","statusCode":0,"statusDescription":"No
+Action.c(313):     rmal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A5","st
+Action.c(313):     atusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSize
+Action.c(313):     Type":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel":9
+Action.c(313):     4,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription
+Action.c(313):     ":null,"statusTime":
+Action.c(313): t=6644147ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     "2018-09-14T18:35:07.26+08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2
+Action.c(313):     ,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal45","terminalName":"Te
+Action.c(313):     rminal45","terminalIP":"10.184.129.45","terminalDescription":null,"terminalStatus":0,"term
+Action.c(313):     inalStatusLevel":"Normal","terminalStatusDescription":null,"terminalStatusTime":"2018-09-1
+Action.c(313):     4T18:37:10.993+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState"
+Action.c(313):     :false,"checkFilmState":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"L
+Action.c(313):     ower","terminalID":null,"printerName":"Lower","printerModel":"Mono","statusCode":0,"status
+Action.c(313):     Description":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSi
+Action.c(313):     zeType":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"P
+Action.c(313):     lain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":0,"
+Action.c(313):     blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","
+Action.c(313):     errorDescription":null,"statusTime":"2018-09-14T18:36:21.07+08:00"},{"printerID":"Upper","
+Action.c(313):     terminalID":null,"printerName":"Upper","printerModel":"Color","statusCode":0,"statusDescri
+Action.c(313):     ption":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType
+Action.c(313):     ":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain",
+Action.c(313):     "paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackI
+Action.c(313):     nkLevel":94,"cyanInk
+Action.c(313): t=6644147ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     Level":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"st
+Action.c(313):     atusTime":"2018-09-14T18:36:26.26+08:00"}],"errorCode":null,"errorDescription":null,"termi
+Action.c(313):     nalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal46","termina
+Action.c(313):     lName":"Terminal46","terminalIP":"10.184.129.46","terminalDescription":null,"terminalStatu
+Action.c(313):     s":0,"terminalStatusLevel":"Normal","terminalStatusDescription":null,"terminalStatusTime":
+Action.c(313):     "2018-09-14T18:38:41.253+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTerm
+Action.c(313):     ianlState":false,"checkFilmState":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"pri
+Action.c(313):     nterID":"Lower","terminalID":null,"printerName":"Lower","printerModel":"Mono","statusCode"
+Action.c(313):     :0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain
+Action.c(313):     ","paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"pap
+Action.c(313):     erType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printe
+Action.c(313):     rType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"error
+Action.c(313):     Code":"","errorDescription":null,"statusTime":"2018-09-14T18:37:51.77+08:00"},{"printerID"
+Action.c(313):     :"Upper","terminalID":null,"printerName":"Upper","printerModel":"Color","statusCode":0,"st
+Action.c(313):     atusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","pap
+Action.c(313):     erSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType
+Action.c(313):     ":"Plain","paperSize
+Action.c(313): t=6644147ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     Type":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blackInkLevel":9
+Action.c(313):     4,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription
+Action.c(313):     ":null,"statusTime":"2018-09-14T18:37:56.797+08:00"}],"errorCode":null,"errorDescription":
+Action.c(313):     null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal4
+Action.c(313):     7","terminalName":"Terminal47","terminalIP":"10.184.129.47","terminalDescription":null,"te
+Action.c(313):     rminalStatus":0,"terminalStatusLevel":"Normal","terminalStatusDescription":null,"terminalS
+Action.c(313):     tatusTime":"2018-09-14T18:39:55.527+08:00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2"
+Action.c(313):     ,"checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo":null,"reportPrintersI
+Action.c(313):     nfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","printerModel":"Mono","
+Action.c(313):     statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperT
+Action.c(313):     ype":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"drawerName
+Action.c(313):     ":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal
+Action.c(313):     "}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLeve
+Action.c(313):     l":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:39:09.157+08:00"},
+Action.c(313):     {"printerID":"Upper","terminalID":null,"printerName":"Upper","printerModel":"Color","statu
+Action.c(313):     sCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":
+Action.c(313):     "Plain","paperSizeTy
+Action.c(313): t=6644147ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     pe":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperType":"Plain
+Action.c(313):     ","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType":1,"blac
+Action.c(313):     kInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","erro
+Action.c(313):     rDescription":null,"statusTime":"2018-09-14T18:39:14.89+08:00"}],"errorCode":null,"errorDe
+Action.c(313):     scription":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID"
+Action.c(313):     :"Terminal48","terminalName":"Terminal48","terminalIP":"10.184.129.48","terminalDescriptio
+Action.c(313):     n":null,"terminalStatus":0,"terminalStatusLevel":"Normal","terminalStatusDescription":null
+Action.c(313):     ,"terminalStatusTime":"2018-09-14T18:34:22.33+08:00","departmentIdList":"3,12,4,5,6,7,8,9,
+Action.c(313):     10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo":null,"repor
+Action.c(313):     tPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","printerModel
+Action.c(313):     ":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":nu
+Action.c(313):     ll,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"Empty"},{"
+Action.c(313):     drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescriptio
+Action.c(313):     n":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel":0,"yel
+Action.c(313):     lowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:33:32.77
+Action.c(313):     +08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerModel":"Colo
+Action.c(313):     r","statusCode":0,"s
+Action.c(313): t=6644147ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     tatusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"Plain","pa
+Action.c(313):     perSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null,"paperTyp
+Action.c(313):     e":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"printerType
+Action.c(313):     ":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"errorCode"
+Action.c(313):     :"","errorDescription":null,"statusTime":"2018-09-14T18:33:38.09+08:00"}],"errorCode":null
+Action.c(313):     ,"errorDescription":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"te
+Action.c(313):     rminalID":"Terminal49","terminalName":"Terminal49","terminalIP":"10.184.129.49","terminalD
+Action.c(313):     escription":null,"terminalStatus":0,"terminalStatusLevel":"Normal","terminalStatusDescript
+Action.c(313):     ion":null,"terminalStatusTime":"2018-09-14T18:35:36.05+08:00","departmentIdList":"3,12,4,5
+Action.c(313):     ,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinterInfo":nu
+Action.c(313):     ll,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Lower","pri
+Action.c(313):     nterModel":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawe
+Action.c(313):     rName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDescription":"E
+Action.c(313):     mpty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusD
+Action.c(313):     escription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLeve
+Action.c(313):     l":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18
+Action.c(313):     :34:46.823+08:00"},{
+Action.c(313): t=6644147ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     "printerID":"Upper","terminalID":null,"printerName":"Upper","printerModel":"Color","status
+Action.c(313):     Code":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paperType":"
+Action.c(313):     Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerName":null
+Action.c(313):     ,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Normal"}],"p
+Action.c(313):     rinterType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLevel":0,"
+Action.c(313):     errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:34:51.847+08:00"}],"erro
+Action.c(313):     rCode":null,"errorDescription":null,"terminalType":2,"terminalEnabledFlag":1,"isFollowed":
+Action.c(313):     false},{"terminalID":"Terminal5","terminalName":"Terminal5","terminalIP":"10.184.129.5","t
+Action.c(313):     erminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Normal","terminalStatus
+Action.c(313):     Description":null,"terminalStatusTime":"2018-09-14T18:36:53.91+08:00","departmentIdList":"
+Action.c(313):     3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrinter
+Action.c(313):     Info":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printerName":"Low
+Action.c(313):     er","printerModel":"Mono","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":
+Action.c(313):     [{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDescrip
+Action.c(313):     tion":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,
+Action.c(313):     "statusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magent
+Action.c(313):     aInkLevel":0,"yellow
+Action.c(313): t=6644147ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     InkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:36:04.44+08
+Action.c(313):     :00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerModel":"Color",
+Action.c(313):     "statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":null,"paper
+Action.c(313):     Type":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},{"drawerNam
+Action.c(313):     e":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescription":"Norma
+Action.c(313):     l"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"yellowInkLev
+Action.c(313):     el":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:36:09.457+08:00"}
+Action.c(313):     ],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEnabledFlag":1,"isFol
+Action.c(313):     lowed":false},{"terminalID":"Terminal50","terminalName":"Terminal50","terminalIP":"10.184.
+Action.c(313):     129.50","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Normal","term
+Action.c(313):     inalStatusDescription":null,"terminalStatusTime":"2018-09-14T18:38:13.19+08:00","departmen
+Action.c(313):     tIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"f
+Action.c(313):     ilmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,"printer
+Action.c(313):     Name":"Lower","printerModel":"Mono","statusCode":0,"statusDescription":"Normal","reportDra
+Action.c(313):     wersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"sta
+Action.c(313):     tusDescription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","stat
+Action.c(313):     usCode":0,"statusDes
+Action.c(313): t=6644148ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     cription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaInkLevel"
+Action.c(313):     :0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:3
+Action.c(313):     7:22.933+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","printerMode
+Action.c(313):     l":"Color","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawerName":
+Action.c(313):     null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"Empty"},
+Action.c(313):     {"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusDescript
+Action.c(313):     ion":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLevel":0,"y
+Action.c(313):     ellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18:37:28.
+Action.c(313):     077+08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEnabledFla
+Action.c(313):     g":1,"isFollowed":false},{"terminalID":"Terminal6","terminalName":"Terminal6","terminalIP"
+Action.c(313):     :"10.184.129.6","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":"Norma
+Action.c(313):     l","terminalStatusDescription":null,"terminalStatusTime":"2018-09-14T18:39:49.98+08:00","d
+Action.c(313):     epartmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":
+Action.c(313):     false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID":null,
+Action.c(313):     "printerName":"Lower","printerModel":"Mono","statusCode":0,"statusDescription":"Normal","r
+Action.c(313):     eportDrawersInfo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode
+Action.c(313):     ":3,"statusDescripti
+Action.c(313): t=6644148ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     on":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"s
+Action.c(313):     tatusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"magentaI
+Action.c(313):     nkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09
+Action.c(313):     -14T18:38:53.61+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper","prin
+Action.c(313):     terModel":"Color","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[{"drawe
+Action.c(313):     rName":null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescription":"E
+Action.c(313):     mpty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"statusD
+Action.c(313):     escription":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magentaInkLeve
+Action.c(313):     l":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-09-14T18
+Action.c(313):     :38:58.77+08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"terminalEnab
+Action.c(313):     ledFlag":1,"isFollowed":false},{"terminalID":"Terminal7","terminalName":"Terminal7","termi
+Action.c(313):     nalIP":"10.184.129.7","terminalDescription":null,"terminalStatus":0,"terminalStatusLevel":
+Action.c(313):     "Normal","terminalStatusDescription":null,"terminalStatusTime":"2018-09-14T18:33:08.38+08:
+Action.c(313):     00","departmentIdList":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmS
+Action.c(313):     tate":false,"filmPrinterInfo":null,"reportPrintersInfo":[{"printerID":"Lower","terminalID"
+Action.c(313):     :null,"printerName":"Lower","printerModel":"Mono","statusCode":0,"statusDescription":"Norm
+Action.c(313):     al","reportDrawersIn
+Action.c(313): t=6644148ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     fo":[{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":3,"statusDes
+Action.c(313):     cription":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode
+Action.c(313):     ":0,"statusDescription":"Normal"}],"printerType":0,"blackInkLevel":71,"cyanInkLevel":0,"ma
+Action.c(313):     gentaInkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2
+Action.c(313):     018-09-14T18:32:18.453+08:00"},{"printerID":"Upper","terminalID":null,"printerName":"Upper
+Action.c(313):     ","printerModel":"Color","statusCode":0,"statusDescription":"Normal","reportDrawersInfo":[
+Action.c(313):     {"drawerName":null,"paperType":"Plain","paperSizeType":"A5","statusCode":3,"statusDescript
+Action.c(313):     ion":"Empty"},{"drawerName":null,"paperType":"Plain","paperSizeType":"A4","statusCode":0,"
+Action.c(313):     statusDescription":"Normal"}],"printerType":1,"blackInkLevel":94,"cyanInkLevel":0,"magenta
+Action.c(313):     InkLevel":0,"yellowInkLevel":0,"errorCode":"","errorDescription":null,"statusTime":"2018-0
+Action.c(313):     9-14T18:32:23.49+08:00"}],"errorCode":null,"errorDescription":null,"terminalType":2,"termi
+Action.c(313):     nalEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal8","terminalName":"Terminal8"
+Action.c(313):     ,"terminalIP":"10.184.129.8","terminalDescription":null,"terminalStatus":1,"terminalStatus
+Action.c(313):     Level":"Error","terminalStatusDescription":null,"terminalStatusTime":null,"departmentIdLis
+Action.c(313):     t":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPri
+Action.c(313):     nterInfo":null,"reportPrintersInfo":[],"errorCode":"80005018","errorDescription":null,"ter
+Action.c(313):     minalType":2,"termin
+Action.c(313): t=6644148ms: 1460-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     alEnabledFlag":1,"isFollowed":false},{"terminalID":"Terminal9","terminalName":"Terminal9",
+Action.c(313):     "terminalIP":"10.184.129.9","terminalDescription":null,"terminalStatus":1,"terminalStatusL
+Action.c(313):     evel":"Error","terminalStatusDescription":null,"terminalStatusTime":null,"departmentIdList
+Action.c(313):     ":"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrin
+Action.c(313):     terInfo":null,"reportPrintersInfo":[],"errorCode":"80005018","errorDescription":null,"term
+Action.c(313):     inalType":2,"terminalEnabledFlag":1,"isFollowed":false},{"terminalID":"YF","terminalName":
+Action.c(313):     "YF","terminalIP":"1.1.1.3","terminalDescription":"","terminalStatus":0,"terminalStatusLev
+Action.c(313):     el":"Normal","terminalStatusDescription":null,"terminalStatusTime":null,"departmentIdList"
+Action.c(313):     :"3,12,4,5,6,7,8,9,10,11,1,2","checkTermianlState":false,"checkFilmState":false,"filmPrint
+Action.c(313):     erInfo":{"filmPrinterID":25,"filmPrinterName":null,"filmPrinterModel":"Unknown","filmPrint
+Action.c(313):     erPrintState":null,"filmDrawers":[{"mediaType":"Unknown","mediaSize":"Unknown","mediaStatu
+Action.c(313):     sLevel":"Warning","totalFilmCount":125,"availableFilmCount":0,"availablePercentage":0},{"m
+Action.c(313):     ediaType":"Unknown","mediaSize":"Unknown","mediaStatusLevel":"Warning","totalFilmCount":12
+Action.c(313):     5,"availableFilmCount":0,"availablePercentage":0},{"mediaType":"Unknown","mediaSize":"Unkn
+Action.c(313):     own","mediaStatusLevel":"Warning","totalFilmCount":125,"availableFilmCount":0,"availablePe
+Action.c(313):     rcentage":0}],"filmPrinterStatus":8,"statusCode":null,"filmPrinterStatusLevel":"Warning","
+Action.c(313):     statusDescription":n
+Action.c(313): t=6644148ms: 266-byte response body for "http://10.184.129.108/webapi/api/terminalmonitoring?userId=18" (RelFrameId=1, Internal ID=1623)
+Action.c(313):     ull,"filmPrinterStatusTime":null,"errorCode":null,"errorDescription":null,"rawErrorCodes":
+Action.c(313):     null,"pmDate":null,"pmCount":null,"frCount":null},"reportPrintersInfo":[],"errorCode":null
+Action.c(313):     ,"errorDescription":null,"terminalType":1,"terminalEnabledFlag":1,"isFollowed":false}]
+Action.c(313): web_custom_request("terminalmonitoring") highest severity level was "warning", 88901 body bytes, 261 header bytes  	[MsgId: MMSG-26388]
+Action.c(323): web_url("CheckLoginStatus_5") started  	[MsgId: MMSG-26355]
+Action.c(323): t=6644154ms: 251-byte response headers for "http://10.184.129.108/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1624)
+Action.c(323):     HTTP/1.1 200 OK\r\n
+Action.c(323):     Cache-Control: private\r\n
+Action.c(323):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(323):     Server: Microsoft-IIS/7.5\r\n
+Action.c(323):     X-AspNetMvc-Version: 5.2\r\n
+Action.c(323):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(323):     X-Powered-By: ASP.NET\r\n
+Action.c(323):     Date: Fri, 14 Sep 2018 10:39:55 GMT\r\n
+Action.c(323):     Content-Length: 4\r\n
+Action.c(323):     \r\n
+Action.c(323): t=6644154ms: 4-byte response body for "http://10.184.129.108/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1624)
+Action.c(323):     true
+Action.c(323): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(323): web_url("CheckLoginStatus_5") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(339): Notify: Transaction "User_login" ended with a "Pass" status (Duration: 0.1834 Wasted Time: 0.0003).	[MsgId: MMSG-16871]
+Action.c(346): Notify: Parameter Substitution: parameter "SetStatusOfReportRand" =  "3"	[MsgId: MMSG-13992]
+Action.c(386): Notify: Parameter Substitution: parameter "SetStatusOfReportRand" =  "4"	[MsgId: MMSG-13992]
+Action.c(424): Notify: Parameter Substitution: parameter "SetStatusOfReportRand" =  "1"	[MsgId: MMSG-13992]
+Action.c(463): Notify: Parameter Substitution: parameter "SetStatusOfReportRand" =  "5"	[MsgId: MMSG-13992]
+Action.c(504): Notify: Parameter Substitution: parameter "SetStatusOfReportRand" =  "5"	[MsgId: MMSG-13992]
+Action.c(506): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(506): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(511): Notify: Transaction "SetStatusOfReportWithExpand_printed" started.	[MsgId: MMSG-16999]
+Action.c(513): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(513): Notify: Parameter Substitution: parameter "ReportInstanceUID" =  "75bae315-e086-4158-a93a-872ae33ef19b"	[MsgId: MMSG-13992]
+Action.c(513): t=6645786ms: 259-byte response headers for "http://10.184.129.108/webapi/api/worklist/UpdateStatusByStudyInstanceUID" (RelFrameId=1, Internal ID=1625)
+Action.c(513):     HTTP/1.1 200 OK\r\n
+Action.c(513):     Cache-Control: no-cache\r\n
+Action.c(513):     Pragma: no-cache\r\n
+Action.c(513):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(513):     Expires: -1\r\n
+Action.c(513):     Server: Microsoft-IIS/7.5\r\n
+Action.c(513):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(513):     X-Powered-By: ASP.NET\r\n
+Action.c(513):     Date: Fri, 14 Sep 2018 10:39:57 GMT\r\n
+Action.c(513):     Content-Length: 546\r\n
+Action.c(513):     \r\n
+Action.c(513): t=6645786ms: 546-byte response body for "http://10.184.129.108/webapi/api/worklist/UpdateStatusByStudyInstanceUID" (RelFrameId=1, Internal ID=1625)
+Action.c(513):     {"isSucceed":true,"workItem":{"accessionNumber":"A20180912162131824","patientID":"P2018091
+Action.c(513):     2162131824","patientName":"CN20180912162131824","studyDate":"2018-09-12","studyTime":"16:2
+Action.c(513):     0:50","patientSex":"å¥\xB3","patientType":"3","holdFlag":1,"printMode":3,"examName":null,"
+Action.c(513):     bodayPart":null,"filmPrintStatus":-1,"filmPrintTime":null,"filmDeleteStatus":0,"imageCount
+Action.c(513):     ":0,"reportStatus":2,"reportPrintStatus":1,"reportPrintTime":null,"reportCount":1,"modalit
+Action.c(513):     y":"US","deleteStatus":0,"completeStatus":null,"reportInfos":null,"filmInfos":null},"messa
+Action.c(513):     ge":null}
+Action.c(513): Notify: Saving Parameter "SetStatusOfReportWithExpand_printed = true".	[MsgId: MMSG-13798]
+Action.c(513): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/webapi/api/worklist/UpdateStatusByStudyInstanceUID"  	[MsgId: MMSG-26548]
+Action.c(513): web_custom_request("web_custom_request") was successful, 546 body bytes, 259 header bytes  	[MsgId: MMSG-26386]
+Action.c(523): Notify: Transaction "SetStatusOfReportWithExpand_printed" ended with a "Pass" status (Duration: 1.6321 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+Action.c(525): Notify: Parameter Substitution: parameter "SetStatusOfReportWithExpand_printed" =  "true"	[MsgId: MMSG-13992]
+The result is:  true	[MsgId: MMSG-17999]
+Action.c(527): Notify: Parameter Substitution: parameter "SetStatusOfReportWithExpand_printed" =  "true"	[MsgId: MMSG-13992]
+Action.c(532): lr_think_time: 10.00 seconds.	[MsgId: MMSG-15948]
+Action.c(534): web_url("CheckLoginStatus_25") started  	[MsgId: MMSG-26355]
+Action.c(534): t=6655816ms: 251-byte response headers for "http://10.184.129.108/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1626)
+Action.c(534):     HTTP/1.1 200 OK\r\n
+Action.c(534):     Cache-Control: private\r\n
+Action.c(534):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(534):     Server: Microsoft-IIS/7.5\r\n
+Action.c(534):     X-AspNetMvc-Version: 5.2\r\n
+Action.c(534):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(534):     X-Powered-By: ASP.NET\r\n
+Action.c(534):     Date: Fri, 14 Sep 2018 10:40:08 GMT\r\n
+Action.c(534):     Content-Length: 4\r\n
+Action.c(534):     \r\n
+Action.c(534): t=6655816ms: 4-byte response body for "http://10.184.129.108/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1626)
+Action.c(534):     true
+Action.c(534): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(534): web_url("CheckLoginStatus_25") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(543): Notify: Parameter Substitution: parameter "SetStatusOfReportRand" =  "2"	[MsgId: MMSG-13992]
+Action.c(582): lr_think_time: 10.00 seconds.	[MsgId: MMSG-15948]
+Action.c(588): Notify: Parameter Substitution: parameter "SetStatusOfFilmRand" =  "6"	[MsgId: MMSG-13992]
+Action.c(627): Notify: Parameter Substitution: parameter "SetStatusOfFilmRand" =  "5"	[MsgId: MMSG-13992]
+Action.c(666): Notify: Parameter Substitution: parameter "SetStatusOfFilmRand" =  "2"	[MsgId: MMSG-13992]
+Action.c(705): Notify: Parameter Substitution: parameter "SetStatusOfFilmRand" =  "4"	[MsgId: MMSG-13992]
+Action.c(707): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(707): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(712): Notify: Transaction "SetStatusOfFilmWithExpand_unprinted" started.	[MsgId: MMSG-16999]
+Action.c(714): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(714): Notify: Parameter Substitution: parameter "FilmStatusChangedACC" =  "A20180912164355861"	[MsgId: MMSG-13992]
+Action.c(714): t=6697256ms: 259-byte response headers for "http://10.184.129.108/webapi/api/worklist/UpdateStatusByAccessionNumber" (RelFrameId=1, Internal ID=1627)
+Action.c(714):     HTTP/1.1 200 OK\r\n
+Action.c(714):     Cache-Control: no-cache\r\n
+Action.c(714):     Pragma: no-cache\r\n
+Action.c(714):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(714):     Expires: -1\r\n
+Action.c(714):     Server: Microsoft-IIS/7.5\r\n
+Action.c(714):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(714):     X-Powered-By: ASP.NET\r\n
+Action.c(714):     Date: Fri, 14 Sep 2018 10:40:48 GMT\r\n
+Action.c(714):     Content-Length: 142\r\n
+Action.c(714):     \r\n
+Action.c(714): t=6697256ms: 142-byte response body for "http://10.184.129.108/webapi/api/worklist/UpdateStatusByAccessionNumber" (RelFrameId=1, Internal ID=1627)
+Action.c(714):     {"isSucceed":false,"workItem":null,"message":"An error occurred while executing the comman
+Action.c(714):     d definition. See the inner exception for details."}
+Action.c(714): Notify: Saving Parameter "SetStatusOfFilmWithExpand_unprinted = false".	[MsgId: MMSG-13798]
+Action.c(714): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/webapi/api/worklist/UpdateStatusByAccessionNumber"  	[MsgId: MMSG-26548]
+Action.c(714): web_custom_request("web_custom_request") was successful, 142 body bytes, 259 header bytes  	[MsgId: MMSG-26386]
+Action.c(724): Notify: Transaction "SetStatusOfFilmWithExpand_unprinted" ended with a "Pass" status (Duration: 31.4321 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+Action.c(726): Notify: Parameter Substitution: parameter "SetStatusOfFilmWithExpand_unprinted" =  "false"	[MsgId: MMSG-13992]
+The result is:  false	[MsgId: MMSG-17999]
+Action.c(728): Notify: Parameter Substitution: parameter "SetStatusOfFilmWithExpand_unprinted" =  "false"	[MsgId: MMSG-13992]
+Action.c(730): Error: SetStatusOfFilmWithExpand_unprinted fail	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

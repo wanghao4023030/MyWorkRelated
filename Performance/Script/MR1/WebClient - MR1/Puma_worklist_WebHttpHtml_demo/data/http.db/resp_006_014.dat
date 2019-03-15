@@ -1,0 +1,31 @@
+﻿commonModule.filter('qceventFilter',
+    function () {
+        var filter = function (input) {
+            var qcevent = parseInt(input);
+            var output = '';
+            switch (qcevent) {
+                case 0:
+                    output = 'kCreate';
+                    break;
+                case 1:
+                    output = 'kUpdate';
+
+                    break;
+                case 2:
+                    output = 'kDelete';
+
+                    break;
+                case 3:
+                    output = 'kRestore';
+
+                    break;
+                case 4:
+                    output = 'kCentralPrint'
+                    break;
+                default:
+                    break;
+            }
+            return output
+        };
+        return filter;
+    });

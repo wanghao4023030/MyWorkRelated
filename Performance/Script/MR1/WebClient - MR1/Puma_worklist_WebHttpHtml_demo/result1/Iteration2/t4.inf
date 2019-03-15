@@ -1,0 +1,13 @@
+[t4]
+SnapshotXmlFile=snapshot_4.xml
+ContentType=text/html
+StepName=Url: login_2
+Total=1
+FileName1=t4.html
+RequestHeaderFile=t4_RequestHeader.txt
+ResponseHeaderFile=t4_ResponseHeader.txt
+RawStepEndTime=1515461657793
+RawStepName=login_2
+RequestBodyFile=t4_RequestBody.txt
+RawStepStartTime=1515461656422
+URL1=http://10.184.129.108/Platform/workarea

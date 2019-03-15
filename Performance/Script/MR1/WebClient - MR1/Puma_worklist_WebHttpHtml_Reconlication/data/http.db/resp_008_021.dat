@@ -1,0 +1,31 @@
+﻿commonModule.factory('resources', [function () {
+    'use strict';
+    return {
+        configForwardData: function (httpMethod, requestUri, data) {
+            return {
+                HttpMethod: httpMethod,
+                RequestUri: requestUri,
+                Conent: JSON.stringify(data)
+            };
+        },
+
+        terminalmonitor: {
+            getTerminalMonitorings: { method: 'get', url: '/api/terminalmonitoring' }
+
+        },
+        worklist: {
+            getModality: { method: 'get', url: '/api/modality/modalityTypes' },
+            getWorklistColumns: { method: 'get', url: '/api/worklist/worklistcolumns' },
+            advancedSearch: { method: 'post', url: '/api/worklist/searchWorklist' },
+            updateAccessionStatus: { method: 'post', url: '/api/worklist/UpdateStatusByAccessionNumber' },
+            updateStatusByStudyInstanceUID: { method: 'post', url: '/api/worklist/UpdateStatusByStudyInstanceUID' },
+            getFilmInfos: { method: 'get', url: '/api/worklist/filmInfo' },
+            getReportInfos: { method: 'get', url: '/api/worklist/reportInfo' },
+            getShortcuts: { method: 'get', url: '/api/worklist/shortcuts' },
+            addShortcut: { method: 'post', url: '/api/worklist/shortcuts' },
+            deleteShortcut: { method: 'delete', url: '/api/worklist/shortcuts/' }
+        }
+
+
+    }
+}]);

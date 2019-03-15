@@ -1,0 +1,10 @@
+[t25]
+FileName1=t25_terminalmonitoring.html
+URL1=http://10.184.129.208/webapi/api/terminalmonitoring
+Total=1
+ContentType=
+SnapshotXmlFile=snapshot_25.xml
+RequestHeaderFile=t25_RequestHeader.txt
+RequestBodyFile=NONE
+[ProtocolInfo]
+ProtocolId=QTWeb

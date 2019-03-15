@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HTTPSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="8">
+  <HTTPTask id="9" url="http://10.184.129.108/webapi/api/worklist/worklistcolumns" origin="Primary" startDateTime="2018-08-22T10:19:45.998+08:00" startTime="39642">
+    <HTTPRequest method="GET" />
+  </HTTPTask>
+</HTTPSnapshot>

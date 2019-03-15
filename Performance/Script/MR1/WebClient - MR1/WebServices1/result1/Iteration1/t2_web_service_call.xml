@@ -1,0 +1,12 @@
+<?xml-stylesheet href="..\web_service_call.xsl" type="text/xsl"?>
+<report vuGenInstallDir="C:\Program Files (x86)\HP\LoadRunner\">
+  <web_service_call>
+    <service name="CreateFilmTestData" />
+    <port name="CreateFilmTestDataSoap" />
+    <operation name="QueryResult" />
+    <wsdl location="http://10.184.129.108/PerformanceTest/CreateFilmTestData.asmx?wsdl" />
+    <address url="" />
+    <toolkit name=".Net" />
+    <aspect name="Positive Testing" />
+  </web_service_call>
+</report>

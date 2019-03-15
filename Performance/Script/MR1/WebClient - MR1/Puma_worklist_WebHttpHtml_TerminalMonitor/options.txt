@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-ID:\Performance\MR1\WebClient - MR1\Puma_worklist_WebHttpHtml_TerminalMonitor
+-IC:\Program Files (x86)\HP\LoadRunner\include
+-ed:\performance\mr1\webclient - mr1\puma_worklist_webhttphtml_terminalmonitor\\logfile.log
+d:\performance\mr1\webclient - mr1\puma_worklist_webhttphtml_terminalmonitor\\combined_Puma_worklist_WebHttpHtml_TerminalMonitor.c
+d:\performance\mr1\webclient - mr1\puma_worklist_webhttphtml_terminalmonitor\\pre_cci.c

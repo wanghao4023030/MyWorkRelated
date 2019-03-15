@@ -1,0 +1,17 @@
+﻿// qclogService service proxy
+webservices.factory('roleService', ['$http', 'apiConfig', function ($http, apiConfig) {
+    'use strict';
+
+    return {
+        getRoleNames: function () {
+            return $http.get('/api/rolePermission/roleNames', apiConfig.create());
+        },
+        getRolePermissions: function () {
+            return $http.get('/api/rolePermission/get', apiConfig.create());
+        },
+        updatePermissionsByRole: function (params, role) {
+            return $http.post('/api/rolePermission/update/' + role, JSON.stringify(params), apiConfig.create());
+        }
+    };
+}]);
+

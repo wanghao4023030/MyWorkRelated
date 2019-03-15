@@ -1,0 +1,14 @@
+Start auto log messages stack - Iteration 55.	[MsgId: MMSG-10545]
+Action.c(428): lr_think_time: 30.00 seconds.	[MsgId: MMSG-15948]
+Action.c(430): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(430): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(435): Notify: Transaction "SetPrintMode" started.	[MsgId: MMSG-16999]
+Action.c(437): web_custom_request("SetPrintMode") started  	[MsgId: MMSG-26355]
+Action.c(437): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/webapi/api/worklist/UpdateStatusByAccessionNumber"  	[MsgId: MMSG-26548]
+Action.c(437): web_custom_request("SetPrintMode") was successful, 87 body bytes, 258 header bytes  	[MsgId: MMSG-26386]
+Action.c(447): Notify: Transaction "SetPrintMode" ended with a "Pass" status (Duration: 16.3930 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+The result is:  false	[MsgId: MMSG-17999]
+Action.c(453): Error: SetPrintMode fail	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

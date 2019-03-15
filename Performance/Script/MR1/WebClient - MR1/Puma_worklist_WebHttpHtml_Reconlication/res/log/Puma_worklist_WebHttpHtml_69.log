@@ -1,0 +1,10 @@
+Start auto log messages stack - Iteration 6.	[MsgId: MMSG-10545]
+Action.c(261): web_url("CheckLoginStatus_4") started  	[MsgId: MMSG-26355]
+Action.c(261): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.171/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(261): web_url("CheckLoginStatus_4") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(269): web_url("terminalmonitor-template.html") started  	[MsgId: MMSG-26355]
+Action.c(269): web_url("terminalmonitor-template.html") was successful, 31891 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Action.c(279): web_url("terminalmonitoring") started  	[MsgId: MMSG-26355]
+Action.c(279): Continuing after Error -26609: HTTP Status-Code=503 (EntityCommandExecutionException) for "http://10.184.129.171/webapi/api/terminalmonitoring"  	[MsgId: MERR-26609]
+End auto log messages stack.	[MsgId: MMSG-10544]
+

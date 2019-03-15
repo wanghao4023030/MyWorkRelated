@@ -1,0 +1,68 @@
+[General]
+Type=Multi
+DefaultCfg=default.cfg
+ParameterFile=Puma_worklist_WebHttpHtml_Query.prm
+GlobalParameterFile=
+NewFunctionHeader=1
+RunType=cci
+ActionLogicExt=action_logic
+LastActiveAction=Action
+MajorVersion=12
+MinorVersion=53
+ActiveTypes=QTWeb
+GenerateTypes=QTWeb
+AdditionalTypes=QTWeb
+DevelopTool=Vugen
+LastModifyVer=12.53.0.1203
+ParamLeftBrace={
+ParamRightBrace=}
+ScriptLanguage=C
+LastCodeGenerationVer=12.53.0.1203
+DisableRegenerate=0
+Description=
+ScriptLocale=zh-CN
+[Actions]
+vuser_init=vuser_init.c
+Action=Action.c
+vuser_end=vuser_end.c
+[RunLogicFiles]
+Default Profile=default.usp
+[VuserProfiles]
+Profiles=Default Profile
+[CfgFiles]
+Default Profile=default.cfg
+[ExtraFiles]
+globals.h=
+[Modified Actions]
+vuser_init=0
+Action=1
+vuser_end=0
+[Recorded Actions]
+vuser_init=0
+Action=1
+vuser_end=0
+[Replayed Actions]
+vuser_init=1
+Action=1
+vuser_end=1
+[Interpreters]
+vuser_init=cci
+Action=cci
+vuser_end=cci
+[TransactionsOrder]
+Order="User_login__*delimiter*__WorlkList_Query_randomTime__*delimiter*__Worklist_Query_Today__*delimiter*__worklist_query_LastTwoToday__*delimiter*__worklist_query_Lastweek__*delimiter*__worklist_query_LastMonth__*delimiter*__worklist_query_Patient_PID__*delimiter*__worklist_query_Patient_PatientName__*delimiter*__worklist_query_ACC"
+[StateManagement]
+LastReplayStatus=2
+[ActiveReplay]
+LastReplayedRunName=result1
+ActiveRunName=result1
+[Transactions]
+User_login=
+WorlkList_Query_randomTime=
+Worklist_Query_Today=
+worklist_query_LastTwoToday=
+worklist_query_Lastweek=
+worklist_query_LastMonth=
+worklist_query_Patient_PID=
+worklist_query_Patient_PatientName=
+worklist_query_ACC=

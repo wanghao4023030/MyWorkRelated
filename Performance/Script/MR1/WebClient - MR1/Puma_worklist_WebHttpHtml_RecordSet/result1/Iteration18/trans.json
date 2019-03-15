@@ -1,0 +1,27 @@
+[
+    {
+        "transactionName": "User_login",
+        "rawStartTime": 1533113628012,
+        "rawEndTime": 1533113638059
+    },
+    {
+        "transactionName": "SetStatusOfReportWithoutExpand_printed",
+        "rawStartTime": 1533113638061,
+        "rawEndTime": 1533113638879
+    },
+    {
+        "transactionName": "SetStatusOfReportWithoutExpand_NOTprinted",
+        "rawStartTime": 1533113640722,
+        "rawEndTime": 1533113641566
+    },
+    {
+        "transactionName": "SetStatusOfFilmWithoutExpand_unprinted",
+        "rawStartTime": 1533113644392,
+        "rawEndTime": 1533113645198
+    },
+    {
+        "transactionName": "SetStatusOfFilmWithExpand_printed",
+        "rawStartTime": 1533113647033,
+        "rawEndTime": 1533113647857
+    }
+]

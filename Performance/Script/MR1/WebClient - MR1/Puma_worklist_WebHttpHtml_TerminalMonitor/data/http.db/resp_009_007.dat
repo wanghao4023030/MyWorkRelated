@@ -1,0 +1,69 @@
+﻿<div class="login_wrapper">
+
+    <div id="login" class="well well-large form_wrapper " ng-show="isloginpage">
+        <div class="puma-module-title ">
+            <span class="icon-ico_ps_logo puma-module-title-ico"></span>
+            <span style="font-size: 1.6em;">&nbsp;&nbsp;{{ 'UserLogin' | translate }}</span>
+        </div>
+        <form id="loginform" name="loginForm" method="post" style="margin-top:40px">
+
+            <div class="form-group" ng-class="{'has-error':(loginForm.loginName.$error.required || loginError) && loginForm.loginName.$dirty}">
+                <input type="text" name="loginName" class="form-control" ng-model="loginform.loginName" required placeholder="{{ 'UserName' | translate }}" vt-enter="focusPw = true" />
+                <span class="icon-ico_reg_id glyphicon" />
+            </div>
+            <div class="form-group" ng-class="{'has-error':(loginForm.loginlPwd.$error.required || loginPwdError) && loginForm.loginlPwd.$dirty}">
+                <input type="password" name="loginlPwd" class="form-control" ng-model="loginform.loginlPwd" required placeholder="{{ 'Password' | translate }}" focus-me="focusPw" vt-enter="login()">
+                <span class="icon-ico_reg_pwd glyphicon" />
+            </div>
+            <div class="form-group ">
+                <div style="float:left"><input type="checkbox" data-ng-click="rememberMe()" data-ng-model="isRemember" name="remember" /><span>&nbsp;{{ 'RemindMe' | translate }}</span></div>
+                <a ng-click="switchPage(false)" href="#" style="float:right"><span class="icon-ico_edit"></span>&nbsp;{{ 'ChangePassword' | translate }}</a>
+            </div>
+
+            <div class="form-group ">
+                <button id="btnLogin" class="btn btn-sm btn-warning btn_login" type="submit" ng-click="login()">{{ 'Login' | translate }}</button>
+            </div>
+            <span class="help-block" style="color:red" ng-show="!loginForm.loginName.$error.required && loginError"><span class="icon-ico_alert"></span>&nbsp;{{loginErrorMessage}}</span>
+            <span class="help-block" style="color:red" ng-show="!loginForm.password.$error.required && loginPwdError"><span class="icon-ico_alert"></span>&nbsp;{{loginPwdErrorMessage}}</span>
+
+        </form>
+    </div>
+
+    <div id="changePassword" class="well well-large form_wrapper" style=" height: 550px;" ng-show="!isloginpage">
+        <div class="puma-module-title ">
+            <span class="icon-ico_page_previous puma-module-title-ico" style="cursor:pointer" ng-click="switchPage(false)"></span>
+            <span style="font-size: 1.6em;">&nbsp;&nbsp;{{ 'ChangePassword' | translate }}</span>
+        </div>
+        <form name="changePasswordForm" style="margin-top:40px">
+            <span ng-show="isFirstLogin" class="help-block">{{isFirstLoginMessage}}</span>
+            <div class="form-group" ng-class="{'has-error': wrongLoginName}">
+                <input type="text" class="form-control" ng-model="loginform.loginName" required placeholder="{{ 'UserName' | translate }}">
+                <span class="icon-ico_reg_id glyphicon" />
+            </div>
+            <div class="form-group required" ng-class="{'has-error': wrongOldPassword}">
+                <input type="password" class="form-control" ng-model="oldPassword" placeholder="{{ 'OldPassword' | translate }}" ng-changed="wrongOldPassword = 0" required>
+                <span class="icon-ico_reg_pwd glyphicon" />
+            </div>
+            <div class="form-group required" ng-class="{'has-error': wrongNewPassword}">
+                <input type="password" class="form-control" ng-model="newPassword" placeholder="{{ 'NewPassword' | translate }}" required>
+                <span class="icon-ico_reg_pwd glyphicon" />
+            </div>
+            <div class="form-group required" ng-class="{'has-error': confirmNewPassword && newPassword !== confirmNewPassword}">
+                <input type="password" class="form-control" ng-model="confirmNewPassword" placeholder="{{ 'ConfrimNewPassword' | translate }}" required>
+                <span class="icon-ico_reg_pwd glyphicon" />
+
+            </div>
+            <div class="form-group">
+                <div>
+                    <button type="submit" style="float:left" class="btn btn-warning btn_changepassword" ng-disabled="changePasswordForm.$pristine || changePasswordForm.$invalid || newPassword !== confirmNewPassword" ng-click="save()">{{ 'Save' | translate }}</button>
+                    <button type="button" style="float:right" class="btn btn-sm btn_changepassword" ng-click="switchPage(false)">{{ 'Cancel' | translate }}</button>
+                </div>
+            </div>
+            <span ng-show="wrongLoginName" class="help-block" style="color:red"><span class="icon-ico_alert"></span>&nbsp;{{wrongLoginNameMessage}}</span>
+            <span ng-show="wrongOldPassword" class="help-block" style="color:red"><span class="icon-ico_alert"></span>&nbsp;{{wrongOldPasswordMessage}}</span>
+            <span ng-show="wrongNewPassword" class="help-block" style="color:red"><span class="icon-ico_alert"></span>&nbsp;{{wrongNewPasswordMessage}}</span>
+            <span ng-show="confirmNewPassword && newPassword !== confirmNewPassword" class="help-block " style="color:red"><span class="icon-ico_alert"></span>&nbsp;{{help_DifferentPassword}}</span>
+        </form>
+
+    </div>
+</div>

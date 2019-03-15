@@ -1,0 +1,10 @@
+[t39]
+FileName1=t39_shortcuts.html
+URL1=http://10.184.129.208/webapi/api/worklist/shortcuts?roleName=Administrator&userName=Test1
+Total=1
+ContentType=
+SnapshotXmlFile=snapshot_39.xml
+RequestHeaderFile=t39_RequestHeader.txt
+RequestBodyFile=NONE
+[ProtocolInfo]
+ProtocolId=QTWeb

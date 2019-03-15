@@ -1,0 +1,13 @@
+[t27]
+SnapshotXmlFile=snapshot_27.xml
+ContentType=DummyContentType
+StepName=Custom Request: Film_By_Terminal
+Total=1
+FileName1=t27.UNK
+RequestHeaderFile=t27_RequestHeader.txt
+ResponseHeaderFile=t27_ResponseHeader.txt
+RawStepEndTime=1528191653959
+RawStepName=Film_By_Terminal
+RequestBodyFile=t27_RequestBody.txt
+RawStepStartTime=1528191641893
+URL1=file:

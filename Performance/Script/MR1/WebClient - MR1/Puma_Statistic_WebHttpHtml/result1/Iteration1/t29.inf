@@ -1,0 +1,13 @@
+[t29]
+SnapshotXmlFile=snapshot_29.xml
+ContentType=DummyContentType
+StepName=Custom Request: Film_By_FilmSize
+Total=1
+FileName1=t29.UNK
+RequestHeaderFile=t29_RequestHeader.txt
+ResponseHeaderFile=t29_ResponseHeader.txt
+RawStepEndTime=1528191789096
+RawStepName=Film_By_FilmSize
+RequestBodyFile=t29_RequestBody.txt
+RawStepStartTime=1528191787876
+URL1=file:

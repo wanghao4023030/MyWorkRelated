@@ -1,0 +1,101 @@
+
+
+<!DOCTYPE html>
+<html ng-app="logonapp">
+<head>
+    <meta charset="utf-8" http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>KIOSK Login</title>
+    <link href="/Platform/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <base href="/Platform/">
+
+    
+    <link href="/Platform/Content/angular-material.css" rel="stylesheet"/>
+<link href="/Platform/Content/bootstrap.css" rel="stylesheet"/>
+<link href="/Platform/Content/bootstrap-theme.css" rel="stylesheet"/>
+<link href="/Platform/Content/toaster.css" rel="stylesheet"/>
+<link href="/Platform/Content/carestream.css" rel="stylesheet"/>
+<link href="/Platform/app-resources/css/login.css" rel="stylesheet"/>
+
+</head>
+
+<body class="login">
+    <toaster-container toaster-options="{'close-button':false, 'time-out':{ 'toast-warning': 2000, 'toast-error': 0 } }"></toaster-container>
+    <div ui-view></div>
+
+    <script src="/Platform/Scripts/jquery-1.11.0.js"></script>
+<script src="/Platform/Scripts/jquery.validate.js"></script>
+<script src="/Platform/Scripts/jquery.validate.unobtrusive.js"></script>
+<script src="/Platform/Scripts/modernizr-2.6.2.js"></script>
+<script src="/Platform/Scripts/bootstrap.js"></script>
+<script src="/Platform/Scripts/respond.js"></script>
+<script src="/Platform/Scripts/PDF.js.1.3.91/compatibility.js"></script>
+<script src="/Platform/Scripts/PDF.js.1.3.91/pdf.js"></script>
+<script src="/Platform/Scripts/PDF.js.1.3.91/pdf.worker.js"></script>
+<script src="/Platform/Scripts/PDF.js.1.3.91/text_layer_builder.js"></script>
+<script src="/Platform/Scripts/angular.js"></script>
+<script src="/Platform/Scripts/angular-ui-router.js"></script>
+<script src="/Platform/Scripts/angular-ui/ui-bootstrap.js"></script>
+<script src="/Platform/Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+<script src="/Platform/Scripts/angular-cookies.js"></script>
+<script src="/Platform/Scripts/angular-animate.min.js"></script>
+<script src="/Platform/Scripts/angular-busy.min.js"></script>
+<script src="/Platform/Scripts/angular-aria.min.js"></script>
+<script src="/Platform/Scripts/angular-material/angular-material.min.js"></script>
+<script src="/Platform/Scripts/angular-translate.js"></script>
+<script src="/Platform/Scripts/angular-translate-loader-partial.js"></script>
+<script src="/Platform/Scripts/ng-file-upload/ng-file-upload.min.js"></script>
+<script src="/Platform/Scripts/ui-grid-puma.js"></script>
+<script src="/Platform/Scripts/angular-tree-control/angular-tree-control.js"></script>
+<script src="/Platform/Scripts/toaster.js"></script>
+<script src="/Platform/Scripts/select.min.js"></script>
+<script src="/Platform/Scripts/Chart.min.js"></script>
+<script src="/Platform/Scripts/jsBarcode/JsBarcode.all.min.js"></script>
+<script src="/Platform/Scripts/angular-chart/angular-chart.js"></script>
+<script src="/Platform/Scripts/underscore.min.js"></script>
+
+    <script src="/Platform/app/common/common.module.js"></script>
+<script src="/Platform/app/common/behaviors/checklist-model.js"></script>
+<script src="/Platform/app/common/behaviors/drag-sortable.js"></script>
+<script src="/Platform/app/common/behaviors/dropdownMenu-changeTitle.js"></script>
+<script src="/Platform/app/common/behaviors/focus.js"></script>
+<script src="/Platform/app/common/behaviors/notAllowDot.js"></script>
+<script src="/Platform/app/common/behaviors/vt-enter.js"></script>
+<script src="/Platform/app/common/controls/drag-sortable/Sortable.js"></script>
+<script src="/Platform/app/common/controls/puma-confirm/puma-confirm.js"></script>
+<script src="/Platform/app/common/controls/puma-delete-button/puma-delete-button.js"></script>
+<script src="/Platform/app/common/controls/puma-multi-select/puma-multi-select.js"></script>
+<script src="/Platform/app/common/controls/puma-multi-select/puma-multi-select.tpl.js"></script>
+<script src="/Platform/app/common/controls/puma-open-dialog/open-dialog.js"></script>
+<script src="/Platform/app/common/controls/puma-open-dialog/puma-dialog.js"></script>
+<script src="/Platform/app/common/controls/puma-switch/puma-switch.js"></script>
+<script src="/Platform/app/common/filters/camel-case-filter.js"></script>
+<script src="/Platform/app/common/filters/new-line-filter.js"></script>
+<script src="/Platform/app/common/filters/qclog-event-filter.js"></script>
+<script src="/Platform/app/common/utils/base64.js"></script>
+<script src="/Platform/app/common/utils/constants.js"></script>
+<script src="/Platform/app/common/utils/date.js"></script>
+<script src="/Platform/app/common/utils/enum.js"></script>
+<script src="/Platform/app/common/utils/ipAddressHandler.js"></script>
+<script src="/Platform/app/common/utils/kiosk.util.js"></script>
+<script src="/Platform/app/common/utils/loginContext.js"></script>
+<script src="/Platform/app/common/utils/permission.js"></script>
+<script src="/Platform/app/common/utils/resouces.js"></script>
+<script src="/Platform/app/common/utils/webservices.js"></script>
+<script src="/Platform/app/common/webservices/client-tool-svc.js"></script>
+<script src="/Platform/app/common/webservices/configuration-svc.js"></script>
+<script src="/Platform/app/common/webservices/system-information-svc.js"></script>
+
+    <script src="/Platform/app/login/login.js"></script>
+<script src="/Platform/app/login/rememberme.js"></script>
+
+
+    <script>
+        var urlPrefix = /Platform/;
+        var urlPrefixWebApi = '/webapi';
+        if (urlPrefix === '/') {
+            urlPrefix = '';
+        }
+        //console.log(urlPrefix);
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+﻿commonModule.factory('loginContext', ['$log', '$cookies', '$location', function ($log, $cookies, $location) {
+    $log.debug('loginContext factory...');
+    var cookiesApiToken = $cookies.get('ApiToken');
+    if (!cookiesApiToken) {
+        $log.error("loginContext: Fail to get api token, please log in first.");
+        return {};
+    }
+    var apiTokenObj = JSON.parse(cookiesApiToken);
+    apiTokenObj.onlyReport = apiTokenObj.onlyReport === 'true' ? true : false;
+    var _permissions = [];
+    if (apiTokenObj.strUserPermissionList) {
+        var tempPermissions = apiTokenObj.strUserPermissionList.slice(0, -1).split('|');
+        angular.forEach(tempPermissions, function (item) {
+            var arrayTemp = item.split(':');
+            var itemObj = {};
+            itemObj.permissionName = arrayTemp[0];
+            itemObj.permissionValue = arrayTemp[1] === '1' ? true : false;
+            _permissions.push(itemObj);
+        });
+    }
+    var _modalities = [], _departments = [];
+    if (apiTokenObj.strModalities) {
+        _modalities = apiTokenObj.strModalities.split(',');
+    }
+
+    if (apiTokenObj.strDepartments) {
+        _departments = apiTokenObj.strDepartments.split(',');
+    }
+    return {
+        apiToken: apiTokenObj.access_token,
+        tokenType: apiTokenObj.token_type,
+        //apiHost: apiTokenObj.api_host,
+        userName: apiTokenObj.userName,
+        roleName: apiTokenObj.currentRole,
+        permissionList: _permissions,
+        onlyReport: apiTokenObj.onlyReport,
+        modalities: _modalities,
+        departments: _departments
+    };
+}])

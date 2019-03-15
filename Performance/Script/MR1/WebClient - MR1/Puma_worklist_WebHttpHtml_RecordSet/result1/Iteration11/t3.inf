@@ -1,0 +1,13 @@
+[t3]
+SnapshotXmlFile=snapshot_3.xml
+ContentType=DummyContentType
+StepName=Custom Request: login
+Total=1
+FileName1=t3.UNK
+RequestHeaderFile=t3_RequestHeader.txt
+ResponseHeaderFile=t3_ResponseHeader.txt
+RawStepEndTime=1533113508178
+RawStepName=login
+RequestBodyFile=t3_RequestBody.txt
+RawStepStartTime=1533113508148
+URL1=file:

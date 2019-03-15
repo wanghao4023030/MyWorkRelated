@@ -1,0 +1,5 @@
+"{\"patientName\":null,\"patientID\":\"P20170703233549235\",\"accessionNumber\":null,\"createDa"
+"teRange\":{\"startTime\":null,\"endTime\":null},\"patientSex\":\"\",\"reportStatus\":\"\",\"re"
+"portPrintStatus\":\"\",\"filmPrintStatus\":\"\",\"printMode\":\"\",\"modalityType\":\"\",\"pat"
+"ientType\":\"\",\"department\":\"\",\"completeStatus\":null,\"pagination\":{\"pageIndex\":1,\""
+"pageSize\":50},\"shortcutName\":\"\",\"shortcutNameCache\":\"\"}"

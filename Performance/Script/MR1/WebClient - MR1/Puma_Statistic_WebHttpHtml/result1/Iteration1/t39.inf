@@ -1,0 +1,13 @@
+[t39]
+SnapshotXmlFile=snapshot_39.xml
+ContentType=DummyContentType
+StepName=Custom Request: Report_By_PaperSize
+Total=1
+FileName1=t39.UNK
+RequestHeaderFile=t39_RequestHeader.txt
+ResponseHeaderFile=t39_ResponseHeader.txt
+RawStepEndTime=1528192391099
+RawStepName=Report_By_PaperSize
+RequestBodyFile=t39_RequestBody.txt
+RawStepStartTime=1528192375859
+URL1=file:

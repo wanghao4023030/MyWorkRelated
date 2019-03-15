@@ -1,0 +1,11 @@
+GET /Platform/app/workarea/worklist/views/worklist-template.html HTTP/1.1
+Authorization: bearer tsGeUl8PoIHSR3FCSmv-ln-UwpISWyoEfbVyogGZZyZ7YRTKioIaFMC_FjSppsM5n7ElArQCUxoEQmFlFcvybesDTsTJ2-737zlNPzX8qaTq9CXGmuQthTlN1YzV06YimgRFW0uWLfAi2WINApC6dw44yJOMYkFgfaP-68JKGQqWoX19vKqB8at6qcPEJNxE8a5ivbmy8ZrVKwynpWsFFw
+Referer: http://10.184.129.108/Platform/workarea/reconciliation
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.8
+Accept: */*
+Connection: Keep-Alive
+Host: 10.184.129.108
+Cookie: ASP.NET_SessionId=edtvxaj40s01lljzh4a5ylhf; ApiToken=%7B%22access_token%22%3A%22tsGeUl8PoIHSR3FCSmv-ln-UwpISWyoEfbVyogGZZyZ7YRTKioIaFMC_FjSppsM5n7ElArQCUxoEQmFlFcvybesDTsTJ2-737zlNPzX8qaTq9CXGmuQthTlN1YzV06YimgRFW0uWLfAi2WINApC6dw44yJOMYkFgfaP-68JKGQqWoX19vKqB8at6qcPEJNxE8a5ivbmy8ZrVKwynpWsFFw%22%2C%22token_type%22%3A%22bearer%22%2C%22expires_in%22%3A604799%2C%22refresh_token%22%3A%22f49b84fe-531e-4546-aa6c-7f0a692f2344%22%2C%22userName%22%3A%225%22%2C%22currentRole%22%3A%22Administrator%22%2C%22strDepartments%22%3A%22%22%2C%22strModalities%22%3A%22%22%2C%22onlyReport%22%3A%22false%22%2C%22strUserPermissionList%22%3A%22CentralPrint%3A1%7CChangeHoldFlag%3A1%7CChangePrintMode%3A1%7CChangePrintStatus%3A1%7Cconfig%3A1%7CConfigRole%3A1%7CConfigSystem%3A1%7CConfigUser%3A1%7CCorrectReconciliation%3A1%7CDelete%3A1%7CPrinterMonitor%3A1%7CPrintTaskManagement%3A1%7CQCLog%3A1%7CReconciliation%3A1%7CRestoreFilm%3A1%7CStatisticsReport%3A1%7Cworklist%3A1%7C%22%7D; .AspNet.ApplicationCookie=Yhc7OTutlMjqpPdHln7tfER0ObJ0ET9jVdGTJGFqtFRcl1AJvP1lUSJUgCSoG9VQZHqAMaFbORJjZ3l0eV4FRwwqrXi4ibN6qN0K6HXTXA7HosBaWhsNpe9m-nI9v3zrO0lqR4GQjdhMolPCFwPtYQrLDVva-ebXVxnmx5mluNYGMK8ryX-ot0u5as5UPebqHi2LbDT2XrxK63yXNAwltdDHFXAlyVabEdVgnM2PDb3dxfW-CcLlv0CcgLqCmjoFrMg7mY5OlzZLkWgbYvFLOP-PEkfloef_WPKQGLUKcg8
+

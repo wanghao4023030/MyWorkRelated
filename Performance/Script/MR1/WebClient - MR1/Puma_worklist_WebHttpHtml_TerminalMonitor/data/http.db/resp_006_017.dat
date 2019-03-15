@@ -1,0 +1,26 @@
+﻿commonModule.factory('permission', ['$log', 'loginContext', function ($log, loginContext) {
+    $log.debug('permission factory()...');
+
+    var _identity = undefined,
+     _authenticated = false;
+
+    var _userName = loginContext.userName;
+    var _roleName = loginContext.roleName;
+    var _permissionList = loginContext.permissionList;
+    var _onlyReport = loginContext.onlyReport;
+
+    return {
+
+        hasPermission: function (permissionName) {
+            if (_userName === 'admin' || _userName === 'cshsvc') {
+                return true;
+            } else {
+                var permission = _.find(_permissionList, function (item) {
+                    return permissionName === item.permissionName;
+                });
+                return permission.permissionValue;
+            }
+        }
+
+    };
+}])

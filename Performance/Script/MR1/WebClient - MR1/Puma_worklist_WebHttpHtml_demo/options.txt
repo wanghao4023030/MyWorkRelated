@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-ID:\WebClient\Puma_worklist_WebHttpHtml_demo
+-IC:\Program Files (x86)\HP\LoadRunner\include
+-ed:\webclient\puma_worklist_webhttphtml_demo\\logfile.log
+d:\webclient\puma_worklist_webhttphtml_demo\\combined_Puma_worklist_WebHttpHtml_demo.c
+d:\webclient\puma_worklist_webhttphtml_demo\\pre_cci.c

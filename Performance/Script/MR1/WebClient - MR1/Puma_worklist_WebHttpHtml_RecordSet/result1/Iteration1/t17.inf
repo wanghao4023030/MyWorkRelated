@@ -1,0 +1,13 @@
+[t17]
+SnapshotXmlFile=snapshot_17.xml
+ContentType=DummyContentType
+StepName=Custom Request: web_custom_request
+Total=1
+FileName1=t17.UNK
+RequestHeaderFile=t17_RequestHeader.txt
+ResponseHeaderFile=t17_ResponseHeader.txt
+RawStepEndTime=1533113352645
+RawStepName=web_custom_request
+RequestBodyFile=t17_RequestBody.txt
+RawStepStartTime=1533113352045
+URL1=file:

@@ -1,0 +1,34 @@
+﻿// adminsettings service proxy
+webservices.factory('adminsettingsService', ['$http', 'apiConfig', function ($http, apiConfig) {
+    'use strict';
+
+    return {
+
+        getGeneralConfig: function () {
+            return $http.get('/api/systemConfiguration/generalConfig', apiConfig.create());
+        },
+
+        saveGeneralConfig: function (data) {
+            return $http.post('/api/systemConfiguration/saveGeneralConfig', data, apiConfig.create());
+        },
+
+        getIncompleteTaskConfig: function () {
+            return $http.get('/api/systemConfiguration/incompleteTaskConfig', apiConfig.create());
+        },
+
+        updateIncompleteTaskConfig: function (data) {
+            return $http.post('/api/systemConfiguration/updateIncompleteTaskConfig', data, apiConfig.create());
+        },
+
+        getPSWorklistColumnConfig: function () {
+            return $http.get('/api/systemConfiguration/psWorklistColumnConfig', apiConfig.create());
+        },
+
+        updatePSWorklistColumnConfig: function (data) {
+            return $http.post('/api/systemConfiguration/updatePSWorklistColumnConfig', data, apiConfig.create());
+        }
+
+
+    };
+}]);
+

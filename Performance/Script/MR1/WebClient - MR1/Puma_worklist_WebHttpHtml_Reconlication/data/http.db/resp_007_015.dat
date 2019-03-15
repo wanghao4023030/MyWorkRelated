@@ -1,0 +1,321 @@
+﻿adminSettingModule.controller('userController', ['$scope', '$log', '$translate', 'userService', 'roleService', 'toaster', 'enums', 'constants', 'openDialog',
+    function ($scope, $log, $translate, userService, roleService, toaster, enums, constants, openDialog) {
+        $log.debug('userController controller...');
+
+        var getCustomUsers = function () {
+            userService.getCustomUsers().success(function (result) {
+                if (result === null) {
+                    toaster.pop('info', $translate.instant("NoRecords"));
+                    return;
+                }
+                $scope.customUsers = result;
+                angular.forEach($scope.customUsers, function (customUser) {
+                    customUser.departments = [];
+                    if (customUser.department) {
+                        //get departmentId list from string of customUser.department 
+                        var departmentIds = customUser.department.split(',');
+                        angular.forEach(departmentIds, function (departmentId) {
+                            //fetch department from departments by departmentId
+                            var item = _.find($scope.departments, function (item) {
+                                return departmentId === item.id.toString();
+                            });
+
+                            if (item !== undefined) {
+                                customUser.departments.push(item);
+                            }
+                        });
+                    }
+                    customUser.modalities = [];
+                    if (customUser.modality) {
+                        customUser.modalities = customUser.modality.split(',');
+                    }
+
+
+                });
+
+
+
+            });
+        };
+
+        var getRoleNames = function () {
+            roleService.getRoleNames().success(function (result) {
+                //$scope.roleNames = result;
+                if (!result) {
+                    return;
+                }
+                angular.forEach(result, function (role) {
+                    var roleObj = {};
+                    roleObj.name = role;
+                    roleObj.dispalyName = role;
+                    $scope.roleNames.push(roleObj);
+                });
+
+            });
+        };
+
+        var getModalityTypes = function () {
+            userService.getModalityTypes().success(function (result) {
+                $scope.modalityTypes = result;
+
+            });
+        };
+        var getDepartments = function () {
+            userService.getDepartments().success(function (result) {
+                $scope.departments = result;
+                //$scope.departmentNames=[];
+                //angular.forEach(result, function (item) {
+                //    $scope.departmentNames.push(item.departmentName);
+                //});
+            });
+        };
+
+        var getRolePermissions = function () {
+            roleService.getRolePermissions().success(function (result) {
+                $scope.rolePermissions = result;
+                initPermissionValue();
+
+            });
+        };
+        var initPermissionValue = function () {
+            angular.forEach($scope.rolePermissions, function (rolePermission) {
+                rolePermission.permissionValue = false;
+            });
+        };
+        var getPermissionsByRole = function (param) {
+            $scope.currentRole = param;
+            angular.forEach($scope.rolePermissions, function (rolePermission) {
+                switch (param) {
+                    case enums.roles.administrator:
+                        rolePermission.permissionValue = rolePermission.administrator === 1 ? true : false;
+                        break;
+                    case enums.roles.radiologist:
+                        rolePermission.permissionValue = rolePermission.radiologist === 1 ? true : false;
+                        break;
+                    case enums.roles.technician:
+                        rolePermission.permissionValue = rolePermission.technician === 1 ? true : false;
+                        break;
+                    case enums.roles.receptionist:
+                        rolePermission.permissionValue = rolePermission.receptionist === 1 ? true : false;
+                        break;
+                    default:
+                        break;
+                }
+            });
+        };
+
+        var createUser = function () {
+            $scope.isUpdate = false;
+            $scope.editorUser = {};
+            initPermissionValue();
+        };
+        var getEditorUserByUserName = function (parameter) {
+            $scope.isUpdate = true;
+            $scope.activeId = parameter;
+            $scope.editorUser = {};
+            var reslut = _.find($scope.customUsers, function (item) {
+                return parameter === item.userName;
+            });
+            //$scope.editorUser = angular.copy(reslut);
+            $scope.editorUser.userName = reslut.userName;
+            //$scope.editorUser.password = '';
+            //$scope.editorUser.confirmedPassword = '';
+            $scope.editorUser.currentRole = reslut.currentRole;
+            $scope.editorUser.departments = reslut.departments;
+            $scope.editorUser.modalities = reslut.modalities;
+            $scope.editorUser.onlyReport = reslut.onlyReport;
+            angular.forEach($scope.rolePermissions, function (rolePermission) {
+                var permission = _.find(reslut.permissionList, function (item) {
+                    return rolePermission.permissionName === item.permissionName;
+                });
+                if (permission !== undefined) {
+                    rolePermission.permissionValue = permission.permissionValue === '1' ? true : false;
+                } else {
+                    // current editorUser have not set permission 
+                    rolePermission.permissionValue = false;
+                }
+
+            });
+        };
+
+        var fetchDepartmentIds2String = function (params) {
+            var result = '';
+            if (params) {
+                var departmentIds = [];
+                angular.forEach(params, function (item) {
+                    departmentIds.push(item.id);
+
+                });
+
+                result = departmentIds.join(',');
+            }
+            return result;
+        };
+
+        var fetchPermissionNameValueList = function () {
+            var userPermissionNameValues = [];
+            angular.forEach($scope.rolePermissions, function (item) {
+                var permissionNameValue = {
+                    permissionName: item.permissionName,
+                    permissionValue: item.permissionValue === true ? '1' : '0'
+                };
+                userPermissionNameValues.push(permissionNameValue);
+            });
+            return userPermissionNameValues;
+
+        };
+
+        var getDataPreSetCustomUser = function () {
+            return {
+                userId: $scope.editorUser.userName,
+                userName: $scope.editorUser.userName,
+                password: $scope.editorUser.password,
+                confirmedPassword: $scope.editorUser.confirmedPassword,
+                department: fetchDepartmentIds2String($scope.editorUser.departments),
+                modality: $scope.editorUser.modalities ? $scope.editorUser.modalities.join(',') : '',
+                currentRole: $scope.editorUser.currentRole,
+                permissionList: fetchPermissionNameValueList(),
+                onlyReport: $scope.editorUser.onlyReport
+            };
+        };
+
+        var updateCustomUserSettings = function () {
+            var data = getDataPreSetCustomUser();
+            userService.updateCustomUserSettings(data).success(function (result) {
+                if (result.isSuccess) {
+                    toaster.pop('success', '', $translate.instant('UpdateSuccess'));
+
+                    for (var i = 0; i < $scope.customUsers.length; i++) {
+                        var customUser = $scope.customUsers[i];
+                        if (data.userName === customUser.userName) {
+                            customUser.currentRole = data.currentRole;
+                            customUser.departments = $scope.editorUser.departments;
+                            customUser.modalities = $scope.editorUser.modalities;
+                            customUser.permissionList = data.permissionList;
+                            customUser.onlyReport = data.onlyReport;
+                            break;
+                        }
+                    };
+                } else {
+                    toaster.pop('error', '', $translate.instant('UpdateFail' + result.message));
+                }
+            });
+        };
+
+        var createCustomUserSettings = function () {
+            var data = getDataPreSetCustomUser();
+            userService.createCustomUserSettings(data).success(function (result) {
+                if (result.isSuccess) {
+                    toaster.pop('success', '', $translate.instant('CreateSuccess'));
+                    var customUser = {
+                        userId: data.userId,
+                        userName: data.userName,
+                        departments: $scope.editorUser.departments,
+                        modalities: $scope.editorUser.modalities,
+                        currentRole: data.currentRole,
+                        permissionList: data.permissionList,
+                        onlyReport: data.onlyReport
+                    };
+                    $scope.customUsers.push(customUser);
+                } else {
+                    toaster.pop('error', '', $translate.instant('CreateFail' + result.message));
+                }
+                return;
+            });
+
+
+        };
+
+        var deleteCustomUser = function () {
+            var paramter = $scope.editorUser.userName;
+            openDialog.openIconDialogOkCancel(openDialog.NotifyMessageType.Warn, $translate.instant('DeleteUser'), $translate.instant('ConfirmDeleteUser').replace("{0}", paramter), function () {
+                userService.deleteCustomUser(paramter).success(function () {
+                    toaster.pop('success', '', $translate.instant('DeleteSuccess'));
+                    $scope.customUsers = _.reject($scope.customUsers, function (item) {
+                        return paramter === item.userName;
+                    });
+                });
+            });
+        };
+
+        var checkWorklist = function (param) {
+
+            angular.forEach($scope.rolePermissions, function (rolePermission) {
+                if (rolePermission.permissionGroup === '2') {
+                    if (param) {
+                        rolePermission.permissionValue = param;
+                    } else {
+                        rolePermission.permissionValue = false;
+                    }
+                }
+            });
+        };
+        var checkeWorklistItem = function (param) {
+            if (param) {
+                var result = _.find($scope.rolePermissions, function (rolePermission) {
+                    return rolePermission.permissionName === 'worklist';
+                });
+                if (result !== undefined) {
+                    result.permissionValue = param;
+                }
+            }
+        };
+        var checkConfig = function (param) {
+
+            angular.forEach($scope.rolePermissions, function (rolePermission) {
+                if (rolePermission.permissionGroup === '3') {
+                    if (param) {
+                        rolePermission.permissionValue = param;
+                    } else {
+                        rolePermission.permissionValue = false;
+                    }
+                }
+            });
+        };
+
+        var checkConfigItem = function (param) {
+            if (param) {
+                var result = _.find($scope.rolePermissions, function (rolePermission) {
+                    return rolePermission.permissionName === 'config';
+                });
+                if (result !== undefined) {
+                    result.permissionValue = param;
+                }
+            }
+        };
+
+        var onUserPasswordFocus = function () {
+            $scope.isUserPasswordFocus = true;
+        };
+        var onUserPasswordBlur = function () {
+            $scope.isUserPasswordFocus = false;
+        };
+
+        (function initialize() {
+            $log.debug('userController initialize...');
+            $scope.regexpForUserName = /^(?!_)(?!.*?_$)[a-zA-Z0-9_\u4e00-\u9fa5]+$/; // Only Chinese characters, Numbers, letters, and underline cannot begin and end.
+            $scope.isUpdate = false;
+            $scope.roleNames = [];
+            $scope.editorUser = {};
+            getRoleNames();
+            getDepartments();
+            getModalityTypes();
+            getCustomUsers();
+            $scope.getEditorUserByUserName = getEditorUserByUserName;
+            $scope.createUser = createUser;
+            getRolePermissions();
+            $scope.getPermissionsByRole = getPermissionsByRole;
+            $scope.updateCustomUserSettings = updateCustomUserSettings;
+            $scope.createCustomUserSettings = createCustomUserSettings;
+            $scope.deleteCustomUser = deleteCustomUser;
+            $scope.checkWorklist = checkWorklist;
+            $scope.checkeWorklistItem = checkeWorklistItem;
+            $scope.checkConfig = checkConfig;
+            $scope.checkConfigItem = checkConfigItem;
+            $scope.onUserPasswordFocus = onUserPasswordFocus;
+            $scope.onUserPasswordBlur = onUserPasswordBlur;
+        }());
+
+    }]);
+
+

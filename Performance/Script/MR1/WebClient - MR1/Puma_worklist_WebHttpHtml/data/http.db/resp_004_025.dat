@@ -1,0 +1,191 @@
+﻿adminSettingModule.controller('systemController', ['$scope', '$log', '$translate', 'adminsettingsService', 'toaster',
+    function ($scope, $log, $translate, adminsettingsService, toaster) {
+        $log.debug('systemController controller...');
+
+
+        Sortable.create(columnsItems, {
+            animation: 300,
+            sort: true,
+            group: "1",
+            store: {
+                get: function (sortable) {
+                    var order = localStorage.getItem(sortable.options.group);
+                    return order ? order.split('|') : [];
+                },
+                set: function (sortable) {
+                    var order = sortable.toArray();
+                    localStorage.setItem(sortable.options.group, order.join('|'));
+                    $scope.columnNames = sortable.el.innerText.toString().split('\n');
+                    $scope.columnNames.pop();
+                }
+            }
+        });
+
+        var getGeneralConfig = function () {
+            adminsettingsService.getGeneralConfig().success(function (data) {
+                $scope.generalSettings = data;
+                $scope.pageSizeOption = parseInt(data.pageSize);
+                //var pageSizeOptions = data.pageSize.split(',');
+                //pageSizeOptions.forEach(function (item) {
+                //    $scope.pageSizeOptions.push(parseInt(item));
+                //});
+            });
+        };
+
+        var saveGeneralConfig = function () {
+            if (!$scope.pageSizeOption) {
+                toaster.pop('warn', '', $translate.instant('Rows100Range'));
+                return;
+            }
+            var data = {
+                pageSize: $scope.pageSizeOption,//$scope.pageSizeOptions.join(','),
+                pageSizeDefault: $scope.pageSizeOption,//$scope.pageSizeDefault,
+                autoLogoutTime: $scope.generalSettings.autoLogoutTime
+            };
+
+            adminsettingsService.saveGeneralConfig(data).success(function (result) {
+                if (result == true) {
+                    toaster.pop('success', '', $translate.instant('UpdateSuccess'));
+                } else {
+                    toaster.pop('error', '', $translate.instant('UpdateFail'));
+                }
+
+            });
+
+        };
+
+        var getIncompleteTaskConfig = function () {
+            adminsettingsService.getIncompleteTaskConfig().success(function (result) {
+                $scope.incompleteTaskConfig = result;
+                getDurationTypeHint();
+                if ($scope.incompleteTaskConfig.activeMode === 1) {
+                    $scope.durationActiveMode = true;
+                } else if ($scope.incompleteTaskConfig.activeMode === 2) {
+                    $scope.deadlineActiveMode = true;
+                } else if ($scope.incompleteTaskConfig.activeMode === 3) {
+                    $scope.durationActiveMode = true;
+                    $scope.deadlineActiveMode = true;
+                }
+            });
+        };
+        var fetchActiveMode = function () {
+            if ($scope.durationActiveMode && !$scope.deadlineActiveMode) {
+                $scope.incompleteTaskConfig.activeMode = 1;
+            } else if (!$scope.durationActiveMode && $scope.deadlineActiveMode) {
+                $scope.incompleteTaskConfig.activeMode = 2;
+            } else if ($scope.durationActiveMode && $scope.deadlineActiveMode) {
+                $scope.incompleteTaskConfig.activeMode = 3;
+            }
+        }
+        var updateIncompleteTaskConfig = function () {
+            fetchActiveMode();
+            var data = {
+                enabled: $scope.incompleteTaskConfig.enabled,
+                activeMode: $scope.incompleteTaskConfig.activeMode,
+                durationType: $scope.incompleteTaskConfig.durationType,
+                durationRange: $scope.incompleteTaskConfig.durationRange,
+                deadlineDay: $scope.incompleteTaskConfig.deadlineDay,
+                deadlineTime: $scope.incompleteTaskConfig.deadlineTime
+
+            };
+
+            adminsettingsService.updateIncompleteTaskConfig(data).success(function (result) {
+                if (result == true) {
+                    toaster.pop('success', '', $translate.instant('UpdateSuccess'));
+                } else {
+                    toaster.pop('error', '', $translate.instant('UpdatError'));
+                }
+            });
+        };
+
+        var getDurationTypeHint = function () {
+            if ($scope.incompleteTaskConfig.durationType === 'Days') {
+                $scope.durationRangeMax = 7;
+                $scope.regexpdurationRange = /^[1-7]$/;
+                $scope.durationHint = '(1~' + $scope.durationRangeMax + ')';
+            } else if ($scope.incompleteTaskConfig.durationType === 'Hours') {
+                $scope.durationRangeMax = 23;
+                $scope.regexpdurationRange = /^([1]?[0-9]|2[0-3])$/;
+                $scope.durationHint = '(1~' + $scope.durationRangeMax + ')';
+            } else if ($scope.incompleteTaskConfig.durationType === 'Minutes') {
+                $scope.durationRangeMax = 59;
+                $scope.regexpdurationRange = /^([1-5]?[0-9])$/;
+                $scope.durationHint = '(1~' + $scope.durationRangeMax + ')';
+            }
+        };
+
+        var getPSWorklistColumnConfig = function () {
+            adminsettingsService.getPSWorklistColumnConfig().success(function (result) {
+                $scope.worklistColumns = result;
+
+            });
+        };
+
+        var updatePSWorklistColumnConfig = function () {
+            var data = [];
+            angular.forEach($scope.columnNames, function (value, key) {
+                var res = value.replace('\r', '').replace('\n', '').replace('\r\n', '').replace(' ', '');
+                if (res !== '')
+                    data.push(res);
+            });
+            adminsettingsService.updatePSWorklistColumnConfig(data).success(function (result) {
+                if (result == true) {
+                    toaster.pop('success', '', $translate.instant('UpdateSuccess'));
+                } else {
+                    toaster.pop('error', '', $translate.instant('UpdateError'));
+                }
+            });
+        };
+
+
+        $scope.changeDurationActiveMode = function () {
+            if ($scope.incompleteTaskConfig.enabled) {
+                if (($scope.durationActiveMode || $scope.deadlineActiveMode) === false) {
+                    $scope.durationActiveMode = true;
+                }
+            }
+        };
+        $scope.changeDeadlineActiveMode = function () {
+            if ($scope.incompleteTaskConfig.enabled) {
+                if (($scope.durationActiveMode || $scope.deadlineActiveMode) === false) {
+                    $scope.deadlineActiveMode = true;
+                }
+            }
+        };
+        (function initialize() {
+            $log.debug('systemController initialize...');
+
+            $scope.regexpHourMinute = /^([0-1]?[0-9]|2[0-3]):([0-5][0-9])$/;
+            $scope.generalSettings = {
+                pageSize: '',
+                autoLogoutTime: ''
+            };
+            $scope.pageSizeOptions = [];
+            $scope.incompleteTaskConfig = {
+                enabled: '',
+                activeMode: '',
+                durationType: '',
+                durationRange: '',
+                deadlineDay: '',
+                deadlineTime: ''
+            };
+
+            $scope.worklistColumns = [];
+            $scope.durationActiveMode = false;
+            $scope.deadlineActiveMode = false;
+            $scope.durationRangeMax = 7;
+            $scope.durationHint = '';
+            $scope.isAddRowsOptions = false;
+            $scope.pageSizeDefault = 0;
+            getGeneralConfig();
+            getIncompleteTaskConfig();
+            getPSWorklistColumnConfig();
+            $scope.saveGeneralConfig = saveGeneralConfig;
+            $scope.updateIncompleteTaskConfig = updateIncompleteTaskConfig;
+            $scope.getDurationTypeHint = getDurationTypeHint;
+            $scope.updatePSWorklistColumnConfig = updatePSWorklistColumnConfig;
+        }());
+
+    }]);
+
+

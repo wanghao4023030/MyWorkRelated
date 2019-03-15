@@ -1,0 +1,11 @@
+[t46]
+FileName1=t46.html
+URL1=http://10.184.129.208/webapi/api/department/departmentsByIds
+Total=1
+RequestHeaderFile=t46_RequestHeader.txt
+RequestBodyFile=t46_RequestBody.txt
+ResponseHeaderFile=t46_ResponseHeader.txt
+ContentType=
+SnapshotXmlFile=snapshot_46.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

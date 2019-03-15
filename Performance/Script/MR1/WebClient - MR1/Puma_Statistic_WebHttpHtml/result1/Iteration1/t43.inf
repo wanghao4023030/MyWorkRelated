@@ -1,0 +1,13 @@
+[t43]
+SnapshotXmlFile=snapshot_43.xml
+ContentType=DummyContentType
+StepName=Custom Request: OCR_ModalityType
+Total=1
+FileName1=t43.UNK
+RequestHeaderFile=t43_RequestHeader.txt
+ResponseHeaderFile=t43_ResponseHeader.txt
+RawStepEndTime=1528192620527
+RawStepName=OCR_ModalityType
+RequestBodyFile=t43_RequestBody.txt
+RawStepStartTime=1528192618696
+URL1=file:

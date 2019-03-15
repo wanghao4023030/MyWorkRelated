@@ -1,0 +1,80 @@
+﻿commonModule.factory('dates', ['$log', function ($log) {
+    $log.debug('dates factory...');
+
+    var getToday = function () {
+        var resultDate = {
+            start: '',
+            end: ''
+        };
+        var now = new Date();
+        resultDate.start = now;
+        resultDate.end = now;
+        return resultDate;
+    };
+
+    var getThisWeek = function () {
+        var resultDate = {
+            start: '',
+            end: ''
+        };
+        var now = new Date();
+        var dayOfWeek = now.getDay() || 7;
+        if (dayOfWeek !== 0) {
+            now.setHours(-24 * (dayOfWeek));
+        }
+        resultDate.start = now;
+        resultDate.end = new Date();
+        return resultDate;
+    };
+
+    var getThisMonth = function () {
+        var resultDate = {
+            start: '',
+            end: ''
+        };
+        var now = new Date();
+        now = new Date(now.getFullYear(), now.getMonth(), 1);
+        resultDate.start = now;
+        resultDate.end = new Date();
+
+        return resultDate;
+    };
+
+    var getLastMonth = function () {
+        var resultDate = {
+            start: '',
+            end: ''
+        };
+        var now = new Date();
+        now.setDate(1);
+        now.setMonth(now.getMonth() - 1);
+
+        var endDate = new Date((new Date((new Date()).getFullYear(), (new Date()).getMonth(), 1)) - 1);
+
+        resultDate.start = now;
+        resultDate.end = endDate;
+        return resultDate;
+    };
+
+    var getRecentThreeMonthes = function () {
+        var resultDate = {
+            start: '',
+            end: ''
+        };
+        var now = new Date();
+        now.setDate(1);
+        now.setMonth(now.getMonth() - 2);
+        resultDate.start = now;
+        resultDate.end = new Date();
+        return resultDate;
+    };
+
+    return {
+        today: getToday(),
+        thisWeek: getThisWeek(),
+        thisMonth: getThisMonth(),
+        lastMonth: getLastMonth(),
+        recentThreeMonths: getRecentThreeMonthes()
+
+    };
+}])

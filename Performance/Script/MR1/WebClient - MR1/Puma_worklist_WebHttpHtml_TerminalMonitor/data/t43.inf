@@ -1,0 +1,10 @@
+[t43]
+FileName1=t43_allTerminals.html
+URL1=http://10.184.129.208/webapi/api/terminal/allTerminals
+Total=1
+ContentType=
+SnapshotXmlFile=snapshot_43.xml
+RequestHeaderFile=t43_RequestHeader.txt
+RequestBodyFile=NONE
+[ProtocolInfo]
+ProtocolId=QTWeb

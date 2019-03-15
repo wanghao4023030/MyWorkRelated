@@ -1,0 +1,45 @@
+﻿<div id="mainContainer" style="height:100%">
+    <div class="worklist-container">
+        <div ng-controller="worklistController" style="height:100%">
+            <md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop="" md-whiteframe="4" style="background: #4B5762;width:275px">
+                <md-toolbar style="background: #4B5762 !important; padding:15px;">
+                    <div style="display:inline-block">
+                        <span>{{'SearchShortcut' | translate}}</span>
+                        <span class="icon-ico_remove icon_font_size"  style="float: right;" ng-click="toggleLeft()" title="关闭"></span>
+                        <span class="icon-ico_add icon_font_size" style="float: right; padding-right: 10px;" ng-disabled="isEdit" ng-click="!isEdit && addShortcut()" title="新建过滤器"></span>
+                    </div>
+                </md-toolbar>
+
+                <ul class="sidebar-nav">
+                    <li ng-repeat="type in searchDateTypes" ng-disabled="isEdit">
+                        <a href="#" ng-click="!isEdit && quickSearch(type.value)"><span class="icon-ico_tag_normal sidebar-padding-left" style="padding-right:15px"></span>{{type.name}}</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li ng-show="isAddShortcut" class="current">
+                        <span>
+                            <span class="icon-ico_tag_normal sidebar-padding-left" style="padding-right:10px; color:#fff;"></span>
+                            <input class="sidebar-padding-left" type="text" style="background-color:transparent; color: rgb(153, 153, 153); border: none; width: 165px; padding-left:0;" maxlength="20" ng-model="shortcutNameCache" placeholder="新建自定义" focus-me="isAddShortcut">
+                            <span class="icon-ico_ok icon_font_size icon-green" ng-disabled="shortcutNameCache == ''" ng-click="shortcutNameCache != '' && saveShortcut()" title="保存"></span>&nbsp;
+                            <span class="icon-ico_cancel icon_font_size" ng-click="cancelAddShortcut()" title="取消"></span>
+                        </span>
+                    </li>
+                    <li ng-repeat="s in shortcuts" ng-disabled="isEdit" ng-class="{current:s.isEdit}">
+                        <a href="#" style="display: inline-block" ng-click="!isEdit && loadShortcut(s)">
+                            <span class="icon-ico_tag_normal sidebar-padding-left" style="padding-right:10px"></span>
+                            <label ng-if="!s.isEdit" style="width: 170px; height: 40px">{{s.shortcutName}}</label>
+                            <input ng-if="!!s.isEdit" type="text" style="background-color: transparent; color: rgb(153, 153, 153); border: none; width: 170px; " maxlength="20" ng-model="s.shortcutNameCache" focus-me="!!s.isEdit">
+                        </a>
+                        <span ng-if="!isEdit" class="icon-ico_edit sidebar-icon" style="font-size:18px;" ng-click="editShortcut(s)" title="编辑"></span>
+                        <span ng-if="!isEdit" class="icon-ico_litter-bin sidebar-icon" puma-confirm confirm-message="{{'ConfirmDelete' | translate}}" confirm="deleteShortcut(s)" title="删除"></span>
+                        <span ng-if="!!s.isEdit" class="icon-ico_ok icon_font_size icon-green" ng-disabled="s.shortcutNameCache == ''" ng-click="s.shortcutNameCache != '' && updateShortcut(s)" title="保存"></span>
+                        <span ng-if="!!s.isEdit" class="icon-ico_cancel icon_font_size" ng-click="cancelSaveShortcut(s)" title="取消"></span>
+                    </li>
+                </ul>
+            </md-sidenav>
+
+            <worklist-mainbody-view></worklist-mainbody-view>
+        </div>
+
+    </div>
+</div>
+

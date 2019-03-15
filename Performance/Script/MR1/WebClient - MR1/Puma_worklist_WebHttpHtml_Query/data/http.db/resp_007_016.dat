@@ -1,0 +1,44 @@
+﻿webservices.factory('reconciliationService', ['$http', 'apiConfig', function ($http, apiConfig) {
+    'use strict';
+
+    return {
+
+        getRecords: function (accessionNumber, patientId) {
+            return $http.get('/api/reconciliation/getRecords', apiConfig.create({ 'accessionNumber': accessionNumber, 'patientId': patientId }));
+        },
+        getUnmatchImages: function (days, instanceId) {
+            return $http.get('/api/reconciliation/getUnmatchImages', apiConfig.create({'days': days, 'instanceId': instanceId}));
+        },
+        getUnmatchReports: function (days, instanceId) {
+            return $http.get('/api/reconciliation/getUnmatchReports', apiConfig.create({ 'days': days, 'instanceId': instanceId }));
+        },
+        getReport: function (instanceId) {
+            return $http.get('/api/reconciliation/getReport', apiConfig.create({ 'id': instanceId }, { responseType: 'arraybuffer' }));
+        },
+        saveDeliveryJob: function (data) {
+            return $http.post('/api/reconciliation/saveDeliveryJob', JSON.stringify(data), apiConfig.create());
+        },
+        reconciliationFilm: function (data) {
+            return $http.post('/api/reconciliation/reconciliationFilm', JSON.stringify(data), apiConfig.create());
+        },
+        saveReport: function (data) {
+            return $http.post('/api/reconciliation/saveReport', JSON.stringify(data), apiConfig.create());
+        },
+        obsoleteJob: function (data) {
+            return $http.post('/api/reconciliation/obsoleteJob', JSON.stringify(data), apiConfig.create());
+        },
+        obsoleteReport: function (data) {
+            return $http.post('/api/reconciliation/obsoleteReport', JSON.stringify(data), apiConfig.create());
+        },
+        printFilm: function (data) {
+            return $http.post('/api/reconciliation/printFilm', JSON.stringify(data), apiConfig.create());
+        },
+        getPatientType: function () {
+            return $http.get('/api/reconciliation/patientType/', apiConfig.create());
+        },
+        getDepartments: function () {
+            return $http.get('/api/department/departments', apiConfig.create());
+        }
+    };
+}]);
+

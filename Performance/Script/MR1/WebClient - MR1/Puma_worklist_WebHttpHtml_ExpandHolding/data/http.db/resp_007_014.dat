@@ -1,0 +1,142 @@
+﻿terminalMonitorModule.controller('terminalMonitorController', ['$scope', '$log', '$interval', '$timeout', '$http', 'terminalmonitorService',
+    function ($scope, $log, $interval, $timeout, $http, terminalmonitorService) {
+        $log.debug("terminalMonitorController.ctor()...");
+
+        $scope.language = '';
+
+
+        $scope.refreshMonitoringData = function () {
+            getMonitoringData();
+        }
+
+        $scope.autoRefreshMonitoringData = function () {
+            autoGetLatestMonitoringData()
+        }
+
+        var getMonitoringData = function () {
+            $log.debug('getMonitoringData...');
+            $scope.loadingPromise = terminalmonitorService.getTerminalMonitorings().success(function (result) {
+                $log.debug(result.length);
+                $scope.terminalMonitoringData = result;
+                $scope.initTabStatus();
+            });
+        };
+
+        function autoGetLatestMonitoringData() {
+            if ($scope.isAutoRefreshMonitoringData) {
+                $log.debug('begin auto refresh');
+                $scope.autoRefresher = $interval(function () {
+                    getMonitoringData();
+                }, $scope.autoRefreshInterval);
+            }
+            else {
+                $log.debug('stop auto refresh');
+                if (angular.isDefined($scope.autoRefresher)) {
+                    $interval.cancel($scope.autoRefresher);
+                    $scope.autoRefresher = {};
+                }
+            }
+        }
+
+
+
+        $scope.initTabStatus = function () {
+            if ($scope.terminalMonitoringData.length > 0) {
+                for (var i = 0; i < $scope.terminalMonitoringData.length; i++) {
+                    $scope.terminalDetailCollapseStatus.push(false);
+                    var dicTabTerminalKey = getTabStatusKey('terminal', i);
+                    $scope.dicTabStatus[dicTabTerminalKey] = true;
+                    if ($scope.terminalMonitoringData[i].filmPrinterInfo != null) {
+                        var dicTabFilmPrinterKey = getTabStatusKey('filmPrinter', i, 0);
+                        $scope.dicTabStatus[dicTabFilmPrinterKey] = false;
+                    }
+                    if ($scope.terminalMonitoringData[i].reportPrintersInfo.length > 0) {
+                        for (var reportIndex = 0; reportIndex < $scope.terminalMonitoringData[i].reportPrintersInfo.length; reportIndex++) {
+                            var dicTabReportPrinterKey = getTabStatusKey('reportPrinter', i, reportIndex);
+                            $scope.dicTabStatus[dicTabReportPrinterKey] = false;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        $scope.collapseTerminalDetail = function (terminalIndex) {
+            $scope.terminalDetailCollapseStatus[terminalIndex] = !$scope.terminalDetailCollapseStatus[terminalIndex];
+        }
+
+        $scope.isTerminalDetailShow = function (terminalIndex) {
+            return $scope.terminalDetailCollapseStatus[terminalIndex];
+        };
+
+
+        $scope.tabClick = function (tabType, terminalIndex, printerIndex) {
+            var curTerminalDetailTabsKeyPrefix = 'terminal-' + terminalIndex;
+            //loop in dicTabStatus
+            $.map($scope.dicTabStatus, function (v, tabKey) {
+                if (tabKey.indexOf(curTerminalDetailTabsKeyPrefix) == 0) {
+                    //hide all tab starting with 'terminal-$terminalIndex'
+                    $scope.dicTabStatus[tabKey] = false;
+                }
+            });
+
+            // display current tab
+            var tabKey = getTabStatusKey(tabType, terminalIndex, printerIndex);
+            $scope.dicTabStatus[tabKey] = true;
+        };
+
+
+        $scope.getTabStatus = function (tabType, terminalIndex, printerIndex) {
+            var tabKey = getTabStatusKey(tabType, terminalIndex, printerIndex);
+            return $scope.dicTabStatus[tabKey];
+        };
+
+        function getTabStatusKey(tabType, terminalIndex, printerIndex) {
+            var tabKey = '';
+            switch (tabType) {
+                case 'terminal':
+                    tabKey = 'terminal-' + terminalIndex;
+                    break;
+                case 'filmPrinter':
+                    tabKey = 'terminal-' + terminalIndex + '_' + 'filmPrinter-' + printerIndex;
+                    break;
+                case 'reportPrinter':
+                    tabKey = 'terminal-' + terminalIndex + '_' + 'reportPrinter-' + printerIndex;
+                    break;
+            }
+            return tabKey;
+        }
+
+
+        $scope.downloadP3Data = function () {
+            $log.debug('Download P3Data...');
+            terminalmonitorService.downloadP3Data().success(function (result) {
+                $log.debug(result);
+                window.open(result, "_blank");
+            });
+        };
+
+        // initialzation
+        (function initialize() {
+            $scope.isAutoRefreshMonitoringData = true;
+            // 5 seconds to auto refresh
+            $scope.autoRefreshInterval = 15000;
+            $scope.autoRefresher = {};
+
+            //busy loading parameters
+            $scope.loadingMessage = '请稍候...';
+            $scope.loadingPromise = null;
+
+            $scope.departments = [''];
+            $scope.terminalDetailCollapseStatus = [];
+            $scope.terminalMonitoringData = {};
+            $scope.dicTabStatus = {};
+            getMonitoringData();
+
+            autoGetLatestMonitoringData();
+
+            $scope.$on('$destroy', function () { $interval.cancel($scope.autoRefresher); })
+        }());
+
+    }
+]);

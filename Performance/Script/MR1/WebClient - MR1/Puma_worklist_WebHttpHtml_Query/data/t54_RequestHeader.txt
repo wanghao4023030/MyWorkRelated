@@ -1,0 +1,8 @@
+POST http://clients2.google.com/service/update2?cup2key=7:456915423&cup2hreq=fe64f7670d6a702479c75698c3adc8e9fa4ab043eea0deb6c7250a539330f864 HTTP/1.1
+Host: clients2.google.com
+Proxy-Connection: keep-alive
+Content-Length: 1922
+Content-Type: application/xml
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36
+Accept-Encoding: gzip, deflate
+

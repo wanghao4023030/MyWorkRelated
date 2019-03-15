@@ -1,0 +1,13 @@
+[t21]
+SnapshotXmlFile=snapshot_21.xml
+ContentType=DummyContentType
+StepName=Url: CheckLoginStatus_25
+Total=1
+FileName1=t21.UNK
+RequestHeaderFile=t21_RequestHeader.txt
+ResponseHeaderFile=t21_ResponseHeader.txt
+RawStepEndTime=1534929084558
+RawStepName=CheckLoginStatus_25
+RequestBodyFile=t21_RequestBody.txt
+RawStepStartTime=1534929084043
+URL1=file:

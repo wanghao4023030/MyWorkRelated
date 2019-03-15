@@ -1,0 +1,10 @@
+[t23]
+FileName1=t23_CheckLoginStatus.html
+URL1=http://10.184.129.208/Platform/Account/CheckLoginStatus
+Total=1
+ContentType=
+SnapshotXmlFile=snapshot_23.xml
+RequestHeaderFile=t23_RequestHeader.txt
+RequestBodyFile=NONE
+[ProtocolInfo]
+ProtocolId=QTWeb

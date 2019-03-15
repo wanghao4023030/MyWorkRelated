@@ -1,0 +1,10 @@
+﻿commonModule.directive('pumaDeleteButton', function () {
+    return {
+        restrict: 'E',
+        scope: {
+            ngConfirmMessage: '@confirmMessage',
+            ngClick: '&click'
+        },
+        template: '<span class="print_status_button round_button" puma-confirm confirm-message={{ngConfirmMessage}} confirm="ngClick()"><i class="icon-ico_litter-bin print_button"></i><span class="reprint_text">删除</span></span>',
+    }
+});

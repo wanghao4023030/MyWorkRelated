@@ -1,0 +1,625 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HTTPSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="2">
+  <HTTPTask id="578" hostname="10.184.129.208" path="http://10.184.129.208/Platform/app/login/login-view.html" url="http://10.184.129.208/Platform/app/login/login-view.html" ip="127.0.0.1" port="8888" connectionId="9" origin="Primary" frame="1" startDateTime="2017-07-04T14:35:32.384-07:00" startTime="516873510" endTime="516873510">
+    <HTTPRequest method="GET">
+      <HTTPHeaders>
+        <HTTPHeaderEntity name="Host" index="0">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>MTAuMTg0LjEyOS4yMDg=</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="Proxy-Connection" index="1">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>a2VlcC1hbGl2ZQ==</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="Accept" index="2">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>YXBwbGljYXRpb24vanNvbiwgdGV4dC9wbGFpbiwgKi8q</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="User-Agent" index="3">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgNi4xOyBXT1c2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzU5LjAuMzA3MS4xMDQgU2FmYXJpLzUzNy4zNg==</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="Referer" index="4">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>aHR0cDovLzEwLjE4NC4xMjkuMjA4L1BsYXRmb3JtLw==</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="Accept-Encoding" index="5">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>Z3ppcCwgZGVmbGF0ZQ==</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="Accept-Language" index="6">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>emgtQ04semg7cT0wLjg=</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPAllHeaders>
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>R0VUIGh0dHA6Ly8xMC4xODQuMTI5LjIwOC9QbGF0Zm9ybS9hcHAvbG9naW4vbG9naW4tdmlldy5odG1sIEhUVFAvMS4xDQpIb3N0OiAxMC4xODQuMTI5LjIwOA0KUHJveHktQ29ubmVjdGlvbjoga2VlcC1hbGl2ZQ0KQWNjZXB0OiBhcHBsaWNhdGlvbi9qc29uLCB0ZXh0L3BsYWluLCAqLyoNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDYuMTsgV09XNjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS81OS4wLjMwNzEuMTA0IFNhZmFyaS81MzcuMzYNClJlZmVyZXI6IGh0dHA6Ly8xMC4xODQuMTI5LjIwOC9QbGF0Zm9ybS8NCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KQWNjZXB0LUxhbmd1YWdlOiB6aC1DTix6aDtxPTAuOA0KDQo=</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPAllHeaders>
+      </HTTPHeaders>
+    </HTTPRequest>
+    <HTTPResponse>
+      <TcpPackets>
+        <PacketInfo time="516872496" offset="0" length="16384" />
+        <PacketInfo time="516872512" offset="16384" length="16384" />
+        <PacketInfo time="516872527" offset="32768" length="16384" />
+        <PacketInfo time="516872527" offset="49152" length="16384" />
+        <PacketInfo time="516872543" offset="65536" length="16384" />
+        <PacketInfo time="516872559" offset="81920" length="16384" />
+        <PacketInfo time="516872574" offset="98304" length="16384" />
+        <PacketInfo time="516872574" offset="114688" length="16384" />
+        <PacketInfo time="516872590" offset="131072" length="16384" />
+        <PacketInfo time="516872605" offset="147456" length="16384" />
+        <PacketInfo time="516872621" offset="163840" length="16384" />
+        <PacketInfo time="516872637" offset="180224" length="16384" />
+        <PacketInfo time="516872652" offset="196608" length="16384" />
+        <PacketInfo time="516872668" offset="212992" length="16384" />
+        <PacketInfo time="516872668" offset="229376" length="16384" />
+        <PacketInfo time="516872683" offset="245760" length="16384" />
+        <PacketInfo time="516872699" offset="262144" length="16384" />
+        <PacketInfo time="516872746" offset="278528" length="16384" />
+        <PacketInfo time="516872761" offset="294912" length="16384" />
+        <PacketInfo time="516872777" offset="311296" length="16384" />
+        <PacketInfo time="516872777" offset="327680" length="16384" />
+        <PacketInfo time="516872808" offset="344064" length="16384" />
+        <PacketInfo time="516872808" offset="360448" length="16384" />
+        <PacketInfo time="516872824" offset="376832" length="16384" />
+        <PacketInfo time="516872855" offset="393216" length="16384" />
+        <PacketInfo time="516872855" offset="409600" length="16384" />
+        <PacketInfo time="516872886" offset="425984" length="16384" />
+        <PacketInfo time="516872902" offset="442368" length="16384" />
+        <PacketInfo time="516872917" offset="458752" length="16384" />
+        <PacketInfo time="516872933" offset="475136" length="16384" />
+        <PacketInfo time="516872949" offset="491520" length="16384" />
+        <PacketInfo time="516872964" offset="507904" length="16384" />
+        <PacketInfo time="516872980" offset="524288" length="16384" />
+        <PacketInfo time="516873011" offset="540672" length="16384" />
+        <PacketInfo time="516873027" offset="557056" length="16384" />
+        <PacketInfo time="516873058" offset="573440" length="16384" />
+        <PacketInfo time="516873058" offset="589824" length="16384" />
+        <PacketInfo time="516873058" offset="606208" length="16384" />
+        <PacketInfo time="516873073" offset="622592" length="16384" />
+        <PacketInfo time="516873073" offset="638976" length="16384" />
+        <PacketInfo time="516873073" offset="655360" length="16384" />
+        <PacketInfo time="516873089" offset="671744" length="16384" />
+        <PacketInfo time="516873089" offset="688128" length="16384" />
+        <PacketInfo time="516873089" offset="704512" length="16384" />
+        <PacketInfo time="516873105" offset="720896" length="16384" />
+        <PacketInfo time="516873105" offset="737280" length="16384" />
+        <PacketInfo time="516873120" offset="753664" length="16384" />
+        <PacketInfo time="516873120" offset="770048" length="16384" />
+        <PacketInfo time="516873120" offset="786432" length="16384" />
+        <PacketInfo time="516873120" offset="802816" length="16384" />
+        <PacketInfo time="516873120" offset="819200" length="16384" />
+        <PacketInfo time="516873136" offset="835584" length="16384" />
+        <PacketInfo time="516873136" offset="851968" length="16384" />
+        <PacketInfo time="516873136" offset="868352" length="16384" />
+        <PacketInfo time="516873136" offset="884736" length="16384" />
+        <PacketInfo time="516873136" offset="901120" length="16384" />
+        <PacketInfo time="516873136" offset="917504" length="16384" />
+        <PacketInfo time="516873151" offset="933888" length="16384" />
+        <PacketInfo time="516873151" offset="950272" length="16384" />
+        <PacketInfo time="516873151" offset="966656" length="16384" />
+        <PacketInfo time="516873151" offset="983040" length="16384" />
+        <PacketInfo time="516873151" offset="999424" length="16384" />
+        <PacketInfo time="516873167" offset="1015808" length="16384" />
+        <PacketInfo time="516873167" offset="1032192" length="16384" />
+        <PacketInfo time="516873167" offset="1048576" length="16384" />
+        <PacketInfo time="516873167" offset="1064960" length="16384" />
+        <PacketInfo time="516873167" offset="1081344" length="16384" />
+        <PacketInfo time="516873183" offset="1097728" length="16384" />
+        <PacketInfo time="516873183" offset="1114112" length="12446" />
+      </TcpPackets>
+    </HTTPResponse>
+    <HTTPTask id="582" hostname="10.184.129.208" path="http://10.184.129.208/Platform/favicon.ico" url="http://10.184.129.208/Platform/favicon.ico" ip="127.0.0.1" port="8888" connectionId="5" origin="HTML" frame="1" startDateTime="2017-07-04T14:35:32.389-07:00" startTime="516873510" endTime="516873651">
+      <HTTPRequest method="GET">
+        <HTTPHeaders>
+          <HTTPHeaderEntity name="Host" index="0">
+            <HTTPDataSet>
+              <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+                <ActualData>MTAuMTg0LjEyOS4yMDg=</ActualData>
+              </HTTPData>
+            </HTTPDataSet>
+            <IsExternalData>false</IsExternalData>
+          </HTTPHeaderEntity>
+          <HTTPHeaderEntity name="Proxy-Connection" index="1">
+            <HTTPDataSet>
+              <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+                <ActualData>a2VlcC1hbGl2ZQ==</ActualData>
+              </HTTPData>
+            </HTTPDataSet>
+            <IsExternalData>false</IsExternalData>
+          </HTTPHeaderEntity>
+          <HTTPHeaderEntity name="User-Agent" index="2">
+            <HTTPDataSet>
+              <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+                <ActualData>TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgNi4xOyBXT1c2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzU5LjAuMzA3MS4xMDQgU2FmYXJpLzUzNy4zNg==</ActualData>
+              </HTTPData>
+            </HTTPDataSet>
+            <IsExternalData>false</IsExternalData>
+          </HTTPHeaderEntity>
+          <HTTPHeaderEntity name="Accept" index="3">
+            <HTTPDataSet>
+              <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+                <ActualData>aW1hZ2Uvd2VicCxpbWFnZS9hcG5nLGltYWdlLyosKi8qO3E9MC44</ActualData>
+              </HTTPData>
+            </HTTPDataSet>
+            <IsExternalData>false</IsExternalData>
+          </HTTPHeaderEntity>
+          <HTTPHeaderEntity name="Referer" index="4">
+            <HTTPDataSet>
+              <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+                <ActualData>aHR0cDovLzEwLjE4NC4xMjkuMjA4L1BsYXRmb3JtLw==</ActualData>
+              </HTTPData>
+            </HTTPDataSet>
+            <IsExternalData>false</IsExternalData>
+          </HTTPHeaderEntity>
+          <HTTPHeaderEntity name="Accept-Encoding" index="5">
+            <HTTPDataSet>
+              <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+                <ActualData>Z3ppcCwgZGVmbGF0ZQ==</ActualData>
+              </HTTPData>
+            </HTTPDataSet>
+            <IsExternalData>false</IsExternalData>
+          </HTTPHeaderEntity>
+          <HTTPHeaderEntity name="Accept-Language" index="6">
+            <HTTPDataSet>
+              <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+                <ActualData>emgtQ04semg7cT0wLjg=</ActualData>
+              </HTTPData>
+            </HTTPDataSet>
+            <IsExternalData>false</IsExternalData>
+          </HTTPHeaderEntity>
+          <HTTPAllHeaders>
+            <HTTPDataSet>
+              <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+                <ActualData>R0VUIGh0dHA6Ly8xMC4xODQuMTI5LjIwOC9QbGF0Zm9ybS9mYXZpY29uLmljbyBIVFRQLzEuMQ0KSG9zdDogMTAuMTg0LjEyOS4yMDgNClByb3h5LUNvbm5lY3Rpb246IGtlZXAtYWxpdmUNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDYuMTsgV09XNjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS81OS4wLjMwNzEuMTA0IFNhZmFyaS81MzcuMzYNCkFjY2VwdDogaW1hZ2Uvd2VicCxpbWFnZS9hcG5nLGltYWdlLyosKi8qO3E9MC44DQpSZWZlcmVyOiBodHRwOi8vMTAuMTg0LjEyOS4yMDgvUGxhdGZvcm0vDQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCkFjY2VwdC1MYW5ndWFnZTogemgtQ04semg7cT0wLjgNCg0K</ActualData>
+              </HTTPData>
+            </HTTPDataSet>
+            <IsExternalData>false</IsExternalData>
+          </HTTPAllHeaders>
+        </HTTPHeaders>
+      </HTTPRequest>
+      <HTTPResponse>
+        <TcpPackets>
+          <PacketInfo time="516872153" offset="0" length="263" />
+          <PacketInfo time="516872169" offset="263" length="16384" />
+          <PacketInfo time="516872169" offset="16647" length="16384" />
+          <PacketInfo time="516872184" offset="33031" length="16384" />
+          <PacketInfo time="516872200" offset="49415" length="16384" />
+          <PacketInfo time="516872215" offset="65799" length="16384" />
+          <PacketInfo time="516872215" offset="82183" length="16384" />
+          <PacketInfo time="516872231" offset="98567" length="16384" />
+          <PacketInfo time="516872231" offset="114951" length="16384" />
+          <PacketInfo time="516872247" offset="131335" length="16384" />
+          <PacketInfo time="516872247" offset="147719" length="16384" />
+          <PacketInfo time="516872262" offset="164103" length="16384" />
+          <PacketInfo time="516872278" offset="180487" length="16384" />
+          <PacketInfo time="516872293" offset="196871" length="16384" />
+          <PacketInfo time="516872293" offset="213255" length="16384" />
+          <PacketInfo time="516872309" offset="229639" length="16384" />
+          <PacketInfo time="516872325" offset="246023" length="16384" />
+          <PacketInfo time="516872325" offset="262407" length="16384" />
+          <PacketInfo time="516872340" offset="278791" length="16384" />
+          <PacketInfo time="516872340" offset="295175" length="16384" />
+          <PacketInfo time="516872356" offset="311559" length="16384" />
+          <PacketInfo time="516872371" offset="327943" length="16384" />
+          <PacketInfo time="516872387" offset="344327" length="16384" />
+          <PacketInfo time="516872403" offset="360711" length="16384" />
+          <PacketInfo time="516872418" offset="377095" length="16384" />
+          <PacketInfo time="516872449" offset="393479" length="15584" />
+          <PacketInfo time="516872449" offset="409063" length="16384" />
+          <PacketInfo time="516872465" offset="425447" length="16384" />
+          <PacketInfo time="516872465" offset="441831" length="16384" />
+          <PacketInfo time="516872481" offset="458215" length="16384" />
+          <PacketInfo time="516872496" offset="474599" length="16384" />
+          <PacketInfo time="516872512" offset="490983" length="16384" />
+          <PacketInfo time="516872527" offset="507367" length="16384" />
+          <PacketInfo time="516872543" offset="523751" length="16384" />
+          <PacketInfo time="516872543" offset="540135" length="16384" />
+          <PacketInfo time="516872559" offset="556519" length="16384" />
+          <PacketInfo time="516872574" offset="572903" length="16384" />
+          <PacketInfo time="516872590" offset="589287" length="16384" />
+          <PacketInfo time="516872590" offset="605671" length="16384" />
+          <PacketInfo time="516872605" offset="622055" length="16384" />
+          <PacketInfo time="516872637" offset="638439" length="16384" />
+          <PacketInfo time="516872637" offset="654823" length="16384" />
+          <PacketInfo time="516872652" offset="671207" length="16384" />
+          <PacketInfo time="516872668" offset="687591" length="16384" />
+          <PacketInfo time="516872683" offset="703975" length="16384" />
+          <PacketInfo time="516872699" offset="720359" length="16384" />
+          <PacketInfo time="516872730" offset="736743" length="16384" />
+          <PacketInfo time="516872746" offset="753127" length="16384" />
+          <PacketInfo time="516872777" offset="769511" length="16384" />
+          <PacketInfo time="516872777" offset="785895" length="16384" />
+          <PacketInfo time="516872793" offset="802279" length="16384" />
+          <PacketInfo time="516872808" offset="818663" length="16384" />
+          <PacketInfo time="516872824" offset="835047" length="16384" />
+          <PacketInfo time="516872839" offset="851431" length="16384" />
+          <PacketInfo time="516872855" offset="867815" length="16384" />
+          <PacketInfo time="516872871" offset="884199" length="16384" />
+          <PacketInfo time="516872886" offset="900583" length="16384" />
+          <PacketInfo time="516872902" offset="916967" length="16384" />
+          <PacketInfo time="516872917" offset="933351" length="16384" />
+          <PacketInfo time="516872949" offset="949735" length="16384" />
+          <PacketInfo time="516872964" offset="966119" length="16384" />
+          <PacketInfo time="516872964" offset="982503" length="16384" />
+          <PacketInfo time="516872980" offset="998887" length="16384" />
+          <PacketInfo time="516873027" offset="1015271" length="16384" />
+          <PacketInfo time="516873027" offset="1031655" length="16384" />
+          <PacketInfo time="516873058" offset="1048039" length="16384" />
+          <PacketInfo time="516873058" offset="1064423" length="16384" />
+          <PacketInfo time="516873073" offset="1080807" length="16384" />
+          <PacketInfo time="516873073" offset="1097191" length="16384" />
+          <PacketInfo time="516873073" offset="1113575" length="16384" />
+          <PacketInfo time="516873089" offset="1129959" length="16384" />
+          <PacketInfo time="516873089" offset="1146343" length="16384" />
+          <PacketInfo time="516873089" offset="1162727" length="16384" />
+          <PacketInfo time="516873105" offset="1179111" length="16384" />
+          <PacketInfo time="516873105" offset="1195495" length="16384" />
+          <PacketInfo time="516873105" offset="1211879" length="16384" />
+          <PacketInfo time="516873120" offset="1228263" length="16384" />
+          <PacketInfo time="516873120" offset="1244647" length="16384" />
+          <PacketInfo time="516873120" offset="1261031" length="16384" />
+          <PacketInfo time="516873120" offset="1277415" length="16384" />
+          <PacketInfo time="516873120" offset="1293799" length="752" />
+        </TcpPackets>
+      </HTTPResponse>
+    </HTTPTask>
+  </HTTPTask>
+  <HTTPTask id="585" hostname="10.184.129.208" path="http://10.184.129.208/Platform/app-resources/i18n/zh-CN/login.json" url="http://10.184.129.208/Platform/app-resources/i18n/zh-CN/login.json" ip="127.0.0.1" port="8888" connectionId="9" origin="ExtraRes" frame="1" startDateTime="2017-07-04T14:35:32.391-07:00" startTime="516873651" endTime="516873666">
+    <HTTPRequest method="GET">
+      <HTTPHeaders>
+        <HTTPHeaderEntity name="Host" index="0">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>MTAuMTg0LjEyOS4yMDg=</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="Proxy-Connection" index="1">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>a2VlcC1hbGl2ZQ==</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="Accept" index="2">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>YXBwbGljYXRpb24vanNvbiwgdGV4dC9wbGFpbiwgKi8q</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="User-Agent" index="3">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgNi4xOyBXT1c2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzU5LjAuMzA3MS4xMDQgU2FmYXJpLzUzNy4zNg==</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="Referer" index="4">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>aHR0cDovLzEwLjE4NC4xMjkuMjA4L1BsYXRmb3JtLw==</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="Accept-Encoding" index="5">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>Z3ppcCwgZGVmbGF0ZQ==</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="Accept-Language" index="6">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>emgtQ04semg7cT0wLjg=</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPAllHeaders>
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>R0VUIGh0dHA6Ly8xMC4xODQuMTI5LjIwOC9QbGF0Zm9ybS9hcHAtcmVzb3VyY2VzL2kxOG4vemgtQ04vbG9naW4uanNvbiBIVFRQLzEuMQ0KSG9zdDogMTAuMTg0LjEyOS4yMDgNClByb3h5LUNvbm5lY3Rpb246IGtlZXAtYWxpdmUNCkFjY2VwdDogYXBwbGljYXRpb24vanNvbiwgdGV4dC9wbGFpbiwgKi8qDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoV2luZG93cyBOVCA2LjE7IFdPVzY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvNTkuMC4zMDcxLjEwNCBTYWZhcmkvNTM3LjM2DQpSZWZlcmVyOiBodHRwOi8vMTAuMTg0LjEyOS4yMDgvUGxhdGZvcm0vDQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCkFjY2VwdC1MYW5ndWFnZTogemgtQ04semg7cT0wLjgNCg0K</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPAllHeaders>
+      </HTTPHeaders>
+    </HTTPRequest>
+    <HTTPResponse>
+      <TcpPackets>
+        <PacketInfo time="516873510" offset="0" length="5687" />
+      </TcpPackets>
+    </HTTPResponse>
+  </HTTPTask>
+  <HTTPTask id="586" hostname="10.184.129.208" path="http://10.184.129.208/Platform/app-resources/images/login/bg_page_logon.jpg" url="http://10.184.129.208/Platform/app-resources/images/login/bg_page_logon.jpg" ip="127.0.0.1" port="8888" connectionId="7" origin="ExtraRes" frame="1" startDateTime="2017-07-04T14:35:32.394-07:00" startTime="516873666" endTime="516873666">
+    <HTTPRequest method="GET">
+      <HTTPHeaders>
+        <HTTPHeaderEntity name="Host" index="0">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>MTAuMTg0LjEyOS4yMDg=</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="Proxy-Connection" index="1">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>a2VlcC1hbGl2ZQ==</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="User-Agent" index="2">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgNi4xOyBXT1c2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzU5LjAuMzA3MS4xMDQgU2FmYXJpLzUzNy4zNg==</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="Accept" index="3">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>aW1hZ2Uvd2VicCxpbWFnZS9hcG5nLGltYWdlLyosKi8qO3E9MC44</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="Referer" index="4">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>aHR0cDovLzEwLjE4NC4xMjkuMjA4L1BsYXRmb3JtL2FwcC1yZXNvdXJjZXMvY3NzL2xvZ2luLmNzcw==</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="Accept-Encoding" index="5">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>Z3ppcCwgZGVmbGF0ZQ==</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="Accept-Language" index="6">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>emgtQ04semg7cT0wLjg=</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPAllHeaders>
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>R0VUIGh0dHA6Ly8xMC4xODQuMTI5LjIwOC9QbGF0Zm9ybS9hcHAtcmVzb3VyY2VzL2ltYWdlcy9sb2dpbi9iZ19wYWdlX2xvZ29uLmpwZyBIVFRQLzEuMQ0KSG9zdDogMTAuMTg0LjEyOS4yMDgNClByb3h5LUNvbm5lY3Rpb246IGtlZXAtYWxpdmUNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDYuMTsgV09XNjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS81OS4wLjMwNzEuMTA0IFNhZmFyaS81MzcuMzYNCkFjY2VwdDogaW1hZ2Uvd2VicCxpbWFnZS9hcG5nLGltYWdlLyosKi8qO3E9MC44DQpSZWZlcmVyOiBodHRwOi8vMTAuMTg0LjEyOS4yMDgvUGxhdGZvcm0vYXBwLXJlc291cmNlcy9jc3MvbG9naW4uY3NzDQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCkFjY2VwdC1MYW5ndWFnZTogemgtQ04semg7cT0wLjgNCg0K</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPAllHeaders>
+      </HTTPHeaders>
+    </HTTPRequest>
+    <HTTPResponse>
+      <TcpPackets>
+        <PacketInfo time="516872169" offset="0" length="263" />
+        <PacketInfo time="516872169" offset="263" length="16384" />
+        <PacketInfo time="516872184" offset="16647" length="16384" />
+        <PacketInfo time="516872200" offset="33031" length="16384" />
+        <PacketInfo time="516872200" offset="49415" length="16384" />
+        <PacketInfo time="516872215" offset="65799" length="16384" />
+        <PacketInfo time="516872215" offset="82183" length="16384" />
+        <PacketInfo time="516872231" offset="98567" length="16384" />
+        <PacketInfo time="516872247" offset="114951" length="16384" />
+        <PacketInfo time="516872247" offset="131335" length="16384" />
+        <PacketInfo time="516872262" offset="147719" length="16384" />
+        <PacketInfo time="516872278" offset="164103" length="16384" />
+        <PacketInfo time="516872293" offset="180487" length="16384" />
+        <PacketInfo time="516872293" offset="196871" length="16384" />
+        <PacketInfo time="516872309" offset="213255" length="16384" />
+        <PacketInfo time="516872309" offset="229639" length="16384" />
+        <PacketInfo time="516872325" offset="246023" length="16384" />
+        <PacketInfo time="516872340" offset="262407" length="16384" />
+        <PacketInfo time="516872340" offset="278791" length="16384" />
+        <PacketInfo time="516872356" offset="295175" length="16384" />
+        <PacketInfo time="516872371" offset="311559" length="16384" />
+        <PacketInfo time="516872387" offset="327943" length="16384" />
+        <PacketInfo time="516872403" offset="344327" length="16384" />
+        <PacketInfo time="516872418" offset="360711" length="16384" />
+        <PacketInfo time="516872418" offset="377095" length="16384" />
+        <PacketInfo time="516872449" offset="393479" length="16384" />
+        <PacketInfo time="516872449" offset="409863" length="16384" />
+        <PacketInfo time="516872465" offset="426247" length="16384" />
+        <PacketInfo time="516872481" offset="442631" length="16384" />
+        <PacketInfo time="516872496" offset="459015" length="16384" />
+        <PacketInfo time="516872512" offset="475399" length="16384" />
+        <PacketInfo time="516872527" offset="491783" length="16384" />
+        <PacketInfo time="516872527" offset="508167" length="16384" />
+        <PacketInfo time="516872543" offset="524551" length="16384" />
+        <PacketInfo time="516872559" offset="540935" length="16384" />
+        <PacketInfo time="516872574" offset="557319" length="16384" />
+        <PacketInfo time="516872590" offset="573703" length="16384" />
+        <PacketInfo time="516872590" offset="590087" length="16384" />
+        <PacketInfo time="516872605" offset="606471" length="16384" />
+        <PacketInfo time="516872621" offset="622855" length="16384" />
+        <PacketInfo time="516872637" offset="639239" length="16384" />
+        <PacketInfo time="516872652" offset="655623" length="16384" />
+        <PacketInfo time="516872668" offset="672007" length="16384" />
+        <PacketInfo time="516872683" offset="688391" length="16384" />
+        <PacketInfo time="516872683" offset="704775" length="16384" />
+        <PacketInfo time="516872699" offset="721159" length="16384" />
+        <PacketInfo time="516872746" offset="737543" length="16384" />
+        <PacketInfo time="516872761" offset="753927" length="16384" />
+        <PacketInfo time="516872777" offset="770311" length="16384" />
+        <PacketInfo time="516872793" offset="786695" length="16384" />
+        <PacketInfo time="516872808" offset="803079" length="16384" />
+        <PacketInfo time="516872808" offset="819463" length="16384" />
+        <PacketInfo time="516872839" offset="835847" length="16384" />
+        <PacketInfo time="516872855" offset="852231" length="16384" />
+        <PacketInfo time="516872871" offset="868615" length="16384" />
+        <PacketInfo time="516872886" offset="884999" length="16384" />
+        <PacketInfo time="516872902" offset="901383" length="16384" />
+        <PacketInfo time="516872917" offset="917767" length="16384" />
+        <PacketInfo time="516872933" offset="934151" length="16384" />
+        <PacketInfo time="516872949" offset="950535" length="16384" />
+        <PacketInfo time="516872980" offset="966919" length="16384" />
+        <PacketInfo time="516872980" offset="983303" length="16384" />
+        <PacketInfo time="516873027" offset="999687" length="16384" />
+        <PacketInfo time="516873027" offset="1016071" length="16384" />
+        <PacketInfo time="516873058" offset="1032455" length="16384" />
+        <PacketInfo time="516873058" offset="1048839" length="16384" />
+        <PacketInfo time="516873073" offset="1065223" length="16384" />
+        <PacketInfo time="516873073" offset="1081607" length="16384" />
+        <PacketInfo time="516873073" offset="1097991" length="16384" />
+        <PacketInfo time="516873089" offset="1114375" length="16384" />
+        <PacketInfo time="516873089" offset="1130759" length="16384" />
+        <PacketInfo time="516873089" offset="1147143" length="16384" />
+        <PacketInfo time="516873105" offset="1163527" length="16384" />
+        <PacketInfo time="516873105" offset="1179911" length="7911" />
+      </TcpPackets>
+    </HTTPResponse>
+  </HTTPTask>
+  <HTTPTask id="595" hostname="10.184.129.208" path="http://10.184.129.208/Platform/fonts/icomoon.ttf?my8ecs" url="http://10.184.129.208/Platform/fonts/icomoon.ttf?my8ecs" ip="127.0.0.1" port="8888" connectionId="8" origin="ExtraRes" frame="1" startDateTime="2017-07-04T14:35:32.397-07:00" startTime="516873666" endTime="516874821">
+    <QueryString>
+      <HTTPDataSet>
+        <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+          <ActualData>bXk4ZWNz</ActualData>
+        </HTTPData>
+      </HTTPDataSet>
+      <IsExternalData>false</IsExternalData>
+    </QueryString>
+    <HTTPSplittedQueryStrings>
+      <HTTPHeaderEntity name="" index="0">
+        <HTTPDataSet>
+          <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+            <ActualData>bXk4ZWNz</ActualData>
+          </HTTPData>
+        </HTTPDataSet>
+        <IsExternalData>false</IsExternalData>
+      </HTTPHeaderEntity>
+    </HTTPSplittedQueryStrings>
+    <HTTPRequest method="GET">
+      <HTTPHeaders>
+        <HTTPHeaderEntity name="Host" index="0">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>MTAuMTg0LjEyOS4yMDg=</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="Proxy-Connection" index="1">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>a2VlcC1hbGl2ZQ==</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="User-Agent" index="2">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgNi4xOyBXT1c2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzU5LjAuMzA3MS4xMDQgU2FmYXJpLzUzNy4zNg==</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="Origin" index="3">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>aHR0cDovLzEwLjE4NC4xMjkuMjA4</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="Accept" index="4">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>Ki8q</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="Referer" index="5">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>aHR0cDovLzEwLjE4NC4xMjkuMjA4L1BsYXRmb3JtL0NvbnRlbnQvY2FyZXN0cmVhbS5jc3M=</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="Accept-Encoding" index="6">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>Z3ppcCwgZGVmbGF0ZQ==</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPHeaderEntity name="Accept-Language" index="7">
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>emgtQ04semg7cT0wLjg=</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPHeaderEntity>
+        <HTTPAllHeaders>
+          <HTTPDataSet>
+            <HTTPData dataFilePath="" dfeDataType="Raw" sectionDataType="1">
+              <ActualData>R0VUIGh0dHA6Ly8xMC4xODQuMTI5LjIwOC9QbGF0Zm9ybS9mb250cy9pY29tb29uLnR0Zj9teThlY3MgSFRUUC8xLjENCkhvc3Q6IDEwLjE4NC4xMjkuMjA4DQpQcm94eS1Db25uZWN0aW9uOiBrZWVwLWFsaXZlDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoV2luZG93cyBOVCA2LjE7IFdPVzY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvNTkuMC4zMDcxLjEwNCBTYWZhcmkvNTM3LjM2DQpPcmlnaW46IGh0dHA6Ly8xMC4xODQuMTI5LjIwOA0KQWNjZXB0OiAqLyoNClJlZmVyZXI6IGh0dHA6Ly8xMC4xODQuMTI5LjIwOC9QbGF0Zm9ybS9Db250ZW50L2NhcmVzdHJlYW0uY3NzDQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCkFjY2VwdC1MYW5ndWFnZTogemgtQ04semg7cT0wLjgNCg0K</ActualData>
+            </HTTPData>
+          </HTTPDataSet>
+          <IsExternalData>false</IsExternalData>
+        </HTTPAllHeaders>
+      </HTTPHeaders>
+    </HTTPRequest>
+    <HTTPResponse>
+      <TcpPackets>
+        <PacketInfo time="516873042" offset="0" length="10047" />
+      </TcpPackets>
+    </HTTPResponse>
+  </HTTPTask>
+</HTTPSnapshot>

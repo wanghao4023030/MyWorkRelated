@@ -1,0 +1,12 @@
+[t51]
+FileName1=t51_operate-columns-template.html
+URL1=http://10.184.129.208/Platform/app/workarea/worklist/views/template/operate-columns-template.html
+Total=2
+ContentType=
+SnapshotXmlFile=snapshot_51.xml
+RequestHeaderFile=t51_RequestHeader.txt
+RequestBodyFile=NONE
+FileName2=t51_ui-grid.html
+URL2=http://10.184.129.208/Platform/Content/ui-grid.woff
+[ProtocolInfo]
+ProtocolId=QTWeb

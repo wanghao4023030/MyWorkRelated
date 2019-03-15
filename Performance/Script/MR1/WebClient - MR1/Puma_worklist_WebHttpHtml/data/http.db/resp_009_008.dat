@@ -1,0 +1,14 @@
+﻿{
+    "UserLogin": "用户登录",
+    "ChangePassword": "更改密码",
+    "RemindMe": "记住我",
+    "Login": "登录",
+     "Save": "保存",
+    "Cancel": "取消",
+    "UserName": "用户名",
+    "Password": "密码",
+    "OldPassword": "旧密码",
+    "NewPassword": "新密码",
+    "ConfrimNewPassword": "确认密码",
+    "UpdatePasswordSuccess": "更新密码成功，请重新登录！"
+}

@@ -1,0 +1,10 @@
+[t33]
+FileName1=t33_getUnmatchReports.html
+URL1=http://10.184.129.208/webapi/api/reconciliation/getUnmatchReports?days=-1
+Total=1
+ContentType=
+SnapshotXmlFile=snapshot_33.xml
+RequestHeaderFile=t33_RequestHeader.txt
+RequestBodyFile=NONE
+[ProtocolInfo]
+ProtocolId=QTWeb

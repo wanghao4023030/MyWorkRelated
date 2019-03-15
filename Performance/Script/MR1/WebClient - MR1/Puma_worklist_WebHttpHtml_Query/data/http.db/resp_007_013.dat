@@ -1,0 +1,54 @@
+﻿
+var worklistModule = angular.module("workarea.worklist", ['ui.bootstrap', 'ui.bootstrap.datepicker', 'pumaSwitch', 'app.common', 'ui.grid', 'ui.grid.expandable', 'ui.grid.pagination', 'ui.grid.resizeColumns'])
+    .run(['$log', function ($log) {
+        $log.debug('workarea.worklist.run()...');
+    }])
+    .config(['$controllerProvider', '$compileProvider', '$filterProvider', '$provide', '$stateProvider',
+        function ($controllerProvider, $compileProvider, $filterProvider, $provide, $stateProvider) {
+            'use strict';
+            // this is required to add controller/directive/filter/service after angular bootstrap
+            worklistModule.controller = $controllerProvider.register;
+            worklistModule.directive = $compileProvider.directive;
+            worklistModule.filter = $filterProvider.register;
+            worklistModule.factory = $provide.factory;
+            worklistModule.service = $provide.service;
+        }
+    ]);
+
+var terminalMonitorModule = angular.module("workarea.terminalMonitor", ['ui.bootstrap', 'ui.bootstrap.datepicker', 'ngAnimate', 'cgBusy'])
+    .run(['$log', function ($log) {
+        $log.debug('workarea.statusmonitor.run()...');
+    }])
+    .config(['$controllerProvider', '$compileProvider', '$filterProvider', '$provide', '$stateProvider',
+        function ($controllerProvider, $compileProvider, $filterProvider, $provide, $stateProvider) {
+            'use strict';
+            terminalMonitorModule.controller = $controllerProvider.register;
+            terminalMonitorModule.directive = $compileProvider.directive;
+            terminalMonitorModule.filter = $filterProvider.register;
+            terminalMonitorModule.factory = $provide.factory;
+            terminalMonitorModule.service = $provide.service;
+        }
+    ]);
+
+var reconciliationModule = angular.module("workarea.reconciliation", [])
+    .run(['$log', function ($log) {
+        $log.debug("workarea.reconciliation.run()...")
+    }]);
+
+var dicomViewerModule = angular.module("workarea.dicomViewer", [])
+    .run(['$log', function ($log) {
+        $log.debug("workarea.dicomViewer.run()...")
+    }]);
+
+
+var statisticsModule = angular.module("workarea.statistics", ['chart.js'])
+    .run(['$log', function ($log) {
+        $log.debug("workarea.statistics.run()...")
+    }]);
+
+
+var adminSettingModule = angular.module("workarea.adminSetting", ['ui.bootstrap', 'ui.bootstrap.datepicker', 'ui.grid', 'ui.grid.pagination'])
+    .run(['$log', function ($log) {
+        $log.debug("workarea.adminSetting.run()...")
+    }]);
+

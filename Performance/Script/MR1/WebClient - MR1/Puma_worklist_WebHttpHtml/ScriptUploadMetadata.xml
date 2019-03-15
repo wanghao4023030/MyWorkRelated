@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VugenScriptMetadata>
+  <ScriptName>Puma_worklist_WebHttpHtml</ScriptName>
+  <Protocol>Web - HTTP/HTML</Protocol>
+  <ActionFiles>
+    <FileEntry Name="vuser_init.c" Filter="2" />
+    <FileEntry Name="Action.c" Filter="2" />
+    <FileEntry Name="vuser_end.c" Filter="2" />
+  </ActionFiles>
+  <GeneralFiles>
+    <FileEntry Name="Puma_worklist_WebHttpHtml.usr" Filter="4" />
+    <FileEntry Name="default.cfg" Filter="4" />
+    <FileEntry Name="default.usp" Filter="4" />
+    <FileEntry Name="Puma_worklist_WebHttpHtml.prm" Filter="2" />
+    <FileEntry Name="globals.h" Filter="2" />
+    <FileEntry Name="UserName.dat" Filter="2" />
+    <FileEntry Name="ReportInstanceUID.dat" Filter="2" />
+    <FileEntry Name="Query_filminfo.dat" Filter="2" />
+    <FileEntry Name="Patient_PID.dat" Filter="2" />
+    <FileEntry Name="UnReconReport.dat" Filter="2" />
+    <FileEntry Name="Query_reportinfo.dat" Filter="2" />
+    <FileEntry Name="RandomDate.dat" Filter="2" />
+    <FileEntry Name="HolidingTimeACC.dat" Filter="2" />
+    <FileEntry Name="PatientName.dat" Filter="2" />
+    <FileEntry Name="FilmStatusChangedACC.dat" Filter="2" />
+    <FileEntry Name="Patient_ACCN.dat" Filter="2" />
+    <FileEntry Name="SetprintMode_ACC.dat" Filter="2" />
+    <FileEntry Name="ScriptUploadMetadata.xml" Filter="2" />
+    <FileEntry Name="Bookmarks.xml" Filter="2" />
+    <FileEntry Name="Breakpoints.xml" Filter="2" />
+    <FileEntry Name="CompilerLogMetadata.xml" Filter="2" />
+    <FileEntry Name="ReplaySummaryReport.xml" Filter="2" />
+    <FileEntry Name="UserTasks.xml" Filter="2" />
+    <FileEntry Name="reportStatus.dat" Filter="2" />
+    <FileEntry Name="combined_Puma_worklist_WebHttpHtml.c" Filter="2" />
+    <FileEntry Name="pre_cci.c" Filter="2" />
+    <FileEntry Name="10814939344.idx" Filter="1" />
+    <FileEntry Name="13552301044.idx" Filter="1" />
+    <FileEntry Name="13968540244.idx" Filter="1" />
+    <FileEntry Name="14355698044.idx" Filter="1" />
+    <FileEntry Name="15132059444.idx" Filter="1" />
+    <FileEntry Name="15409533744.idx" Filter="1" />
+    <FileEntry Name="15732165344.idx" Filter="1" />
+    <FileEntry Name="16030094644.idx" Filter="1" />
+    <FileEntry Name="16628059044.idx" Filter="1" />
+    <FileEntry Name="17307294444.idx" Filter="1" />
+    <FileEntry Name="2077781344.idx" Filter="1" />
+    <FileEntry Name="21047350544.idx" Filter="1" />
+    <FileEntry Name="2105247044.idx" Filter="1" />
+    <FileEntry Name="23264800744.idx" Filter="1" />
+    <FileEntry Name="2331552944.idx" Filter="1" />
+    <FileEntry Name="25157174444.idx" Filter="1" />
+    <FileEntry Name="26577634044.idx" Filter="1" />
+    <FileEntry Name="3118005244.idx" Filter="1" />
+    <FileEntry Name="412449044.idx" Filter="1" />
+    <FileEntry Name="412449044_3iD.943.idx" Filter="1" />
+    <FileEntry Name="412449044_blP.821.idx" Filter="1" />
+    <FileEntry Name="412449044_CRR.147.idx" Filter="1" />
+    <FileEntry Name="412449044_CSU.31.idx" Filter="1" />
+    <FileEntry Name="412449044_uQE.781.idx" Filter="1" />
+    <FileEntry Name="412449044_xOj.561.idx" Filter="1" />
+    <FileEntry Name="5006916144.idx" Filter="1" />
+    <FileEntry Name="5563684044.idx" Filter="1" />
+    <FileEntry Name="5563684044_71H.562.idx" Filter="1" />
+    <FileEntry Name="5563684044_iW0.822.idx" Filter="1" />
+    <FileEntry Name="5597269444.idx" Filter="1" />
+    <FileEntry Name="566326644.idx" Filter="1" />
+    <FileEntry Name="6703845744.idx" Filter="1" />
+    <FileEntry Name="8566585944.idx" Filter="1" />
+    <FileEntry Name="9551941744.idx" Filter="1" />
+    <FileEntry Name="logfile.log" Filter="1" />
+    <FileEntry Name="lrw_custom_body.h" Filter="1" />
+    <FileEntry Name="mdrv.log" Filter="1" />
+    <FileEntry Name="mdrv31C.573.log" Filter="1" />
+    <FileEntry Name="mdrv474.757.log" Filter="1" />
+    <FileEntry Name="mdrv6eq.315.log" Filter="1" />
+    <FileEntry Name="mdrvJ73.465.log" Filter="1" />
+    <FileEntry Name="mdrvNqU.53.log" Filter="1" />
+    <FileEntry Name="mdrvWu1.231.log" Filter="1" />
+    <FileEntry Name="mdrv_cmd.txt" Filter="1" />
+    <FileEntry Name="options.txt" Filter="1" />
+    <FileEntry Name="output.bak" Filter="1" />
+    <FileEntry Name="output.txt" Filter="1" />
+    <FileEntry Name="Puma_worklist_WebHttpHtml.c.pickle" Filter="1" />
+    <FileEntry Name="Puma_worklist_WebHttpHtml.ci" Filter="1" />
+    <FileEntry Name="Puma_worklist_WebHttpHtml.prm.bak" Filter="1" />
+    <FileEntry Name="Puma_worklist_WebHttpHtml.sdf" Filter="1" />
+    <FileEntry Name="replay.har" Filter="1" />
+    <FileEntry Name="shunra.shunra" Filter="1" />
+    <FileEntry Name="ThumbnailsCache.tmp" Filter="1" />
+    <FileEntry Name="TransactionsData.db" Filter="1" />
+    <FileEntry Name="data\" Filter="1" />
+    <FileEntry Name="res\" Filter="1" />
+    <FileEntry Name="result1\" Filter="1" />
+  </GeneralFiles>
+</VugenScriptMetadata>

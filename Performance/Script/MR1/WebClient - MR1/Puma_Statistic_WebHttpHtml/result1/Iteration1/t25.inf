@@ -1,0 +1,13 @@
+[t25]
+SnapshotXmlFile=snapshot_25.xml
+ContentType=DummyContentType
+StepName=Custom Request: Film_By_ModalityName
+Total=1
+FileName1=t25.UNK
+RequestHeaderFile=t25_RequestHeader.txt
+ResponseHeaderFile=t25_ResponseHeader.txt
+RawStepEndTime=1528191527215
+RawStepName=Film_By_ModalityName
+RequestBodyFile=t25_RequestBody.txt
+RawStepStartTime=1528191524976
+URL1=file:

@@ -1,0 +1,11 @@
+﻿worklistModule.controller('worklistItemSecondLevelController', ['$scope', '$log', function ($scope, $log) {
+    $log.debug("worklistItemSecondLevelController.ctor()...");
+
+    // initialzation
+    (function initialize() {
+        $log.debug('worklistItemSecondLevelController.initialize()...');
+
+
+    }());
+
+}])

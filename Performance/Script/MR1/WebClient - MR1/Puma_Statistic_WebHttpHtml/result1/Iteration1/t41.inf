@@ -1,0 +1,13 @@
+[t41]
+SnapshotXmlFile=snapshot_41.xml
+ContentType=DummyContentType
+StepName=Custom Request: Report_By_CentralPrint
+Total=1
+FileName1=t41.UNK
+RequestHeaderFile=t41_RequestHeader.txt
+ResponseHeaderFile=t41_ResponseHeader.txt
+RawStepEndTime=1528192507584
+RawStepName=Report_By_CentralPrint
+RequestBodyFile=t41_RequestBody.txt
+RawStepStartTime=1528192502289
+URL1=file:

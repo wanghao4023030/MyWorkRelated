@@ -1,0 +1,128 @@
+﻿// worklist service proxy
+webservices.factory('worklistService', ['$http', 'apiConfig', function ($http, apiConfig) {
+    'use strict';
+
+    return {
+        searchCriteria: function (index, size, modalities, departments) {
+            return {
+                patientName: null,
+                patientID: null,
+                accessionNumber: null,
+                createDateRange: {
+                    startTime: new Date(),
+                    endTime: new Date()
+                },
+                patientSex: '',
+                reportStatus: '',
+                reportPrintStatus: '',
+                filmPrintStatus: '',
+                printMode: '',
+                modalityType: modalities,
+                patientType: '',
+                department: departments,
+                completeStatus: null,
+                pagination: {
+                    pageIndex: index,
+                    pageSize: size
+                },
+                shortcutName: '',
+                shortcutNameCache: '',
+            };
+        },
+        cloneShortcut: function (criteria) {
+            return {
+                patientName: criteria.patientName,
+                patientID: criteria.patientID,
+                accessionNumber: criteria.accessionNumber,
+                createDateRange: {
+                    startTime: criteria.createDateRange.startTime,
+                    endTime: criteria.createDateRange.endTime
+                },
+                patientSex: criteria.patientSex,
+                reportStatus: criteria.reportStatus,
+                reportPrintStatus: criteria.reportPrintStatus,
+                filmPrintStatus: criteria.filmPrintStatus,
+                printMode: criteria.printMode,
+                modalityType: criteria.modalityType,
+                patientType: criteria.patientType,
+                department: criteria.department,
+                completeStatus: criteria.completeStatus,
+                shortcutName: criteria.shortcutName,
+            };
+        },
+        copyShortcut: function (type, criteria) {
+            type.patientName = criteria.patientName;
+            type.patientID = criteria.patientID;
+            type.accessionNumber = criteria.accessionNumber;
+            type.createDateRange = criteria.createDateRange;
+            type.patientSex = criteria.patientSex;
+            type.reportStatus = criteria.reportStatus;
+            type.reportPrintStatus = criteria.reportPrintStatus;
+            type.filmPrintStatus = criteria.filmPrintStatus;
+            type.printMode = criteria.printMode;
+            type.modalityType = criteria.modalityType;
+            type.patientType = criteria.patientType;
+            type.department = criteria.department;
+            type.completeStatus = criteria.completeStatus;
+        },
+        getModality: function () {
+            return $http.get('/api/modality/modalityTypes', apiConfig.create());
+        },
+        getDepartments: function(data) {
+            return $http.post('/api/department/departmentsByIds', data, apiConfig.create());
+        },
+        getModalityPageInfo: function (data) {
+            return $http.post('/api/modalityType/modalityTypePageInfo', data, apiConfig.create());
+        },
+        getTerminal: function () {
+            return $http.get('/api/terminal/allTerminals', apiConfig.create());
+        },
+        getWorklistColumns: function () {
+            return $http.get('/api/worklist/worklistcolumns', apiConfig.create());
+        },
+        advancedSearch: function (criteria) {
+            return $http.post('/api/worklist/searchWorklist', criteria, apiConfig.create());
+        },
+        updateAccessionStatus: function (data) {
+            return $http.post('/api/worklist/UpdateStatusByAccessionNumber', JSON.stringify(data), apiConfig.create());
+        },
+        updateStatusByStudyInstanceUID: function (data) {
+            return $http.post('/api/worklist/UpdateStatusByStudyInstanceUID', JSON.stringify(data), apiConfig.create());
+        },
+        getFilmInfos: function (accessionNumber) {
+            return $http.get('/api/worklist/filmInfo', apiConfig.create({ 'accessionNumber': accessionNumber }));
+        },
+        getReportInfos: function (accessionNumber) {
+            return $http.get('/api/worklist/reportInfo', apiConfig.create({ 'accessionNumber': accessionNumber }));
+        },
+        getTerminalStatus: function (terminalId) {
+            return $http.get('/api/worklist/terminalStatus', apiConfig.create({ 'terminalId': terminalId }));
+        },
+        getShortcuts: function (userName, roleName) {
+            return $http.get('/api/worklist/shortcuts', apiConfig.create({'userName': userName, 'roleName': roleName}));
+        },
+        saveShortcut: function (data) {
+            return $http.post('/api/worklist/saveShortcut', JSON.stringify(data), apiConfig.create());
+        },
+        deleteShortcut: function (data) {
+            return $http.post('/api/worklist/deleteShortcut/', JSON.stringify(data), apiConfig.create());
+        },
+        centralPrint: function (data) {
+            return $http.post('/api/worklist/centralPrint/', JSON.stringify(data), apiConfig.create());
+        },
+        getEstimatePrintTime: function (data) {
+            return $http.post('/api/worklist/printEstimateTime/', JSON.stringify(data), apiConfig.create());
+        },
+        getPrintStatus: function (data) {
+            return $http.post('/api/worklist/printStatus/', JSON.stringify(data), apiConfig.create());
+        },
+        getFilmImage: function (instanceId) {
+            return $http.get('/api/worklist/filmImage/', apiConfig.create({ 'instanceId': instanceId }));
+        },
+        getIncompleteTaskEnabled: function () {
+            return $http.get('/api/systemConfiguration/incompleteTaskEnabled', apiConfig.create());
+        }
+    };
+
+}]);
+

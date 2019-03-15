@@ -1,0 +1,273 @@
+﻿// enum for object model
+commonModule.factory('enums', [function () {
+    'use strict';
+
+    return {
+        dispalyColumn: {
+            patientID: 'PatientID',
+            patientName: 'PatientName',
+            patientSex: 'PatientSex',
+            accessionNumber: 'AccessionNumber',
+            imageCount: 'ImageCount',
+            filmPrintStatus: 'FilmPrintStatus',
+            filmPrintTime: 'FilmPrintTime',
+            filmPrintCount: 'FilmPrintCount',
+            reportPrintStatus: 'ReportPrintStatus',
+            reportPrintTime: 'ReportPrintTime',
+            reportPrintCount: 'ReportPrintCount',
+            reportCount: 'ReportCount',
+            reportStatus: 'ReportStatus',
+            modality: 'Modality',
+            patientType: 'PatientType',
+            studyDate: 'StudyDate',
+            studyTime: 'StudyTime',
+            //PrintMode: 'PrintMode',
+            //HoldFlag: 'HoldFlag',
+            deleteFilm: 'DeleteFilm',
+            deleteReport: 'DeleteReport',
+            reconciliation: 'Reconciliation'
+        },
+        operateColumn: {
+            PrintMode: 'PrintMode',
+            HoldFlag: 'HoldFlag',
+        },
+        searchType: {
+            all: 0,
+            patientName: 1,
+            patientNo: 2,
+            accNo: 3
+        },
+        Gender: {
+            Unspecified: 0,
+            Male: 1,
+            Female: 2
+        },
+        CompleteStatus: [{
+            value: 0,
+            name: 'Complete'
+        },
+        {
+            value: 1,
+            name: 'Incomplete'
+        },
+        {
+            value: 2,
+            name: 'Pending'
+        }],
+        PageFormat: [{
+            name: '1UP',
+            id: 1
+        },
+        {
+            name: '2UP',
+            id: 2
+        },
+        {
+            name: '3UP',
+            id: 4
+        },
+        {
+            name: '4UP',
+            id: 8
+        },
+        {
+            name: '6UP',
+            id: 16
+        },
+        {
+            name: '8UP',
+            id: 32
+        },
+        {
+            name: '9UP',
+            id: 64
+        },
+        {
+            name: '12UP',
+            id: 128
+        },
+        {
+            name: '15UP',
+            id: 256
+        },
+        {
+            name: '16UP',
+            id: 512
+        },
+        {
+            name: '20UP',
+            id: 1024
+        },
+        {
+            name: '24UP',
+            id: 2048
+        },
+        {
+            name: '25UP',
+            id: 4096
+        },
+        {
+            name: '30UP',
+            id: 8192
+        },
+        {
+            name: '35UP',
+            id: 16384
+        },
+        {
+            name: '36UP',
+            id: 32768
+        }],
+        MediaSize: [{
+            name: '8 IN X 10 IN',
+            id: 1
+        },
+        {
+            name: '8.5 IN X 11 IN',
+            id: 2
+        },
+        {
+            name: '10 IN X 12 IN',
+            id: 4
+        },
+        {
+            name: '10 IN X 14 IN',
+            id: 8
+        },
+        {
+            name: '11 IN X 14 IN',
+            id: 16
+        },
+        {
+            name: '11 IN X 17 IN',
+            id: 32
+        },
+        {
+            name: '14 IN X 14 IN',
+            id: 64
+        },
+        {
+            name: '14 IN X 17 IN',
+            id: 128
+        },
+        {
+            name: '24 CM X 24 CM',
+            id: 256
+        },
+        {
+            name: '24 CM X 30 CM',
+            id: 512
+        },
+        {
+            name: 'A4',
+            id: 1024
+        },
+        {
+            name: 'A3',
+            id: 2048
+        }],
+
+        AlertType: {
+            success: 'success',
+            warning: 'warning',
+            error: 'danger'
+        },
+
+        DeleteConfirmMsg: {
+            common: 'Are you sure to delete?',
+            lastWarning: '<h4 style="color: red">This is the last item!</h4><br/>Are you sure to delete?'
+        },
+
+        ReportStatus: [{
+            value: 0,
+            name: '未报告'
+        },
+        {
+            value: 1,
+            name: '已报告'
+        },
+        {
+            value: 2,
+            name: '已审核'
+        }],
+        checkState:
+        {
+            success: 0,
+            emptyUserName: 1,
+            emptyPassword: 2,
+            userNameNotExist: 3,
+            wrongPassword: 4,
+            firstLogin: 5,
+            passwordWillExpire: 6,
+            passwordExpired: 7,
+            invalid: 8,
+            isLocked: 9,
+            permissionDeny: 10,
+            sameUserLogin: 11,
+            cannotGetLicenseData: 12,
+            licenseExpired: 13,
+            unKnown: 14,
+            wrongOldPassword: 15,
+            invalidNewPwd: 16
+        },
+        StatisticsType: {
+            FilmPrintCountStatistics: {
+                Title: '胶片打印量统计',
+                ByModalityType: "按设备类型统计",
+                ByModalityName: "按设备名称统计",
+                ByTerminal: "按终端统计",
+                ByFilmSize: "按胶片尺寸统计"
+            },
+            PaperPrintCountStatistics: {
+                Title: '纸张打印量统计',
+                ByModalityType: "按设备类型统计",
+                ByTerminal: "按终端统计",
+                ByTypeSize: "按纸张类型尺寸统计"
+            },
+            OcrRateStatistics: {
+                Title: "OCR识别率统计"
+                //TODO
+            },
+            StorgeStatistics: '系统使用量统计',
+            CustomizeStatistics: "自定义统计"
+        },
+
+        shortcutTimes: [
+                {
+                    id: 1,
+                    name: '今天'
+                }, {
+                    id: 2,
+                    name: '本周'
+                }, {
+                    id: 3,
+                    name: '本月'
+                }, {
+                    id: 4,
+                    name: '上个月'
+                }, {
+                    id: 5,
+                    name: '近三个月'
+                }
+        ],
+
+        roles: {
+            administrator: 'Administrator',
+            radiologist: 'Radiologist',
+            technician: 'Technician',
+            receptionist: 'Receptionist',
+        },
+        genders: [{
+            value: 'M',
+            name: '男'
+        },
+        {
+            value: 'F',
+            name: '女'
+        },
+        {
+            value: 'O',
+            name: '其他'
+        }]
+    }
+}]);

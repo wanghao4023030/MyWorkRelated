@@ -1,0 +1,10 @@
+[t20]
+FileName1=t20_reconciliation-list.html
+URL1=http://10.184.129.208/Platform/app/workarea/reconciliation/views/reconciliation-list.html
+Total=1
+ContentType=
+SnapshotXmlFile=snapshot_20.xml
+RequestHeaderFile=t20_RequestHeader.txt
+RequestBodyFile=NONE
+[ProtocolInfo]
+ProtocolId=QTWeb

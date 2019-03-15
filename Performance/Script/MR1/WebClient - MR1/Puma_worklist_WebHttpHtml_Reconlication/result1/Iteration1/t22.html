@@ -1,0 +1,191 @@
+﻿<md-content style="display:inherit;overflow:visible;">
+    <div class="content-container">
+        <nav id="mainNavBar" class="navbar navbar-default navbar-static-top navbar-width-1280" role="navigation" style="z-index:2;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#searchResult">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--<div class="navbar-brand">
+
+                    </div>-->
+                </div>
+                <div class="collapse navbar-collapse registrations-op-navbar" id="searchResult">
+                    <div class="row">
+                        <ul class="nav navbar-nav" style="margin-right:auto;">
+                            <li class="divider-vertical" title="展开左边栏">
+                                <span class="icon-ico_sidepanel_expand icon-fontsize" ng-click="toggleLeft()">
+                                    <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span>
+                                </span>
+
+                            </li>
+                            <li title="输入患者编号"><input type="text" class="form-control" placeholder="{{'PatientID' | translate}}" ng-model="model.patientID" vt-enter="searchWorklist()" /></li>
+                            <li title="输入患者姓名"><input type="text" class="form-control" placeholder="{{'PatientName' | translate}}" ng-model="model.patientName" vt-enter="searchWorklist()" /></li>
+                            <li title="输入检查编号"><input type="text" class="form-control" placeholder="{{'AccessionNumber' | translate}}" ng-model="model.accessionNumber" vt-enter="searchWorklist()" /></li>
+                            <li title="更多搜索条件">
+                                <span class="icon-ico_moreoption icon-fontsize" ng-class="{'false': 'collapsed'}[isMoreExpanded]" ng-click="resetGridHeight()" data-toggle="collapse" data-target="#moreoption" aria-controls="moreoption">
+                                    <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span>
+                                </span>
+                            </li>
+                            <li title="搜索" class="divider-vertical" style="padding-right:4px;"><button type="button" class="btn btn-warning form-control icon-ico_search" ng-click="searchWorklist()" vt-enter="searchWorklist()" ng-disabled="isInitializing"></button></li>
+                            <li title="选择打印机">
+                                <div class="dropdown" style="display:inline-block">
+                                    <select class="form-control" ng-model="selectedPrinter" ng-options="t for t in terminals">
+                                        <option value="" class="dropdown-menu-item"> {{ 'SelectPrinter' | translate }}</option>
+                                    </select>
+                                </div>
+                            </li>
+
+
+                            <li title="打印" class="divider-vertical">
+                                <span class="icon-ico_print icon-fontsize" ng-click="hasCentralPrintPermission && centralPrint()" ng-class="{disabled_permission:!hasCentralPrintPermission}">
+                                    <span class="path1"></span><span class="path2"></span>
+                                </span>
+                            </li>
+
+                            <li title="重新合成">
+                                <span class="icon-ico_recombine  icon-fontsize" ng-disabled="true">
+                                    <span class="path1"></span><span class="path2"></span><span class="path3"></span>
+                                </span>
+                            </li>
+                            <li title="回收站" ng-if="hasRecyclePermission">
+                                <span class="icon-ico_recycled_bin icon-fontsize" ng-click="hasRecyclePermission && recycle()">
+                                    <span class="path1"></span><span class="path2"></span>
+                                </span>
+                            </li>
+                            <li class="span_align" title="自动刷新"><span class="nav-button"><input type="checkbox" class="btn-sm" ng-model="isAutoRefresh" ng-change="setAutoRefresh()" /><span>{{ 'AutoRefresh' | translate }}</span></span></li>
+
+                        </ul>
+                    </div>
+                    <div id="moreoption" class="row form-inline collapse" aria-expanded="{{isMoreExpanded}}" ng-class="{'true': 'in'}[isMoreExpanded]">
+                        <ul class="nav navbar-nav  worklist-navbar-nav" style="margin-right:auto;">
+                            <li class="divider-vertical" title="清除搜索条件">
+                                <div class="icon-btn" ng-click="clearSelections()" style="margin:11px 5px;">
+                                    <span class="icon-ico_clear icon_font_size"></span>
+                                    <span>{{'Clear' | translate}}</span>
+                                </div>
+                            </li>
+
+                            <li class="span_align"><span>{{ 'ExamDate' | translate }}</span></li>
+                            <li title="输入起始检查日期">
+                                <p class="input-group">
+                                    <input type="text" class="form-control" uib-datepicker-popup="{{dateFormat}}" placeholder="{{'StartDate' | translate}}" datepicker-options="startDateOptions" show-button-bar="false"
+                                           is-open="popupStart.opened" ng-change="setEndDateOption()" ng-model="model.createDateRange.startTime" readonly="readonly">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="openDateStart()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="span_align"><span>{{'To' | translate}}</span></li>
+                            <li title="输入结束检查日期">
+                                <p class="input-group">
+                                    <input type="text" class="form-control" uib-datepicker-popup="{{dateFormat}}" placeholder="{{'EndDate' | translate}}" datepicker-options="endDateOptions" show-button-bar="false"
+                                           is-open="popupEnd.opened" ng-change="setStartDateOption()" ng-model="model.createDateRange.endTime" readonly="readonly">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="openDateEnd()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </p>
+                            </li>
+
+                            <li class="divider-vertical-left" title="选择性别">
+                                <div class="dropdown">
+                                    <select class="form-control" ng-model="model.patientSex">
+                                        <option value="" class="dropdown-menu-item" ng-selected="model.patientSex === ''">{{'PatientSex' | translate}}</option>
+                                        <option ng-repeat="item in patientSex.valueList" value="{{item.itemValue}}" ng-selected="item.itemValue === model.patientSex">
+                                            {{item.itemName | translate}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown" style="display:inline-block" title="选择报告状态">
+                                    <select class="form-control" ng-model="model.reportStatus">
+                                        <option value="" class="dropdown-menu-item" ng-selected="model.reportStatus === ''">{{'ReportStatus' | translate}}</option>
+                                        <option ng-repeat="item in reportStatus.valueList" value="{{item.itemValue}}" ng-selected="item.itemValue === model.reportStatus">
+                                            {{item.itemName | translate}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown" style="display:inline-block" title="选择报告打印状态">
+                                    <select class="form-control" ng-model="model.reportPrintStatus">
+                                        <option value="" class="dropdown-menu-item" ng-selected="model.reportPrintStatus === ''">{{'ReportPrintStatus' | translate}}</option>
+                                        <option ng-repeat="item in reportPrintStatus.valueList" value="{{item.itemValue}}" ng-selected="item.itemValue === model.reportPrintStatus">
+                                            {{item.itemName | translate}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown" style="display:inline-block" title="选择胶片打印状态">
+                                    <select class="form-control" ng-model="model.filmPrintStatus" ng-hide="isOnlyReport">
+                                        <option value="" class="dropdown-menu-item" ng-selected="model.filmPrintStatus === ''">{{'FilmPrintStatus' | translate}}</option>
+                                        <option ng-repeat="item in filmPrintStatus.valueList" value="{{item.itemValue}}" ng-selected="item.itemValue === model.filmPrintStatus">
+                                            {{item.itemName | translate}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown" style="display:inline-block" title="选择打印模式">
+                                    <select class="form-control" ng-model="model.printMode" ng-hide="isOnlyReport">
+                                        <option value="" class="dropdown-menu-item" ng-selected="model.printMode === ''">{{'PrintMode' | translate}}</option>
+                                        <option ng-repeat="item in printModes.valueList" value="{{item.itemValue}}" ng-selected="item.itemValue === model.printMode">
+                                            {{item.itemName}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown" style="display:inline-block" title="选择检查类型">
+                                    <select class="form-control" ng-model="model.modalityType">
+                                        <option value="" class="dropdown-menu-item" ng-selected="model.modalityType === ''">{{'ModalityType' | translate}}</option>
+                                        <option ng-repeat="item in modalityTypes" value="{{item}}" ng-selected="item === model.modalityType">
+                                            {{item}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown" style="display:inline-block" title="选择病人类型">
+                                    <select class="form-control" ng-model="model.patientType">
+                                        <option value="" class="dropdown-menu-item" ng-selected="model.patientType === ''">{{'PatientType' | translate}}</option>
+                                        <option ng-repeat="item in patientType" value="{{item.type}}" ng-selected="item.type === model.patientType">
+                                            {{item.name}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown" style="display:inline-block" title="选择科室">
+                                    <select class="form-control" ng-model="model.department">
+                                        <option value="" class="dropdown-menu-item" ng-selected="model.department === ''">{{'Department' | translate}}</option>
+                                        <option ng-repeat="item in departments" value="{{item.id}}" ng-selected="item.id === model.department">
+                                            {{item.departmentName}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown" style="display:inline-block" ng-show="incompleteEnabled">
+                                    <select class="form-control" ng-model="model.completeStatus">
+                                        <option value="" class="dropdown-menu-item" ng-selected="model.completeStatus === ''">{{'CompleteStatus' | translate}}</option>
+                                        <option ng-repeat="item in completeStatuses" value="{{item.value}}" ng-selected="item.value === model.completeStatus">
+                                            {{item.name | translate}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div id="worklistGrid" ui-grid="worklistRecordsOptions" ui-grid-pagination ui-grid-expandable ui-grid-auto-resize ui-grid-resize-columns ng-style="{'margin-top':'-20px','height': worklistGridHeight + 'px'}" class="grid"></div>
+    </div>
+</md-content>

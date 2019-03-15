@@ -1,0 +1,10 @@
+[t38]
+FileName1=t38_worklist-mainbody.html
+URL1=http://10.184.129.208/Platform/app/workarea/worklist/views/worklist-mainbody.html
+Total=1
+ContentType=
+SnapshotXmlFile=snapshot_38.xml
+RequestHeaderFile=t38_RequestHeader.txt
+RequestBodyFile=NONE
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,13 @@
+[t6]
+SnapshotXmlFile=snapshot_6.xml
+ContentType=DummyContentType
+StepName=Url: tableRowsPerPage
+Total=1
+FileName1=t6.UNK
+RequestHeaderFile=t6_RequestHeader.txt
+ResponseHeaderFile=t6_ResponseHeader.txt
+RawStepEndTime=1528191380380
+RawStepName=tableRowsPerPage
+RequestBodyFile=t6_RequestBody.txt
+RawStepStartTime=1528191379573
+URL1=file:

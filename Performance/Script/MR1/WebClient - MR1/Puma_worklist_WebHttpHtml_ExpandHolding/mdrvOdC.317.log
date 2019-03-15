@@ -1,0 +1,104 @@
+Start auto log messages stack - Iteration 28.	[MsgId: MMSG-10545]
+Action.c(399): web_custom_request("SetHoldingTime") started  	[MsgId: MMSG-26355]
+Action.c(399): Connection to 10.184.129.108:80 closed after being inactive for 60 seconds, exceeding the "HTTP Keep-Alive timeout" Run-Time Setting (60 seconds). URL="http://10.184.129.108/webapi/api/worklist/UpdateStatusByAccessionNumber"  	[MsgId: MMSG-27650]
+Action.c(399): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/webapi/api/worklist/UpdateStatusByAccessionNumber"  	[MsgId: MMSG-26548]
+Action.c(399): web_custom_request("SetHoldingTime") was successful, 87 body bytes, 258 header bytes  	[MsgId: MMSG-26386]
+Action.c(409): Notify: Transaction "SetTheHoldingTime" ended with a "Pass" status (Duration: 16.9487 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+The result is:  false	[MsgId: MMSG-17999]
+Action.c(415): Error: SetTheHoldingTime fail :A20180601093426333,false	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 29.	[MsgId: MMSG-10545]
+Action.c(213): web_url("CheckLoginStatusByUser") started  	[MsgId: MMSG-26355]
+Action.c(213): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(213): web_url("CheckLoginStatusByUser") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+User Login website successfully: HTTP/1.1 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=utf-8
+Server: Microsoft-IIS/7.5
+X-AspNetMvc-Version: 5.2
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Wed, 06 Jun 2018 10:32:49 GMT
+Content-Length: 4
+
+true	[MsgId: MMSG-17999]
+Action.c(238): web_url("tableRowsPerPage") started  	[MsgId: MMSG-26355]
+Action.c(238): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/tableRowsPerPage"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 29.	[MsgId: MMSG-10545]
+Action.c(291): web_url("terminalmonitoring") was successful, 108086 body bytes, 262 header bytes  	[MsgId: MMSG-26386]
+Action.c(299): web_url("CheckLoginStatus_5") started  	[MsgId: MMSG-26355]
+Action.c(299): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(299): web_url("CheckLoginStatus_5") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(315): Notify: Transaction "User_login" ended with a "Pass" status (Duration: 3.8969 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+Action.c(325): Notify: Transaction "ExpandFilmRecord" started.	[MsgId: MMSG-16999]
+Action.c(327): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(327): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/worklist/filmInfo?accessionNumber=A20180601094845317"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 30.	[MsgId: MMSG-10545]
+Action.c(399): web_custom_request("SetHoldingTime") started  	[MsgId: MMSG-26355]
+Action.c(399): Connection to 10.184.129.108:80 closed after being inactive for 60 seconds, exceeding the "HTTP Keep-Alive timeout" Run-Time Setting (60 seconds). URL="http://10.184.129.108/webapi/api/worklist/UpdateStatusByAccessionNumber"  	[MsgId: MMSG-27650]
+Action.c(399): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/webapi/api/worklist/UpdateStatusByAccessionNumber"  	[MsgId: MMSG-26548]
+Action.c(399): web_custom_request("SetHoldingTime") was successful, 87 body bytes, 258 header bytes  	[MsgId: MMSG-26386]
+Action.c(409): Notify: Transaction "SetTheHoldingTime" ended with a "Pass" status (Duration: 5.2553 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+The result is:  false	[MsgId: MMSG-17999]
+Action.c(415): Error: SetTheHoldingTime fail :A20180601093420911,false	[MsgId: MERR-17999]
+Start auto log messages stack - Iteration 30.	[MsgId: MMSG-10545]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Action.c(428): lr_think_time: 30.00 seconds.	[MsgId: MMSG-15948]
+Action.c(430): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(430): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(435): Notify: Transaction "SetPrintMode" started.	[MsgId: MMSG-16999]
+Action.c(437): web_custom_request("SetPrintMode") started  	[MsgId: MMSG-26355]
+Action.c(437): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/webapi/api/worklist/UpdateStatusByAccessionNumber"  	[MsgId: MMSG-26548]
+Action.c(437): web_custom_request("SetPrintMode") was successful, 87 body bytes, 258 header bytes  	[MsgId: MMSG-26386]
+Action.c(447): Notify: Transaction "SetPrintMode" ended with a "Pass" status (Duration: 8.5815 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+The result is:  false	[MsgId: MMSG-17999]
+Action.c(453): Error: SetPrintMode fail	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 31.	[MsgId: MMSG-10545]
+Action.c(270): web_url("CheckLoginStatus") started  	[MsgId: MMSG-26355]
+Action.c(270): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(270): web_url("CheckLoginStatus") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(281): web_url("terminalmonitor-template.html") started  	[MsgId: MMSG-26355]
+Action.c(281): web_url("terminalmonitor-template.html") was successful, 29041 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Action.c(291): web_url("terminalmonitoring") started  	[MsgId: MMSG-26355]
+Action.c(291): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/terminalmonitoring"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 31.	[MsgId: MMSG-10545]
+Action.c(291): Continuing after error in Vuser script.	[MsgId: MMSG-10678]
+Action.c(299): web_url("CheckLoginStatus_5") started  	[MsgId: MMSG-26355]
+Action.c(299): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(299): web_url("CheckLoginStatus_5") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(315): Notify: Transaction "User_login" ended with a "Fail" status (Duration: 15.0530 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+Action.c(315): Notify: Transaction "User_login" has 1 error message(s).	[MsgId: MMSG-16818]
+Action.c(315): Notify: The 1st error message associated with transaction "User_login" is "Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/terminalmonitoring""	[MsgId: MMSG-16819]
+Action.c(325): Notify: Transaction "ExpandFilmRecord" started.	[MsgId: MMSG-16999]
+Action.c(327): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(327): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/worklist/filmInfo?accessionNumber=A20180601094633098"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 31.	[MsgId: MMSG-10545]
+Action.c(399): web_custom_request("SetHoldingTime") started  	[MsgId: MMSG-26355]
+Action.c(399): Connection to 10.184.129.108:80 closed after being inactive for 60 seconds, exceeding the "HTTP Keep-Alive timeout" Run-Time Setting (60 seconds). URL="http://10.184.129.108/webapi/api/worklist/UpdateStatusByAccessionNumber"  	[MsgId: MMSG-27650]
+Action.c(399): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/webapi/api/worklist/UpdateStatusByAccessionNumber"  	[MsgId: MMSG-26548]
+Action.c(399): web_custom_request("SetHoldingTime") was successful, 87 body bytes, 258 header bytes  	[MsgId: MMSG-26386]
+Action.c(409): Notify: Transaction "SetTheHoldingTime" ended with a "Pass" status (Duration: 0.2252 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+The result is:  false	[MsgId: MMSG-17999]
+Action.c(415): Error: SetTheHoldingTime fail :A20180601093418114,false	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

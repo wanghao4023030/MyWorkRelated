@@ -1,0 +1,195 @@
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(723): web_custom_request("searchWorklist_4") was successful, 25159 body bytes, 261 header bytes  	[MsgId: MMSG-26386]
+Action.c(734): Notify: Transaction "worklist_query_LastTwoToday" ended with a "Pass" status (Duration: 0.2057).	[MsgId: MMSG-16873]
+Action.c(736): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(738): web_url("CheckLoginStatus_22") started  	[MsgId: MMSG-26355]
+Action.c(738): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(738): web_url("CheckLoginStatus_22") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(817): Notify: Transaction "worklist_query_Patient_PID" started.	[MsgId: MMSG-16999]
+Action.c(819): web_custom_request("searchWorklist_7") started  	[MsgId: MMSG-26355]
+Action.c(819): Continuing after Error -26612: HTTP Status-Code=500 (EntityException) for "http://10.184.129.108/webapi/api/worklist/searchWorklist"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(1581): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(1583): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(1583): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(1588): Notify: Transaction "SetPrintMode" started.	[MsgId: MMSG-16999]
+Action.c(1590): web_custom_request("SetPrintMode") started  	[MsgId: MMSG-26355]
+Action.c(1590): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/webapi/api/worklist/UpdateStatusByAccessionNumber"  	[MsgId: MMSG-26548]
+Action.c(1590): web_custom_request("SetPrintMode") was successful, 87 body bytes, 258 header bytes  	[MsgId: MMSG-26386]
+Action.c(1600): Notify: Transaction "SetPrintMode" ended with a "Pass" status (Duration: 2.8779 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+The result is:  false	[MsgId: MMSG-17999]
+Action.c(1606): Error: SetPrintMode fail	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(1581): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(1583): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(1583): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(1588): Notify: Transaction "SetPrintMode" started.	[MsgId: MMSG-16999]
+Action.c(1590): web_custom_request("SetPrintMode") started  	[MsgId: MMSG-26355]
+Action.c(1590): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/webapi/api/worklist/UpdateStatusByAccessionNumber"  	[MsgId: MMSG-26548]
+Action.c(1590): web_custom_request("SetPrintMode") was successful, 87 body bytes, 258 header bytes  	[MsgId: MMSG-26386]
+Action.c(1600): Notify: Transaction "SetPrintMode" ended with a "Pass" status (Duration: 0.0649 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+The result is:  false	[MsgId: MMSG-17999]
+Action.c(1606): Error: SetPrintMode fail	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(1342): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(1342): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(1347): Notify: Transaction "SetStatusOfFilmWithExpand_unprinted" started.	[MsgId: MMSG-16999]
+Action.c(1349): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(1349): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/webapi/api/worklist/UpdateStatusByAccessionNumber"  	[MsgId: MMSG-26548]
+Action.c(1349): web_custom_request("web_custom_request") was successful, 87 body bytes, 258 header bytes  	[MsgId: MMSG-26386]
+Action.c(1359): Notify: Transaction "SetStatusOfFilmWithExpand_unprinted" ended with a "Pass" status (Duration: 21.9322 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+The result is:  false	[MsgId: MMSG-17999]
+Action.c(1365): Error: SetStatusOfFilmWithExpand_unprinted fail	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(627): web_url("CheckLoginStatus_19") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(635): web_url("operate-columns-template.html") started  	[MsgId: MMSG-26355]
+Action.c(635): Downloading resource "http://10.184.129.108/Platform/Content/ui-grid.woff" (specified by argument number 8)  	[MsgId: MMSG-26577]
+Action.c(635): web_url("operate-columns-template.html") was successful, 8674 body bytes, 505 header bytes  	[MsgId: MMSG-26386]
+The Time is 2017-12-08	[MsgId: MMSG-17999]
+Action.c(787): Notify: Transaction "worklist_query_LastMonth" started.	[MsgId: MMSG-16999]
+Action.c(789): web_custom_request("searchWorklist_6") started  	[MsgId: MMSG-26355]
+Action.c(789): Continuing after Error -26609: HTTP Status-Code=503 (EntityCommandExecutionException) for "http://10.184.129.108/webapi/api/worklist/searchWorklist"  	[MsgId: MERR-26609]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(627): web_url("CheckLoginStatus_19") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(635): web_url("operate-columns-template.html") started  	[MsgId: MMSG-26355]
+Action.c(635): Downloading resource "http://10.184.129.108/Platform/Content/ui-grid.woff" (specified by argument number 8)  	[MsgId: MMSG-26577]
+Action.c(635): web_url("operate-columns-template.html") was successful, 8674 body bytes, 505 header bytes  	[MsgId: MMSG-26386]
+Action.c(654): Notify: Transaction "WorlkList_Query_randomTime" started.	[MsgId: MMSG-16999]
+Action.c(656): web_custom_request("searchWorklist_2") started  	[MsgId: MMSG-26355]
+Action.c(656): Continuing after Error -26609: HTTP Status-Code=503 (EntityCommandExecutionException) for "http://10.184.129.108/webapi/api/worklist/searchWorklist"  	[MsgId: MERR-26609]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2.	[MsgId: MMSG-10545]
+Action.c(627): web_url("CheckLoginStatus_19") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(635): web_url("operate-columns-template.html") started  	[MsgId: MMSG-26355]
+Action.c(635): Downloading resource "http://10.184.129.108/Platform/Content/ui-grid.woff" (specified by argument number 8)  	[MsgId: MMSG-26577]
+Action.c(635): web_url("operate-columns-template.html") was successful, 8674 body bytes, 505 header bytes  	[MsgId: MMSG-26386]
+Action.c(654): Notify: Transaction "WorlkList_Query_randomTime" started.	[MsgId: MMSG-16999]
+Action.c(656): web_custom_request("searchWorklist_2") started  	[MsgId: MMSG-26355]
+Action.c(656): Continuing after Error -26609: HTTP Status-Code=503 (EntityCommandExecutionException) for "http://10.184.129.108/webapi/api/worklist/searchWorklist"  	[MsgId: MERR-26609]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2.	[MsgId: MMSG-10545]
+Action.c(557): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(557): web_url("CheckLoginStatus_15") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(565): web_url("allTerminals_3") started  	[MsgId: MMSG-26355]
+Action.c(565): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/webapi/api/terminal/allTerminals"  	[MsgId: MMSG-26548]
+Action.c(565): web_url("allTerminals_3") was successful, 33016 body bytes, 261 header bytes  	[MsgId: MMSG-26386]
+Action.c(573): web_custom_request("searchWorklist") started  	[MsgId: MMSG-26355]
+Action.c(573): Continuing after Error -26612: HTTP Status-Code=500 (EntityException) for "http://10.184.129.108/webapi/api/worklist/searchWorklist"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2.	[MsgId: MMSG-10545]
+Start auto log messages stack - Iteration 2.	[MsgId: MMSG-10545]
+Start auto log messages stack - Iteration 2.	[MsgId: MMSG-10545]
+User Login website successfully: HTTP/1.1 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=utf-8
+Server: Microsoft-IIS/7.5
+X-AspNetMvc-Version: 5.2
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Mon, 08 Jan 2018 07:07:09 GMT
+Content-Length: 4
+
+true	[MsgId: MMSG-17999]
+Action.c(238): web_url("tableRowsPerPage") started  	[MsgId: MMSG-26355]
+Action.c(238): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/webapi/api/tableRowsPerPage"  	[MsgId: MMSG-26548]
+Action.c(238): web_url("tableRowsPerPage") was successful, 39 body bytes, 258 header bytes  	[MsgId: MMSG-26386]
+Action.c(246): web_url("worklistcolumns") started  	[MsgId: MMSG-26355]
+Action.c(246): Continuing after Error -26612: HTTP Status-Code=500 (EntityException) for "http://10.184.129.108/webapi/api/worklist/worklistcolumns"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Action.c(627): web_url("CheckLoginStatus_19") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(635): web_url("operate-columns-template.html") started  	[MsgId: MMSG-26355]
+Action.c(635): Downloading resource "http://10.184.129.108/Platform/Content/ui-grid.woff" (specified by argument number 8)  	[MsgId: MMSG-26577]
+Action.c(635): web_url("operate-columns-template.html") was successful, 8674 body bytes, 505 header bytes  	[MsgId: MMSG-26386]
+Action.c(627): web_url("CheckLoginStatus_19") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(654): Notify: Transaction "WorlkList_Query_randomTime" started.	[MsgId: MMSG-16999]
+Action.c(635): web_url("operate-columns-template.html") started  	[MsgId: MMSG-26355]
+Action.c(635): Downloading resource "http://10.184.129.108/Platform/Content/ui-grid.woff" (specified by argument number 8)  	[MsgId: MMSG-26577]
+Action.c(635): web_url("operate-columns-template.html") was successful, 8674 body bytes, 505 header bytes  	[MsgId: MMSG-26386]
+Action.c(654): Notify: Transaction "WorlkList_Query_randomTime" started.	[MsgId: MMSG-16999]
+Action.c(656): web_custom_request("searchWorklist_2") started  	[MsgId: MMSG-26355]
+Action.c(656): Continuing after Error -26609: HTTP Status-Code=503 (EntityCommandExecutionException) for "http://10.184.129.108/webapi/api/worklist/searchWorklist"  	[MsgId: MERR-26609]
+Action.c(656): web_custom_request("searchWorklist_2") started  	[MsgId: MMSG-26355]
+Action.c(656): Continuing after Error -26609: HTTP Status-Code=503 (EntityCommandExecutionException) for "http://10.184.129.108/webapi/api/worklist/searchWorklist"  	[MsgId: MERR-26609]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2.	[MsgId: MMSG-10545]
+Start auto log messages stack - Iteration 2.	[MsgId: MMSG-10545]
+Action.c(573): web_custom_request("searchWorklist") highest severity level was "continue on error", 78 body bytes, 271 header bytes  	[MsgId: MMSG-26388]
+Action.c(573): Continuing after error in Vuser script.	[MsgId: MMSG-10678]
+Action.c(318): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(584): web_url("modalityTypes") started  	[MsgId: MMSG-26355]
+Action.c(320): web_url("reconciliation-list.html") started  	[MsgId: MMSG-26355]
+Action.c(584): Continuing after Error -26612: HTTP Status-Code=500 (EntityException) for "http://10.184.129.108/webapi/api/modality/modalityTypes"  	[MsgId: MERR-26612]
+Action.c(320): web_url("reconciliation-list.html") was successful, 17522 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Action.c(328): web_url("getUnmatchImages") started  	[MsgId: MMSG-26355]
+Action.c(328): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/webapi/api/reconciliation/getUnmatchImages?days=1"  	[MsgId: MMSG-26548]
+Action.c(328): web_url("getUnmatchImages") was successful, 2489 body bytes, 260 header bytes  	[MsgId: MMSG-26386]
+Action.c(336): web_url("allTerminals") started  	[MsgId: MMSG-26355]
+Action.c(336): Continuing after Error -26612: HTTP Status-Code=500 (EntityException) for "http://10.184.129.108/webapi/api/terminal/allTerminals"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2.	[MsgId: MMSG-10545]
+Action.c(627): web_url("CheckLoginStatus_19") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(635): web_url("operate-columns-template.html") started  	[MsgId: MMSG-26355]
+Action.c(635): Downloading resource "http://10.184.129.108/Platform/Content/ui-grid.woff" (specified by argument number 8)  	[MsgId: MMSG-26577]
+Action.c(635): web_url("operate-columns-template.html") was successful, 8674 body bytes, 505 header bytes  	[MsgId: MMSG-26386]
+Action.c(904): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(914): Notify: Transaction "ExpandFilmRecord" started.	[MsgId: MMSG-16999]
+Action.c(916): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(916): Continuing after Error -26612: HTTP Status-Code=500 (EntityException) for "http://10.184.129.108/webapi/api/worklist/filmInfo?accessionNumber=A20180104134008746"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2.	[MsgId: MMSG-10545]
+Action.c(627): web_url("CheckLoginStatus_19") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(635): web_url("operate-columns-template.html") started  	[MsgId: MMSG-26355]
+Action.c(635): Downloading resource "http://10.184.129.108/Platform/Content/ui-grid.woff" (specified by argument number 8)  	[MsgId: MMSG-26577]
+Action.c(635): web_url("operate-columns-template.html") was successful, 8674 body bytes, 505 header bytes  	[MsgId: MMSG-26386]
+Action.c(654): Notify: Transaction "WorlkList_Query_randomTime" started.	[MsgId: MMSG-16999]
+Action.c(656): web_custom_request("searchWorklist_2") started  	[MsgId: MMSG-26355]
+Action.c(656): Continuing after Error -26609: HTTP Status-Code=503 (EntityCommandExecutionException) for "http://10.184.129.108/webapi/api/worklist/searchWorklist"  	[MsgId: MERR-26609]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 2.	[MsgId: MMSG-10545]
+Action.c(627): web_url("CheckLoginStatus_19") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(635): web_url("operate-columns-template.html") started  	[MsgId: MMSG-26355]
+Action.c(635): Downloading resource "http://10.184.129.108/Platform/Content/ui-grid.woff" (specified by argument number 8)  	[MsgId: MMSG-26577]
+Action.c(635): web_url("operate-columns-template.html") was successful, 8674 body bytes, 505 header bytes  	[MsgId: MMSG-26386]
+Action.c(654): Notify: Transaction "WorlkList_Query_randomTime" started.	[MsgId: MMSG-16999]
+Action.c(656): web_custom_request("searchWorklist_2") started  	[MsgId: MMSG-26355]
+Action.c(656): Continuing after Error -26609: HTTP Status-Code=503 (EntityCommandExecutionException) for "http://10.184.129.108/webapi/api/worklist/searchWorklist"  	[MsgId: MERR-26609]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

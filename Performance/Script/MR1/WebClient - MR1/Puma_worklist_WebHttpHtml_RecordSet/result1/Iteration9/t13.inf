@@ -1,0 +1,13 @@
+[t13]
+SnapshotXmlFile=snapshot_13.xml
+ContentType=DummyContentType
+StepName=Custom Request: terminalmonitoring
+Total=1
+FileName1=t13.UNK
+RequestHeaderFile=t13_RequestHeader.txt
+ResponseHeaderFile=t13_ResponseHeader.txt
+RawStepEndTime=1533113485189
+RawStepName=terminalmonitoring
+RequestBodyFile=t13_RequestBody.txt
+RawStepStartTime=1533113484480
+URL1=file:

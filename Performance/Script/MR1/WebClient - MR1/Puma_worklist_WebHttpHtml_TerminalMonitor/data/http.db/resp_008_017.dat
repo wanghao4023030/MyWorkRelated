@@ -1,0 +1,219 @@
+﻿commonModule.factory('openDialog', ['$log', 'pumaDialog', '$translate', function ($log, pumaDialog, $translate) {
+
+    var defaultHeaderTemplate = '<div class="modal-header" style="border-bottom:none;"><button type="button" class="close" ng-click="$modalCancel()">&times;</button></div>';
+    var defaultTemplate = '<div class="modal-body" style="padding-top:0;padding-right:0;">' +
+                               '<div class="row-fluid">' +
+                                   '<div class="{0}" style="float:left;width:50px;height:50px;"/>' +
+                                   '<div style="width:90%;margin-left:65px;word-break: break-word;">' +
+                                    '<h3 class="ng-binding">{1}</h3>' +
+                                    '<h4>{2}</h4>' +
+                                    '</div>' +
+                               '<div>' +
+                                '<div class="codebox">   </div>' +
+                             '</div>' +
+                        '</div>' +
+                    '</div>';
+    var defaultFooterTemplate = '<button class="btn btn-primary" ng-click="$modalSuccess()">{{$modalSuccessLabel}}</button>';
+    var defaultFooterTemplateForOKCancel = '<button class="btn btn-primary" ng-click="$modalSuccess()">{{$modalSuccessLabel}}</button>' +
+            '<button class="btn" ng-click="$modalCancel()">{{$modalCancelLabel}}</button>';
+
+    var defaultFooterTemplateClientAgent = '<button class="btn btn-primary" ng-click="$modalCustom()">{{$modalCustomLabel}}</button>'
+         + '<button class="btn btn-primary" ng-click="$modalSuccess()">{{$modalSuccessLabel}}</button>';
+
+    var noTitleTemplate = '<div class="modal-body" style="padding-top:0;padding-right:0;">' +
+                               '<div class="row-fluid">' +
+                                   '<div class="{0}" style="float:left;width:50px;height:50px;"/>' +
+                                   '<div style="width:90%;margin-left:65px;word-break: break-word; padding: 1px">' +
+                                      '<h3>{1}</h3>' +
+                                    '</div>' +
+                               '<div>' +
+                                '<div class="codebox">   </div>' +
+                             '</div>' +
+                        '</div>' +
+                    '</div>';
+    var redWarningTemplate = '<div class="modal-body" style="padding-top:0;padding-right:0;">' +
+                               '<div class="row-fluid">' +
+                                   '<div class="{0}" style="float:left;width:50px;height:50px;"/>' +
+                                   '<div style="width:90%;margin-left:65px;word-break: break-word;">' +
+                                      '<h3 style="color: red">{1}</h3>' +
+                                      '<h3>{2}</h3>' +
+                                    '</div>' +
+                               '<div>' +
+                                '<div class="codebox">   </div>' +
+                             '</div>' +
+                        '</div>' +
+                    '</div>';
+    var notifyMessageType =
+    {
+        Error: 0,
+        Success: 1,
+        Warn: 2,
+        Info: 3
+    };
+
+    var convertMessageTypeClass = function (notifyMessageTypeValue) {
+        var annotationClass = '';
+        switch (notifyMessageTypeValue) {
+            case notifyMessageType.Error:
+                annotationClass = 'animation-error';
+                break;
+            case notifyMessageType.Info:
+                annotationClass = 'animation-info';
+                break;
+            case notifyMessageType.Success:
+                annotationClass = 'animation-success';
+                break;
+            case notifyMessageType.Warn:
+                annotationClass = 'animation-warn';
+                break;
+            default:
+                annotationClass = 'animation-info';
+                break;
+        }
+
+        return annotationClass;
+    };
+
+    return {
+        NotifyMessageType: notifyMessageType,
+        openIconDialog: function (notifyMessageType, title, content) {
+            var annotationClass = convertMessageTypeClass(notifyMessageType);
+            //id: 'simpleDialog',
+            //template: defaultTemplate.replace('{0}', annotationClass).replace('{1}', title).replace('{2}', content),
+            //modalClass: 'modeless',
+            //success: { label: $translate.instant('Ok'), fn: successCallback, param: null },
+            //headerTemplate: defaultHeaderTemplate,
+            //footerTemplate: '&nbsp;',
+            //title: title,
+            //backdrop: false,
+            //css: {}
+            pumaDialog({
+                id: 'simpleDialog',
+                template:
+                  defaultTemplate.replace('{0}', annotationClass).replace('{1}', title).replace('{2}', content),
+                headerTemplate: defaultHeaderTemplate,
+                footerTemplate: '<button class="btn btn-primary" ng-click="$modalSuccess()">{{$modalSuccessLabel}}</button>',
+                title: title,
+                backdrop: true
+            });
+        },
+        openIconDialogOkFun: function (notifyMessageType, title, content, successCallback) {
+            var annotationClass = convertMessageTypeClass(notifyMessageType);
+            pumaDialog({
+                id: 'simpleDialog',
+                template:
+                  defaultTemplate.replace('{0}', annotationClass).replace('{1}', title).replace('{2}', content),
+                success: { label: $translate.instant('Ok'), fn: successCallback, param: null },
+                headerTemplate: defaultHeaderTemplate,
+                footerTemplate: defaultFooterTemplate,
+                title: title,
+                backdrop: true
+            });
+        },
+        openIconDialogClientAgent: function (notifyMessageType, title, content, successCallback, runCallback) {
+            var annotationClass = convertMessageTypeClass(notifyMessageType);
+            pumaDialog({
+                id: 'simpleDialog',
+                template:
+                  defaultTemplate.replace('{0}', annotationClass).replace('{1}', title).replace('{2}', content),
+                success: { label: $translate.instant('Download'), fn: successCallback, param: null },
+                custom: { label: $translate.instant('Run'), fn: runCallback },
+                headerTemplate: defaultHeaderTemplate,
+                footerTemplate: defaultFooterTemplateClientAgent,
+                title: title,
+                backdrop: true
+            });
+        },
+        openIconDialogOkCancel: function (notifyMessageType, title, content, successCallback) {
+            var annotationClass = convertMessageTypeClass(notifyMessageType);
+            pumaDialog({
+                id: 'simpleDialog',
+                template:
+                  defaultTemplate.replace('{0}', annotationClass).replace('{1}', title).replace('{2}', content),
+                headerTemplate: defaultHeaderTemplate,
+                success: { label: $translate.instant('Ok'), fn: successCallback, param: null },
+                cancel: { label: $translate.instant('Cancel'), fn: null },
+                title: title,
+                backdrop: true
+            });
+        },
+        openIconDialogOkCancel2: function (notifyMessageType, title, content, successCallback) {
+            var annotationClass = convertMessageTypeClass(notifyMessageType);
+            pumaDialog({
+                id: 'simpleDialog',
+                template:
+                  defaultTemplate.replace('{0}', annotationClass).replace('{1}', title).replace('{2}', content),
+                headerTemplate: defaultHeaderTemplate,
+                footerTemplate: defaultFooterTemplateForOKCancel,
+                success: { label: $translate.instant('Ok'), fn: successCallback, param: null },
+                cancel: { label: $translate.instant('Cancel'), fn: null },
+                title: title,
+                backdrop: true
+            });
+        },
+        openIconDialogOkCancelNoTitle: function (notifyMessageType, content, successCallback) {
+            var annotationClass = convertMessageTypeClass(notifyMessageType);
+            pumaDialog({
+                id: 'simpleDialog',
+                template: noTitleTemplate.replace('{0}', annotationClass).replace('{1}', content),
+                headerTemplate: defaultHeaderTemplate,
+                success: { label: $translate.instant('Ok'), fn: successCallback, param: null },
+                cancel: { label: $translate.instant('Cancel'), fn: null },
+                title: null,
+                backdrop: true
+            });
+        },
+        openIconDialogOkCancelNoTitleWarning: function (notifyMessageType, warningMsg, content, successCallback) {
+            var annotationClass = convertMessageTypeClass(notifyMessageType);
+            pumaDialog({
+                id: 'simpleDialog',
+                template: redWarningTemplate.replace('{0}', annotationClass).replace('{1}', warningMsg).replace('{2}', content),
+                headerTemplate: defaultHeaderTemplate,
+                success: { label: $translate.instant('Ok'), fn: successCallback, param: null },
+                cancel: { label: $translate.instant('Cancel'), fn: null },
+                title: null,
+                backdrop: true
+            });
+        },
+        openIconDialogOkCancelParam: function (notifyMessageType, title, content, successCallback, successParam) {
+            var annotationClass = convertMessageTypeClass(notifyMessageType);
+            pumaDialog({
+                id: 'simpleDialog',
+                template:
+                  defaultTemplate.replace('{0}', annotationClass).replace('{1}', title).replace('{2}', content),
+                headerTemplate: defaultHeaderTemplate,
+                success: { label: $translate.instant('Ok'), fn: successCallback, param: successParam },
+                cancel: { label: $translate.instant('Cancel'), fn: null },
+                title: title,
+                backdrop: true
+            });
+        },
+        openIconDialogOkCancelParam2: function (notifyMessageType, title, content, successCallback, successParam) {
+            var annotationClass = convertMessageTypeClass(notifyMessageType);
+            pumaDialog({
+                id: 'simpleDialog',
+                template:
+                  defaultTemplate.replace('{0}', annotationClass).replace('{1}', title).replace('{2}', content),
+                headerTemplate: defaultHeaderTemplate,
+                footerTemplate: defaultFooterTemplateForOKCancel,
+                success: { label: $translate.instant('Ok'), fn: successCallback, param: successParam },
+                cancel: { label: $translate.instant('Cancel'), fn: null },
+                title: title,
+                backdrop: true
+            });
+        },
+        openIconDialogYesNo: function (notifyMessageType, title, content, successCallback, cancelCallback) {
+            var annotationClass = convertMessageTypeClass(notifyMessageType);
+            pumaDialog({
+                id: 'simpleDialog',
+                template:
+                  defaultTemplate.replace('{0}', annotationClass).replace('{1}', title).replace('{2}', content),
+                headerTemplate: defaultHeaderTemplate,
+                success: { label: $translate.instant('Yes'), fn: successCallback, param: null },
+                cancel: { label: $translate.instant('No'), fn: cancelCallback },
+                title: title,
+                backdrop: true
+            });
+        }
+    }
+}]);

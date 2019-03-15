@@ -1,0 +1,72 @@
+[General]
+Type=Multi
+DefaultCfg=default.cfg
+ParameterFile=Puma_Statistic_WebHttpHtml.prm
+GlobalParameterFile=
+NewFunctionHeader=1
+RunType=cci
+ActionLogicExt=action_logic
+LastActiveAction=Action
+MajorVersion=12
+MinorVersion=53
+ActiveTypes=QTWeb
+GenerateTypes=QTWeb
+AdditionalTypes=QTWeb
+DevelopTool=Vugen
+LastModifyVer=12.53.0.1203
+ParamLeftBrace={
+ParamRightBrace=}
+ScriptLanguage=C
+LastCodeGenerationVer=
+DisableRegenerate=0
+Description=
+ScriptLocale=zh-CN
+[Actions]
+vuser_init=vuser_init.c
+Action=Action.c
+vuser_end=vuser_end.c
+[RunLogicFiles]
+Default Profile=default.usp
+[VuserProfiles]
+Profiles=Default Profile
+[CfgFiles]
+Default Profile=default.cfg
+[ExtraFiles]
+globals.h=
+[Modified Actions]
+vuser_init=0
+Action=1
+vuser_end=0
+[Recorded Actions]
+vuser_init=0
+Action=0
+vuser_end=0
+[Replayed Actions]
+vuser_init=1
+Action=1
+vuser_end=1
+[Interpreters]
+vuser_init=cci
+Action=cci
+vuser_end=cci
+[TransactionsOrder]
+Order="User_login__*delimiter*__Film_By_ModalityType__*delimiter*__Film_By_ModalityName__*delimiter*__Film_By_Terminal__*delimiter*__Film_By_FilmSize__*delimiter*__Film_Unprinted_By_FilmSize__*delimiter*__Film_printed_By_CentralPrint__*delimiter*__Report_By_ModalityType__*delimiter*__Report_By_Terminal__*delimiter*__Report_By_PaperSize__*delimiter*__Report_By_CentralPrint__*delimiter*__OCR_ModalityType__*delimiter*__OCR_ModalityName"
+[StateManagement]
+LastReplayStatus=1
+[ActiveReplay]
+LastReplayedRunName=result1
+ActiveRunName=result1
+[Transactions]
+User_login=
+Film_By_ModalityType=
+Film_By_ModalityName=
+Film_By_Terminal=
+Film_By_FilmSize=
+Film_Unprinted_By_FilmSize=
+Film_printed_By_CentralPrint=
+Report_By_ModalityType=
+Report_By_Terminal=
+Report_By_PaperSize=
+Report_By_CentralPrint=
+OCR_ModalityType=
+OCR_ModalityName=

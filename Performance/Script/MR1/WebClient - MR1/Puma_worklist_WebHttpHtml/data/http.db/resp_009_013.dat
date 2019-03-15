@@ -1,0 +1,759 @@
+﻿statisticsModule.controller('statisticsController', ['$scope', '$log', '$http', 'constants', 'statisticsService', 'enums',
+    function ($scope, $log, $http, constants, statisticsService, enums) {
+        $log.debug("statisticsController.ctor()...")
+        $scope.showEmptyDataLabel = false;
+        $scope.showErrorMsgNoDeptSelected = false;
+        $scope.showStackBarGridViewButton = true;
+        $scope.showDepartmentsFilter = true;
+        $scope.showDateRangeFilter = true;
+        $scope.startDatePicker = {};
+        $scope.startDatePicker.opened = false;
+        $scope.startDatePicker.pickedDate = null;
+        $scope.startDatePicker.dateOptions = {
+            showWeeks: false,
+            maxDate: new Date()
+        };
+
+
+        $scope.endDatePicker = {};
+        $scope.endDatePicker.opened = false;
+        $scope.endDatePicker.pickedDate = null;
+        $scope.endDatePicker.dateOptions = {
+            showWeeks: false,
+            maxDate: new Date()
+        };
+
+        $scope.ddmDateRanges = [
+           {
+               "rangeType": 0,
+               "rangeName": "今天"
+           },
+           {
+               "rangeType": 1,
+               "rangeName": "本周"
+           },
+           {
+               "rangeType": 2,
+               "rangeName": "本月"
+           },
+           {
+               "rangeType": 3,
+               "rangeName": "上个月"
+           },
+           {
+               "rangeType": 4,
+               "rangeName": "近三个月"
+           }
+        ];
+        $scope.selectedDateRangeType = $scope.ddmDateRanges[0];
+        $scope.startDatePicker.pickedDate = new Date();
+        $scope.endDatePicker.pickedDate = new Date();
+
+        $scope.changeDateRangeType = function (obj) {
+            $log.debug("change date range type:" + obj.rangeName);
+            $scope.selectedDateRangeType = obj;
+
+            // update date picker associate with date range type
+            var today = new Date();
+            switch (obj.rangeType) {
+                case 0:
+                    //Today
+                    $scope.startDatePicker.pickedDate = today;
+                    $scope.endDatePicker.pickedDate = today;
+
+                    break;
+                case 1:
+                    //This week
+                    var startDate = new Date();
+                    var dayOfToday = startDate.getDay() || 7;
+                    if (dayOfToday !== 1) {
+                        startDate.setHours(-24 * (dayOfToday - 1));
+                    }
+                    $log.debug("first day of this week:" + startDate);
+                    $scope.startDatePicker.pickedDate = startDate;
+                    $scope.endDatePicker.pickedDate = today;
+                    break;
+                case 2:
+                    //This month
+                    var startDate = new Date();
+                    startDate = new Date(startDate.getFullYear(), startDate.getMonth(), 1);
+                    $scope.startDatePicker.pickedDate = startDate;
+                    $scope.endDatePicker.pickedDate = today;
+                    break;
+                case 3:
+                    //Last month
+                    var startDate = new Date();
+                    startDate.setDate(1);
+                    startDate.setMonth(startDate.getMonth() - 1);
+                    $scope.startDatePicker.pickedDate = startDate;
+
+                    var endDate = new Date((new Date(today.getFullYear(), today.getMonth(), 1)) - 1);
+                    $scope.endDatePicker.pickedDate = endDate;
+                    break;
+                case 4:
+                    //recent three monthes
+                    var startDate = new Date();
+                    startDate.setDate(1);
+                    startDate.setMonth(startDate.getMonth() - 2);
+                    $scope.startDatePicker.pickedDate = startDate;
+                    $scope.endDatePicker.pickedDate = today;
+
+                    break;
+                default:
+                    //Today by default
+                    $scope.startDatePicker.pickedDate = today;
+                    $scope.endDatePicker.pickedDate = today;
+                    break;
+            }
+        };
+
+        $scope.startDatePicker.open = function () {
+            $scope.startDatePicker.opened = !$scope.startDatePicker.opened;
+        };
+
+        $scope.endDatePicker.open = function () {
+            $scope.endDatePicker.opened = !$scope.endDatePicker.opened;
+        };
+
+
+        $scope.setStartDateOption = function () {
+            $log.debug('setStartDateOption by EndDatePicker:' + $scope.endDatePicker.pickedDate);
+            $scope.startDatePicker.dateOptions = {
+                showWeeks: false,
+                maxDate: $scope.endDatePicker.pickedDate
+            };
+        };
+
+        $scope.setEndDateOption = function () {
+            $log.debug('setEndDateOption by StartDatePicker:' + $scope.startDatePicker.pickedDate);
+            $scope.endDatePicker.dateOptions = {
+                showWeeks: false,
+                minDate: $scope.startDatePicker.pickedDate,
+                maxDate: new Date()
+            };
+        };
+
+        $scope.customizedStatisticsType = {};
+        statisticsService.getCustomizedStatisticsType().success(function (data) {
+            $log.debug('customized statistics types:' + data);
+            $scope.customizedStatisticsType = data;
+        });
+
+        $scope.isSelectAllDepartments = true;
+        $scope.departmentsCheckStatus = [];
+
+        statisticsService.getDepartmentInfos().success(function (result) {
+            $scope.departments = result;
+            if (result.length > 0) {
+                angular.forEach($scope.departments, function (obj) {
+                    obj.checked = true;
+                });
+            }
+        });
+
+        $scope.checkAllDepartments = function () {
+            $log.debug("isSelectAllDepartments:" + $scope.isSelectAllDepartments);
+            angular.forEach($scope.departments, function (obj) {
+                obj.checked = $scope.isSelectAllDepartments;
+
+            });
+        }
+
+        $scope.departmentCheckStatusChanged = function (obj) {
+            var flag = true;
+            angular.forEach($scope.departments, function (obj) {
+                if (!obj.checked) {
+                    flag = false;
+                }
+            });
+            $scope.isSelectAllDepartments = flag;
+        };
+
+        // display data in histogram type by default
+        $scope.dataDisplayingType = 0;
+        var btnIconActivedStyle = { "color": "orangered" }
+        $scope.activeHistogramBtnIcon = btnIconActivedStyle;
+        $scope.activeGridBtnIcon = {};
+        $scope.setDisplayingType = function (type) {
+            switch (type) {
+                case 0:
+                    //"histogram"
+                    $scope.activeHistogramBtnIcon = btnIconActivedStyle;
+                    $scope.activeGridBtnIcon = {};
+                    $scope.dataDisplayingType = 0;
+                    break;
+                case 1:
+                    //grid table
+                    $scope.activeHistogramBtnIcon = {};
+                    $scope.activeGridBtnIcon = btnIconActivedStyle;
+                    $scope.dataDisplayingType = 1;
+                    break;
+                default:
+                    //stackedbarchart
+                    $scope.activeHistogramBtnIcon = btnIconActivedStyle;
+                    $scope.activeGridBtnIcon = {};
+                    $scope.dataDisplayingType = 0;
+                    break;
+            }
+        };
+
+        $scope.statisticsTypeModel = enums.StatisticsType;
+        $log.debug("title" + $scope.statisticsTypeModel.FilmPrintCountStatistics.Title);
+        $scope.currentStatisticsType = 'filmprintcountbymodalitytype';
+
+        //StatisticsType: 'filmprintcountbymodalitytype','filmprintcountbymodalityname',etc...
+        $scope.setStatisticsType = function (statisticsType) {
+            //customized will be set in customizedStatisticsClick
+            if (statisticsType != 'customized') {
+                $scope.currentStatisticsType = statisticsType;
+            }
+            $scope.statisticsCsvData = {};
+            $scope.stackedBarChart.labels = [];
+            $scope.stackedBarChart.series = [];
+            $scope.stackedBarChart.data = [];
+            $log.debug('current statistics type:' + statisticsType);
+            if (statisticsType == 'storageusage') {
+                $log.debug("show storageusage");
+                $scope.showStackBarGridViewButton = false;
+                $scope.showDepartmentsFilter = false;
+                $scope.showDateRangeFilter = false;
+                //hide StackedBarChart & GridTable, 3 to show storage usage progressbar
+                $scope.dataDisplayingType = 3;
+                //execute search auto
+                $scope.getStatisticsData();
+                $scope.showStorageUsageProgressBar = true;
+
+            }
+            else if (statisticsType == 'customized') {
+                $scope.showStackBarGridViewButton = false;
+                $scope.showDepartmentsFilter = true;
+                $scope.showDateRangeFilter = true;
+                $scope.showStorageUsageProgressBar = false;
+                $scope.dataDisplayingType = 1;
+
+            }
+            else {
+                $scope.showStackBarGridViewButton = true;
+                $scope.showDepartmentsFilter = true;
+                $scope.showDateRangeFilter = true;
+                $scope.showStorageUsageProgressBar = false;
+                $scope.setDisplayingType(0);
+
+            }
+        };
+
+
+        $scope.currentCustomizedStatisticsSPName = '';
+        //set stored procedure name of current customized statistics 
+        $scope.customizedStatisticsClick = function (customizedSPName) {
+            $log.debug('current customized statistics type:' + customizedSPName);
+            $scope.currentStatisticsType = customizedSPName;
+
+            $scope.currentCustomizedStatisticsSPName = customizedSPName;
+        };
+
+        $scope.statisticsCsvData = {};
+        $scope.stackedBarChart = {};
+        $scope.stackedBarChart.options = {
+            responsive: true,
+            maintainAspectRatio: false,
+            width: 600,
+            height: 380,
+            scales: {
+                yAxes: [{
+                    stacked: true
+                }]
+            }
+        }
+        $scope.stackedBarChart.labels = [];
+        $scope.stackedBarChart.series = [];
+        $scope.stackedBarChart.data = [];
+
+        $scope.getStatisticsData = function () {
+            $log.debug("Current Statistics Type: " + $scope.currentStatisticsType);
+            var selectedDepartmentIDsList = [];
+            angular.forEach($scope.departments, function (obj) {
+                if (obj.checked) {
+                    selectedDepartmentIDsList.push(obj.id);
+                }
+            });
+
+            $scope.showErrorMsgNoDeptSelected = false;
+            if (selectedDepartmentIDsList.length == 0) {
+                $scope.showErrorMsgNoDeptSelected = true;
+                return;
+            }
+
+            $scope.showErrorMsgDataRangeError = false;
+            if ($scope.startDatePicker.pickedDate > $scope.endDatePicker.pickedDate) {
+                $scope.showErrorMsgDataRangeError = true;
+                return;
+            }
+
+            var tmpEndDate = $scope.endDatePicker.pickedDate;
+            var queryEndDate = new Date(new Date(tmpEndDate.setHours(0, 0, 0, 0)).setDate(tmpEndDate.getDate() + 1));
+
+            var filter = {
+                DepartmentIDsList: selectedDepartmentIDsList,
+                StartDate: new Date($scope.startDatePicker.pickedDate.setHours(0, 0, 0, 0)).Format("yyyy/MM/dd hh:mm:ss"),
+                EndDate: new Date(queryEndDate.Format("yyyy/MM/dd hh:mm:ss"))
+            };
+
+            $log.debug('filter start datetime:' + filter.StartDate);
+            $log.debug('filter end datetime:' + filter.EndDate);         
+
+            var result = {};
+            result.csvData = {};
+            result.stackedBarChartModel = {};
+            //yAxis
+            result.stackedBarChartModel.series = [];
+            //xAixs
+            result.stackedBarChartModel.labels = [];
+            result.stackedBarChartModel.data = [];
+
+            switch ($scope.currentStatisticsType) {
+                case "filmprintcountbymodalitytype":
+                    statisticsService.getFilmPrintCountStatisticsByModailityType(filter).success(function (data) {
+                        $log.debug(data);
+                        $scope.statisticsCsvData = data;
+                        result.csvData = data;
+                        if (result.csvData == null || result.csvData.length == 0) {
+                            $scope.showEmptyDataLabel = true;
+                        }
+                        else {
+                            $scope.showEmptyDataLabel = false;
+                        }
+
+                        if (result.csvData.length > 0) {
+                            angular.forEach(result.csvData, function (record) {
+                                if (result.stackedBarChartModel.series.indexOf(record.filmSize) < 0) {
+                                    result.stackedBarChartModel.series.push(record.filmSize);
+                                }
+                                if (result.stackedBarChartModel.labels.indexOf(record.modalityType) < 0) {
+                                    result.stackedBarChartModel.labels.push(record.modalityType);
+                                }
+                            });
+                            angular.forEach(result.stackedBarChartModel.series, function (chartSerie) {
+                                var curSerieData = [];
+                                angular.forEach(result.stackedBarChartModel.labels, function (chartLabel) {
+                                    var curItemPrintCount = 0;
+                                    angular.forEach(result.csvData, function (record) {
+                                        if (record.filmSize == chartSerie && record.modalityType == chartLabel) {
+                                            curItemPrintCount += record.printCount;
+                                        }
+                                    });
+                                    curSerieData.push(curItemPrintCount);
+                                });
+                                result.stackedBarChartModel.data.push(curSerieData);
+                            });
+                        }
+                    });
+                    break;
+                case "filmprintcountbymodalityname":
+                    statisticsService.getFilmPrintCountStatisticsByModailityName(filter).success(function (data) {
+                        $log.debug(data);
+                        result.csvData = data;
+                        $scope.statisticsCsvData = data;
+                        if (result.csvData == null || result.csvData.length == 0) {
+                            $scope.showEmptyDataLabel = true;
+                        }
+                        else {
+                            $scope.showEmptyDataLabel = false;
+                        }
+
+                        if (result.csvData.length > 0) {
+                            angular.forEach(result.csvData, function (record) {
+                                if (result.stackedBarChartModel.series.indexOf(record.filmSize) < 0) {
+                                    result.stackedBarChartModel.series.push(record.filmSize);
+                                }
+                                if (result.stackedBarChartModel.labels.indexOf(record.modalityName) < 0) {
+                                    result.stackedBarChartModel.labels.push(record.modalityName);
+                                }
+                            });
+                            angular.forEach(result.stackedBarChartModel.series, function (chartSerie) {
+                                var curSerieData = [];
+                                angular.forEach(result.stackedBarChartModel.labels, function (chartLabel) {
+                                    var curItemPrintCount = 0;
+                                    angular.forEach(result.csvData, function (record) {
+                                        if (record.filmSize == chartSerie && record.modalityName == chartLabel) {
+                                            curItemPrintCount += record.printCount;
+                                        }
+                                    });
+                                    curSerieData.push(curItemPrintCount);
+                                });
+                                result.stackedBarChartModel.data.push(curSerieData);
+                            });
+                        }
+                    });
+                    break;
+                case "filmprintcountbyterminal":
+                    statisticsService.getFilmPrintCountStatisticsByTerminal(filter).success(function (data) {
+                        $log.debug(data);
+                        $scope.statisticsCsvData = data;
+                        result.csvData = data;
+                        if (result.csvData == null || result.csvData.length == 0) {
+                            $scope.showEmptyDataLabel = true;
+                        }
+                        else {
+                            $scope.showEmptyDataLabel = false;
+                        }
+
+                        if (result.csvData.length > 0) {
+                            angular.forEach(result.csvData, function (record) {
+                                if (result.stackedBarChartModel.series.indexOf(record.filmSize) < 0) {
+                                    result.stackedBarChartModel.series.push(record.filmSize);
+                                }
+                                if (result.stackedBarChartModel.labels.indexOf(record.terminalName) < 0) {
+                                    result.stackedBarChartModel.labels.push(record.terminalName);
+                                }
+                            });
+                            angular.forEach(result.stackedBarChartModel.series, function (chartSerie) {
+                                var curSerieData = [];
+                                angular.forEach(result.stackedBarChartModel.labels, function (chartLabel) {
+                                    var curItemPrintCount = 0;
+                                    angular.forEach(result.csvData, function (record) {
+                                        if (record.filmSize == chartSerie && record.terminalName == chartLabel) {
+                                            curItemPrintCount += record.printCount;
+                                        }
+                                    });
+                                    curSerieData.push(curItemPrintCount);
+                                });
+                                result.stackedBarChartModel.data.push(curSerieData);
+                            });
+                        }
+                    });
+                    break;
+                case "filmprintcountbyfilmsize":
+                    statisticsService.getFilmPrintCountStatisticsByFilmSize(filter).success(function (data) {
+                        $log.debug(data);
+                        $scope.statisticsCsvData = data;
+                        result.csvData = data;
+                        if (result.csvData == null || result.csvData.length == 0) {
+                            $scope.showEmptyDataLabel = true;
+                        }
+                        else {
+                            $scope.showEmptyDataLabel = false;
+                        }
+
+                        if (result.csvData.length > 0) {
+                            angular.forEach(result.csvData, function (record) {
+                                if (result.stackedBarChartModel.series.indexOf(record.NoSeries) < 0) {
+                                    result.stackedBarChartModel.series.push(record.NoSeries);
+                                }
+                                if (result.stackedBarChartModel.labels.indexOf(record.filmSize) < 0) {
+                                    result.stackedBarChartModel.labels.push(record.filmSize);
+                                }
+                            });
+                            angular.forEach(result.stackedBarChartModel.series, function (chartSerie) {
+                                var curSerieData = [];
+                                angular.forEach(result.stackedBarChartModel.labels, function (chartLabel) {
+                                    var curItemPrintCount = 0;
+                                    angular.forEach(result.csvData, function (record) {
+                                        if (record.NoSeries == chartSerie && record.filmSize == chartLabel) {
+                                            curItemPrintCount += record.printCount;
+                                        }
+                                    });
+                                    curSerieData.push(curItemPrintCount);
+                                });
+                                result.stackedBarChartModel.data.push(curSerieData);
+                            });
+                        }
+                    });
+                    break;
+                case "reportprintcountbymodalitytype":
+                    statisticsService.getReportPrintCountStatisticsByModalityType(filter).success(function (data) {
+                        $log.debug(data);
+                        $scope.statisticsCsvData = data;
+                        result.csvData = data;
+                        if (result.csvData == null || result.csvData.length == 0) {
+                            $scope.showEmptyDataLabel = true;
+                        }
+                        else {
+                            $scope.showEmptyDataLabel = false;
+                        }
+
+                        if (result.csvData.length > 0) {
+                            angular.forEach(result.csvData, function (record) {
+                                if (result.stackedBarChartModel.series.indexOf(record.NoSeries) < 0) {
+                                    result.stackedBarChartModel.series.push(record.NoSeries);
+                                }
+                                if (result.stackedBarChartModel.labels.indexOf(record.modalityType) < 0) {
+                                    result.stackedBarChartModel.labels.push(record.modalityType);
+                                }
+                            });
+                            angular.forEach(result.stackedBarChartModel.series, function (chartSerie) {
+                                var curSerieData = [];
+                                angular.forEach(result.stackedBarChartModel.labels, function (chartLabel) {
+                                    var curItemPrintCount = 0;
+                                    angular.forEach(result.csvData, function (record) {
+                                        if (record.NoSeries == chartSerie && record.modalityType == chartLabel) {
+                                            curItemPrintCount += record.printCount;
+                                        }
+                                    });
+                                    curSerieData.push(curItemPrintCount);
+                                });
+                                result.stackedBarChartModel.data.push(curSerieData);
+                            });
+                        }
+                    });
+                    break;
+                case "reportprintcountbyterminal":
+                    statisticsService.getReportPrintCountStatisticsByTerminal(filter).success(function (data) {
+                        $log.debug(data);
+                        $scope.statisticsCsvData = data;
+                        result.csvData = data;
+
+                        if (result.csvData == null || result.csvData.length == 0) {
+                            $scope.showEmptyDataLabel = true;
+                        }
+                        else {
+                            $scope.showEmptyDataLabel = false;
+                        }
+
+
+                        if (result.csvData.length > 0) {
+                            angular.forEach(result.csvData, function (record) {
+                                if (result.stackedBarChartModel.series.indexOf(record.NoSeries) < 0) {
+                                    result.stackedBarChartModel.series.push(record.NoSeries);
+                                }
+                                if (result.stackedBarChartModel.labels.indexOf(record.terminalName) < 0) {
+                                    result.stackedBarChartModel.labels.push(record.terminalName);
+                                }
+                            });
+                            angular.forEach(result.stackedBarChartModel.series, function (chartSerie) {
+                                var curSerieData = [];
+                                angular.forEach(result.stackedBarChartModel.labels, function (chartLabel) {
+                                    var curItemPrintCount = 0;
+                                    angular.forEach(result.csvData, function (record) {
+                                        if (record.NoSeries == chartSerie && record.terminalName == chartLabel) {
+                                            curItemPrintCount += record.printCount;
+                                        }
+                                    });
+                                    curSerieData.push(curItemPrintCount);
+                                });
+                                result.stackedBarChartModel.data.push(curSerieData);
+                            });
+                        }
+                    });
+                    break;
+                case "reportprintcountbytypesize":
+                    statisticsService.getReportPrintCountStatisticsByTypeSize(filter).success(function (data) {
+                        $log.debug(data);
+                        $scope.statisticsCsvData = data;
+                        result.csvData = data;
+
+                        if (result.csvData == null || result.csvData.length == 0) {
+                            $scope.showEmptyDataLabel = true;
+                        }
+                        else {
+                            $scope.showEmptyDataLabel = false;
+                        }
+                        if (result.csvData.length > 0) {
+                            angular.forEach(result.csvData, function (record) {
+                                if (result.stackedBarChartModel.series.indexOf(record.NoSeries) < 0) {
+                                    result.stackedBarChartModel.series.push(record.NoSeries);
+                                }
+                                if (result.stackedBarChartModel.labels.indexOf(record.typeSize) < 0) {
+                                    result.stackedBarChartModel.labels.push(record.typeSize);
+                                }
+                            });
+                            angular.forEach(result.stackedBarChartModel.series, function (chartSerie) {
+                                var curSerieData = [];
+                                angular.forEach(result.stackedBarChartModel.labels, function (chartLabel) {
+                                    var curItemPrintCount = 0;
+                                    angular.forEach(result.csvData, function (record) {
+                                        if (record.NoSeries == chartSerie && record.typeSize == chartLabel) {
+                                            curItemPrintCount += record.printCount;
+                                        }
+                                    });
+                                    curSerieData.push(curItemPrintCount);
+                                });
+                                result.stackedBarChartModel.data.push(curSerieData);
+                            });
+                        }
+                    });
+                    break;
+                case "ocrratebymodalityname":
+                    statisticsService.getOcrRateStatisticsByModalityName(filter).success(function (data) {
+                        $log.debug(data);
+                        $scope.statisticsCsvData = data;
+                        result.csvData = data;
+
+                        if (result.csvData == null || result.csvData.length == 0) {
+                            $scope.showEmptyDataLabel = true;
+                        }
+                        else {
+                            $scope.showEmptyDataLabel = false;
+                        }
+
+
+                        if (result.csvData.length > 0) {
+                            //result.stackedBarChartModel.series.push("Total");
+                            //result.stackedBarChartModel.series.push("Success");
+                            //result.stackedBarChartModel.series.push("Failure");
+                            result.stackedBarChartModel.series.push("OCRRate");
+                            angular.forEach(result.csvData, function (record) {
+                                if (result.stackedBarChartModel.labels.indexOf(record.modalityName) < 0) {
+                                    result.stackedBarChartModel.labels.push(record.modalityName);
+                                }
+                            });
+
+                            var curSerieData = [];
+                            angular.forEach(result.stackedBarChartModel.labels, function (chartLabel) {
+                                var curTotalData = [];
+                                var curSuccessData = [];
+                                var curFailureData = [];
+                                var curOcrRate = 0.0;
+                                var curSuccessCount = 0;
+                                var curFailureCount = 0;
+                                var curTotalCount = 0;
+                                angular.forEach(result.csvData, function (record) {
+                                    if (record.modalityName == chartLabel) {
+                                        curSuccessCount += record.ocrSuccess;
+                                        curFailureCount += record.ocrFailure;
+                                        curTotalCount += record.ocrTotal;
+                                    }
+                                });
+                                curOcrRate = (curSuccessCount * 100 / curTotalCount).toFixed(2);
+                                curSerieData.push(curOcrRate);
+                            });
+                            result.stackedBarChartModel.data.push(curSerieData);
+                        }
+                    });
+                    break;
+                case "ocrratebymodalitytype":
+                    statisticsService.getOcrRateStatisticsByModalityType(filter).success(function (data) {
+                        $log.debug(data);
+                        $scope.statisticsCsvData = data;
+                        result.csvData = data;
+
+                        if (result.csvData == null || result.csvData.length == 0) {
+                            $scope.showEmptyDataLabel = true;
+                        }
+                        else {
+                            $scope.showEmptyDataLabel = false;
+                        }
+
+                        if (result.csvData.length > 0) {
+                            //result.stackedBarChartModel.series.push("Total");
+                            //result.stackedBarChartModel.series.push("Success");
+                            //result.stackedBarChartModel.series.push("Failure");
+                            result.stackedBarChartModel.series.push("OCRRate");
+                            angular.forEach(result.csvData, function (record) {
+                                if (result.stackedBarChartModel.labels.indexOf(record.modalityType) < 0) {
+                                    result.stackedBarChartModel.labels.push(record.modalityType);
+                                }
+                            });
+
+                            var curSerieData = [];
+                            angular.forEach(result.stackedBarChartModel.labels, function (chartLabel) {
+                                var curTotalData = [];
+                                var curSuccessData = [];
+                                var curFailureData = [];
+                                var curOcrRate = 0.0;
+                                var curSuccessCount = 0;
+                                var curFailureCount = 0;
+                                var curTotalCount = 0;
+                                angular.forEach(result.csvData, function (record) {
+                                    if (record.modalityType == chartLabel) {
+                                        curSuccessCount += record.ocrSuccess;
+                                        curFailureCount += record.ocrFailure;
+                                        curTotalCount += record.ocrTotal;
+                                    }
+                                });
+                                curOcrRate = (curSuccessCount * 100 / curTotalCount).toFixed(2);
+                                curSerieData.push(curOcrRate);
+                            });
+                            result.stackedBarChartModel.data.push(curSerieData);
+                        }
+                    });
+                    break;
+                case "storageusage":
+                    statisticsService.getStorageStatistics().success(function (data) {
+                        $log.debug(data);
+                        $scope.statisticsCsvData = data;
+                        result.csvData = data;
+
+                        if (result.csvData == null || result.csvData.length == 0) {
+                            $scope.showEmptyDataLabel = true;
+                        }
+                        else {
+                            $scope.showEmptyDataLabel = false;
+                        }
+                    });
+                    break;
+                case "customized":
+                    filter.CustomizedStoredProcedureName = $scope.currentCustomizedStatisticsSPName;
+                    $log.debug('filter:');
+                    $log.debug(filter);
+                    statisticsService.getCustomizedStatisticsData(filter).success(function (data) {
+                        $log.debug(data);
+                        $scope.statisticsCsvData = data;
+                        result.csvData = data;
+
+                        if (result.csvData == null || result.csvData.length == 0) {
+                            $scope.showEmptyDataLabel = true;
+                        }
+                        else {
+                            $scope.showEmptyDataLabel = false;
+                        }
+
+                    });
+                    result.csvData = null;
+                    break;
+            }
+            $scope.stackedBarChart.labels = result.stackedBarChartModel.labels;
+            $scope.stackedBarChart.series = result.stackedBarChartModel.series;
+            $scope.stackedBarChart.data = result.stackedBarChartModel.data;
+            $scope.statisticsCsvData = result.csvData;
+           
+        };
+
+        $scope.exportAction = function (option) {
+            $log.log('export option:' + option);
+            switch (option) {
+                case 'pdf':
+                    $http({
+                        method: 'POST',
+                        url: 'ContentExport/Convert2Pdf',
+                        responseType: "text",
+                        data: $.param({
+                            htmlContent: encodeURIComponent('<!DOCTYPE html><html><head><meta charset="utf-8"></head><body>' + document.getElementById('divGridStatistics').innerHTML + '</body></html>')
+                        }),
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        }
+                    }).success(function (data, status, headers, config) {
+                        $log.debug("pdfurl:" + data);
+                        window.open(data);
+                    }).error(function (data, status, headers, config) {
+                        alert("error");
+                    });
+                    break;
+                case 'csv':
+                    $log.debug("csvData:" + $scope.statisticsCsvData);
+
+                    $http({
+                        method: 'POST',
+                        url: 'ContentExport/Convert2Csv',
+                        responseType: "text",
+                        data: $.param({
+                            htmlContent: encodeURIComponent(angular.toJson($scope.statisticsCsvData))
+                        }),
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        }
+                    }).success(function (data, status, headers, config) {
+                        $log.debug("pdfurl:" + data);
+                        window.open(data);
+                    }).error(function (data, status, headers, config) {
+                        alert("error");
+                    });
+                    break;
+                default: console.log('no event caught');
+            }
+        }
+
+
+    }
+]);

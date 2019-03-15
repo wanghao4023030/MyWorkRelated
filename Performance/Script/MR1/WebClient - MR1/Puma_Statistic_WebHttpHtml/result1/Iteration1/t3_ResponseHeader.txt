@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Cache-Control: private
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/7.5
+Set-Cookie: ASP.NET_SessionId=ryea4fvqv14ww2szbrg2vzkb; path=/; HttpOnly
+X-AspNetMvc-Version: 5.2
+X-AspNet-Version: 4.0.30319
+Set-Cookie: ApiToken=%7B%22access_token%22%3A%22MSSAaEsxYtjhPmiTXg6zQ7gr209fLG_ySZGd2tNZfEITN0sC9LpRgBSJFjUtMNAiiPtzSHW1WHy-niJVdOeg6_tJuey44nmChJEUfaTyKFWrQjk1LMzt1XygQ5Zs7Rsvwut8GRngr4YBOh1WC1VUNqao0ZfzRJ-Mh7DFtlLHTRVVil9kc1sT4lnDKXFrFSnfoOEU-YSgidGEBdaCN3O2IA%22%2C%22token_type%22%3A%22bearer%22%2C%22expires_in%22%3A604799%2C%22refresh_token%22%3A%2217f2065b-babf-41d9-80bc-4b653f4bfd4f%22%2C%22userName%22%3A%22admin%22%2C%22currentRole%22%3A%22Administrator%2CRadiologist%2CTechnician%2CReceptionist%22%2C%22strDepartments%22%3A%22%22%2C%22strModalities%22%3Anull%2C%22onlyReport%22%3Anull%2C%22strUserPermissionList%22%3A%22%22%7D; path=/
+Set-Cookie: .AspNet.ApplicationCookie=kwZehPPNEYn2ouxbIXhQxnInOUV5VEbX8IfXU4wFM6_iDonkIlyzwzazeq_qONwbicU1Cddspq0y5WyCF6b9X-ACCId7XmvVVSpRfPIpd_vhXm1S-2B2gw_oM0LdSh9h7Cb7fynWfAL-F7lTxUuUU-5ooK38m8QxIaklIcOAL5z5emDWDwV1p87ZSUIcf3aAh9-5x1Ny2phd0LoPKLqcC5QCwXo_BvqChVNZoVJYhax11BZhkZw7GSAeUDAiDbtMqGrX0nwXbV-GiVy-hVu-wxMp_C2KqzEISYcLlSw00Ugt1vCJBxyiX3F7g4dwBaOj; path=/; HttpOnly
+X-Powered-By: ASP.NET
+Date: Tue, 05 Jun 2018 09:28:07 GMT
+Content-Length: 78
+

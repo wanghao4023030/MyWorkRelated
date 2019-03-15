@@ -1,0 +1,411 @@
+﻿//inject pascalprecht.translate，then angular follow-up loading every module will inject a translate server，without to declare each file(controller)  
+var workareaApp = angular.module("workareaApp", ["ui.router", 'ngMaterial', 'ngAnimate', 'cgBusy', 'treeControl', 'app.common', 'pascalprecht.translate', 'ui.select', 'toaster',
+    'app.webservices', 'workarea.worklist', 'workarea.terminalMonitor', 'workarea.reconciliation', 'workarea.statistics', 'workarea.adminSetting'])
+     // We always place constant at the beginning of all configuration blocks.
+    .constant('application', {
+        // region of current application
+        region: 'zh-CN',
+
+        configuration: {},
+        clientConfig: {},
+
+        // define angular events for $broadcast/$emit and $on
+        events: {
+
+        }
+    })
+
+    .config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$translateProvider', '$translatePartialLoaderProvider', 'application',
+        function ($stateProvider, $locationProvider, $urlRouterProvider, $translateProvider, $translatePartialLoaderProvider, application) {
+            $locationProvider.html5Mode(true);
+
+            var urlCtrlPrefix = urlPrefixWorkarea;
+            application.region = 'zh-CN';
+            // angular-translate configuration
+            var configurateTranslation = function () {
+
+                $translateProvider.useLoader('$translatePartialLoader', {
+                    urlTemplate: 'app-resources/i18n/{lang}/{part}.json'
+                });
+                // e.g.: projectconfig.json file should be under folder '/i18n/en-US/projectconfig.json' and printer.json should be '/i18n/en-US/printer.json'
+                $translateProvider.preferredLanguage(application.region).fallbackLanguage('zh-CN');
+
+            };
+
+
+            // configurate app root state
+            var configurateRoute = function () {
+                $stateProvider
+                .state("worklist", {
+                    url: urlCtrlPrefix + "/worklist",
+                    templateUrl: "app/workarea/worklist/views/worklist-template.html",
+                    controller: "worklistController",
+                    resolve: {
+                        permission: function (authenticatePermission) {
+                            return authenticatePermission.authorize('worklist');
+                        }
+                    }
+                })
+                .state("reconciliation", {
+                    url: urlCtrlPrefix + "/reconciliation",
+                    params: { "patientId": null, "accessionNumber": null, "instanceId": null, "type": null },
+                    templateUrl: "app/workarea/reconciliation/views/reconciliation-list.html",
+                    controller: "reconciliationCtrl",
+                    resolve: {
+                        permission: function (authenticatePermission) {
+                            return authenticatePermission.authorize('Reconciliation');
+                        }
+                    }
+                })
+                .state("terminalmonitor", {
+                    url: urlCtrlPrefix + "/terminalmonitor",
+                    templateUrl: "app/workarea/terminalmonitor/views/terminalmonitor-template.html",
+                    controller: "terminalMonitorController",
+                    resolve: {
+                        permission: function (authenticatePermission) {
+                            return authenticatePermission.authorize('PrinterMonitor');
+                        }
+                    }
+                })
+                .state("statistics", {
+                    url: urlCtrlPrefix + "/statistics",
+                    templateUrl: "app/workarea/statistics/views/statistics-template.html",
+                    controller: "statisticsController",
+                    resolve: {
+                        permission: function (authenticatePermission) {
+                            return authenticatePermission.authorize('StatisticsReport');
+                        }
+                    }
+                })
+                .state("system", {
+                    url: urlCtrlPrefix + "/settings",
+                    templateUrl: "app/workarea/adminsettings/system/views/system-setting-view.html",
+                    controller: "systemController",
+                    resolve: {
+                        permission: ['authenticatePermission', function (authenticatePermission) {
+                            return authenticatePermission.authorize('ConfigSystem');
+                        }]
+                    }
+                })
+                .state("log", {
+                    url: urlCtrlPrefix + '/logs',
+                    template: '<qclog-view></qclog-view>',
+                    //templateUrl: "app/workarea/adminsettings/log/views/qclog-view.html",
+                    //controller: "qclogController",
+                    resolve: {
+                        permission: ['authenticatePermission', function (authenticatePermission) {
+                            return authenticatePermission.authorize('QCLog');
+                        }]
+                    }
+                })
+                .state("user", {
+                    url: urlCtrlPrefix + "/users",
+                    templateUrl: "app/workarea/adminsettings/user/views/user-settings-view.html",
+                    controller: "userController",
+                    resolve: {
+                        permission: ['authenticatePermission', function (authenticatePermission) {
+                            return authenticatePermission.authorize('ConfigUser');
+                        }]
+                    }
+                })
+                .state("role", {
+                    url: urlCtrlPrefix + "/role",
+                    templateUrl: "app/workarea/adminsettings/role/views/role-settings-view.html",
+                    controller: "roleController",
+                    resolve: {
+                        permission: ['authenticatePermission', function (authenticatePermission) {
+                            return authenticatePermission.authorize('ConfigRole');
+                        }]
+                    }
+                });
+
+                // $urlRouterProvider.otherwise(urlCtrlPrefix + '/terminalmonitor');
+                // Warning! If we go to incorrect link  or no access link, then Infinite $digest Loop if we do preventDefault() in $stateChangeStart event fire many times.and 
+                //Error: [$rootScope:infdig] 10 $digest() iterations reached. Aborting! Watchers fired in the last 5 iterations: []
+                // you can fix it by using the other version of otherwise which takes a function: 
+                // https://github.com/angular-ui/ui-router/issues/2183
+                $urlRouterProvider.otherwise(function ($injector, $location) {
+                    var $state = $injector.get("$state");
+                    $state.go('terminalmonitor');
+                });
+            };
+
+            configurateTranslation();
+            configurateRoute();
+
+        }])
+    .factory('authenticatePermission', ['$log', '$q', '$rootScope', '$state', '$translate', '$timeout', '$window', 'permission', 'openDialog', 'workareaAppTranslation',
+        function ($log, $q, $rootScope, $state, $translate, $timeout, $window, permission, openDialog, workareaAppTranslation) {
+            'use strict';
+            $log.debug('authenticatePermission.factory()...');
+            // workareaAppTranslation.load(['workarea']);
+            return {
+                authorize: function (param) {
+                    if (permission.hasPermission(param)) {
+                        // Resolve the promise successfully
+                        return $q.resolve();
+                    } else {
+                        // The next bit of code is asynchronously tricky.
+                        //if (param === 'PrinterMonitor') {
+                        //    openDialog.openIconDialog(openDialog.NotifyMessageType.Warn, $translate.instant('AccessDenied'), $translate.instant('NoEnabledModule'));
+                        //    //$window.location.href = urlPrefix + '/account/logOff';
+                        //    //return;
+                        //} else {
+                        //    openDialog.openIconDialog(openDialog.NotifyMessageType.Warn, $translate.instant('AccessDenied'), $translate.instant('NoEnabledSpecifiedModule').replace("{0}", param));
+                        //}
+                        $timeout(function () {
+                            // This code runs after the authentication promise has been rejected.
+                            // Go to the hasNoPermission page  
+                            // if can't access any module , auto logout.
+                            if (param === 'PrinterMonitor') {
+                                $state.go('worklist');
+                            }
+                            else if (param === 'worklist') {
+                                $state.go('reconciliation');
+                            }
+                            else if (param === 'Reconciliation') {
+                                $state.go('statistics');
+                            }
+                            else if (param === 'StatisticsReport') {
+                                $state.go('system');
+                            }
+                            else if (param === 'ConfigSystem') {
+                                $state.go('log');
+                            }
+                            else if (param === 'QCLog') {
+                                $state.go('role');
+                            }
+                            else if (param === 'ConfigRole') {
+                                $state.go('user');
+                            }
+                            else {
+                                openDialog.openIconDialog(openDialog.NotifyMessageType.Warn, $translate.instant('AccessDenied'), $translate.instant('NoEnabledModule'));
+                            }
+
+                        });
+                        // Reject the authentication promise to prevent the state from loading
+                        $log.debug('$q.reject noPermission: ' + param);
+                        return $q.reject('noPermission');
+                    }
+                }
+            };
+        }
+    ])
+    // Provide the localization function for application and support async load translation table by parts on demand.
+    // Note: When trying to adding new translation resource into .json file, please check if the same KEY is existing in .json files under i18n folder.
+    // Because if two parts have the same property, the property value will be overwrited by the loaded last part.
+    // for example,
+    // We load app.json first and then load patient.json. "workareaPart.json" file contains a property {"Text" : "Test"} 
+    // and "adminsettings.json" file contains property {"Text" : "Overwrite Test"}  
+    // the "Text" on view will be translated to be "Overwrite Test".
+    .factory('workareaAppTranslation', ['$log', '$translatePartialLoader', '$translate',
+        function ($log, $translatePartialLoader, $translate) {
+            'use strict';
+            $log.debug('workareaAppTranslation.factory()...');
+
+            var translation = {
+                // part names for modules
+                // workarea part is for the translation of application level, not for a module for a business logic.
+                workareaPart: 'workarea',
+                // other parts for business logic
+                adminsettings: 'adminsettings',
+                barcode: 'barcode',
+                dicomviewer: 'dicomviewer',
+                reconciliation: 'reconciliation',
+                statistics: 'statistics',
+                terminalmonitor: 'terminalmonitor',
+                worklist: 'worklist',
+
+                // async load translation tables into application for specified part names that required for the view.    
+                // partNames: part names of array type 
+                load: function (partNames) {
+                    if (!angular.isArray(partNames)) {
+                        throw new TypeError('"partNames" should be an array!');
+                    }
+
+                    partNames.forEach(function (name) {
+                        $log.debug('workareaApp.load()...name:' + name);
+                        $translatePartialLoader.addPart(name);
+                    });
+
+                    $translate.refresh();
+                },
+                loadAll: function () {
+                    $log.debug('workareaApp.loadAll()...');
+                    _.map(_.values(translation), function (part) {
+                        if (_.isString(part)) {
+                            $translatePartialLoader.addPart(part);
+                        }
+                    });
+                    $translate.refresh();
+                }
+            };
+            return translation;
+        }
+    ])
+    .controller("workareaAppController", ['$rootScope', '$scope', '$q', '$location', '$log', '$window', '$http', '$translate', '$timeout', 'application', 'systemInformationServer', 'configurationServer', 'permission', 'workareaAppTranslation', 'clientToolService',
+        function ($rootScope, $scope, $q, $location, $log, $window, $http, $translate, $timeout, application, systemInformationServer, configurationServer, permission, workareaAppTranslation, clientToolService) {
+            'use strict';
+            $log.debug('workareaAppController.controller()...');
+
+
+            $scope.hasWorklistPermission = permission.hasPermission('worklist');
+            $scope.hasStatisticsPermission = permission.hasPermission('StatisticsReport');
+            $scope.hasReconciliationPermission = permission.hasPermission('Reconciliation');
+            $scope.hasTerminalmonitorPermission = permission.hasPermission('PrinterMonitor');
+            $scope.hasconfigPermission = permission.hasPermission('config');
+            $scope.hasConfigUserPermission = permission.hasPermission('ConfigUser');
+            $scope.hasConfigRolePermission = permission.hasPermission('ConfigRole');
+            $scope.hasConfigSystemPermission = permission.hasPermission('ConfigSystem');
+            $scope.hasQCLogPermission = permission.hasPermission('QCLog');
+
+            var getSystemVersion = function myfunction() {
+                systemInformationServer.getSystemVersion().success(function (result) {
+                    $scope.systemVersion = result;
+                });
+            };
+
+            var getConfigurationData = function myfunction() {
+                var deferred = $q.defer();
+                var configurationData = {};
+
+                var dataTableRowsPerPagePromise = configurationServer.getDataTableRowsPerPage();
+                var worklistColumnsPromise = configurationServer.getWorklistColumns();
+                var incompleteTaskEnabledPromise = configurationServer.getIncompleteTaskEnabled();
+
+                $q.all([dataTableRowsPerPagePromise, worklistColumnsPromise, incompleteTaskEnabledPromise]).then(function (results) {
+                    //dataTableRowsPerPagePromise
+                    var dataTableRowsPerPage = results[0].data;
+                    configurationData.pageSizeDefault = dataTableRowsPerPage.pageSizeDefault;
+                    configurationData.pageSizes = dataTableRowsPerPage.pageSizes;
+
+                    //worklistColumnsPromise
+                    configurationData.worklistColumnsConfig = results[1].data;
+
+                    //incompleteTaskEnabledPromise
+                    configurationData.incompleteEnabled = results[2].data;
+
+                    deferred.resolve(configurationData);
+                });
+
+                return deferred.promise;
+            };
+
+            var initalizeTranslate = function () {
+                $log.debug('workareaAppController.controller()...initalizeTranslate()...');
+                $scope.collapsePages = {
+                    worklist: {
+                        displayName: 'Worklist',
+                        permission: $scope.hasWorklistPermission
+                    },
+                    reconciliation: {
+                        displayName: 'Reconciliation',
+                        permission: $scope.hasReconciliationPermission
+                    },
+                    terminalmonitor: {
+                        displayName: 'TerminalMonitor',
+                        permission: $scope.hasTerminalmonitorPermission
+                    },
+                    statistics: {
+                        displayName: 'Statistics',
+                        permission: $scope.hasStatisticsPermission
+                    }
+                };
+
+                $scope.dropdownPages = {
+                    system: {
+                        displayName: 'SystemConfiguration',
+                        permission: $scope.hasConfigSystemPermission
+                    },
+                    user: {
+                        displayName: 'UserManagement',
+                        permission: $scope.hasConfigUserPermission
+                    },
+                    role: {
+                        displayName: 'RoleManagement',
+                        permission: $scope.hasConfigRolePermission
+                    },
+                    log: {
+                        displayName: 'QCLog',
+                        permission: $scope.hasQCLogPermission
+                    }
+                };
+
+                if ($scope.hasconfigPermission) {
+                    if ($scope.hasConfigSystemPermission) {
+                        $scope.dropdownTitle = $scope.dropdownPages.system.displayName;
+                    } else if (!$scope.hasConfigSystemPermission && $scope.hasConfigUserPermission) {
+                        $scope.dropdownTitle = $scope.dropdownPages.user.displayName;
+                    } else if (!$scope.hasConfigSystemPermission && !$scope.hasConfigUserPermission && $scope.hasConfigRolePermission) {
+                        $scope.dropdownTitle = $scope.dropdownPages.role.displayName;
+                    } else if (!$scope.hasConfigSystemPermission && !$scope.hasConfigUserPermission && !$scope.hasConfigRolePermission && $scope.hasQCLogPermission) {
+                        $scope.dropdownTitle = $scope.dropdownPages.log.displayName;
+                    }
+                }
+
+            };
+
+            var logout = function () {
+                $window.location.href = urlPrefix + '/account/logOff';
+            };
+
+            var downloadReconciliationTool = function () {
+                clientToolService.downloadReconciliationTool();
+            };
+
+            var downloadBarcodeTool = function () {
+                clientToolService.downloadBarcodeTool();
+            };
+
+            var selectedItem = function (param) {
+                $scope.activeItem = param;
+            };
+
+            var initHiglightBottom = function () {
+                var relativePath = $location.$$path;
+                if (relativePath != "") {
+                    var trimReg = /^\//;
+                    var index = relativePath.lastIndexOf("\/"); // get the last route
+                    var key = relativePath.substring(index + 1, relativePath.length);
+                    $scope.activeItem = key;
+                    if (key === urlPrefixWorkarea.slice(1)) {
+                        $scope.activeItem = 'terminalmonitor'; // first login, url haven't deeper-level router, default selected terminalmonitor
+                    }
+                }
+            };
+
+            (function initialize() {
+
+                workareaAppTranslation.loadAll();
+                $scope.logout = logout;
+                $scope.downloadReconciliationTool = downloadReconciliationTool;
+                $scope.downloadBarcodeTool = downloadBarcodeTool;
+                $scope.selectedItem = selectedItem;
+
+                initalizeTranslate();
+                initHiglightBottom();
+
+
+                getConfigurationData().then(function (data) {
+                    application.configuration = data;
+                });
+
+                getSystemVersion();
+
+                //$rootScope.$on('$stateChangeStart',
+                //  function (event, toState, toParams, fromState, fromParams) {
+                //       //event.preventDefault();
+                //      // transitionTo() promise will be rejected with a 'transition prevented' error
+                //      $log.debug('$stateChangeStart: ' + toState.name);
+                //  });
+
+                //$rootScope.$on('$stateChangeSuccess',
+                //    function (event, toState, toParams, fromState, fromParams) {
+                //        $log.debug('$stateChangeSuccess: ' + toState.name);
+                //    });
+
+
+
+
+            })();
+        }]);

@@ -1,0 +1,32 @@
+[Scenario]
+Product=HP LoadRunner Controller
+Version=12.53.0.0
+Path=C:\Program Files (x86)\HP\LoadRunner\scenario\Scenario1.lrs
+Subject=Scenario1
+Result_file=D:\WebClient\Puma_worklist_WebHttpHtml\res\res.lrr
+Description=
+ResultName=res
+Time_Zone=-28800
+Start_time=1510038687
+Daylight_Bias=0
+Stop_time=1510041106
+[Configuration]
+Public_local=1
+Is_mix=1
+Is_runner_file=0
+Runner_file=
+[Running_mode]
+Start_reason=By command
+Stop_reason=By command
+[Data Collection]
+FullData=1
+[Scenario_summary]
+Scenario Type=Manual Scenario
+Goal Profile Name=Schedule 1
+Mode=Scenario Scheduling
+Scenario Duration=Start all Vusers: 1 every 00:00:10 (HH:MM:SS); Run for 02:00:00 (HH:MM:SS); Stop all Vusers: 1 every 00:00:10 (HH:MM:SS)
+Load Behavior=Initialize each Vuser just before it runs
+[Scripts]
+Puma_worklist_WebHttpHtml=D:\WebClient\Puma_worklist_WebHttpHtml\Puma_worklist_WebHttpHtml.usr
+[Scripts_types]
+Puma_worklist_WebHttpHtml=Multi+QTWeb

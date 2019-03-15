@@ -1,0 +1,75 @@
+﻿<div ng-class="{true: 'login_wrapper_puma', false: 'login_wrapper_k3'}[isEntireHospital]">
+
+
+    <div id="login" class="well well-large form_wrapper " ng-if="isLoginPage">
+        <div class="company-title">
+            <span class="company-logo"></span>
+            <span>{{hospitalLogoText}}打印管理系统</span>
+        </div>
+        <div class="puma-module-title ">
+            <span class="icon-ico_ps_logo puma-module-title-ico"></span>
+            <span class="puma-module-title-text">&nbsp;&nbsp;{{ 'UserLogin' | translate }}</span>
+        </div>
+        <form id="loginform" name="loginForm" method="post" style="margin-top:25px">
+
+            <div class="form-group" ng-class="{'has-error':(loginForm.loginName.$error.required || loginError) && loginForm.loginName.$dirty}">
+                <input type="text" name="loginName" class="form-control" ng-model="loginform.loginName" required placeholder="{{ 'UserName' | translate }}" vt-enter="focusPw = true" />
+                <span class="icon-ico_reg_id glyphicon" />
+            </div>
+            <div class="form-group" ng-class="{'has-error':(loginForm.loginlPwd.$error.required || loginPwdError) && loginForm.loginlPwd.$dirty}">
+                <input type="password" name="loginlPwd" class="form-control" ng-model="loginform.loginlPwd" required placeholder="{{ 'Password' | translate }}" focus-me="focusPw" vt-enter="login()">
+                <span class="icon-ico_reg_pwd glyphicon" />
+            </div>
+            <div class="form-group ">
+                <div style="float:left"><input type="checkbox" data-ng-model="loginform.isRemember" /><span>&nbsp;{{ 'RemindMe' | translate }}</span></div>
+                <a ng-click="switchPage(false)" href="#" style="float:right"><span class="icon-ico_edit"></span>&nbsp;{{ 'ChangePassword' | translate }}</a>
+            </div>
+
+            <div class="form-group ">
+                <button id="btnLogin" class="btn btn-sm btn_login" ng-class="{true: 'bg_color_puma', false: 'bg_color_k3'}[isEntireHospital]" type="submit" ng-click="login()">{{ 'Login' | translate }}</button>
+            </div>
+            <span class="help-block" style="color:red" ng-show="!loginForm.loginName.$error.required && loginError"><span class="icon-ico_alert"></span>&nbsp;{{loginErrorMessage}}</span>
+            <span class="help-block" style="color:red" ng-show="!loginForm.password.$error.required && loginPwdError"><span class="icon-ico_alert"></span>&nbsp;{{loginPwdErrorMessage}}</span>
+
+        </form>
+    </div>
+
+    <div id="changePassword" class="well well-large form_wrapper" style=" height: 550px;" ng-if="!isLoginPage">
+        <div class="puma-module-title ">
+            <span class="icon-ico_page_previous puma-module-title-ico" style="cursor:pointer" ng-click="switchPage(false)"></span>
+            <span style="font-size: 1.6em;">&nbsp;&nbsp;{{ 'ChangePassword' | translate }}</span>
+        </div>
+        <form id="changepwdform" name="changePasswordForm" style="margin-top:40px">
+            <span ng-show="isFirstLogin" class="help-block">{{isFirstLoginMessage}}</span>
+            <div class="form-group" ng-class="{'has-error': userNameNotExist}">
+                <input type="text" class="form-control" ng-model="loginform.loginName" required placeholder="{{ 'UserName' | translate }}">
+                <span class="icon-ico_reg_id glyphicon" />
+            </div>
+            <div class="form-group required" ng-class="{'has-error': wrongOldPassword}">
+                <input type="password" class="form-control" ng-model="changepwdform.oldPassword" placeholder="{{ 'OldPassword' | translate }}" ng-changed="wrongOldPassword = 0" required>
+                <span class="icon-ico_reg_pwd glyphicon" />
+            </div>
+            <div class="form-group required" ng-class="{'has-error': invalidNewPwd}">
+                <input name="passwordInput" type="password" class="form-control" ng-model="changepwdform.newPassword" minlength="6" placeholder="{{ 'NewPassword' | translate }}" required>
+                <span class="icon-ico_reg_pwd glyphicon" />
+            </div>
+            <div class="form-group required" ng-class="{'has-error': confirmNewPassword && changepwdform.newPassword !== changepwdform.confirmNewPassword}">
+                <input type="password" class="form-control" ng-model="changepwdform.confirmNewPassword" placeholder="{{ 'ConfrimNewPassword' | translate }}" required>
+                <span class="icon-ico_reg_pwd glyphicon" />
+
+            </div>
+            <div class="form-group">
+                <div>
+                    <button type="submit" style="float:left" class="btn btn_changepassword" ng-class="{true: 'bg_color_puma', false: 'bg_color_k3'}[isEntireHospital]" ng-disabled="changePasswordForm.$pristine || changePasswordForm.$invalid || changepwdform.newPassword !== changepwdform.confirmNewPassword" ng-click="save()">{{ 'Save' | translate }}</button>
+                    <button type="button" style="float:right" class="btn btn-sm btn_changepassword" ng-click="switchPage(false)">{{ 'Cancel' | translate }}</button>
+                </div>
+            </div>
+            <span ng-show="userNameNotExist" class="help-block" style="color:red"><span class="icon-ico_alert"></span>&nbsp;{{userNameNotExistMessage}}</span>
+            <span ng-show="wrongOldPassword" class="help-block" style="color:red"><span class="icon-ico_alert"></span>&nbsp;{{wrongOldPasswordMessage}}</span>
+            <span ng-show="invalidNewPwd" class="help-block" style="color:red"><span class="icon-ico_alert"></span>&nbsp;{{invalidNewPwdMessage}}</span>
+            <span ng-show="changePasswordForm.passwordInput.$error.minlength" class="help-block" style="color:red"><span class="icon-ico_alert"></span>&nbsp;{{'HelpMinLength' | translate}}</span>
+            <span ng-show="changePasswordForm.passwordInput.$valid && changepwdform.confirmNewPassword && changepwdform.newPassword !== changepwdform.confirmNewPassword" class="help-block " style="color:red"><span class="icon-ico_alert"></span>&nbsp;{{'HelpDifferentPassword' | translate}}</span>
+        </form>
+
+    </div>
+</div>

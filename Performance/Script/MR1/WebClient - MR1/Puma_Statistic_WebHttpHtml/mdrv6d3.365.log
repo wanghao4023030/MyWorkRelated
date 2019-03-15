@@ -1,0 +1,12 @@
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(287): Downloading resource "http://10.184.129.108/Platform/app-resources/images/terminalmonitor/terminal_0.png" (specified by argument number 23)  	[MsgId: MMSG-26577]
+Action.c(287): web_url("CheckLoginStatus_5") was successful, 108288 body bytes, 1735 header bytes  	[MsgId: MMSG-26386]
+Action.c(303): Notify: Transaction "User_login" ended with a "Pass" status (Duration: 16.1498 Wasted Time: 0.0001).	[MsgId: MMSG-16871]
+Action.c(305): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(307): web_url("reconciliation-list.html") started  	[MsgId: MMSG-26355]
+Action.c(307): web_url("reconciliation-list.html") was successful, 17522 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Action.c(315): web_url("getUnmatchImages") started  	[MsgId: MMSG-26355]
+Action.c(315): Continuing after Error -26612: HTTP Status-Code=500 (EntityException) for "http://10.184.129.108/webapi/api/reconciliation/getUnmatchImages?days=1"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

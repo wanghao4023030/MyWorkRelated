@@ -1,0 +1,55 @@
+<?xml-stylesheet href="..\http.xsl" type="text/xsl"?>
+<report vuGenInstallDir="C:\Program Files (x86)\HP\LoadRunner\">
+  <http>
+    <request>
+      <header>POST http://10.184.129.108/PerformanceTest/CreateFilmTestData.asmx HTTP/1.1
+Content-Type: text/xml; charset=utf-8
+Cache-Control: no-cache
+SOAPAction: "http://tempuri.org/QueryResult"
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 1.1.4322.2032)
+Accept-Encoding: gzip, deflate
+Accept: */*
+Proxy-Connection: Keep-Alive
+Host: 10.184.129.108
+Content-Length: 748
+
+</header>
+      <body>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"&gt;
+  &lt;soap:Header&gt;
+    &lt;wsa:Action&gt;http://tempuri.org/QueryResult&lt;/wsa:Action&gt;
+    &lt;wsa:MessageID&gt;uuid:92794818-b735-41a2-b9c8-6ab65863145c&lt;/wsa:MessageID&gt;
+    &lt;wsa:ReplyTo&gt;
+      &lt;wsa:Address&gt;http://schemas.xmlsoap.org/ws/2004/03/addressing/role/anonymous&lt;/wsa:Address&gt;
+    &lt;/wsa:ReplyTo&gt;
+    &lt;wsa:To&gt;http://10.184.129.108/PerformanceTest/CreateFilmTestData.asmx&lt;/wsa:To&gt;
+  &lt;/soap:Header&gt;
+  &lt;soap:Body&gt;
+    &lt;QueryResult xmlns="http://tempuri.org/"&gt;
+      &lt;strACCN&gt;A20180126160715000&lt;/strACCN&gt;
+    &lt;/QueryResult&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;</body>
+    </request>
+    <response>
+      <header>HTTP/1.1 200 OK
+Cache-Control: private, max-age=0
+Content-Type: text/xml; charset=utf-8
+Server: Microsoft-IIS/7.5
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Fri, 26 Jan 2018 08:02:25 GMT
+Content-Length: 360
+
+</header>
+      <body>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;soap:Body&gt;
+    &lt;QueryResultResponse xmlns="http://tempuri.org/"&gt;
+      &lt;QueryResultResult&gt;true&lt;/QueryResultResult&gt;
+    &lt;/QueryResultResponse&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;</body>
+    </response>
+  </http>
+</report>

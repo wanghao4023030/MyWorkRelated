@@ -1,0 +1,16 @@
+﻿commonModule.directive('notAllowDot', function () {
+    return {
+        restrict: 'A',
+        link: function (scope, elm, attrs, ctrl) {
+            elm.on('keydown', function (event) {
+                if (event.which == 190 || event.which == 110) {
+                    //Stop dot
+                    event.preventDefault();
+                    return false;
+                } else {
+                    return true;
+                }
+            });
+        }
+    }
+});

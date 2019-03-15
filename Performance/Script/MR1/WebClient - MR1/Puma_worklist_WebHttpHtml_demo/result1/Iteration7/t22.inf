@@ -1,0 +1,13 @@
+[t22]
+SnapshotXmlFile=snapshot_22.xml
+ContentType=DummyContentType
+StepName=Custom Request: searchWorklist_2
+Total=1
+FileName1=t22.UNK
+RequestHeaderFile=t22_RequestHeader.txt
+ResponseHeaderFile=t22_ResponseHeader.txt
+RawStepEndTime=1515461805340
+RawStepName=searchWorklist_2
+RequestBodyFile=t22_RequestBody.txt
+RawStepStartTime=1515461804178
+URL1=file:

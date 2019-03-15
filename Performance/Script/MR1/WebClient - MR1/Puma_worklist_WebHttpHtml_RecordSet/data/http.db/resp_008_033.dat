@@ -1,0 +1,458 @@
+﻿<div>
+    <div class="container" style="width:100%;margin-top:20px;">
+        <div class="row">
+            <div class="col-sm-8">
+                <span id="deptlist" ng-show="false">
+                    <span class="well well-sm">All <span class="badge terminalNumber">5</span></span>
+                    <span class="well well-sm">Dept1 <span class="badge terminalNumber">3</span></span>
+                    <span class="well well-sm">Dept2 <span class="badge terminalNumber">2</span></span>
+                </span>
+            </div>
+            <div class="col-sm-4 pull-right">
+                <div class="row">
+
+                    <div class="col-sm-3 col-sm-push-3" cg-busy="{promise: loadingPromise,message:loadingMessage}"></div>
+                    <div class="col-lg-7 pull-right form-inline">
+                        <span>
+                            <span>
+                                <input type="checkbox" class="checkbox checkbox-inline" style="display:inline-block"
+                                       ng-model="isAutoRefreshMonitoringData"
+                                       ng-change="autoRefreshMonitoringData()" />&nbsp;自动刷新
+                            </span>
+                            <span class="glyphicon glyphicon-refresh" ng-click="refreshMonitoringData()"></span>
+                        </span>
+                        <button type="button" class="btn btn-sm btn-warning pull-right" ng-click="downloadP3Data()">
+                            <span class="glyphicon glyphicon-download">
+                                下载P3Data
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="margin-top:10px;">
+    <div class="container" style="width:100%">
+        <div class="row">
+            <div class="col-sm-12" ng-repeat="terminal in terminalMonitoringData" style="margin-bottom:3px;" ng-init="terminalIndex = $index">
+                <div class="row terminalHeaderRow">
+                    <div class="col-md-3 col-lg-3">
+                        <!--terminalID-->
+                        <span ng-click="collapseTerminalDetail($index)" ng-animate="'animate'"
+                              style="margin-left:15px;display:inline-block;height:18px;"
+                              class="glyphicon" ng-class="{'glyphicon-triangle-right': isTerminalDetailShow($index)==false, 'glyphicon-triangle-bottom': isTerminalDetailShow($index)==true}">&nbsp;{{$index+1}}-{{terminal.terminalID}}</span>
+                        <!--todo-->
+                        <span ng-switch on="terminal.terminalType">
+                            <span class="badge badge-info" ng-switch-when="0">K2</span>
+                            <span class="badge badge-inverse" ng-switch-when="1">Custom</span>
+                            <span class="badge badge-warning" ng-switch-when="2">E1</span>
+                            <span class="badge badge-success" ng-switch-when="3">K3</span>
+                        </span>
+                        <!--error icons-->
+                        <span ng-switch on="terminal.termianalStatusLevel">
+                            <span ng-switch-when="Error" class="glyphicon glyphicon-alert terminalError"></span>
+                            <span ng-switch-when="Warning" class="glyphicon glyphicon-alert terminalWarning"></span>
+                            <span ng-switch-when="Normal" class="glyphicon glyphicon-alert terminalNormal"></span>
+                            <span ng-switch-when="Default" class="glyphicon glyphicon-alert terminalNormal"></span>
+                        </span>
+                        <span ng-if="terminal.terminalStatusLevel=='Error'" class="glyphicon glyphicon-alert terminalError"></span>
+
+                        <span ng-if="terminal.terminalStatus==0" class="glyphicon glyphicon-ok-sign terminalNormal"></span>
+                    </div>
+                    <div class="col-md-6 col-lg-6">
+                    </div>
+                    <div class="col-md-3 col-lg-3" style="display:inline-block;height:45px;">
+                        <ul class="nav nav-tabs small pull-right deviceIcon" style="margin-top:5px;">
+                            <li role="presentation" class="active">
+                                <a class="active terminalIcon" href="#" data-toggle="tab" aria-expanded="true" ng-click="tabClick('terminal',$index)">
+                                </a>
+                                <span class="badge-notify "></span>
+                            </li>
+                            <li role="presentation" ng-if="terminal.filmPrinterInfo.filmPrinterID>-1">
+                                <a class="filmPrinterIcon" href="#" data-toggle="tab" aria-expanded="false" ng-click="tabClick('filmPrinter',$index,0)"></a>
+                                <span class="badge-notify "></span>
+                            </li>
+                            <!--report printer are multiple-->
+                            <li role="presentation" ng-repeat="reportPrinter in terminal.reportPrintersInfo | orderBy:'printerType'">
+                                <!--printerType: 0 for black-white printer; 1 for color printer-->
+                                <a ng-class="{'reportPrinterIcon':reportPrinter.printerType==0,'reportColorPrinterIcon': reportPrinter.printerType==1}"
+                                   ng-click="tabClick('reportPrinter',terminalIndex,$index)"
+                                   href="#" data-toggle="tab" aria-expanded="false">
+                                </a>
+                                <span ng-if="reportPrinter.ReportPrinterErrorCode !=''" class="badge-notify "></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!--Detail Information-->
+                <div class="col-sm-12" ng-show="isTerminalDetailShow($index)"
+                     ng-class="animate">
+                    <!--Terminal Information-->
+                    <div class="row detailRow " id="TD-{{$index}}" ng-show="getTabStatus('terminal',$index)">
+                        <div class="col-md-1">
+                            <div style="padding-left:30%">
+                                <img ng-src="app-resources/images/terminalmonitor/terminal_{{terminal.terminalType}}.png" style="width:100px" />
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div style="padding-left:15%">
+                                <table align="center" class="tbCenter">
+                                    <tr>
+                                        <td>TerminalID</td>
+                                        <td>{{terminal.terminalID}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TerminalName</td>
+                                        <td>{{terminal.terminalName}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Status</td>
+                                        <td>{{terminal.terminalStatus}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IP</td>
+                                        <td>{{terminal.terminalIP}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-1 diverTerminalMonitor">
+                            <div style="padding-right:0;margin-bottom:30px;height:100px"></div>
+                        </div>
+                        <div class="col-md-7">
+                            <div ng-if="terminal.terminalStatusLevel!='Normal'">
+                                <div>All Error Code</div>
+                                <ul class="terminalErrorList list-unstyled ">
+                                    <li>
+                                        <!--TODO-->
+                                        <!--display all error descriptions of filmprinter and reportprinter by errorcode mapped from ErrorCode.json-->
+                                        <!--<span class="roundedBorder">[{{terminal.terminalStatusLevel}}]: {{terminal.terminalStatusDescription}}</span>-->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Film Printer Information-->
+                    <div class="row detailRow" ng-show="getTabStatus('filmPrinter',$index,0)" ng-class="animate">
+                        <div class="col-md-3">
+                            <table class="tbCenter">
+                                <tr>
+                                    <td>PrinterName</td>
+                                    <td>{{terminal.filmPrinterInfo.filmPrinterName}}</td>
+                                </tr>
+                                <tr>
+                                    <td>PrinterModel</td>
+                                    <td>{{terminal.filmPrinterInfo.filmPrinterModel}}</td>
+                                </tr>
+                                <tr style="height:auto">
+                                    <td style="vertical-align:top;">Status</td>
+                                    <td>
+                                        <div ng-if="terminal.filmPrinterInfo.filmPrinterStatusLevel=='Normal'">
+                                            <span class="label-info roundedBorder">{{terminal.filmPrinterInfo.filmPrinterStatusLevel}}</span>
+                                        </div>
+                                        <div ng-if="terminal.filmPrinterInfo.filmPrinterStatusLevel=='Warning'">
+                                            <span class="label-warning roundedBorder">{{terminal.filmPrinterInfo.filmPrinterStatusLevel}}</span>
+                                        </div>
+                                        <div ng-if="terminal.filmPrinterInfo.filmPrinterStatusLevel=='Error'">
+                                            <span class="label-danger roundedBorder">{{terminal.filmPrinterInfo.filmPrinterStatusLevel}}</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-3">
+                            <!--Film Printer Drawer1-->
+                            <div class="row" style="padding-top:15px;">
+                                <div class="col-md-1 diverTerminalMonitor">
+                                    <div style="padding-right:0;margin-bottom:15px;height:100px"></div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div style="max-width:80px;text-align:right;padding-right:15px;">
+                                        <div>片盒1</div>
+                                        <div>{{terminal.filmPrinterInfo.filmDrawers[0].mediaType}}</div>
+                                        <div>{{terminal.filmPrinterInfo.filmDrawers[0].mediaSize}}</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="c100 p{{terminal.filmPrinterInfo.filmDrawers[0].availablePercentage}}"
+                                         ng-class="{'green': terminal.filmPrinterInfo.filmDrawers[0].availablePercentage>=10,'red':terminal.filmPrinterInfo.filmDrawers[0].availablePercentage<10}">
+                                        <span>{{terminal.filmPrinterInfo.filmDrawers[0].availablePercentage}}%</span>
+                                        <div class="slice">
+                                            <div class="bar"></div>
+                                            <div class="fill"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <!--Film Printer Drawer2-->
+                            <div class="row" style="padding-top:15px;">
+                                <div class="col-md-1 diverTerminalMonitor">
+                                    <div style="padding-right:0;margin-bottom:15px;height:100px"></div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div style="max-width:80px;text-align:right;">
+                                        <div>片盒2</div>
+                                        <div>{{terminal.filmPrinterInfo.filmDrawers[1].mediaType}}</div>
+                                        <div>{{terminal.filmPrinterInfo.filmDrawers[1].mediaSize}}</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="c100 p{{terminal.filmPrinterInfo.filmDrawers[1].availablePercentage}}"
+                                         ng-class="{'green': terminal.filmPrinterInfo.filmDrawers[1].availablePercentage>=10,'red':terminal.filmPrinterInfo.filmDrawers[1].availablePercentage<10}">
+                                        <span>{{terminal.filmPrinterInfo.filmDrawers[1].availablePercentage}}%</span>
+                                        <div class="slice">
+                                            <div class="bar"></div>
+                                            <div class="fill"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <!--Film Printer Drawer3-->
+                            <div class="row" style="padding-top:15px;">
+                                <div class="col-md-1 diverTerminalMonitor">
+                                    <div style="padding-right:0;margin-bottom:15px;height:100px"></div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div style="max-width:80px;text-align:right;">
+                                        <div>片盒3</div>
+                                        <div>{{terminal.filmPrinterInfo.filmDrawers[2].mediaType}}</div>
+                                        <div>{{terminal.filmPrinterInfo.filmDrawers[2].mediaSize}}</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="c100 p{{terminal.filmPrinterInfo.filmDrawers[2].availablePercentage}}"
+                                         ng-class="{'green': terminal.filmPrinterInfo.filmDrawers[2].availablePercentage>=10,'red':terminal.filmPrinterInfo.filmDrawers[2].availablePercentage<10}">
+                                        <span>{{terminal.filmPrinterInfo.filmDrawers[2].availablePercentage}}%</span>
+                                        <div class="slice">
+                                            <div class="bar"></div>
+                                            <div class="fill"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Report Printer Information-->
+                    <div class="row detailRow animate-show" ng-repeat="reportPrinter in terminal.reportPrintersInfo |orderBy: 'printerType'"
+                         ng-class="animate"
+                         ng-show="getTabStatus('reportPrinter',terminalIndex,$index)">
+                        <div>
+                            <div class="col-md-3">
+                                <table class="tbCenter">
+                                    <tr>
+                                        <td>PrinterID</td>
+                                        <td>{{reportPrinter.printerID}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PrinterName</td>
+                                        <td>{{reportPrinter.printerName}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PrinterModel</td>
+                                        <td>{{reportPrinter.printerModel}}</td>
+                                    </tr>
+                                    <tr style="height:auto">
+                                        <td style="vertical-align:top;">Status</td>
+                                        <td>
+                                            <div ng-if="reportPrinter.statusDescription =='Normal'">
+                                                <span class="label-info roundedBorder">{{reportPrinter.errorDescription}}</span>
+                                            </div>
+                                            <div ng-if="reportPrinter.statusDescription =='Warning'">
+                                                <span class="label-warning roundedBorder">{{reportPrinter.errorDescription}}</span>
+                                            </div>
+                                            <div ng-if="reportPrinter.statusDescription =='Error'">
+                                                <span class="label-danger roundedBorder">{{reportPrinter.errorDescription}}</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-md-3">
+                                <!--Report Printer Drawer1-->
+                                <div class="row" style="padding-top:15px;">
+                                    <div class="col-md-1 diverTerminalMonitor">
+                                        <div style="padding-right:0;margin-bottom:15px;height:100px"></div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div style="max-width:80px;text-align:right;padding-right:15px;">
+                                            <div>纸盒1</div>
+                                            <div>{{reportPrinter.reportDrawersInfo[0].drawerName}}</div>
+                                            <div>{{reportPrinter.reportDrawersInfo[0].paperType}}</div>
+                                            <div>{{reportPrinter.reportDrawersInfo[0].paperSizeType}}</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="c100 p25"
+                                             ng-class="{'green': reportPrinter.reportDrawersInfo[0].statusCode==3,'red':reportPrinter.reportDrawersInfo[0].statusCode!=3}">
+                                            <span>{{reportPrinter.reportDrawersInfo[0].statusDescription}}</span>
+                                            <div class="slice">
+                                                <div class="bar"></div>
+                                                <div class="fill"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <!--Report Printer Drawer2-->
+                                <div class="row" style="padding-top:15px;">
+                                    <div class="col-md-1 diverTerminalMonitor">
+                                        <div style="padding-right:0;margin-bottom:15px;height:100px"></div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div style="max-width:80px;text-align:right;">
+                                            <div>纸盒2</div>
+                                            <div>{{reportPrinter.reportDrawersInfo[1].drawerName}}</div>
+                                            <div>{{reportPrinter.reportDrawersInfo[1].paperType}}</div>
+                                            <div>{{reportPrinter.reportDrawersInfo[1].paperSizeType}}</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="c100 p25"
+                                             ng-class="{'green': reportPrinter.reportDrawersInfo[1].statusCode==3,'red':reportPrinter.reportDrawersInfo[1].statusCode!=3}">
+                                            <span>{{reportPrinter.reportDrawersInfo[1].statusDescription}}</span>
+                                            <div class="slice">
+                                                <div class="bar"></div>
+                                                <div class="fill"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <!--Report Printer Ink Drawer-->
+                                <div class="row" style="padding-top:15px;">
+                                    <div class="col-md-1 diverTerminalMonitor">
+                                        <div style="padding-right:0;margin-bottom:15px;height:100px"></div>
+                                    </div>
+                                    <div class="col-md-10 center">
+                                        <!--black-and-white printer drawer: only one black ink-->
+                                        <div class="row" ng-if="reportPrinter.printerType == 0">
+                                            <div class="col-sm-3 col-sm-offset-5">
+                                                <div style="width:100%;text-align:center">
+                                                    <div>黑</div>
+                                                    <div class="progress progress-bar-vertical">
+                                                        <div class="blackInk " role="progressbar"
+                                                             aria-valuemax="100"
+                                                             aria-valuemin="0"
+                                                             aria-valuenow="{{reportPrinter.blackInkLevel}}"
+                                                             style="height:{{reportPrinter.blackInkLevel}}%">
+                                                            <span style="width:100%">
+                                                                <span ng-if="reportPrinter.blackInkLevel >= 20">
+                                                                    {{reportPrinter.blackInkLevel}}%
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div ng-if="reportPrinter.blackInkLevel < 20" class="lowInk">
+                                                        <span style="color:red;">{{reportPrinter.blackInkLevel}}%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--color printer drawer: four color inks-->
+                                        <div class="row" ng-if="reportPrinter.printerType == 1">
+                                            <div class="col-sm-3">
+                                                <div style="width:100%;text-align:center">
+                                                    <div>黑</div>
+                                                    <div class="progress progress-bar-vertical">
+                                                        <div class="blackInk " role="progressbar"
+                                                             aria-valuemax="100"
+                                                             aria-valuemin="0"
+                                                             aria-valuenow="{{reportPrinter.blackInkLevel}}"
+                                                             style="height:{{reportPrinter.blackInkLevel}}%">
+                                                            <span style="width:100%">
+                                                                <span ng-if="reportPrinter.blackInkLevel >= 20">
+                                                                    {{reportPrinter.blackInkLevel}}%
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div ng-if="reportPrinter.blackInkLevel < 20" class="lowInk">
+                                                        <span style="color:red;">{{reportPrinter.blackInkLevel}}%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div style="width:100%;text-align:center">
+                                                    <div>蓝</div>
+                                                    <div class="progress progress-bar-vertical">
+                                                        <div class="cyanInk" role="progressbar"
+                                                             aria-valuemax="100"
+                                                             aria-valuemin="0"
+                                                             aria-valuenow="{{reportPrinter.cyanInkLevel}}"
+                                                             style="height:{{reportPrinter.cyanInkLevel}}%">
+                                                            <span style="width:100%">
+                                                                <span ng-if="reportPrinter.cyanInkLevel >= 20">
+                                                                    {{reportPrinter.cyanInkLevel}}%
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div ng-if="reportPrinter.cyanInkLevel < 20" class="lowInk">
+                                                        <span style="color:red">{{reportPrinter.cyanInkLevel}}%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div style="width:100%;text-align:center">
+                                                    <div>红</div>
+                                                    <div class="progress progress-bar-vertical">
+                                                        <div class="magentaInk" role="progressbar"
+                                                             aria-valuemax="100"
+                                                             aria-valuemin="0"
+                                                             aria-valuenow="{{reportPrinter.magentaInkLevel}}"
+                                                             style="height:{{reportPrinter.magentaInkLevel}}%">
+                                                            <span style="width:100%">
+                                                                <span ng-if="reportPrinter.magentaInkLevel >= 20">
+                                                                    {{reportPrinter.magentaInkLevel}}%
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div ng-if="reportPrinter.magentaInkLevel < 20" class="lowInk">
+                                                        <span style="color:red">{{reportPrinter.magentaInkLevel}}%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div style="width:100%;text-align:center">
+                                                    <div>黄</div>
+                                                    <div class="progress progress-bar-vertical">
+                                                        <div class="yellowInk" role="progressbar"
+                                                             aria-valuemax="100"
+                                                             aria-valuemin="0"
+                                                             aria-valuenow="{{reportPrinter.yellowInkLevel}}"
+                                                             style="height:{{reportPrinter.yellowInkLevel}}%;">
+                                                            <span style="width:100%">
+                                                                <span ng-if="reportPrinter.yellowInkLevel >= 20">
+                                                                    {{reportPrinter.yellowInkLevel}}%
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div ng-if="reportPrinter.yellowInkLevel < 20" class="lowInk">
+                                                        <span style="color:red">{{reportPrinter.yellowInkLevel}}%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

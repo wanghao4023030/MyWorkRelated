@@ -1,0 +1,13 @@
+Start auto log messages stack - Iteration 7.	[MsgId: MMSG-10545]
+Action.c(291): web_url("terminalmonitoring") was successful, 108096 body bytes, 262 header bytes  	[MsgId: MMSG-26386]
+Action.c(299): web_url("CheckLoginStatus_5") started  	[MsgId: MMSG-26355]
+Action.c(299): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(299): web_url("CheckLoginStatus_5") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(315): Notify: Transaction "User_login" ended with a "Pass" status (Duration: 7.7451 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+Action.c(318): lr_think_time: 30.00 seconds.	[MsgId: MMSG-15948]
+Action.c(498): Notify: Transaction "worklist_query_Patient_PID" started.	[MsgId: MMSG-16999]
+Action.c(500): web_custom_request("searchWorklist_7") started  	[MsgId: MMSG-26355]
+Action.c(500): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/worklist/searchWorklist"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

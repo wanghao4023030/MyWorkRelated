@@ -1,0 +1,2 @@
+"{"StatusType":"ReportPrintStatus","StudyInstanceUID":"1534449e-dfa0-4a98-988e-3eeaca6722d5","P"
+"reStatusValue":0,"NewStatusValue":0}"

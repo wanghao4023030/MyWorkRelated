@@ -1,0 +1,911 @@
+Virtual User Script started at : 2018/9/12 15:42:33
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.53.0 (9�� 12 2018 19:13:20)  	[MsgId: MMSG-27143]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36  	[MsgId: MMSG-26988]
+Warning -27070: Replay statistic collection is not supported by the WinInet Replay and is ignored  	[MsgId: MWAR-27070]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Action.
+Action.c(6): web_set_max_html_param_len started  	[MsgId: MMSG-26355]
+Action.c(6): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
+Action.c(8): web_url("Platform") started  	[MsgId: MMSG-26355]
+Action.c(8): t=2061ms: 247-byte response headers for "http://10.184.129.108/Platform" (RelFrameId=1, Internal ID=1)
+Action.c(8):     HTTP/1.1 200 OK\r\n
+Action.c(8):     Cache-Control: private\r\n
+Action.c(8):     Content-Type: text/html; charset=utf-8\r\n
+Action.c(8):     Server: Microsoft-IIS/7.5\r\n
+Action.c(8):     X-AspNetMvc-Version: 5.2\r\n
+Action.c(8):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(8):     X-Powered-By: ASP.NET\r\n
+Action.c(8):     Date: Wed, 12 Sep 2018 07:42:03 GMT\r\n
+Action.c(8):     Content-Length: 6136\r\n
+Action.c(8):     \r\n
+Action.c(8): t=2070ms: 6136-byte response body for "http://10.184.129.108/Platform" (RelFrameId=1, Internal ID=1)
+Action.c(8):     \r\n
+Action.c(8):     \r\n
+Action.c(8):     <!DOCTYPE html>\r\n
+Action.c(8):     <html ng-app="logonapp">\r\n
+Action.c(8):     <head>\r\n
+Action.c(8):         <meta charset="utf-8" http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">\r\n
+Action.c(8):         <title>KIOSK Login</title>\r\n
+Action.c(8):         <link href="/Platform/favicon.ico" rel="shortcut icon" type="image/x-icon" />\r\n
+Action.c(8):         <base href="/Platform/">\r\n
+Action.c(8):     \r\n
+Action.c(8):         \r\n
+Action.c(8):         <link href="/Platform/Content/angular-material.css" rel="stylesheet"/>\r\n
+Action.c(8):     <link href="/Platform/Content/bootstrap.css" rel="stylesheet"/>\r\n
+Action.c(8):     <link href="/Platform/Content/bootstrap-theme.css" rel="stylesheet"/>\r\n
+Action.c(8):     <link href="/Platform/Content/toaster.css" rel="stylesheet"/>\r\n
+Action.c(8):     <link href="/Platform/Content/carestream.css" rel="stylesheet"/>\r\n
+Action.c(8):     <link href="/Platform/app-resources/css/login.css" rel="stylesheet"/>\r\n
+Action.c(8):     \r\n
+Action.c(8):     </head>\r\n
+Action.c(8):     \r\n
+Action.c(8):     <body class="login">\r\n
+Action.c(8):         <toaster-container toaster-options="{'close-button':false, 'time-out':{ 'toast-warning
+Action.c(8):     ': 2000, 'toast-error': 0 } }"></toaster-container>\r\n
+Action.c(8):         <div ui-view></div>\r\n
+Action.c(8):      \r\n
+Action.c(8):         <script src="/Platform/Scripts/jquery-1.11.0.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/jquery.validate.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/jquery.validate.unobtrusive.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/modernizr-2.6.2.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/bootstrap.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/respond.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/PDF.js.1.3.91/compatibility.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/PDF.js.1.3.91/pdf.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/PDF.js.1.3.91/pdf.worker.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/PDF.js.1.3.91/text_layer_builder.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/angular.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/angular-ui-router.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/angular-ui/ui-bootstrap.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/angular-ui/ui-bootstrap-tpls.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/i18n/angular-locale_zh-cn.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/angular-cookies.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/angular-animate.min.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/angular-busy.min.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/angular-aria.min.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/angular-material/angular-material.min.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/angular-translate.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/angular-translate-loader-partial.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/ng-file-upload/ng-file-upload.min.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/ui-grid-puma.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/angular-tree-control/angular-tree-control.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/toaster.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/select.min.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/Chart.min.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/jsBarcode/JsBarcode.all.min.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/angular-chart/angular-chart.js"></script>\r\n
+Action.c(8):     <script src="/Platform/Scripts/underscore.min.js"></script>\r\n
+Action.c(8):     \r\n
+Action.c(8):         <script src="/Platform/app/common/common.module.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/behaviors/checklist-model.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/behaviors/drag-sortable.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/behaviors/dropdownMenu-changeTitle.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/behaviors/focus.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/behaviors/img-thumb.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/behaviors/notAllowDot.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/behaviors/notAllowSpecialChar.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/behaviors/vt-enter.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/controls/drag-sortable/Sortable.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/controls/puma-confirm/puma-confirm.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/controls/puma-delete-button/puma-delete-button.js"></scr
+Action.c(8):     ipt>\r\n
+Action.c(8):     <script src="/Platform/app/common/controls/puma-multi-select/puma-multi-select.js"></scrip
+Action.c(8):     t>\r\n
+Action.c(8):     <script src="/Platform/app/common/controls/puma-multi-select/puma-multi-select.tpl.js"></s
+Action.c(8):     cript>\r\n
+Action.c(8):     <script src="/Platform/app/common/controls/puma-open-dialog/open-dialog.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/controls/puma-open-dialog/puma-dialog.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/controls/puma-switch/puma-switch.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/filters/as-date-filter.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/filters/camel-case-filter.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/filters/qclog-event-filter.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/filters/truncate-ellipsis-filter.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/utils/base64.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/utils/constants.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/utils/date.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/utils/enum.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/utils/errorCode.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/utils/ipAddressHandler.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/utils/kiosk.util.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/utils/loginContext.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/utils/permission.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/utils/reconciliationParam.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/utils/webservices.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/webservices/client-tool-svc.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/webservices/configuration-promise.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/webservices/configuration-svc.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/common/webservices/system-information-svc.js"></script>\r\n
+Action.c(8):     \r\n
+Action.c(8):         <script src="/Platform/app/login/login.js"></script>\r\n
+Action.c(8):     <script src="/Platform/app/login/rememberme.js"></script>\r\n
+Action.c(8):     \r\n
+Action.c(8):     \r\n
+Action.c(8):         <script>\r\n
+Action.c(8):     \r\n
+Action.c(8):             var isEntireHospital = 'true';\r\n
+Action.c(8):             var urlPrefix = /Platform/;\r\n
+Action.c(8):             var urlPrefixWebApi = '/webapi';\r\n
+Action.c(8):             if (urlPrefix === '/') {\r\n
+Action.c(8):                 urlPrefix = '';\r\n
+Action.c(8):             }\r\n
+Action.c(8):             var userAdmin = 'admin';\r\n
+Action.c(8):             var userCshsvc = 'cshsvc';\r\n
+Action.c(8):     \r\n
+Action.c(8):     </script>\r\n
+Action.c(8):     </body>\r\n
+Action.c(8):     </html>
+Action.c(8): web_url("Platform") was successful, 6136 body bytes, 247 header bytes  	[MsgId: MMSG-26386]
+Action.c(87): web_url("login-view.html") started  	[MsgId: MMSG-26355]
+Action.c(87): t=2139ms: 247-byte response headers for "http://10.184.129.108/Platform/app/login/login-view.html" (RelFrameId=1, Internal ID=2)
+Action.c(87):     HTTP/1.1 200 OK\r\n
+Action.c(87):     Content-Type: text/html\r\n
+Action.c(87):     Last-Modified: Tue, 09 Jan 2018 04:01:10 GMT\r\n
+Action.c(87):     Accept-Ranges: bytes\r\n
+Action.c(87):     ETag: "047907bfe88d31:0"\r\n
+Action.c(87):     Server: Microsoft-IIS/7.5\r\n
+Action.c(87):     X-Powered-By: ASP.NET\r\n
+Action.c(87):     Date: Wed, 12 Sep 2018 07:42:03 GMT\r\n
+Action.c(87):     Content-Length: 6207\r\n
+Action.c(87):     \r\n
+Action.c(87): t=2142ms: 6207-byte response body for "http://10.184.129.108/Platform/app/login/login-view.html" (RelFrameId=1, Internal ID=2)
+Action.c(87):     �\xBF<div ng-class="{true: 'login_wrapper_puma', false: 'login_wrapper_k3'}[isEntireHospi
+Action.c(87):     tal]">\r\n
+Action.c(87):     \r\n
+Action.c(87):     \r\n
+Action.c(87):         <div id="login" class="well well-large form_wrapper " ng-if="isLoginPage">\r\n
+Action.c(87):             <div class="company-title">\r\n
+Action.c(87):                 <span class="company-logo"></span>\r\n
+Action.c(87):                 <span>{{hospitalLogoText}}打印管理系统</span>\r\n
+Action.c(87):             </div>\r\n
+Action.c(87):             <div class="puma-module-title ">\r\n
+Action.c(87):                 <span class="icon-ico_ps_logo puma-module-title-ico"></span>\r\n
+Action.c(87):                 <span class="puma-module-title-text">&nbsp;&nbsp;{{ 'UserLogin' | translate }}
+Action.c(87):     </span>\r\n
+Action.c(87):             </div>\r\n
+Action.c(87):             <form id="loginform" name="loginForm" method="post" style="margin-top:25px">\r\n
+Action.c(87):     \r\n
+Action.c(87):                 <div class="form-group" ng-class="{'has-error':(loginForm.loginName.$error.req
+Action.c(87):     uired || loginError) && loginForm.loginName.$dirty}">\r\n
+Action.c(87):                     <input type="text" name="loginName" class="form-control" ng-model="loginfo
+Action.c(87):     rm.loginName" required placeholder="{{ 'UserName' | translate }}" vt-enter="focusPw = true
+Action.c(87):     " />\r\n
+Action.c(87):                     <span class="icon-ico_reg_id glyphicon" />\r\n
+Action.c(87):                 </div>\r\n
+Action.c(87):                 <div class="form-group" ng-class="{'has-error':(loginForm.loginlPwd.$error.req
+Action.c(87):     uired || loginPwdError) && loginForm.loginlPwd.$dirty}">\r\n
+Action.c(87):                     <input type="password" name="loginlPwd" class="form-control" ng-model="log
+Action.c(87):     inform.loginlPwd" required placeholder="{{ 'Password' | translate }}" focus-me="focusPw" v
+Action.c(87):     t-enter="login()">\r\n
+Action.c(87):                     <span class="icon-ico_reg_pwd glyphicon" />\r\n
+Action.c(87):                 </div>\r\n
+Action.c(87):                 <div class="form-group ">\r\n
+Action.c(87):                     <div style="float:left"><input type="checkbox" data-ng-model="loginform.is
+Action.c(87):     Remember" /><span>&nbsp;{{ 'RemindMe' | translate }}</span></div>\r\n
+Action.c(87):                     <a ng-click="switchPage(false)" href="#" style="float:right"><span class="
+Action.c(87):     icon-ico_edit"></span>&nbsp;{{ 'ChangePassword' | translate }}</a>\r\n
+Action.c(87):                 </div>\r\n
+Action.c(87):     \r\n
+Action.c(87):                 <div class="form-group ">\r\n
+Action.c(87):                     <button id="btnLogin" class="btn btn-sm btn_login" ng-class="{true: 'bg_co
+Action.c(87):     lor_puma', false: 'bg_color_k3'}[isEntireHospital]" type="submit" ng-click="login()">{{ 'L
+Action.c(87):     ogin' | translate }}</button>\r\n
+Action.c(87):                 </div>\r\n
+Action.c(87):                 <span class="help-block" style="color:red" ng-show="!loginForm.loginName.$erro
+Action.c(87):     r.required && loginError"><span class="icon-ico_alert"></span>&nbsp;{{loginErrorMessage}}<
+Action.c(87):     /span>\r\n
+Action.c(87):                 <span class="help-block" style="color:red" ng-show="!loginForm.password.$error
+Action.c(87):     .required && loginPwdError"><span class="icon-ico_alert"></span>&nbsp;{{loginPwdErrorMessa
+Action.c(87):     ge}}</span>\r\n
+Action.c(87):     \r\n
+Action.c(87):             </form>\r\n
+Action.c(87):         </div>\r\n
+Action.c(87):     \r\n
+Action.c(87):         <div id="changePassword" class="well well-large form_wrapper" style=" height: 550px;" 
+Action.c(87):     ng-if="!isLoginPage">\r\n
+Action.c(87):             <div class="puma-module-title ">\r\n
+Action.c(87):                 <span class="icon-ico_page_previous puma-module-title-ico" style="cursor:point
+Action.c(87):     er" ng-click="switchPage(false)"></span>\r\n
+Action.c(87):                 <span style="font-size: 1.6em;">&nbsp;&nbsp;{{ 'ChangePassword' | translate }}
+Action.c(87):     </span>\r\n
+Action.c(87):             </div>\r\n
+Action.c(87):             <form id="changepwdform" name="changePasswordForm" style="margin-top:40px">\r\n
+Action.c(87):                 <span ng-show="isFirstLogin" class="help-block">{{isFirstLoginMessage}}</span>
+Action.c(87):     \r\n
+Action.c(87):                 <div class="form-group" ng-class="{'has-error': userNameNotExist}">\r\n
+Action.c(87):                     <input type="text" class="form-control" ng-model="loginform.loginName" req
+Action.c(87):     uired placeholder="{{ 'UserName' | translate }}">\r\n
+Action.c(87):                     <span class="icon-ico_reg_id glyphicon" />\r\n
+Action.c(87):                 </div>\r\n
+Action.c(87):                 <div class="form-group required" ng-class="{'has-error': wrongOldPassword}">\r
+Action.c(87):     \n
+Action.c(87):                     <input type="password" class="form-control" ng-model="changepwdform.oldPas
+Action.c(87):     sword" placeholder="{{ 'OldPassword' | translate }}" ng-changed="wrongOldPassword = 0" req
+Action.c(87):     uired>\r\n
+Action.c(87):                     <span class="icon-ico_reg_pwd glyphicon" />\r\n
+Action.c(87):                 </div>\r\n
+Action.c(87):                 <div class="form-group required" ng-class="{'has-error': invalidNewPwd}">\r\n
+Action.c(87):                     <input name="passwordInput" type="password" class="form-control" ng-model=
+Action.c(87):     "changepwdform.newPassword" minlength="6" placeholder="{{ 'NewPassword' | translate }}" re
+Action.c(87):     quired>\r\n
+Action.c(87):                     <span class="icon-ico_reg_pwd glyphicon" />\r\n
+Action.c(87):                 </div>\r\n
+Action.c(87):                 <div class="form-group required" ng-class="{'has-error': confirmNewPassword &&
+Action.c(87):      changepwdform.newPassword !== changepwdform.confirmNewPassword}">\r\n
+Action.c(87):                     <input type="password" class="form-control" ng-model="changepwdform.confir
+Action.c(87):     mNewPassword" placeholder="{{ 'ConfrimNewPassword' | translate }}" required>\r\n
+Action.c(87):                     <span class="icon-ico_reg_pwd glyphicon" />\r\n
+Action.c(87):     \r\n
+Action.c(87):                 </div>\r\n
+Action.c(87):                 <div class="form-group">\r\n
+Action.c(87):                     <div>\r\n
+Action.c(87):                         <button type="submit" style="float:left" class="btn btn_changepassword
+Action.c(87):     " ng-class="{true: 'bg_color_puma', false: 'bg_color_k3'}[isEntireHospital]" ng-disabled="
+Action.c(87):     changePasswordForm.$pristine || changePasswordForm.$invalid || changepwdform.newPassword !
+Action.c(87):     == changepwdform.confirmNewPassword" ng-click="save()">{{ 'Save' | translate }}</button>\r
+Action.c(87):     \n
+Action.c(87):                         <button type="button" style="float:right" class="btn btn-sm btn_change
+Action.c(87):     password" ng-click="switchPage(false)">{{ 'Cancel' | translate }}</button>\r\n
+Action.c(87):                     </div>\r\n
+Action.c(87):                 </div>\r\n
+Action.c(87):                 <span ng-show="userNameNotExist" class="help-block" style="color:red"><span cl
+Action.c(87):     ass="icon-ico_alert"></span>&nbsp;{{userNameNotExistMessage}}</span>\r\n
+Action.c(87):                 <span ng-show="wrongOldPassword" class="help-block" style="color:red"><span cl
+Action.c(87):     ass="icon-ico_alert"></span>&nbsp;{{wrongOldPasswordMessage}}</span>\r\n
+Action.c(87):                 <span ng-show="invalidNewPwd" class="help-block" style="color:red"><span class
+Action.c(87):     ="icon-ico_alert"></span>&nbsp;{{invalidNewPwdMessage}}</span>\r\n
+Action.c(87):                 <span ng-show="changePasswordForm.passwordInput.$error.minlength" class="help-
+Action.c(87):     block" style="color:red"><span class="icon-ico_alert"></span>&nbsp;{{'HelpMinLength' | tra
+Action.c(87):     nslate}}</span>\r\n
+Action.c(87):                 <span ng-show="changePasswordForm.passwordInput.$valid && changepwdform.confir
+Action.c(87):     mNewPassword && changepwdform.newPassword !== changepwdform.confirmNewPassword" class="hel
+Action.c(87):     p-block " style="color:red"><span class="icon-ico_alert"></span>&nbsp;{{'HelpDifferentPass
+Action.c(87):     word' | translate}}</span>\r\n
+Action.c(87):             </form>\r\n
+Action.c(87):     \r\n
+Action.c(87):         </div>\r\n
+Action.c(87):     </div>
+Action.c(87): web_url("login-view.html") was successful, 6207 body bytes, 247 header bytes  	[MsgId: MMSG-26386]
+Action.c(99): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(99): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(104): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(104): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(109): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(109): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(114): Notify: Transaction "User_login" started.
+Action.c(116): web_custom_request("login") started  	[MsgId: MMSG-26355]
+Action.c(116): Notify: Parameter Substitution: parameter "UserName" =  "1"
+Action.c(116): t=2204ms: 1675-byte response headers for "http://10.184.129.108/Platform/account/login" (RelFrameId=1, Internal ID=3)
+Action.c(116):     HTTP/1.1 200 OK\r\n
+Action.c(116):     Cache-Control: private\r\n
+Action.c(116):     Pragma: no-cache\r\n
+Action.c(116):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(116):     Expires: -1\r\n
+Action.c(116):     Server: Microsoft-IIS/7.5\r\n
+Action.c(116):     Set-Cookie: ASP.NET_SessionId=fqcr1kkfvnxameuwqd0a24bs; path=/; HttpOnly\r\n
+Action.c(116):     X-AspNetMvc-Version: 5.2\r\n
+Action.c(116):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(116):     Set-Cookie: ApiToken=%7B%22access_token%22%3A%22PBcXba47aASh2Wp75BwBm5o_XmcWeGhgoiRExuF2JN
+Action.c(116):     ayuuxhID8Og0XOjx8TcpApt6ls0dyF-iQvEu_O-OtiJXGBaz1d0xER80syeeC45VLNmC4IARFLE8Ph2MNqGBkSq-J5
+Action.c(116):     sXZeoDQUtphwkad-j28a0YokdZi4Dn2aiabrQIpQUILIgbAUemMjzj4w-AzU31g7bg4R8HtpFApslYTVOA%22%2C%2
+Action.c(116):     2token_type%22%3A%22bearer%22%2C%22expires_in%22%3A604799%2C%22refresh_token%22%3A%22b3804
+Action.c(116):     1fa-7c64-477d-9319-5e772e3ff2d0%22%2C%22userName%22%3A%221%22%2C%22currentRole%22%3A%22Adm
+Action.c(116):     inistrator%22%2C%22strDepartments%22%3A%22%22%2C%22strModalities%22%3A%22%22%2C%22onlyRepo
+Action.c(116):     rt%22%3A%22false%22%2C%22strUserPermissionList%22%3A%22CentralPrint%3A1%7CChangeHoldFlag%3
+Action.c(116):     A1%7CChangePrintMode%3A1%7CChangePrintStatus%3A1%7Cconfig%3A1%7CConfigRole%3A1%7CConfigSys
+Action.c(116):     tem%3A1%7CConfigUser%3A1%7CCorrectReconciliation%3A1%7CDelete%3A1%7CPrinterMonitor%3A1%7CP
+Action.c(116):     rintTaskManagement%3A1%7CQCLog%3A1%7CReconciliation%3A1%7CRestoreFilm%3A1%7CStatisticsRepo
+Action.c(116):     rt%3A1%7Cworklist%3A1%7C%22%7D; path=/\r\n
+Action.c(116):     Set-Cookie: .AspNet.ApplicationCookie=iHe4Q23QijO9aOxlPqbgIoGG6Nv4Cq9lXsxG6zC0KeJRPjSjBSh8
+Action.c(116):     9oWZvQpsF3-TBDYTpaIhHcjPbeSwpqrC0N7JUXgMlLr7sxBJrZ8dY86sWp9T3pyLoZg2PWUfAfwZpEx9sk41F9Un0R
+Action.c(116):     V5gWnjj74Uuy_V5VUGcpCIgAmcf2HiEUsCdlTLGktMzUGJfwL62o444UXa7j5kCVhoyIOYjLTU904VEdgzGP_6M2lt
+Action.c(116):     pAwsaAGPwTJDUQcRKTIcaw090qADr_Ym6qpAxtZnnGWPehP-TxC_6vCA4zEY_sdIAZ-MhzynyFDYdRiuWRP7ncph; 
+Action.c(116):     path=/; HttpOnly\r\n
+Action.c(116):     X-Powered-By: ASP.NET\r\n
+Action.c(116):     Date: Wed, 12 Sep 2018 07:42:03 GMT\r\n
+Action.c(116):     Content-Length: 78\r\n
+Action.c(116):     \r\n
+Action.c(116): Notify: Saving Parameter "access_token = PBcXba47aASh2Wp75BwBm5o_XmcWeGhgoiRExuF2JNayuuxhID8Og0XOjx8TcpApt6ls0dyF-iQvEu_O-OtiJXGBaz1d0xER80syeeC45VLNmC4IARFLE8Ph2MNqGBkSq-J5sXZeoDQUtphwkad-j28a0YokdZi4Dn2aiabrQIpQUILIgbAUemMjzj4w-AzU31g7bg4R8HtpFApslYTVOA".
+Action.c(116): Notify: Saving Parameter "ApiToken = %7B%22access_token%22%3A%22PBcXba47aASh2Wp75BwBm5o_XmcWeGhgoiRExuF2JNayuuxhID8Og0XOjx8TcpApt6ls0dyF-iQvEu_O-OtiJXGBaz1d0xER80syeeC45VLNmC4IARFLE8Ph2MNqGBkSq-J5sXZeoDQUtphwkad-j28a0YokdZi4Dn2aiabrQIpQUILIgbAUemMjzj4w-AzU31g7bg4R8HtpFApslYTVOA%22%2C%22token_type%22%3A%22bearer%22%2C%22expires_in%22%3A604799%2C%22refresh_token%22%3A%22b38041fa-7c64-477d-9319-5e772e3ff2d0%22%2C%22userName%22%3A%221%22%2C%22currentRole%22%3A%22Administrator%22%2C%22strDepartments%22%3A%22%22%2C%22strModalities%22%3A%22%22%2C%22onlyReport%22%3A%22false%22%2C%22strUserPermissionList%22%3A%22CentralPrint%3A1%7CChangeHoldFlag%3A1%7CChangePrintMode%3A1%7CChangePrintStatus%3A1%7Cconfig%3A1%7CConfigRole%3A1%7CConfigSystem%3A1%7CConfigUser%3A1%7CCorrectReconciliation%3A1%7CDelete%3A1%7CPrinterMonitor%3A1%7CPrintTaskManagement%3A1%7CQCLog%3A1%7CReconciliation%3A1%7CRestoreFilm%3A1%7CStatisticsReport%3A1%7Cworklist%3A1%7C%22%7D;".
+Action.c(116): Notify: Saving Parameter "AspToken = iHe4Q23QijO9aOxlPqbgIoGG6Nv4Cq9lXsxG6zC0KeJRPjSjBSh89oWZvQpsF3-TBDYTpaIhHcjPbeSwpqrC0N7JUXgMlLr7sxBJrZ8dY86sWp9T3pyLoZg2PWUfAfwZpEx9sk41F9Un0RV5gWnjj74Uuy_V5VUGcpCIgAmcf2HiEUsCdlTLGktMzUGJfwL62o444UXa7j5kCVhoyIOYjLTU904VEdgzGP_6M2ltpAwsaAGPwTJDUQcRKTIcaw090qADr_Ym6qpAxtZnnGWPehP-TxC_6vCA4zEY_sdIAZ-MhzynyFDYdRiuWRP7ncph; ".
+Action.c(116): t=2207ms: 78-byte response body for "http://10.184.129.108/Platform/account/login" (RelFrameId=1, Internal ID=3)
+Action.c(116):     {"CheckState":0,"Message":"LoginSuccess","MessageParams":null,"UserName":null}
+Action.c(116): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/account/login"  	[MsgId: MMSG-26548]
+Action.c(116): web_custom_request("login") was successful, 78 body bytes, 1675 header bytes  	[MsgId: MMSG-26386]
+Action.c(127): web_add_cookie started  	[MsgId: MMSG-26355]
+Action.c(127): Notify: Parameter Substitution: parameter "ApiToken" =  "%7B%22access_token%22%3A%22PBcXba47aASh2Wp75BwBm5o_XmcWeGhgoiRExuF2JNayuuxhID8Og0XOjx8TcpApt6ls0dyF-iQvEu_O-OtiJXGBaz1d0xER80syeeC45VLNmC4IARFLE8Ph2MNqGBkSq-J5sXZeoDQUtphwkad-j28a0YokdZi4Dn2aiabrQIpQUILIgbAUemMjzj4w-AzU31g7bg4R8HtpFApslYTVOA%22%2C%22token_type%22%3A%22bearer%22%2C%22expires_in%22%3A604799%2C%22refresh_token%22%3A%22b38041fa-7c64-477d-9319-5e772e3ff2d0%22%2C%22userName%22%3A%221%22%2C%22currentRole%22%3A%22Administrator%22%2C%22strDepartments%22%3A%22%22%2C%22strModalities%22%3A%22%22%2C%22onlyReport%22%3A%22false%22%2C%22strUserPermissionList%22%3A%22CentralPrint%3A1%7CChangeHoldFlag%3A1%7CChangePrintMode%3A1%7CChangePrintStatus%3A1%7Cconfig%3A1%7CConfigRole%3A1%7CConfigSystem%3A1%7CConfigUser%3A1%7CCorrectReconciliation%3A1%7CDelete%3A1%7CPrinterMonitor%3A1%7CPrintTaskManagement%3A1%7CQCLog%3A1%7CReconciliation%3A1%7CRestoreFilm%3A1%7CStatisticsReport%3A1%7Cworklist%3A1%7C%22%7D;"
+Action.c(127): web_add_cookie was successful  	[MsgId: MMSG-26392]
+Action.c(128): web_add_cookie started  	[MsgId: MMSG-26355]
+Action.c(128): Notify: Parameter Substitution: parameter "AspToken" =  "iHe4Q23QijO9aOxlPqbgIoGG6Nv4Cq9lXsxG6zC0KeJRPjSjBSh89oWZvQpsF3-TBDYTpaIhHcjPbeSwpqrC0N7JUXgMlLr7sxBJrZ8dY86sWp9T3pyLoZg2PWUfAfwZpEx9sk41F9Un0RV5gWnjj74Uuy_V5VUGcpCIgAmcf2HiEUsCdlTLGktMzUGJfwL62o444UXa7j5kCVhoyIOYjLTU904VEdgzGP_6M2ltpAwsaAGPwTJDUQcRKTIcaw090qADr_Ym6qpAxtZnnGWPehP-TxC_6vCA4zEY_sdIAZ-MhzynyFDYdRiuWRP7ncph; "
+Action.c(128): web_add_cookie was successful  	[MsgId: MMSG-26392]
+Action.c(138): web_url("login_2") started  	[MsgId: MMSG-26355]
+Action.c(138): t=2745ms: 279-byte response headers for "http://10.184.129.108/Platform//account/login" (RelFrameId=1, Internal ID=4)
+Action.c(138):     HTTP/1.1 302 Found\r\n
+Action.c(138):     Cache-Control: private\r\n
+Action.c(138):     Content-Type: text/html; charset=utf-8\r\n
+Action.c(138):     Location: /Platform/workarea\r\n
+Action.c(138):     Server: Microsoft-IIS/7.5\r\n
+Action.c(138):     X-AspNetMvc-Version: 5.2\r\n
+Action.c(138):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(138):     X-Powered-By: ASP.NET\r\n
+Action.c(138):     Date: Wed, 12 Sep 2018 07:42:03 GMT\r\n
+Action.c(138):     Content-Length: 135\r\n
+Action.c(138):     \r\n
+Action.c(138): t=2748ms: 135-byte response body for "http://10.184.129.108/Platform//account/login" (RelFrameId=1, Internal ID=4)
+Action.c(138):     <html><head><title>Object moved</title></head><body>\r\n
+Action.c(138):     <h2>Object moved to <a href="/Platform/workarea">here</a>.</h2>\r\n
+Action.c(138):     </body></html>\r\n
+Action.c(138): Redirecting "http://10.184.129.108/Platform//account/login" (redirection depth is 0)  	[MsgId: MMSG-26694]
+Action.c(138): To location "http://10.184.129.108/Platform/workarea"  	[MsgId: MMSG-26693]
+Action.c(138): t=3869ms: 260-byte response headers for "http://10.184.129.108/Platform/workarea" (RelFrameId=1, Internal ID=5)
+Action.c(138):     HTTP/1.1 200 OK\r\n
+Action.c(138):     Cache-Control: private, s-maxage=0\r\n
+Action.c(138):     Content-Type: text/html; charset=utf-8\r\n
+Action.c(138):     Server: Microsoft-IIS/7.5\r\n
+Action.c(138):     X-AspNetMvc-Version: 5.2\r\n
+Action.c(138):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(138):     X-Powered-By: ASP.NET\r\n
+Action.c(138):     Date: Wed, 12 Sep 2018 07:42:05 GMT\r\n
+Action.c(138):     Content-Length: 14091\r\n
+Action.c(138):     \r\n
+Action.c(138): t=3872ms: 12288-byte response body for "http://10.184.129.108/Platform/workarea" (RelFrameId=1, Internal ID=5)
+Action.c(138):     \r\n
+Action.c(138):     \r\n
+Action.c(138):     <!DOCTYPE html>\r\n
+Action.c(138):     <html ng-app="workareaApp">\r\n
+Action.c(138):     <head>\r\n
+Action.c(138):         <meta charset="utf-8" />\r\n
+Action.c(138):         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">\r\n
+Action.c(138):         <meta name="viewport" content="width=device-width, initial-scale=1.0">\r\n
+Action.c(138):         <title>Carestream Puma</title>\r\n
+Action.c(138):         <base href="/Platform/" />\r\n
+Action.c(138):         <link href="/Platform/Content/angular-material.css" rel="stylesheet"/>\r\n
+Action.c(138):     <link href="/Platform/Content/bootstrap.css" rel="stylesheet"/>\r\n
+Action.c(138):     <link href="/Platform/Content/bootstrap-theme.css" rel="stylesheet"/>\r\n
+Action.c(138):     <link href="/Platform/Content/site.css" rel="stylesheet"/>\r\n
+Action.c(138):     <link href="/Platform/Content/carestream.css" rel="stylesheet"/>\r\n
+Action.c(138):     <link href="/Platform/Content/ui-bootstrap-csp.css" rel="stylesheet"/>\r\n
+Action.c(138):     <link href="/Platform/app/common/controls/puma-switch/puma-switch.css" rel="stylesheet"/>\r
+Action.c(138):     \n
+Action.c(138):     <link href="/Platform/Content/ui-grid.min.css" rel="stylesheet"/>\r\n
+Action.c(138):     <link href="/Platform/Scripts/angular-tree-control/tree-control.css" rel="stylesheet"/>\r\n
+Action.c(138):     <link href="/Platform/Scripts/angular-tree-control/tree-control-attribute.css" rel="styles
+Action.c(138):     heet"/>\r\n
+Action.c(138):     <link href="/Platform/Content/toaster.css" rel="stylesheet"/>\r\n
+Action.c(138):     <link href="/Platform/Content/select.css" rel="stylesheet"/>\r\n
+Action.c(138):     \r\n
+Action.c(138):         <link href="/Platform/app-resources/css/site.css" rel="stylesheet"/>\r\n
+Action.c(138):     <link href="/Platform/app-resources/css/open-dialog.css" rel="stylesheet"/>\r\n
+Action.c(138):     <link href="/Platform/app-resources/css/terminalmonitor.css" rel="stylesheet"/>\r\n
+Action.c(138):     <link href="/Platform/app-resources/css/statistics.css" rel="stylesheet"/>\r\n
+Action.c(138):     <link href="/Platform/app-resources/css/barcode.css" rel="stylesheet"/>\r\n
+Action.c(138):     <link href="/Platform/app-resources/css/circle.css" rel="stylesheet"/>\r\n
+Action.c(138):     <link href="/Platform/app-resources/css/worklist.css" rel="stylesheet"/>\r\n
+Action.c(138):     <link href="/Platform/app-resources/css/adminsettings.css" rel="stylesheet"/>\r\n
+Action.c(138):     <link href="/Platform/app-resources/css/reconciliation.css" rel="stylesheet"/>\r\n
+Action.c(138):     <link href="/Platform/Scripts/PDF.js.1.3.91/text_layer_builder.css" rel="stylesheet"/>\r\n
+Action.c(138):     \r\n
+Action.c(138):     \r\n
+Action.c(138):         \r\n
+Action.c(138):     \r\n
+Action.c(138):     </head>\r\n
+Action.c(138):     <body ng-controller="workareaAppController">\r\n
+Action.c(138):         <div class="navbar navbar-default puma-navbar navbar-fixed-top">\r\n
+Action.c(138):             <div class="container-fluid" style="margin-left:0px;padding-left:0px;">\r\n
+Action.c(138):                 <div class="col-md-12">\r\n
+Action.c(138):                     <div class="navbar-header" style="margin-left: -15px">\r\n
+Action.c(138):                         <button type="button" class="navbar-toggle" data-toggle="collapse" dat
+Action.c(138):     a-target=".navbar-collapse">\r\n
+Action.c(138):                             <span class="icon-bar"></span>\r\n
+Action.c(138):                             <span class="icon-bar"></span>\r\n
+Action.c(138):                             <span class="icon-bar"></span>\r\n
+Action.c(138):                         </button>\r\n
+Action.c(138):                         <div class="navbar-brand">\r\n
+Action.c(138):                             <span class="icon-ico_ps_logo icon-general" style="font-size: 2em;
+Action.c(138):     "></span>\r\n
+Action.c(138):                         </div>\r\n
+Action.c(138):                     </div>\r\n
+Action.c(138):                     <div class="navbar-collapse collapse">\r\n
+Action.c(138):                         <ul class="nav navbar-nav">\r\n
+Action.c(138):                             <li ng-repeat="(key, value) in collapsePages" style="color:blue">\r
+Action.c(138):     \n
+Action.c(138):                                 <a ui-sref="workarea.{{key}}" ng-if="value.permission" ng-bind
+Action.c(138):     ="value.displayName | translate" ng-class="{active:activeItem === key }" ng-click="selecte
+Action.c(138):     dItem(key)"></a>\r\n
+Action.c(138):                             </li>\r\n
+Action.c(138):     \r\n
+Action.c(138):                             <li class="dropdown" dropdownmenu-change-title ng-if="hasconfigPer
+Action.c(138):     mission">\r\n
+Action.c(138):                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" rol
+Action.c(138):     e="button" aria-haspopup="true" aria-expanded="false" ng-class="{active:activeItem === key
+Action.c(138):      }" ng-click="selectedItem(key)">\r\n
+Action.c(138):                                     <span class="icon-ico_setting_selected icon_font_size"></s
+Action.c(138):     pan>\r\n
+Action.c(138):                                     <span ng-bind="dropdownTitle | translate"></span>\r\n
+Action.c(138):                                     <span class="caret"></span>\r\n
+Action.c(138):                                 </a>\r\n
+Action.c(138):                                 <ul class="dropdown-menu">\r\n
+Action.c(138):                                     <li ng-repeat="(key, value) in dropdownPages">\r\n
+Action.c(138):                                         <a ui-sref="workarea.{{key}}" ng-if="value.permission"
+Action.c(138):      dropdownitem>{{value.displayName  | translate}}</a>\r\n
+Action.c(138):                                     </li>\r\n
+Action.c(138):                                 </ul>\r\n
+Action.c(138):                             </li>\r\n
+Action.c(138):                         </ul>\r\n
+Action.c(138):     \r\n
+Action.c(138):     \r\n
+Action.c(138):                         <ul class="nav navbar-nav navbar-right">\r\n
+Action.c(138):                             <li title="">\r\n
+Action.c(138):                                 <span class="icon-general icon-ico_role_admin icon_font_size">
+Action.c(138):     \r\n
+Action.c(138):                                     <span class="path1"></span><span class="path2"></span><spa
+Action.c(138):     n class="path3"></span>\r\n
+Action.c(138):                                 </span>\r\n
+Action.c(138):                             </li>\r\n
+Action.c(138):                             <li class="dropdown" title="用户">\r\n
+Action.c(138):                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" rol
+Action.c(138):     e="button" aria-haspopup="true" aria-expanded="false">\r\n
+Action.c(138):                                     1\r\n
+Action.c(138):                                     <span class="caret"></span>\r\n
+Action.c(138):                                 </a>\r\n
+Action.c(138):                                 <ul class="dropdown-menu">\r\n
+Action.c(138):                                     <li id="logout"><a href="#" ng-click="logout()">{{ 'Logout
+Action.c(138):     ' | translate }}</a></li>\r\n
+Action.c(138):                                 </ul>\r\n
+Action.c(138):                             </li>\r\n
+Action.c(138):                             <li class="dropdown nav-download" title="下载">\r\n
+Action.c(138):                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" rol
+Action.c(138):     e="button" aria-haspopup="true" aria-expanded="false">\r\n
+Action.c(138):                                     <span class="icon-ico_download icon_font_size"><span class
+Action.c(138):     ="path1"></span><span class="path2"></span><span class="path3"></span></span>\r\n
+Action.c(138):                                     <span class="caret"></span>\r\n
+Action.c(138):                                 </a>\r\n
+Action.c(138):                                 <ul class="dropdown-menu">\r\n
+Action.c(138):                                     <li><a href="#" ng-click="downloadReconciliationTool()">{{
+Action.c(138):      'DownloadReconciliationTool' | translate }}</a></li>\r\n
+Action.c(138):     \r\n
+Action.c(138):                                 </ul>\r\n
+Action.c(138):                             </li>\r\n
+Action.c(138):                         </ul>\r\n
+Action.c(138):                     </div>\r\n
+Action.c(138):                 </div>\r\n
+Action.c(138):             </div>\r\n
+Action.c(138):         </div>\r\n
+Action.c(138):         <div class="content">\r\n
+Action.c(138):             <ui-view></ui-view>\r\n
+Action.c(138):         </div>\r\n
+Action.c(138):     \r\n
+Action.c(138):         <toaster-container toaster-options="{'close-button': true,'debug': false,'position-cla
+Action.c(138):     ss': 'toast-top-center','limit':1, 'time-out': { 'toast-success': 1500, 'toast-info': 1500
+Action.c(138):     , 'toast-warning': 0, 'toast-error': 0 }}"></toaster-container>\r\n
+Action.c(138):         \r\n
+Action.c(138):         <footer>\r\n
+Action.c(138):             <div class="footer-workarea">\r\n
+Action.c(138):                 <ul class="list-group ">\r\n
+Action.c(138):                     <li class="list-unstyled pull-left">&nbsp;&nbsp;© 2017 Carestream Health.
+Action.c(138):      All rights reserved</li>\r\n
+Action.c(138):                     <li class="list-unstyled pull-right">Version:{{systemVersion}}&nbsp;&nbsp;
+Action.c(138):     </li>\r\n
+Action.c(138):                 </ul>\r\n
+Action.c(138):             </div>\r\n
+Action.c(138):         </footer>\r\n
+Action.c(138):     \r\n
+Action.c(138):         <script src="/Platform/Scripts/jquery-1.11.0.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/jquery.validate.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/jquery.validate.unobtrusive.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/modernizr-2.6.2.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/bootstrap.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/respond.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/PDF.js.1.3.91/compatibility.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/PDF.js.1.3.91/pdf.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/PDF.js.1.3.91/pdf.worker.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/PDF.js.1.3.91/text_layer_builder.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/angular.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/angular-ui-router.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/angular-ui/ui-bootstrap.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/angular-ui/ui-bootstrap-tpls.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/i18n/angular-locale_zh-cn.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/angular-cookies.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/angular-animate.min.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/angular-busy.min.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/angular-aria.min.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/angular-material/angular-material.min.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/angular-translate.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/angular-translate-loader-partial.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/ng-file-upload/ng-file-upload.min.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/ui-grid-puma.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/angular-tree-control/angular-tree-control.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/toaster.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/select.min.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/Chart.min.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/jsBarcode/JsBarcode.all.min.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/angular-chart/angular-chart.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/underscore.min.js"></script>\r\n
+Action.c(138):     \r\n
+Action.c(138):         <script src="/Platform/app/common/common.module.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/behaviors/checklist-model.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/behaviors/drag-sortable.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/behaviors/dropdownMenu-changeTitle.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/behaviors/focus.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/behaviors/img-thumb.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/behaviors/notAllowDot.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/behaviors/notAllowSpecialChar.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/behaviors/vt-enter.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/controls/drag-sortable/Sortable.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/controls/puma-confirm/puma-confirm.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/controls/puma-delete-button/puma-delete-button.js"></scr
+Action.c(138):     ipt>\r\n
+Action.c(138):     <script src="/Platform/app/common/controls/puma-multi-select/puma-multi-select.js"></scrip
+Action.c(138):     t>\r\n
+Action.c(138):     <script src="/Platform/app/common/controls/puma-multi-select/puma-multi-select.tpl.js"></s
+Action.c(138):     cript>\r\n
+Action.c(138):     <script src="/Platform/app/common/controls/puma-open-dialog/open-dialog.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/controls/puma-open-dialog/puma-dialog.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/controls/puma-switch/puma-switch.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/filters/as-date-filter.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/filters/camel-case-filter.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/filters/qclog-event-filter.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/filters/truncate-ellipsis-filter.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/utils/base64.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/utils/constants.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/utils/date.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/utils/enum.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/utils/errorCode.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/utils/ipAddressHandler.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/utils/kiosk.util.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/utils/loginContext.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/utils/permission.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/utils/reconciliationParam.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/utils/webservices.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/webservices/client-tool-svc.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/webservices/configuration-promise.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/webservices/configuration-svc.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/common/webservices/system-information-svc.js"></script>\r\n
+Action.c(138):     \r\n
+Action.c(138):         <script src="/Platform/app/workarea/app.workarea.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/workarea/module.workarea.js"></script>\r\n
+Action.c(138):     <script src="/Platform/Scripts/angular-dropdown-multiselect.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/workarea/framework/workarea-app-container.ctl.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/workarea/worklist/controllers/worklist-mainbody-ctrl.js"></scri
+Action.c(138):     pt>\r\n
+Action.c(138):     <script src="/Platform/app/workarea/worklist/controllers/worklist-view-ctrl.js"></script>\r
+Action.c(138):     \n
+Action.c(138):     <script src="/Platform/app/workarea/worklist/views/worklist-view.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/workarea/reconciliation/controllers/reconciliation-list-ctrl.js
+Action.c(138):     "></script>\r\n
+Action.c(138):     <script src="/Platform/app/workarea/terminalmonitor/controllers/terminalmonitor-view-ctrl.
+Action.c(138):     js"></scr
+Action.c(138): t=3880ms: 1803-byte response body for "http://10.184.129.108/Platform/workarea" (RelFrameId=1, Internal ID=5)
+Action.c(138):     ipt>\r\n
+Action.c(138):     <script src="/Platform/app/workarea/adminsettings/log/controllers/qclog-ctrl.js"></script>
+Action.c(138):     \r\n
+Action.c(138):     <script src="/Platform/app/workarea/adminsettings/log/views/qclog-view.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/workarea/adminsettings/printtask/controllers/print-task-ctrl.js
+Action.c(138):     "></script>\r\n
+Action.c(138):     <script src="/Platform/app/workarea/adminsettings/role/controllers/role-settings-ctrl.js">
+Action.c(138):     </script>\r\n
+Action.c(138):     <script src="/Platform/app/workarea/adminsettings/system/controllers/systeml-setting-ctr.j
+Action.c(138):     s"></script>\r\n
+Action.c(138):     <script src="/Platform/app/workarea/adminsettings/user/contorllers/user-settings-ctrl.js">
+Action.c(138):     </script>\r\n
+Action.c(138):     <script src="/Platform/app/workarea/statistics/controllers/statistics-ctrl.js"></script>\r
+Action.c(138):     \n
+Action.c(138):     <script src="/Platform/app/workarea/webservices/adminsettings-svc.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/workarea/webservices/printtask-svc.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/workarea/webservices/qclog-svc.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/workarea/webservices/reconciliation-svc.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/workarea/webservices/role-svc.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/workarea/webservices/statistics-svc.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/workarea/webservices/terminalmonitor-svc.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/workarea/webservices/user-svc.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/workarea/webservices/worklist-svc.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/workarea/barcode/controllers/barcode-ctrl.js"></script>\r\n
+Action.c(138):     <script src="/Platform/app/workarea/dicomviewer/controllers/dicom-viewer-ctrl.js"></script
+Action.c(138):     >\r\n
+Action.c(138):     \r\n
+Action.c(138):     \r\n
+Action.c(138):         <script>\r\n
+Action.c(138):             var urlPrefix = /Platform/;\r\n
+Action.c(138):             var urlPrefixWebApi = '/webapi';\r\n
+Action.c(138):             window.urlPrefixWorkarea = '/workarea';\r\n
+Action.c(138):             var userAdmin = 'admin';\r\n
+Action.c(138):             var userCshsvc = 'cshsvc';\r\n
+Action.c(138):         </script>\r\n
+Action.c(138):     </body>\r\n
+Action.c(138):     </html>\r\n
+Action.c(138): web_url("login_2") was successful, 14226 body bytes, 539 header bytes  	[MsgId: MMSG-26386]
+Action.c(146): web_url("workarea") started  	[MsgId: MMSG-26355]
+Action.c(146): t=6824ms: 260-byte response headers for "http://10.184.129.108/Platform/workarea" (RelFrameId=1, Internal ID=6)
+Action.c(146):     HTTP/1.1 200 OK\r\n
+Action.c(146):     Cache-Control: private, s-maxage=0\r\n
+Action.c(146):     Content-Type: text/html; charset=utf-8\r\n
+Action.c(146):     Server: Microsoft-IIS/7.5\r\n
+Action.c(146):     X-AspNetMvc-Version: 5.2\r\n
+Action.c(146):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(146):     X-Powered-By: ASP.NET\r\n
+Action.c(146):     Date: Wed, 12 Sep 2018 07:42:08 GMT\r\n
+Action.c(146):     Content-Length: 14091\r\n
+Action.c(146):     \r\n
+Action.c(146): t=6826ms: 12288-byte response body for "http://10.184.129.108/Platform/workarea" (RelFrameId=1, Internal ID=6)
+Action.c(146):     \r\n
+Action.c(146):     \r\n
+Action.c(146):     <!DOCTYPE html>\r\n
+Action.c(146):     <html ng-app="workareaApp">\r\n
+Action.c(146):     <head>\r\n
+Action.c(146):         <meta charset="utf-8" />\r\n
+Action.c(146):         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">\r\n
+Action.c(146):         <meta name="viewport" content="width=device-width, initial-scale=1.0">\r\n
+Action.c(146):         <title>Carestream Puma</title>\r\n
+Action.c(146):         <base href="/Platform/" />\r\n
+Action.c(146):         <link href="/Platform/Content/angular-material.css" rel="stylesheet"/>\r\n
+Action.c(146):     <link href="/Platform/Content/bootstrap.css" rel="stylesheet"/>\r\n
+Action.c(146):     <link href="/Platform/Content/bootstrap-theme.css" rel="stylesheet"/>\r\n
+Action.c(146):     <link href="/Platform/Content/site.css" rel="stylesheet"/>\r\n
+Action.c(146):     <link href="/Platform/Content/carestream.css" rel="stylesheet"/>\r\n
+Action.c(146):     <link href="/Platform/Content/ui-bootstrap-csp.css" rel="stylesheet"/>\r\n
+Action.c(146):     <link href="/Platform/app/common/controls/puma-switch/puma-switch.css" rel="stylesheet"/>\r
+Action.c(146):     \n
+Action.c(146):     <link href="/Platform/Content/ui-grid.min.css" rel="stylesheet"/>\r\n
+Action.c(146):     <link href="/Platform/Scripts/angular-tree-control/tree-control.css" rel="stylesheet"/>\r\n
+Action.c(146):     <link href="/Platform/Scripts/angular-tree-control/tree-control-attribute.css" rel="styles
+Action.c(146):     heet"/>\r\n
+Action.c(146):     <link href="/Platform/Content/toaster.css" rel="stylesheet"/>\r\n
+Action.c(146):     <link href="/Platform/Content/select.css" rel="stylesheet"/>\r\n
+Action.c(146):     \r\n
+Action.c(146):         <link href="/Platform/app-resources/css/site.css" rel="stylesheet"/>\r\n
+Action.c(146):     <link href="/Platform/app-resources/css/open-dialog.css" rel="stylesheet"/>\r\n
+Action.c(146):     <link href="/Platform/app-resources/css/terminalmonitor.css" rel="stylesheet"/>\r\n
+Action.c(146):     <link href="/Platform/app-resources/css/statistics.css" rel="stylesheet"/>\r\n
+Action.c(146):     <link href="/Platform/app-resources/css/barcode.css" rel="stylesheet"/>\r\n
+Action.c(146):     <link href="/Platform/app-resources/css/circle.css" rel="stylesheet"/>\r\n
+Action.c(146):     <link href="/Platform/app-resources/css/worklist.css" rel="stylesheet"/>\r\n
+Action.c(146):     <link href="/Platform/app-resources/css/adminsettings.css" rel="stylesheet"/>\r\n
+Action.c(146):     <link href="/Platform/app-resources/css/reconciliation.css" rel="stylesheet"/>\r\n
+Action.c(146):     <link href="/Platform/Scripts/PDF.js.1.3.91/text_layer_builder.css" rel="stylesheet"/>\r\n
+Action.c(146):     \r\n
+Action.c(146):     \r\n
+Action.c(146):         \r\n
+Action.c(146):     \r\n
+Action.c(146):     </head>\r\n
+Action.c(146):     <body ng-controller="workareaAppController">\r\n
+Action.c(146):         <div class="navbar navbar-default puma-navbar navbar-fixed-top">\r\n
+Action.c(146):             <div class="container-fluid" style="margin-left:0px;padding-left:0px;">\r\n
+Action.c(146):                 <div class="col-md-12">\r\n
+Action.c(146):                     <div class="navbar-header" style="margin-left: -15px">\r\n
+Action.c(146):                         <button type="button" class="navbar-toggle" data-toggle="collapse" dat
+Action.c(146):     a-target=".navbar-collapse">\r\n
+Action.c(146):                             <span class="icon-bar"></span>\r\n
+Action.c(146):                             <span class="icon-bar"></span>\r\n
+Action.c(146):                             <span class="icon-bar"></span>\r\n
+Action.c(146):                         </button>\r\n
+Action.c(146):                         <div class="navbar-brand">\r\n
+Action.c(146):                             <span class="icon-ico_ps_logo icon-general" style="font-size: 2em;
+Action.c(146):     "></span>\r\n
+Action.c(146):                         </div>\r\n
+Action.c(146):                     </div>\r\n
+Action.c(146):                     <div class="navbar-collapse collapse">\r\n
+Action.c(146):                         <ul class="nav navbar-nav">\r\n
+Action.c(146):                             <li ng-repeat="(key, value) in collapsePages" style="color:blue">\r
+Action.c(146):     \n
+Action.c(146):                                 <a ui-sref="workarea.{{key}}" ng-if="value.permission" ng-bind
+Action.c(146):     ="value.displayName | translate" ng-class="{active:activeItem === key }" ng-click="selecte
+Action.c(146):     dItem(key)"></a>\r\n
+Action.c(146):                             </li>\r\n
+Action.c(146):     \r\n
+Action.c(146):                             <li class="dropdown" dropdownmenu-change-title ng-if="hasconfigPer
+Action.c(146):     mission">\r\n
+Action.c(146):                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" rol
+Action.c(146):     e="button" aria-haspopup="true" aria-expanded="false" ng-class="{active:activeItem === key
+Action.c(146):      }" ng-click="selectedItem(key)">\r\n
+Action.c(146):                                     <span class="icon-ico_setting_selected icon_font_size"></s
+Action.c(146):     pan>\r\n
+Action.c(146):                                     <span ng-bind="dropdownTitle | translate"></span>\r\n
+Action.c(146):                                     <span class="caret"></span>\r\n
+Action.c(146):                                 </a>\r\n
+Action.c(146):                                 <ul class="dropdown-menu">\r\n
+Action.c(146):                                     <li ng-repeat="(key, value) in dropdownPages">\r\n
+Action.c(146):                                         <a ui-sref="workarea.{{key}}" ng-if="value.permission"
+Action.c(146):      dropdownitem>{{value.displayName  | translate}}</a>\r\n
+Action.c(146):                                     </li>\r\n
+Action.c(146):                                 </ul>\r\n
+Action.c(146):                             </li>\r\n
+Action.c(146):                         </ul>\r\n
+Action.c(146):     \r\n
+Action.c(146):     \r\n
+Action.c(146):                         <ul class="nav navbar-nav navbar-right">\r\n
+Action.c(146):                             <li title="">\r\n
+Action.c(146):                                 <span class="icon-general icon-ico_role_admin icon_font_size">
+Action.c(146):     \r\n
+Action.c(146):                                     <span class="path1"></span><span class="path2"></span><spa
+Action.c(146):     n class="path3"></span>\r\n
+Action.c(146):                                 </span>\r\n
+Action.c(146):                             </li>\r\n
+Action.c(146):                             <li class="dropdown" title="用户">\r\n
+Action.c(146):                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" rol
+Action.c(146):     e="button" aria-haspopup="true" aria-expanded="false">\r\n
+Action.c(146):                                     1\r\n
+Action.c(146):                                     <span class="caret"></span>\r\n
+Action.c(146):                                 </a>\r\n
+Action.c(146):                                 <ul class="dropdown-menu">\r\n
+Action.c(146):                                     <li id="logout"><a href="#" ng-click="logout()">{{ 'Logout
+Action.c(146):     ' | translate }}</a></li>\r\n
+Action.c(146):                                 </ul>\r\n
+Action.c(146):                             </li>\r\n
+Action.c(146):                             <li class="dropdown nav-download" title="下载">\r\n
+Action.c(146):                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" rol
+Action.c(146):     e="button" aria-haspopup="true" aria-expanded="false">\r\n
+Action.c(146):                                     <span class="icon-ico_download icon_font_size"><span class
+Action.c(146):     ="path1"></span><span class="path2"></span><span class="path3"></span></span>\r\n
+Action.c(146):                                     <span class="caret"></span>\r\n
+Action.c(146):                                 </a>\r\n
+Action.c(146):                                 <ul class="dropdown-menu">\r\n
+Action.c(146):                                     <li><a href="#" ng-click="downloadReconciliationTool()">{{
+Action.c(146):      'DownloadReconciliationTool' | translate }}</a></li>\r\n
+Action.c(146):     \r\n
+Action.c(146):                                 </ul>\r\n
+Action.c(146):                             </li>\r\n
+Action.c(146):                         </ul>\r\n
+Action.c(146):                     </div>\r\n
+Action.c(146):                 </div>\r\n
+Action.c(146):             </div>\r\n
+Action.c(146):         </div>\r\n
+Action.c(146):         <div class="content">\r\n
+Action.c(146):             <ui-view></ui-view>\r\n
+Action.c(146):         </div>\r\n
+Action.c(146):     \r\n
+Action.c(146):         <toaster-container toaster-options="{'close-button': true,'debug': false,'position-cla
+Action.c(146):     ss': 'toast-top-center','limit':1, 'time-out': { 'toast-success': 1500, 'toast-info': 1500
+Action.c(146):     , 'toast-warning': 0, 'toast-error': 0 }}"></toaster-container>\r\n
+Action.c(146):         \r\n
+Action.c(146):         <footer>\r\n
+Action.c(146):             <div class="footer-workarea">\r\n
+Action.c(146):                 <ul class="list-group ">\r\n
+Action.c(146):                     <li class="list-unstyled pull-left">&nbsp;&nbsp;© 2017 Carestream Health.
+Action.c(146):      All rights reserved</li>\r\n
+Action.c(146):                     <li class="list-unstyled pull-right">Version:{{systemVersion}}&nbsp;&nbsp;
+Action.c(146):     </li>\r\n
+Action.c(146):                 </ul>\r\n
+Action.c(146):             </div>\r\n
+Action.c(146):         </footer>\r\n
+Action.c(146):     \r\n
+Action.c(146):         <script src="/Platform/Scripts/jquery-1.11.0.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/jquery.validate.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/jquery.validate.unobtrusive.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/modernizr-2.6.2.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/bootstrap.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/respond.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/PDF.js.1.3.91/compatibility.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/PDF.js.1.3.91/pdf.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/PDF.js.1.3.91/pdf.worker.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/PDF.js.1.3.91/text_layer_builder.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/angular.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/angular-ui-router.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/angular-ui/ui-bootstrap.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/angular-ui/ui-bootstrap-tpls.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/i18n/angular-locale_zh-cn.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/angular-cookies.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/angular-animate.min.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/angular-busy.min.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/angular-aria.min.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/angular-material/angular-material.min.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/angular-translate.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/angular-translate-loader-partial.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/ng-file-upload/ng-file-upload.min.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/ui-grid-puma.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/angular-tree-control/angular-tree-control.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/toaster.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/select.min.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/Chart.min.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/jsBarcode/JsBarcode.all.min.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/angular-chart/angular-chart.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/underscore.min.js"></script>\r\n
+Action.c(146):     \r\n
+Action.c(146):         <script src="/Platform/app/common/common.module.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/behaviors/checklist-model.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/behaviors/drag-sortable.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/behaviors/dropdownMenu-changeTitle.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/behaviors/focus.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/behaviors/img-thumb.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/behaviors/notAllowDot.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/behaviors/notAllowSpecialChar.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/behaviors/vt-enter.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/controls/drag-sortable/Sortable.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/controls/puma-confirm/puma-confirm.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/controls/puma-delete-button/puma-delete-button.js"></scr
+Action.c(146):     ipt>\r\n
+Action.c(146):     <script src="/Platform/app/common/controls/puma-multi-select/puma-multi-select.js"></scrip
+Action.c(146):     t>\r\n
+Action.c(146):     <script src="/Platform/app/common/controls/puma-multi-select/puma-multi-select.tpl.js"></s
+Action.c(146):     cript>\r\n
+Action.c(146):     <script src="/Platform/app/common/controls/puma-open-dialog/open-dialog.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/controls/puma-open-dialog/puma-dialog.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/controls/puma-switch/puma-switch.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/filters/as-date-filter.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/filters/camel-case-filter.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/filters/qclog-event-filter.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/filters/truncate-ellipsis-filter.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/utils/base64.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/utils/constants.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/utils/date.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/utils/enum.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/utils/errorCode.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/utils/ipAddressHandler.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/utils/kiosk.util.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/utils/loginContext.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/utils/permission.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/utils/reconciliationParam.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/utils/webservices.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/webservices/client-tool-svc.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/webservices/configuration-promise.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/webservices/configuration-svc.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/common/webservices/system-information-svc.js"></script>\r\n
+Action.c(146):     \r\n
+Action.c(146):         <script src="/Platform/app/workarea/app.workarea.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/workarea/module.workarea.js"></script>\r\n
+Action.c(146):     <script src="/Platform/Scripts/angular-dropdown-multiselect.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/workarea/framework/workarea-app-container.ctl.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/workarea/worklist/controllers/worklist-mainbody-ctrl.js"></scri
+Action.c(146):     pt>\r\n
+Action.c(146):     <script src="/Platform/app/workarea/worklist/controllers/worklist-view-ctrl.js"></script>\r
+Action.c(146):     \n
+Action.c(146):     <script src="/Platform/app/workarea/worklist/views/worklist-view.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/workarea/reconciliation/controllers/reconciliation-list-ctrl.js
+Action.c(146):     "></script>\r\n
+Action.c(146):     <script src="/Platform/app/workarea/terminalmonitor/controllers/terminalmonitor-view-ctrl.
+Action.c(146):     js"></scr
+Action.c(146): t=6832ms: 1803-byte response body for "http://10.184.129.108/Platform/workarea" (RelFrameId=1, Internal ID=6)
+Action.c(146):     ipt>\r\n
+Action.c(146):     <script src="/Platform/app/workarea/adminsettings/log/controllers/qclog-ctrl.js"></script>
+Action.c(146):     \r\n
+Action.c(146):     <script src="/Platform/app/workarea/adminsettings/log/views/qclog-view.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/workarea/adminsettings/printtask/controllers/print-task-ctrl.js
+Action.c(146):     "></script>\r\n
+Action.c(146):     <script src="/Platform/app/workarea/adminsettings/role/controllers/role-settings-ctrl.js">
+Action.c(146):     </script>\r\n
+Action.c(146):     <script src="/Platform/app/workarea/adminsettings/system/controllers/systeml-setting-ctr.j
+Action.c(146):     s"></script>\r\n
+Action.c(146):     <script src="/Platform/app/workarea/adminsettings/user/contorllers/user-settings-ctrl.js">
+Action.c(146):     </script>\r\n
+Action.c(146):     <script src="/Platform/app/workarea/statistics/controllers/statistics-ctrl.js"></script>\r
+Action.c(146):     \n
+Action.c(146):     <script src="/Platform/app/workarea/webservices/adminsettings-svc.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/workarea/webservices/printtask-svc.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/workarea/webservices/qclog-svc.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/workarea/webservices/reconciliation-svc.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/workarea/webservices/role-svc.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/workarea/webservices/statistics-svc.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/workarea/webservices/terminalmonitor-svc.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/workarea/webservices/user-svc.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/workarea/webservices/worklist-svc.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/workarea/barcode/controllers/barcode-ctrl.js"></script>\r\n
+Action.c(146):     <script src="/Platform/app/workarea/dicomviewer/controllers/dicom-viewer-ctrl.js"></script
+Action.c(146):     >\r\n
+Action.c(146):     \r\n
+Action.c(146):     \r\n
+Action.c(146):         <script>\r\n
+Action.c(146):             var urlPrefix = /Platform/;\r\n
+Action.c(146):             var urlPrefixWebApi = '/webapi';\r\n
+Action.c(146):             window.urlPrefixWorkarea = '/workarea';\r\n
+Action.c(146):             var userAdmin = 'admin';\r\n
+Action.c(146):             var userCshsvc = 'cshsvc';\r\n
+Action.c(146):         </script>\r\n
+Action.c(146):     </body>\r\n
+Action.c(146):     </html>\r\n
+Action.c(146): web_url("workarea") was successful, 14091 body bytes, 260 header bytes  	[MsgId: MMSG-26386]
+Action.c(206): web_add_auto_header("Authorization") started  	[MsgId: MMSG-26355]
+Action.c(206): Notify: Parameter Substitution: parameter "access_token" =  "PBcXba47aASh2Wp75BwBm5o_XmcWeGhgoiRExuF2JNayuuxhID8Og0XOjx8TcpApt6ls0dyF-iQvEu_O-OtiJXGBaz1d0xER80syeeC45VLNmC4IARFLE8Ph2MNqGBkSq-J5sXZeoDQUtphwkad-j28a0YokdZi4Dn2aiabrQIpQUILIgbAUemMjzj4w-AzU31g7bg4R8HtpFApslYTVOA"
+Action.c(206): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+Action.c(206): web_add_auto_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(208): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(208): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(213): web_url("CheckLoginStatusByUser") started  	[MsgId: MMSG-26355]
+Action.c(213): Notify: Transaction "User_login" ended with a "Stop" status (Duration: 6.5029 Wasted Time: 0.0129).
+Abort was called from an action.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

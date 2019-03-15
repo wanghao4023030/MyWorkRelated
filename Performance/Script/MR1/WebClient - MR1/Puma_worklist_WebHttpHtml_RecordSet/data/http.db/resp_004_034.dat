@@ -1,0 +1,41 @@
+﻿<div style="display: inline-table">
+    <input type="checkbox" ng-model="row.entity.isSelected" ng-change="grid.appScope.changeExamChecked(row.entity)" />
+    <div ng-class="{true: 'icon-ico_arrow_down', false: 'icon-ico_table_arrow_right'}[row.isExpanded == true]" style="display: inline-table" ng-click="grid.api.expandable.toggleRowExpansion(row.entity)"></div>
+    <div uib-dropdown auto-close="outsideClick" class="grid-pop-dropdown">
+        <span class="icon-ico_table_row_menu" id="folded-column" uib-dropdown-toggle ng-click="grid.appScope.openFoldedColumns($event)"></span>
+        <div class="dropdown-menu folded-column" ng-class="{'pop-above': grid.appScope.isPopAbove && !grid.appScope.isOnlyReport, 'pop-above-only-report': grid.appScope.isPopAbove && grid.appScope.isOnlyReport}" uib-dropdown-menu aria-labelledby="folded-column">
+            <div ng-hide="grid.appScope.isOnlyReport">
+                <span>
+                    打印模式
+                    <select ng-options="p.itemValue as p.itemName for p in grid.appScope.printModes.valueList" ng-disabled="!grid.appScope.hasChangePrintModePermission" ng-model="row.entity.printMode" ng-change="grid.appScope.changePrintMode(row.entity)"></select>
+                </span>
+            </div>
+            <hr class="seperate-line" ng-hide="grid.appScope.isOnlyReport" />
+            <div>
+                <span>
+                    是否延时
+                    <switch ng-model="row.entity.holdFlag" puma-disabled="!grid.appScope.hasChangeHoldFlagPermission" ng-change="grid.appScope.changeHoldFlag(row.entity)"></switch>
+                </span>
+            </div>
+            <hr class="seperate-line" />
+            <div ng-hide="grid.appScope.isOnlyReport">
+                <span>
+                    删除全部胶片
+                    <span class="print_status_button round_button" ng-class="{disabled_permission:(!grid.appScope.hasDeletePermission || row.entity.imageCount == 0 || row.entity.imageCount == null)}"
+                          ng-click="grid.appScope.hasDeletePermission && row.entity.imageCount > 0 && grid.appScope.deleteAllFilm(row.entity)">
+                        <i class="icon-ico_litter-bin print_button"></i><span class="reprint_text">删除</span>
+                    </span>
+                </span>
+            </div>
+            <div>
+                <span>
+                    删除全部报告
+                    <span class="print_status_button round_button" ng-class="{disabled_permission:(!grid.appScope.hasDeletePermission || row.entity.reportCount == 0 || row.entity.reportCount == null)}"
+                          ng-click="grid.appScope.hasDeletePermission && row.entity.reportCount > 0 && grid.appScope.deleteAllReport(row.entity)">
+                        <i class="icon-ico_litter-bin print_button"></i><span class="reprint_text">删除</span>
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

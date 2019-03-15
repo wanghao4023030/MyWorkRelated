@@ -1,0 +1,3 @@
+Transaction Name,Flow Name,Packet List Name,Transaction Duration (seconds),Network Time (seconds) ,Throughput Up (KB),Throughput Down (KB),Number of Requests,Errors,Analysis Score (Desktop) ,Analysis Score (Mobile) ,Transaction HTML Report Name
+User_login,,,139.0,130.5,0.0,0.0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report0.html
+worklist_query_Patient_PID,,,0.4,0.0,0.0,0.0,0,0,N\A (no HTTP traffic),N\A (no HTTP traffic),report1.html

@@ -1,0 +1,131 @@
+﻿adminSettingModule.controller('roleController', ['$scope', '$log', '$translate', 'roleService', 'toaster', 'enums', 'constants',
+    function ($scope, $log, $translate, roleService, toaster, enums, constants) {
+        $log.debug('roleController controller...');
+
+        var getRoleNames = function () {
+            roleService.getRoleNames().success(function (result) {
+                $scope.roles = result;
+            });
+        };
+        var getRolePermissions = function () {
+            roleService.getRolePermissions().success(function (result) {
+                $scope.rolePermissions = result;
+                angular.forEach($scope.rolePermissions, function (rolePermission) {
+                    rolePermission.permissionValue = false;
+                });
+                //angular.forEach($scope.roles, function (role) {
+                //    angular.forEach(rolePermissions, function (rolePermission) {
+                //        rolePermission.
+                //        $scope.permissionByRole.push(item);
+                //        var item = _.find($scope.departments, function (item) {
+                //            return departmentId === item.id.toString();
+                //        });
+
+                //        if (item !== undefined) {
+                //            customUser.departments.push(item);
+                //        }
+                //    });
+                //});
+
+
+            });
+        };
+        var getPermissionsByRole = function (param) {
+            $scope.currentRole = param;
+            $scope.activeId = param;
+            angular.forEach($scope.rolePermissions, function (rolePermission) {
+                switch (param) {
+                    case enums.roles.administrator:
+                        rolePermission.permissionValue = rolePermission.administrator === 1 ? true : false;
+                        break;
+                    case enums.roles.radiologist:
+                        rolePermission.permissionValue = rolePermission.radiologist === 1 ? true : false;
+                        break;
+                    case enums.roles.technician:
+                        rolePermission.permissionValue = rolePermission.technician === 1 ? true : false;
+                        break;
+                    case enums.roles.receptionist:
+                        rolePermission.permissionValue = rolePermission.receptionist === 1 ? true : false;
+                        break;
+                    default:
+                        break;
+                }
+            });
+        };
+        var updatePermissionsByRole = function () {
+            var data = angular.copy($scope.rolePermissions);
+            angular.forEach(data, function (item) {
+                item.permissionValue = item.permissionValue === true ? 1 : 0;
+            });
+            roleService.updatePermissionsByRole(data, $scope.currentRole).success(function (result) {
+                if (result == true) {
+                    toaster.pop('success', '', $translate.instant('UpdateSuccess'));
+                } else {
+                    toaster.pop('error', '', $translate.instant('Update fail'));
+                }
+            });
+        };
+
+        var checkeWorklist = function (param) {
+            angular.forEach($scope.rolePermissions, function (rolePermission) {
+                if (rolePermission.permissionGroup === '2') {
+                    if (param) {
+                        rolePermission.permissionValue = param;
+                    } else {
+                        rolePermission.permissionValue = false;
+                    }
+                }
+            });
+        };
+
+        var checkeWorklistItem = function (param) {
+            if (param) {             
+                var result = _.find($scope.rolePermissions, function (rolePermission) {
+                    return rolePermission.permissionName === 'worklist';
+                });
+                if (result !== undefined) {
+                    result.permissionValue = param;
+                }     
+            }  
+        };
+
+        var checkConfig = function (param) {
+
+            angular.forEach($scope.rolePermissions, function (rolePermission) {
+                if (rolePermission.permissionGroup === '3') {
+                    if (param) {
+                        rolePermission.permissionValue = param;
+                    } else {
+                        rolePermission.permissionValue = false;
+                    }
+                }
+            });
+        };
+        var checkConfigItem = function (param) {
+            if (param) {
+                var result = _.find($scope.rolePermissions, function (rolePermission) {
+                    return rolePermission.permissionName === 'config';
+                });
+                if (result !== undefined) {
+                    result.permissionValue = param;
+                }
+            }
+        };
+
+        (function initialize() {
+            $log.debug('roleController initialize...');
+            $scope.permissionName = enums.permissionName;
+            $scope.roleEnumss = enums.roles;
+            getRoleNames();
+            getRolePermissions();
+            $scope.getPermissionsByRole = getPermissionsByRole;
+            $scope.updatePermissionsByRole = updatePermissionsByRole;
+            $scope.checkeWorklist = checkeWorklist;
+            $scope.checkeWorklistItem = checkeWorklistItem;
+            $scope.checkConfig = checkConfig;
+            $scope.checkConfigItem = checkConfigItem;
+        }());
+
+    }]);
+
+

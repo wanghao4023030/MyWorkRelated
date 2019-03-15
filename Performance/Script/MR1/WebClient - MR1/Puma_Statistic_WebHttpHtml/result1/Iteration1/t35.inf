@@ -1,0 +1,13 @@
+[t35]
+SnapshotXmlFile=snapshot_35.xml
+ContentType=DummyContentType
+StepName=Custom Request: Report_By_ModalityType
+Total=1
+FileName1=t35.UNK
+RequestHeaderFile=t35_RequestHeader.txt
+ResponseHeaderFile=t35_ResponseHeader.txt
+RawStepEndTime=1528192143309
+RawStepName=Report_By_ModalityType
+RequestBodyFile=t35_RequestBody.txt
+RawStepStartTime=1528192142150
+URL1=file:

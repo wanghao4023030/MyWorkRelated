@@ -1,0 +1,14 @@
+﻿commonModule.filter("camelCase", ['$log',
+    function ($log) {
+        return function (preString) {
+            var resultString = '';
+            if (preString != undefined && preString != null) {
+                var reg = /^[A-Z]+$/;
+                if (reg.test(preString[0])) {
+                    resultString = preString[0].toLowerCase() + preString.slice(1);
+                }
+            }
+            return resultString;
+        };
+    }
+]);

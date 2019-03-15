@@ -1,0 +1,10 @@
+[t37]
+FileName1=t37_worklist-template.html
+URL1=http://10.184.129.208/Platform/app/workarea/worklist/views/worklist-template.html
+Total=1
+ContentType=
+SnapshotXmlFile=snapshot_37.xml
+RequestHeaderFile=t37_RequestHeader.txt
+RequestBodyFile=NONE
+[ProtocolInfo]
+ProtocolId=QTWeb

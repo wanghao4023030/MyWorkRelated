@@ -1,0 +1,11 @@
+[t65]
+FileName1=t65.html
+URL1=http://10.184.129.208/webapi/api/worklist/searchWorklist
+Total=1
+RequestHeaderFile=t65_RequestHeader.txt
+RequestBodyFile=t65_RequestBody.txt
+ResponseHeaderFile=t65_ResponseHeader.txt
+ContentType=
+SnapshotXmlFile=snapshot_65.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,13 @@
+[t7]
+SnapshotXmlFile=snapshot_7.xml
+ContentType=DummyContentType
+StepName=Url: worklistcolumns
+Total=1
+FileName1=t7.UNK
+RequestHeaderFile=t7_RequestHeader.txt
+ResponseHeaderFile=t7_ResponseHeader.txt
+RawStepEndTime=1528191381226
+RawStepName=worklistcolumns
+RequestBodyFile=t7_RequestBody.txt
+RawStepStartTime=1528191380386
+URL1=file:

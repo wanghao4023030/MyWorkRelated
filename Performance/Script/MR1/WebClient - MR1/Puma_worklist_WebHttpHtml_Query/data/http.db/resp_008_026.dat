@@ -1,0 +1,196 @@
+﻿.terminalNumber {
+    background-color: #FF4C4C;
+}
+
+.terminalError {
+    color: #ff0000;
+    vertical-align: middle;
+}
+
+.terminalNormal {
+    color: #4cff00;
+    vertical-align: middle;
+}
+
+.terminalWarning {
+    color: #fafc05;
+    vertical-align: middle;
+}
+
+.terminalHeaderRow {
+    height: 50px;
+    background-color: #F5F5F5;
+    line-height: 50px;
+    /*width:100%*/
+}
+
+.detailRow {
+    height: 163px;
+    background-color: #FFF;
+    padding-top: 20px;
+    margin-left: 0px;
+}
+
+.deviceIcon li {
+    width: 50px;
+    height: 45px;
+}
+
+    .deviceIcon li a {
+        border: 0px;
+        padding: 0px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: inline-block;
+    }
+
+.terminalIcon {
+    /*background-image:url('../app-resources/images/terminalmonitor/ico_terminal.png') ;*/
+    background: url('../../app-resources/images/terminalmonitor/ico_terminal.png') center no-repeat;
+    background-size: 18px 30px;
+}
+
+.filmPrinterIcon {
+    background: url('../../app-resources/images/terminalmonitor/ico_fp.png') center no-repeat;
+    background-size: 25px 30px;
+}
+
+.reportPrinterIcon {
+    background: url('../../app-resources/images/terminalmonitor/ico_bpp.png') center no-repeat;
+    background-size: 23px 30px;
+}
+
+.reportColorPrinterIcon {
+    background: url('../../app-resources/images/terminalmonitor/ico_cpp.png') center no-repeat;
+    background-size: 22px 30px;
+}
+
+.roundedBorder {
+    border-radius: 22px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 5px;
+    min-width: 80px;
+}
+
+
+.terminalErrorList li span {
+    background-color: #FFE4E4;
+    min-width: 150px;
+}
+
+.infoLabel {
+    background-color: #DEF8E9;
+}
+
+.tbCenter tr td:first-child {
+    text-align: right;
+    color: #999999;
+    padding-right: 15px;
+}
+
+.diverTerminalMonitor {
+    width: 3px;
+    border-right: 3px solid #e7e7e7;
+}
+
+.progress-bar-vertical {
+    width: 36px;
+    min-height: 100px;
+    display: inline-flex;
+    align-items: flex-end;
+}
+
+    .progress-bar-vertical .progress-bar {
+        width: 100%;
+        height: 0;
+        /*-webkit-transition:height 0.6s ease;
+    -o-transition:height 0.6s ease;
+    transition :height 0.6s ease;*/
+    }
+
+.blackInk {
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+
+.cyanInk {
+    background-color: cyan;
+    color: black;
+    width: 100%;
+    text-align: center;
+}
+
+
+.magentaInk {
+    background-color: magenta;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.yellowInk {
+    background-color: yellow;
+    color: black;
+    width: 100%;
+    text-align: center;
+}
+
+.lowInk {
+    margin-top: -40px;
+    padding-left: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.badge-notify {
+    display: inline-block;
+    background: red;
+    position: relative;
+    top: -54px;
+    left: 36px;
+    width: 5px;
+    height: 5px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+
+/*sss*/
+.animate-enter, 
+.animate-leave { 
+    -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    position: relative;
+    display: block;
+} 
+ 
+.animate-leave.animate-leave-active,
+.animate-enter {
+    -webkit-transform: scaleY(0);
+    -moz-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    transform: scaleY(0);
+    height: 0px;
+    opacity: 0;
+}
+ 
+.animate-enter.animate-enter-active,
+.animate-leave {
+    -webkit-transform: scaleY(1);
+    -moz-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    transform: scaleY(1);
+    height: 30px;
+    opacity: 1;
+}

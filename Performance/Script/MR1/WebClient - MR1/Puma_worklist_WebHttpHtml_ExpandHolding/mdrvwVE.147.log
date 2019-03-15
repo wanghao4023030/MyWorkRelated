@@ -1,0 +1,173 @@
+Start auto log messages stack - Iteration 99.	[MsgId: MMSG-10545]
+User Login website successfully: HTTP/1.1 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=utf-8
+Server: Microsoft-IIS/7.5
+X-AspNetMvc-Version: 5.2
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Thu, 07 Jun 2018 12:00:40 GMT
+Content-Length: 4
+
+true	[MsgId: MMSG-17999]
+Action.c(238): web_url("tableRowsPerPage") started  	[MsgId: MMSG-26355]
+Action.c(238): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/webapi/api/tableRowsPerPage"  	[MsgId: MMSG-26548]
+Action.c(238): web_url("tableRowsPerPage") was successful, 39 body bytes, 258 header bytes  	[MsgId: MMSG-26386]
+Action.c(246): web_url("worklistcolumns") started  	[MsgId: MMSG-26355]
+Action.c(246): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/worklist/worklistcolumns"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 109.	[MsgId: MMSG-10545]
+Action.c(338): web_url("CheckLoginStatus_25") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(346): lr_think_time: 30.00 seconds.	[MsgId: MMSG-15948]
+Action.c(349): web_url("CheckLoginStatus_25") started  	[MsgId: MMSG-26355]
+Action.c(349): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(349): web_url("CheckLoginStatus_25") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(359): Notify: Transaction "ExpandReportRecord" started.	[MsgId: MMSG-16999]
+Action.c(361): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(361): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/worklist/reportInfo?accessionNumber=A20180601100019397"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 109.	[MsgId: MMSG-10545]
+Action.c(213): web_url("CheckLoginStatusByUser") started  	[MsgId: MMSG-26355]
+Action.c(213): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(213): web_url("CheckLoginStatusByUser") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+User Login website successfully: HTTP/1.1 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=utf-8
+Server: Microsoft-IIS/7.5
+X-AspNetMvc-Version: 5.2
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Thu, 07 Jun 2018 12:40:38 GMT
+Content-Length: 4
+
+true	[MsgId: MMSG-17999]
+Action.c(238): web_url("tableRowsPerPage") started  	[MsgId: MMSG-26355]
+Action.c(238): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/tableRowsPerPage"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 108.	[MsgId: MMSG-10545]
+Action.c(99): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(104): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(104): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(109): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(109): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(114): Notify: Transaction "User_login" started.	[MsgId: MMSG-16999]
+Action.c(116): web_custom_request("login") started  	[MsgId: MMSG-26355]
+Action.c(116): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/account/login"  	[MsgId: MMSG-26548]
+Action.c(116): Continuing after Error -26377: No match found for the requested parameter "ApiToken". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 90000 bytes. The total length of the response is 88 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+Action.c(116): Continuing after Error -26377: No match found for the requested parameter "AspToken". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 90000 bytes. The total length of the response is 88 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+Action.c(116): Continuing after Error -26377: No match found for the requested parameter "access_token". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 90000 bytes. The total length of the response is 88 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 108.	[MsgId: MMSG-10545]
+Action.c(206): web_add_auto_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(208): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(208): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(213): web_url("CheckLoginStatusByUser") started  	[MsgId: MMSG-26355]
+Action.c(213): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(213): web_url("CheckLoginStatusByUser") was successful, 5 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(225): Error: Login failed	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 119.	[MsgId: MMSG-10545]
+Action.c(428): lr_think_time: 30.00 seconds.	[MsgId: MMSG-15948]
+Action.c(430): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(430): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(435): Notify: Transaction "SetPrintMode" started.	[MsgId: MMSG-16999]
+Action.c(437): web_custom_request("SetPrintMode") started  	[MsgId: MMSG-26355]
+Action.c(437): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/webapi/api/worklist/UpdateStatusByAccessionNumber"  	[MsgId: MMSG-26548]
+Action.c(437): web_custom_request("SetPrintMode") was successful, 87 body bytes, 258 header bytes  	[MsgId: MMSG-26386]
+Action.c(447): Notify: Transaction "SetPrintMode" ended with a "Pass" status (Duration: 18.4663 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+The result is:  false	[MsgId: MMSG-17999]
+Action.c(453): Error: SetPrintMode fail	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 120.	[MsgId: MMSG-10545]
+Action.c(338): web_url("CheckLoginStatus_25") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(346): lr_think_time: 30.00 seconds.	[MsgId: MMSG-15948]
+Action.c(349): web_url("CheckLoginStatus_25") started  	[MsgId: MMSG-26355]
+Action.c(349): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(349): web_url("CheckLoginStatus_25") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(359): Notify: Transaction "ExpandReportRecord" started.	[MsgId: MMSG-16999]
+Action.c(361): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(361): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/worklist/reportInfo?accessionNumber=A20180601095938477"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 121.	[MsgId: MMSG-10545]
+Action.c(99): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(104): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(104): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(109): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(109): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(114): Notify: Transaction "User_login" started.	[MsgId: MMSG-16999]
+Action.c(116): web_custom_request("login") started  	[MsgId: MMSG-26355]
+Action.c(116): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/account/login"  	[MsgId: MMSG-26548]
+Action.c(116): Continuing after Error -26377: No match found for the requested parameter "ApiToken". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 90000 bytes. The total length of the response is 88 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+Action.c(116): Continuing after Error -26377: No match found for the requested parameter "AspToken". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 90000 bytes. The total length of the response is 88 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+Action.c(116): Continuing after Error -26377: No match found for the requested parameter "access_token". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 90000 bytes. The total length of the response is 88 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 121.	[MsgId: MMSG-10545]
+Action.c(206): web_add_auto_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(208): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(208): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(213): web_url("CheckLoginStatusByUser") started  	[MsgId: MMSG-26355]
+Action.c(213): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(213): web_url("CheckLoginStatusByUser") was successful, 5 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(225): Error: Login failed	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 121.	[MsgId: MMSG-10545]
+Action.c(399): web_custom_request("SetHoldingTime") started  	[MsgId: MMSG-26355]
+Action.c(399): Connection to 10.184.129.108:80 closed after being inactive for 60 seconds, exceeding the "HTTP Keep-Alive timeout" Run-Time Setting (60 seconds). URL="http://10.184.129.108/webapi/api/worklist/UpdateStatusByAccessionNumber"  	[MsgId: MMSG-27650]
+Action.c(399): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/webapi/api/worklist/UpdateStatusByAccessionNumber"  	[MsgId: MMSG-26548]
+Action.c(399): web_custom_request("SetHoldingTime") was successful, 87 body bytes, 258 header bytes  	[MsgId: MMSG-26386]
+Action.c(409): Notify: Transaction "SetTheHoldingTime" ended with a "Pass" status (Duration: 4.7758 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+The result is:  false	[MsgId: MMSG-17999]
+Action.c(415): Error: SetTheHoldingTime fail :A20180601093445286,false	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 121.	[MsgId: MMSG-10545]
+Action.c(338): web_url("CheckLoginStatus_25") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(346): lr_think_time: 30.00 seconds.	[MsgId: MMSG-15948]
+Action.c(349): web_url("CheckLoginStatus_25") started  	[MsgId: MMSG-26355]
+Action.c(349): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(349): web_url("CheckLoginStatus_25") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(359): Notify: Transaction "ExpandReportRecord" started.	[MsgId: MMSG-16999]
+Action.c(361): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(361): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/worklist/reportInfo?accessionNumber=A20180601100504780"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 122.	[MsgId: MMSG-10545]
+User Login website successfully: HTTP/1.1 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=utf-8
+Server: Microsoft-IIS/7.5
+X-AspNetMvc-Version: 5.2
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Thu, 07 Jun 2018 13:32:02 GMT
+Content-Length: 4
+
+true	[MsgId: MMSG-17999]
+Action.c(238): web_url("tableRowsPerPage") started  	[MsgId: MMSG-26355]
+Action.c(238): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/webapi/api/tableRowsPerPage"  	[MsgId: MMSG-26548]
+Action.c(238): web_url("tableRowsPerPage") was successful, 39 body bytes, 258 header bytes  	[MsgId: MMSG-26386]
+Action.c(246): web_url("worklistcolumns") started  	[MsgId: MMSG-26355]
+Action.c(246): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/worklist/worklistcolumns"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

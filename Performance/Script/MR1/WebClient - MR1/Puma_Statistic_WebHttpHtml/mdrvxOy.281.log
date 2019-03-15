@@ -1,0 +1,1725 @@
+Action.c(307):                                                     <div onmouseover="if(this.className=='PS_F
+Action.c(307):     itTL_active') return;this.className='PS_FitTL_hover';"\r\n
+Action.c(307):                                                          onmouseout="if(this.className=='PS_Fi
+Action.c(307):     tTL_active') return;this.className='PS_FitTL_common';"\r\n
+Action.c(307):                                                          id="imgPos1" ng-click="movePos(1);" c
+Action.c(307):     lass="PS_FitTL_active" title="ÂØπÈΩêÂ∑¶‰∏äËß\x92" />\r\n
+Action.c(307):                                                 </td>\r\n
+Action.c(307):                                                 <td>\r\n
+Action.c(307):                                                     <div onmouseover="if(this.className=='PS_F
+Action.c(307):     itTR_active') return;this.className='PS_FitTR_hover';"\r\n
+Action.c(307):                                                          onmouseout="if(this.className=='PS_Fi
+Action.c(307):     tTR_active') return;this.className='PS_FitTR_common';"\r\n
+Action.c(307):                                                          id="imgPos2" ng-click="movePos(2);" c
+Action.c(307):     lass="PS_FitTR_common" title="ÂØπÈΩêÂè≥‰∏äËß\x92" />\r\n
+Action.c(307):                                                 </td>\r\n
+Action.c(307):                                             </tr>\r\n
+Action.c(307):                                             <tr>\r\n
+Action.c(307):                                                 <td>\r\n
+Action.c(307):                                                     <div onmouseover="if(this.className=='PS_F
+Action.c(307):     itBL_active') return;this.className='PS_FitBL_hover';"\r\n
+Action.c(307):                                                          onmouseout="if(this.className=='PS_Fi
+Action.c(307):     tBL_active') return;this.className='PS_FitBL_common';"\r\n
+Action.c(307):                                                          id="imgPos3" ng-click="movePos(3);" c
+Action.c(307):     lass="PS_FitBL_common" title="ÂØπÈΩêÂ∑¶‰∏ãËß\x92" />\r\n
+Action.c(307):                                                 </td>\r\n
+Action.c(307):                                                 <td>\r\n
+Action.c(307):                                                     <div onmouseover="if(this.className=='PS_F
+Action.c(307):     itBR_active') return;this.className='PS_FitBR_hover';"\r\n
+Action.c(307):                                                          onmouseout="if(this.className=='PS_Fi
+Action.c(307):     tBR_active') return;this.className='PS_FitBR_common';"\r\n
+Action.c(307):                                                          id="imgPos4" ng-click="movePos(4);" c
+Action.c(307):     lass="PS_FitBR_common" title="ÂØπÈΩêÂè≥‰∏ãËß\x92" />\r\n
+Action.c(307):                                                 </td>\r\n
+Action.c(307):                                             </tr>\r\n
+Action.c(307):                                         </table>\r\n
+Action.c(307):                                         <div style="text-align: center;">\r\n
+Action.c(307):                                             <div class="PS_Spliter"></div>\r\n
+Action.c(307):                                         </div>\r\n
+Action.c(307):                                     </div>\r\n
+Action.c(307):                                     <div id="divNav" style="margin: auto;">\r\n
+Action.c(307):                                         <div onmouseover="this.className='PS_NavPrev_hover';" 
+Action.c(307):     onmouseout="this.className='PS_NavPrev_common';"\r\n
+Action.c(307):                                              ng-click="scrollNavList(-100);" class="
+Action.c(307): t=1186682ms: 2563-byte response body for "http://10.184.129.208/Platform/app/workarea/reconciliation/views/reconciliation-list.html" (RelFrameId=1, Internal ID=1288)
+Action.c(307):     PS_NavPrev_common">\r\n
+Action.c(307):                                         </div>\r\n
+Action.c(307):                                         <div>\r\n
+Action.c(307):                                             <div id="divImageList" style="width: 100%; overflo
+Action.c(307):     w: auto; overflow-x:hidden; font-size: large; color: White; text-align: center;" ng-style=
+Action.c(307):     "{'height': imageListHeight + 'px'}">\r\n
+Action.c(307):                                                 <div style="padding: 4px 0px" ng-repeat="image
+Action.c(307):      in images">\r\n
+Action.c(307):                                                     <img ng-src="{{image.thumbnailImagePath}}"
+Action.c(307):      ng-click="selectImage(image)" />\r\n
+Action.c(307):                                                     <span style="font-size: large; color: whit
+Action.c(307):     e">{{image.index}}</span>\r\n
+Action.c(307):                                                 </div>\r\n
+Action.c(307):                                             </div>\r\n
+Action.c(307):                                         </div>\r\n
+Action.c(307):                                         <div onmouseover="this.className='PS_NavNext_hover';" 
+Action.c(307):     onmouseout="this.className='PS_NavNext_common';"\r\n
+Action.c(307):                                              ng-click="scrollNavList(100);" class="PS_NavNext_
+Action.c(307):     common">\r\n
+Action.c(307):                                         </div>\r\n
+Action.c(307):                                     </div>\r\n
+Action.c(307):                                 </div>\r\n
+Action.c(307):                             </td>\r\n
+Action.c(307):                             <td width="100%">\r\n
+Action.c(307):                                 <div id="divImgRect" style="background-color: #343434; overflo
+Action.c(307):     w: auto; width: 100%" ng-style="{'height': filmViewerHeight + 'px', 'width': divImgRectWid
+Action.c(307):     th + 'px'}">\r\n
+Action.c(307):                                     <div id="divNoImg" ng-hide="isImageSelected" style="paddin
+Action.c(307):     g: 50px 0px 0px 50px; color: White; font-size: large; height: 100%; width: 100%">\r\n
+Action.c(307):                                         Êó†ÂõæÂÉ\x8F\r\n
+Action.c(307):                                     </div>\r\n
+Action.c(307):                                     <div id="divImg" ng-if="isImageSelected">\r\n
+Action.c(307):                                         <img id="imgRaw" ng-src="{{originImagePath}}" />\r\n
+Action.c(307):                                     </div>\r\n
+Action.c(307):                                 </div>\r\n
+Action.c(307):                             </td>\r\n
+Action.c(307):                         </tr>\r\n
+Action.c(307):                     </table>\r\n
+Action.c(307):     \r\n
+Action.c(307):                 </div>\r\n
+Action.c(307):             </div>\r\n
+Action.c(307):             <div ng-if="!isCanvasSupport" style="overflow:auto" ng-style="{'height': filmViewe
+Action.c(307):     rHeight + 'px'}">\r\n
+Action.c(307):                 <div>Á≥ªÁªüÊ£\x80ÊµãÂà∞ÊÇ®ÁöÑÊµèËßàÂô®‰∏çÊîØÊåÅÁõ¥Êé•Êü•ÁúãPDFÊñá‰ª∂ÔºåËØ∑ÂÆâË
+Action.c(307):     £ÖPDFÊèí‰ª∂„Ä\x82</div>\r\n
+Action.c(307):                 <iframe id="pdfFrame" style="height: 100%; width: 100%"></iframe>\r\n
+Action.c(307):             </div>\r\n
+Action.c(307):             <div id="divReportViewer" ng-if="isCanvasSupport && !isFilmTypeSelected" style="ov
+Action.c(307):     erflow:auto" ng-style="{'height': filmViewerHeight + 'px'}">\r\n
+Action.c(307):             </div>\r\n
+Action.c(307):         </div>\r\n
+Action.c(307):     </div>
+Action.c(307): web_url("reconciliation-list.html") was successful, 17522 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Action.c(315): web_url("getUnmatchImages") started  	[MsgId: MMSG-26355]
+Action.c(315): t=1186876ms: 257-byte response headers for "http://10.184.129.208/webapi/api/reconciliation/getUnmatchImages?days=1" (RelFrameId=1, Internal ID=1289)
+Action.c(315):     HTTP/1.1 200 OK\r\n
+Action.c(315):     Cache-Control: no-cache\r\n
+Action.c(315):     Pragma: no-cache\r\n
+Action.c(315):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(315):     Expires: -1\r\n
+Action.c(315):     Server: Microsoft-IIS/8.5\r\n
+Action.c(315):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(315):     X-Powered-By: ASP.NET\r\n
+Action.c(315):     Date: Fri, 08 Dec 2017 09:42:40 GMT\r\n
+Action.c(315):     Content-Length: 4\r\n
+Action.c(315):     \r\n
+Action.c(315): t=1186877ms: 4-byte response body for "http://10.184.129.208/webapi/api/reconciliation/getUnmatchImages?days=1" (RelFrameId=1, Internal ID=1289)
+Action.c(315):     null
+Action.c(315): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/webapi/api/reconciliation/getUnmatchImages?days=1"  	[MsgId: MMSG-26548]
+Action.c(315): web_url("getUnmatchImages") was successful, 4 body bytes, 257 header bytes  	[MsgId: MMSG-26386]
+Action.c(323): web_url("allTerminals") started  	[MsgId: MMSG-26355]
+Action.c(323): t=1187080ms: 261-byte response headers for "http://10.184.129.208/webapi/api/terminal/allTerminals" (RelFrameId=1, Internal ID=1290)
+Action.c(323):     HTTP/1.1 200 OK\r\n
+Action.c(323):     Cache-Control: no-cache\r\n
+Action.c(323):     Pragma: no-cache\r\n
+Action.c(323):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(323):     Expires: -1\r\n
+Action.c(323):     Server: Microsoft-IIS/8.5\r\n
+Action.c(323):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(323):     X-Powered-By: ASP.NET\r\n
+Action.c(323):     Date: Fri, 08 Dec 2017 09:42:41 GMT\r\n
+Action.c(323):     Content-Length: 28333\r\n
+Action.c(323):     \r\n
+Action.c(323): t=1187081ms: 1199-byte response body for "http://10.184.129.208/webapi/api/terminal/allTerminals" (RelFrameId=1, Internal ID=1290)
+Action.c(323):     [{"isNew":false,"terminalId":"CP136","terminalNameStatus":false,"terminalType":0,"terminal
+Action.c(323):     Ip":"10.184.129.136","selectedFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilm
+Action.c(323):     PrinterStatus":false,"reportPrinterName":null,"selectedReportPrinterFullName":null,"report
+Action.c(323):     PrinterNameStatus":false,"monitorReportPrinterStatus":false,"allowedAETitle":null,"allowed
+Action.c(323):     Ip":null,"selectedModalityTypes":[],"selectedDepartmentIds":[],"terminalDesc":null,"enable
+Action.c(323):     PrintReport":false},{"isNew":false,"terminalId":"K2_1","terminalNameStatus":false,"termina
+Action.c(323):     lType":0,"terminalIp":"10.184.129.201","selectedFilmPrinter":null,"filmPrinterNameStatus":
+Action.c(323):     false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"selectedReportPrinterFull
+Action.c(323):     Name":null,"reportPrinterNameStatus":false,"monitorReportPrinterStatus":false,"allowedAETi
+Action.c(323):     tle":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDepartmentIds":[],"terminal
+Action.c(323):     Desc":null,"enablePrintReport":false},{"isNew":false,"terminalId":"K2_2","terminalNameStat
+Action.c(323):     us":false,"terminalType":0,"terminalIp":"10.184.129.202","selectedFilmPrinter":null,"filmP
+Action.c(323):     rinterNameStatus":false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"selecte
+Action.c(323):     dReportPrinterFullName":null,
+Action.c(323): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/webapi/api/terminal/allTerminals"  	[MsgId: MMSG-26548]
+Action.c(323): t=1187081ms: 8760-byte response body for "http://10.184.129.208/webapi/api/terminal/allTerminals" (RelFrameId=1, Internal ID=1290)
+Action.c(323):     "reportPrinterNameStatus":false,"monitorReportPrinterStatus":false,"allowedAETitle":null,"
+Action.c(323):     allowedIp":null,"selectedModalityTypes":[],"selectedDepartmentIds":[],"terminalDesc":null,
+Action.c(323):     "enablePrintReport":false},{"isNew":false,"terminalId":"K2_3","terminalNameStatus":false,"
+Action.c(323):     terminalType":0,"terminalIp":"10.184.129.203","selectedFilmPrinter":null,"filmPrinterNameS
+Action.c(323):     tatus":false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"selectedReportPrin
+Action.c(323):     terFullName":null,"reportPrinterNameStatus":false,"monitorReportPrinterStatus":false,"allo
+Action.c(323):     wedAETitle":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDepartmentIds":[],"t
+Action.c(323):     erminalDesc":null,"enablePrintReport":false},{"isNew":false,"terminalId":"K2_4","terminalN
+Action.c(323):     ameStatus":false,"terminalType":0,"terminalIp":"10.184.129.204","selectedFilmPrinter":null
+Action.c(323):     ,"filmPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"
+Action.c(323):     selectedReportPrinterFullName":null,"reportPrinterNameStatus":false,"monitorReportPrinterS
+Action.c(323):     tatus":false,"allowedAETitle":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDe
+Action.c(323):     partmentIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNew":false,"terminalId"
+Action.c(323):     :"K2_5","terminalNameStatus":false,"terminalType":0,"terminalIp":"10.184.129.205","selecte
+Action.c(323):     dFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"reportP
+Action.c(323):     rinterName":null,"selectedReportPrinterFullName":null,"reportPrinterNameStatus":false,"mon
+Action.c(323):     itorReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":null,"selectedModalityTyp
+Action.c(323):     es":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNew":
+Action.c(323):     false,"terminalId":"K2_6","terminalNameStatus":false,"terminalType":0,"terminalIp":"10.184
+Action.c(323):     .129.206","selectedFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrinterStat
+Action.c(323):     us":false,"reportPrinterName":null,"selectedReportPrinterFullName":null,"reportPrinterName
+Action.c(323):     Status":false,"monitorReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":null,"s
+Action.c(323):     electedModalityTypes":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrintReport
+Action.c(323):     ":false},{"isNew":false,"terminalId":"K2_7","terminalNameStatus":false,"terminalType":0,"t
+Action.c(323):     erminalIp":"10.184.129.207","selectedFilmPrinter":null,"filmPrinterNameStatus":false,"moni
+Action.c(323):     torFilmPrinterStatus":false,"reportPrinterName":null,"selectedReportPrinterFullName":null,
+Action.c(323):     "reportPrinterNameStatus":false,"monitorReportPrinterStatus":false,"allowedAETitle":null,"
+Action.c(323):     allowedIp":null,"selectedModalityTypes":[],"selectedDepartmentIds":[],"terminalDesc":null,
+Action.c(323):     "enablePrintReport":false},{"isNew":false,"terminalId":"K2_8","terminalNameStatus":false,"
+Action.c(323):     terminalType":0,"terminalIp":"10.184.129.208","selectedFilmPrinter":null,"filmPrinterNameS
+Action.c(323):     tatus":false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"selectedReportPrin
+Action.c(323):     terFullName":null,"reportPrinterNameStatus":false,"monitorReportPrinterStatus":false,"allo
+Action.c(323):     wedAETitle":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDepartmentIds":[],"t
+Action.c(323):     erminalDesc":null,"enablePrintReport":false},{"isNew":false,"terminalId":"Terminal_62","te
+Action.c(323):     rminalNameStatus":false,"terminalType":0,"terminalIp":"10.184.129.62","selectedFilmPrinter
+Action.c(323):     ":null,"filmPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"reportPrinterName":
+Action.c(323):     null,"selectedReportPrinterFullName":null,"reportPrinterNameStatus":false,"monitorReportPr
+Action.c(323):     interStatus":false,"allowedAETitle":null,"allowedIp":null,"selectedModalityTypes":[],"sele
+Action.c(323):     ctedDepartmentIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNew":false,"termi
+Action.c(323):     nalId":"Terminal1","terminalNameStatus":false,"terminalType":0,"terminalIp":"10.184.129.11
+Action.c(323):     1","selectedFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrinterStatus":fal
+Action.c(323):     se,"reportPrinterName":null,"selectedReportPrinterFullName":null,"reportPrinterNameStatus"
+Action.c(323):     :false,"monitorReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":null,"selected
+Action.c(323):     ModalityTypes":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrintReport":false
+Action.c(323):     },{"isNew":false,"terminalId":"Terminal10","terminalNameStatus":false,"terminalType":0,"te
+Action.c(323):     rminalIp":"10.184.129.110","selectedFilmPrinter":null,"filmPrinterNameStatus":false,"monit
+Action.c(323):     orFilmPrinterStatus":false,"reportPrinterName":null,"selectedReportPrinterFullName":null,"
+Action.c(323):     reportPrinterNameStatus":false,"monitorReportPrinterStatus":false,"allowedAETitle":null,"a
+Action.c(323):     llowedIp":null,"selectedModalityTypes":[],"selectedDepartmentIds":[],"terminalDesc":null,"
+Action.c(323):     enablePrintReport":false},{"isNew":false,"terminalId":"Terminal11","terminalNameStatus":fa
+Action.c(323):     lse,"terminalType":0,"terminalIp":"10.184.129.121","selectedFilmPrinter":null,"filmPrinter
+Action.c(323):     NameStatus":false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"selectedRepor
+Action.c(323):     tPrinterFullName":null,"reportPrinterNameStatus":false,"monitorReportPrinterStatus":false,
+Action.c(323):     "allowedAETitle":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDepartmentIds":
+Action.c(323):     [],"terminalDesc":null,"enablePrintReport":false},{"isNew":false,"terminalId":"Terminal12"
+Action.c(323):     ,"terminalNameStatus":false,"terminalType":0,"terminalIp":"10.184.129.112","selectedFilmPr
+Action.c(323):     inter":null,"filmPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"reportPrinterN
+Action.c(323):     ame":null,"selectedReportPrinterFullName":null,"reportPrinterNameStatus":false,"monitorRep
+Action.c(323):     ortPrinterStatus":false,"allowedAETitle":null,"allowedIp":null,"selectedModalityTypes":[],
+Action.c(323):     "selectedDepartmentIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNew":false,"
+Action.c(323):     terminalId":"Terminal13","terminalNameStatus":false,"terminalType":0,"terminalIp":"10.184.
+Action.c(323):     129.131","selectedFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrinterStatu
+Action.c(323):     s":false,"reportPrinterName":null,"selectedReportPrinterFullName":null,"reportPrinterNameS
+Action.c(323):     tatus":false,"monitorReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":null,"se
+Action.c(323):     lectedModalityTypes":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrintReport"
+Action.c(323):     :false},{"isNew":false,"terminalId":"Terminal14","terminalNameStatus":false,"terminalType"
+Action.c(323):     :0,"terminalIp":"10.184.129.114","selectedFilmPrinter":null,"filmPrinterNameStatus":false,
+Action.c(323):     "monitorFilmPrinterStatus":false,"reportPrinterName":null,"selectedReportPrinterFullName":
+Action.c(323):     null,"reportPrinterNameStatus":false,"monitorReportPrinterStatus":false,"allowedAETitle":n
+Action.c(323):     ull,"allowedIp":null,"selectedModalityTypes":[],"selectedDepartmentIds":[],"terminalDesc":
+Action.c(323):     null,"enablePrintReport":false},{"isNew":false,"terminalId":"Terminal15","terminalNameStat
+Action.c(323):     us":false,"terminalType":0,"terminalIp":"10.184.129.115","selectedFilmPrinter":null,"filmP
+Action.c(323):     rinterNameStatus":false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"selecte
+Action.c(323):     dReportPrinterFullName":null,"reportPrinterNameStatus":false,"monitorReportPrinterStatus":
+Action.c(323):     false,"allowedAETitle":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDepartmen
+Action.c(323):     tIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNew":false,"terminalId":"Termi
+Action.c(323):     nal16","terminalNameStatus":false,"terminalType":0,"terminalIp":"10.184.129.116","selected
+Action.c(323):     FilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"reportPr
+Action.c(323):     interName":null,"selectedReportPrinterFullName":null,"reportPrinterNameStatus":false,"moni
+Action.c(323):     torReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":null,"selectedModalityType
+Action.c(323):     s":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNew":f
+Action.c(323):     alse,"terminalId":"Terminal17","terminalNameStatus":false,"terminalType":0,"terminalIp":"1
+Action.c(323):     0.184.129.117","selectedFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrinte
+Action.c(323):     rStatus":false,"reportPrinterName":null,"selectedReportPrinterFullName":null,"reportPrinte
+Action.c(323):     rNameStatus":false,"monitorReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":nu
+Action.c(323):     ll,"selectedModalityTypes":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrintR
+Action.c(323):     eport":false},{"isNew":false,"terminalId":"Terminal18","terminalNameStatus":false,"termina
+Action.c(323):     lType":0,"terminalIp":"10.184.129.118","selectedFilmPrinter":null,"filmPrinterNameStatus":
+Action.c(323):     false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"selectedReportPrinterFull
+Action.c(323):     Name":null,"reportPrinterNameStatus":false,"monitorReportPrinterStatus":false,"allowedAETi
+Action.c(323):     tle":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDepartmentIds":[],"terminal
+Action.c(323):     Desc":null,"enablePrintReport":false},{"isNew":false,"terminalId":"Terminal19","terminalNa
+Action.c(323):     meStatus":false,"terminalType":0,"terminalIp":"10.184.129.119","selectedFilmPrinter":null,
+Action.c(323):     "filmPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"s
+Action.c(323):     electedReportPrinterFullName":null,"reportPrinterNameStatus":false,"monitorReportPrinterSt
+Action.c(323):     atus":false,"allowedAETitle":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDep
+Action.c(323):     artmentIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNew":false,"terminalId":
+Action.c(323):     "Terminal2","terminalNameStatu
+Action.c(323): t=1187083ms: 12287-byte response body for "http://10.184.129.208/webapi/api/terminal/allTerminals" (RelFrameId=1, Internal ID=1290)
+Action.c(323):     s":false,"terminalType":0,"terminalIp":"10.184.129.2","selectedFilmPrinter":null,"filmPrin
+Action.c(323):     terNameStatus":false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"selectedRe
+Action.c(323):     portPrinterFullName":null,"reportPrinterNameStatus":false,"monitorReportPrinterStatus":fal
+Action.c(323):     se,"allowedAETitle":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDepartmentId
+Action.c(323):     s":[],"terminalDesc":null,"enablePrintReport":false},{"isNew":false,"terminalId":"Terminal
+Action.c(323):     20","terminalNameStatus":false,"terminalType":0,"terminalIp":"10.184.129.120","selectedFil
+Action.c(323):     mPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"reportPrint
+Action.c(323):     erName":null,"selectedReportPrinterFullName":null,"reportPrinterNameStatus":false,"monitor
+Action.c(323):     ReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":null,"selectedModalityTypes":
+Action.c(323):     [],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNew":fals
+Action.c(323):     e,"terminalId":"Terminal21","terminalNameStatus":false,"terminalType":0,"terminalIp":"10.1
+Action.c(323):     84.129.21","selectedFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrinterSta
+Action.c(323):     tus":false,"reportPrinterName":null,"selectedReportPrinterFullName":null,"reportPrinterNam
+Action.c(323):     eStatus":false,"monitorReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":null,"
+Action.c(323):     selectedModalityTypes":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrintRepor
+Action.c(323):     t":false},{"isNew":false,"terminalId":"Terminal22","terminalNameStatus":false,"terminalTyp
+Action.c(323):     e":0,"terminalIp":"10.184.129.22","selectedFilmPrinter":null,"filmPrinterNameStatus":false
+Action.c(323):     ,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"selectedReportPrinterFullName"
+Action.c(323):     :null,"reportPrinterNameStatus":false,"monitorReportPrinterStatus":false,"allowedAETitle":
+Action.c(323):     null,"allowedIp":null,"selectedModalityTypes":[],"selectedDepartmentIds":[],"terminalDesc"
+Action.c(323):     :null,"enablePrintReport":false},{"isNew":false,"terminalId":"Terminal23","terminalNameSta
+Action.c(323):     tus":false,"terminalType":0,"terminalIp":"10.184.129.23","selectedFilmPrinter":null,"filmP
+Action.c(323):     rinterNameStatus":false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"selecte
+Action.c(323):     dReportPrinterFullName":null,"reportPrinterNameStatus":false,"monitorReportPrinterStatus":
+Action.c(323):     false,"allowedAETitle":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDepartmen
+Action.c(323):     tIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNew":false,"terminalId":"Termi
+Action.c(323):     nal24","terminalNameStatus":false,"terminalType":0,"terminalIp":"10.184.129.24","selectedF
+Action.c(323):     ilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"reportPri
+Action.c(323):     nterName":null,"selectedReportPrinterFullName":null,"reportPrinterNameStatus":false,"monit
+Action.c(323):     orReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":null,"selectedModalityTypes
+Action.c(323):     ":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNew":fa
+Action.c(323):     lse,"terminalId":"Terminal25","terminalNameStatus":false,"terminalType":0,"terminalIp":"10
+Action.c(323):     .184.129.25","selectedFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrinterS
+Action.c(323):     tatus":false,"reportPrinterName":null,"selectedReportPrinterFullName":null,"reportPrinterN
+Action.c(323):     ameStatus":false,"monitorReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":null
+Action.c(323):     ,"selectedModalityTypes":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrintRep
+Action.c(323):     ort":false},{"isNew":false,"terminalId":"Terminal26","terminalNameStatus":false,"terminalT
+Action.c(323):     ype":0,"terminalIp":"10.184.129.26","selectedFilmPrinter":null,"filmPrinterNameStatus":fal
+Action.c(323):     se,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"selectedReportPrinterFullNam
+Action.c(323):     e":null,"reportPrinterNameStatus":false,"monitorReportPrinterStatus":false,"allowedAETitle
+Action.c(323):     ":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDepartmentIds":[],"terminalDes
+Action.c(323):     c":null,"enablePrintReport":false},{"isNew":false,"terminalId":"Terminal27","terminalNameS
+Action.c(323):     tatus":false,"terminalType":0,"terminalIp":"10.184.129.27","selectedFilmPrinter":null,"fil
+Action.c(323):     mPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"selec
+Action.c(323):     tedReportPrinterFullName":null,"reportPrinterNameStatus":false,"monitorReportPrinterStatus
+Action.c(323):     ":false,"allowedAETitle":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDepartm
+Action.c(323):     entIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNew":false,"terminalId":"Ter
+Action.c(323):     minal28","terminalNameStatus":false,"terminalType":0,"terminalIp":"10.184.129.28","selecte
+Action.c(323):     dFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"reportP
+Action.c(323):     rinterName":null,"selectedReportPrinterFullName":null,"reportPrinterNameStatus":false,"mon
+Action.c(323):     itorReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":null,"selectedModalityTyp
+Action.c(323):     es":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNew":
+Action.c(323):     false,"terminalId":"Terminal29","terminalNameStatus":false,"terminalType":0,"terminalIp":"
+Action.c(323):     10.184.129.29","selectedFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrinte
+Action.c(323):     rStatus":false,"reportPrinterName":null,"selectedReportPrinterFullName":null,"reportPrinte
+Action.c(323):     rNameStatus":false,"monitorReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":nu
+Action.c(323):     ll,"selectedModalityTypes":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrintR
+Action.c(323):     eport":false},{"isNew":false,"terminalId":"Terminal3","terminalNameStatus":false,"terminal
+Action.c(323):     Type":0,"terminalIp":"10.184.129.3","selectedFilmPrinter":null,"filmPrinterNameStatus":fal
+Action.c(323):     se,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"selectedReportPrinterFullNam
+Action.c(323):     e":null,"reportPrinterNameStatus":false,"monitorReportPrinterStatus":false,"allowedAETitle
+Action.c(323):     ":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDepartmentIds":[],"terminalDes
+Action.c(323):     c":null,"enablePrintReport":false},{"isNew":false,"terminalId":"Terminal30","terminalNameS
+Action.c(323):     tatus":false,"terminalType":0,"terminalIp":"10.184.129.30","selectedFilmPrinter":null,"fil
+Action.c(323):     mPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"selec
+Action.c(323):     tedReportPrinterFullName":null,"reportPrinterNameStatus":false,"monitorReportPrinterStatus
+Action.c(323):     ":false,"allowedAETitle":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDepartm
+Action.c(323):     entIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNew":false,"terminalId":"Ter
+Action.c(323):     minal31","terminalNameStatus":false,"terminalType":0,"terminalIp":"10.184.129.31","selecte
+Action.c(323):     dFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"reportP
+Action.c(323):     rinterName":null,"selectedReportPrinterFullName":null,"reportPrinterNameStatus":false,"mon
+Action.c(323):     itorReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":null,"selectedModalityTyp
+Action.c(323):     es":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNew":
+Action.c(323):     false,"terminalId":"Terminal32","terminalNameStatus":false,"terminalType":0,"terminalIp":"
+Action.c(323):     10.184.129.32","selectedFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrinte
+Action.c(323):     rStatus":false,"reportPrinterName":null,"selectedReportPrinterFullName":null,"reportPrinte
+Action.c(323):     rNameStatus":false,"monitorReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":nu
+Action.c(323):     ll,"selectedModalityTypes":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrintR
+Action.c(323):     eport":false},{"isNew":false,"terminalId":"Terminal33","terminalNameStatus":false,"termina
+Action.c(323):     lType":0,"terminalIp":"10.184.129.33","selectedFilmPrinter":null,"filmPrinterNameStatus":f
+Action.c(323):     alse,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"selectedReportPrinterFullN
+Action.c(323):     ame":null,"reportPrinterNameStatus":false,"monitorReportPrinterStatus":false,"allowedAETit
+Action.c(323):     le":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDepartmentIds":[],"terminalD
+Action.c(323):     esc":null,"enablePrintReport":false},{"isNew":false,"terminalId":"Terminal34","terminalNam
+Action.c(323):     eStatus":false,"terminalType":0,"terminalIp":"10.184.129.34","selectedFilmPrinter":null,"f
+Action.c(323):     ilmPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"sel
+Action.c(323):     ectedReportPrinterFullName":null,"reportPrinterNameStatus":false,"monitorReportPrinterStat
+Action.c(323):     us":false,"allowedAETitle":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDepar
+Action.c(323):     tmentIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNew":false,"terminalId":"T
+Action.c(323):     erminal35","terminalNameStatus":false,"terminalType":0,"terminalIp":"10.184.129.35","selec
+Action.c(323):     tedFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"repor
+Action.c(323):     tPrinterName":null,"selectedReportPrinterFullName":null,"reportPrinterNameStatus":false,"m
+Action.c(323):     onitorReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":null,"selectedModalityT
+Action.c(323):     ypes":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNew
+Action.c(323):     ":false,"terminalId":"Terminal36","terminalNameStatus":false,"terminalType":0,"terminalIp"
+Action.c(323):     :"10.184.129.36","selectedFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrin
+Action.c(323):     terStatus":false,"reportPrinterName":null,"selectedReportPrinterFullName":null,"reportPrin
+Action.c(323):     terNameStatus":false,"monitorReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":
+Action.c(323):     null,"selectedModalityTypes":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrin
+Action.c(323):     tReport":false},{"isNew":false,"terminalId":"Terminal37","terminalNameStatus":false,"termi
+Action.c(323):     nalType":0,"terminalIp":"10.184.129.37","selectedFilmPrinter":null,"filmPrinterNameStatus"
+Action.c(323):     :false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"selectedReportPrinterFul
+Action.c(323):     lName":null,"reportPrinterNameStatus":false,"monitorReportPrinterStatus":false,"allowedAET
+Action.c(323):     itle":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDepartmentIds":[],"termina
+Action.c(323):     lDesc":null,"enablePrintReport":false},{"isNew":false,"terminalId":"Terminal38","terminalN
+Action.c(323):     ameStatus":false,"terminalType":0,"terminalIp":"10.184.129.38","selectedFilmPrinter":null,
+Action.c(323):     "filmPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"s
+Action.c(323):     electedReportPrinterFullName":null,"reportPrinterNameStatus":false,"monitorReportPrinterSt
+Action.c(323):     atus":false,"allowedAETitle":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDep
+Action.c(323):     artmentIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNew":false,"terminalId":
+Action.c(323):     "Terminal39","terminalNameStatus":false,"terminalType":0,"terminalIp":"10.184.129.39","sel
+Action.c(323):     ectedFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"rep
+Action.c(323):     ortPrinterName":null,"selectedReportPrinterFullName":null,"reportPrinterNameStatus":false,
+Action.c(323):     "monitorReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":null,"selectedModalit
+Action.c(323):     yTypes":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrintReport":false},{"isN
+Action.c(323):     ew":false,"terminalId":"Terminal4","terminalNameStatus":false,"terminalType":0,"terminalIp
+Action.c(323):     ":"10.184.129.4","selectedFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrin
+Action.c(323):     terStatus":false,"reportPrinterName":null,"selectedReportPrinterFullName":null,"reportPrin
+Action.c(323):     terNameStatus":false,"monitorReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":
+Action.c(323):     null,"selectedModalityTypes":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrin
+Action.c(323):     tReport":false},{"isNew":false,"terminalId":"Terminal40","terminalNameStatus":false,"termi
+Action.c(323):     nalType":0,"terminalIp":"10.184.129.40","selectedFilmPrinter":null,"filmPrinterNameStatus"
+Action.c(323):     :false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"selectedReportPrinterFul
+Action.c(323):     lName":null,"reportPrinterNameStatus":false,"monitorReportPrinterStatus":false,"allowedAET
+Action.c(323):     itle":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDepartmentIds":[],"termina
+Action.c(323):     lDesc":null,"enablePrintReport":false},{"isNew":false,"terminalId":"Terminal41","terminalN
+Action.c(323):     ameStatus":false,"terminalType":0,"terminalIp":"10.184.129.41","selectedFilmPrinter":null,
+Action.c(323):     "filmPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"s
+Action.c(323):     electedReportPrinterFullName":null,"reportPrinterNameStatus":false,"monitorReportPrinterSt
+Action.c(323):     atus":false,"allowedAETitle":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDep
+Action.c(323):     artmentIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNew":false,"terminalId":
+Action.c(323):     "Terminal42","terminalNameStatus":false,"terminalType":0,"terminalIp":"10.184.129.42","sel
+Action.c(323):     ectedFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"rep
+Action.c(323):     ortPrinterName":null,"selectedReportPrinterFullName":null,"reportPrinterNameStatus":false,
+Action.c(323):     "monitorReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":null,"selectedModalit
+Action.c(323):     yTypes":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrintReport":false},{"isN
+Action.c(323):     ew":false,"terminalId":"Terminal43","terminalNa
+Action.c(323): t=1187084ms: 6087-byte response body for "http://10.184.129.208/webapi/api/terminal/allTerminals" (RelFrameId=1, Internal ID=1290)
+Action.c(323):     meStatus":false,"terminalType":0,"terminalIp":"10.184.129.43","selectedFilmPrinter":null,"
+Action.c(323):     filmPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"se
+Action.c(323):     lectedReportPrinterFullName":null,"reportPrinterNameStatus":false,"monitorReportPrinterSta
+Action.c(323):     tus":false,"allowedAETitle":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDepa
+Action.c(323):     rtmentIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNew":false,"terminalId":"
+Action.c(323):     Terminal44","terminalNameStatus":false,"terminalType":0,"terminalIp":"10.184.129.44","sele
+Action.c(323):     ctedFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"repo
+Action.c(323):     rtPrinterName":null,"selectedReportPrinterFullName":null,"reportPrinterNameStatus":false,"
+Action.c(323):     monitorReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":null,"selectedModality
+Action.c(323):     Types":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNe
+Action.c(323):     w":false,"terminalId":"Terminal45","terminalNameStatus":false,"terminalType":0,"terminalIp
+Action.c(323):     ":"10.184.129.45","selectedFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPri
+Action.c(323):     nterStatus":false,"reportPrinterName":null,"selectedReportPrinterFullName":null,"reportPri
+Action.c(323):     nterNameStatus":false,"monitorReportPrinterStatus":false,"allowedAETitle":null,"allowedIp"
+Action.c(323):     :null,"selectedModalityTypes":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePri
+Action.c(323):     ntReport":false},{"isNew":false,"terminalId":"Terminal46","terminalNameStatus":false,"term
+Action.c(323):     inalType":0,"terminalIp":"10.184.129.46","selectedFilmPrinter":null,"filmPrinterNameStatus
+Action.c(323):     ":false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"selectedReportPrinterFu
+Action.c(323):     llName":null,"reportPrinterNameStatus":false,"monitorReportPrinterStatus":false,"allowedAE
+Action.c(323):     Title":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDepartmentIds":[],"termin
+Action.c(323):     alDesc":null,"enablePrintReport":false},{"isNew":false,"terminalId":"Terminal47","terminal
+Action.c(323):     NameStatus":false,"terminalType":0,"terminalIp":"10.184.129.47","selectedFilmPrinter":null
+Action.c(323):     ,"filmPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"
+Action.c(323):     selectedReportPrinterFullName":null,"reportPrinterNameStatus":false,"monitorReportPrinterS
+Action.c(323):     tatus":false,"allowedAETitle":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDe
+Action.c(323):     partmentIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNew":false,"terminalId"
+Action.c(323):     :"Terminal48","terminalNameStatus":false,"terminalType":0,"terminalIp":"10.184.129.48","se
+Action.c(323):     lectedFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"re
+Action.c(323):     portPrinterName":null,"selectedReportPrinterFullName":null,"reportPrinterNameStatus":false
+Action.c(323):     ,"monitorReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":null,"selectedModali
+Action.c(323):     tyTypes":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrintReport":false},{"is
+Action.c(323):     New":false,"terminalId":"Terminal49","terminalNameStatus":false,"terminalType":0,"terminal
+Action.c(323):     Ip":"10.184.129.49","selectedFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmP
+Action.c(323):     rinterStatus":false,"reportPrinterName":null,"selectedReportPrinterFullName":null,"reportP
+Action.c(323):     rinterNameStatus":false,"monitorReportPrinterStatus":false,"allowedAETitle":null,"allowedI
+Action.c(323):     p":null,"selectedModalityTypes":[],"selectedDepartmentIds":[],"terminalDesc":null,"enableP
+Action.c(323):     rintReport":false},{"isNew":false,"terminalId":"Terminal5","terminalNameStatus":false,"ter
+Action.c(323):     minalType":0,"terminalIp":"10.184.129.5","selectedFilmPrinter":null,"filmPrinterNameStatus
+Action.c(323):     ":false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"selectedReportPrinterFu
+Action.c(323):     llName":null,"reportPrinterNameStatus":false,"monitorReportPrinterStatus":false,"allowedAE
+Action.c(323):     Title":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDepartmentIds":[],"termin
+Action.c(323):     alDesc":null,"enablePrintReport":false},{"isNew":false,"terminalId":"Terminal50","terminal
+Action.c(323):     NameStatus":false,"terminalType":0,"terminalIp":"10.184.129.50","selectedFilmPrinter":null
+Action.c(323):     ,"filmPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"
+Action.c(323):     selectedReportPrinterFullName":null,"reportPrinterNameStatus":false,"monitorReportPrinterS
+Action.c(323):     tatus":false,"allowedAETitle":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDe
+Action.c(323):     partmentIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNew":false,"terminalId"
+Action.c(323):     :"Terminal6","terminalNameStatus":false,"terminalType":0,"terminalIp":"10.184.129.6","sele
+Action.c(323):     ctedFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrinterStatus":false,"repo
+Action.c(323):     rtPrinterName":null,"selectedReportPrinterFullName":null,"reportPrinterNameStatus":false,"
+Action.c(323):     monitorReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":null,"selectedModality
+Action.c(323):     Types":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrintReport":false},{"isNe
+Action.c(323):     w":false,"terminalId":"Terminal7","terminalNameStatus":false,"terminalType":0,"terminalIp"
+Action.c(323):     :"10.184.129.7","selectedFilmPrinter":null,"filmPrinterNameStatus":false,"monitorFilmPrint
+Action.c(323):     erStatus":false,"reportPrinterName":null,"selectedReportPrinterFullName":null,"reportPrint
+Action.c(323):     erNameStatus":false,"monitorReportPrinterStatus":false,"allowedAETitle":null,"allowedIp":n
+Action.c(323):     ull,"selectedModalityTypes":[],"selectedDepartmentIds":[],"terminalDesc":null,"enablePrint
+Action.c(323):     Report":false},{"isNew":false,"terminalId":"Terminal8","terminalNameStatus":false,"termina
+Action.c(323):     lType":0,"terminalIp":"10.184.129.8","selectedFilmPrinter":null,"filmPrinterNameStatus":fa
+Action.c(323):     lse,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"selectedReportPrinterFullNa
+Action.c(323):     me":null,"reportPrinterNameStatus":false,"monitorReportPrinterStatus":false,"allowedAETitl
+Action.c(323):     e":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDepartmentIds":[],"terminalDe
+Action.c(323):     sc":null,"enablePrintReport":false},{"isNew":false,"terminalId":"Terminal9","terminalNameS
+Action.c(323):     tatus":false,"terminalType":0,"terminalIp":"10.184.129.9","selectedFilmPrinter":null,"film
+Action.c(323):     PrinterNameStatus":false,"monitorFilmPrinterStatus":false,"reportPrinterName":null,"select
+Action.c(323):     edReportPrinterFullName":null,"reportPrinterNameStatus":false,"monitorReportPrinterStatus"
+Action.c(323):     :false,"allowedAETitle":null,"allowedIp":null,"selectedModalityTypes":[],"selectedDepartme
+Action.c(323):     ntIds":[],"terminalDesc":null,"enablePrintReport":false}]
+Action.c(323): web_url("allTerminals") was successful, 28333 body bytes, 261 header bytes  	[MsgId: MMSG-26386]
+Action.c(331): web_url("CheckLoginStatus_6") started  	[MsgId: MMSG-26355]
+Action.c(331): t=1187168ms: 251-byte response headers for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1291)
+Action.c(331):     HTTP/1.1 200 OK\r\n
+Action.c(331):     Cache-Control: private\r\n
+Action.c(331):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(331):     Server: Microsoft-IIS/8.5\r\n
+Action.c(331):     X-AspNetMvc-Version: 5.2\r\n
+Action.c(331):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(331):     X-Powered-By: ASP.NET\r\n
+Action.c(331):     Date: Fri, 08 Dec 2017 09:42:41 GMT\r\n
+Action.c(331):     Content-Length: 4\r\n
+Action.c(331):     \r\n
+Action.c(331): t=1187168ms: 4-byte response body for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1291)
+Action.c(331):     true
+Action.c(331): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(331): web_url("CheckLoginStatus_6") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(339): web_url("CheckLoginStatus_7") started  	[MsgId: MMSG-26355]
+Action.c(339): t=1187290ms: 251-byte response headers for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1292)
+Action.c(339):     HTTP/1.1 200 OK\r\n
+Action.c(339):     Cache-Control: private\r\n
+Action.c(339):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(339):     Server: Microsoft-IIS/8.5\r\n
+Action.c(339):     X-AspNetMvc-Version: 5.2\r\n
+Action.c(339):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(339):     X-Powered-By: ASP.NET\r\n
+Action.c(339):     Date: Fri, 08 Dec 2017 09:42:41 GMT\r\n
+Action.c(339):     Content-Length: 4\r\n
+Action.c(339):     \r\n
+Action.c(339): t=1187291ms: 4-byte response body for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1292)
+Action.c(339):     true
+Action.c(339): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(339): Downloading resource "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_1x_selected.png" (specified by argument number 8)  	[MsgId: MMSG-26577]
+Action.c(339): Downloading resource "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_2x.png" (specified by argument number 11)  	[MsgId: MMSG-26577]
+Action.c(339): Downloading resource "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_fit.png" (specified by argument number 14)  	[MsgId: MMSG-26577]
+Action.c(339): Downloading resource "http://10.184.129.208/Platform/app-resources/Images/PS_Button/Spliter.png" (specified by argument number 17)  	[MsgId: MMSG-26577]
+Action.c(339): Downloading resource "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_fitTL_selected.png" (specified by argument number 20)  	[MsgId: MMSG-26577]
+Action.c(339): Downloading resource "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_fitTR.png" (specified by argument number 23)  	[MsgId: MMSG-26577]
+Action.c(339): Downloading resource "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_fitBL.png" (specified by argument number 26)  	[MsgId: MMSG-26577]
+Action.c(339): Downloading resource "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_fitBR.png" (specified by argument number 29)  	[MsgId: MMSG-26577]
+Action.c(339): Downloading resource "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_upArrow.png" (specified by argument number 32)  	[MsgId: MMSG-26577]
+Action.c(339): Downloading resource "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_downArrow.png" (specified by argument number 35)  	[MsgId: MMSG-26577]
+Action.c(339): t=1187494ms: 246-byte response headers for "http://10.184.129.208/Platform/app-resources/Images/PS_Button/Spliter.png" (RelFrameId=, Internal ID=1296)
+Action.c(339):     HTTP/1.1 200 OK\r\n
+Action.c(339):     Content-Type: image/png\r\n
+Action.c(339):     Last-Modified: Thu, 07 Dec 2017 07:34:42 GMT\r\n
+Action.c(339):     Accept-Ranges: bytes\r\n
+Action.c(339):     ETag: "0957ad82d6fd31:0"\r\n
+Action.c(339):     Server: Microsoft-IIS/8.5\r\n
+Action.c(339):     X-Powered-By: ASP.NET\r\n
+Action.c(339):     Date: Fri, 08 Dec 2017 09:42:41 GMT\r\n
+Action.c(339):     Content-Length: 199\r\n
+Action.c(339):     \r\n
+Action.c(339): t=1187494ms: 199-byte response body for "http://10.184.129.208/Platform/app-resources/Images/PS_Button/Spliter.png" (RelFrameId=, Internal ID=1296)
+Action.c(339): t=1187494ms: 247-byte response headers for "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_1x_selected.png" (RelFrameId=, Internal ID=1293)
+Action.c(339):     HTTP/1.1 200 OK\r\n
+Action.c(339):     Content-Type: image/png\r\n
+Action.c(339):     Last-Modified: Thu, 07 Dec 2017 07:34:42 GMT\r\n
+Action.c(339):     Accept-Ranges: bytes\r\n
+Action.c(339):     ETag: "0957ad82d6fd31:0"\r\n
+Action.c(339):     Server: Microsoft-IIS/8.5\r\n
+Action.c(339):     X-Powered-By: ASP.NET\r\n
+Action.c(339):     Date: Fri, 08 Dec 2017 09:42:41 GMT\r\n
+Action.c(339):     Content-Length: 1535\r\n
+Action.c(339):     \r\n
+Action.c(339): t=1187494ms: 1535-byte response body for "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_1x_selected.png" (RelFrameId=, Internal ID=1293)
+Action.c(339): t=1187494ms: 247-byte response headers for "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_2x.png" (RelFrameId=, Internal ID=1294)
+Action.c(339):     HTTP/1.1 200 OK\r\n
+Action.c(339):     Content-Type: image/png\r\n
+Action.c(339):     Last-Modified: Thu, 07 Dec 2017 07:34:42 GMT\r\n
+Action.c(339):     Accept-Ranges: bytes\r\n
+Action.c(339):     ETag: "0957ad82d6fd31:0"\r\n
+Action.c(339):     Server: Microsoft-IIS/8.5\r\n
+Action.c(339):     X-Powered-By: ASP.NET\r\n
+Action.c(339):     Date: Fri, 08 Dec 2017 09:42:41 GMT\r\n
+Action.c(339):     Content-Length: 1487\r\n
+Action.c(339):     \r\n
+Action.c(339): t=1187494ms: 1487-byte response body for "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_2x.png" (RelFrameId=, Internal ID=1294)
+Action.c(339): t=1187495ms: 247-byte response headers for "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_fitTR.png" (RelFrameId=, Internal ID=1298)
+Action.c(339):     HTTP/1.1 200 OK\r\n
+Action.c(339):     Content-Type: image/png\r\n
+Action.c(339):     Last-Modified: Thu, 07 Dec 2017 07:34:42 GMT\r\n
+Action.c(339):     Accept-Ranges: bytes\r\n
+Action.c(339):     ETag: "0957ad82d6fd31:0"\r\n
+Action.c(339):     Server: Microsoft-IIS/8.5\r\n
+Action.c(339):     X-Powered-By: ASP.NET\r\n
+Action.c(339):     Date: Fri, 08 Dec 2017 09:42:41 GMT\r\n
+Action.c(339):     Content-Length: 1183\r\n
+Action.c(339):     \r\n
+Action.c(339): t=1187495ms: 1183-byte response body for "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_fitTR.png" (RelFrameId=, Internal ID=1298)
+Action.c(339): t=1187495ms: 247-byte response headers for "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_fit.png" (RelFrameId=, Internal ID=1295)
+Action.c(339):     HTTP/1.1 200 OK\r\n
+Action.c(339):     Content-Type: image/png\r\n
+Action.c(339):     Last-Modified: Thu, 07 Dec 2017 07:34:42 GMT\r\n
+Action.c(339):     Accept-Ranges: bytes\r\n
+Action.c(339):     ETag: "0957ad82d6fd31:0"\r\n
+Action.c(339):     Server: Microsoft-IIS/8.5\r\n
+Action.c(339):     X-Powered-By: ASP.NET\r\n
+Action.c(339):     Date: Fri, 08 Dec 2017 09:42:41 GMT\r\n
+Action.c(339):     Content-Length: 1261\r\n
+Action.c(339):     \r\n
+Action.c(339): t=1187495ms: 1261-byte response body for "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_fit.png" (RelFrameId=, Internal ID=1295)
+Action.c(339): t=1187495ms: 247-byte response headers for "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_fitTL_selected.png" (RelFrameId=, Internal ID=1297)
+Action.c(339):     HTTP/1.1 200 OK\r\n
+Action.c(339):     Content-Type: image/png\r\n
+Action.c(339):     Last-Modified: Thu, 07 Dec 2017 07:34:42 GMT\r\n
+Action.c(339):     Accept-Ranges: bytes\r\n
+Action.c(339):     ETag: "0957ad82d6fd31:0"\r\n
+Action.c(339):     Server: Microsoft-IIS/8.5\r\n
+Action.c(339):     X-Powered-By: ASP.NET\r\n
+Action.c(339):     Date: Fri, 08 Dec 2017 09:42:41 GMT\r\n
+Action.c(339):     Content-Length: 1212\r\n
+Action.c(339):     \r\n
+Action.c(339): t=1187495ms: 1212-byte response body for "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_fitTL_selected.png" (RelFrameId=, Internal ID=1297)
+Action.c(339): t=1187702ms: 247-byte response headers for "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_fitBL.png" (RelFrameId=, Internal ID=1299)
+Action.c(339):     HTTP/1.1 200 OK\r\n
+Action.c(339):     Content-Type: image/png\r\n
+Action.c(339):     Last-Modified: Thu, 07 Dec 2017 07:34:42 GMT\r\n
+Action.c(339):     Accept-Ranges: bytes\r\n
+Action.c(339):     ETag: "0957ad82d6fd31:0"\r\n
+Action.c(339):     Server: Microsoft-IIS/8.5\r\n
+Action.c(339):     X-Powered-By: ASP.NET\r\n
+Action.c(339):     Date: Fri, 08 Dec 2017 09:42:41 GMT\r\n
+Action.c(339):     Content-Length: 1180\r\n
+Action.c(339):     \r\n
+Action.c(339): t=1187703ms: 1180-byte response body for "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_fitBL.png" (RelFrameId=, Internal ID=1299)
+Action.c(339): t=1187703ms: 247-byte response headers for "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_fitBR.png" (RelFrameId=, Internal ID=1300)
+Action.c(339):     HTTP/1.1 200 OK\r\n
+Action.c(339):     Content-Type: image/png\r\n
+Action.c(339):     Last-Modified: Thu, 07 Dec 2017 07:34:42 GMT\r\n
+Action.c(339):     Accept-Ranges: bytes\r\n
+Action.c(339):     ETag: "0957ad82d6fd31:0"\r\n
+Action.c(339):     Server: Microsoft-IIS/8.5\r\n
+Action.c(339):     X-Powered-By: ASP.NET\r\n
+Action.c(339):     Date: Fri, 08 Dec 2017 09:42:41 GMT\r\n
+Action.c(339):     Content-Length: 1175\r\n
+Action.c(339):     \r\n
+Action.c(339): t=1187703ms: 1175-byte response body for "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_fitBR.png" (RelFrameId=, Internal ID=1300)
+Action.c(339): t=1187703ms: 247-byte response headers for "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_upArrow.png" (RelFrameId=, Internal ID=1301)
+Action.c(339):     HTTP/1.1 200 OK\r\n
+Action.c(339):     Content-Type: image/png\r\n
+Action.c(339):     Last-Modified: Thu, 07 Dec 2017 07:34:42 GMT\r\n
+Action.c(339):     Accept-Ranges: bytes\r\n
+Action.c(339):     ETag: "0957ad82d6fd31:0"\r\n
+Action.c(339):     Server: Microsoft-IIS/8.5\r\n
+Action.c(339):     X-Powered-By: ASP.NET\r\n
+Action.c(339):     Date: Fri, 08 Dec 2017 09:42:41 GMT\r\n
+Action.c(339):     Content-Length: 1072\r\n
+Action.c(339):     \r\n
+Action.c(339): t=1187703ms: 1072-byte response body for "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_upArrow.png" (RelFrameId=, Internal ID=1301)
+Action.c(339): t=1187704ms: 247-byte response headers for "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_downArrow.png" (RelFrameId=, Internal ID=1302)
+Action.c(339):     HTTP/1.1 200 OK\r\n
+Action.c(339):     Content-Type: image/png\r\n
+Action.c(339):     Last-Modified: Thu, 07 Dec 2017 07:34:42 GMT\r\n
+Action.c(339):     Accept-Ranges: bytes\r\n
+Action.c(339):     ETag: "0957ad82d6fd31:0"\r\n
+Action.c(339):     Server: Microsoft-IIS/8.5\r\n
+Action.c(339):     X-Powered-By: ASP.NET\r\n
+Action.c(339):     Date: Fri, 08 Dec 2017 09:42:41 GMT\r\n
+Action.c(339):     Content-Length: 1074\r\n
+Action.c(339):     \r\n
+Action.c(339): t=1187704ms: 1074-byte response body for "http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_downArrow.png" (RelFrameId=, Internal ID=1302)
+Action.c(339): web_url("CheckLoginStatus_7") was successful, 11382 body bytes, 2720 header bytes  	[MsgId: MMSG-26386]
+Action.c(360): web_url("CheckLoginStatus_25") started  	[MsgId: MMSG-26355]
+Action.c(360): t=1187764ms: 251-byte response headers for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1303)
+Action.c(360):     HTTP/1.1 200 OK\r\n
+Action.c(360):     Cache-Control: private\r\n
+Action.c(360):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(360):     Server: Microsoft-IIS/8.5\r\n
+Action.c(360):     X-AspNetMvc-Version: 5.2\r\n
+Action.c(360):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(360):     X-Powered-By: ASP.NET\r\n
+Action.c(360):     Date: Fri, 08 Dec 2017 09:42:41 GMT\r\n
+Action.c(360):     Content-Length: 4\r\n
+Action.c(360):     \r\n
+Action.c(360): t=1187764ms: 4-byte response body for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1303)
+Action.c(360):     true
+Action.c(360): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(360): web_url("CheckLoginStatus_25") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(369): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(369): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(375): Notify: Transaction "Film_By_ModalityType" started.	[MsgId: MMSG-16999]
+Action.c(377): web_custom_request("Film_By_ModalityType") started  	[MsgId: MMSG-26355]
+Action.c(377): Notify: Parameter Substitution: parameter "DepartmentList" =  "DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1"	[MsgId: MMSG-13992]
+Action.c(377): Notify: Parameter Substitution: parameter "EndDate" =  "2017-12-08"	[MsgId: MMSG-13992]
+Action.c(377): Notify: Parameter Substitution: parameter "StartDate" =  "2016%2F01%2F01"	[MsgId: MMSG-13992]
+Action.c(377): t=1188308ms: 260-byte response headers for "http://10.184.129.208/webapi/api/statistics/getfilmprintcountstatisticsbymodalitytype?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1304)
+Action.c(377):     HTTP/1.1 200 OK\r\n
+Action.c(377):     Cache-Control: no-cache\r\n
+Action.c(377):     Pragma: no-cache\r\n
+Action.c(377):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(377):     Expires: -1\r\n
+Action.c(377):     Server: Microsoft-IIS/8.5\r\n
+Action.c(377):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(377):     X-Powered-By: ASP.NET\r\n
+Action.c(377):     Date: Fri, 08 Dec 2017 09:42:42 GMT\r\n
+Action.c(377):     Content-Length: 2862\r\n
+Action.c(377):     \r\n
+Action.c(377): t=1188309ms: 1200-byte response body for "http://10.184.129.208/webapi/api/statistics/getfilmprintcountstatisticsbymodalitytype?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1304)
+Action.c(377):     [{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"CR","filmSize":"8INX10I
+Action.c(377):     N","printCount":110098},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"
+Action.c(377):     DX","filmSize":"14INX17IN","printCount":4506},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß
+Action.c(377):     \x91","modalityType":"CR","filmSize":"14INX17IN","printCount":4373},{"departmentID":1,"dep
+Action.c(377):     artmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"CT","filmSize":"10INX12IN","printCount":19},{"
+Action.c(377):     departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"MR","filmSize":"14INX17IN"
+Action.c(377):     ,"printCount":4499},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"US",
+Action.c(377):     "filmSize":"14INX17IN","printCount":4263},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91
+Action.c(377):     ","modalityType":"CT","filmSize":"14INX17IN","printCount":4480},{"departmentID":1,"departm
+Action.c(377):     entName":"ÊîæÂ∞ÑÁß\x91","modalityType":"DX","filmSize":"8INX10IN","printCount":2},{"depart
+Action.c(377):     mentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"RF","filmSize":"14INX17IN","prin
+Action.c(377):     tCount":5},{"departmentID":2,"departmentName":"DEPARTMENT1","modalityType":"CT","filmSize"
+Action.c(377):     :"10INX12IN","printCount":110100},{"departmentID":2,"departmentName":"DEPARTMENT1","modali
+Action.c(377):     tyType":"DX","filmSize":"11INX14IN","printCount":19},{"de
+Action.c(377): Notify: Saving Parameter "Film_By_ModalityType = departmentID".	[MsgId: MMSG-13798]
+Action.c(377): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/webapi/api/statistics/getfilmprintcountstatisticsbymodalitytype?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00"  	[MsgId: MMSG-26548]
+Action.c(377): t=1188309ms: 1662-byte response body for "http://10.184.129.208/webapi/api/statistics/getfilmprintcountstatisticsbymodalitytype?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1304)
+Action.c(377):     partmentID":3,"departmentName":"DEPARTMENT2","modalityType":"MR","filmSize":"14INX14IN","p
+Action.c(377):     rintCount":16},{"departmentID":3,"departmentName":"DEPARTMENT2","modalityType":"DX","filmS
+Action.c(377):     ize":"11INX14IN","printCount":110100},{"departmentID":4,"departmentName":"DEPARTMENT3","mo
+Action.c(377):     dalityType":"MR","filmSize":"14INX14IN","printCount":110100},{"departmentID":4,"department
+Action.c(377):     Name":"DEPARTMENT3","modalityType":"US","filmSize":"14INX17IN","printCount":16},{"departme
+Action.c(377):     ntID":5,"departmentName":"DEPARTMENT4","modalityType":"US","filmSize":"14INX17IN","printCo
+Action.c(377):     unt":110099},{"departmentID":5,"departmentName":"DEPARTMENT4","modalityType":"CR","filmSiz
+Action.c(377):     e":"8INX10IN","printCount":16},{"departmentID":6,"departmentName":"DEPARTMENT5","modalityT
+Action.c(377):     ype":"CR","filmSize":"8INX10IN","printCount":110098},{"departmentID":6,"departmentName":"D
+Action.c(377):     EPARTMENT5","modalityType":"CT","filmSize":"10INX12IN","printCount":16},{"departmentID":7,
+Action.c(377):     "departmentName":"DEPARTMENT6","modalityType":"DX","filmSize":"11INX14IN","printCount":16}
+Action.c(377):     ,{"departmentID":7,"departmentName":"DEPARTMENT6","modalityType":"CT","filmSize":"10INX12I
+Action.c(377):     N","printCount":110099},{"departmentID":8,"departmentName":"DEPARTMENT7","modalityType":"D
+Action.c(377):     X","filmSize":"11INX14IN","printCount":110097},{"departmentID":8,"departmentName":"DEPARTM
+Action.c(377):     ENT7","modalityType":"MR","filmSize":"14INX14IN","printCount":15},{"departmentID":9,"depar
+Action.c(377):     tmentName":"DEPARTMENT8","modalityType":"US","filmSize":"14INX17IN","printCount":15},{"dep
+Action.c(377):     artmentID":9,"departmentName":"DEPARTMENT8","modalityType":"MR","filmSize":"14INX14IN","pr
+Action.c(377):     intCount":110099},{"departmentID":10,"departmentName":"DEPARTMENT9","modalityType":"US","f
+Action.c(377):     ilmSize":"14INX17IN","printCount":110099}]
+Action.c(377): web_custom_request("Film_By_ModalityType") was successful, 2862 body bytes, 260 header bytes  	[MsgId: MMSG-26386]
+Action.c(385): Notify: Transaction "Film_By_ModalityType" ended with a "Pass" status (Duration: 0.5448 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+Action.c(387): Notify: Parameter Substitution: parameter "Film_By_ModalityType" =  "departmentID"	[MsgId: MMSG-13992]
+The result is:  departmentID	[MsgId: MMSG-17999]
+Action.c(389): Notify: Parameter Substitution: parameter "Film_By_ModalityType" =  "departmentID"	[MsgId: MMSG-13992]
+Action.c(394): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(397): web_url("CheckLoginStatus_25") started  	[MsgId: MMSG-26355]
+Action.c(397): t=1193445ms: 251-byte response headers for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1305)
+Action.c(397):     HTTP/1.1 200 OK\r\n
+Action.c(397):     Cache-Control: private\r\n
+Action.c(397):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(397):     Server: Microsoft-IIS/8.5\r\n
+Action.c(397):     X-AspNetMvc-Version: 5.2\r\n
+Action.c(397):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(397):     X-Powered-By: ASP.NET\r\n
+Action.c(397):     Date: Fri, 08 Dec 2017 09:42:47 GMT\r\n
+Action.c(397):     Content-Length: 4\r\n
+Action.c(397):     \r\n
+Action.c(397): t=1193445ms: 4-byte response body for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1305)
+Action.c(397):     true
+Action.c(397): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(397): web_url("CheckLoginStatus_25") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(407): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(407): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(412): Notify: Transaction "Film_By_ModalityName" started.	[MsgId: MMSG-16999]
+Action.c(414): web_custom_request("Film_By_ModalityName") started  	[MsgId: MMSG-26355]
+Action.c(414): Notify: Parameter Substitution: parameter "DepartmentList" =  "DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1"	[MsgId: MMSG-13992]
+Action.c(414): Notify: Parameter Substitution: parameter "EndDate" =  "2017-12-08"	[MsgId: MMSG-13992]
+Action.c(414): Notify: Parameter Substitution: parameter "StartDate" =  "2016%2F01%2F01"	[MsgId: MMSG-13992]
+Action.c(414): t=1195274ms: 261-byte response headers for "http://10.184.129.208/webapi/api/statistics/getfilmprintcountstatisticsbymodalityname?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1306)
+Action.c(414):     HTTP/1.1 200 OK\r\n
+Action.c(414):     Cache-Control: no-cache\r\n
+Action.c(414):     Pragma: no-cache\r\n
+Action.c(414):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(414):     Expires: -1\r\n
+Action.c(414):     Server: Microsoft-IIS/8.5\r\n
+Action.c(414):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(414):     X-Powered-By: ASP.NET\r\n
+Action.c(414):     Date: Fri, 08 Dec 2017 09:42:49 GMT\r\n
+Action.c(414):     Content-Length: 23036\r\n
+Action.c(414):     \r\n
+Action.c(414): t=1195274ms: 5579-byte response body for "http://10.184.129.208/webapi/api/statistics/getfilmprintcountstatisticsbymodalityname?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1306)
+Action.c(414):     [{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"CR","modalityName":"IMA
+Action.c(414):     GESUITE4","filmSize":"8INX10IN","printCount":12179},{"departmentID":1,"departmentName":"Êî
+Action.c(414):     æÂ∞ÑÁß\x91","modalityType":"CT","modalityName":"IMAGESUITE6","filmSize":"10INX12IN","print
+Action.c(414):     Count":3},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"CT","modalityN
+Action.c(414):     ame":"IMAGESUITE8","filmSize":"10INX12IN","printCount":2},{"departmentID":1,"departmentNam
+Action.c(414):     e":"ÊîæÂ∞ÑÁß\x91","modalityType":"CR","modalityName":"IMAGESUITE5","filmSize":"8INX10IN","
+Action.c(414):     printCount":12102},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"CT","
+Action.c(414):     modalityName":"IMAGESUITE7","filmSize":"10INX12IN","printCount":3},{"departmentID":1,"depa
+Action.c(414):     rtmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"CR","modalityName":"IMAGESUITE1","filmSize":"8I
+Action.c(414):     NX10IN","printCount":12253},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityTyp
+Action.c(414):     e":"CR","modalityName":"IMAGESUITE3","filmSize":"8INX10IN","printCount":12268},{"departmen
+Action.c(414):     tID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"CR","modalityName":"IMAGESUITE7","f
+Action.c(414):     ilmSize":"8INX10IN","printCount":12254},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91",
+Action.c(414):     "modalityType":"RF","modalityName":"AE129","filmSize":"14INX17IN","printCount":5},{"depart
+Action.c(414):     mentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"CT","modalityName":"IMAGESUITE2"
+Action.c(414):     ,"filmSize":"10INX12IN","printCount":1},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91",
+Action.c(414):     "modalityType":"CR","modalityName":"IMAGESUITE9","filmSize":"8INX10IN","printCount":12303}
+Action.c(414):     ,{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"DX","modalityName":"AE1
+Action.c(414):     29","filmSize":"8INX10IN","printCount":2},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91
+Action.c(414):     ","modalityType":"CT","modalityName":"IMAGESUITE5","filmSize":"10INX12IN","printCount":1},
+Action.c(414):     {"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"CT","modalityName":"IMAG
+Action.c(414):     ESUITE4","filmSize":"10INX12IN","printCount":4},{"departmentID":1,"departmentName":"ÊîæÂ∞Ñ
+Action.c(414):     Áß\x91","modalityType":"CR","modalityName":"IMAGESUITE6","filmSize":"8INX10IN","printCount
+Action.c(414):     ":12195},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"CR","modalityNa
+Action.c(414):     me":"IMAGESUITE8","filmSize":"8INX10IN","printCount":12326},{"departmentID":1,"departmentN
+Action.c(414):     ame":"ÊîæÂ∞ÑÁß\x91","modalityType":"CR","modalityName":"IMAGESUITE2","filmSize":"8INX10IN"
+Action.c(414):     ,"printCount":12218},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"CT"
+Action.c(414):     ,"modalityName":"IMAGESUITE9","filmSize":"10INX12IN","printCount":1},{"departmentID":1,"de
+Action.c(414):     partmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"Unknown","modalityName":"Unknown","filmSize":
+Action.c(414):     "14INX17IN","printCount":22121},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalit
+Action.c(414):     yType":"CT","modalityName":"IMAGESUITE1","filmSize":"10INX12IN","printCount":2},{"departme
+Action.c(414):     ntID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"CT","modalityName":"IMAGESUITE3","
+Action.c(414):     filmSize":"10INX12IN","printCount":2},{"departmentID":2,"departmentName":"DEPARTMENT1","mo
+Action.c(414):     dalityType":"CT","modalityName":"IMAGESUITE5","filmSize":"10INX12IN","printCount":12069},{
+Action.c(414):     "departmentID":2,"departmentName":"DEPARTMENT1","modalityType":"DX","modalityName":"IMAGES
+Action.c(414):     UITE5","filmSize":"11INX14IN","printCount":3},{"departmentID":2,"departmentName":"DEPARTME
+Action.c(414):     NT1","modalityType":"CT","modalityName":"IMAGESUITE1","filmSize":"10INX12IN","printCount":
+Action.c(414):     12243},{"departmentID":2,"departmentName":"DEPARTMENT1","modalityType":"DX","modalityName"
+Action.c(414):     :"IMAGESUITE2","filmSize":"11INX14IN","printCount":3},{"departmentID":2,"departmentName":"
+Action.c(414):     DEPARTMENT1","modalityType":"CT","modalityName":"IMAGESUITE3","filmSize":"10INX12IN","prin
+Action.c(414):     tCount":12179},{"departmentID":2,"departmentName":"DEPARTMENT1","modalityType":"CT","modal
+Action.c(414):     ityName":"IMAGESUITE7","filmSize":"10INX12IN","printCount":12366},{"departmentID":2,"depar
+Action.c(414):     tmentName":"DEPARTMENT1","modalityType":"CT","modalityName":"IMAGESUITE9","filmSize":"10IN
+Action.c(414):     X12IN","printCount":12363},{"departmentID":2,"departmentName":"DEPARTMENT1","modalityType"
+Action.c(414):     :"CT","modalityName":"IMAGESUITE6","filmSize":"10INX12IN","printCount":12409},{"department
+Action.c(414):     ID":2,"departmentName":"DEPARTMENT1","modalityType":"DX","modalityName":"IMAGESUITE6","fil
+Action.c(414):     mSize":"11INX14IN","printCount":4},{"departmentID":2,"departmentName":"DEPARTMENT1","modal
+Action.c(414):     ityType":"CT","modalityName":"IMAGESUITE8","filmSize":"10INX12IN","printCount":12321},{"de
+Action.c(414):     partmentID":2,"departmentName":"DEPARTMENT1","modalityType":"DX","modalityName":"IMAGESUIT
+Action.c(414):     E8","filmSize":"11INX14IN","printCount":3},{"departmentID":2,"departmentName":"DEPARTMENT1
+Action.c(414):     ","modalityType":"CT","modalityName":"IMAGESUITE4","filmSize":"10INX12IN","printCount":120
+Action.c(414):     93},{"departmentID":2,"departmentName":"DEPARTMENT1","modalityType":"DX","modalityName":"I
+Action.c(414):     MAGESUITE7","filmSize":"11INX14IN","printCount":2},{"departmentID":2,"departmentName":"DEP
+Action.c(414):     ARTMENT1","modalityType":"CT","modalityName":"IMAGESUITE2","filmSize":"10INX12IN","printCo
+Action.c(414):     unt":12057},{"departmentID":2,"departmentName":"DEPARTMENT1","modalityType":"DX","modality
+Action.c(414):     Name":"IMAGESUITE3","filmSize":"11INX14IN","printCount":1},{"departmentID":2,"departmentNa
+Action.c(414):     me":"DEPARTMENT1","modalityType":"DX","modalityName":"IMAGESUITE9","filmSize":"11INX14IN",
+Action.c(414):     "printCount":1},{"departmentID":2,"departmentName":"DEPARTMENT1","modalityType":"DX","moda
+Action.c(414):     lityName":"IMAGESUITE4","filmSize":"11INX14IN","printCount":2},{"departmentID":3,"departme
+Action.c(414):     ntName":"DEPARTMENT2","modalityType":"DX","modalityName":"IMAGESUITE2","filmSize":"11INX14
+Action.c(414):     IN","printCount":12074},{"departmentID":3,"departmentName":"DEPARTMENT2","modalityType":"M
+Action.c(414):     R","modalityName":"IMAGESUITE3","filmSize":"14INX14IN","printCount":4},{"departmentID":3,"
+Action.c(414):     departmentName":"DEPARTMENT2","modalityType":"MR","modalityNam
+Action.c(414): Notify: Saving Parameter "Film_By_ModalityName = departmentID".	[MsgId: MMSG-13798]
+Action.c(414): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/webapi/api/statistics/getfilmprintcountstatisticsbymodalityname?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00"  	[MsgId: MMSG-26548]
+Action.c(414): t=1195276ms: 12287-byte response body for "http://10.184.129.208/webapi/api/statistics/getfilmprintcountstatisticsbymodalityname?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1306)
+Action.c(414):     e":"IMAGESUITE7","filmSize":"14INX14IN","printCount":1},{"departmentID":3,"departmentName"
+Action.c(414):     :"DEPARTMENT2","modalityType":"MR","modalityName":"IMAGESUITE4","filmSize":"14INX14IN","pr
+Action.c(414):     intCount":4},{"departmentID":3,"departmentName":"DEPARTMENT2","modalityType":"MR","modalit
+Action.c(414):     yName":"IMAGESUITE5","filmSize":"14INX14IN","printCount":2},{"departmentID":3,"departmentN
+Action.c(414):     ame":"DEPARTMENT2","modalityType":"DX","modalityName":"IMAGESUITE5","filmSize":"11INX14IN"
+Action.c(414):     ,"printCount":12281},{"departmentID":3,"departmentName":"DEPARTMENT2","modalityType":"MR",
+Action.c(414):     "modalityName":"IMAGESUITE2","filmSize":"14INX14IN","printCount":2},{"departmentID":3,"dep
+Action.c(414):     artmentName":"DEPARTMENT2","modalityType":"DX","modalityName":"IMAGESUITE3","filmSize":"11
+Action.c(414):     INX14IN","printCount":12222},{"departmentID":3,"departmentName":"DEPARTMENT2","modalityTyp
+Action.c(414):     e":"DX","modalityName":"IMAGESUITE7","filmSize":"11INX14IN","printCount":12032},{"departme
+Action.c(414):     ntID":3,"departmentName":"DEPARTMENT2","modalityType":"DX","modalityName":"IMAGESUITE9","f
+Action.c(414):     ilmSize":"11INX14IN","printCount":12460},{"departmentID":3,"departmentName":"DEPARTMENT2",
+Action.c(414):     "modalityType":"MR","modalityName":"IMAGESUITE1","filmSize":"14INX14IN","printCount":1},{"
+Action.c(414):     departmentID":3,"departmentName":"DEPARTMENT2","modalityType":"DX","modalityName":"IMAGESU
+Action.c(414):     ITE4","filmSize":"11INX14IN","printCount":12017},{"departmentID":3,"departmentName":"DEPAR
+Action.c(414):     TMENT2","modalityType":"MR","modalityName":"IMAGESUITE6","filmSize":"14INX14IN","printCoun
+Action.c(414):     t":1},{"departmentID":3,"departmentName":"DEPARTMENT2","modalityType":"MR","modalityName":
+Action.c(414):     "IMAGESUITE8","filmSize":"14INX14IN","printCount":1},{"departmentID":3,"departmentName":"D
+Action.c(414):     EPARTMENT2","modalityType":"DX","modalityName":"IMAGESUITE1","filmSize":"11INX14IN","print
+Action.c(414):     Count":12220},{"departmentID":3,"departmentName":"DEPARTMENT2","modalityType":"DX","modali
+Action.c(414):     tyName":"IMAGESUITE6","filmSize":"11INX14IN","printCount":12511},{"departmentID":3,"depart
+Action.c(414):     mentName":"DEPARTMENT2","modalityType":"DX","modalityName":"IMAGESUITE8","filmSize":"11INX
+Action.c(414):     14IN","printCount":12283},{"departmentID":4,"departmentName":"DEPARTMENT3","modalityType":
+Action.c(414):     "US","modalityName":"IMAGESUITE3","filmSize":"14INX17IN","printCount":1},{"departmentID":4
+Action.c(414):     ,"departmentName":"DEPARTMENT3","modalityType":"MR","modalityName":"IMAGESUITE4","filmSize
+Action.c(414):     ":"14INX14IN","printCount":12363},{"departmentID":4,"departmentName":"DEPARTMENT3","modali
+Action.c(414):     tyType":"US","modalityName":"IMAGESUITE7","filmSize":"14INX17IN","printCount":1},{"departm
+Action.c(414):     entID":4,"departmentName":"DEPARTMENT3","modalityType":"MR","modalityName":"IMAGESUITE5","
+Action.c(414):     filmSize":"14INX14IN","printCount":12461},{"departmentID":4,"departmentName":"DEPARTMENT3"
+Action.c(414):     ,"modalityType":"MR","modalityName":"IMAGESUITE9","filmSize":"14INX14IN","printCount":1220
+Action.c(414):     1},{"departmentID":4,"departmentName":"DEPARTMENT3","modalityType":"MR","modalityName":"IM
+Action.c(414):     AGESUITE3","filmSize":"14INX14IN","printCount":12093},{"departmentID":4,"departmentName":"
+Action.c(414):     DEPARTMENT3","modalityType":"MR","modalityName":"IMAGESUITE7","filmSize":"14INX14IN","prin
+Action.c(414):     tCount":12206},{"departmentID":4,"departmentName":"DEPARTMENT3","modalityType":"US","modal
+Action.c(414):     ityName":"IMAGESUITE9","filmSize":"14INX17IN","printCount":4},{"departmentID":4,"departmen
+Action.c(414):     tName":"DEPARTMENT3","modalityType":"MR","modalityName":"IMAGESUITE1","filmSize":"14INX14I
+Action.c(414):     N","printCount":12112},{"departmentID":4,"departmentName":"DEPARTMENT3","modalityType":"US
+Action.c(414):     ","modalityName":"IMAGESUITE1","filmSize":"14INX17IN","printCount":5},{"departmentID":4,"d
+Action.c(414):     epartmentName":"DEPARTMENT3","modalityType":"US","modalityName":"IMAGESUITE8","filmSize":"
+Action.c(414):     14INX17IN","printCount":2},{"departmentID":4,"departmentName":"DEPARTMENT3","modalityType"
+Action.c(414):     :"MR","modalityName":"IMAGESUITE2","filmSize":"14INX14IN","printCount":12313},{"department
+Action.c(414):     ID":4,"departmentName":"DEPARTMENT3","modalityType":"US","modalityName":"IMAGESUITE2","fil
+Action.c(414):     mSize":"14INX17IN","printCount":2},{"departmentID":4,"departmentName":"DEPARTMENT3","modal
+Action.c(414):     ityType":"MR","modalityName":"IMAGESUITE6","filmSize":"14INX14IN","printCount":12102},{"de
+Action.c(414):     partmentID":4,"departmentName":"DEPARTMENT3","modalityType":"US","modalityName":"IMAGESUIT
+Action.c(414):     E6","filmSize":"14INX17IN","printCount":1},{"departmentID":4,"departmentName":"DEPARTMENT3
+Action.c(414):     ","modalityType":"MR","modalityName":"IMAGESUITE8","filmSize":"14INX14IN","printCount":122
+Action.c(414):     49},{"departmentID":5,"departmentName":"DEPARTMENT4","modalityType":"US","modalityName":"I
+Action.c(414):     MAGESUITE2","filmSize":"14INX17IN","printCount":12245},{"departmentID":5,"departmentName":
+Action.c(414):     "DEPARTMENT4","modalityType":"US","modalityName":"IMAGESUITE6","filmSize":"14INX17IN","pri
+Action.c(414):     ntCount":12318},{"departmentID":5,"departmentName":"DEPARTMENT4","modalityType":"US","moda
+Action.c(414):     lityName":"IMAGESUITE8","filmSize":"14INX17IN","printCount":12409},{"departmentID":5,"depa
+Action.c(414):     rtmentName":"DEPARTMENT4","modalityType":"US","modalityName":"IMAGESUITE5","filmSize":"14I
+Action.c(414):     NX17IN","printCount":12056},{"departmentID":5,"departmentName":"DEPARTMENT4","modalityType
+Action.c(414):     ":"US","modalityName":"IMAGESUITE9","filmSize":"14INX17IN","printCount":12222},{"departmen
+Action.c(414):     tID":5,"departmentName":"DEPARTMENT4","modalityType":"CR","modalityName":"IMAGESUITE9","fi
+Action.c(414):     lmSize":"8INX10IN","printCount":1},{"departmentID":5,"departmentName":"DEPARTMENT4","modal
+Action.c(414):     ityType":"CR","modalityName":"IMAGESUITE4","filmSize":"8INX10IN","printCount":5},{"departm
+Action.c(414):     entID":5,"departmentName":"DEPARTMENT4","modalityType":"US","modalityName":"IMAGESUITE1","
+Action.c(414):     filmSize":"14INX17IN","printCount":12071},{"departmentID":5,"departmentName":"DEPARTMENT4"
+Action.c(414):     ,"modalityType":"CR","modalityName":"IMAGESUITE1","filmSize":"8INX10IN","printCount":2},{"
+Action.c(414):     departmentID":5,"departmentName":"DEPARTMENT4","modalityType":"CR","modalityName":"IMAGESU
+Action.c(414):     ITE3","filmSize":"8INX10IN","printCount":1},{"departmentID":5,"departmentName":"DEPARTMENT
+Action.c(414):     4","modalityType":"CR","modalityName":"IMAGESUITE7","filmSize":"8INX10IN","printCount":2},
+Action.c(414):     {"departmentID":5,"departmentName":"DEPARTMENT4","modalityType":"US","modalityName":"IMAGE
+Action.c(414):     SUITE3","filmSize":"14INX17IN","printCount":12243},{"departmentID":5,"departmentName":"DEP
+Action.c(414):     ARTMENT4","modalityType":"CR","modalityName":"IMAGESUITE6","filmSize":"8INX10IN","printCou
+Action.c(414):     nt":1},{"departmentID":5,"departmentName":"DEPARTMENT4","modalityType":"US","modalityName"
+Action.c(414):     :"IMAGESUITE7","filmSize":"14INX17IN","printCount":12283},{"departmentID":5,"departmentNam
+Action.c(414):     e":"DEPARTMENT4","modalityType":"CR","modalityName":"IMAGESUITE8","filmSize":"8INX10IN","p
+Action.c(414):     rintCount":1},{"departmentID":5,"departmentName":"DEPARTMENT4","modalityType":"CR","modali
+Action.c(414):     tyName":"IMAGESUITE2","filmSize":"8INX10IN","printCount":3},{"departmentID":5,"departmentN
+Action.c(414):     ame":"DEPARTMENT4","modalityType":"US","modalityName":"IMAGESUITE4","filmSize":"14INX17IN"
+Action.c(414):     ,"printCount":12252},{"departmentID":6,"departmentName":"DEPARTMENT5","modalityType":"CT",
+Action.c(414):     "modalityName":"IMAGESUITE5","filmSize":"10INX12IN","printCount":1},{"departmentID":6,"dep
+Action.c(414):     artmentName":"DEPARTMENT5","modalityType":"CT","modalityName":"IMAGESUITE9","filmSize":"10
+Action.c(414):     INX12IN","printCount":3},{"departmentID":6,"departmentName":"DEPARTMENT5","modalityType":"
+Action.c(414):     CT","modalityName":"IMAGESUITE6","filmSize":"10INX12IN","printCount":2},{"departmentID":6,
+Action.c(414):     "departmentName":"DEPARTMENT5","modalityType":"CT","modalityName":"IMAGESUITE2","filmSize"
+Action.c(414):     :"10INX12IN","printCount":4},{"departmentID":6,"departmentName":"DEPARTMENT5","modalityTyp
+Action.c(414):     e":"CR","modalityName":"IMAGESUITE3","filmSize":"8INX10IN","printCount":12149},{"departmen
+Action.c(414):     tID":6,"departmentName":"DEPARTMENT5","modalityType":"CR","modalityName":"IMAGESUITE7","fi
+Action.c(414):     lmSize":"8INX10IN","printCount":12016},{"departmentID":6,"departmentName":"DEPARTMENT5","m
+Action.c(414):     odalityType":"CT","modalityName":"IMAGESUITE4","filmSize":"10INX12IN","printCount":2},{"de
+Action.c(414):     partmentID":6,"departmentName":"DEPARTMENT5","modalityType":"CR","modalityName":"IMAGESUIT
+Action.c(414):     E5","filmSize":"8INX10IN","printCount":12172},{"departmentID":6,"departmentName":"DEPARTME
+Action.c(414):     NT5","modalityType":"CT","modalityName":"IMAGESUITE1","filmSize":"10INX12IN","printCount":
+Action.c(414):     2},{"departmentID":6,"departmentName":"DEPARTMENT5","modalityType":"CR","modalityName":"IM
+Action.c(414):     AGESUITE2","filmSize":"8INX10IN","printCount":12586},{"departmentID":6,"departmentName":"D
+Action.c(414):     EPARTMENT5","modalityType":"CT","modalityName":"IMAGESUITE3","filmSize":"10INX12IN","print
+Action.c(414):     Count":1},{"departmentID":6,"departmentName":"DEPARTMENT5","modalityType":"CR","modalityNa
+Action.c(414):     me":"IMAGESUITE6","filmSize":"8INX10IN","printCount":12132},{"departmentID":6,"departmentN
+Action.c(414):     ame":"DEPARTMENT5","modalityType":"CT","modalityName":"IMAGESUITE7","filmSize":"10INX12IN"
+Action.c(414):     ,"printCount":1},{"departmentID":6,"departmentName":"DEPARTMENT5","modalityType":"CR","mod
+Action.c(414):     alityName":"IMAGESUITE4","filmSize":"8INX10IN","printCount":12136},{"departmentID":6,"depa
+Action.c(414):     rtmentName":"DEPARTMENT5","modalityType":"CR","modalityName":"IMAGESUITE9","filmSize":"8IN
+Action.c(414):     X10IN","printCount":12332},{"departmentID":6,"departmentName":"DEPARTMENT5","modalityType"
+Action.c(414):     :"CR","modalityName":"IMAGESUITE1","filmSize":"8INX10IN","printCount":12227},{"departmentI
+Action.c(414):     D":6,"departmentName":"DEPARTMENT5","modalityType":"CR","modalityName":"IMAGESUITE8","film
+Action.c(414):     Size":"8INX10IN","printCount":12348},{"departmentID":7,"departmentName":"DEPARTMENT6","mod
+Action.c(414):     alityType":"DX","modalityName":"IMAGESUITE1","filmSize":"11INX14IN","printCount":2},{"depa
+Action.c(414):     rtmentID":7,"departmentName":"DEPARTMENT6","modalityType":"CT","modalityName":"IMAGESUITE3
+Action.c(414):     ","filmSize":"10INX12IN","printCount":12252},{"departmentID":7,"departmentName":"DEPARTMEN
+Action.c(414):     T6","modalityType":"DX","modalityName":"IMAGESUITE3","filmSize":"11INX14IN","printCount":2
+Action.c(414):     },{"departmentID":7,"departmentName":"DEPARTMENT6","modalityType":"CT","modalityName":"IMA
+Action.c(414):     GESUITE7","filmSize":"10INX12IN","printCount":12293},{"departmentID":7,"departmentName":"D
+Action.c(414):     EPARTMENT6","modalityType":"DX","modalityName":"IMAGESUITE7","filmSize":"11INX14IN","print
+Action.c(414):     Count":4},{"departmentID":7,"departmentName":"DEPARTMENT6","modalityType":"DX","modalityNa
+Action.c(414):     me":"IMAGESUITE4","filmSize":"11INX14IN","printCount":1},{"departmentID":7,"departmentName
+Action.c(414):     ":"DEPARTMENT6","modalityType":"CT","modalityName":"IMAGESUITE5","filmSize":"10INX12IN","p
+Action.c(414):     rintCount":12179},{"departmentID":7,"departmentName":"DEPARTMENT6","modalityType":"CT","mo
+Action.c(414):     dalityName":"IMAGESUITE2","filmSize":"10INX12IN","printCount":12188},{"departmentID":7,"de
+Action.c(414):     partmentName":"DEPARTMENT6","modalityType":"DX","modalityName":"IMAGESUITE2","filmSize":"1
+Action.c(414):     1INX14IN","printCount":1},{"departmentID":7,"departmentName":"DEPARTMENT6","modalityType":
+Action.c(414):     "CT","modalityName":"IMAGESUITE4","filmSize":"10INX12IN","printCount":12250},{"departmentI
+Action.c(414):     D":7,"departmentName":"DEPARTMENT6","modalityType":"CT","modalityName":"IMAGESUITE9","film
+Action.c(414):     Size":"10INX12IN","printCount":12430},{"departmentID":7,"departmentName":"DEPARTMENT6","mo
+Action.c(414):     dalityType":"CT","modalityName":"IMAGESUITE1","filmSize":"10INX12IN","printCount":12132},{
+Action.c(414):     "departmentID":7,"departmentName":"DEPARTMENT6","modalityType":"CT","modalityName":"IMAGES
+Action.c(414):     UITE6","filmSize":"10INX12IN","printCount":12204},{"departmentID":7,"departmentName":"DEPA
+Action.c(414):     RTMENT6","modalityType":"CT","modalityName":"IMAGESUITE8","filmSize":"10INX12IN","printCou
+Action.c(414):     nt":12171},{"departmentID":7,"departmentName":"DEPARTMENT6","modalityType":"DX","modalityN
+Action.c(414):     ame":"IMAGESUITE6","filmSize":"11INX14IN","printCount":2},{"departmentID":7,"departmentNam
+Action.c(414):     e":"DEPARTMENT6","modalityType":"DX","modalityName":"IMAGESUITE8","filmSize":"11INX14IN","
+Action.c(414):     printCount":1},{"departmentID":7,"departmentName":"DEPARTMENT6","modalityType":"DX","modal
+Action.c(414):     ityName":"IMAGESUITE5","filmSize":"11INX14IN","printCount":3},{"departmentID":8,"departmen
+Action.c(414):     tName":"DEPARTMENT7","modalityType":"MR","modalityName":"IMAGESUITE1","filmSize":"14INX14I
+Action.c(414):     N","printCount":1},{"departmentID":8,"departmentName":"DEPARTMENT7","modalityType":"MR","m
+Action.c(414):     odalityName":"IMAGESUITE5","filmSize":"14INX14IN","printCount":2},{"departmentID":8,"depar
+Action.c(414):     tmentName":"DEPARTMENT7","modalityType":"MR","modalityName":"IMAGESUITE9","filmSize":"14IN
+Action.c(414):     X14IN","printCount":2},{"departmentID":8,"departmentName":"DEPARTMENT7","modalityType":"DX
+Action.c(414):     ","modalityName":"IMAGESUITE5","filmSize":"11INX14IN","printCount":12172},{"departmentID":
+Action.c(414):     8,"departmentName":"DEPARTMENT7","modalityType":"DX","modalityName":"IMAGESUITE9","filmSiz
+Action.c(414):     e":"11INX14IN","printCount":12312},{"departmentID":8,"departmentName":"DEPARTMENT7","modal
+Action.c(414):     ityType":"MR","modalityName":"IMAGESUITE2","filmSize":"14INX14IN","printCount":1},{"depart
+Action.c(414):     mentID":8,"departmentName":"DEPARTMENT7","modalityType":"DX","modalityName":"IMAGESUITE3",
+Action.c(414):     "filmSize":"11INX14IN","printCount":12394},{"de
+Action.c(414): t=1195279ms: 5170-byte response body for "http://10.184.129.208/webapi/api/statistics/getfilmprintcountstatisticsbymodalityname?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1306)
+Action.c(414):     partmentID":8,"departmentName":"DEPARTMENT7","modalityType":"MR","modalityName":"IMAGESUIT
+Action.c(414):     E6","filmSize":"14INX14IN","printCount":1},{"departmentID":8,"departmentName":"DEPARTMENT7
+Action.c(414):     ","modalityType":"DX","modalityName":"IMAGESUITE7","filmSize":"11INX14IN","printCount":119
+Action.c(414):     29},{"departmentID":8,"departmentName":"DEPARTMENT7","modalityType":"MR","modalityName":"I
+Action.c(414):     MAGESUITE8","filmSize":"14INX14IN","printCount":1},{"departmentID":8,"departmentName":"DEP
+Action.c(414):     ARTMENT7","modalityType":"DX","modalityName":"IMAGESUITE2","filmSize":"11INX14IN","printCo
+Action.c(414):     unt":12347},{"departmentID":8,"departmentName":"DEPARTMENT7","modalityType":"MR","modality
+Action.c(414):     Name":"IMAGESUITE3","filmSize":"14INX14IN","printCount":2},{"departmentID":8,"departmentNa
+Action.c(414):     me":"DEPARTMENT7","modalityType":"DX","modalityName":"IMAGESUITE6","filmSize":"11INX14IN",
+Action.c(414):     "printCount":12171},{"departmentID":8,"departmentName":"DEPARTMENT7","modalityType":"MR","
+Action.c(414):     modalityName":"IMAGESUITE7","filmSize":"14INX14IN","printCount":2},{"departmentID":8,"depa
+Action.c(414):     rtmentName":"DEPARTMENT7","modalityType":"DX","modalityName":"IMAGESUITE8","filmSize":"11I
+Action.c(414):     NX14IN","printCount":12157},{"departmentID":8,"departmentName":"DEPARTMENT7","modalityType
+Action.c(414):     ":"MR","modalityName":"IMAGESUITE4","filmSize":"14INX14IN","printCount":3},{"departmentID"
+Action.c(414):     :8,"departmentName":"DEPARTMENT7","modalityType":"DX","modalityName":"IMAGESUITE1","filmSi
+Action.c(414):     ze":"11INX14IN","printCount":12278},{"departmentID":8,"departmentName":"DEPARTMENT7","moda
+Action.c(414):     lityType":"DX","modalityName":"IMAGESUITE4","filmSize":"11INX14IN","printCount":12337},{"d
+Action.c(414):     epartmentID":9,"departmentName":"DEPARTMENT8","modalityType":"MR","modalityName":"IMAGESUI
+Action.c(414):     TE4","filmSize":"14INX14IN","printCount":12162},{"departmentID":9,"departmentName":"DEPART
+Action.c(414):     MENT8","modalityType":"US","modalityName":"IMAGESUITE4","filmSize":"14INX17IN","printCount
+Action.c(414):     ":2},{"departmentID":9,"departmentName":"DEPARTMENT8","modalityType":"MR","modalityName":"
+Action.c(414):     IMAGESUITE2","filmSize":"14INX14IN","printCount":12278},{"departmentID":9,"departmentName"
+Action.c(414):     :"DEPARTMENT8","modalityType":"MR","modalityName":"IMAGESUITE3","filmSize":"14INX14IN","pr
+Action.c(414):     intCount":12250},{"departmentID":9,"departmentName":"DEPARTMENT8","modalityType":"US","mod
+Action.c(414):     alityName":"IMAGESUITE3","filmSize":"14INX17IN","printCount":2},{"departmentID":9,"departm
+Action.c(414):     entName":"DEPARTMENT8","modalityType":"MR","modalityName":"IMAGESUITE7","filmSize":"14INX1
+Action.c(414):     4IN","printCount":12282},{"departmentID":9,"departmentName":"DEPARTMENT8","modalityType":"
+Action.c(414):     US","modalityName":"IMAGESUITE7","filmSize":"14INX17IN","printCount":2},{"departmentID":9,
+Action.c(414):     "departmentName":"DEPARTMENT8","modalityType":"US","modalityName":"IMAGESUITE2","filmSize"
+Action.c(414):     :"14INX17IN","printCount":2},{"departmentID":9,"departmentName":"DEPARTMENT8","modalityTyp
+Action.c(414):     e":"MR","modalityName":"IMAGESUITE5","filmSize":"14INX14IN","printCount":12207},{"departme
+Action.c(414):     ntID":9,"departmentName":"DEPARTMENT8","modalityType":"US","modalityName":"IMAGESUITE6","f
+Action.c(414):     ilmSize":"14INX17IN","printCount":2},{"departmentID":9,"departmentName":"DEPARTMENT8","mod
+Action.c(414):     alityType":"MR","modalityName":"IMAGESUITE1","filmSize":"14INX14IN","printCount":12172},{"
+Action.c(414):     departmentID":9,"departmentName":"DEPARTMENT8","modalityType":"US","modalityName":"IMAGESU
+Action.c(414):     ITE5","filmSize":"14INX17IN","printCount":1},{"departmentID":9,"departmentName":"DEPARTMEN
+Action.c(414):     T8","modalityType":"US","modalityName":"IMAGESUITE9","filmSize":"14INX17IN","printCount":1
+Action.c(414):     },{"departmentID":9,"departmentName":"DEPARTMENT8","modalityType":"US","modalityName":"IMA
+Action.c(414):     GESUITE1","filmSize":"14INX17IN","printCount":3},{"departmentID":9,"departmentName":"DEPAR
+Action.c(414):     TMENT8","modalityType":"MR","modalityName":"IMAGESUITE9","filmSize":"14INX14IN","printCoun
+Action.c(414):     t":12311},{"departmentID":9,"departmentName":"DEPARTMENT8","modalityType":"MR","modalityNa
+Action.c(414):     me":"IMAGESUITE6","filmSize":"14INX14IN","printCount":12158},{"departmentID":9,"department
+Action.c(414):     Name":"DEPARTMENT8","modalityType":"MR","modalityName":"IMAGESUITE8","filmSize":"14INX14IN
+Action.c(414):     ","printCount":12279},{"departmentID":10,"departmentName":"DEPARTMENT9","modalityType":"US
+Action.c(414):     ","modalityName":"IMAGESUITE6","filmSize":"14INX17IN","printCount":12382},{"departmentID":
+Action.c(414):     10,"departmentName":"DEPARTMENT9","modalityType":"US","modalityName":"IMAGESUITE8","filmSi
+Action.c(414):     ze":"14INX17IN","printCount":12312},{"departmentID":10,"departmentName":"DEPARTMENT9","mod
+Action.c(414):     alityType":"US","modalityName":"IMAGESUITE3","filmSize":"14INX17IN","printCount":12184},{"
+Action.c(414):     departmentID":10,"departmentName":"DEPARTMENT9","modalityType":"US","modalityName":"IMAGES
+Action.c(414):     UITE7","filmSize":"14INX17IN","printCount":12382},{"departmentID":10,"departmentName":"DEP
+Action.c(414):     ARTMENT9","modalityType":"US","modalityName":"IMAGESUITE2","filmSize":"14INX17IN","printCo
+Action.c(414):     unt":12170},{"departmentID":10,"departmentName":"DEPARTMENT9","modalityType":"US","modalit
+Action.c(414):     yName":"IMAGESUITE5","filmSize":"14INX17IN","printCount":11922},{"departmentID":10,"depart
+Action.c(414):     mentName":"DEPARTMENT9","modalityType":"US","modalityName":"IMAGESUITE4","filmSize":"14INX
+Action.c(414):     17IN","printCount":12160},{"departmentID":10,"departmentName":"DEPARTMENT9","modalityType"
+Action.c(414):     :"US","modalityName":"IMAGESUITE9","filmSize":"14INX17IN","printCount":12125},{"department
+Action.c(414):     ID":10,"departmentName":"DEPARTMENT9","modalityType":"US","modalityName":"IMAGESUITE1","fi
+Action.c(414):     lmSize":"14INX17IN","printCount":12462}]
+Action.c(414): web_custom_request("Film_By_ModalityName") was successful, 23036 body bytes, 261 header bytes  	[MsgId: MMSG-26386]
+Action.c(422): Notify: Transaction "Film_By_ModalityName" ended with a "Pass" status (Duration: 1.8343 Wasted Time: 0.0002).	[MsgId: MMSG-16871]
+Action.c(424): Notify: Parameter Substitution: parameter "Film_By_ModalityName" =  "departmentID"	[MsgId: MMSG-13992]
+The result is:  departmentID	[MsgId: MMSG-17999]
+Action.c(426): Notify: Parameter Substitution: parameter "Film_By_ModalityName" =  "departmentID"	[MsgId: MMSG-13992]
+Action.c(431): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(433): web_url("CheckLoginStatus_25") started  	[MsgId: MMSG-26355]
+Action.c(433): t=1200380ms: 251-byte response headers for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1307)
+Action.c(433):     HTTP/1.1 200 OK\r\n
+Action.c(433):     Cache-Control: private\r\n
+Action.c(433):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(433):     Server: Microsoft-IIS/8.5\r\n
+Action.c(433):     X-AspNetMvc-Version: 5.2\r\n
+Action.c(433):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(433):     X-Powered-By: ASP.NET\r\n
+Action.c(433):     Date: Fri, 08 Dec 2017 09:42:54 GMT\r\n
+Action.c(433):     Content-Length: 4\r\n
+Action.c(433):     \r\n
+Action.c(433): t=1200380ms: 4-byte response body for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1307)
+Action.c(433):     true
+Action.c(433): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(433): web_url("CheckLoginStatus_25") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(442): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(442): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(447): Notify: Transaction "Film_By_Terminal" started.	[MsgId: MMSG-16999]
+Action.c(449): web_custom_request("Film_By_Terminal") started  	[MsgId: MMSG-26355]
+Action.c(449): Notify: Parameter Substitution: parameter "DepartmentList" =  "DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1"	[MsgId: MMSG-13992]
+Action.c(449): Notify: Parameter Substitution: parameter "EndDate" =  "2017-12-08"	[MsgId: MMSG-13992]
+Action.c(449): Notify: Parameter Substitution: parameter "StartDate" =  "2016%2F01%2F01"	[MsgId: MMSG-13992]
+Action.c(449): t=1206512ms: 261-byte response headers for "http://10.184.129.208/webapi/api/statistics/getfilmprintcountstatisticsbyterminal?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1308)
+Action.c(449):     HTTP/1.1 200 OK\r\n
+Action.c(449):     Cache-Control: no-cache\r\n
+Action.c(449):     Pragma: no-cache\r\n
+Action.c(449):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(449):     Expires: -1\r\n
+Action.c(449):     Server: Microsoft-IIS/8.5\r\n
+Action.c(449):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(449):     X-Powered-By: ASP.NET\r\n
+Action.c(449):     Date: Fri, 08 Dec 2017 09:43:00 GMT\r\n
+Action.c(449):     Content-Length: 12056\r\n
+Action.c(449):     \r\n
+Action.c(449): t=1206512ms: 2659-byte response body for "http://10.184.129.208/webapi/api/statistics/getfilmprintcountstatisticsbyterminal?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1308)
+Action.c(449):     [{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"K2_7","terminalName":"K2_
+Action.c(449):     7","filmSize":"14INX17IN","printCount":28},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91
+Action.c(449):     ","terminalID":"Terminal_62","terminalName":"Terminal_62","filmSize":"14INX17IN","printCou
+Action.c(449):     nt":1},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal6","termina
+Action.c(449):     lName":"Terminal6","filmSize":"8INX10IN","printCount":1},{"departmentID":1,"departmentName
+Action.c(449):     ":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal7","terminalName":"Terminal7","filmSize":"8INX10IN"
+Action.c(449):     ,"printCount":1},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"K2_3","te
+Action.c(449):     rminalName":"K2_3","filmSize":"14INX17IN","printCount":28},{"departmentID":1,"departmentNa
+Action.c(449):     me":"ÊîæÂ∞ÑÁß\x91","terminalID":"K2_8","terminalName":"K2_8","filmSize":"14INX17IN","print
+Action.c(449):     Count":27},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"K2_5","terminal
+Action.c(449):     Name":"K2_5","filmSize":"14INX17IN","printCount":28},{"departmentID":1,"departmentName":"Êî
+Action.c(449):     æÂ∞ÑÁß\x91","terminalID":"K2_6","terminalName":"K2_6","filmSize":"14INX17IN","printCount":
+Action.c(449):     27},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal25","terminalN
+Action.c(449):     ame":"Terminal25","filmSize":"8INX10IN","printCount":1},{"departmentID":1,"departmentName"
+Action.c(449):     :"ÊîæÂ∞ÑÁß\x91","terminalID":"K2_1","terminalName":"K2_1","filmSize":"14INX17IN","printCou
+Action.c(449):     nt":16},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"K2_4","terminalNam
+Action.c(449):     e":"K2_4","filmSize":"14INX17IN","printCount":27},{"departmentID":1,"departmentName":"ÊîæÂ
+Action.c(449):     ∞ÑÁß\x91","terminalID":"Terminal50","terminalName":"Terminal50","filmSize":"8INX10IN","pri
+Action.c(449):     ntCount":1},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"K2_2","termina
+Action.c(449):     lName":"K2_2","filmSize":"14INX17IN","printCount":29},{"departmentID":1,"departmentName":"
+Action.c(449):     ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal3","terminalName":"Terminal3","filmSize":"8INX10IN","p
+Action.c(449):     rintCount":1},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal35",
+Action.c(449):     "terminalName":"Terminal35","filmSize":"8INX10IN","printCount":1},{"departmentID":2,"depar
+Action.c(449):     tmentName":"DEPARTMENT1","terminalID":"Terminal24","terminalName":"Terminal24","filmSize":
+Action.c(449):     "10INX12IN","printCount":1},{"departmentID":2,"departmentName":"DEPARTMENT1","terminalID":
+Action.c(449):     "Terminal27","terminalName":"Terminal27","filmSize":"10INX12IN","printCount":1},{"departme
+Action.c(449):     ntID":2,"departmentName":"DEPARTMENT1","terminalID":"Terminal35","terminalName":"Terminal3
+Action.c(449):     5","filmSize":"10INX12IN","printCount":1},{"departmentID":2,"departmentName":"DEPARTMENT1"
+Action.c(449):     ,"terminalID":"Terminal2","terminalName":"Terminal2","filmSize":"10INX12IN","printCount":1
+Action.c(449):     },{"departmentID":2,"departmentName":"DEPARTMENT1","terminalID":"Terminal16","terminalName
+Action.c(449):     ":
+Action.c(449): Notify: Saving Parameter "Film_By_Terminal = departmentID".	[MsgId: MMSG-13798]
+Action.c(449): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/webapi/api/statistics/getfilmprintcountstatisticsbyterminal?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00"  	[MsgId: MMSG-26548]
+Action.c(449): t=1206512ms: 4380-byte response body for "http://10.184.129.208/webapi/api/statistics/getfilmprintcountstatisticsbyterminal?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1308)
+Action.c(449):     "Terminal16","filmSize":"10INX12IN","printCount":1},{"departmentID":2,"departmentName":"DE
+Action.c(449):     PARTMENT1","terminalID":"Terminal12","terminalName":"Terminal12","filmSize":"10INX12IN","p
+Action.c(449):     rintCount":1},{"departmentID":3,"departmentName":"DEPARTMENT2","terminalID":"Terminal13","
+Action.c(449):     terminalName":"Terminal13","filmSize":"11INX14IN","printCount":1},{"departmentID":3,"depar
+Action.c(449):     tmentName":"DEPARTMENT2","terminalID":"Terminal17","terminalName":"Terminal17","filmSize":
+Action.c(449):     "11INX14IN","printCount":1},{"departmentID":3,"departmentName":"DEPARTMENT2","terminalID":
+Action.c(449):     "Terminal20","terminalName":"Terminal20","filmSize":"11INX14IN","printCount":1},{"departme
+Action.c(449):     ntID":3,"departmentName":"DEPARTMENT2","terminalID":"Terminal45","terminalName":"Terminal4
+Action.c(449):     5","filmSize":"11INX14IN","printCount":1},{"departmentID":3,"departmentName":"DEPARTMENT2"
+Action.c(449):     ,"terminalID":"Terminal3","terminalName":"Terminal3","filmSize":"11INX14IN","printCount":1
+Action.c(449):     },{"departmentID":3,"departmentName":"DEPARTMENT2","terminalID":"Terminal35","terminalName
+Action.c(449):     ":"Terminal35","filmSize":"11INX14IN","printCount":1},{"departmentID":4,"departmentName":"
+Action.c(449):     DEPARTMENT3","terminalID":"Terminal7","terminalName":"Terminal7","filmSize":"14INX14IN","p
+Action.c(449):     rintCount":1},{"departmentID":4,"departmentName":"DEPARTMENT3","terminalID":"Terminal44","
+Action.c(449):     terminalName":"Terminal44","filmSize":"14INX14IN","printCount":1},{"departmentID":4,"depar
+Action.c(449):     tmentName":"DEPARTMENT3","terminalID":"Terminal45","terminalName":"Terminal45","filmSize":
+Action.c(449):     "14INX14IN","printCount":1},{"departmentID":4,"departmentName":"DEPARTMENT3","terminalID":
+Action.c(449):     "Terminal22","terminalName":"Terminal22","filmSize":"14INX14IN","printCount":1},{"departme
+Action.c(449):     ntID":4,"departmentName":"DEPARTMENT3","terminalID":"Terminal28","terminalName":"Terminal2
+Action.c(449):     8","filmSize":"14INX14IN","printCount":1},{"departmentID":4,"departmentName":"DEPARTMENT3"
+Action.c(449):     ,"terminalID":"Terminal5","terminalName":"Terminal5","filmSize":"14INX14IN","printCount":1
+Action.c(449):     },{"departmentID":4,"departmentName":"DEPARTMENT3","terminalID":"Terminal37","terminalName
+Action.c(449):     ":"Terminal37","filmSize":"14INX14IN","printCount":1},{"departmentID":4,"departmentName":"
+Action.c(449):     DEPARTMENT3","terminalID":"Terminal40","terminalName":"Terminal40","filmSize":"14INX14IN",
+Action.c(449):     "printCount":1},{"departmentID":5,"departmentName":"DEPARTMENT4","terminalID":"Terminal28"
+Action.c(449):     ,"terminalName":"Terminal28","filmSize":"14INX17IN","printCount":1},{"departmentID":5,"dep
+Action.c(449):     artmentName":"DEPARTMENT4","terminalID":"Terminal30","terminalName":"Terminal30","filmSize
+Action.c(449):     ":"14INX17IN","printCount":2},{"departmentID":5,"departmentName":"DEPARTMENT4","terminalID
+Action.c(449):     ":"Terminal49","terminalName":"Terminal49","filmSize":"14INX17IN","printCount":1},{"depart
+Action.c(449):     mentID":5,"departmentName":"DEPARTMENT4","terminalID":"Terminal29","terminalName":"Termina
+Action.c(449):     l29","filmSize":"14INX17IN","printCount":1},{"departmentID":5,"departmentName":"DEPARTMENT
+Action.c(449):     4","terminalID":"Terminal45","terminalName":"Terminal45","filmSize":"14INX17IN","printCoun
+Action.c(449):     t":1},{"departmentID":5,"departmentName":"DEPARTMENT4","terminalID":"Terminal31","terminal
+Action.c(449):     Name":"Terminal31","filmSize":"14INX17IN","printCount":1},{"departmentID":5,"departmentNam
+Action.c(449):     e":"DEPARTMENT4","terminalID":"Terminal36","terminalName":"Terminal36","filmSize":"14INX17
+Action.c(449):     IN","printCount":1},{"departmentID":5,"departmentName":"DEPARTMENT4","terminalID":"Termina
+Action.c(449):     l21","terminalName":"Terminal21","filmSize":"14INX17IN","printCount":1},{"departmentID":5,
+Action.c(449):     "departmentName":"DEPARTMENT4","terminalID":"Terminal16","terminalName":"Terminal16","film
+Action.c(449):     Size":"14INX17IN","printCount":1},{"departmentID":5,"departmentName":"DEPARTMENT4","termin
+Action.c(449):     alID":"Terminal17","terminalName":"Terminal17","filmSize":"14INX17IN","printCount":1},{"de
+Action.c(449):     partmentID":5,"departmentName":"DEPARTMENT4","terminalID":"Terminal7","terminalName":"Term
+Action.c(449):     inal7","filmSize":"14INX17IN","printCount":1},{"departmentID":6,"departmentName":"DEPARTME
+Action.c(449):     NT5","terminalID":"Terminal16","terminalName":"Terminal16","filmSize":"8INX10IN","printCou
+Action.c(449):     nt":1},{"departmentID":6,"departmentName":"DEPARTMENT5","terminalID":"Terminal17","termina
+Action.c(449):     lName":"Terminal17","filmSize":"8INX10IN","printCount":1},{"departmentID":6,"departmentNam
+Action.c(449):     e":"DEPARTMENT5","terminalID":"Terminal7","terminalName":"Terminal7","filmSize":"8INX10IN"
+Action.c(449):     ,"printCount":1},{"departmentID":6,"departmentName":"DEPARTMENT5","terminalID":"Terminal19
+Action.c(449):     ","terminalName":"Terminal19","filmSize":"8INX10IN","printCount":1},{"departmentID":6,"dep
+Action.c(449):     artmentName":"DEPARTMENT5","terminalID":"Terminal35","termin
+Action.c(449): t=1206513ms: 5017-byte response body for "http://10.184.129.208/webapi/api/statistics/getfilmprintcountstatisticsbyterminal?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1308)
+Action.c(449):     alName":"Terminal35","filmSize":"8INX10IN","printCount":1},{"departmentID":6,"departmentNa
+Action.c(449):     me":"DEPARTMENT5","terminalID":"Terminal14","terminalName":"Terminal14","filmSize":"8INX10
+Action.c(449):     IN","printCount":2},{"departmentID":6,"departmentName":"DEPARTMENT5","terminalID":"Termina
+Action.c(449):     l10","terminalName":"Terminal10","filmSize":"8INX10IN","printCount":1},{"departmentID":6,"
+Action.c(449):     departmentName":"DEPARTMENT5","terminalID":"Terminal44","terminalName":"Terminal44","filmS
+Action.c(449):     ize":"8INX10IN","printCount":1},{"departmentID":6,"departmentName":"DEPARTMENT5","terminal
+Action.c(449):     ID":"Terminal45","terminalName":"Terminal45","filmSize":"8INX10IN","printCount":1},{"depar
+Action.c(449):     tmentID":6,"departmentName":"DEPARTMENT5","terminalID":"Terminal4","terminalName":"Termina
+Action.c(449):     l4","filmSize":"8INX10IN","printCount":1},{"departmentID":6,"departmentName":"DEPARTMENT5"
+Action.c(449):     ,"terminalID":"Terminal6","terminalName":"Terminal6","filmSize":"8INX10IN","printCount":2}
+Action.c(449):     ,{"departmentID":7,"departmentName":"DEPARTMENT6","terminalID":"Terminal2","terminalName":
+Action.c(449):     "Terminal2","filmSize":"10INX12IN","printCount":1},{"departmentID":7,"departmentName":"DEP
+Action.c(449):     ARTMENT6","terminalID":"Terminal32","terminalName":"Terminal32","filmSize":"10INX12IN","pr
+Action.c(449):     intCount":1},{"departmentID":7,"departmentName":"DEPARTMENT6","terminalID":"Terminal33","t
+Action.c(449):     erminalName":"Terminal33","filmSize":"10INX12IN","printCount":1},{"departmentID":7,"depart
+Action.c(449):     mentName":"DEPARTMENT6","terminalID":"Terminal16","terminalName":"Terminal16","filmSize":"
+Action.c(449):     10INX12IN","printCount":1},{"departmentID":7,"departmentName":"DEPARTMENT6","terminalID":"
+Action.c(449):     Terminal25","terminalName":"Terminal25","filmSize":"10INX12IN","printCount":1},{"departmen
+Action.c(449):     tID":7,"departmentName":"DEPARTMENT6","terminalID":"Terminal19","terminalName":"Terminal19
+Action.c(449):     ","filmSize":"10INX12IN","printCount":1},{"departmentID":7,"departmentName":"DEPARTMENT6",
+Action.c(449):     "terminalID":"Terminal43","terminalName":"Terminal43","filmSize":"10INX12IN","printCount":
+Action.c(449):     1},{"departmentID":8,"departmentName":"DEPARTMENT7","terminalID":"Terminal19","terminalNam
+Action.c(449):     e":"Terminal19","filmSize":"11INX14IN","printCount":1},{"departmentID":8,"departmentName":
+Action.c(449):     "DEPARTMENT7","terminalID":"Terminal14","terminalName":"Terminal14","filmSize":"11INX14IN"
+Action.c(449):     ,"printCount":1},{"departmentID":8,"departmentName":"DEPARTMENT7","terminalID":"Terminal17
+Action.c(449):     ","terminalName":"Terminal17","filmSize":"11INX14IN","printCount":1},{"departmentID":8,"de
+Action.c(449):     partmentName":"DEPARTMENT7","terminalID":"Terminal1","terminalName":"Terminal1","filmSize"
+Action.c(449):     :"11INX14IN","printCount":1},{"departmentID":8,"departmentName":"DEPARTMENT7","terminalID"
+Action.c(449):     :"Terminal25","terminalName":"Terminal25","filmSize":"11INX14IN","printCount":1},{"departm
+Action.c(449):     entID":8,"departmentName":"DEPARTMENT7","terminalID":"Terminal43","terminalName":"Terminal
+Action.c(449):     43","filmSize":"11INX14IN","printCount":1},{"departmentID":9,"departmentName":"DEPARTMENT8
+Action.c(449):     ","terminalID":"Terminal25","terminalName":"Terminal25","filmSize":"14INX14IN","printCount
+Action.c(449):     ":1},{"departmentID":9,"departmentName":"DEPARTMENT8","terminalID":"Terminal46","terminalN
+Action.c(449):     ame":"Terminal46","filmSize":"14INX14IN","printCount":1},{"departmentID":9,"departmentName
+Action.c(449):     ":"DEPARTMENT8","terminalID":"Terminal47","terminalName":"Terminal47","filmSize":"14INX14I
+Action.c(449):     N","printCount":1},{"departmentID":9,"departmentName":"DEPARTMENT8","terminalID":"Terminal
+Action.c(449):     31","terminalName":"Terminal31","filmSize":"14INX14IN","printCount":1},{"departmentID":9,"
+Action.c(449):     departmentName":"DEPARTMENT8","terminalID":"Terminal35","terminalName":"Terminal35","filmS
+Action.c(449):     ize":"14INX14IN","printCount":1},{"departmentID":9,"departmentName":"DEPARTMENT8","termina
+Action.c(449):     lID":"Terminal36","terminalName":"Terminal36","filmSize":"14INX14IN","printCount":1},{"dep
+Action.c(449):     artmentID":9,"departmentName":"DEPARTMENT8","terminalID":"Terminal16","terminalName":"Term
+Action.c(449):     inal16","filmSize":"14INX14IN","printCount":1},{"departmentID":9,"departmentName":"DEPARTM
+Action.c(449):     ENT8","terminalID":"Terminal1","terminalName":"Terminal1","filmSize":"14INX14IN","printCou
+Action.c(449):     nt":1},{"departmentID":10,"departmentName":"DEPARTMENT9","terminalID":"Terminal23","termin
+Action.c(449):     alName":"Terminal23","filmSize":"14INX17IN","printCount":1},{"departmentID":10,"department
+Action.c(449):     Name":"DEPARTMENT9","terminalID":"Terminal14","terminalName":"Terminal14","filmSize":"14IN
+Action.c(449):     X17IN","printCount":1},{"departmentID":10,"departmentName":"DEPARTMENT9","terminalID":"Ter
+Action.c(449):     minal35","terminalName":"Terminal35","filmSize":"14INX17IN","printCount":1},{"departmentID
+Action.c(449):     ":10,"departmentName":"DEPARTMENT9","terminalID":"Terminal43","terminalName":"Terminal43",
+Action.c(449):     "filmSize":"14INX17IN","printCount":2},{"departmentID":10,"departmentName":"DEPARTMENT9","
+Action.c(449):     terminalID":"Terminal1","terminalName":"Terminal1","filmSize":"14INX17IN","printCount":1},
+Action.c(449):     {"departmentID":10,"departmentName":"DEPARTMENT9","terminalID":"Terminal3","terminalName":
+Action.c(449):     "Terminal3","filmSize":"14INX17IN","printCount":1},{"departmentID":10,"departmentName":"DE
+Action.c(449):     PARTMENT9","terminalID":"Terminal28","terminalName":"Terminal28","filmSize":"14INX17IN","p
+Action.c(449):     rintCount":1},{"departmentID":10,"departmentName":"DEPARTMENT9","terminalID":"Terminal45",
+Action.c(449):     "terminalName":"Terminal45","filmSize":"14INX17IN","printCount":1}]
+Action.c(449): web_custom_request("Film_By_Terminal") was successful, 12056 body bytes, 261 header bytes  	[MsgId: MMSG-26386]
+Action.c(457): Notify: Transaction "Film_By_Terminal" ended with a "Pass" status (Duration: 6.1331 Wasted Time: 0.0001).	[MsgId: MMSG-16871]
+Action.c(459): Notify: Parameter Substitution: parameter "Film_By_Terminal" =  "departmentID"	[MsgId: MMSG-13992]
+The result is:  departmentID	[MsgId: MMSG-17999]
+Action.c(461): Notify: Parameter Substitution: parameter "Film_By_Terminal" =  "departmentID"	[MsgId: MMSG-13992]
+Action.c(466): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(468): web_url("CheckLoginStatus_25") started  	[MsgId: MMSG-26355]
+Action.c(468): t=1211558ms: 251-byte response headers for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1309)
+Action.c(468):     HTTP/1.1 200 OK\r\n
+Action.c(468):     Cache-Control: private\r\n
+Action.c(468):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(468):     Server: Microsoft-IIS/8.5\r\n
+Action.c(468):     X-AspNetMvc-Version: 5.2\r\n
+Action.c(468):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(468):     X-Powered-By: ASP.NET\r\n
+Action.c(468):     Date: Fri, 08 Dec 2017 09:43:05 GMT\r\n
+Action.c(468):     Content-Length: 4\r\n
+Action.c(468):     \r\n
+Action.c(468): t=1211559ms: 4-byte response body for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1309)
+Action.c(468):     true
+Action.c(468): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(468): web_url("CheckLoginStatus_25") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(477): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(477): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(482): Notify: Transaction "Film_By_FilmSize" started.	[MsgId: MMSG-16999]
+Action.c(484): web_custom_request("Film_By_FilmSize") started  	[MsgId: MMSG-26355]
+Action.c(484): Notify: Parameter Substitution: parameter "DepartmentList" =  "DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1"	[MsgId: MMSG-13992]
+Action.c(484): Notify: Parameter Substitution: parameter "EndDate" =  "2017-12-08"	[MsgId: MMSG-13992]
+Action.c(484): Notify: Parameter Substitution: parameter "StartDate" =  "2016%2F01%2F01"	[MsgId: MMSG-13992]
+Action.c(484): t=1211934ms: 260-byte response headers for "http://10.184.129.208/webapi/api/statistics/getfilmprintcountstatisticsbyfilmsize?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1310)
+Action.c(484):     HTTP/1.1 200 OK\r\n
+Action.c(484):     Cache-Control: no-cache\r\n
+Action.c(484):     Pragma: no-cache\r\n
+Action.c(484):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(484):     Expires: -1\r\n
+Action.c(484):     Server: Microsoft-IIS/8.5\r\n
+Action.c(484):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(484):     X-Powered-By: ASP.NET\r\n
+Action.c(484):     Date: Fri, 08 Dec 2017 09:43:06 GMT\r\n
+Action.c(484):     Content-Length: 1816\r\n
+Action.c(484):     \r\n
+Action.c(484): t=1211934ms: 1816-byte response body for "http://10.184.129.208/webapi/api/statistics/getfilmprintcountstatisticsbyfilmsize?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1310)
+Action.c(484):     [{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","filmSize":"8INX10IN","printCount":1101
+Action.c(484):     00},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","filmSize":"10INX12IN","printCount":
+Action.c(484):     19},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","filmSize":"14INX17IN","printCount":
+Action.c(484):     22129},{"departmentID":2,"departmentName":"DEPARTMENT1","filmSize":"11INX14IN","printCount
+Action.c(484):     ":19},{"departmentID":2,"departmentName":"DEPARTMENT1","filmSize":"10INX12IN","printCount"
+Action.c(484):     :110100},{"departmentID":3,"departmentName":"DEPARTMENT2","filmSize":"14INX14IN","printCou
+Action.c(484):     nt":16},{"departmentID":3,"departmentName":"DEPARTMENT2","filmSize":"11INX14IN","printCoun
+Action.c(484):     t":110100},{"departmentID":4,"departmentName":"DEPARTMENT3","filmSize":"14INX14IN","printC
+Action.c(484):     ount":110100},{"departmentID":4,"departmentName":"DEPARTMENT3","filmSize":"14INX17IN","pri
+Action.c(484):     ntCount":16},{"departmentID":5,"departmentName":"DEPARTMENT4","filmSize":"14INX17IN","prin
+Action.c(484):     tCount":110099},{"departmentID":5,"departmentName":"DEPARTMENT4","filmSize":"8INX10IN","pr
+Action.c(484):     intCount":16},{"departmentID":6,"departmentName":"DEPARTMENT5","filmSize":"8INX10IN","prin
+Action.c(484):     tCount":110098},{"departmentID":6,"departmentName":"DEPARTMENT5","filmSize":"10INX12IN","p
+Action.c(484):     rintCount":16},{"departmentID":7,"departmentName":"DEPARTMENT6","filmSize":"10INX12IN","pr
+Action.c(484):     intCount":110099},{"departmentID":7,"departmentName":"DEPARTMENT6","filmSize":"11INX14IN",
+Action.c(484):     "printCount":16},{"departmentID":8,"departmentName":"DEPARTMENT7","filmSize":"14INX14IN","
+Action.c(484):     printCount":15},{"departmentID":8,"departmentName":"DEPARTMENT7","filmSize":"11INX14IN","p
+Action.c(484):     rintCount":110097},{"departmentID":9,"departmentName":"DEPARTMENT8","filmSize":"14INX14IN"
+Action.c(484):     ,"printCount":110099},{"departmentID":9,"departmentName":"DEPARTMENT8","filmSize":"14INX17
+Action.c(484):     IN","printCount":15},{"departmentID":10,"departmentName":"DEPARTMENT9","filmSize":"14INX17
+Action.c(484):     IN","printCount":110099}]
+Action.c(484): Notify: Saving Parameter "Film_By_FilmSize = departmentID".	[MsgId: MMSG-13798]
+Action.c(484): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/webapi/api/statistics/getfilmprintcountstatisticsbyfilmsize?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00"  	[MsgId: MMSG-26548]
+Action.c(484): web_custom_request("Film_By_FilmSize") was successful, 1816 body bytes, 260 header bytes  	[MsgId: MMSG-26386]
+Action.c(492): Notify: Transaction "Film_By_FilmSize" ended with a "Pass" status (Duration: 0.3759 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+Action.c(494): Notify: Parameter Substitution: parameter "Film_By_FilmSize" =  "departmentID"	[MsgId: MMSG-13992]
+The result is:  departmentID	[MsgId: MMSG-17999]
+Action.c(496): Notify: Parameter Substitution: parameter "Film_By_FilmSize" =  "departmentID"	[MsgId: MMSG-13992]
+Action.c(501): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(503): web_url("CheckLoginStatus_25") started  	[MsgId: MMSG-26355]
+Action.c(503): t=1217138ms: 251-byte response headers for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1311)
+Action.c(503):     HTTP/1.1 200 OK\r\n
+Action.c(503):     Cache-Control: private\r\n
+Action.c(503):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(503):     Server: Microsoft-IIS/8.5\r\n
+Action.c(503):     X-AspNetMvc-Version: 5.2\r\n
+Action.c(503):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(503):     X-Powered-By: ASP.NET\r\n
+Action.c(503):     Date: Fri, 08 Dec 2017 09:43:11 GMT\r\n
+Action.c(503):     Content-Length: 4\r\n
+Action.c(503):     \r\n
+Action.c(503): t=1217138ms: 4-byte response body for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1311)
+Action.c(503):     true
+Action.c(503): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(503): web_url("CheckLoginStatus_25") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(512): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(512): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(517): Notify: Transaction "Film_Unprinted_By_FilmSize" started.	[MsgId: MMSG-16999]
+Action.c(519): web_custom_request("Film_Unprinted_By_FilmSize") started  	[MsgId: MMSG-26355]
+Action.c(519): Notify: Parameter Substitution: parameter "DepartmentList" =  "DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1"	[MsgId: MMSG-13992]
+Action.c(519): Notify: Parameter Substitution: parameter "EndDate" =  "2017-12-08"	[MsgId: MMSG-13992]
+Action.c(519): Notify: Parameter Substitution: parameter "StartDate" =  "2016%2F01%2F01"	[MsgId: MMSG-13992]
+Action.c(519): t=1217952ms: 260-byte response headers for "http://10.184.129.208/webapi/api/statistics/getunprintfilmcountstatisticsbyfilmsize?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1312)
+Action.c(519):     HTTP/1.1 200 OK\r\n
+Action.c(519):     Cache-Control: no-cache\r\n
+Action.c(519):     Pragma: no-cache\r\n
+Action.c(519):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(519):     Expires: -1\r\n
+Action.c(519):     Server: Microsoft-IIS/8.5\r\n
+Action.c(519):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(519):     X-Powered-By: ASP.NET\r\n
+Action.c(519):     Date: Fri, 08 Dec 2017 09:43:12 GMT\r\n
+Action.c(519):     Content-Length: 1962\r\n
+Action.c(519):     \r\n
+Action.c(519): t=1217952ms: 1962-byte response body for "http://10.184.129.208/webapi/api/statistics/getunprintfilmcountstatisticsbyfilmsize?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1312)
+Action.c(519):     [{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","filmSize":"","unPrintFilmCount":459},{
+Action.c(519):     "departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","filmSize":"8INX10IN","unPrintFilmCount":
+Action.c(519):     1},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","filmSize":"10INX12IN","unPrintFilmCo
+Action.c(519):     unt":0},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","filmSize":"14INX17IN","unPrintF
+Action.c(519):     ilmCount":16333},{"departmentID":2,"departmentName":"DEPARTMENT1","filmSize":"11INX14IN","
+Action.c(519):     unPrintFilmCount":0},{"departmentID":2,"departmentName":"DEPARTMENT1","filmSize":"10INX12I
+Action.c(519):     N","unPrintFilmCount":0},{"departmentID":3,"departmentName":"DEPARTMENT2","filmSize":"14IN
+Action.c(519):     X14IN","unPrintFilmCount":0},{"departmentID":3,"departmentName":"DEPARTMENT2","filmSize":"
+Action.c(519):     11INX14IN","unPrintFilmCount":0},{"departmentID":4,"departmentName":"DEPARTMENT3","filmSiz
+Action.c(519):     e":"14INX17IN","unPrintFilmCount":0},{"departmentID":4,"departmentName":"DEPARTMENT3","fil
+Action.c(519):     mSize":"14INX14IN","unPrintFilmCount":0},{"departmentID":5,"departmentName":"DEPARTMENT4",
+Action.c(519):     "filmSize":"14INX17IN","unPrintFilmCount":0},{"departmentID":5,"departmentName":"DEPARTMEN
+Action.c(519):     T4","filmSize":"8INX10IN","unPrintFilmCount":0},{"departmentID":6,"departmentName":"DEPART
+Action.c(519):     MENT5","filmSize":"8INX10IN","unPrintFilmCount":0},{"departmentID":6,"departmentName":"DEP
+Action.c(519):     ARTMENT5","filmSize":"10INX12IN","unPrintFilmCount":0},{"departmentID":7,"departmentName":
+Action.c(519):     "DEPARTMENT6","filmSize":"10INX12IN","unPrintFilmCount":0},{"departmentID":7,"departmentNa
+Action.c(519):     me":"DEPARTMENT6","filmSize":"11INX14IN","unPrintFilmCount":0},{"departmentID":8,"departme
+Action.c(519):     ntName":"DEPARTMENT7","filmSize":"14INX14IN","unPrintFilmCount":0},{"departmentID":8,"depa
+Action.c(519):     rtmentName":"DEPARTMENT7","filmSize":"11INX14IN","unPrintFilmCount":0},{"departmentID":9,"
+Action.c(519):     departmentName":"DEPARTMENT8","filmSize":"14INX14IN","unPrintFilmCount":0},{"departmentID"
+Action.c(519):     :9,"departmentName":"DEPARTMENT8","filmSize":"14INX17IN","unPrintFilmCount":0},{"departmen
+Action.c(519):     tID":10,"departmentName":"DEPARTMENT9","filmSize":"14INX17IN","unPrintFilmCount":0}]
+Action.c(519): Notify: Saving Parameter "Film_Unprinted_By_FilmSize = departmentID".	[MsgId: MMSG-13798]
+Action.c(519): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/webapi/api/statistics/getunprintfilmcountstatisticsbyfilmsize?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00"  	[MsgId: MMSG-26548]
+Action.c(519): web_custom_request("Film_Unprinted_By_FilmSize") was successful, 1962 body bytes, 260 header bytes  	[MsgId: MMSG-26386]
+Action.c(527): Notify: Transaction "Film_Unprinted_By_FilmSize" ended with a "Pass" status (Duration: 0.8142 Wasted Time: 0.0001).	[MsgId: MMSG-16871]
+Action.c(529): Notify: Parameter Substitution: parameter "Film_Unprinted_By_FilmSize" =  "departmentID"	[MsgId: MMSG-13992]
+The result is:  departmentID	[MsgId: MMSG-17999]
+Action.c(531): Notify: Parameter Substitution: parameter "Film_Unprinted_By_FilmSize" =  "departmentID"	[MsgId: MMSG-13992]
+Action.c(536): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(538): web_url("CheckLoginStatus_25") started  	[MsgId: MMSG-26355]
+Action.c(538): t=1223055ms: 251-byte response headers for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1313)
+Action.c(538):     HTTP/1.1 200 OK\r\n
+Action.c(538):     Cache-Control: private\r\n
+Action.c(538):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(538):     Server: Microsoft-IIS/8.5\r\n
+Action.c(538):     X-AspNetMvc-Version: 5.2\r\n
+Action.c(538):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(538):     X-Powered-By: ASP.NET\r\n
+Action.c(538):     Date: Fri, 08 Dec 2017 09:43:17 GMT\r\n
+Action.c(538):     Content-Length: 4\r\n
+Action.c(538):     \r\n
+Action.c(538): t=1223055ms: 4-byte response body for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1313)
+Action.c(538):     true
+Action.c(538): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(538): web_url("CheckLoginStatus_25") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(547): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(547): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(552): Notify: Transaction "Report_By_ModalityType" started.	[MsgId: MMSG-16999]
+Action.c(554): web_custom_request("Report_By_ModalityType") started  	[MsgId: MMSG-26355]
+Action.c(554): Notify: Parameter Substitution: parameter "DepartmentList" =  "DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1"	[MsgId: MMSG-13992]
+Action.c(554): Notify: Parameter Substitution: parameter "EndDate" =  "2017-12-08"	[MsgId: MMSG-13992]
+Action.c(554): Notify: Parameter Substitution: parameter "StartDate" =  "2016%2F01%2F01"	[MsgId: MMSG-13992]
+Action.c(554): t=1223461ms: 260-byte response headers for "http://10.184.129.208/webapi/api/statistics/getunprintfilmcountstatisticsbyfilmsize?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1314)
+Action.c(554):     HTTP/1.1 200 OK\r\n
+Action.c(554):     Cache-Control: no-cache\r\n
+Action.c(554):     Pragma: no-cache\r\n
+Action.c(554):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(554):     Expires: -1\r\n
+Action.c(554):     Server: Microsoft-IIS/8.5\r\n
+Action.c(554):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(554):     X-Powered-By: ASP.NET\r\n
+Action.c(554):     Date: Fri, 08 Dec 2017 09:43:17 GMT\r\n
+Action.c(554):     Content-Length: 1962\r\n
+Action.c(554):     \r\n
+Action.c(554): t=1223462ms: 1200-byte response body for "http://10.184.129.208/webapi/api/statistics/getunprintfilmcountstatisticsbyfilmsize?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1314)
+Action.c(554):     [{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","filmSize":"","unPrintFilmCount":459},{
+Action.c(554):     "departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","filmSize":"8INX10IN","unPrintFilmCount":
+Action.c(554):     1},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","filmSize":"10INX12IN","unPrintFilmCo
+Action.c(554):     unt":0},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","filmSize":"14INX17IN","unPrintF
+Action.c(554):     ilmCount":16333},{"departmentID":2,"departmentName":"DEPARTMENT1","filmSize":"11INX14IN","
+Action.c(554):     unPrintFilmCount":0},{"departmentID":2,"departmentName":"DEPARTMENT1","filmSize":"10INX12I
+Action.c(554):     N","unPrintFilmCount":0},{"departmentID":3,"departmentName":"DEPARTMENT2","filmSize":"14IN
+Action.c(554):     X14IN","unPrintFilmCount":0},{"departmentID":3,"departmentName":"DEPARTMENT2","filmSize":"
+Action.c(554):     11INX14IN","unPrintFilmCount":0},{"departmentID":4,"departmentName":"DEPARTMENT3","filmSiz
+Action.c(554):     e":"14INX17IN","unPrintFilmCount":0},{"departmentID":4,"departmentName":"DEPARTMENT3","fil
+Action.c(554):     mSize":"14INX14IN","unPrintFilmCount":0},{"departmentID":5,"departmentName":"DEPARTMENT4",
+Action.c(554):     "filmSize":"14INX17IN","unPrintFilmCount":0},{"departmentID":5,"departmentName":"DEPARTMEN
+Action.c(554):     T4","filmSize":"8INX10IN","unPrintFilmCount":0},{"departmentID":6,"departmentName":"DEPART
+Action.c(554):     MENT5","filmSize":"8INX10IN","unPrintFilmC
+Action.c(554): Notify: Saving Parameter "Report_By_ModalityType = departmentID".	[MsgId: MMSG-13798]
+Action.c(554): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/webapi/api/statistics/getunprintfilmcountstatisticsbyfilmsize?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00"  	[MsgId: MMSG-26548]
+Action.c(554): t=1223462ms: 762-byte response body for "http://10.184.129.208/webapi/api/statistics/getunprintfilmcountstatisticsbyfilmsize?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1314)
+Action.c(554):     ount":0},{"departmentID":6,"departmentName":"DEPARTMENT5","filmSize":"10INX12IN","unPrintF
+Action.c(554):     ilmCount":0},{"departmentID":7,"departmentName":"DEPARTMENT6","filmSize":"10INX12IN","unPr
+Action.c(554):     intFilmCount":0},{"departmentID":7,"departmentName":"DEPARTMENT6","filmSize":"11INX14IN","
+Action.c(554):     unPrintFilmCount":0},{"departmentID":8,"departmentName":"DEPARTMENT7","filmSize":"14INX14I
+Action.c(554):     N","unPrintFilmCount":0},{"departmentID":8,"departmentName":"DEPARTMENT7","filmSize":"11IN
+Action.c(554):     X14IN","unPrintFilmCount":0},{"departmentID":9,"departmentName":"DEPARTMENT8","filmSize":"
+Action.c(554):     14INX14IN","unPrintFilmCount":0},{"departmentID":9,"departmentName":"DEPARTMENT8","filmSiz
+Action.c(554):     e":"14INX17IN","unPrintFilmCount":0},{"departmentID":10,"departmentName":"DEPARTMENT9","fi
+Action.c(554):     lmSize":"14INX17IN","unPrintFilmCount":0}]
+Action.c(554): web_custom_request("Report_By_ModalityType") was successful, 1962 body bytes, 260 header bytes  	[MsgId: MMSG-26386]
+Action.c(562): Notify: Transaction "Report_By_ModalityType" ended with a "Pass" status (Duration: 0.4073 Wasted Time: 0.0001).	[MsgId: MMSG-16871]
+Action.c(564): Notify: Parameter Substitution: parameter "Report_By_ModalityType" =  "departmentID"	[MsgId: MMSG-13992]
+The result is:  departmentID	[MsgId: MMSG-17999]
+Action.c(566): Notify: Parameter Substitution: parameter "Report_By_ModalityType" =  "departmentID"	[MsgId: MMSG-13992]
+Action.c(571): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(573): web_url("CheckLoginStatus_25") started  	[MsgId: MMSG-26355]
+Action.c(573): t=1228598ms: 251-byte response headers for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1315)
+Action.c(573):     HTTP/1.1 200 OK\r\n
+Action.c(573):     Cache-Control: private\r\n
+Action.c(573):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(573):     Server: Microsoft-IIS/8.5\r\n
+Action.c(573):     X-AspNetMvc-Version: 5.2\r\n
+Action.c(573):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(573):     X-Powered-By: ASP.NET\r\n
+Action.c(573):     Date: Fri, 08 Dec 2017 09:43:22 GMT\r\n
+Action.c(573):     Content-Length: 4\r\n
+Action.c(573):     \r\n
+Action.c(573): t=1228598ms: 4-byte response body for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1315)
+Action.c(573):     true
+Action.c(573): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(573): web_url("CheckLoginStatus_25") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(581): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(590): Error: Cannot start transaction "Report_By_Terminal". This Vuser already started a transaction with the same name, and has not yet processed the corresponding lr_end_transaction statement.	[MsgId: MERR-16993]
+Action.c(592): web_custom_request("Report_By_Terminal") started  	[MsgId: MMSG-26355]
+Action.c(592): Notify: Parameter Substitution: parameter "DepartmentList" =  "DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1"	[MsgId: MMSG-13992]
+Action.c(592): Notify: Parameter Substitution: parameter "EndDate" =  "2017-12-08"	[MsgId: MMSG-13992]
+Action.c(592): Notify: Parameter Substitution: parameter "StartDate" =  "2016%2F01%2F01"	[MsgId: MMSG-13992]
+Action.c(592): t=1345700ms: 260-byte response headers for "http://10.184.129.208/webapi/api/statistics/getreportprintcountstatisticsbyterminal?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1316)
+Action.c(592):     HTTP/1.1 200 OK\r\n
+Action.c(592):     Cache-Control: no-cache\r\n
+Action.c(592):     Pragma: no-cache\r\n
+Action.c(592):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(592):     Expires: -1\r\n
+Action.c(592):     Server: Microsoft-IIS/8.5\r\n
+Action.c(592):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(592):     X-Powered-By: ASP.NET\r\n
+Action.c(592):     Date: Fri, 08 Dec 2017 09:45:19 GMT\r\n
+Action.c(592):     Content-Length: 7698\r\n
+Action.c(592):     \r\n
+Action.c(592): t=1345700ms: 2660-byte response body for "http://10.184.129.208/webapi/api/statistics/getreportprintcountstatisticsbyterminal?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1316)
+Action.c(592):     [{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal1","terminalName"
+Action.c(592):     :"Terminal1","paperSize":"A4","paperType":"Plain","printCount":12},{"departmentID":1,"depa
+Action.c(592):     rtmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal10","terminalName":"Terminal10","paperSiz
+Action.c(592):     e":"A4","paperType":"Plain","printCount":10},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91
+Action.c(592):     ","terminalID":"Terminal11","terminalName":"Terminal11","paperSize":"A4","paperType":"Plai
+Action.c(592):     n","printCount":10},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Termin
+Action.c(592):     al12","terminalName":"Terminal12","paperSize":"A4","paperType":"Plain","printCount":11},{"
+Action.c(592):     departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal13","terminalName":"
+Action.c(592):     Terminal13","paperSize":"A4","paperType":"Plain","printCount":11},{"departmentID":1,"depar
+Action.c(592):     tmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal14","terminalName":"Terminal14","paperSize
+Action.c(592):     ":"A4","paperType":"Plain","printCount":10},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91
+Action.c(592):     ","terminalID":"Terminal15","terminalName":"Terminal15","paperSize":"A4","paperType":"Plai
+Action.c(592):     n","printCount":11},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Termin
+Action.c(592):     al16","terminalName":"Terminal16","paperSize":"A4","paperType":"Plain","printCount":10},{"
+Action.c(592):     departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal17","terminalName":"
+Action.c(592):     Terminal17","paperSize":"A4","paperType":"Plain","printCount":10},{"departmentID":1,"depar
+Action.c(592):     tmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal18","terminalName":"Terminal18","paperSize
+Action.c(592):     ":"A4","paperType":"Plain","printCount":10},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91
+Action.c(592):     ","terminalID":"Terminal19","terminalName":"Terminal19","paperSize":"A4","paperType":"Plai
+Action.c(592):     n","printCount":10},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Termin
+Action.c(592):     al2","terminalName":"Terminal2","paperSize":"A4","paperType":"Plain","printCount":9},{"dep
+Action.c(592):     artmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal20","terminalName":"Ter
+Action.c(592):     minal20","paperSize":"A4","paperType":"Plain","printCount":10},{"departmentID":1,"departme
+Action.c(592):     ntName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal21","terminalName":"Terminal21","paperSize":"
+Action.c(592):     A4","paperType":"Plain","printCount":9},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91",
+Action.c(592):     "terminalID":"Terminal22","terminalName":"Terminal22","paperSize":"A4","paperType":"Plain"
+Action.c(592):     ,"printCount":10},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal
+Action.c(592):     23","terminalName":"Terminal23","paperSize":"A4","paperType":"Plain","printCount":9},{"dep
+Action.c(592):     artmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal24","terminalName":"Ter
+Action.c(592):     minal24","paperSize":"A4","paperType":"Plain","printCount":9},{"departmentID":1,"departmen
+Action.c(592):     tNam
+Action.c(592): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/webapi/api/statistics/getreportprintcountstatisticsbyterminal?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00"  	[MsgId: MMSG-26548]
+Action.c(592): t=1345701ms: 5038-byte response body for "http://10.184.129.208/webapi/api/statistics/getreportprintcountstatisticsbyterminal?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1316)
+Action.c(592):     e":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal25","terminalName":"Terminal25","paperSize":"A4","
+Action.c(592):     paperType":"Plain","printCount":8},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","term
+Action.c(592):     inalID":"Terminal26","terminalName":"Terminal26","paperSize":"A4","paperType":"Plain","pri
+Action.c(592):     ntCount":10},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal27","
+Action.c(592):     terminalName":"Terminal27","paperSize":"A4","paperType":"Plain","printCount":8},{"departme
+Action.c(592):     ntID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal28","terminalName":"Terminal
+Action.c(592):     28","paperSize":"A4","paperType":"Plain","printCount":9},{"departmentID":1,"departmentName
+Action.c(592):     ":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal29","terminalName":"Terminal29","paperSize":"A4","p
+Action.c(592):     aperType":"Plain","printCount":9},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","termi
+Action.c(592):     nalID":"Terminal3","terminalName":"Terminal3","paperSize":"A4","paperType":"Plain","printC
+Action.c(592):     ount":9},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal30","term
+Action.c(592):     inalName":"Terminal30","paperSize":"A4","paperType":"Plain","printCount":8},{"departmentID
+Action.c(592):     ":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal31","terminalName":"Terminal31",
+Action.c(592):     "paperSize":"A4","paperType":"Plain","printCount":10},{"departmentID":1,"departmentName":"
+Action.c(592):     ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal32","terminalName":"Terminal32","paperSize":"A4","pape
+Action.c(592):     rType":"Plain","printCount":7},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminal
+Action.c(592):     ID":"Terminal33","terminalName":"Terminal33","paperSize":"A4","paperType":"Plain","printCo
+Action.c(592):     unt":8},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal34","termi
+Action.c(592):     nalName":"Terminal34","paperSize":"A4","paperType":"Plain","printCount":8},{"departmentID"
+Action.c(592):     :1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal35","terminalName":"Terminal35","
+Action.c(592):     paperSize":"A4","paperType":"Plain","printCount":8},{"departmentID":1,"departmentName":"Êî
+Action.c(592):     æÂ∞ÑÁß\x91","terminalID":"Terminal36","terminalName":"Terminal36","paperSize":"A4","paperT
+Action.c(592):     ype":"Plain","printCount":7},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID
+Action.c(592):     ":"Terminal37","terminalName":"Terminal37","paperSize":"A4","paperType":"Plain","printCoun
+Action.c(592):     t":9},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal38","termina
+Action.c(592):     lName":"Terminal38","paperSize":"A4","paperType":"Plain","printCount":8},{"departmentID":1
+Action.c(592):     ,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal39","terminalName":"Terminal39","pa
+Action.c(592):     perSize":"A4","paperType":"Plain","printCount":8},{"departmentID":1,"departmentName":"ÊîæÂ
+Action.c(592):     ∞ÑÁß\x91","terminalID":"Terminal4","terminalName":"Terminal4","paperSize":"A4","paperType"
+Action.c(592):     :"Plain","printCount":8},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"T
+Action.c(592):     erminal40","terminalName":"Terminal40","paperSize":"A4","paperType":"Plain","printCount":8
+Action.c(592):     },{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal41","terminalNam
+Action.c(592):     e":"Terminal41","paperSize":"A4","paperType":"Plain","printCount":7},{"departmentID":1,"de
+Action.c(592):     partmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal42","terminalName":"Terminal42","paperS
+Action.c(592):     ize":"A4","paperType":"Plain","printCount":8},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß
+Action.c(592):     \x91","terminalID":"Terminal43","terminalName":"Terminal43","paperSize":"A4","paperType":"
+Action.c(592):     Plain","printCount":7},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Ter
+Action.c(592):     minal44","terminalName":"Terminal44","paperSize":"A4","paperType":"Plain","printCount":7},
+Action.c(592):     {"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal45","terminalName"
+Action.c(592):     :"Terminal45","paperSize":"A4","paperType":"Plain","printCount":8},{"departmentID":1,"depa
+Action.c(592):     rtmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal46","terminalName":"Terminal46","paperSiz
+Action.c(592):     e":"A4","paperType":"Plain","printCount":7},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91
+Action.c(592):     ","terminalID":"Terminal47","terminalName":"Terminal47","paperSize":"A4","paperType":"Plai
+Action.c(592):     n","printCount":7},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Termina
+Action.c(592):     l48","terminalName":"Terminal48","paperSize":"A4","paperType":"Plain","printCount":8},{"de
+Action.c(592):     partmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal49","terminalName":"Te
+Action.c(592):     rminal49","paperSize":"A4","paperType":"Plain","printCount":7},{"departmentID":1,"departme
+Action.c(592):     ntName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal5","terminalName":"Terminal5","paperSize":"A4
+Action.c(592):     ","paperType":"Plain","printCount":7},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","t
+Action.c(592):     erminalID":"Terminal50","terminalName":"Terminal50","paperSize":"A4","paperType":"Plain","
+Action.c(592):     printCount":2},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal6",
+Action.c(592):     "terminalName":"Terminal6","paperSize":"A4","paperType":"Plain","printCount":2},{"departme
+Action.c(592):     ntID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal7","terminalName":"Terminal7
+Action.c(592):     ","paperSize":"A4","paperType":"Plain","printCount":2},{"departmentID":1,"departmentName":
+Action.c(592):     "ÊîæÂ∞ÑÁß\x91","terminalID":"Terminal8","terminalName":"Terminal8","paperSize":"A4","paper
+Action.c(592):     Type":"Plain","printCount":2},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","terminalI
+Action.c(592):     D":"Terminal9","terminalName":"Terminal9","paperSize":"A4","paperType":"Plain","printCount
+Action.c(592):     ":2}]
+Action.c(592): web_custom_request("Report_By_Terminal") was successful, 7698 body bytes, 260 header bytes  	[MsgId: MMSG-26386]
+Action.c(614): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(616): web_url("CheckLoginStatus_25") started  	[MsgId: MMSG-26355]
+Action.c(616): t=1350866ms: 251-byte response headers for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1317)
+Action.c(616):     HTTP/1.1 200 OK\r\n
+Action.c(616):     Cache-Control: private\r\n
+Action.c(616):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(616):     Server: Microsoft-IIS/8.5\r\n
+Action.c(616):     X-AspNetMvc-Version: 5.2\r\n
+Action.c(616):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(616):     X-Powered-By: ASP.NET\r\n
+Action.c(616):     Date: Fri, 08 Dec 2017 09:45:25 GMT\r\n
+Action.c(616):     Content-Length: 4\r\n
+Action.c(616):     \r\n
+Action.c(616): t=1350866ms: 4-byte response body for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1317)
+Action.c(616):     true
+Action.c(616): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(616): web_url("CheckLoginStatus_25") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(625): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(625): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(630): Notify: Transaction "Report_By_PaperSize" started.	[MsgId: MMSG-16999]
+Action.c(632): web_custom_request("Report_By_PaperSize") started  	[MsgId: MMSG-26355]
+Action.c(632): Notify: Parameter Substitution: parameter "DepartmentList" =  "DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1"	[MsgId: MMSG-13992]
+Action.c(632): Notify: Parameter Substitution: parameter "EndDate" =  "2017-12-08"	[MsgId: MMSG-13992]
+Action.c(632): Notify: Parameter Substitution: parameter "StartDate" =  "2016%2F01%2F01"	[MsgId: MMSG-13992]
+Action.c(632): t=1351071ms: 260-byte response headers for "http://10.184.129.208/webapi/api/statistics/getreportprintcountstatisticsbytypesize?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1318)
+Action.c(632):     HTTP/1.1 200 OK\r\n
+Action.c(632):     Cache-Control: no-cache\r\n
+Action.c(632):     Pragma: no-cache\r\n
+Action.c(632):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(632):     Expires: -1\r\n
+Action.c(632):     Server: Microsoft-IIS/8.5\r\n
+Action.c(632):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(632):     X-Powered-By: ASP.NET\r\n
+Action.c(632):     Date: Fri, 08 Dec 2017 09:45:25 GMT\r\n
+Action.c(632):     Content-Length: 1846\r\n
+Action.c(632):     \r\n
+Action.c(632): t=1351072ms: 1846-byte response body for "http://10.184.129.208/webapi/api/statistics/getreportprintcountstatisticsbytypesize?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1318)
+Action.c(632):     [{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"IO","paperSize":"A4","p
+Action.c(632):     aperType":"Plain","printCount":3581},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","mo
+Action.c(632):     dalityType":"PT","paperSize":"A4","paperType":"Plain","printCount":2399},{"departmentID":1
+Action.c(632):     ,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"SR","paperSize":"A4","paperType":"Plain",
+Action.c(632):     "printCount":2942},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"NM","
+Action.c(632):     paperSize":"A4","paperType":"Plain","printCount":1607},{"departmentID":1,"departmentName":
+Action.c(632):     "ÊîæÂ∞ÑÁß\x91","modalityType":"DX","paperSize":"A4","paperType":"Plain","printCount":1968}
+Action.c(632):     ,{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"MG","paperSize":"A4","p
+Action.c(632):     aperType":"Plain","printCount":3736},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","mo
+Action.c(632):     dalityType":"PR","paperSize":"A4","paperType":"Plain","printCount":1563},{"departmentID":1
+Action.c(632):     ,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"RF","paperSize":"A4","paperType":"Plain",
+Action.c(632):     "printCount":1593},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"US","
+Action.c(632):     paperSize":"A4","paperType":"Plain","printCount":2863},{"departmentID":1,"departmentName":
+Action.c(632):     "ÊîæÂ∞ÑÁß\x91","modalityType":"XA","paperSize":"A4","paperType":"Plain","printCount":2452}
+Action.c(632):     ,{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"CT","paperSize":"A4","p
+Action.c(632):     aperType":"Plain","printCount":3164},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","mo
+Action.c(632):     dalityType":"KO","paperSize":"A4","paperType":"Plain","printCount":2476},{"departmentID":1
+Action.c(632):     ,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"CR","paperSize":"A4","paperType":"Plain",
+Action.c(632):     "printCount":2270},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"MR","
+Action.c(632):     paperSize":"A4","paperType":"Plain","printCount":3142},{"departmentID":1,"departmentName":
+Action.c(632):     "ÊîæÂ∞ÑÁß\x91","modalityType":"OT","paperSize":"A4","paperType":"Plain","printCount":2000}
+Action.c(632):     ]
+Action.c(632): Notify: Saving Parameter "Report_By_PaperSize = departmentID".	[MsgId: MMSG-13798]
+Action.c(632): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/webapi/api/statistics/getreportprintcountstatisticsbytypesize?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00"  	[MsgId: MMSG-26548]
+Action.c(632): web_custom_request("Report_By_PaperSize") was successful, 1846 body bytes, 260 header bytes  	[MsgId: MMSG-26386]
+Action.c(640): Notify: Transaction "Report_By_PaperSize" ended with a "Pass" status (Duration: 0.2057 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+Action.c(642): Notify: Parameter Substitution: parameter "Report_By_PaperSize" =  "departmentID"	[MsgId: MMSG-13992]
+The result is:  departmentID	[MsgId: MMSG-17999]
+Action.c(644): Notify: Parameter Substitution: parameter "Report_By_PaperSize" =  "departmentID"	[MsgId: MMSG-13992]
+Action.c(649): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(651): web_url("CheckLoginStatus_25") started  	[MsgId: MMSG-26355]
+Action.c(651): t=1356186ms: 251-byte response headers for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1319)
+Action.c(651):     HTTP/1.1 200 OK\r\n
+Action.c(651):     Cache-Control: private\r\n
+Action.c(651):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(651):     Server: Microsoft-IIS/8.5\r\n
+Action.c(651):     X-AspNetMvc-Version: 5.2\r\n
+Action.c(651):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(651):     X-Powered-By: ASP.NET\r\n
+Action.c(651):     Date: Fri, 08 Dec 2017 09:45:30 GMT\r\n
+Action.c(651):     Content-Length: 4\r\n
+Action.c(651):     \r\n
+Action.c(651): t=1356186ms: 4-byte response body for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1319)
+Action.c(651):     true
+Action.c(651): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(651): web_url("CheckLoginStatus_25") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(660): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(660): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(665): Notify: Transaction "OCR_ModalityType" started.	[MsgId: MMSG-16999]
+Action.c(667): web_custom_request("OCR_ModalityType") started  	[MsgId: MMSG-26355]
+Action.c(667): Notify: Parameter Substitution: parameter "DepartmentList" =  "DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1"	[MsgId: MMSG-13992]
+Action.c(667): Notify: Parameter Substitution: parameter "EndDate" =  "2017-12-08"	[MsgId: MMSG-13992]
+Action.c(667): Notify: Parameter Substitution: parameter "StartDate" =  "2016%2F01%2F01"	[MsgId: MMSG-13992]
+Action.c(667): t=1356423ms: 260-byte response headers for "http://10.184.129.208/webapi/api/statistics/getreportprintcountstatisticsbytypesize?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1320)
+Action.c(667):     HTTP/1.1 200 OK\r\n
+Action.c(667):     Cache-Control: no-cache\r\n
+Action.c(667):     Pragma: no-cache\r\n
+Action.c(667):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(667):     Expires: -1\r\n
+Action.c(667):     Server: Microsoft-IIS/8.5\r\n
+Action.c(667):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(667):     X-Powered-By: ASP.NET\r\n
+Action.c(667):     Date: Fri, 08 Dec 2017 09:45:30 GMT\r\n
+Action.c(667):     Content-Length: 1846\r\n
+Action.c(667):     \r\n
+Action.c(667): t=1356423ms: 1846-byte response body for "http://10.184.129.208/webapi/api/statistics/getreportprintcountstatisticsbytypesize?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1320)
+Action.c(667):     [{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"IO","paperSize":"A4","p
+Action.c(667):     aperType":"Plain","printCount":3581},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","mo
+Action.c(667):     dalityType":"PT","paperSize":"A4","paperType":"Plain","printCount":2399},{"departmentID":1
+Action.c(667):     ,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"SR","paperSize":"A4","paperType":"Plain",
+Action.c(667):     "printCount":2942},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"NM","
+Action.c(667):     paperSize":"A4","paperType":"Plain","printCount":1607},{"departmentID":1,"departmentName":
+Action.c(667):     "ÊîæÂ∞ÑÁß\x91","modalityType":"DX","paperSize":"A4","paperType":"Plain","printCount":1968}
+Action.c(667):     ,{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"MG","paperSize":"A4","p
+Action.c(667):     aperType":"Plain","printCount":3736},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","mo
+Action.c(667):     dalityType":"PR","paperSize":"A4","paperType":"Plain","printCount":1563},{"departmentID":1
+Action.c(667):     ,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"RF","paperSize":"A4","paperType":"Plain",
+Action.c(667):     "printCount":1593},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"US","
+Action.c(667):     paperSize":"A4","paperType":"Plain","printCount":2863},{"departmentID":1,"departmentName":
+Action.c(667):     "ÊîæÂ∞ÑÁß\x91","modalityType":"XA","paperSize":"A4","paperType":"Plain","printCount":2452}
+Action.c(667):     ,{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"CT","paperSize":"A4","p
+Action.c(667):     aperType":"Plain","printCount":3164},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","mo
+Action.c(667):     dalityType":"KO","paperSize":"A4","paperType":"Plain","printCount":2476},{"departmentID":1
+Action.c(667):     ,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"CR","paperSize":"A4","paperType":"Plain",
+Action.c(667):     "printCount":2270},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"MR","
+Action.c(667):     paperSize":"A4","paperType":"Plain","printCount":3142},{"departmentID":1,"departmentName":
+Action.c(667):     "ÊîæÂ∞ÑÁß\x91","modalityType":"OT","paperSize":"A4","paperType":"Plain","printCount":2000}
+Action.c(667):     ]
+Action.c(667): Notify: Saving Parameter "OCR_ModalityType = departmentID".	[MsgId: MMSG-13798]
+Action.c(667): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/webapi/api/statistics/getreportprintcountstatisticsbytypesize?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00"  	[MsgId: MMSG-26548]
+Action.c(667): web_custom_request("OCR_ModalityType") was successful, 1846 body bytes, 260 header bytes  	[MsgId: MMSG-26386]
+Action.c(675): Notify: Transaction "OCR_ModalityType" ended with a "Pass" status (Duration: 0.2374 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+Action.c(677): Notify: Parameter Substitution: parameter "OCR_ModalityType" =  "departmentID"	[MsgId: MMSG-13992]
+The result is:  departmentID	[MsgId: MMSG-17999]
+Action.c(679): Notify: Parameter Substitution: parameter "OCR_ModalityType" =  "departmentID"	[MsgId: MMSG-13992]
+Action.c(684): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(686): web_url("CheckLoginStatus_25") started  	[MsgId: MMSG-26355]
+Action.c(686): t=1361535ms: 251-byte response headers for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1321)
+Action.c(686):     HTTP/1.1 200 OK\r\n
+Action.c(686):     Cache-Control: private\r\n
+Action.c(686):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(686):     Server: Microsoft-IIS/8.5\r\n
+Action.c(686):     X-AspNetMvc-Version: 5.2\r\n
+Action.c(686):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(686):     X-Powered-By: ASP.NET\r\n
+Action.c(686):     Date: Fri, 08 Dec 2017 09:45:35 GMT\r\n
+Action.c(686):     Content-Length: 4\r\n
+Action.c(686):     \r\n
+Action.c(686): t=1361535ms: 4-byte response body for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1321)
+Action.c(686):     true
+Action.c(686): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(686): web_url("CheckLoginStatus_25") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(697): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(697): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(702): Notify: Transaction "OCR_ModalityName" started.	[MsgId: MMSG-16999]
+Action.c(704): web_custom_request("OCR_ModalityName") started  	[MsgId: MMSG-26355]
+Action.c(704): Notify: Parameter Substitution: parameter "DepartmentList" =  "DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1"	[MsgId: MMSG-13992]
+Action.c(704): Notify: Parameter Substitution: parameter "EndDate" =  "2017-12-08"	[MsgId: MMSG-13992]
+Action.c(704): Notify: Parameter Substitution: parameter "StartDate" =  "2016%2F01%2F01"	[MsgId: MMSG-13992]
+Action.c(704): t=1361744ms: 260-byte response headers for "http://10.184.129.208/webapi/api/statistics/getreportprintcountstatisticsbytypesize?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1322)
+Action.c(704):     HTTP/1.1 200 OK\r\n
+Action.c(704):     Cache-Control: no-cache\r\n
+Action.c(704):     Pragma: no-cache\r\n
+Action.c(704):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(704):     Expires: -1\r\n
+Action.c(704):     Server: Microsoft-IIS/8.5\r\n
+Action.c(704):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(704):     X-Powered-By: ASP.NET\r\n
+Action.c(704):     Date: Fri, 08 Dec 2017 09:45:35 GMT\r\n
+Action.c(704):     Content-Length: 1846\r\n
+Action.c(704):     \r\n
+Action.c(704): t=1361744ms: 1846-byte response body for "http://10.184.129.208/webapi/api/statistics/getreportprintcountstatisticsbytypesize?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00" (RelFrameId=1, Internal ID=1322)
+Action.c(704):     [{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"IO","paperSize":"A4","p
+Action.c(704):     aperType":"Plain","printCount":3581},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","mo
+Action.c(704):     dalityType":"PT","paperSize":"A4","paperType":"Plain","printCount":2399},{"departmentID":1
+Action.c(704):     ,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"SR","paperSize":"A4","paperType":"Plain",
+Action.c(704):     "printCount":2942},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"NM","
+Action.c(704):     paperSize":"A4","paperType":"Plain","printCount":1607},{"departmentID":1,"departmentName":
+Action.c(704):     "ÊîæÂ∞ÑÁß\x91","modalityType":"DX","paperSize":"A4","paperType":"Plain","printCount":1968}
+Action.c(704):     ,{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"MG","paperSize":"A4","p
+Action.c(704):     aperType":"Plain","printCount":3736},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","mo
+Action.c(704):     dalityType":"PR","paperSize":"A4","paperType":"Plain","printCount":1563},{"departmentID":1
+Action.c(704):     ,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"RF","paperSize":"A4","paperType":"Plain",
+Action.c(704):     "printCount":1593},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"US","
+Action.c(704):     paperSize":"A4","paperType":"Plain","printCount":2864},{"departmentID":1,"departmentName":
+Action.c(704):     "ÊîæÂ∞ÑÁß\x91","modalityType":"XA","paperSize":"A4","paperType":"Plain","printCount":2452}
+Action.c(704):     ,{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"CT","paperSize":"A4","p
+Action.c(704):     aperType":"Plain","printCount":3164},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","mo
+Action.c(704):     dalityType":"KO","paperSize":"A4","paperType":"Plain","printCount":2476},{"departmentID":1
+Action.c(704):     ,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"CR","paperSize":"A4","paperType":"Plain",
+Action.c(704):     "printCount":2270},{"departmentID":1,"departmentName":"ÊîæÂ∞ÑÁß\x91","modalityType":"MR","
+Action.c(704):     paperSize":"A4","paperType":"Plain","printCount":3142},{"departmentID":1,"departmentName":
+Action.c(704):     "ÊîæÂ∞ÑÁß\x91","modalityType":"OT","paperSize":"A4","paperType":"Plain","printCount":2000}
+Action.c(704):     ]
+Action.c(704): Notify: Saving Parameter "OCR_ModalityName = departmentID".	[MsgId: MMSG-13798]
+Action.c(704): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/webapi/api/statistics/getreportprintcountstatisticsbytypesize?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-12-08T23:59:59.999Z&StartDate=2016%2F01%2F01+00:00:00"  	[MsgId: MMSG-26548]
+Action.c(704): web_custom_request("OCR_ModalityName") was successful, 1846 body bytes, 260 header bytes  	[MsgId: MMSG-26386]
+Action.c(712): Notify: Transaction "OCR_ModalityName" ended with a "Pass" status (Duration: 0.2090 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+Action.c(714): Notify: Parameter Substitution: parameter "OCR_ModalityName" =  "departmentID"	[MsgId: MMSG-13992]
+The result is:  departmentID	[MsgId: MMSG-17999]
+Action.c(716): Notify: Parameter Substitution: parameter "OCR_ModalityName" =  "departmentID"	[MsgId: MMSG-13992]
+Action.c(721): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(723): web_url("CheckLoginStatus_25") started  	[MsgId: MMSG-26355]
+Action.c(723): t=1366871ms: 251-byte response headers for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1323)
+Action.c(723):     HTTP/1.1 200 OK\r\n
+Action.c(723):     Cache-Control: private\r\n
+Action.c(723):     Content-Type: application/json; charset=utf-8\r\n
+Action.c(723):     Server: Microsoft-IIS/8.5\r\n
+Action.c(723):     X-AspNetMvc-Version: 5.2\r\n
+Action.c(723):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(723):     X-Powered-By: ASP.NET\r\n
+Action.c(723):     Date: Fri, 08 Dec 2017 09:45:40 GMT\r\n
+Action.c(723):     Content-Length: 4\r\n
+Action.c(723):     \r\n
+Action.c(723): t=1366871ms: 4-byte response body for "http://10.184.129.208/Platform/Account/CheckLoginStatus" (RelFrameId=1, Internal ID=1323)
+Action.c(723):     true
+Action.c(723): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.208/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(723): web_url("CheckLoginStatus_25") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Ending action Action.	[MsgId: MMSG-15918]
+Notify: Transaction "Report_By_Terminal" ended with a "Stop" status (Duration: 1306.2292 Think Time: 380.0240 Wasted Time: 0.0044).	[MsgId: MMSG-16870]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Vuser 0 (thread 28888), ended OK."	[MsgId: MMSG-10695]

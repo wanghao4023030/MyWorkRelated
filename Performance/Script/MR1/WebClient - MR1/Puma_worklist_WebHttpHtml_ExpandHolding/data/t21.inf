@@ -1,0 +1,10 @@
+[t21]
+FileName1=t21_getUnmatchImages.html
+URL1=http://10.184.129.208/webapi/api/reconciliation/getUnmatchImages?days=1
+Total=1
+ContentType=
+SnapshotXmlFile=snapshot_21.xml
+RequestHeaderFile=t21_RequestHeader.txt
+RequestBodyFile=NONE
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,1393 @@
+[API Trapper      ( d98:129c)] Recording in 32-bit mode: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+[API Trapper      (125c: 91c)] Recording in 32-bit mode: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+[API Trapper      ( ef0:1010)] Recording in 32-bit mode: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+[Network Analyzer ( d98:13cc)] ------------------------------------------------------------------------------------------
+[Network Analyzer ( d98:13cc)] Load Network Traffic Analyzers:
+[Network Analyzer ( d98:13cc)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer ( d98:13cc)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter.dll)
+[Network Analyzer ( d98:13cc)]     + Network Analyzer: api_http_filter.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer ( d98:13cc)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter.dll
+[Network Analyzer ( d98:13cc)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer.dll)
+[Network Analyzer ( d98:13cc)]     + Network Analyzer: WebSocketAnalyzer.dll @ GetWebSocketProtocolAnalyzer Loaded!
+[Network Analyzer ( d98:13cc)]     Analyzer Module: local_server (value=)
+[Network Analyzer ( d98:13cc)] ------------------------------------------------------------------------------------------
+[Network Analyzer ( d98:1370)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid=  1)  PROXIED!
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Web Request      ( d98:1370)] "CONNECT clients2.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid:  1) Client -> Server @ : 228 bytes (Service=HTTP)
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid=  2)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT clientservices.googleapis.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid:  2) Client -> Server @ : 248 bytes (Service=HTTP)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid=  3)  PROXIED!
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Web Request      ( d98:1370)] "CONNECT translate.googleapis.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid:  3) Client -> Server @ : 238 bytes (Service=HTTP)
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid=  4)  PROXIED!
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 412 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 5847 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Content/angular-material.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 385 bytes (Service=HTTP)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid=  5)  PROXIED!
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid=  6)  PROXIED!
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid=  7)  PROXIED!
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid=  8)  PROXIED!
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid=  9)  PROXIED!
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Content/bootstrap.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 378 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Content/bootstrap-theme.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 384 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Content/toaster.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  7) Client -> Server @ : 376 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Content/carestream.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 379 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/css/login.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 384 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 248 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 12390 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 2121 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 9995 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 1049 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/jquery-1.11.0.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 366 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/jquery.validate.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  7) Client -> Server @ : 368 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/jquery.validate.unobtrusive.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 380 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/modernizr-2.6.2.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 368 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 3705 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 15186 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/bootstrap.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 362 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 7238 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 2567 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/respond.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 360 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 10578 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 4432 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/PDF.js.1.3.91/compatibility.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  7) Client -> Server @ : 380 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/PDF.js.1.3.91/pdf.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 370 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 2003 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/PDF.js.1.3.91/pdf.worker.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 377 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/PDF.js.1.3.91/text_layer_builder.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 385 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/angular.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  7) Client -> Server @ : 360 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 14114 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/angular-ui-router.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 370 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 4678 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/angular-ui/ui-bootstrap.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 376 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 12907 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16076 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/angular-ui/ui-bootstrap-tpls.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 381 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 11906 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/angular-cookies.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 368 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 14275 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/angular-animate.min.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 372 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 263 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 263 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 9999 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 9594 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/angular-busy.min.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 369 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/angular-aria.min.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 369 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 4184 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 4307 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/angular-material/angular-material.min.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 390 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/angular-translate.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 370 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 1275 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 10938 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/angular-translate-loader-partial.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 385 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 1472 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 1552 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/ng-file-upload/ng-file-upload.min.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 386 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/ui-grid-puma.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 365 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/angular-tree-control/angular-tree-control.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 394 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 4988 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/toaster.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 360 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 6421 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 15584 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/select.min.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 363 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 10527 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/Chart.min.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 362 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 12236 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/jsBarcode/JsBarcode.all.min.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 380 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 6343 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 15077 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/angular-chart/angular-chart.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 380 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/underscore.min.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 367 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 14341 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 330 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 5467 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/common.module.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 369 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/behaviors/checklist-model.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 381 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 1978 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 5388 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/behaviors/drag-sortable.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 379 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 2069 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/behaviors/dropdownMenu-changeTitle.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 390 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 932 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/behaviors/focus.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 371 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 1492 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/behaviors/notAllowDot.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 377 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 748 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/behaviors/vt-enter.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 374 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 940 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/controls/drag-sortable/Sortable.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 387 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/controls/puma-confirm/puma-confirm.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 390 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 1091 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/controls/puma-delete-button/puma-delete-button.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 402 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 713 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 2501 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/controls/puma-multi-select/puma-multi-select.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 400 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/controls/puma-multi-select/puma-multi-select.tpl.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 404 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 4257 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 1473 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/controls/puma-open-dialog/open-dialog.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 393 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/controls/puma-open-dialog/puma-dialog.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 393 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 12005 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 6147 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/controls/puma-switch/puma-switch.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 388 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 1692 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/filters/camel-case-filter.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 381 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/filters/new-line-filter.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 379 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 728 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 260 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/filters/qclog-event-filter.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 382 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 1087 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/utils/base64.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 368 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/utils/constants.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 371 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 4433 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 711 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/utils/date.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 366 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 2325 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/utils/enum.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 366 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/utils/ipAddressHandler.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 378 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/utils/kiosk.util.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 372 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 6973 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 3267 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 918 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/utils/loginContext.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 374 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 1888 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/utils/permission.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 372 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 1103 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/utils/resouces.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 370 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 1654 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/utils/webservices.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 373 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/webservices/client-tool-svc.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 383 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 4837 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/webservices/configuration-svc.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 385 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 1098 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 848 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/webservices/system-information-svc.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 390 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/login/login.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 360 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/login/rememberme.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 365 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 536 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 2267 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 10047 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 7911 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 752 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 12446 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/login/login-view.html"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 398 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/favicon.ico"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 390 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 5687 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 7551 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/i18n/zh-CN/login.json"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 408 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 8354 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 673 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/images/login/bg_page_logon.jpg"   
+[Network Analyzer ( d98:1370)]   (Sid:  7) Client -> Server @ : 450 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/fonts/icomoon.ttf?my8ecs"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 420 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 6103 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 14804 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 7548 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 9824 bytes  (Service=HTTP)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 10)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT clients1.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 10) Client -> Server @ : 228 bytes (Service=HTTP)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 11)  PROXIED!
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 12)  PROXIED!
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 13)  PROXIED!
+[Web Request      ( d98:1370)] "HEAD http://bczuxasajur/"   
+[Network Analyzer ( d98:1370)]   (Sid: 11) Client -> Server @ : 241 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "HEAD http://fbyuwbfkxhsvaz/"   
+[Network Analyzer ( d98:1370)]   (Sid: 12) Client -> Server @ : 247 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "HEAD http://wnrnotlql/"   
+[Network Analyzer ( d98:1370)]   (Sid: 13) Client -> Server @ : 237 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 11) Server -> Client : 719 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 11) Connection Terminated (by Server)
+[Network Analyzer ( d98:1370)]   (Sid: 12) Server -> Client : 719 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 12) Connection Terminated (by Server)
+[Network Analyzer ( d98:1370)]   (Sid: 13) Server -> Client : 719 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 13) Connection Terminated (by Server)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 14)  PROXIED!
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Web Request      ( d98:1370)] "CONNECT ssl.gstatic.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 14) Client -> Server @ : 220 bytes (Service=HTTP)
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 15)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT ssl.gstatic.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 15) Client -> Server @ : 220 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  1) Server -> Client : 719 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  1) Connection Terminated (by Server)
+[Network Analyzer ( d98:1370)]   (Sid:  2) Server -> Client : 719 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  2) Connection Terminated (by Server)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 16)  PROXIED!
+[Network Analyzer ( d98:1370)]   (Sid:  3) Server -> Client : 719 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  3) Connection Terminated (by Server)
+[Web Request      ( d98:1370)] "CONNECT clientservices.googleapis.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 16) Client -> Server @ : 248 bytes (Service=HTTP)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 17)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT translate.googleapis.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 17) Client -> Server @ : 238 bytes (Service=HTTP)
+[User action                 ] StartTransactionEvent User_login [Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 18)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT clients2.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 18) Client -> Server @ : 228 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 10) Server -> Client : 719 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 10) Connection Terminated (by Server)
+[Web Request      ( d98:1370)] "POST http://10.184.129.208/Platform/account/login"   
+[Network Analyzer ( d98:1370)]   (Sid:  7) Client -> Server @ : 525 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 1638 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform//account/login"   
+[Network Analyzer ( d98:1370)]   (Sid:  7) Client -> Server @ : 1723 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 414 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/workarea"   
+[Network Analyzer ( d98:1370)]   (Sid:  7) Client -> Server @ : 1717 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 260 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 13462 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Content/site.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  7) Client -> Server @ : 1636 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Content/ui-bootstrap-csp.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1648 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 790 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/common/controls/puma-switch/puma-switch.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 1667 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Content/ui-grid.min.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 1643 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 1701 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/angular-tree-control/tree-control.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1665 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/angular-tree-control/tree-control-attribute.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 1675 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 4235 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 5162 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 3974 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Content/select.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 1638 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/css/site.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  7) Client -> Server @ : 1646 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 6434 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/css/open-dialog.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 1653 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 9146 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 4587 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/css/terminalmonitor.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1657 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/css/statistics.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1652 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 4334 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 1362 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 671 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/css/barcode.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1649 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/css/circle.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 1648 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 257 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/css/worklist.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 1650 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/css/adminsettings.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  7) Client -> Server @ : 1655 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 7007 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 3968 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/css/reconciliation.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1656 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Scripts/PDF.js.1.3.91/text_layer_builder.css"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 1664 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 7118 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16155 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/app.workarea.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1633 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 2105 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/module.workarea.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  7) Client -> Server @ : 1636 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/worklist/controllers/worklist-item-secondlevel-ctrl.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 1672 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 585 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 2871 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/worklist/controllers/worklist-mainbody-ctrl.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1664 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 5029 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/worklist/controllers/worklist-view-ctrl.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 1660 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/worklist/views/worklist-view.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 1649 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 6443 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 1585 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/reconciliation/controllers/reconciliation-list-ctrl.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 1672 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/terminalmonitor/controllers/terminalmonitor-view-ctrl.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  7) Client -> Server @ : 1674 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/adminsettings/log/controllers/qclog-ctrl.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1661 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 5971 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/adminsettings/log/views/qclog-view.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 1655 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 7929 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/adminsettings/role/controllers/role-settings-ctrl.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 1670 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 1062 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 12279 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 5894 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/adminsettings/system/controllers/systeml-setting-ctr.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 1673 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/adminsettings/user/contorllers/user-settings-ctrl.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  7) Client -> Server @ : 1670 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 8512 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/statistics/controllers/statistics-ctrl.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 1659 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/webservices/adminsettings-svc.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1650 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 14121 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 1455 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/fonts/icomoon.ttf?g2jea5"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 1697 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 5496 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 263 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/webservices/qclog-svc.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1642 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/webservices/reconciliation-svc.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  7) Client -> Server @ : 1651 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/webservices/role-svc.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 1641 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 579 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 884 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 4260 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 2490 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 912 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/webservices/statistics-svc.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  7) Client -> Server @ : 1647 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/webservices/terminalmonitor-svc.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 1652 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/webservices/user-svc.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 1641 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 3467 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 1471 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 823 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/webservices/worklist-svc.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1645 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/barcode/controllers/barcode-ctrl.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 1653 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/dicomviewer/controllers/dicom-viewer-ctrl.js"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1662 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 260 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 6230 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 12359 bytes  (Service=HTTP)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 19)  PROXIED!
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/i18n/zh-CN/workarea.json"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1673 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/i18n/zh-CN/adminsettings.json"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1678 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "CONNECT clients1.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 19) Client -> Server @ : 228 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 2671 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/i18n/zh-CN/barcode.json"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 1672 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/i18n/zh-CN/dicomviewer.json"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 1676 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 261 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 2727 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/i18n/zh-CN/reconciliation.json"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1679 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 261 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 317 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/i18n/zh-CN/statistics.json"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1675 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/i18n/zh-CN/terminalmonitor.json"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 1680 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 253 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/i18n/zh-CN/worklist.json"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1673 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/webapi/api/tableRowsPerPage"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 1891 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 253 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 1914 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 297 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/webapi/api/worklist/worklistcolumns"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 1899 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/webapi/api/systemConfiguration/incompleteTaskEnabled"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 1916 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/webapi/api/systemversion"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1888 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1659 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 6442 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 262 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 255 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 275 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 1659 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 255 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 1659 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 255 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 1659 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 255 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/terminalmonitor/views/terminalmonitor-template.html"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1699 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 14848 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 1564 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/fonts/glyphicons-halflings-regular.woff2"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1689 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/webapi/api/terminalmonitoring"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 1893 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1659 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 255 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 1905 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/favicon.ico"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1659 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 6101 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 15211 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 1323 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/favicon.ico"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1659 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 1323 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/images/terminalmonitor/ico_terminal.png"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1723 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/images/terminalmonitor/ico_fp.png"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 1717 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 246 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 1678 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 1933 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/images/terminalmonitor/ico_bpp.png"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 1718 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/images/terminalmonitor/ico_cpp.png"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1718 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/images/terminalmonitor/terminal_2.png"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1708 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 2146 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/images/terminalmonitor/terminal_0.png"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 1708 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 2103 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 14704 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 5032 bytes  (Service=HTTP)
+[User action                 ] EndTransactionEvent User_login [Network Analyzer ( d98:1370)]   (Sid: 14) Server -> Client : 719 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 14) Connection Terminated (by Server)
+[Network Analyzer ( d98:1370)]   (Sid: 15) Server -> Client : 207 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 15) Server -> Client : 512 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 15) Connection Terminated (by Server)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/reconciliation/views/reconciliation-list.html"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 1709 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 7548 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 9744 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/webapi/api/reconciliation/getUnmatchImages?days=1"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 1929 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/webapi/api/terminal/allTerminals"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1912 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1675 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 255 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1675 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 12672 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 255 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_1x_selected.png"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1727 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_2x.png"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1718 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 1781 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_fit.png"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 1719 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 1733 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/Images/PS_Button/Spliter.png"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 1711 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_fitTL_selected.png"   
+[Network Analyzer ( d98:1370)]   (Sid:  7) Client -> Server @ : 1730 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 1507 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 444 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 1458 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_fitTR.png"   
+[Network Analyzer ( d98:1370)]   (Sid:  9) Client -> Server @ : 1721 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_fitBL.png"   
+[Network Analyzer ( d98:1370)]   (Sid:  7) Client -> Server @ : 1721 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_fitBR.png"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 1721 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Server -> Client : 1429 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 1421 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_upArrow.png"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1715 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 1426 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 1318 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_downArrow.png"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1717 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 1320 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 259 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 928 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208//ImageSuite/RPTCache/t_1.2.840.113564.86.3.0.41.20170703162613.649.34448_1.jpg"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 1725 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208//ImageSuite/RPTCache/1.2.840.113564.86.3.0.41.20170703162613.649.34448_1.jpg"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1723 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 2405 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 281 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 12431 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 16) Server -> Client : 207 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 16) Server -> Client : 512 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 16) Connection Terminated (by Client)
+[Network Analyzer ( d98:1370)]   (Sid: 17) Server -> Client : 719 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 17) Connection Terminated (by Server)
+[API Trapper      (1194:1258)] Recording in 32-bit mode: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+[Network Analyzer ( d98:1370)]   (Sid: 18) Server -> Client : 719 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 18) Connection Terminated (by Server)
+[Network Analyzer ( d98:1370)]   (Sid: 19) Server -> Client : 719 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 19) Connection Terminated (by Server)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 20)  PROXIED!
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Web Request      ( d98:1370)] "CONNECT clients1.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 20) Client -> Server @ : 228 bytes (Service=HTTP)
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 21)  PROXIED!
+[User action                 ] StartTransactionEvent Terminal_monitor [Web Request      ( d98:1370)] "CONNECT clients2.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 21) Client -> Server @ : 228 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/webapi/api/terminalmonitoring"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1908 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 1674 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 255 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 14861 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 6453 bytes  (Service=HTTP)
+[User action                 ] EndTransactionEvent Terminal_monitor [Web Request      ( d98:1370)] "GET http://10.184.129.208/webapi/api/reconciliation/getUnmatchImages?days=1"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1929 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/webapi/api/terminal/allTerminals"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 1912 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1675 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 7561 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 255 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 5111 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 1675 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 255 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 1187 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 20) Server -> Client : 719 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 20) Connection Terminated (by Server)
+[Network Analyzer ( d98:1370)]   (Sid: 21) Server -> Client : 719 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 21) Connection Terminated (by Server)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 22)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT clients1.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 22) Client -> Server @ : 228 bytes (Service=HTTP)
+[User action                 ] StartTransactionEvent Reconlication_Film_all [Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_2x_hover.png"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1724 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 1903 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/webapi/api/reconciliation/getUnmatchImages?days=-1"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1929 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 1674 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 251 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 4 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 9934 bytes  (Service=HTTP)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 23)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT clients2.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 23) Client -> Server @ : 228 bytes (Service=HTTP)
+[User action                 ] EndTransactionEvent Reconlication_Film_all [Web Request      ( d98:1370)] "GET http://10.184.129.208/webapi/api/reconciliation/getUnmatchReports?days=-1"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1930 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 1674 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 251 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 4 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 1730 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/webapi/api/reconciliation/getReport?id=5BC8EF8589001F02268C14ED825EB276"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1950 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 1674 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 255 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 5152 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 22) Server -> Client : 207 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 22) Server -> Client : 512 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 22) Connection Terminated (by Server)
+[User action                 ] StartTransactionEvent reconlication_report_all [Network Analyzer ( d98:1370)]   (Sid: 23) Server -> Client : 207 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 23) Server -> Client : 512 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 23) Connection Terminated (by Client)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 24)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT clients1.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 24) Client -> Server @ : 228 bytes (Service=HTTP)
+[User action                 ] EndTransactionEvent reconlication_report_all [Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/worklist/views/worklist-template.html"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1700 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 3699 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/worklist/views/worklist-mainbody.html"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1700 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/webapi/api/worklist/shortcuts?roleName=Administrator&userName=Test1"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 1946 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1674 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 257 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 2 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 248 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 255 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 1749 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/webapi/api/worklist/shortcuts?roleName=Administrator&userName=Test1"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 1946 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1674 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 259 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 255 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/webapi/api/terminal/allTerminals"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1905 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 2006 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "POST http://10.184.129.208/webapi/api/worklist/searchWorklist"   
+[Network Analyzer ( d98:1370)]   (Sid:  5) Client -> Server @ : 406 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/webapi/api/modality/modalityTypes"   
+[Network Analyzer ( d98:1370)]   (Sid:  8) Client -> Server @ : 1906 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  5) Server -> Client : 334 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "POST http://10.184.129.208/webapi/api/department/departmentsByIds"   
+[Network Analyzer ( d98:1370)]   (Sid:  7) Client -> Server @ : 2010 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Server -> Client : 334 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 12672 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Server -> Client : 1341 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 1668 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 255 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 1668 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 255 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 1668 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 255 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 1668 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 255 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/app/workarea/worklist/views/template/operate-columns-template.html"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 1710 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 3265 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Content/ui-grid.woff"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 1671 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 5987 bytes  (Service=HTTP)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 25)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT clients2.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 25) Client -> Server @ : 228 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 24) Server -> Client : 719 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 24) Connection Terminated (by Server)
+[Network Analyzer ( d98:1370)]   (Sid: 25) Server -> Client : 207 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 25) Server -> Client : 512 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 25) Connection Terminated (by Client)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 26)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT clients1.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 26) Client -> Server @ : 228 bytes (Service=HTTP)
+[User action                 ] StartTransactionEvent WorlkList_Query_randomTime [Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 2006 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "POST http://10.184.129.208/webapi/api/worklist/searchWorklist"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 406 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1668 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 251 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 4 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 9058 bytes  (Service=HTTP)
+[User action                 ] EndTransactionEvent WorlkList_Query_randomTime [Network Analyzer ( d98:1370)]   (Sid: 26) Server -> Client : 207 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 26) Server -> Client : 512 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 26) Connection Terminated (by Client)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 27)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT clients2.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 27) Client -> Server @ : 228 bytes (Service=HTTP)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 28)  PROXIED!
+[Network Analyzer ( d98:1370)]   (Sid: 27) Server -> Client : 207 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 27) Server -> Client : 512 bytes  (Service=HTTP)
+[Web Request      ( d98:1370)] "CONNECT clients1.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 28) Client -> Server @ : 228 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 27) Connection Terminated (by Client)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 29)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT redirector.gvt1.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 29) Client -> Server @ : 228 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 28) Server -> Client : 207 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 28) Server -> Client : 512 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 28) Connection Terminated (by Server)
+[Network Analyzer ( d98:1370)]   (Sid: 29) Server -> Client : 207 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 29) Server -> Client : 512 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 29) Connection Terminated (by Server)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 30)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT safebrowsing.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 30) Client -> Server @ : 236 bytes (Service=HTTP)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 31)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT clients1.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 31) Client -> Server @ : 228 bytes (Service=HTTP)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 32)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT clients2.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 32) Client -> Server @ : 228 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 30) Server -> Client : 207 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 30) Server -> Client : 512 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 30) Connection Terminated (by Server)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 33)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT alt1-safebrowsing.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 33) Client -> Server @ : 246 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 31) Server -> Client : 207 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 31) Server -> Client : 512 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 31) Connection Terminated (by Server)
+[Network Analyzer ( d98:1370)]   (Sid: 32) Server -> Client : 719 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 32) Connection Terminated (by Server)
+[Network Analyzer ( d98:1370)]   (Sid: 33) Server -> Client : 207 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 33) Server -> Client : 512 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 33) Connection Terminated (by Server)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 34)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT clients1.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 34) Client -> Server @ : 228 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 34) Server -> Client : 207 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 34) Server -> Client : 512 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 34) Connection Terminated (by Server)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 35)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT safebrowsing.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 35) Client -> Server @ : 236 bytes (Service=HTTP)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 36)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT clientservices.googleapis.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 36) Client -> Server @ : 248 bytes (Service=HTTP)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 37)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT clients1.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 37) Client -> Server @ : 228 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  9) Connection Terminated (by Client)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 38)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT clients2.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 38) Client -> Server @ : 228 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 35) Server -> Client : 207 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 35) Server -> Client : 512 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 35) Connection Terminated (by Server)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 39)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT alt1-safebrowsing.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 39) Client -> Server @ : 246 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 36) Server -> Client : 719 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 36) Connection Terminated (by Server)
+[Network Analyzer ( d98:1370)]   (Sid: 37) Server -> Client : 719 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 37) Connection Terminated (by Server)
+[Network Analyzer ( d98:1370)]   (Sid: 38) Server -> Client : 207 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 38) Server -> Client : 512 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 38) Connection Terminated (by Server)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 40)  PROXIED!
+[Web Request      ( d98:1370)] "POST http://clients2.google.com/service/update2?cup2key=7:456915423&cup2hreq=fe64f7670d6a702479c75698c3adc8e9fa4ab043eea0deb6c7250a539330f864"   
+[Network Analyzer ( d98:1370)]   (Sid: 40) Client -> Server @ : 2341 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 39) Server -> Client : 207 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 39) Server -> Client : 512 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 39) Connection Terminated (by Client)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 41)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT clients1.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 41) Client -> Server @ : 228 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 40) Server -> Client : 719 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 40) Connection Terminated (by Server)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 42)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT clients2.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 42) Client -> Server @ : 228 bytes (Service=HTTP)
+[User action                 ] StartTransactionEvent Worklist_Query_Today [Network Analyzer ( d98:1370)]   (Sid:  5) Connection Terminated (by Client)
+[Web Request      ( d98:1370)] "POST http://10.184.129.208/webapi/api/worklist/searchWorklist"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 2378 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  7) Connection Terminated (by Client)
+[Network Analyzer ( d98:1370)]   (Sid:  8) Connection Terminated (by Client)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1668 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 251 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 4 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 334 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 41) Server -> Client : 207 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 41) Server -> Client : 512 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 41) Connection Terminated (by Client)
+[Network Analyzer ( d98:1370)]   (Sid: 42) Server -> Client : 207 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 42) Server -> Client : 512 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 42) Connection Terminated (by Server)
+[User action                 ] EndTransactionEvent Worklist_Query_Today [Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 43)  PROXIED!
+[User action                 ] StartTransactionEvent worklist_query_LastToday [Web Request      ( d98:1370)] "CONNECT clients1.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 43) Client -> Server @ : 228 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "POST http://10.184.129.208/webapi/api/worklist/searchWorklist"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 2378 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 1668 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 334 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 255 bytes  (Service=HTTP)
+[User action                 ] EndTransactionEvent worklist_query_LastToday [Network Analyzer ( d98:1370)]   (Sid: 43) Server -> Client : 719 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 43) Connection Terminated (by Server)
+[User action                 ] StartTransactionEvent worklist_query_LastToday [User action                 ] EndTransactionEvent worklist_query_LastToday [User action                 ] StartTransactionEvent worklist_query_Lastweek [Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 44)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT clients1.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 44) Client -> Server @ : 228 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "POST http://10.184.129.208/webapi/api/worklist/searchWorklist"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 2378 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 1668 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 251 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 4 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 9056 bytes  (Service=HTTP)
+[User action                 ] EndTransactionEvent worklist_query_Lastweek [User action                 ] StartTransactionEvent worklist_query_LastMonth [Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 2006 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "POST http://10.184.129.208/webapi/api/worklist/searchWorklist"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 372 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 1668 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 255 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 9058 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 44) Server -> Client : 207 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 44) Server -> Client : 512 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 44) Connection Terminated (by Server)
+[User action                 ] EndTransactionEvent worklist_query_LastMonth [User action                 ] StartTransactionEvent worklist_query_PatientName [Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 45)  PROXIED!
+[Web Request      ( d98:1370)] "POST http://10.184.129.208/webapi/api/worklist/searchWorklist"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 2384 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "CONNECT clients1.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 45) Client -> Server @ : 228 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 1668 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 255 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 836 bytes  (Service=HTTP)
+[User action                 ] EndTransactionEvent worklist_query_PatientName [Network Analyzer ( d98:1370)]   (Sid: 45) Server -> Client : 719 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid: 45) Connection Terminated (by Server)
+[User action                 ] StartTransactionEvent worklist_query_ACC [Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 2006 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "POST http://10.184.129.208/webapi/api/worklist/searchWorklist"   
+[Network Analyzer ( d98:1370)]   (Sid:  6) Client -> Server @ : 378 bytes (Service=HTTP)
+[Web Request      ( d98:1370)] "GET http://10.184.129.208/Platform/Account/CheckLoginStatus"   
+[Network Analyzer ( d98:1370)]   (Sid:  4) Client -> Server @ : 1668 bytes (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 251 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  4) Server -> Client : 4 bytes  (Service=HTTP)
+[Network Analyzer ( d98:1370)]   (Sid:  6) Server -> Client : 836 bytes  (Service=HTTP)
+[Network Analyzer ( d98:13cc)] Address lookup for Kiosk-Performan = 10.184.129.152
+[Network Analyzer ( d98:13cc)] Request Connection: Remote Server @ 127.0.0.1:8888   (Service=)  (Sid= 46)  PROXIED!
+[Web Request      ( d98:1370)] "CONNECT clients1.google.com:443"   
+[Network Analyzer ( d98:1370)]   (Sid: 46) Client -> Server @ : 228 bytes (Service=HTTP)
+[User action                 ] EndTransactionEvent worklist_query_ACC 

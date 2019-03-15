@@ -1,0 +1,30 @@
+﻿// userService service proxy
+webservices.factory('userService', ['$http', 'apiConfig', function ($http, apiConfig) {
+    'use strict';
+
+    return {
+        //getRoleNames: function () {
+        //    return $http.get('/api/rolePermission/roleNames', apiConfig.create());
+        //},
+        getModalityTypes: function () {
+            return $http.get('/api/modality/modalityTypes', apiConfig.create());
+        },
+        getDepartments: function () {
+            return $http.get('/api/department/departments', apiConfig.create());
+        },
+        getCustomUsers: function () {
+            return $http.get('/api/userManagement/customUsers', apiConfig.create());
+        },
+        updateCustomUserSettings: function (data) {
+            return $http.post('/api/userManagement/updateCustomUser', data, apiConfig.create());
+        },
+        createCustomUserSettings: function (data) {
+            return $http.post('/api/userManagement/createCustomUser', data, apiConfig.create());
+        },
+        deleteCustomUser: function (userName) {
+            return $http.delete('/api/userManagement/deleteCustomUser/' + userName, apiConfig.create());
+        }
+
+    };
+}]);
+

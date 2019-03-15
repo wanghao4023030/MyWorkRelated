@@ -1,0 +1,1526 @@
+﻿worklistModule.controller("WorklistMainbodyController", ["$scope", "$timeout", "$interval", "uiGridConstants", 'i18nService', "$log", "$state", "$http", "$cookies", "$uibModal", 'enums', '$location', 'toaster', 'camelCaseFilter', 'application', 'constants', 'worklistService', 'permission', '$translate', 'openDialog', 'loginContext',
+function ($scope, $timeout, $interval, uiGridConstants, i18nService, $log, $state, $http, $cookies, $uibModal, enums, $location, toaster, camelCaseFilter, application, constants, worklistService, permission, $translate, openDialog, loginContext) {
+    $scope.isInitializing = true;
+    var filmCols = [];
+    var reportCols = [];
+    var subGridCellWidth = 142;
+    function searchWorklist() {
+        worklistService.advancedSearch($scope.model).success(function (data) {
+            data.worklistDto.forEach(function (value) {
+                if (value.filmPrintStatus == 0) {
+                    value.filmPrintStatusSwitch = true;
+                }
+                else {
+                    value.filmPrintStatusSwitch = false;
+                }
+                if (value.reportPrintStatus == 0) {
+                    value.reportPrintStatusSwitch = true;
+                }
+                else {
+                    value.reportPrintStatusSwitch = false;
+                }
+            });
+            $scope.worklistRecordsOptions.data = data.worklistDto;
+            $scope.worklistRecordsOptions.totalItems = data.pagination.totalCount;
+            $scope.isAllSelected = false;
+        });
+    };
+
+    function initGridColumns(data) {
+        $scope.worklistRecordsOptions.columnDefs.push({
+            name: 'SelectAll',
+            headerCellTemplate: '<input type="checkbox" class="btn-sm" ng-model="grid.appScope.isAllSelected" ng-change="grid.appScope.changeAllChecked()"/>',
+            cellTemplate: 'app/workarea/worklist/views/template/operate-columns-template.html',
+            headerCellClass: "left",
+            width: 60,
+            enableHiding: false
+        });
+
+        if ($scope.incompleteEnabled) {
+            $scope.worklistRecordsOptions.columnDefs.push({
+                    name: 'IncompleteStatus',
+                    headerCellTemplate: '<span></span>',
+                    cellTemplate: '<div class="text-center"><span ng-class="{\'icon-ico_incomplete\': row.entity.completeStatus == 1}"><span class="path1"></span><span class="path2"></span></span></div>',
+                    width: 30,
+                    enableHiding: false
+            });
+        }
+
+        var headerCols = data.filter(function (item) {
+            return item.gridLevel == 1;
+        }).sort(sortObject('sequence', true));
+        headerCols.forEach(function (value, index, array) {
+            if (value.columnName == enums.operateColumn.PrintMode || value.columnName == enums.operateColumn.HoldFlag) {
+                return;
+            }
+            if ((value.columnName == enums.dispalyColumn.filmPrintStatus || value.columnName == enums.dispalyColumn.imageCount
+                || value.columnName == enums.dispalyColumn.filmPrintCount || value.columnName == enums.dispalyColumn.filmPrintTime) && $scope.isOnlyReport) {
+                return;
+            }
+            var template;
+            if (value.columnName == enums.dispalyColumn.filmPrintStatus || value.columnName == enums.dispalyColumn.reportPrintStatus) {
+                template = '<div class="text-center">' +
+                    '<span ng-show="false || grid.appScope.isShowReprintButton(grid.getCellValue(row, col))" class="print_status_button round_button" ng-click="grid.appScope.hasChangePrintStatusPermission && grid.appScope.reprintClick(col.name, col.field, row)">' +
+                        '<i class="icon-ico_repeat print_button"></i>' +
+                        '<span class="reprint_text">重打</span>' +
+                    '</span>' +
+                    '<div ng-show="false || grid.appScope.isShowPartialPrintButton(grid.getCellValue(row, col))" class="print_status_button partial_print">' +
+                        '<div class="partial_print_left" ng-click="grid.appScope.hasChangePrintStatusPermission && grid.appScope.reprintClick(col.name, col.field, row)">' +
+                            '<i class="icon-ico_ok print_button"></i>' +
+                        '</div>' +
+                        '<div class="partial_print_right" ng-click="grid.appScope.hasChangePrintStatusPermission && grid.appScope.cancelPrintClick(col.name, col.field, row)">' +
+                            '<i class="icon-ico_cancel print_button"></i>' +
+                        '</div>' +
+                    '</div>' +
+                    '<div ng-show="false || grid.appScope.isShowPrintingLabel(grid.getCellValue(row, col))" class="text-center">{{grid.appScope.getDisplayValue(col, grid.getCellValue(row, col), 1)}}</div>' +
+                    '<div ng-show="false || grid.appScope.isShowPrintStatusSwitch(grid.getCellValue(row, col))">';
+                if (value.columnName == enums.dispalyColumn.filmPrintStatus) {
+                    template += '<switch ng-model="row.entity.filmPrintStatusSwitch" puma-disabled="!grid.appScope.hasChangePrintStatusPermission" ng-change="grid.appScope.changeFilmPrintStatus(row, grid.getCellValue(row, col))"></switch>';
+                }
+                else if (value.columnName == enums.dispalyColumn.reportPrintStatus) {
+                    template += '<switch ng-model="row.entity.reportPrintStatusSwitch" puma-disabled="!grid.appScope.hasChangePrintStatusPermission" ng-change="grid.appScope.changeReportPrintStatus(row, grid.getCellValue(row, col))"></switch>';
+                }
+                template += '</div></div>';
+            }
+            else if (value.columnName == enums.dispalyColumn.accessionNumber) {
+                template = '<div class="text-center"><a href="#" ng-click="grid.appScope.viewBarcode(row, col)">' +
+                                   '{{grid.appScope.getDisplayValue(col, grid.getCellValue(row, col), 1)}}' +
+                               '</a></div>';
+            }
+            else if (value.columnName == enums.dispalyColumn.patientID) {
+                template = '<div class="text-center"><a href="#" ng-click="grid.appScope.viewBarcode(row, col)">' +
+                                   '{{grid.appScope.getDisplayValue(col, grid.getCellValue(row, col), 1)}}' +
+                               '</a></div>';
+            }
+            else {
+                template = '<div class="text-center">' +
+                    '{{grid.appScope.getDisplayValue(col, grid.getCellValue(row, col), 1)}}' +
+                '</div>';
+            }
+
+            var columnDef = {
+                displayName: value.displayName,
+                name: value.columnName,
+                field: camelCaseFilter(value.columnName),
+                cellTemplate: template,
+                enableColumnResizing: true
+            };
+
+            if (value.columnName == enums.dispalyColumn.patientSex) {
+                columnDef.maxWidth = 45;
+            }
+            else if (value.columnName == enums.dispalyColumn.imageCount || value.columnName == enums.dispalyColumn.reportCount) {
+                columnDef.maxWidth = 75;
+            }
+
+            $scope.worklistRecordsOptions.columnDefs.push(columnDef);
+        });
+    }
+
+    function initFilmColumns(data) {
+        var columnDefs = [];
+        columnDefs.push({
+            name: 'SelectAll',
+            headerCellTemplate: '<input type="checkbox" class="btn-sm" ng-model="grid.parentRow.entity.isAllFilmsSelected" ng-change="grid.options.expandableRowScope.changeAllChecked(grid.parentRow.entity)" />',
+            cellTemplate: '<div style="display: inline-table"><input type="checkbox" ng-model="row.entity.isSelected" ng-change="grid.options.expandableRowScope.changeItemChecked(row.entity, grid.parentRow.entity)" /><div class="icon-ico_film_view cell-icon" ng-click="grid.options.expandableRowScope.dicomView(grid.parentRow.entity, row.entity)"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></div></div>',
+            headerCellClass: "left",
+            width: 50
+        });
+        var headerCols = data.filter(function (item) {
+            return item.gridLevel == 2;
+        }).sort(sortObject('sequence', true));
+        headerCols.forEach(function (value, index, array) {
+            var template;
+            if (value.columnName == enums.dispalyColumn.filmPrintStatus) {
+                template = '<div class="text-center">' +
+                    '<span ng-show="grid.options.expandableRowScope.isShowReprintButton(grid.getCellValue(row, col))" ng-disabled="!grid.options.expandableRowScope.hasChangePrintStatusPermission" class="print_status_button round_button" ng-click="grid.options.expandableRowScope.hasChangePrintStatusPermission && grid.options.expandableRowScope.reprintClick(grid.parentRow.entity, row.entity, grid.getCellValue(row, col))">' +
+                        '<i class="icon-ico_repeat print_button"></i>' +
+                        '<span class="reprint_text">重打</span>' +
+                    '</span>' +
+                    '<div ng-show="grid.options.expandableRowScope.isShowPrintingLabel(grid.getCellValue(row, col))" class="text-center">Printing</div>' +
+                    '<div ng-show="grid.options.expandableRowScope.isShowPrintStatusSwitch(grid.getCellValue(row, col))">' +
+                '<switch ng-model="row.entity.filmPrintStatusSwitch" puma-disabled="!grid.options.expandableRowScope.hasChangePrintStatusPermission" ng-change="grid.options.expandableRowScope.changeFilmPrintStatus(grid.parentRow.entity, row.entity, grid.getCellValue(row, col))"></switch></div></div>';
+            }
+            else if (value.columnName == enums.dispalyColumn.deleteFilm) {
+                template = '<div class="text-center">' +
+                    '<span class="print_status_button round_button" ng-class="{disabled_permission:!grid.options.expandableRowScope.hasDeletePermission}"  ng-click="grid.options.expandableRowScope.hasDeletePermission && grid.options.expandableRowScope.setFilmDeleteStatus(grid.parentRow.entity, row.entity, row.entity.deleteStatus, 1)">' +
+                        '<i class="icon-ico_litter-bin print_button"></i>' +
+                        '<span class="reprint_text">删除</span>' +
+                     '</span></div>';
+            }
+            else if (value.columnName == enums.dispalyColumn.reconciliation) {
+                template = '<div class="text-center"><span class="single-icon" ng-class="{disabled_permission:!grid.options.expandableRowScope.hasCorrectReconciliationPermission, \'icon-ico_manual_match\': row.entity.isManualMatch, \'icon-ico_auto_match\': !row.entity.isManualMatch}" ng-click="grid.options.expandableRowScope.hasCorrectReconciliationPermission && grid.options.expandableRowScope.reconcilateFilm(grid.parentRow.entity, row.entity)"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span></div>';
+            }
+            else {
+                template = '<div class="text-center">{{grid.options.expandableRowScope.getDisplayValue(col, grid.getCellValue(row, col), 2)}}</div>';
+            }
+
+            columnDefs.push({
+                displayName: value.displayName,
+                name: value.columnName,
+                field: camelCaseFilter(value.columnName),
+                cellTemplate: template
+            });
+        });
+        return columnDefs;
+    }
+
+    function initReportColumns(data) {
+        var columnDefs = [];
+        columnDefs.push({
+            name: 'SelectAll',
+            headerCellTemplate: '<input type="checkbox" class="btn-sm" ng-model="grid.parentRow.entity.isAllReportsSelected" ng-change="grid.options.expandableRowScope.changeAllChecked(grid.parentRow.entity)" />',
+            cellTemplate: '<div style="display: inline-table"><input type="checkbox" ng-model="row.entity.isSelected" ng-change="grid.options.expandableRowScope.changeItemChecked(row.entity, grid.parentRow.entity)" /><div class="icon-ico_report_view cell-icon" ng-click="grid.options.expandableRowScope.viewReport(grid.parentRow.entity, row.entity)"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span></div></div>',
+            headerCellClass: "left",
+            width: 50
+        });
+        var headerCols = data.filter(function (item) {
+            return item.gridLevel == 3;
+        }).sort(sortObject('sequence', true));
+        headerCols.forEach(function (value, index, array) {
+            var template;
+            if (value.columnName == enums.dispalyColumn.reportPrintStatus) {
+                template = '<div class="text-center">' +
+                    '<span ng-show="grid.options.expandableRowScope.isShowReprintButton(grid.getCellValue(row, col))" ng-disabled="!grid.options.expandableRowScope.hasChangePrintStatusPermission" class="print_status_button round_button" ng-click="grid.options.expandableRowScope.hasChangePrintStatusPermission && grid.options.expandableRowScope.reprintClick(grid.parentRow.entity, row.entity, grid.getCellValue(row, col))">' +
+                        '<i class="icon-ico_repeat print_button"></i>' +
+                        '<span class="reprint_text">重打</span>' +
+                    '</span>' +
+                    '<div ng-show="grid.options.expandableRowScope.isShowPrintingLabel(grid.getCellValue(row, col))" class="text-center">Printing</div>' +
+                    '<div ng-show="grid.options.expandableRowScope.isShowPrintStatusSwitch(grid.getCellValue(row, col))">' +
+                '<switch ng-model="row.entity.reportPrintStatusSwitch" puma-disabled="!grid.options.expandableRowScope.hasChangePrintStatusPermission" ng-change="grid.options.expandableRowScope.changeReportPrintStatus(grid.parentRow.entity, row.entity, grid.getCellValue(row, col))"></switch></div></div>';
+            }
+            else if (value.columnName == enums.dispalyColumn.deleteReport) {
+                template = '<div class="text-center">' +
+                    '<span class="print_status_button round_button" ng-class="{disabled_permission:!grid.options.expandableRowScope.hasDeletePermission}"  ng-click="grid.options.expandableRowScope.hasDeletePermission && grid.options.expandableRowScope.setReportDeleteStatus(grid.parentRow.entity, row.entity, row.entity.deleteStatus, 1)">' +
+                        '<i class="icon-ico_litter-bin print_button"></i>' +
+                        '<span class="reprint_text">删除</span>' +
+                     '</span></div>';
+                //'<puma-delete-button confirm-message="Are you sure to delete the report?" click="grid.options.expandableRowScope.setReportDeleteStatus(row.entity, row.entity.deleteStatus, 1)"></puma-delete-button></div>';
+            }
+            else if (value.columnName == enums.dispalyColumn.reconciliation) {
+                template = '<div class="text-center"><span class="icon-ico_match single-icon"  ng-class="{disabled_permission:!grid.options.expandableRowScope.hasCorrectReconciliationPermission}" ng-click="grid.options.expandableRowScope.hasCorrectReconciliationPermission && grid.options.expandableRowScope.reconcilateReport(grid.parentRow.entity, row.entity)"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span></div>';
+            }
+            else {
+                template = '<div class="text-center">{{grid.options.expandableRowScope.getDisplayValue(col, grid.getCellValue(row, col), 3)}}</div>';
+            }
+
+            columnDefs.push({
+                displayName: value.displayName,
+                name: value.columnName,
+                field: camelCaseFilter(value.columnName),
+                cellTemplate: template
+            });
+        });
+        return columnDefs;
+    }
+
+    function initDropdowns(data) {
+        var headerCols = data.filter(function (item) {
+            return item.gridLevel == 1 && item.controlType == "DropDownList";
+        });
+
+        for (var i in headerCols) {
+            var column = headerCols[i];
+            switch (column.columnName) {
+                case 'PatientSex':
+                    $scope.patientSex = column;
+                    break;
+                case 'ReportStatus':
+                    $scope.reportStatus = column;
+                    break;
+                case 'ReportPrintStatus':
+                    $scope.reportPrintStatus = column;
+                    break;
+                case 'FilmPrintStatus':
+                    $scope.filmPrintStatus = column;
+                    break;
+                case 'PrintMode':
+                    $scope.printModes = column;
+                    break;
+                case 'PatientType':
+                    $scope.patientType = column;
+                    break;
+            }
+        }
+    };
+
+    function refreshFilmDisplay(entity) {
+        entity.filmRefresh = true;
+        $timeout(function () {
+            entity.filmRefresh = false;
+        }, 0);
+    }
+    function refreshReportDisplay(entity) {
+        entity.reportRefresh = true;
+        $timeout(function () {
+            entity.reportRefresh = false;
+        }, 0);
+    }
+
+    function refreshFilmSubGridDisplay(entity, needRefresh) {
+        if (entity.filmSubOptions.data.length > 0) {
+            entity.filmSubOptions.showGridFooter = false;
+            if (entity.filmSubOptions.data.length > 10) {
+                entity.filmSubOptions.enableVerticalScrollbar = uiGridConstants.scrollbars.ALWAYS;
+                entity.filmGridHeight = (10 * entity.filmSubOptions.rowHeight) + 29;
+            }
+            else {
+                entity.filmGridHeight = (entity.filmSubOptions.data.length * entity.filmSubOptions.rowHeight) + 29;
+            }
+        }
+        else {
+            entity.filmSubOptions.showGridFooter = true;
+            entity.filmGridHeight = 53;
+            if (needRefresh) {
+                refreshFilmDisplay(entity);
+            }
+        }
+    };
+
+    function refreshFilmSubGrid(entity) {
+        entity.filmRefresh = true;
+        worklistService.getFilmInfos(entity.accessionNumber).success(function (data) {
+            data.forEach(function (item) {
+                item.filmPrintStatusSwitch = (item.filmPrintStatus == 0);
+                item.isSelected = entity.isAllFilmsSelected;
+            });
+            entity.filmSubOptions.data = data;
+
+            refreshFilmSubGridDisplay(entity, false);
+            entity.filmRefresh = false;
+        });
+    };
+
+    function refreshReportSubGridDisplay(entity, needRefresh) {
+        if (entity.reportSubOptions.data.length > 0) {
+            entity.reportSubOptions.showGridFooter = false;
+            if (entity.reportSubOptions.data.length > 10) {
+                entity.reportSubOptions.enableVerticalScrollbar = uiGridConstants.scrollbars.ALWAYS;
+                entity.reportGridHeight = (10 * entity.reportSubOptions.rowHeight) + 29;
+            }
+            else {
+                entity.reportGridHeight = (entity.reportSubOptions.data.length * entity.reportSubOptions.rowHeight) + 29;
+            }
+        }
+        else {
+            entity.reportSubOptions.showGridFooter = true;
+            entity.reportGridHeight = 53;
+            if (needRefresh) {
+                refreshReportDisplay(entity);
+            }
+        }
+    };
+
+    function refreshReportSubGrid(entity) {
+        entity.reportRefresh = true;
+        worklistService.getReportInfos(entity.accessionNumber).success(function (data) {
+            data.forEach(function (item) {
+                item.reportPrintStatusSwitch = (item.reportPrintStatus == 0);
+                item.isSelected = entity.isAllReportsSelected;
+            });
+            entity.reportSubOptions.data = data;
+
+            refreshReportSubGridDisplay(entity, false);
+            entity.reportRefresh = false;
+        });
+    }
+
+    $scope.refreshDeleteSubFilm = function (parentEntity, entity, data) {
+        parentEntity.imageCount = data.workItem.imageCount;
+        parentEntity.filmPrintStatus = data.workItem.filmPrintStatus;
+        parentEntity.filmPrintStatusSwitch = (data.workItem.filmPrintStatus == 0);
+        for (var i = 0; i < parentEntity.filmSubOptions.data.length; i++) {
+            if (parentEntity.filmSubOptions.data[i].studyInstanceUID == entity.studyInstanceUID) {
+                parentEntity.filmSubOptions.data.splice(i, 1);
+                break;
+            }
+        }
+        if (parentEntity.filmSubOptions.data.length > 0) {
+            parentEntity.filmSubOptions.showGridFooter = false;
+            parentEntity.filmGridHeight = (parentEntity.filmSubOptions.data.length * parentEntity.filmSubOptions.rowHeight) + 29;
+        }
+        else {
+            parentEntity.filmSubOptions.showGridFooter = true;
+            parentEntity.filmGridHeight = 53;
+        }
+        parentEntity.filmRefresh = true;
+        $timeout(function () {
+            parentEntity.filmRefresh = false;
+        }, 0);
+    }
+
+    $scope.refreshDeleteSubReport = function (parentEntity, entity, data) {
+        parentEntity.reportCount = data.workItem.reportCount;
+        parentEntity.reportPrintStatus = data.workItem.reportPrintStatus;
+        parentEntity.reportPrintStatusSwitch = (data.workItem.reportPrintStatus == 0);
+        for (var i = 0; i < parentEntity.reportSubOptions.data.length; i++) {
+            if (parentEntity.reportSubOptions.data[i].studyInstanceUID == entity.studyInstanceUID) {
+                parentEntity.reportSubOptions.data.splice(i, 1);
+                break;
+            }
+        }
+        if (parentEntity.reportSubOptions.data.length > 0) {
+            parentEntity.reportSubOptions.showGridFooter = false;
+            parentEntity.reportGridHeight = (parentEntity.reportSubOptions.data.length * parentEntity.reportSubOptions.rowHeight) + 29;
+        }
+        else {
+            parentEntity.reportSubOptions.showGridFooter = true;
+            parentEntity.reportGridHeight = 53;
+        }
+        parentEntity.reportRefresh = true;
+        $timeout(function () {
+            parentEntity.reportRefresh = false;
+        }, 0);
+    }
+
+    $scope.refreshDeleteExam = function (parentEntity, entity) {
+        for (var i = 0; i < $scope.worklistRecordsOptions.data.length; i++) {
+            if ($scope.worklistRecordsOptions.data[i].accessionNumber == entity.accessionNumber) {
+                $scope.worklistRecordsOptions.data.splice(i, 1);
+                break;
+            }
+        }
+
+        parentEntity.filmRefresh = true;
+        $timeout(function () {
+            parentEntity.filmRefresh = false;
+        }, 0);
+    }
+
+    $scope.refreshFilmPrintStatus = function (parentEntity, entity, data, result) {
+        entity.filmPrintStatus = data.NewStatusValue;
+        entity.filmPrintStatusSwitch = (data.NewStatusValue == 0);
+        parentEntity.filmPrintStatus = result.workItem.filmPrintStatus;
+        parentEntity.filmPrintStatusSwitch = (result.workItem.filmPrintStatus == 0);
+
+        parentEntity.filmRefresh = true;
+        $timeout(function () {
+            parentEntity.filmRefresh = false;
+        }, 0);
+    }
+
+    $scope.refreshReportPrintStatus = function (parentEntity, entity, data, result) {
+        entity.reportPrintStatus = data.NewStatusValue;
+        entity.reportPrintStatusSwitch = (data.NewStatusValue == 0);
+        parentEntity.reportPrintStatus = result.workItem.reportPrintStatus;
+        parentEntity.reportPrintStatusSwitch = (result.workItem.reportPrintStatus == 0);
+
+        parentEntity.reportRefresh = true;
+        $timeout(function () {
+            parentEntity.reportRefresh = false;
+        }, 0);
+    }
+
+    function initGridOptions() {
+        $scope.worklistRecordsOptions = {
+            enableSorting: true,
+            columnDefs: [],
+            data: [],
+            rowHeight: 42,
+            expandableRowTemplate: 'app/workarea/worklist/views/template/worklist-expand-template.html',
+            enableExpandableRowHeader: false,
+            enableGridMenu: true,
+            enableHorizontalScrollbar: uiGridConstants.scrollbars.NEVER,
+            paginationPageSizes: application.configuration.pageSizes,
+            paginationPageSize: application.configuration.pageSizeDefault,
+            useExternalPagination: true,
+            onRegisterApi: function (gridApi) {
+                //gridApi.core.on.columnVisibilityChanged($scope, function (column) {
+                //    $log.debug("hide column " + column.name);
+                //});
+                gridApi.expandable.on.rowExpandedStateChanged($scope, function (row) {
+                    if (row.isExpanded) {
+                        row.entity.filmGridHeight = 95;
+                        row.entity.reportGridHeight = 95;
+                        row.entity.isOnlyReport = $scope.isOnlyReport;
+
+                        if (!row.entity.filmSubOptions) {
+                            row.entity.filmSubOptions = {
+                                enableSorting: false,
+                                columnDefs: filmCols,
+                                rowHeight: 42,
+                                enableVerticalScrollbar: uiGridConstants.scrollbars.NEVER,
+                                enableHorizontalScrollbar: uiGridConstants.scrollbars.NEVER,
+                                gridFooterTemplate: '<div class="ui-grid-footer-info ui-grid-grid-footer"><span>当前无胶片</span></div>',
+                                onRegisterApi: function (gridApi) {
+                                    $scope.filmSubGridApi = gridApi;
+                                },
+                                expandableRowScope: {
+                                    getDisplayValue: $scope.getDisplayValue,
+                                    isShowReprintButton: $scope.isShowReprintButton,
+                                    isShowPrintStatusSwitch: $scope.isShowPrintStatusSwitch,
+                                    isShowPrintingLabel: $scope.isShowPrintingLabel,
+                                    isDeleted: $scope.isDeleted,
+                                    hasDeletePermission: $scope.hasDeletePermission,
+                                    hasChangePrintStatusPermission: $scope.hasChangePrintStatusPermission,
+                                    hasCorrectReconciliationPermission:$scope.hasCorrectReconciliationPermission,
+                                    reprintClick: function (parentEntity, entity, cellValue) {
+                                        var data = {
+                                            StatusType: "FilmPrintStatus",
+                                            StudyInstanceUID: entity.studyInstanceUID,
+                                            PreStatusValue: cellValue,
+                                            NewStatusValue: 0
+                                        };
+                                        worklistService.updateStatusByStudyInstanceUID(data).success(function (result) {
+                                            if (result.isSucceed) {
+                                                entity.filmPrintStatus = 0;
+                                                entity.filmPrintStatusSwitch = true;
+                                                if (result.workItem != null) {
+                                                    parentEntity.filmPrintStatus = result.workItem.filmPrintStatus;
+                                                    parentEntity.filmPrintStatusSwitch = (result.workItem.filmPrintStatus == 0);
+                                                }
+                                            }
+                                        });
+                                    },
+                                    setFilmDeleteStatus: function (parentEntity, entity, cellValue, newStatus) {
+                                        var data = {
+                                            StatusType: "FilmDeleteStatus",
+                                            StudyInstanceUID: entity.studyInstanceUID,
+                                            PreStatusValue: cellValue,
+                                            NewStatusValue: newStatus
+                                        };
+
+                                        if (newStatus === 1) { //delete
+                                            // alter dialog comfirm whether delete
+                                            openDialog.openIconDialogOkCancel(openDialog.NotifyMessageType.Warn, $translate.instant('delete the film'), $translate.instant('Are you sure to delete the film?'), function () {
+                                                worklistService.updateStatusByStudyInstanceUID(data).success(function (data) {
+                                                    if (data.isSucceed) {
+                                                        if (data.workItem == null) {
+                                                            for (var i = 0; i < $scope.worklistRecordsOptions.data.length; i++) {
+                                                                if ($scope.worklistRecordsOptions.data[i].accessionNumber == entity.accessionNumber) {
+                                                                    $scope.worklistRecordsOptions.data.splice(i, 1);
+                                                                    break;
+                                                                }
+                                                            }
+                                                        }
+                                                        else {
+                                                            parentEntity.imageCount = data.workItem.imageCount;
+                                                            parentEntity.completeStatus = data.workItem.completeStatus;
+                                                            parentEntity.filmPrintStatus = data.workItem.filmPrintStatus;
+                                                            parentEntity.filmPrintStatusSwitch = (data.workItem.filmPrintStatus == 0);
+                                                            for (var i = 0; i < parentEntity.filmSubOptions.data.length; i++) {
+                                                                if (parentEntity.filmSubOptions.data[i].studyInstanceUID == entity.studyInstanceUID) {
+                                                                    parentEntity.filmSubOptions.data.splice(i, 1);
+                                                                    break;
+                                                                }
+                                                            }
+                                                            refreshFilmSubGridDisplay(parentEntity, true);
+                                                        }
+                                                    }
+                                                });
+                                            });
+                                        }
+                                    },
+                                    changeFilmPrintStatus: function (parentEntity, entity, cellValue) {
+                                        var data = {
+                                            StatusType: "FilmPrintStatus",
+                                            StudyInstanceUID: entity.studyInstanceUID,
+                                            PreStatusValue: cellValue,
+                                            NewStatusValue: cellValue == 2 ? 0 : 2
+                                        };
+                                        worklistService.updateStatusByStudyInstanceUID(data).success(function (result) {
+                                            if (result.isSucceed) {
+                                                entity.filmPrintStatus = data.NewStatusValue;
+                                                entity.filmPrintStatusSwitch = (data.NewStatusValue == 0);
+                                                parentEntity.filmPrintStatus = result.workItem.filmPrintStatus;
+                                                parentEntity.filmPrintStatusSwitch = (result.workItem.filmPrintStatus == 0);
+                                            }
+                                            else {
+                                                entity.filmPrintStatusSwitch = !entity.filmPrintStatusSwitch;
+                                            }
+                                        }).error(function (data) {
+                                            entity.filmPrintStatusSwitch = !entity.filmPrintStatusSwitch;
+                                        });
+                                    },
+                                    changeAllChecked: function (entity) {
+                                        entity.filmSubOptions.data.forEach(function (item) {
+                                            item.isSelected = entity.isAllFilmsSelected;
+                                        });
+                                        if (!entity.isAllFilmsSelected) {
+                                            entity.isSelected = false;
+                                        }
+                                    },
+                                    changeItemChecked: function (entity, parentEntity) {
+                                        if (!entity.isSelected) {
+                                            parentEntity.isAllFilmsSelected = false;
+                                            parentEntity.isSelected = false;
+                                        }
+                                    },
+                                    reconcilateFilm: function (parentEntity, entity) {
+                                        $state.go('reconciliation', { patientId: parentEntity.patientID, accessionNumber: parentEntity.accessionNumber, instanceId: entity.studyInstanceUID, type: 'film' });
+                                    },
+                                    dicomView: function (parentEntity, entity) {
+                                        var iWidth = window.screen.width * 0.75;
+                                        var iHeight = window.screen.height * 0.75;
+                                        var iTop = (window.screen.height - iHeight) / 2;
+                                        var iLeft = (window.screen.width - iWidth) / 2;
+
+                                        window.passData = {
+                                            instanceId: entity.studyInstanceUID,
+                                            patientId: parentEntity.patientID,
+                                            patientName: parentEntity.patientName,
+                                            gender: parentEntity.patientSex,
+                                            modalityType: parentEntity.modality,
+                                            printTime: entity.filmPrintTime,
+                                            printStatus: entity.filmPrintStatus,
+                                            parentEntity: parentEntity,
+                                            entity: entity,
+                                            isFilm: true
+                                        };
+                                        window.scopeToShare = $scope;
+                                        var url = urlPrefix + 'popup/dicomviewer';
+                                        window.open(url, '_blank', 'status=no,menubar=no,titlebar=no,toolbar=no,directories=no,location=yes,resizable=yes, width=' + iWidth + ', height=' + iHeight + ' ,top=' + iTop + ',left=' + iLeft);
+                                    }
+                                }
+                            };
+                            if (!row.entity.gridWidth || filmCols.length >= reportCols.length) {
+                                row.entity.gridWidth = filmCols.length * subGridCellWidth;
+                            }
+                        }
+                        if (!row.entity.reportSubOptions) {
+                            row.entity.reportSubOptions = {
+                                enableSorting: false,
+                                columnDefs: reportCols,
+                                rowHeight: 42,
+                                enableVerticalScrollbar: uiGridConstants.scrollbars.NEVER,
+                                enableHorizontalScrollbar: uiGridConstants.scrollbars.NEVER,
+                                gridFooterTemplate: '<div class="ui-grid-footer-info ui-grid-grid-footer"><span>当前无报告</span></div>',
+                                expandableRowScope: {
+                                    getDisplayValue: $scope.getDisplayValue,
+                                    isShowReprintButton: $scope.isShowReprintButton,
+                                    isShowPrintStatusSwitch: $scope.isShowPrintStatusSwitch,
+                                    isShowPrintingLabel: $scope.isShowPrintingLabel,
+                                    isDeleted: $scope.isDeleted,
+                                    hasDeletePermission: $scope.hasDeletePermission,
+                                    hasChangePrintStatusPermission: $scope.hasChangePrintStatusPermission,
+                                    reprintClick: function (parentEntity, entity, cellValue) {
+                                        var data = {
+                                            StatusType: "ReportPrintStatus",
+                                            StudyInstanceUID: entity.studyInstanceUID,
+                                            PreStatusValue: cellValue,
+                                            NewStatusValue: 0
+                                        };
+                                        worklistService.updateStatusByStudyInstanceUID(data).success(function (result) {
+                                            if (result.isSucceed) {
+                                                entity.reportPrintStatus = 0;
+                                                entity.reportPrintStatusSwitch = true;
+                                                if (result.workItem != null) {
+                                                    parentEntity.reportPrintStatus = result.workItem.reportPrintStatus;
+                                                    parentEntity.reportPrintStatusSwitch = (result.workItem.reportPrintStatus == 0);
+                                                }
+                                            }
+                                        });
+                                    },
+                                    setReportDeleteStatus: function (parentEntity, entity, cellValue, newStatus) {
+                                        var data = {
+                                            StatusType: "ReportDeleteStatus",
+                                            StudyInstanceUID: entity.studyInstanceUID,
+                                            PreStatusValue: cellValue,
+                                            NewStatusValue: newStatus
+                                        };
+                                        if (newStatus === 1) {
+                                            openDialog.openIconDialogOkCancel(openDialog.NotifyMessageType.Warn, $translate.instant('delete the report'), $translate.instant('Are you sure to delete the report?'), function () {
+                                                // yes                      
+                                                worklistService.updateStatusByStudyInstanceUID(data).success(function (data) {
+                                                    if (data.isSucceed) {
+                                                        if (data.workItem == null) {
+                                                            for (var i = 0; i < $scope.worklistRecordsOptions.data.length; i++) {
+                                                                if ($scope.worklistRecordsOptions.data[i].accessionNumber == entity.accessionNumber) {
+                                                                    $scope.worklistRecordsOptions.data.splice(i, 1);
+                                                                    break;
+                                                                }
+                                                            }
+                                                        }
+                                                        else {
+                                                            parentEntity.reportCount = data.workItem.reportCount;
+                                                            parentEntity.completeStatus = data.workItem.completeStatus;
+                                                            parentEntity.reportPrintStatus = data.workItem.reportPrintStatus;
+                                                            parentEntity.reportPrintStatusSwitch = (data.workItem.reportPrintStatus == 0);
+                                                            for (var i = 0; i < parentEntity.reportSubOptions.data.length; i++) {
+                                                                if (parentEntity.reportSubOptions.data[i].studyInstanceUID == entity.studyInstanceUID) {
+                                                                    parentEntity.reportSubOptions.data.splice(i, 1);
+                                                                    break;
+                                                                }
+                                                            }
+                                                            refreshReportSubGridDisplay(parentEntity, true);
+                                                        }
+                                                    }
+                                                });
+                                            });
+                                        }
+                                    },
+                                    changeReportPrintStatus: function (parentEntity, entity, cellValue) {
+                                        var data = {
+                                            StatusType: "ReportPrintStatus",
+                                            StudyInstanceUID: entity.studyInstanceUID,
+                                            PreStatusValue: cellValue,
+                                            NewStatusValue: cellValue == 2 ? 0 : 2
+                                        };
+                                        worklistService.updateStatusByStudyInstanceUID(data).success(function (result) {
+                                            if (result.isSucceed) {
+                                                entity.reportPrintStatus = data.NewStatusValue;
+                                                entity.reportPrintStatusSwitch = (data.NewStatusValue == 0);
+                                                parentEntity.reportPrintStatus = result.workItem.reportPrintStatus;
+                                                parentEntity.reportPrintStatusSwitch = (result.workItem.reportPrintStatus == 0);
+                                            }
+                                            else {
+                                                entity.reportPrintStatusSwitch = !entity.reportPrintStatusSwitch;
+                                            }
+                                        }).error(function (data) {
+                                            entity.reportPrintStatusSwitch = !entity.reportPrintStatusSwitch;
+                                        });
+                                    },
+                                    changeAllChecked: function (entity) {
+                                        entity.reportSubOptions.data.forEach(function (item) {
+                                            item.isSelected = entity.isAllReportsSelected;
+                                        });
+                                        if (!entity.isAllReportsSelected) {
+                                            entity.isSelected = false;
+                                        }
+                                    },
+                                    changeItemChecked: function (entity, parentEntity) {
+                                        if (!entity.isSelected) {
+                                            parentEntity.isAllReportsSelected = false;
+                                            parentEntity.isSelected = false;
+                                        }
+                                    },
+                                    reconcilateReport: function (parentEntity, entity) {
+                                        $state.go('reconciliation', { patientId: parentEntity.patientID, accessionNumber: parentEntity.accessionNumber, instanceId: entity.studyInstanceUID, type: 'report' });
+                                    },
+                                    viewReport: function (parentEntity, entity) {
+                                        var iWidth = window.screen.width * 0.75;
+                                        var iHeight = window.screen.height * 0.75;
+                                        var iTop = (window.screen.height - iHeight) / 2;
+                                        var iLeft = (window.screen.width - iWidth) / 2;
+
+                                        window.passData = {
+                                            instanceId: entity.studyInstanceUID,
+                                            patientId: parentEntity.patientID,
+                                            patientName: parentEntity.patientName,
+                                            gender: parentEntity.patientSex,
+                                            modalityType: parentEntity.modality,
+                                            printTime: entity.reportPrintTime,
+                                            printStatus: entity.reportPrintStatus,
+                                            parentEntity: parentEntity,
+                                            entity: entity,
+                                            isFilm: false
+                                        };
+                                        window.scopeToShare = $scope;
+                                        var url = urlPrefix + 'popup/dicomviewer';
+                                        window.open(url, '_blank', 'status=no,menubar=no,titlebar=no,toolbar=no,directories=no,location=yes,resizable=yes, width=' + iWidth + ', height=' + iHeight + ' ,top=' + iTop + ',left=' + iLeft);
+                                    }
+                                }
+                            };
+                            if (!row.entity.gridWidth || reportCols.length > filmCols.length) {
+                                row.entity.gridWidth = reportCols.length * subGridCellWidth;
+                            }
+                        }
+                        refreshFilmSubGrid(row.entity);
+                        refreshReportSubGrid(row.entity);
+                    }
+                });
+
+                gridApi.pagination.on.paginationChanged($scope, function (newPage, pageSize) {
+                    $scope.model.pagination.pageIndex = newPage;
+                    $scope.model.pagination.pageSize = pageSize;
+                    searchWorklist();
+                });
+            }
+        };
+    }
+    $scope.setStartDateOption = function () {
+        $scope.startDateOptions = {
+            showWeeks: false,
+            maxDate: $scope.model.createDateRange.endTime
+        };
+    };
+    $scope.setEndDateOption = function () {
+        $scope.endDateOptions = {
+            showWeeks: false,
+            minDate: $scope.model.createDateRange.startTime
+        };
+    };
+
+    $scope.viewBarcode = function (row, col) {
+        var barcodeType = col.displayName;
+        var barcodeValue = row.entity[col.field];
+        var patientNameConfig = $scope.worklistColumnsConfig.find(function (item) {
+            return (item.columnName == "PatientName" && item.gridLevel == 1);
+        });
+        var patientNameDisplayName = "Patient Name";
+        if (patientNameConfig != null) {
+            patientNameDisplayName = patientNameConfig.displayName;
+        }
+        var patientNameValue = row.entity.patientName;
+        $log.debug("barcode type:" + barcodeType + ", barcode value:" + barcodeValue);
+        var iWidth = 600;
+        var iHeight = 280;
+        var iTop = (window.screen.height - iHeight) / 2;
+        var iLeft = (window.screen.width - iWidth) / 2;
+
+        window.passData = {
+            barcodeType: barcodeType,
+            barcodeValue: barcodeValue,
+            patientNameDisplayName: patientNameDisplayName,
+            patientNameValue: patientNameValue
+        };
+        window.scopeToShare = $scope;
+        var url = urlPrefix + 'popup/barcode';
+        window.open(url, '_blank', 'status=no,menubar=no,titlebar=no,toolbar=no,directories=no,location=yes,resizable=yes, width=' + iWidth + ', height=' + iHeight + ' ,top=' + iTop + ',left=' + iLeft);
+    };
+
+    (function initialize() {
+        $log.debug('WorklistMainbodyController.initialize()...');
+        $scope.printButtonStatus = true;
+        i18nService.setCurrentLang(application.region);
+        $scope.popupStart = {
+            opened: false
+        };
+        $scope.popupEnd = {
+            opened: false
+        };
+        $scope.dateFormat = constants.dateFormat;
+        $scope.completeStatuses = enums.CompleteStatus;
+        $scope.allDepartments = loginContext.departments.join();
+        $scope.modalities = loginContext.modalities.join();
+        $scope.model = worklistService.searchCriteria(1, application.configuration.pageSizeDefault, $scope.modalities, $scope.allDepartments);
+        $scope.setStartDateOption();
+        $scope.setEndDateOption();
+        $scope.incompleteEnabled = application.configuration.incompleteEnabled;
+        worklistService.getTerminal().success(function (data) {
+            $scope.terminals = data;
+            var usedTerminal = $cookies.get('centralPrintPrinter');
+            if (usedTerminal != null) {
+                $scope.selectedPrinter = usedTerminal;
+            }
+        });
+        $scope.isAutoRefresh = false;
+        $scope.isOnlyReport = loginContext.onlyReport;
+        $scope.hasCentralPrintPermission = permission.hasPermission('CentralPrint');
+        $scope.hasDeletePermission = permission.hasPermission('Delete');
+        $scope.hasCorrectReconciliationPermission = permission.hasPermission('CorrectReconciliation');
+        $scope.hasChangePrintStatusPermission = permission.hasPermission('ChangePrintStatus');
+        $scope.hasChangePrintModePermission = permission.hasPermission('ChangePrintMode');
+        $scope.hasChangeHoldFlagPermission = permission.hasPermission('ChangeHoldFlag');//修改打印优先级:是否延时
+        $scope.gridHeight = document.getElementById("mainContainer").clientHeight - document.getElementById("mainNavBar").clientHeight - 3;
+        initGridOptions();
+        if (application.configuration.worklistColumnsConfig != null) {
+            $scope.worklistColumnsConfig = application.configuration.worklistColumnsConfig;
+
+            initDropdowns($scope.worklistColumnsConfig);
+            initGridColumns($scope.worklistColumnsConfig);
+
+            $scope.isInitializing = false;
+            searchWorklist();
+            filmCols = initFilmColumns($scope.worklistColumnsConfig);
+            reportCols = initReportColumns($scope.worklistColumnsConfig);
+        }
+        else {
+            worklistService.getWorklistColumns().success(function (data) {
+                $scope.gridHeight = document.getElementById("mainContainer").clientHeight - document.getElementById("mainNavBar").clientHeight - 3;
+                $scope.worklistColumnsConfig = data;
+
+                initDropdowns(data);
+                initGridColumns(data);
+
+                $scope.isInitializing = false;
+                searchWorklist();
+                filmCols = initFilmColumns(data);
+                reportCols = initReportColumns(data);
+            });
+        }
+
+        if (loginContext.modalities.length == 0) {
+            worklistService.getModality().success(function (data) {
+                $scope.modalityTypes = data;
+            });
+        }
+        else {
+            $scope.modalityTypes = loginContext.modalities;
+        }
+
+        worklistService.getDepartments(loginContext.departments).success(function (data) {
+            $scope.departments = data;
+            $scope.gridHeight = document.getElementById("mainContainer").clientHeight - document.getElementById("mainNavBar").clientHeight - 3;
+        });
+    }());
+
+    $scope.isShowReprintButton = function (itemValue) {
+        return itemValue == 1;
+    };
+
+    $scope.isShowPartialPrintButton = function (itemValue) {
+        return itemValue == 4;
+    };
+
+    $scope.isShowPrintingLabel = function (itemValue) {
+        return itemValue == 3;
+    };
+
+    $scope.isDeleted = function (itemValue) {
+        return itemValue == 1;
+    };
+
+    $scope.isShowPrintStatusSwitch = function (itemValue) {
+        if (itemValue == 0 || itemValue == 2) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+
+    $scope.switchStatusOfPrintStatus = function (itemValue) {
+        return itemValue == 0;
+    };
+
+    $scope.getDisplayValue = function (column, value, level) {
+        var columnDef = $scope.worklistColumnsConfig.find(function (item) {
+            return (item.columnName == column.name && item.gridLevel == level);
+        });
+        if (columnDef.controlType == 'DropDownList' && column.name != enums.dispalyColumn.patientSex && column.name != enums.dispalyColumn.modality) {
+            if (column.name == enums.dispalyColumn.reportStatus) {
+                if (value >= 0) {
+                    return enums.ReportStatus[value].name;
+                }
+                else {
+                    return '';
+                }
+            }
+            else {
+                var item = columnDef.valueList.find(function (item) {
+                    return item.itemValue == value.toString();
+                });
+                if (item) {
+                    return item.itemName;
+                }
+                else {
+                    return '';
+                }
+            }
+        }
+        else {
+            if (value != null && level > 1 && column.name.endsWith('Time')) {
+                return new Date(value).Format("yyyy/MM/dd hh:mm:ss");
+            }
+            else {
+                return value;
+            }
+        }
+    };
+
+    $scope.getPrintStatusSwitchValue = function (itemValue) {
+        if (itemValue == 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+
+    $scope.searchWorklist = searchWorklist;
+
+    $scope.changeFilmPrintStatus = function (row, cellValue) {
+        var data = {
+            StatusType: "FilmPrintStatus",
+            AccessionNumber: row.entity.accessionNumber,
+            PreStatusValue: cellValue,
+            NewStatusValue: cellValue == 2 ? 0 : 2,
+            IsExpanded: row.isExpanded == true ? true : false
+        };
+        worklistService.updateAccessionStatus(data).success(function (result) {
+            if (result.isSucceed) {
+                row.entity.filmPrintStatus = result.workItem.filmPrintStatus;
+                if (result.workItem.filmInfos != null) {
+                    row.entity.filmSubOptions.data.forEach(function (filmItem) {
+                        var foundItem = result.workItem.filmInfos.find(function (item) {
+                            return filmItem.studyInstanceUID == item.studyInstanceUID;
+                        });
+                        filmItem.filmPrintStatus = foundItem.filmPrintStatus;
+                        filmItem.filmPrintStatusSwitch = (filmItem.filmPrintStatus == 0);
+                    });
+                }
+            }
+            else {
+                row.entity.filmPrintStatusSwitch = !row.entity.filmPrintStatusSwitch;
+            }
+        }).error(function (data) {
+            row.entity.filmPrintStatusSwitch = !row.entity.filmPrintStatusSwitch;
+        });
+    };
+
+    $scope.changeReportPrintStatus = function (row, cellValue) {
+        var data = {
+            StatusType: "ReportPrintStatus",
+            AccessionNumber: row.entity.accessionNumber,
+            PreStatusValue: cellValue,
+            NewStatusValue: cellValue == 2 ? 0 : 2,
+            IsExpanded: row.isExpanded == true ? true : false
+        };
+        worklistService.updateAccessionStatus(data).success(function (result) {
+            if (result.isSucceed) {
+                row.entity.reportPrintStatus = result.workItem.reportPrintStatus;
+                if (result.workItem.reportInfos != null) {
+                    row.entity.reportSubOptions.data.forEach(function (reportItem) {
+                        var foundItem = result.workItem.reportInfos.find(function (item) {
+                            return reportItem.studyInstanceUID == item.studyInstanceUID;
+                        });
+                        reportItem.reportPrintStatus = foundItem.reportPrintStatus;
+                        reportItem.reportPrintStatusSwitch = (reportItem.reportPrintStatus == 0);
+                    });
+                }
+            }
+            else {
+                row.entity.reportPrintStatusSwitch = !row.entity.reportPrintStatusSwitch;
+            }
+        }).error(function (data) {
+            row.entity.reportPrintStatusSwitch = !row.entity.reportPrintStatusSwitch;
+        });
+    };
+
+    $scope.reprintClick = function (originColumnName, columnName, row) {
+        var data = {
+            StatusType: originColumnName,
+            AccessionNumber: row.entity.accessionNumber,
+            PreStatusValue: row.entity[columnName],
+            NewStatusValue: 0,
+            IsExpanded: row.isExpanded == true ? true : false
+        };
+        worklistService.updateAccessionStatus(data).success(function (result) {
+            if (result.isSucceed) {
+                row.entity[columnName] = result.workItem[columnName];
+                if (columnName == "filmPrintStatus") {
+                    row.entity.filmPrintStatusSwitch = (result.workItem[columnName] == 0);
+                }
+                else {
+                    row.entity.reportPrintStatusSwitch = (result.workItem[columnName] == 0);
+                }
+
+                if (result.workItem.filmInfos != null) {
+                    row.entity.filmSubOptions.data.forEach(function (filmItem) {
+                        var foundItem = result.workItem.filmInfos.find(function (item) {
+                            return filmItem.studyInstanceUID == item.studyInstanceUID;
+                        });
+                        filmItem.filmPrintStatus = foundItem.filmPrintStatus;
+                        filmItem.filmPrintStatusSwitch = (filmItem.filmPrintStatus == 0);
+                    });
+                }
+                if (result.workItem.reportInfos != null) {
+                    row.entity.reportSubOptions.data.forEach(function (reportItem) {
+                        var foundItem = result.workItem.reportInfos.find(function (item) {
+                            return reportItem.studyInstanceUID == item.studyInstanceUID;
+                        });
+                        reportItem.reportPrintStatus = foundItem.reportPrintStatus;
+                        reportItem.reportPrintStatusSwitch = (reportItem.reportPrintStatus == 0);
+                    });
+                }
+            }
+        });
+    };
+
+    $scope.cancelPrintClick = function (originColumnName, columnName, row) {
+        var data = {
+            StatusType: originColumnName,
+            AccessionNumber: row.entity.accessionNumber,
+            PreStatusValue: row.entity[columnName],
+            NewStatusValue: 2,
+            IsExpanded: row.isExpanded == true ? true : false
+        };
+        worklistService.updateAccessionStatus(data).success(function (result) {
+            if (result.isSucceed) {
+                row.entity[columnName] = result.workItem[columnName];
+                if (result.workItem.filmInfos != null) {
+                    row.entity.filmPrintStatusSwitch = (result.workItem[columnName] == 0);
+                    row.entity.filmSubOptions.data.forEach(function (filmItem) {
+                        var foundItem = result.workItem.filmInfos.find(function (item) {
+                            return filmItem.studyInstanceUID == item.studyInstanceUID;
+                        });
+                        filmItem.filmPrintStatus = foundItem.filmPrintStatus;
+                        filmItem.filmPrintStatusSwitch = (filmItem.filmPrintStatus == 0);
+                    });
+                }
+                if (result.workItem.reportInfos != null) {
+                    row.entity.reportPrintStatusSwitch = (result.workItem[columnName] == 0);
+                    row.entity.reportSubOptions.data.forEach(function (reportItem) {
+                        var foundItem = result.workItem.reportInfos.find(function (item) {
+                            return reportItem.studyInstanceUID == item.studyInstanceUID;
+                        });
+                        reportItem.reportPrintStatus = foundItem.reportPrintStatus;
+                        reportItem.reportPrintStatusSwitch = (reportItem.reportPrintStatus == 0);
+                    });
+                }
+            }
+        });
+    };
+
+    $scope.changePrintMode = function (item) {
+        var data = {
+            StatusType: "PrintMode",
+            AccessionNumber: item.accessionNumber,
+            NewStatusValue: item.printMode
+        };
+        worklistService.updateAccessionStatus(data).success(function (data) {
+            item.completeStatus = data.workItem.completeStatus;
+        });
+    };
+
+    $scope.changeHoldFlag = function (item) {
+        var data = {
+            StatusType: "HoldFlag",
+            AccessionNumber: item.accessionNumber,
+            NewStatusValue: item.holdFlag
+        };
+        worklistService.updateAccessionStatus(data);
+    };
+
+    $scope.deleteAllFilm = function (item) {
+        var data = {
+            StatusType: "FilmDeleteStatus",
+            AccessionNumber: item.accessionNumber,
+            PreStatusValue: item.deleteStatus,
+            NewStatusValue: 1
+        };
+        openDialog.openIconDialogOkCancel(openDialog.NotifyMessageType.Warn, $translate.instant('DeleteAllFilms'), $translate.instant('ConfirmDeleteAllFilms'), function () {
+            // ok                      
+            worklistService.updateAccessionStatus(data).success(function (data) {
+                if (data.isSucceed) {
+                    if (data.workItem == null) {
+                        for (var i = 0; i < $scope.worklistRecordsOptions.data.length; i++) {
+                            if ($scope.worklistRecordsOptions.data[i].accessionNumber == item.accessionNumber) {
+                                $scope.worklistRecordsOptions.data.splice(i, 1);
+                                break;
+                            }
+                        }
+                    }
+                    else {
+                        item.imageCount = data.workItem.imageCount;
+                        item.filmPrintStatus = data.workItem.filmPrintStatus;
+                        item.completeStatus = data.workItem.completeStatus;
+                        if (item.filmSubOptions) {
+                            item.filmSubOptions.data = [];
+                            refreshFilmSubGridDisplay(item, true);
+                        }
+                    }
+                }
+            });
+        });
+    };
+
+    $scope.deleteAllReport = function (item) {
+        var data = {
+            StatusType: "ReportDeleteStatus",
+            AccessionNumber: item.accessionNumber,
+            PreStatusValue: item.deleteStatus,
+            NewStatusValue: 1
+        };
+        openDialog.openIconDialogOkCancel(openDialog.NotifyMessageType.Warn, $translate.instant('DeleteAllReports'), $translate.instant('ConfirmDeleteAllReports'), function () {
+            // ok                      
+            worklistService.updateAccessionStatus(data).success(function (data) {
+                if (data.isSucceed) {
+                    if (data.workItem == null) {
+                        for (var i = 0; i < $scope.worklistRecordsOptions.data.length; i++) {
+                            if ($scope.worklistRecordsOptions.data[i].accessionNumber == item.accessionNumber) {
+                                $scope.worklistRecordsOptions.data.splice(i, 1);
+                                break;
+                            }
+                        }
+                    }
+                    else {
+                        item.reportCount = data.workItem.reportCount;
+                        item.reportPrintStatus = data.workItem.reportPrintStatus;
+                        item.completeStatus = data.workItem.completeStatus;
+                        if (item.reportSubOptions) {
+                            item.reportSubOptions.data = [];
+                            refreshReportSubGridDisplay(item, true);
+                        }
+                    }
+                }
+            });
+        });
+    };
+
+    function checkSubGrids(item, value) {
+        item.isAllFilmsSelected = value;
+        if (item.filmSubOptions) {
+            item.filmSubOptions.expandableRowScope.changeAllChecked(item);
+        }
+        item.isAllReportsSelected = value;
+        if (item.reportSubOptions) {
+            item.reportSubOptions.expandableRowScope.changeAllChecked(item);
+        }
+    };
+
+    $scope.changeAllChecked = function () {
+        $scope.worklistRecordsOptions.data.forEach(function (item) {
+            item.isSelected = $scope.isAllSelected;
+            checkSubGrids(item, $scope.isAllSelected)
+        });
+    };
+    $scope.changeExamChecked = function (entity) {
+        checkSubGrids(entity, entity.isSelected);
+    };
+
+    $scope.clearSelections = function () {
+        $scope.model = worklistService.searchCriteria($scope.model.pagination.pageIndex, $scope.model.pagination.pageSize, $scope.modalities, $scope.allDepartments);
+        $scope.model.createDateRange.startTime = null;
+        $scope.model.createDateRange.endTime = null;
+        $scope.setStartDateOption();
+        $scope.setEndDateOption();
+        $scope.worklistRecordsOptions.data = [];
+        $scope.worklistRecordsOptions.totalItems = 0;
+    };
+
+    $scope.openDateStart = function () {
+        $scope.popupStart.opened = true;
+    };
+    $scope.openDateEnd = function () {
+        $scope.popupEnd.opened = true;
+    };
+
+    function refreshFilmSummary(filmSummary, filmItem) {
+        if (filmSummary.length == 0) {
+            filmSummary.push({
+                pageSize: filmItem.filmMediaSize,
+                count: 1,
+                availableCount: ''
+            });
+        }
+        else {
+            var foundItem = filmSummary.find(function (item) {
+                return item.pageSize == filmItem.filmMediaSize;
+            });
+            if (foundItem == null) {
+                filmSummary.push({
+                    pageSize: filmItem.filmMediaSize,
+                    count: 1,
+                    availableCount: ''
+                });
+            }
+            else {
+                foundItem.count++;
+            }
+        }
+    }
+
+    function refreshReportSummary(reportSummary, reportItem) {
+        if (reportSummary.length == 0) {
+            reportSummary.push({
+                modalityType: reportItem.modality,
+                pageType: '',
+                pageSize: '',
+                count: 1
+            });
+        }
+        else {
+            var foundItem = reportSummary.find(function (item) {
+                return item.modalityType == reportItem.modality;
+            });
+            if (foundItem == null) {
+                reportSummary.push({
+                    modalityType: reportItem.modality,
+                    pageType: '',
+                    pageSize: '',
+                    count: 1
+                });
+            }
+            else {
+                foundItem.count++;
+            }
+        }
+    };
+
+    function displayCentralPrintModal(filmSummary, reportSummary, accessionNumbers, instanceIds) {
+        worklistService.getTerminalStatus($scope.selectedPrinter).success(function (data) {
+            filmSummary.forEach(function (filmItem) {
+                filmItem.availableCount = data.filmSizeCount[filmItem.pageSize];
+            });
+
+            $uibModal.open({
+                animation: true,
+                ariaLabelledBy: 'modal-title',
+                ariaDescribedBy: 'modal-body',
+                templateUrl: 'batchPrint.html',
+                controller: 'ModalInstanceCtrl',
+                controllerAs: '$ctrl',
+                size: 'lg',
+                backdrop: 'static',
+                resolve: {
+                    print: function () {
+                        return {
+                            ternimalName: $scope.selectedPrinter,
+                            filmPrinterName: data.filmPrinterName,
+                            filmPrinterStatus: data.filmPrinterErrorDesc,
+                            reportPrinterName: data.reportPrinterName,
+                            reportPrinterStatus: data.reportPrinterErrorDesc,
+                            filmSummary: filmSummary,
+                            reportSummary: reportSummary,
+                            accessionNumbers: accessionNumbers,
+                            instanceIds: instanceIds
+                        };
+                    }
+                }
+            });
+        });
+    }
+
+    function displayCentralPrint(filmSummary, reportSummary, accessionNumbers, instanceIds) {
+        if ($scope.selectedPrinter == null || (filmSummary.length == 0 && reportSummary.length == 0)) {
+            toaster.warning({ title: $translate.instant("Warn"), body: $translate.instant("SelectRecordAndPrinter") });
+            return;
+        }
+        var reportSummaryReady = true;
+        if (reportSummary.length > 0) {
+            var modalities = [];
+            reportSummary.forEach(function (item) {
+                if (item.modalityType != null && item.modalityType != '') {
+                    modalities.push(item.modalityType);
+                }
+                else {
+                    item.pageType = "未知";
+                    item.pageSize = "未知";
+                }
+            });
+            if (modalities.length > 0) {
+                reportSummaryReady = false;
+                worklistService.getModalityPageInfo(modalities).success(function (data) {
+                    reportSummary.forEach(function (item) {
+                        var pageInfo = data.find(function (page) {
+                            return item.modalityType == page.modalityType;
+                        });
+                        if (pageInfo != null) {
+                            item.pageType = pageInfo.paperType;
+                            item.pageSize = pageInfo.paperSize;
+                        }
+                        else {
+                            item.pageType = "未知";
+                            item.pageSize = "未知";
+                        }
+                    });
+                    reportSummaryReady = true;
+                });
+            }
+        }
+
+
+        if (!reportSummaryReady) {
+            var promise = $interval(function () {
+                $log.debug("wait for callback");
+                if (reportSummaryReady) {
+                    $interval.cancel(promise);
+
+                    displayCentralPrintModal(filmSummary, reportSummary, accessionNumbers, instanceIds);
+                }
+            }, 10);
+        }
+        else {
+            displayCentralPrintModal(filmSummary, reportSummary, accessionNumbers, instanceIds);
+        }
+    }
+
+    $scope.centralPrint = function () {
+        // Get print items
+        var filmSummary = [];
+        var reportSummary = [];
+        var waitCallback = 0;
+        var accessionNumbers = [];
+        var restInstanceIds = [];
+
+        $scope.worklistRecordsOptions.data.forEach(function (examItem) {
+            if (examItem.filmPrintStatus == 0 || examItem.filmPrintStatus == 4 || examItem.reportPrintStatus == 0 || examItem.reportPrintStatus == 4) {
+                if (examItem.isSelected) {
+                    accessionNumbers.push(examItem.accessionNumber);
+
+                    if (examItem.filmPrintStatus == 0 || examItem.filmPrintStatus == 4) {
+                        if (examItem.filmSubOptions) {
+                            examItem.filmSubOptions.data.forEach(function (filmItem) {
+                                if (filmItem.filmPrintStatus == 0) {
+                                    refreshFilmSummary(filmSummary, filmItem);
+                                }
+                            });
+                        }
+                        else {
+                            waitCallback++;
+                            worklistService.getFilmInfos(examItem.accessionNumber).success(function (data) {
+                                waitCallback--;
+                                data.forEach(function (filmItem) {
+                                    if (filmItem.filmPrintStatus == 0) {
+                                        refreshFilmSummary(filmSummary, filmItem);
+                                    }
+                                });
+                            });
+                        }
+                    }
+                    if (examItem.reportPrintStatus == 0 || examItem.reportPrintStatus == 4) {
+                        if (examItem.reportSubOptions) {
+                            examItem.reportSubOptions.data.forEach(function (reportItem) {
+                                if (reportItem.reportPrintStatus == 0) {
+                                    refreshReportSummary(reportSummary, reportItem);
+                                }
+                            });
+                        }
+                        else {
+                            waitCallback++;
+                            worklistService.getReportInfos(examItem.accessionNumber).success(function (data) {
+                                waitCallback--;
+                                data.forEach(function (reportItem) {
+                                    if (reportItem.reportPrintStatus == 0) {
+                                        refreshReportSummary(reportSummary, reportItem);
+                                    }
+                                });
+                            });
+                        }
+                    }
+                }
+                else {
+                    var instanceIds = [];
+                    var selectedFilmCount = 0;
+                    var unselectedFilmCount = 0;
+                    var selectedReportCount = 0;
+                    var unselectedReportCount = 0;
+                    if (examItem.filmSubOptions) {
+                        examItem.filmSubOptions.data.forEach(function (filmItem) {
+                            if (filmItem.filmPrintStatus == 0) {
+                                if (filmItem.isSelected) {
+                                    refreshFilmSummary(filmSummary, filmItem);
+
+                                    instanceIds.push(filmItem.studyInstanceUID);
+                                    selectedFilmCount++;
+                                }
+                                else {
+                                    unselectedFilmCount++;
+                                }
+                            }
+                        });
+                    }
+                    if (examItem.reportSubOptions) {
+                        examItem.reportSubOptions.data.forEach(function (reportItem) {
+                            if (reportItem.reportPrintStatus == 0) {
+                                if (reportItem.isSelected) {
+                                    refreshReportSummary(reportSummary, reportItem);
+
+                                    instanceIds.push(reportItem.studyInstanceUID);
+                                    selectedReportCount++;
+                                }
+                                else {
+                                    unselectedReportCount++;
+                                }
+                            }
+                        });
+                    }
+
+                    if (unselectedFilmCount > 0 || unselectedReportCount > 0) {
+                        restInstanceIds = restInstanceIds.concat(instanceIds);
+                    }
+                    else if (selectedFilmCount > 0 || selectedReportCount > 0) {
+                        accessionNumbers.push(examItem.accessionNumber);
+                    }
+                }
+            }
+        });
+
+        if (waitCallback > 0) {
+            var promise = $interval(function () {
+                $log.debug("wait for callback");
+                if (waitCallback == 0) {
+                    $interval.cancel(promise);
+                    displayCentralPrint(filmSummary, reportSummary, accessionNumbers, restInstanceIds);
+                }
+            }, 500);
+        }
+        else {
+            displayCentralPrint(filmSummary, reportSummary, accessionNumbers, restInstanceIds);
+        }
+    };
+
+    $scope.setAutoRefresh = function () {
+        if ($scope.isAutoRefresh) {
+            promise = $interval(function () {
+                searchWorklist();
+            }, constants.autoRefreshTime);
+        }
+        else {
+            $interval.cancel(promise);
+        }
+    };
+
+    $scope.openFoldedColumns = function ($event) {
+        var offset = 165;
+        if ($scope.isOnlyReport) {
+            offset = 88;
+        }
+        var maxY = document.getElementById("mainContainer").clientHeight - offset;
+        if ($event.clientY > maxY) {
+            $scope.isPopAbove = true;
+        }
+        else {
+            $scope.isPopAbove = false;
+        }
+    }
+}
+]).controller('ModalInstanceCtrl', ['$uibModalInstance', '$interval', '$cookies', 'worklistService', 'loginContext', 'print', function ($uibModalInstance, $interval, $cookies, worklistService, loginContext, print) {
+    var $ctrl = this;
+    $ctrl.print = print;
+    $ctrl.print.estimateTime = 100;
+    $ctrl.print.finishedPrint = 0;
+    $ctrl.print.isFinish = false;
+    $ctrl.print.hasError = false;
+    $ctrl.print.dismiss = 'Cancel';
+    var statusPromise = null;
+    var progressPromise = null;
+
+    $ctrl.centralPrint = function () {
+        $ctrl.isPrinting = true;
+        var data = {
+            TerminalId: $ctrl.print.ternimalName,
+            UserId: loginContext.userName,
+            AccessionNumbers: $ctrl.print.accessionNumbers,
+            RestInstanceIds: $ctrl.print.instanceIds
+        }
+        worklistService.centralPrint(data).success(function (tasks) {
+            if (tasks != null) {
+                worklistService.getEstimatePrintTime(tasks).success(function (time) {
+                    $ctrl.print.estimateTime = time;
+
+                    statusPromise = $interval(function () {
+                        worklistService.getPrintStatus(tasks).success(function (status) {
+                            if (status.printedTime > $ctrl.print.finishedPrint) {
+                                $ctrl.print.finishedPrint = status.printedTime;
+                            }
+                            if (status.isFinishPrint) {
+                                $ctrl.print.isFinish = true;
+                                if (status.failedTasks > 0) {
+                                    $ctrl.print.hasError = true;
+                                    $ctrl.print.failedTasks = status.failedTasks;
+                                }
+                                $interval.cancel(statusPromise);
+                                if (progressPromise) {
+                                    $interval.cancel(progressPromise);
+                                }
+
+                                $ctrl.print.dismiss = 'OK';
+                            }
+                        });
+                    }, 10000);
+
+                    progressPromise = $interval(function () {
+                        $ctrl.print.finishedPrint++;
+                    }, 1000);
+                });
+            }
+        });
+
+        var now = new Date();
+        now.setFullYear(now.getFullYear() + 2);
+        $cookies.put('centralPrintPrinter', data.TerminalId, { expires: now.toUTCString() });
+    };
+
+    $ctrl.cancel = function () {
+        if (statusPromise != null) {
+            $interval.cancel(statusPromise);
+        }
+        if (progressPromise) {
+            $interval.cancel(progressPromise);
+        }
+        $uibModalInstance.dismiss('cancel');
+    };
+}]);

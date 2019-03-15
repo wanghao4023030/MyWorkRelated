@@ -1,0 +1,13 @@
+[t12]
+SnapshotXmlFile=snapshot_12.xml
+ContentType=text/html
+StepName=Url: terminalmonitor-template.html
+Total=1
+FileName1=t12.html
+RequestHeaderFile=t12_RequestHeader.txt
+ResponseHeaderFile=t12_ResponseHeader.txt
+RawStepEndTime=1536738254958
+RawStepName=terminalmonitor-template.html
+RequestBodyFile=t12_RequestBody.txt
+RawStepStartTime=1536738246628
+URL1=http://10.184.129.108/Platform/app/workarea/terminalmonitor/views/terminalmonitor-template.html

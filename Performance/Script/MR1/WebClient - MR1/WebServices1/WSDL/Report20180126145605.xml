@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="report_view.xsl"?>
+<Report time="Fri Jan 26 14:56:05 2018
+"><WSDLS><WSDL unc="D:\WebClient\WebServices1\WSDL\CreateFilmTestData\CreateFilmTestData.asmx_op_CreateFilmFile" name="http://10.184.129.108/PerformanceTest/CreateFilmTestData.asmx?op=CreateFilmFile"><msgs><msg severity="Error" xpath="" col="0" line="0"> WSDL file cannot be loaded</msg></msgs></WSDL></WSDLS></Report>

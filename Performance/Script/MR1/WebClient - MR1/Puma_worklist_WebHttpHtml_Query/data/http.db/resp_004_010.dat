@@ -1,0 +1,18 @@
+﻿commonModule.directive('vtEnter', ['$parse', function ($parse) {
+    return {
+        restrict: 'A',
+        compile: function (element, attr) {
+            var fn = $parse(attr.vtEnter, null, true);
+            return function (scope, element) {
+                element.on("keydown keypress", function (event) {
+                    if (event.which === 13) {
+                        // This will pass event where the expression used $event
+                        fn(scope, { $event: event });
+                        scope.$apply();
+                        event.preventDefault();
+                    }
+                });
+            };
+        }
+    };
+}]);

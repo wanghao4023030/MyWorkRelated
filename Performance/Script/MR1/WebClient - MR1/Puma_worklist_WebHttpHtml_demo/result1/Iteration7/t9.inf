@@ -1,0 +1,13 @@
+[t9]
+SnapshotXmlFile=snapshot_9.xml
+ContentType=DummyContentType
+StepName=Url: systemversion
+Total=1
+FileName1=t9.UNK
+RequestHeaderFile=t9_RequestHeader.txt
+ResponseHeaderFile=t9_ResponseHeader.txt
+RawStepEndTime=1515461789922
+RawStepName=systemversion
+RequestBodyFile=t9_RequestBody.txt
+RawStepStartTime=1515461789196
+URL1=file:

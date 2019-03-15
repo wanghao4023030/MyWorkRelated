@@ -1,0 +1,28 @@
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(305): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(781): Notify: Transaction "ExpandFilmRecord" started.	[MsgId: MMSG-16999]
+Action.c(783): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(783): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.171/webapi/api/worklist/filmInfo?accessionNumber=A50316141126161"  	[MsgId: MMSG-26548]
+Action.c(783): web_custom_request("web_custom_request") was successful, 909 body bytes, 259 header bytes  	[MsgId: MMSG-26386]
+Action.c(792): Notify: Transaction "ExpandFilmRecord" ended with a "Pass" status (Duration: 5.9368).	[MsgId: MMSG-16873]
+Action.c(794): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(797): Notify: Transaction "ExpandReportRecord" started.	[MsgId: MMSG-16999]
+Action.c(799): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(799): Continuing after Error -26612: HTTP Status-Code=500 (EntityCommandExecutionException) for "http://10.184.129.171/webapi/api/worklist/reportInfo?accessionNumber=A20171011190324522"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(305): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(781): Notify: Transaction "ExpandFilmRecord" started.	[MsgId: MMSG-16999]
+Action.c(783): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(783): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.171/webapi/api/worklist/filmInfo?accessionNumber=A50314131832192"  	[MsgId: MMSG-26548]
+Action.c(783): web_custom_request("web_custom_request") was successful, 1830 body bytes, 260 header bytes  	[MsgId: MMSG-26386]
+Action.c(792): Notify: Transaction "ExpandFilmRecord" ended with a "Pass" status (Duration: 6.3236).	[MsgId: MMSG-16873]
+Action.c(794): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(797): Notify: Transaction "ExpandReportRecord" started.	[MsgId: MMSG-16999]
+Action.c(799): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(799): Continuing after Error -26612: HTTP Status-Code=500 (EntityCommandExecutionException) for "http://10.184.129.171/webapi/api/worklist/reportInfo?accessionNumber=A20171011190509916"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HTTPSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="20">
+  <HTTPTask id="21" url="http://10.184.129.108/webapi/api/worklist/UpdateStatusByAccessionNumber" origin="Primary" startDateTime="2018-08-22T17:10:52.011+08:00" startTime="180987">
+    <HTTPRequest method="POST" />
+  </HTTPTask>
+</HTTPSnapshot>

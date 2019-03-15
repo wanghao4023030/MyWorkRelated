@@ -1,0 +1,46 @@
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(571): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(573): web_url("CheckLoginStatus_25") started  	[MsgId: MMSG-26355]
+Action.c(573): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.171/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(573): web_url("CheckLoginStatus_25") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(582): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(582): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(587): Notify: Transaction "Report_By_Terminal" started.	[MsgId: MMSG-16999]
+Action.c(589): web_custom_request("Report_By_Terminal") started  	[MsgId: MMSG-26355]
+Action.c(589): Continuing after Error -27492: "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http://10.184.129.171/webapi/api/statistics/getreportprintcountstatisticsbyterminal?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-11-03T16:00:00.000Z&StartDate=2016%2F01%2F01+00:00:00"  	[MsgId: MERR-27492]
+Action.c(589): Continuing after Error -26377: No match found for the requested parameter "Report_By_Terminal". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 900 bytes. The total length of the response is 0 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+Action.c(589): Continuing after Error -26374: The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively.  	[MsgId: MERR-26374]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(597): Notify: The 2nd error message associated with transaction "Report_By_Terminal" is "Error -26377: No match found for the requested parameter "Report_By_Terminal". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 900 bytes. The total length of the response is 0 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size."	[MsgId: MMSG-16819]
+Action.c(597): Notify: The 3rd error message associated with transaction "Report_By_Terminal" is "Error -26374: The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively."	[MsgId: MMSG-16819]
+The result is:  	[MsgId: MMSG-17999]
+Action.c(603): Error: Report_By_Terminal fail	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(606): lr_think_time: 5.00 seconds.	[MsgId: MMSG-15948]
+Action.c(608): web_url("CheckLoginStatus_25") started  	[MsgId: MMSG-26355]
+Action.c(608): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.171/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(608): web_url("CheckLoginStatus_25") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(617): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(617): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(622): Notify: Transaction "Report_By_PaperSize" started.	[MsgId: MMSG-16999]
+Action.c(624): web_custom_request("Report_By_PaperSize") started  	[MsgId: MMSG-26355]
+Action.c(624): Continuing after Error -27492: "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http://10.184.129.171/webapi/api/statistics/getreportprintcountstatisticsbytypesize?DepartmentIDsList=2&DepartmentIDsList=11&DepartmentIDsList=3&DepartmentIDsList=4&DepartmentIDsList=5&DepartmentIDsList=6&DepartmentIDsList=7&DepartmentIDsList=8&DepartmentIDsList=9&DepartmentIDsList=10&DepartmentIDsList=1&EndDate=2017-11-03T16:00:00.000Z&StartDate=2016%2F01%2F01+00:00:00"  	[MsgId: MERR-27492]
+Action.c(624): Continuing after Error -26377: No match found for the requested parameter "Report_By_PaperSize". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 900 bytes. The total length of the response is 0 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377]
+Action.c(624): Continuing after Error -26374: The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively.  	[MsgId: MERR-26374]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(632): Notify: The 2nd error message associated with transaction "Report_By_PaperSize" is "Error -26377: No match found for the requested parameter "Report_By_PaperSize". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 900 bytes. The total length of the response is 0 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size."	[MsgId: MMSG-16819]
+Action.c(632): Notify: The 3rd error message associated with transaction "Report_By_PaperSize" is "Error -26374: The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively."	[MsgId: MMSG-16819]
+The result is:  	[MsgId: MMSG-17999]
+Action.c(638): Error: Report_By_PaperSize fail	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

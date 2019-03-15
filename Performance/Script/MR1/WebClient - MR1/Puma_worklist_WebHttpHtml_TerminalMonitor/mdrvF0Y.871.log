@@ -1,0 +1,96 @@
+Start auto log messages stack - Iteration 8.	[MsgId: MMSG-10545]
+Start auto log messages stack - Iteration 8.	[MsgId: MMSG-10545]
+Action.c(213): web_url("CheckLoginStatusByUser") started  	[MsgId: MMSG-26355]
+Action.c(213): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(213): web_url("CheckLoginStatusByUser") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+User Login website successfully: HTTP/1.1 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=utf-8
+Server: Microsoft-IIS/7.5
+X-AspNetMvc-Version: 5.2
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Thu, 07 Jun 2018 04:41:36 GMT
+Content-Length: 4
+
+true	[MsgId: MMSG-17999]
+Action.c(213): web_url("CheckLoginStatusByUser") started  	[MsgId: MMSG-26355]
+Action.c(213): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(213): web_url("CheckLoginStatusByUser") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+User Login website successfully: HTTP/1.1 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=utf-8
+Server: Microsoft-IIS/7.5
+X-AspNetMvc-Version: 5.2
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Thu, 07 Jun 2018 04:41:36 GMT
+Content-Length: 4
+
+true	[MsgId: MMSG-17999]
+Action.c(238): web_url("tableRowsPerPage") started  	[MsgId: MMSG-26355]
+Action.c(238): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/tableRowsPerPage"  	[MsgId: MERR-26612]
+Action.c(238): web_url("tableRowsPerPage") started  	[MsgId: MMSG-26355]
+Action.c(238): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/tableRowsPerPage"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 8.	[MsgId: MMSG-10545]
+Start auto log messages stack - Iteration 8.	[MsgId: MMSG-10545]
+Action.c(238): web_url("tableRowsPerPage") highest severity level was "continue on error", 99 body bytes, 278 header bytes  	[MsgId: MMSG-26388]
+Action.c(238): web_url("tableRowsPerPage") highest severity level was "continue on error", 99 body bytes, 278 header bytes  	[MsgId: MMSG-26388]
+Action.c(238): Continuing after error in Vuser script.	[MsgId: MMSG-10678]
+Action.c(238): Continuing after error in Vuser script.	[MsgId: MMSG-10678]
+Action.c(246): web_url("worklistcolumns") started  	[MsgId: MMSG-26355]
+Action.c(246): web_url("worklistcolumns") started  	[MsgId: MMSG-26355]
+Action.c(246): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/worklist/worklistcolumns"  	[MsgId: MERR-26612]
+Action.c(246): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/worklist/worklistcolumns"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+
+
+Start auto log messages stack - Iteration 8.	[MsgId: MMSG-10545]
+Start auto log messages stack - Iteration 8.	[MsgId: MMSG-10545]
+Action.c(246): web_url("worklistcolumns") highest severity level was "continue on error", 99 body bytes, 278 header bytes  	[MsgId: MMSG-26388]
+Action.c(246): web_url("worklistcolumns") highest severity level was "continue on error", 99 body bytes, 278 header bytes  	[MsgId: MMSG-26388]
+Action.c(246): Continuing after error in Vuser script.	[MsgId: MMSG-10678]
+Action.c(246): Continuing after error in Vuser script.	[MsgId: MMSG-10678]
+Action.c(262): web_url("systemversion") started  	[MsgId: MMSG-26355]
+Action.c(262): web_url("systemversion") started  	[MsgId: MMSG-26355]
+Action.c(262): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/systemversion"  	[MsgId: MERR-26612]
+Action.c(262): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/systemversion"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 8.	[MsgId: MMSG-10545]
+Start auto log messages stack - Iteration 8.	[MsgId: MMSG-10545]
+Action.c(262): Continuing after error in Vuser script.	[MsgId: MMSG-10678]
+Action.c(262): Continuing after error in Vuser script.	[MsgId: MMSG-10678]
+Action.c(270): web_url("CheckLoginStatus") started  	[MsgId: MMSG-26355]
+Action.c(270): web_url("CheckLoginStatus") started  	[MsgId: MMSG-26355]
+Action.c(270): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(270): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(270): web_url("CheckLoginStatus") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(270): web_url("CheckLoginStatus") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(281): web_url("terminalmonitor-template.html") started  	[MsgId: MMSG-26355]
+Action.c(281): web_url("terminalmonitor-template.html") started  	[MsgId: MMSG-26355]
+Action.c(281): web_url("terminalmonitor-template.html") was successful, 29041 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Action.c(281): web_url("terminalmonitor-template.html") was successful, 29041 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Action.c(291): web_url("terminalmonitoring") started  	[MsgId: MMSG-26355]
+Action.c(291): web_url("terminalmonitoring") started  	[MsgId: MMSG-26355]
+Action.c(291): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/terminalmonitoring"  	[MsgId: MERR-26612]
+Action.c(291): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/terminalmonitoring"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+
+

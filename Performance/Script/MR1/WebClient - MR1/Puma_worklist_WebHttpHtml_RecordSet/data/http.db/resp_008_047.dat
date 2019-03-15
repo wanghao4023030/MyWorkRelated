@@ -1,0 +1,277 @@
+﻿<md-content style="display:inherit;overflow:visible;">
+    <script type="text/ng-template" id="batchPrint.html">
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-title">集中打印任务</h4>
+        </div>
+        <div class="modal-body" id="modal-body">
+            <div>
+                <span>
+                    <img src="app-resources/images/terminalmonitor/ico_terminal.png" height="25px" />
+                    <span>{{$ctrl.print.ternimalName}}</span>
+                </span>
+            </div>
+            <hr />
+            <div>
+                <span>
+                    <img src="app-resources/images/terminalmonitor/ico_fp.png" height="25px" />
+                    <span>{{$ctrl.print.filmPrinterName}}</span>
+                    <span ng-show="$ctrl.print.filmPrinterName != null">{{$ctrl.print.filmPrinterStatus}}</span>
+                    <span style="color:red" ng-show="$ctrl.print.filmPrinterName == null">未配置胶片打印机，下列任务将不会被打印</span>
+                </span>
+            </div>
+            <div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>{{ 'FilmSize' | translate }}</th>
+                            <th>{{ 'TotalPrintNumber' | translate }}</th>
+                            <th>{{ 'AvailableNumber' | translate }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in $ctrl.print.filmSummary">
+                            <td>{{item.pageSize}}</td>
+                            <td>{{item.count}}</td>
+                            <td>{{item.availableCount}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr />
+            <div>
+                <span>
+                    <img src="app-resources/images/terminalmonitor/ico_bpp.png" height="25px" />
+                    <span>{{$ctrl.print.reportPrinterName}}</span>
+                    <span ng-show="$ctrl.print.reportPrinterName != null">{{$ctrl.print.reportPrinterStatus}}</span>
+                    <span style="color:red" ng-show="$ctrl.print.reportPrinterName == null">未配置纸张打印机，下列任务将不会被打印</span>
+                </span>
+            </div>
+            <div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>{{ 'ReportType' | translate }}</th>
+                            <th>{{ 'PaperType' | translate }}</th>
+                            <th>{{ 'PaperSize' | translate }}</th>
+                            <th>{{ 'TotalPrintNumber' | translate }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in $ctrl.print.reportSummary">
+                            <td>{{item.modalityType}}</td>
+                            <td>{{item.pageType}}</td>
+                            <td>{{item.pageSize}}</td>
+                            <td>{{item.count}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr />
+            <div>
+                <span>总打印进度</span>
+            </div>
+            <div ng-if="lessPaper">
+                <span>纸张打印机可能缺纸，如果仍然继续打印，请点击“打印”按钮。</span>
+            </div>
+            <div>
+                <uib-progressbar class="progress-striped active" max="$ctrl.print.estimateTime" value="$ctrl.print.finishedPrint"></uib-progressbar>
+            </div>
+            <div ng-if="$ctrl.print.isFinish">
+                <span>
+                    <span>打印完成!</span>
+                    <span style="color:red" ng-if="$ctrl.print.hasError">其中有{{$ctrl.print.failedTasks}}个打印任务失败。</span>
+                </span>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-default" style="width: 74px; height: 34px" type="button" ng-click="$ctrl.centralPrint()" ng-disabled="$ctrl.isPrinting">
+                <span class="icon-ico_print" style="width: 74px; height: 34px; font-size: 1.8em">
+                    <span class="path1"></span><span class="path2"></span>
+                </span>
+            </button>
+            <button class="btn btn-default" type="button" ng-click="$ctrl.cancel()">{{$ctrl.print.dismiss}}</button>
+        </div>
+    </script>
+    <div class="content-container">
+        <nav id="mainNavBar" class="navbar navbar-default navbar-static-top navbar-width-1280" role="navigation" style="z-index:2;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#searchResult">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--<div class="navbar-brand">
+
+                    </div>-->
+                </div>
+                <div class="collapse navbar-collapse registrations-op-navbar" id="searchResult">
+                    <div class="row">
+                        <ul class="nav navbar-nav  worklist-navbar-nav" style="margin-right:auto;">
+                            <li class="divider-vertical">
+                                <span class="icon-ico_sidepanel_expand icon-fontsize" ng-click="toggleLeft()">
+                                    <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span>
+                                </span>
+
+                            </li>
+                            <li><input type="text" class="form-control" placeholder="{{'PatientID' | translate}}" ng-model="model.patientID" vt-enter="searchWorklist()" /></li>
+                            <li><input type="text" class="form-control" placeholder="{{'PatientName' | translate}}" ng-model="model.patientName" vt-enter="searchWorklist()" /></li>
+                            <li><input type="text" class="form-control" placeholder="{{'AccessionNumber' | translate}}" ng-model="model.accessionNumber" vt-enter="searchWorklist()" /></li>
+                            <li><button type="button" class="btn btn-warning form-control icon-ico_search" ng-click="searchWorklist()" vt-enter="searchWorklist()" ng-disabled="isInitializing"></button></li>
+                            <li class="divider-vertical">
+                                <span class="icon-ico_moreoption icon-fontsize" data-toggle="collapse" data-target="#moreoption" aria-expanded="true" aria-controls="moreoption" style="background-color:#F3EDE3">
+                                    <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span>
+                                </span>
+                            </li>
+                            <li>
+                                <div class="dropdown" style="display:inline-block">
+                                    <select class="form-control" ng-model="selectedPrinter" ng-options="t.terminalId as t.terminalId for t in terminals">
+                                        <option value="" style="color:#808080"> {{ 'SelectPrinter' | translate }}</option>
+                                    </select>
+                                </div>
+                            </li>
+
+
+                            <li class="divider-vertical">
+                                <span class="icon-ico_print icon-fontsize" ng-click="hasCentralPrintPermission && centralPrint()" ng-class="{disabled_permission:!hasCentralPrintPermission}">
+                                    <span class="path1"></span><span class="path2"></span>
+                                </span>
+                            </li>
+
+                            <li>
+                                <span class="icon-ico_recombine  icon-fontsize" ng-disabled="true">
+                                    <span class="path1"></span><span class="path2"></span><span class="path3"></span>
+                                </span>
+                            </li>
+                            <li class="span_align"><span>&nbsp;<input type="checkbox" class="btn-sm" ng-model="isAutoRefresh" ng-change="setAutoRefresh()" />&nbsp;&nbsp;&nbsp;{{ 'AutoRefresh' | translate }}&nbsp;&nbsp;&nbsp;</span></li>
+
+                        </ul>
+                    </div>
+                    <div id="moreoption" class="row form-inline collapse in">
+                        <ul class="nav navbar-nav  worklist-navbar-nav" style="margin-right:auto;">
+                            <li class="divider-vertical">
+
+                                <span class="icon-ico_clear icon-fontsize" ng-click="clearSelections()" style="font-size: 1.6rem;">{{'Clear' | translate}}</span>
+                            </li>
+
+                            <li class="span_align"><span>{{ 'ExamDate' | translate }}</span></li>
+                            <li>
+                                <p class="input-group">
+                                    <input type="text" class="form-control" uib-datepicker-popup="{{dateFormat}}" placeholder="{{'StartDate' | translate}}" datepicker-options="startDateOptions" show-button-bar="false"
+                                           is-open="popupStart.opened" ng-change="setEndDateOption()" ng-model="model.createDateRange.startTime" readonly="readonly">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="openDateStart()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="span_align"><span>{{'To' | translate}}</span></li>
+                            <li>
+                                <p class="input-group">
+                                    <input type="text" class="form-control" uib-datepicker-popup="{{dateFormat}}" placeholder="{{'EndDate' | translate}}" datepicker-options="endDateOptions" show-button-bar="false"
+                                           is-open="popupEnd.opened" ng-change="setStartDateOption()" ng-model="model.createDateRange.endTime" readonly="readonly">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="openDateEnd()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </p>
+                            </li>
+
+                            <li class="divider-vertical-left">
+                                <div class="dropdown">
+                                    <select class="form-control" ng-model="model.patientSex">
+                                        <option value="" style="color:#808080">{{'PatientSex' | translate}}</option>
+                                        <option ng-repeat="item in patientSex.valueList" value="{{item.itemValue}}">
+                                            {{item.itemName | translate}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown" style="display:inline-block">
+                                    <select class="form-control" ng-model="model.reportStatus">
+                                        <option value="" style="color:#808080">{{'ReportStatus' | translate}}</option>
+                                        <option ng-repeat="item in reportStatus.valueList" value="{{item.itemValue}}">
+                                            {{item.itemName | translate}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown" style="display:inline-block">
+                                    <select class="form-control" ng-model="model.reportPrintStatus">
+                                        <option value="" style="color:#808080">{{'ReportPrintStatus' | translate}}</option>
+                                        <option ng-repeat="item in reportPrintStatus.valueList" value="{{item.itemValue}}">
+                                            {{item.itemName | translate}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown" style="display:inline-block">
+                                    <select class="form-control" ng-model="model.filmPrintStatus" ng-hide="isOnlyReport">
+                                        <option value="" style="color:#808080">{{'FilmPrintStatus' | translate}}</option>
+                                        <option ng-repeat="item in filmPrintStatus.valueList" value="{{item.itemValue}}">
+                                            {{item.itemName | translate}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown" style="display:inline-block">
+                                    <select class="form-control" ng-model="model.printMode" ng-hide="isOnlyReport">
+                                        <option value="" style="color:#808080">{{'PrintMode' | translate}}</option>
+                                        <option ng-repeat="item in printModes.valueList" value="{{item.itemValue}}">
+                                            {{item.itemName}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown" style="display:inline-block">
+                                    <select class="form-control" ng-model="model.modalityType">
+                                        <option value="{{modalities}}" style="color:#808080">{{'ModalityType' | translate}}</option>
+                                        <option ng-repeat="item in modalityTypes" value="{{item}}">
+                                            {{item}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown" style="display:inline-block">
+                                    <select class="form-control" ng-model="model.patientType">
+                                        <option value="" style="color:#808080">{{'PatientType' | translate}}</option>
+                                        <option ng-repeat="item in patientType.valueList" value="{{item.itemValue}}">
+                                            {{item.itemName}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown" style="display:inline-block">
+                                    <select class="form-control" ng-model="model.department">
+                                        <option value="{{allDepartments}}" style="color:#808080">{{'Department' | translate}}</option>
+                                        <option ng-repeat="item in departments" value="{{item.id}}">
+                                            {{item.departmentName}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown" style="display:inline-block" ng-show="incompleteEnabled">
+                                    <select class="form-control" ng-model="model.completeStatus">
+                                        <option value="" style="color:#808080">{{'CompleteStatus' | translate}}</option>
+                                        <option ng-repeat="item in completeStatuses" value="{{item.value}}">
+                                            {{item.name | translate}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div ui-grid="worklistRecordsOptions" ui-grid-pagination ui-grid-expandable ui-grid-auto-resize ui-grid-resize-columns ng-style="{'margin-top':'-20px','height': gridHeight + 'px'}" class="grid"></div>
+    </div>
+</md-content>

@@ -1,0 +1,13 @@
+[t5]
+SnapshotXmlFile=snapshot_5.xml
+ContentType=text/html
+StepName=Url: workarea
+Total=1
+FileName1=t5.html
+RequestHeaderFile=t5_RequestHeader.txt
+ResponseHeaderFile=t5_ResponseHeader.txt
+RawStepEndTime=1515461685008
+RawStepName=workarea
+RequestBodyFile=t5_RequestBody.txt
+RawStepStartTime=1515461684363
+URL1=http://10.184.129.108/Platform/workarea

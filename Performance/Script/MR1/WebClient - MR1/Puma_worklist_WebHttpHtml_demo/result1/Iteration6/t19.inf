@@ -1,0 +1,13 @@
+[t19]
+SnapshotXmlFile=snapshot_19.xml
+ContentType=DummyContentType
+StepName=Custom Request: GetDepartmentInfo
+Total=1
+FileName1=t19.UNK
+RequestHeaderFile=t19_RequestHeader.txt
+ResponseHeaderFile=t19_ResponseHeader.txt
+RawStepEndTime=0
+RawStepName=GetDepartmentInfo
+RequestBodyFile=t19_RequestBody.txt
+RawStepStartTime=1515461775562
+URL1=http://10.184.129.108/webapi/api/department/departments

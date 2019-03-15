@@ -1,0 +1,11 @@
+GET /webapi/api/reconciliation/getUnmatchImages?days=1 HTTP/1.1
+Cookie: ASP.NET_SessionId=1vjzxg2gkzco0tejgzeiku3o; ApiToken=%7B%22access_token%22%3A%22ctni7bKB3xU2pKiHmZHA-JhrvIyGpuQVPFnSn2XrS3VEQ7rCcUY1udbB-Trz_u-Bi0H9lwmOUwrS9tdHcrgSYyDLuhfrUWyITnHqqv7UOOaMuGr5PYfCndRMDCy9_dK-FiZGFkNytV_iS4XG-fgpEsDuoE7bryRLf68rc_dPlf9K8bmBWENpFclAP0-cqTgLBWVzV5ROVxn9kAooi_PqoQ%22%2C%22token_type%22%3A%22bearer%22%2C%22expires_in%22%3A604800%2C%22refresh_token%22%3A%225f62c303-cd0f-4bda-9abb-2549fcd227b7%22%2C%22userName%22%3A%227%22%2C%22currentRole%22%3A%22Administrator%22%2C%22strDepartments%22%3A%22%22%2C%22strModalities%22%3A%22%22%2C%22onlyReport%22%3A%22false%22%2C%22strUserPermissionList%22%3A%22CentralPrint%3A1%7CChangeHoldFlag%3A1%7CChangePrintMode%3A1%7CChangePrintStatus%3A1%7Cconfig%3A1%7CConfigRole%3A1%7CConfigSystem%3A1%7CConfigUser%3A1%7CCorrectReconciliation%3A1%7CDelete%3A1%7CPrinterMonitor%3A1%7CPrintTaskManagement%3A1%7CQCLog%3A1%7CReconciliation%3A1%7CRestoreFilm%3A1%7CStatisticsReport%3A1%7Cworklist%3A1%7C%22%7D; .AspNet.ApplicationCookie=9jZiWtTI-IbSVijbwz0eP63H1sJHVK3vHhpKRrFOIhwLDwTnQ-gxjt-fzUOwDFSHxkI7ZiwkwnkzJmXX7PauJNqDt1EHA0mzy2axdIZE7z0E9s_HmI8BIsyrgJefSZ647lBNVVE-YVfMlvqbtEk182DoxXsGRAoqIsjQ2leS5kHtuUvhMnMz7MCXGajv16qgY1yXSsox1UYf8YDO_rKuH3V4WkN-8srWLhCYC88L_-KXE5vspv4qIB2cgWQnuZLIusaY1cwtxMFoEkX0a15UXyKdJeW7eStGFMpWyxPBVVoW2Vr6Hxb-nipE9Sob76s-
+Referer: http://10.184.129.108/Platform/workarea/terminalmonitor
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.8
+Accept: */*
+Host: 10.184.129.108
+Connection: Keep-Alive
+Cache-Control: no-cache
+

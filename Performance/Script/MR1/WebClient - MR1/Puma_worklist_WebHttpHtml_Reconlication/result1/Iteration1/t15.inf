@@ -1,0 +1,13 @@
+[t15]
+SnapshotXmlFile=snapshot_15.xml
+ContentType=DummyContentType
+StepName=Url: getUnmatchImages
+Total=1
+FileName1=t15.UNK
+RequestHeaderFile=t15_RequestHeader.txt
+ResponseHeaderFile=t15_ResponseHeader.txt
+RawStepEndTime=1536736411842
+RawStepName=getUnmatchImages
+RequestBodyFile=t15_RequestBody.txt
+RawStepStartTime=1536736351163
+URL1=file:

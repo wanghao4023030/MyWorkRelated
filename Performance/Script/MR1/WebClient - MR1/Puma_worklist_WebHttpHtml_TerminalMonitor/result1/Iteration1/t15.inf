@@ -1,0 +1,13 @@
+[t15]
+SnapshotXmlFile=snapshot_15.xml
+ContentType=text/html
+StepName=Url: reconciliation-list.html
+Total=1
+FileName1=t15.html
+RequestHeaderFile=t15_RequestHeader.txt
+ResponseHeaderFile=t15_ResponseHeader.txt
+RawStepEndTime=1536738312924
+RawStepName=reconciliation-list.html
+RequestBodyFile=t15_RequestBody.txt
+RawStepStartTime=1536738312379
+URL1=http://10.184.129.108/Platform/app/workarea/reconciliation/views/reconciliation-list.html

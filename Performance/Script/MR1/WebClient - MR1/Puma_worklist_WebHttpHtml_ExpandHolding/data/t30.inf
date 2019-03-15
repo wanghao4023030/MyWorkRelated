@@ -1,0 +1,12 @@
+[t30]
+FileName1=t30_CheckLoginStatus.html
+URL1=http://10.184.129.208/Platform/Account/CheckLoginStatus
+Total=2
+ContentType=
+SnapshotXmlFile=snapshot_30.xml
+RequestHeaderFile=t30_RequestHeader.txt
+RequestBodyFile=NONE
+FileName2=t30_ico_toolbar_2x_hover.html
+URL2=http://10.184.129.208/Platform/app-resources/Images/PS_Button/ico_toolbar_2x_hover.png
+[ProtocolInfo]
+ProtocolId=QTWeb

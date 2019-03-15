@@ -1,0 +1,13 @@
+[t21]
+SnapshotXmlFile=snapshot_21.xml
+ContentType=DummyContentType
+StepName=Custom Request: GetDepartmentInfo
+Total=1
+FileName1=t21.UNK
+RequestHeaderFile=t21_RequestHeader.txt
+ResponseHeaderFile=t21_ResponseHeader.txt
+RawStepEndTime=0
+RawStepName=GetDepartmentInfo
+RequestBodyFile=t21_RequestBody.txt
+RawStepStartTime=1515461752524
+URL1=http://10.184.129.108/Platform/Account/CheckLoginStatus

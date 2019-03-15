@@ -1,0 +1,203 @@
+﻿
+/** {
+    padding: 0;
+    margin: 0;
+}*/
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+button,
+select,
+html,
+textarea,
+input {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.btn_span_puma {
+    color: #fff;
+    padding: 0px 20px;
+    font-size: 1.3em;
+}
+
+.icon-fontsize {
+    font-size: 2.0rem;
+    padding: 10px;
+    display: block;
+}
+
+    .icon-fontsize:hover {
+        cursor: pointer;
+    }
+
+.divider-vertical {
+    height: 46px;
+    padding: 0 3px;
+    border-right: 2px solid #e7e7e7;
+}
+
+.divider-vertical-left {
+    height: 46px;
+    padding: 0 3px;
+    border-left: 2px solid #e7e7e7;
+}
+
+.navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.puma-navbar {
+    -webkit-box-shadow: 0 1px 0px #999;
+    -moz-box-shadow: 0 1px 0px #999;
+    box-shadow: 0 1px 0px #999;
+}
+
+    .puma-navbar .navbar-brand {
+        font-weight: 800;
+        background-image: -webkit-linear-gradient(top, #F8B756 0%, #ED802B 100%);
+        color: #fff;
+        padding: 6px 10px;
+        display: inline-block;
+        /*border-right: 5px solid #fff;*/
+    }
+
+    .puma-navbar div.navbar-brand:hover {
+        background-image: -webkit-linear-gradient(top, #F8B756 0%, #ED802B 100%);
+        color: #fff;
+    }
+
+    .puma-navbar .navbar-nav > li > a:hover {
+        text-decoration: none;
+        cursor: pointer;
+        color: #ED802B;
+        border-bottom: 4px solid #F6A623;
+    }
+
+    .puma-navbar .navbar-nav > li > a.active {
+        text-decoration: none;
+        cursor: pointer;
+        color: #ED802B;
+        border-bottom: 4px solid #F6A623;
+    }
+
+    .puma-navbar .navbar-nav > li > a {
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+
+.navbar-right span.icon-general {
+    /*font-size: 32px;*/
+    color: #fff;
+    display: inline-block;
+    line-height: 1;
+    float: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.error {
+    color: red;
+}
+
+.content {
+    position: absolute;
+    bottom: 30px;
+    top: 50px;
+    width: 100%;
+    overflow: auto;
+}
+
+.footer-workarea {
+    position: absolute;
+    height: 30px;
+    bottom: 0;   
+    padding: 5px 10px 10px 10px;
+    width: 100%;
+    color: #FFF;
+    background-color: #585858;
+}
+
+.hint_necessary {
+    margin-left: 2px;
+    /*color: #ED802B;*/
+    font-size: 0.7em;
+}
+.icon_font_size {
+    font-size:18px;
+}
+.checkbox_position {
+    position: absolute;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+}
+
+.input_radius {
+    border-radius: 0px;
+}
+
+p.puma_module_title {
+    padding: 10px;
+    margin: 0px;
+    background: linear-gradient(to bottom, #464646 0%, #18191a 100%) repeat scroll 0% 0% transparent;
+    color: #f2f2f2;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.admin_module_title {
+    padding: 10px;
+    margin: 5px 0px 0px 0px;
+    /*color: #f2f2f2;*/
+    border-bottom: 1px solid #E6E6E6;
+}
+
+
+.disabled_permission > span,
+.disabled_permission > span:hover,
+.disabled_permission > span:focus,
+.disabled_permission > i,
+.disabled_permission > i:hover,
+.disabled_permission > i:focus,
+.disabled_permission > a,
+.disabled_permission > a:hover,
+.disabled_permission > a:focus {
+    color: #999999 !important;
+    background-color: #ffffff !important;
+    border-color: #dddddd !important;
+    cursor: not-allowed !important;
+}
+/*.disabled_permission > div,
+.disabled_permission > div:hover,
+.disabled_permission > div:focus {
+     color: #333;
+    background-color: #333;
+    border-color: #dddddd;
+    cursor: not-allowed;
+
+}*/
+/*.break-word {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: normal;
+    word-break: normal;
+    white-space: normal;
+}*/
+
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #ED802B;
+    background-color: #fff;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-image: -webkit-linear-gradient(top, #F8B756 0%, #ED802B 100%);
+    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#ffe8e8e8', GradientType=0);*/
+    background-repeat: repeat-x;
+}

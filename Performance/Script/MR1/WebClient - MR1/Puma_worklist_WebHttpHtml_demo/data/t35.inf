@@ -1,0 +1,10 @@
+[t35]
+FileName1=t35_getReport.html
+URL1=http://10.184.129.208/webapi/api/reconciliation/getReport?id=5BC8EF8589001F02268C14ED825EB276
+Total=1
+ContentType=
+SnapshotXmlFile=snapshot_35.xml
+RequestHeaderFile=t35_RequestHeader.txt
+RequestBodyFile=NONE
+[ProtocolInfo]
+ProtocolId=QTWeb

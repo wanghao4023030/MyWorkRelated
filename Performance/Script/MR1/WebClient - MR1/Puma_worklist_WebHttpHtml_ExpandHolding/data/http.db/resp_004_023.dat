@@ -1,0 +1,33 @@
+﻿worklistModule.directive("worklistSiderbarView", ['$log', '$timeout', function ($log, $timeout) {
+    $log.debug("worklistSiderbarView.directive()...");
+   
+    //如果在 directive 中直接返回一个函数，则这个函数会作为 $compile 的返回值，也即是作为 link 函数使用。
+    //这里说的 compile 和 link 都是一个指令的组成部分，一个完整的定义应该返回一个对象，这个对象包括了多个属性：
+    //link 函数是由 $compile 函数返回的，也就像前面说的，应该把改变 DOM 结构的逻辑放在 $compile 函数中做。
+    return {
+        restrict: 'E',
+        templateUrl: 'app/workarea/worklist/views/worklist-siderbar.html',
+        controller: 'WorklistSiderbarContorller',
+        scope:{
+        
+        },
+        link: function (scope, element, attrs) {
+            
+            
+
+        }
+    };
+    
+}])
+.directive("worklistMainbodyView", ['$log', '$timeout', function ($log, $timeout, $http) {
+    $log.debug("worklistMainbodyView.directive()...");
+    return {
+        restrict: 'E',
+        templateUrl: 'app/workarea/worklist/views/worklist-mainbody.html',
+        controller: 'WorklistMainbodyController',
+        link: function (scope, element, attrs) {
+            
+        }
+    };
+}])
+;

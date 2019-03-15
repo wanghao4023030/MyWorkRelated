@@ -1,0 +1,224 @@
+﻿var logon = angular.module('logonapp', ['ui.router', 'pascalprecht.translate', 'ui.bootstrap', 'ngAnimate', 'app.common', 'toaster']);
+logon.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', '$translateProvider', '$translatePartialLoaderProvider',
+    function ($stateProvider, $locationProvider, $urlRouterProvider, $translateProvider, $translatePartialLoaderProvider) {
+        // use the HTML5 History API http://diveintohtml5.info/history.html 
+        $locationProvider.html5Mode(true); // must add set <base href="~/">
+
+
+        // angular-translate configuration
+        var configurateTranslation = function () {
+            $translateProvider.useLoader('$translatePartialLoader', {
+                urlTemplate: 'app-resources/i18n/{lang}/{part}.json'
+            });
+            $translateProvider.preferredLanguage('zh-CN');
+        };
+        configurateTranslation();
+
+        $stateProvider
+            .state("logon", {
+                url: "/",
+                templateUrl: "app/login/login-view.html",
+                controller: "LoginController"
+            })
+        $urlRouterProvider.otherwise('/');
+
+    }
+]);
+
+logon.controller('LoginController', ['$scope', '$log', '$http', '$location', 'enums', 'toaster', '$translate', '$translatePartialLoader', '$cookies', '$timeout', 'base64', 'openDialog',
+    '$window',
+    function ($scope, $log, $http, $location, enums, toaster, $translate, $translatePartialLoader, $cookies, $timeout, base64, openDialog,
+        $window) {
+        $log.debug('LoginController ...');
+
+        //change on remember username for rememberMe button
+        //this method is called to remember the user's username and password
+        var rememberMe = function () {
+            if ($scope.isRemember) {
+                //if ($scope.loginform.loginName && $scope.loginform.loginlPwd) {
+                if ($scope.loginform.loginName) { // remembered loginName only
+                    var now = new Date();
+                    now.setDate(now.getDate() + 30);
+                    $cookies.put('loginame', base64.Base64.encode($scope.loginform.loginName), { expires: now });
+                    $cookies.put('isRemember', $scope.isRemember, { expires: now });
+
+                }
+            } else {
+                $cookies.remove('loginame');
+                $cookies.remove('isRemember');
+            }
+        };
+
+        var locationToLogin = function () {
+            $window.location.href = urlPrefix + '/account/login';
+        };
+        var login = function () {
+
+            initFlage();
+
+            var loginFormData = {
+                loginname: $scope.loginform.loginName,
+                password: $scope.loginform.loginlPwd
+            }
+
+            $http.post(urlPrefix + 'account/login', loginFormData).success(function (result) {
+
+                if (result.CheckState === enums.checkState.success) {
+                    locationToLogin();
+                }
+                else if (result.CheckState === enums.checkState.firstLogin) {
+                    // change password
+                    switchPage(true);
+                    $scope.isFirstLoginMessage = result.Message;
+                }
+                else if (result.CheckState === enums.checkState.userNameNotExist) {
+                    $scope.loginError = true;
+                    $scope.loginErrorMessage = result.Message;
+                }
+                else if (result.CheckState === enums.checkState.wrongPassword) {
+                    $scope.loginPwdError = true;
+                    $scope.loginPwdErrorMessage = result.Message;
+                }
+                else if (result.CheckState === enums.checkState.passwordWillExpire) {
+                    // alter dialog comfirm whether change password
+                    openDialog.openIconDialogYesNo(openDialog.NotifyMessageType.Warn, '', result.Message, function () {
+                        // yes                      
+                        switchPage(false);
+                    }, function () {
+                        // cancel
+                        locationToLogin();
+                    });
+
+                }
+                else if (result.CheckState === enums.checkState.passwordExpired) {
+                    // change password
+                    switchPage(false);
+                    $scope.isFirstLoginMessage = result.Message;//passwordExpired Message
+                }
+
+                else if (result.CheckState === enums.checkState.unKnown) {
+                    // 提示 未知错误
+                    $scope.loginErrorMessage = result.Message;
+                    $scope.loginError = true;
+                }
+            }).error(function (error) {
+                $log.debug(error);
+                if (result.CheckState === enums.checkState.unKnown) {
+                    // 提示 未知错误
+                    $scope.loginErrorMessage = result.Message;
+                    $scope.loginError = true;
+                }
+            });
+
+        };
+
+        var switchPage = function (isFirstLogin) {
+            $scope.isFirstLogin = isFirstLogin;
+            $scope.isloginpage = !$scope.isloginpage;
+        };
+
+        var save = function () {
+            // call server change password
+            initFlage();
+            var userInfo = { userName: $scope.loginform.loginName, newPwd: $scope.newPassword, oldPwd: $scope.oldPassword };
+
+            //var cookiesApiToken = $cookies.get('ApiToken');
+            //if (!cookiesApiToken) {
+            //    $log.error("Fail to get api token, please log in first.");
+            //    return {};
+            //}
+            //var apiTokenObj = JSON.parse(cookiesApiToken);
+            //var apiToken = apiTokenObj.access_token;
+            //var tokenType = apiTokenObj.token_type;
+            $http({
+                method: 'POST',
+                url: $scope.webApiHostUrl + '/api/account/password',
+                data: userInfo,
+                //headers: {
+                //    //'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                //    'Authorization': tokenType + ' ' + apiToken,
+                //    'withCredentials': true
+                //}
+            }).success(function (result) {
+                if (result.checkState === enums.checkState.success) {
+                    //reset.
+                    $scope.newPassword = '';
+                    $scope.oldPassword = '';
+                    $scope.confirmNewPassword = '';
+
+                    // alter dialog
+                    openDialog.openIconDialogOkFun(openDialog.NotifyMessageType.Warn, '', $translate.instant('UpdatePasswordSuccess'), function () {
+                        // yes     
+                        $window.location.href = urlPrefix + '/account/logoff';
+                        // switchPage(false);
+                    });
+
+                } else {
+                    if (result.checkState === enums.checkState.userNameNotExist) {
+                        $scope.wrongLoginName = true;
+                        $scope.wrongLoginNameMessage = result.message;
+
+                    } else if (result.checkState === enums.checkState.wrongOldPassword) {
+                        $scope.wrongOldPassword = true;
+                        $scope.wrongOldPasswordMessage = result.message;
+                    }
+                    else if (result.checkState === enums.checkState.invalidNewPwd) {
+                        $scope.wrongNewPassword = true;
+                        $scope.wrongNewPasswordMessage = result.message;
+                    }
+                }
+            }).error(function (error) {
+                $log.error(error);
+            });
+
+        };
+
+        var initFlage = function () {
+            //$scope.isRemember = false;
+
+            $scope.loginError = false;
+            $scope.loginPwdError = false;
+
+            $scope.wrongLoginName = false;
+            $scope.wrongOldPassword = false;
+            $scope.wrongNewPassword = false;
+
+            $scope.isFirstLogin = false;
+        };
+
+        (function initialize() {
+            $log.debug('LoginController.initialize()...');
+            $translatePartialLoader.addPart('login');
+            $translate.refresh();
+            //var webBaseUrl = $location.protocol() + '//' + $location.host() + ($location.port() ? (':' + $location.port()) : '');
+            $scope.webApiHostUrl = $location.protocol() + '://' + $location.host() + ':' + $location.port() + urlPrefixWebApi;
+            $scope.isloginpage = true;
+
+            initFlage();
+            $scope.newPassword = '';
+            $scope.oldPassword = '';
+            $scope.confirmNewPassword = '';
+            $scope.help_DifferentPassword = 'Entered passwords differ!';
+            $scope.loginform = {
+                loginName: '',
+                loginlPwd: ''
+            };
+
+
+            // this condition checks whether the user is remembered or not
+            //if ($cookies.get('loginame') && $cookies.get('loginpwd')) {
+            if ($cookies.get('loginame')) { // remembered loginName only
+                // retrieving cookie
+                $scope.loginform.loginName = base64.Base64.decode($cookies.get('loginame'));
+                //$scope.loginform.loginlPwd = base64.Base64.decode($cookies.get('loginpwd'));
+                $scope.isRemember = $cookies.get('isRemember') === 'true' ? true : false;
+            };
+
+            $scope.switchPage = switchPage;
+            $scope.login = login;
+            $scope.save = save;
+            $scope.rememberMe = rememberMe;
+        }());
+
+    }]);
+

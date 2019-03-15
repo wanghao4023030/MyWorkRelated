@@ -1,0 +1,20 @@
+﻿commonModule.service('IpAddressHandler', function () {
+    this.splitAddressSections = function (ipAddress) {
+        if (ipAddress != null) {
+            var sections = ipAddress.split('.');
+            if (sections.length == 4)
+            {
+                var ipAddressSection = new Array();
+                for (var i = 0; i < 4; i++) {
+                    ipAddressSection[i] = parseInt(sections[i]);
+                }
+                return ipAddressSection;
+            }
+        }
+        return new Array();
+    };
+
+    this.combineIpAddress = function (ipAddressSection) {
+        return ipAddressSection.join('.');
+    };
+});

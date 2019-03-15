@@ -1,0 +1,103 @@
+﻿body.login {
+    margin: 0px;
+    padding: 0px;
+    background: #fff;
+    color: #333;
+}
+
+input {
+    max-width: 480px;
+}
+
+.login_wrapper {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../../app-resources/images/login/bg_page_logon.jpg) center ;
+}
+
+.form_wrapper {
+    display: block;
+    width: 470px;
+    height: 460px;
+    min-height: 400px;
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 40%;
+    /*margin-left: auto;
+    margin-right: auto;*/
+    box-shadow: 0 0 30px #ccc;
+    background-image: initial;
+    background-color: #fff;
+}
+
+
+    .form_wrapper .form-group {
+        padding-bottom: 10px;
+        position: relative;
+        min-height: 50px;
+    }
+
+.form-group input {
+    padding-left: 40px;
+}
+
+.form-control {
+    border-radius: 0;
+    color: #333;
+    height: 50px;
+    position: relative;
+    display: inline-block;
+    font-size: 1.1em;
+}
+
+span.glyphicon {
+    color: #aaa;
+    display: block;
+    top: 18px;
+    font-size: 1.2em;
+}
+
+.form-control + .glyphicon {
+    position: absolute;
+    left: 0;
+    padding: 0px 15px;
+}
+
+div.puma-module-title {
+    border-bottom: 2px solid #E6E6E6;
+    padding: 15px 0px 10px 0px;
+}
+
+span.puma-module-title-ico {
+    font-size: 2.5em;
+    color: #F5A623;
+}
+
+.btn_login {
+    padding-left: 40px;
+    padding-right: 40px;
+    letter-spacing: 10px;
+    width: 100%;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.btn_changepassword {
+    padding-left: 30px;
+    padding-right: 30px;
+    letter-spacing: 3px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/*.has-error div {
+    font-size: 14px;
+    word-break: break-all;
+    color: white;
+    width: 310px;
+    padding: 0.2em 0.6em 0.3em;
+    border-radius: 0.25em;
+    font-weight: bold;
+    text-align: left;
+}*/

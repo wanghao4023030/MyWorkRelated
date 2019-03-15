@@ -1,0 +1,15 @@
+﻿webservices.factory('terminalmonitorService', ['$http', 'apiConfig',  function ($http, apiConfig) {
+    'use strict';
+    return {
+        getTerminalMonitorings: function () {
+            return $http.get('/api/terminalmonitoring', apiConfig.create());
+        },
+        getErrorCodes: function (filter) {
+            return $http.get('/api/errorcode', apiConfig.create(filter));
+        },
+        downloadP3Data: function () {
+            return $http.get('/api/terminalmonitoring/downloadp3data', apiConfig.create());
+        }
+    };
+}]);
+

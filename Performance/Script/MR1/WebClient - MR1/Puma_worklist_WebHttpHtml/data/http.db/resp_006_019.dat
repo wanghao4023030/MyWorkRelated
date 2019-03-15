@@ -1,0 +1,8 @@
+﻿webservices.factory('systemInformationServer', ['$http', 'apiConfig', function ($http, apiConfig) {
+    'use strict';
+    return {
+        getSystemVersion: function () {
+            return $http.get('/api/systemversion', apiConfig.create());
+        } 
+    };
+}]);

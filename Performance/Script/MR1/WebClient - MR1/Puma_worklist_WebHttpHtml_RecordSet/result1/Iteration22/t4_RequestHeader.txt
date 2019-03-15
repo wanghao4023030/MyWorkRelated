@@ -1,0 +1,11 @@
+GET /Platform//account/login HTTP/1.1
+Cookie: ASP.NET_SessionId=nk3gxrpjlftz3ods3dqa2xwk; ApiToken=%7B%22access_token%22%3A%22w9v70V5nXksRzwlJLPxYVmxSkNF1cd8tNvJsf8xlgnlhg8d2VK1P9W6o7z6nvLd71rHu3VwU19zMwXLITgOxcK6XoH-_hyoK7_4jgvfxz_76Q7Gy2Gv4_mRAYMbo-ynAcHg8kQN9VwZ8e9hnA0qQ6Ar0yiTGgKU_I25BDoDvIZPIx6h0ecqy3nnaM_uyeiJUyToYgwmCHyEdamkVK9xHwQ%22%2C%22token_type%22%3A%22bearer%22%2C%22expires_in%22%3A604799%2C%22refresh_token%22%3A%222900cf55-1df2-42f7-9656-445b25c906cc%22%2C%22userName%22%3A%2218%22%2C%22currentRole%22%3A%22Administrator%22%2C%22strDepartments%22%3A%22%22%2C%22strModalities%22%3A%22%22%2C%22onlyReport%22%3A%22false%22%2C%22strUserPermissionList%22%3A%22CentralPrint%3A1%7CChangeHoldFlag%3A1%7CChangePrintMode%3A1%7CChangePrintStatus%3A1%7Cconfig%3A1%7CConfigRole%3A1%7CConfigSystem%3A1%7CConfigUser%3A1%7CCorrectReconciliation%3A1%7CDelete%3A1%7CPrinterMonitor%3A1%7CPrintTaskManagement%3A1%7CQCLog%3A1%7CReconciliation%3A1%7CRestoreFilm%3A1%7CStatisticsReport%3A1%7Cworklist%3A1%7C%22%7D; .AspNet.ApplicationCookie=jria-KGpgmuJ_wTyh8C1s1XJWc-AItr3i0ydVAlTm7PgW_JimJCqpdnwqEE0RD5eWUcpMz5kJN2P8FvH1czWXwmMyPRtyWpP8UhevFdkpGhbVsaJH0aaJCDzydFUPGvuDvofyYv7M3CkJdWyI7sstr-Y09zgAfmnuIClVAXblsxs_Jd_UomtmQWegjpV0h4RujUX3fpfyZZmdKKh_awHKox90TeORN7GSrG3fJMLESBjTLsV_XHKjuYf-_7OP95YU3MGso5-3xZDZCCTQv8iKxCMWnmdGZodPAnGtP9pL3QZfJUVFxnBaZb7KA_z88G8
+Referer: http://10.184.129.108/Platform/
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.8
+Accept: */*
+Host: 10.184.129.108
+Connection: Keep-Alive
+Cache-Control: no-cache
+

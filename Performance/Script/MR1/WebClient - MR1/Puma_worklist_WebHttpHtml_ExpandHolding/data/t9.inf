@@ -1,0 +1,10 @@
+[t9]
+FileName1=t9_tableRowsPerPage.html
+URL1=http://10.184.129.208/webapi/api/tableRowsPerPage
+Total=1
+ContentType=
+SnapshotXmlFile=snapshot_9.xml
+RequestHeaderFile=t9_RequestHeader.txt
+RequestBodyFile=NONE
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,10 @@
+[t12]
+FileName1=t12_systemversion.html
+URL1=http://10.184.129.208/webapi/api/systemversion
+Total=1
+ContentType=
+SnapshotXmlFile=snapshot_12.xml
+RequestHeaderFile=t12_RequestHeader.txt
+RequestBodyFile=NONE
+[ProtocolInfo]
+ProtocolId=QTWeb

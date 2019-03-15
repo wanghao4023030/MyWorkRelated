@@ -1,0 +1,54 @@
+﻿// worklist service proxy
+webservices.factory('statisticsService', ['$http', '$log', 'apiConfig', 'constants', 'resources', function ($http, $log, apiConfig, constants, resources) {
+    'use strict';
+    return {
+        getDepartmentInfos: function () {
+            return $http.get('/api/department/departments', apiConfig.create());
+        },
+        getFilmPrintCountStatisticsByModailityType: function (filter) {
+            $log.debug("filter:" + JSON.stringify(filter));
+            return $http.get('/api/statistics/getfilmprintcountstatisticsbymodalitytype', apiConfig.create(filter));
+        },
+        getFilmPrintCountStatisticsByModailityName: function (filter) {
+            $log.debug("filter:" + JSON.stringify(filter));            
+            return $http.get('/api/statistics/getfilmprintcountstatisticsbymodalityname', apiConfig.create(filter));
+        },
+        getFilmPrintCountStatisticsByTerminal: function (filter) {
+            $log.debug("filter:" + JSON.stringify(filter));
+            return $http.get('/api/statistics/getfilmprintcountstatisticsbyterminal', apiConfig.create(filter));
+        },
+        getFilmPrintCountStatisticsByFilmSize: function (filter) {
+            $log.debug("filter:" + JSON.stringify(filter));
+            return $http.get('/api/statistics/getfilmprintcountstatisticsbyfilmsize', apiConfig.create(filter));
+        },
+        getReportPrintCountStatisticsByTerminal: function (filter) {
+            $log.debug("filter:" + JSON.stringify(filter));
+            return $http.get('/api/statistics/getreportprintcountstatisticsbyterminal', apiConfig.create(filter));
+        },
+        getReportPrintCountStatisticsByModalityType: function (filter) {
+            $log.debug("filter:" + JSON.stringify(filter));
+            return $http.get('/api/statistics/getreportprintcountstatisticsbymodalitytype', apiConfig.create(filter));
+        },
+        getReportPrintCountStatisticsByTypeSize: function (filter) {
+            $log.debug("filter:" + JSON.stringify(filter));
+            return $http.get('/api/statistics/getreportprintcountstatisticsbytypesize', apiConfig.create(filter));
+        },
+        getOcrRateStatisticsByModalityName: function (filter) {
+            $log.debug("filter:" + JSON.stringify(filter));
+            return $http.get('/api/statistics/getocrratestatisticsbymodalityname', apiConfig.create(filter));
+        },
+        getOcrRateStatisticsByModalityType: function (filter) {
+            $log.debug("filter:" + JSON.stringify(filter));
+            return $http.get('/api/statistics/getocrratestatisticsbymodalitytype', apiConfig.create(filter));
+        },
+        getStorageStatistics: function () {            
+            return $http.get('/api/statistics/getstoragestatistics', apiConfig.create());
+        },
+        getCustomizedStatisticsType: function () {
+            return $http.get('/api/statistics/getcustomizedstatisticsType', apiConfig.create());
+        },
+        getCustomizedStatisticsData: function (filter) {
+            return $http.get('/api/statistics/getcustomizedstatisticsdata', apiConfig.create(filter));
+        }        
+    };
+}]);

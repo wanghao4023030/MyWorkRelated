@@ -1,0 +1,47 @@
+Start auto log messages stack - Iteration 8.	[MsgId: MMSG-10545]
+Action.c(299): web_url("CheckLoginStatus_5") started  	[MsgId: MMSG-26355]
+Action.c(299): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(299): web_url("CheckLoginStatus_5") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(315): Notify: Transaction "User_login" ended with a "Pass" status (Duration: 3.2488 Wasted Time: 0.0001).	[MsgId: MMSG-16871]
+Action.c(318): lr_think_time: 30.00 seconds.	[MsgId: MMSG-15948]
+Action.c(324): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(324): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(330): Notify: Transaction "Reconlication_Film_all" started.	[MsgId: MMSG-16999]
+Action.c(332): web_url("getUnmatchImages") started  	[MsgId: MMSG-26355]
+Action.c(332): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/reconciliation/getUnmatchImages?days=-1&departments=&modalities="  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 8.	[MsgId: MMSG-10545]
+Action.c(332): Continuing after error in Vuser script.	[MsgId: MMSG-10678]
+Action.c(341): web_url("CheckLoginStatus_7") started  	[MsgId: MMSG-26355]
+Action.c(341): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/Platform/Account/CheckLoginStatus"  	[MsgId: MMSG-26548]
+Action.c(341): web_url("CheckLoginStatus_7") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(364): Notify: Transaction "Reconlication_Film_all" ended with a "Fail" status (Duration: 20.9373 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+Action.c(364): Notify: Transaction "Reconlication_Film_all" has 1 error message(s).	[MsgId: MMSG-16818]
+Action.c(364): Notify: The 1st error message associated with transaction "Reconlication_Film_all" is "Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/reconciliation/getUnmatchImages?days=-1&departments=&modalities=""	[MsgId: MMSG-16819]
+The result is:  name	[MsgId: MMSG-17999]
+Action.c(370): Error: Reconlication_Film_all fail	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 9.	[MsgId: MMSG-10545]
+User Login website successfully: HTTP/1.1 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=utf-8
+Server: Microsoft-IIS/7.5
+X-AspNetMvc-Version: 5.2
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Wed, 13 Jun 2018 02:23:55 GMT
+Content-Length: 4
+
+true	[MsgId: MMSG-17999]
+Action.c(238): web_url("tableRowsPerPage") started  	[MsgId: MMSG-26355]
+Action.c(238): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/webapi/api/tableRowsPerPage"  	[MsgId: MMSG-26548]
+Action.c(238): web_url("tableRowsPerPage") was successful, 39 body bytes, 258 header bytes  	[MsgId: MMSG-26386]
+Action.c(246): web_url("worklistcolumns") started  	[MsgId: MMSG-26355]
+Action.c(246): Continuing after Error -26612: HTTP Status-Code=500 (NullReferenceException) for "http://10.184.129.108/webapi/api/worklist/worklistcolumns"  	[MsgId: MERR-26612]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

@@ -1,0 +1,17 @@
+[
+    {
+        "transactionName": "User_login",
+        "rawStartTime": 1536738172474,
+        "rawEndTime": 1536738311363
+    },
+    {
+        "transactionName": "GetDepartmentInfo",
+        "rawStartTime": 1536738349885,
+        "rawEndTime": 1536738381914
+    },
+    {
+        "transactionName": "Terminal_monitor",
+        "rawStartTime": 1536738381928,
+        "rawEndTime": 1536738382399
+    }
+]

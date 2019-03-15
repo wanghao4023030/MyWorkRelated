@@ -1,0 +1,251 @@
+﻿<div style="height:100%; width: 100%">
+    <div class="sidenav" style="overflow: auto" ng-style="{'width': navWidth + 'px'}">
+        <div class="title">
+            <span ng-class="{selected:seletedType=='film'}" style="position: absolute; left: 20px" ng-click="selectType('film')">胶片</span>
+            <span ng-class="{selected:seletedType=='report'}" style="position: absolute; right: 20px" ng-click="selectType('report')">报告</span>
+        </div>
+        <div id="unmatchContainer">
+            <select id="unmatchDropdown" ng-model="selectedShortcut" ng-options="t.value as t.name for t in shortcuts" ng-change="searchUmatches()"></select>
+        </div>
+        <div>
+            <treecontrol class="tree-light" options="treeOptions" ng-class="{true: 'film-leaf-icon', false: 'report-leaf-icon'}[isFilmTypeSelected]" tree-model="treedata" on-selection="showSelected(node)" selected-node="selectedNode" expanded-nodes="expandedNodes">
+                <span>{{node.label}}<i style="padding-left:4px" ng-class="{true: node.icon}[node.icon != null]"></i></span>
+            </treecontrol>
+        </div>
+    </div>
+    <div id="mianDiv" ng-style="{ 'margin-left': mainMargin + 'px'}" style="height:100%; margin-right:0px; overflow-x:hidden; overflow-y: auto">
+        <div id="searchAreaDiv">
+            <ul class="nav navbar-nav  worklist-navbar-nav" style="margin-right:auto; height: 46px">
+                <li class="divider-vertical" ng-attr-title="{{openNav ? '收起左边栏':'展开左边栏' }}">
+                    <span class="icon-fontsize" ng-class="{true: 'icon-ico_sidepanel_collapse', false: 'icon-ico_sidepanel_expand'}[openNav]" ng-click="toggleLeft()">
+                        <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span>
+                    </span>
+
+                </li>
+                <li title="输入检查编号"><input type="text" class="form-control" placeholder="{{'AccessionNumber' | translate}}" ng-model="accessionNumber" vt-enter="searchRecord()" /></li>
+                <li title="输入患者编号"><input type="text" class="form-control" placeholder="{{'PatientID' | translate}}" ng-model="patientId" vt-enter="searchRecord()" /></li>
+                <li title="搜索"><button type="button" class="btn btn-warning form-control icon-ico_search" ng-click="searchRecord()" ng-disabled="isSearchDisabled()" vt-enter="searchRecord()"></button></li>
+                <li class="divider-vertical divider-vertical-left" title="手工匹配">
+                    <span class="icon-ico_record_add icon-fontsize nav-button" ng-disabled="isEditing" ng-click="isEditing || mannualEdit()"><span>手工匹配</span></span>
+                </li>
+                <li class="divider-vertical" title="作废">
+                    <span class="icon-ico_litter-bin icon-fontsize nav-button" ng-disabled="isObsoleteDisabled()" style="color: red" puma-confirm confirm-message="{{'ConfirmObsolete' | translate}}" confirm="isObsoleteDisabled() || obsolete()"><span>作废</span></span>
+                </li>
+                <li title="选择打印机">
+                    <div class="dropdown" style="display:inline-block">
+                        <select class="form-control" ng-model="selectedPrinter" ng-options="t for t in terminals" ng-disabled="isPrintDisabled()">
+                            <option value="" class="dropdown-menu-item">选择打印机</option>
+                        </select>
+                    </div>
+                </li>
+                <li title="打印">
+                    <span class="icon-ico_print icon-fontsize" puma-confirm confirm-message="确认打印当前胶片?" confirm="printFilm()" ng-disabled="isPrintDisabled()">
+                        <span class="path1"></span><span class="path2"></span>
+                    </span>
+                </li>
+            </ul>
+            <span style="float: right; display: block; height: 46px">
+                <span class="icon-ico_refresh icon-fontsize" style="display: block; float:right;" title="刷新" ng-click="searchUmatches()"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                <span class="nav-button" style="float:right; padding:13px 0;" title="自动刷新"><input type="checkbox" class="btn-sm" ng-model="isAutoRefresh" ng-change="setAutoRefresh()" /><span>{{ 'AutoRefresh' | translate }}</span></span>
+            </span>
+        </div>
+        <div id="searchResultDiv">
+            <table class="table">
+                <thead>
+                    <tr style="background-color: #e5e2e2">
+                        <th>检查编号</th>
+                        <th>患者ID</th>
+                        <th>患者姓名</th>
+                        <th>设备类型</th>
+                        <th>性别</th>
+                        <th>病人类型</th>
+                        <th>检查名称</th>
+                        <th>检查科室</th>
+                        <th>检查日期</th>
+                        <th colspan="2"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in records">
+                        <td class="center_cell">{{item.accessionNumber}}</td>
+                        <td class="center_cell">{{item.patientID}}</td>
+                        <td class="center_cell">{{item.patientName}}</td>
+                        <td class="center_cell">{{item.modalityType}}</td>
+                        <td class="center_cell">{{item.gender}}</td>
+                        <td class="center_cell">{{item.patientType}}</td>
+                        <td class="center_cell">{{item.examName}}</td>
+                        <td class="center_cell">{{item.referringDepartment}}</td>
+                        <td class="center_cell">{{item.examDate}}</td>
+                        <td colspan="2"><button class="round_button icon-ico_ok" style="width: 100px; height: 30px; color: #6afa64" type="button" ng-click="saveRecord(item)" ng-disabled="isSaveDisabled(item)"><span> 匹配</span></button></td>
+                    </tr>
+                    <tr ng-if="isEditing">
+                        <td class="center_cell"><input type="text" class="form-control" ng-model="record.accessionNumber" maxlength="64" /></td>
+                        <td class="center_cell"><input type="text" class="form-control" ng-model="record.patientID" maxlength="64" /></td>
+                        <td class="center_cell"><input type="text" style="width: 120px" class="form-control" ng-model="record.patientName" maxlength="64" /></td>
+                        <td class="center_cell"><select class="form-control" style="padding: 6px 0px" ng-model="record.modalityType" ng-options="t for t in modalityTypes"></select></td>
+                        <td class="center_cell"><select class="form-control" style="padding: 6px 0px" ng-model="record.gender" ng-options="t.value as t.name for t in genders"></select></td>
+                        <td class="center_cell"><select class="form-control" style="padding: 6px 0px" ng-model="record.patientType" ng-options="t.type as t.name for t in patientTypes"></select></td>
+                        <td class="center_cell"><input type="text" class="form-control" ng-model="record.examName" maxlength="256" /></td>
+                        <td class="center_cell"><select class="form-control" style="padding: 6px 0px" ng-model="record.referringDepartment" ng-options="t.departmentName as t.departmentName for t in examDepartments"></select></td>
+                        <td class="center_cell">
+                            <p class="input-group" style="width: 150px">
+                                <input type="text" class="form-control" uib-datepicker-popup="{{dateFormat}}" datepicker-options="examDateOptions" show-button-bar="false" is-open="examDatePicker.opened"
+                                       ng-model="record.examDate" readonly="readonly">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default" ng-click="openExamDate()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                </span>
+                            </p>
+                        </td>
+                        <td>
+                            <button class="round_button icon-ico_ok" style="width: 100px; height: 30px; color: #6afa64" type="button" ng-click="saveRecord(record)" ng-disabled="isMannualSaveDisabled(record)"><span> 保存匹配</span></button>
+                        </td>
+                        <td>
+                            <button class="round_button" style="width: 60px; height: 30px" type="button" ng-click="cancelSave()" ng-disabled="item.saved">取消</button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot ng-if="hasNoData">
+                    <tr>
+                        <td colspan="11">未找到记录!</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div id="divFilmViewer" ng-if="isFilmTypeSelected" style="position:relative" ng-style="{'height': filmViewerHeight + 'px'}">
+            <div style="position:absolute; bottom:0; top:0">
+                <table style="border: none; width: 100%; height: 100%">
+                    <tr>
+                        <td style="width: 84px; height: 100%; padding: 0">
+                            <div id="divImgLeft" style="background-color: #666666; padding: 0px; margin: 0px; height: 100%">
+                                <div id="divFunction">
+                                    <table class="film_img_viewer">
+                                        <tr>
+                                            <td>
+                                                <div onmouseover="if(this.className=='PS_Zoom1X_active') return;this.className='PS_Zoom1X_hover';"
+                                                     onmouseout="if(this.className=='PS_Zoom1X_active') return;this.className='PS_Zoom1X_common';"
+                                                     id="imgZoom1" ng-click="zoomImg(1);" class="PS_Zoom1X_active" title="显示原始尺寸" />
+                                            </td>
+                                            <td>
+                                                <div onmouseover="if(this.className=='PS_Zoom2X_active') return;this.className='PS_Zoom2X_hover';"
+                                                     onmouseout="if(this.className=='PS_Zoom2X_active') return;this.className='PS_Zoom2X_common';"
+                                                     id="imgZoom2" ng-click="zoomImg(2);" class="PS_Zoom2X_common" title="显示2倍尺寸" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div onmouseover="if(this.className=='PS_ZoomFit_active') return;this.className='PS_ZoomFit_hover';"
+                                                     onmouseout="if(this.className=='PS_ZoomFit_active') return;this.className='PS_ZoomFit_common';"
+                                                     id="imgZoomFit" ng-click="zoomImg(0);" class="PS_ZoomFit_common" title="适应窗口显示" />
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                    <div style="text-align: center;">
+                                        <div class="PS_Spliter"></div>
+                                    </div>
+                                    <table class="film_img_viewer">
+                                        <tr>
+                                            <td>
+                                                <div onmouseover=" this.className = 'PS_InvertFit_hover';"
+                                                     onmouseout=" this.className = 'PS_InvertFit_common';"
+                                                     onmousedown="this.className = 'PS_InvertFit_active';"
+                                                     onmouseup="this.className = 'PS_InvertFit_common';"
+                                                     id="iamgInvert" class="PS_InvertFit_common" ng-click="invertImg()" title="反色" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div style="text-align: center;">
+                                        <div class="PS_Spliter"></div>
+                                    </div>
+                                    <table class="film_img_viewer">
+                                        <tr>
+                                            <td>
+                                                <div onmouseover=" this.className = 'PS_RotateLeftFit_hover';"
+                                                     onmouseout=" this.className = 'PS_RotateLeftFit_common';"
+                                                     onmousedown="this.className = 'PS_RotateLeftFit_active';"
+                                                     onmouseup="this.className = 'PS_RotateLeftFit_common';"
+                                                     id="iamgLeftRotate" class="PS_RotateLeftFit_common" ng-click="rotateImg('left')" title="左旋" />
+                                            </td>
+                                            <td>
+                                                <div onmouseover=" this.className = 'PS_RotateRightFit_hover';"
+                                                     onmouseout=" this.className = 'PS_RotateRightFit_common';"
+                                                     onmousedown="this.className = 'PS_RotateRightFit_active';"
+                                                     onmouseup="this.className = 'PS_RotateRightFit_common';"
+                                                     id="iamgRightRotate" class="PS_RotateRightFit_common" ng-click="rotateImg('right')" title="右旋" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div style="text-align: center;">
+                                        <div class="PS_Spliter"></div>
+                                    </div>
+                                    <table class="film_img_viewer">
+                                        <tr>
+                                            <td>
+                                                <div onmouseover="if(this.className=='PS_FitTL_active') return;this.className='PS_FitTL_hover';"
+                                                     onmouseout="if(this.className=='PS_FitTL_active') return;this.className='PS_FitTL_common';"
+                                                     id="imgPos1" ng-click="movePos(1);" class="PS_FitTL_active" title="对齐左上角" />
+                                            </td>
+                                            <td>
+                                                <div onmouseover="if(this.className=='PS_FitTR_active') return;this.className='PS_FitTR_hover';"
+                                                     onmouseout="if(this.className=='PS_FitTR_active') return;this.className='PS_FitTR_common';"
+                                                     id="imgPos2" ng-click="movePos(2);" class="PS_FitTR_common" title="对齐右上角" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div onmouseover="if(this.className=='PS_FitBL_active') return;this.className='PS_FitBL_hover';"
+                                                     onmouseout="if(this.className=='PS_FitBL_active') return;this.className='PS_FitBL_common';"
+                                                     id="imgPos3" ng-click="movePos(3);" class="PS_FitBL_common" title="对齐左下角" />
+                                            </td>
+                                            <td>
+                                                <div onmouseover="if(this.className=='PS_FitBR_active') return;this.className='PS_FitBR_hover';"
+                                                     onmouseout="if(this.className=='PS_FitBR_active') return;this.className='PS_FitBR_common';"
+                                                     id="imgPos4" ng-click="movePos(4);" class="PS_FitBR_common" title="对齐右下角" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div style="text-align: center;">
+                                        <div class="PS_Spliter"></div>
+                                    </div>
+                                </div>
+                                <div id="divNav" style="margin: auto;">
+                                    <div onmouseover="this.className='PS_NavPrev_hover';" onmouseout="this.className='PS_NavPrev_common';"
+                                         ng-click="scrollNavList(-100);" class="PS_NavPrev_common">
+                                    </div>
+                                    <div>
+                                        <div id="divImageList" style="width: 100%; overflow: auto; overflow-x:hidden; font-size: large; color: White; text-align: center;" ng-style="{'height': imageListHeight + 'px'}">
+                                            <div style="padding: 4px 0px" ng-repeat="image in images">
+                                                <img ng-src="{{image.thumbnailImagePath}}" ng-click="selectImage(image)" />
+                                                <span style="font-size: large; color: white">{{image.index}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div onmouseover="this.className='PS_NavNext_hover';" onmouseout="this.className='PS_NavNext_common';"
+                                         ng-click="scrollNavList(100);" class="PS_NavNext_common">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="100%">
+                            <div id="divImgRect" style="background-color: #343434; overflow: auto; width: 100%" ng-style="{'height': filmViewerHeight + 'px', 'width': divImgRectWidth + 'px'}">
+                                <div id="divNoImg" ng-hide="isImageSelected" style="padding: 50px 0px 0px 50px; color: White; font-size: large; height: 100%; width: 100%">
+                                    无图像
+                                </div>
+                                <div id="divImg" ng-if="isImageSelected">
+                                    <img id="imgRaw" ng-src="{{originImagePath}}" ng-style="imgRawAddition_Style" />
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        <div ng-if="!isCanvasSupport" style="overflow:auto" ng-style="{'height': filmViewerHeight + 'px'}">
+            <div>系统检测到您的浏览器不支持直接查看PDF文件，请安装PDF插件。</div>
+            <iframe id="pdfFrame" style="height: 100%; width: 100%"></iframe>
+        </div>
+        <div id="divReportViewer" ng-if="isCanvasSupport && !isFilmTypeSelected" style="overflow:auto" ng-style="{'height': filmViewerHeight + 'px'}">
+        </div>
+    </div>
+</div>

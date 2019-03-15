@@ -1,0 +1,11 @@
+POST /Platform/account/login HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Referer: http://10.184.129.108/Platform/
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.8
+Accept: */*
+Connection: Keep-Alive
+Host: 10.184.129.108
+Content-Length: 37
+

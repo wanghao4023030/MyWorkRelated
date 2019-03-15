@@ -1,0 +1,13 @@
+[t17]
+SnapshotXmlFile=snapshot_17.xml
+ContentType=DummyContentType
+StepName=Url: allTerminals
+Total=1
+FileName1=t17.UNK
+RequestHeaderFile=t17_RequestHeader.txt
+ResponseHeaderFile=t17_ResponseHeader.txt
+RawStepEndTime=1536738317010
+RawStepName=allTerminals
+RequestBodyFile=t17_RequestBody.txt
+RawStepStartTime=1536738314063
+URL1=file:

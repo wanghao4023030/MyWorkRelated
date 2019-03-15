@@ -1,0 +1,12 @@
+Start auto log messages stack - Iteration 5.	[MsgId: MMSG-10545]
+Action.c(1310): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(1310): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(1315): Notify: Transaction "SetStatusOfFilmWithExpand_printed" started.	[MsgId: MMSG-16999]
+Action.c(1317): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(1317): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.171/webapi/api/worklist/UpdateStatusByAccessionNumber"  	[MsgId: MMSG-26548]
+Action.c(1317): web_custom_request("web_custom_request") was successful, 130 body bytes, 259 header bytes  	[MsgId: MMSG-26386]
+Action.c(1327): Notify: Transaction "SetStatusOfFilmWithExpand_printed" ended with a "Pass" status (Duration: 30.1278 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+The result is:  false	[MsgId: MMSG-17999]
+Action.c(1334): Error: SetStatusOfFilmWithExpand_printed fail	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+

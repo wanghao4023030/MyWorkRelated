@@ -1,0 +1,17 @@
+﻿webservices.factory('configurationServer', ['$http', 'apiConfig', function ($http, apiConfig) {
+    'use strict';
+    return {
+
+        getDataTableRowsPerPage: function () {
+            return $http.get('/api/tableRowsPerPage', apiConfig.create());
+        },
+
+        getWorklistColumns: function () {
+            return $http.get('/api/worklist/worklistcolumns', apiConfig.create());
+        },
+        getIncompleteTaskEnabled: function () {
+            return $http.get('/api/systemConfiguration/incompleteTaskEnabled', apiConfig.create());
+        }
+
+    };
+}]);

@@ -1,0 +1,14 @@
+[t19]
+SnapshotXmlFile=snapshot_19.xml
+ContentType=application/pdf
+StepName=Url: getReport
+Total=1
+FileName1=t19.pdf
+RequestHeaderFile=t19_RequestHeader.txt
+ResponseHeaderFile=t19_ResponseHeader.txt
+FrameIndex1=0
+RawStepEndTime=1536736653864
+RawStepName=getReport
+RequestBodyFile=t19_RequestBody.txt
+RawStepStartTime=1536736593594
+URL1=file:

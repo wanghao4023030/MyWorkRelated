@@ -1,0 +1,48 @@
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(627): web_url("CheckLoginStatus_19") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(635): web_url("operate-columns-template.html") started  	[MsgId: MMSG-26355]
+Action.c(635): Downloading resource "http://10.184.129.108/Platform/Content/ui-grid.woff" (specified by argument number 8)  	[MsgId: MMSG-26577]
+Action.c(635): web_url("operate-columns-template.html") was successful, 8674 body bytes, 505 header bytes  	[MsgId: MMSG-26386]
+Action.c(654): Notify: Transaction "WorlkList_Query_randomTime" started.	[MsgId: MMSG-16999]
+Action.c(656): web_custom_request("searchWorklist_2") started  	[MsgId: MMSG-26355]
+Action.c(627): web_url("CheckLoginStatus_19") was successful, 4 body bytes, 251 header bytes  	[MsgId: MMSG-26386]
+Action.c(656): Continuing after Error -26609: HTTP Status-Code=503 (EntityCommandExecutionException) for "http://10.184.129.108/webapi/api/worklist/searchWorklist"  	[MsgId: MERR-26609]
+Action.c(635): web_url("operate-columns-template.html") started  	[MsgId: MMSG-26355]
+Action.c(635): Downloading resource "http://10.184.129.108/Platform/Content/ui-grid.woff" (specified by argument number 8)  	[MsgId: MMSG-26577]
+Action.c(635): web_url("operate-columns-template.html") was successful, 8674 body bytes, 505 header bytes  	[MsgId: MMSG-26386]
+Action.c(654): Notify: Transaction "WorlkList_Query_randomTime" started.	[MsgId: MMSG-16999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Action.c(656): web_custom_request("searchWorklist_2") started  	[MsgId: MMSG-26355]
+Action.c(656): Continuing after Error -26609: HTTP Status-Code=503 (EntityCommandExecutionException) for "http://10.184.129.108/webapi/api/worklist/searchWorklist"  	[MsgId: MERR-26609]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(1342): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(1342): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(1347): Notify: Transaction "SetStatusOfFilmWithExpand_unprinted" started.	[MsgId: MMSG-16999]
+Action.c(1349): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(1349): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/webapi/api/worklist/UpdateStatusByAccessionNumber"  	[MsgId: MMSG-26548]
+Action.c(1349): web_custom_request("web_custom_request") was successful, 87 body bytes, 258 header bytes  	[MsgId: MMSG-26386]
+Action.c(1359): Notify: Transaction "SetStatusOfFilmWithExpand_unprinted" ended with a "Pass" status (Duration: 20.6504 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+The result is:  false	[MsgId: MMSG-17999]
+Action.c(1365): Error: SetStatusOfFilmWithExpand_unprinted fail	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(1342): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(1342): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(1347): Notify: Transaction "SetStatusOfFilmWithExpand_unprinted" started.	[MsgId: MMSG-16999]
+Action.c(1349): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(1349): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="http://10.184.129.108/webapi/api/worklist/UpdateStatusByAccessionNumber"  	[MsgId: MMSG-26548]
+Action.c(1349): web_custom_request("web_custom_request") was successful, 87 body bytes, 258 header bytes  	[MsgId: MMSG-26386]
+Action.c(1359): Notify: Transaction "SetStatusOfFilmWithExpand_unprinted" ended with a "Pass" status (Duration: 10.0338 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+The result is:  false	[MsgId: MMSG-17999]
+Action.c(1365): Error: SetStatusOfFilmWithExpand_unprinted fail	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

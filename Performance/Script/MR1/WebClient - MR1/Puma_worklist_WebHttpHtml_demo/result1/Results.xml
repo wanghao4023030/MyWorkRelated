@@ -1,0 +1,2618 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE Report
+[
+<!ELEMENT Report (General ,(Doc|BPT)) >
+<!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
+
+<!ELEMENT General ( DocLocation ) >
+<!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED qcserver CDATA #IMPLIED qcproject CDATA #IMPLIED SolManSolutionId CDATA #IMPLIED SolManProjectId CDATA #IMPLIED SolManTestPlanId CDATA #IMPLIED SolManTestPackageId CDATA #IMPLIED SolManUserInfoData CDATA #IMPLIED  >
+
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,AdditionalInfo*,Doc*) >
+<!ATTLIST BPT rID ID #REQUIRED >
+
+<!ELEMENT Doc (DName,ConfName?,Res,DVer?,TSet?,TInst?,RunType?,DT?,AdditionalInfo*,Step*,DIter*,Step*,Action*,Doc*,Summary?,TestMaintenanceSummary*,NodeArgs?) >
+<!ATTLIST Doc rID ID #REQUIRED type (Test|BC|BPTWrapperTest|Flow|Group|Action) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
+
+<!ELEMENT RunType ( #PCDATA )>
+<!ATTLIST RunType fmStep (False|True) "False" batch (False|True) "False" upDesc (False|True) "False" upChk (False|True) "False" upAS (False|True) "False">
+
+<!ELEMENT DName ( #PCDATA ) >
+
+<!ELEMENT ConfName ( #PCDATA ) >
+
+<!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT AdditionalInfo (AdditionalDataName,AdditionalDataValue ) >
+
+<!ELEMENT AdditionalDataName ( #PCDATA ) >
+
+<!ELEMENT AdditionalDataValue ( #PCDATA ) >
+
+<!ELEMENT DVer ( #PCDATA ) >
+
+<!ELEMENT TSet ( #PCDATA ) >
+
+<!ELEMENT TInst ( #PCDATA ) >
+
+<!ELEMENT DIter (Step*,Action+,Summary?,NodeArgs)>
+<!ATTLIST DIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT DocLocation ( #PCDATA )>
+
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*, Summary,ActionMaintenanceSummary*, NodeArgs ) >
+<!ATTLIST Action rID ID #REQUIRED>
+
+<!ELEMENT AIter ((Step|HtmlStep|Action)*,DataMapping?, Summary?,NodeArgs) >
+<!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED isCountable (False|True) "False" >
+
+<!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT TestMaintenanceSummary (ActionMaintenanceSummary*) >
+<!ATTLIST TestMaintenanceSummary ObjectsAdded CDATA #REQUIRED ObjectsUpdated CDATA #REQUIRED StepsUpdated CDATA #REQUIRED StepsComments CDATA #REQUIRED><!ELEMENT ActionMaintenanceSummary (ObjectChange* ) >
+<!ATTLIST ActionMaintenanceSummary Action CDATA #REQUIRED Objects CDATA #REQUIRED Updated CDATA #REQUIRED LinesTotal CDATA #REQUIRED Added CDATA #REQUIRED LinesUpdated CDATA #REQUIRED>
+
+<!ELEMENT ObjectChange  (Hierarchy, PropertyChangeList* ) >
+<!ATTLIST ObjectChange Operation CDATA #IMPLIED OriginalRepository CDATA #IMPLIED>
+
+<!ELEMENT PropertyChangeList (PropertyDef*) >
+
+<!ELEMENT PropertyDef (OriginalValue, NewValue) >
+<!ATTLIST PropertyDef PropName CDATA #REQUIRED OriginRegularExpression (True|False) "False" NewRegularExpression (True|False) "False" AddedProperty (True|False) "False" >
+
+<!ELEMENT OriginalValue ( #PCDATA )>
+
+<!ELEMENT NewValue ( #PCDATA )>
+
+<!ELEMENT Hierarchy  (ObjectName, Hierarchy*) >
+<!ATTLIST Hierarchy MicClass CDATA #REQUIRED>
+
+<!ELEMENT ObjectName  ( #PCDATA ) >
+
+<!ELEMENT Step (Obj,Details,Time,TimeTick* ,(Step|HtmlStep|Doc)*, DataMapping?, NodeArgs) >
+<!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
+
+<!ELEMENT HtmlStep (HTML,TimeTick*,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST HtmlStep rID ID #REQUIRED >
+
+<!ELEMENT Obj ( #PCDATA ) >
+<!ATTLIST Obj plainTxt (False|True) "True">
+
+<!ELEMENT Details ( #PCDATA ) >
+<!ATTLIST Details plainTxt (False|True) "True">
+
+<!ELEMENT Time ( #PCDATA ) >
+
+<!ELEMENT HTML ( #PCDATA ) >
+
+<!ELEMENT Disp ( #PCDATA ) >
+
+<!ELEMENT TimeTick ( #PCDATA ) >
+
+<!ELEMENT DataMapping ( DataMappedItem* )>
+<!ELEMENT DataMappedItem EMPTY >
+<!ATTLIST DataMappedItem dsName CDATA #REQUIRED >
+<!ATTLIST DataMappedItem rowId CDATA #REQUIRED >
+
+<!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?,ExtendedInfo? )>
+<!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED UserNote CDATA #IMPLIED filter (False|True) "True">
+<!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED MovieMarker CDATA "">
+<!ATTLIST NodeArgs Source CDATA #IMPLIED SourceLine CDATA #IMPLIED StepFlowItemKey CDATA #IMPLIED >
+
+<!ELEMENT TopPane (Path)>
+
+<!ELEMENT BtmPane ( (Path|WR)?,ASHilite?)>
+<!ATTLIST BtmPane vType CDATA "HTML">
+
+<!ELEMENT Path ( #PCDATA ) >
+
+<!ELEMENT ASHilite ( #PCDATA ) >
+
+<!ELEMENT WR ( #PCDATA ) >
+
+<!ELEMENT ExtendedInfo ( StepData ) >
+
+<!ATTLIST ExtendedInfo StepType CDATA #REQUIRED>
+<!ELEMENT DT (NodeArgs) >
+<!ATTLIST DT rID ID #REQUIRED>
+
+<!ELEMENT Summary (Param*)>
+<!ATTLIST Summary sTime CDATA #IMPLIED eTime CDATA #IMPLIED passed CDATA #IMPLIED failed CDATA #IMPLIED warnings CDATA #IMPLIED retval CDATA #IMPLIED stopped (False|True) "False" >
+
+<!ELEMENT Param (ParamName,ParamVal)+ >
+<!ATTLIST Param paramInOut (In|Out) "In">
+
+<!ELEMENT ParamName ( #PCDATA ) >
+
+<!ELEMENT ParamVal ( #PCDATA ) >
+
+]
+>
+<Report ver="2.0" tmZone="China Standard Time">
+<General productName="Vugen" productVer="12" os="" host="CNWCNBWDRZH2"><DocLocation><![CDATA[D:\WebClient\Puma_worklist_WebHttpHtml_demo]]></DocLocation></General>
+<Doc rID="T1"   productName= "Vugen"  >
+<DName><![CDATA[Puma_worklist_WebHttpHtml_demo]]></DName>
+<Res><![CDATA[result1]]></Res>
+<Action rID="T2">
+<AName><![CDATA[vuser_init]]></AName>
+<Summary sTime="2018/1/9 - 9:33:44" eTime="2018/1/9 - 9:33:44" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="5" >
+<Disp><![CDATA[vuser_init Summary]]></Disp>
+</NodeArgs>
+</Action>
+<DIter rID="T3" iterID="1" >
+<Action rID="T4">
+<AName><![CDATA[Action]]></AName>
+<Step rID="T5">
+<Obj plainTxt="False" ><![CDATA[Service: Set Max Html Param Len]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Maximum length of a HTML string that can be retrieved and saved set to <STRONG><FONT COLOR=#00AF00>90000</FONT></STRONG> characters</CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:33:44]]></Time>
+<TimeTick>1515461624</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="9" >
+<Disp><![CDATA[Service: Set Max Html Param Len]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T6">
+<Obj plainTxt="False" ><![CDATA[Url: Platform]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:33:47]]></Time>
+<TimeTick>1515461627</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="10" status="Passed" >
+<Disp><![CDATA[Url: Platform]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T7">
+<Obj plainTxt="False" ><![CDATA[Url: login-view.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:33:47]]></Time>
+<TimeTick>1515461627</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="11" status="Passed" >
+<Disp><![CDATA[Url: login-view.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T8">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>ApiToken</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=ApiToken=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB= path=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:33:47]]></Time>
+<TimeTick>1515461627</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="12" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T9">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>AspToken</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB= .AspNet.ApplicationCookie=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=path=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:33:47]]></Time>
+<TimeTick>1515461627</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="13" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T10">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>access_token</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=access_token%22%3A%22</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=%22%2C%22token_typ</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:33:47]]></Time>
+<TimeTick>1515461627</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="14" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T11">
+<Obj plainTxt="False" ><![CDATA[Custom Request: login]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:33:48]]></Time>
+<TimeTick>1515461628</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="15" status="Passed" >
+<Disp><![CDATA[Custom Request: login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T12">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>ApiToken=%7B%22access_token%22%3A%22jb0RuEpNX2jQSDjT4DDYzfvPFcC1iuWSK85BDygJpntIRt9K2tZcUoSoju6S3oyi_sE8W-Jy88ae70mqoP42iZFs7hHheftg0zrvHKa4AjOQxhUgCqMx7QaU0T61Xt0K9mU_BrbP0yEtq2kC_vDZO02jWRX723FqGhir_S8F-YRE_BRfOsF2YhgUO0MypQwxV-y7DCtljifXyGdhROsHWw%22%2C%22token_type%22%3A%22bearer%22%2C%22expires_in%22%3A604799%2C%22refresh_token%22%3A%228756b7af-d793-47c0-9e86-2ea604f5fb88%22%2C%22userName%22%3A%221%22%2C%22currentRole%22%3A%22Administrator%22%2C%22strDepartments%22%3A%22%22%2C%22strModalities%22%3A%22%22%2C%22onlyReport%22%3A%22false%22%2C%22strUserPermissionList%22%3A%22CentralPrint%3A1%7CChangeHoldFlag%3A1%7CChangePrintMode%3A1%7CChangePrintStatus%3A1%7Cconfig%3A1%7CConfigRole%3A1%7CConfigSystem%3A1%7CConfigUser%3A1%7CCorrectReconciliation%3A1%7CDelete%3A1%7CPrinterMonitor%3A1%7CPrintTaskManagement%3A1%7CQCLog%3A1%7CReconciliation%3A1%7CRestoreFilm%3A1%7CStatisticsReport%3A1%7Cworklist%3A1%7C%22%7D;; DOMAIN=10.184.129.171</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:33:48]]></Time>
+<TimeTick>1515461628</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="16" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T13">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>.AspNet.ApplicationCookie=_WKwrsoofXXd8NUgO3hxIy_BCR4BTT3isRhk9tRHW3TxuM93KGiOESepKOVuXDWdc8jTZsG3AcSik8rzVcMKa7FcKWn1BRXxBRBvCbIaqIkFmXo3eEuSYjY_Cjb62L35TWJCDoW16UESvYtcnSnoepvgtk5rlOVMNyLnNB1g1zDGmyNwXHa1f7Rcn109B41FB6o96GduDq8HrMvCgVHuGgbXjO7iDHw5eRtz-Jdw1zV6JpY5j8VAbMa4fOaQ3hYo2WaYCGWViU0avyNu3WW1c9jMyraWio-oIA0SpbAKQpA; ; DOMAIN=10.184.129.171</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:33:48]]></Time>
+<TimeTick>1515461628</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="17" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T14">
+<Obj plainTxt="False" ><![CDATA[Url: login_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:33:49]]></Time>
+<TimeTick>1515461629</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="18" status="Passed" >
+<Disp><![CDATA[Url: login_2]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T15">
+<Obj plainTxt="False" ><![CDATA[Url: workarea]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:33:50]]></Time>
+<TimeTick>1515461630</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="19" status="Passed" >
+<Disp><![CDATA[Url: workarea]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T16">
+<Obj plainTxt="False" ><![CDATA[Service: Add Auto Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to all subsequent HTTP requests :<BR><STRONG><FONT COLOR=#00AF00>Authorization: bearer jb0RuEpNX2jQSDjT4DDYzfvPFcC1iuWSK85BDygJpntIRt9K2tZcUoSoju6S3oyi_sE8W-Jy88ae70mqoP42iZFs7hHheftg0zrvHKa4AjOQxhUgCqMx7QaU0T61Xt0K9mU_BrbP0yEtq2kC_vDZO02jWRX723FqGhir_S8F-YRE_BRfOsF2YhgUO0MypQwxV-y7DCtljifXyGdhROsHWw</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:33:50]]></Time>
+<TimeTick>1515461630</TimeTick>
+<NodeArgs eType="General" icon="9" nRep="20" >
+<Disp><![CDATA[Service: Add Auto Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T17">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>status</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:33:50]]></Time>
+<TimeTick>1515461630</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="21" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T18">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatusByUser]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:33:51]]></Time>
+<TimeTick>1515461631</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="22" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatusByUser]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T19">
+<Obj plainTxt="False" ><![CDATA[Url: tableRowsPerPage]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:33:52]]></Time>
+<TimeTick>1515461632</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="23" status="Passed" >
+<Disp><![CDATA[Url: tableRowsPerPage]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T20">
+<Obj plainTxt="False" ><![CDATA[Url: worklistcolumns]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:33:53]]></Time>
+<TimeTick>1515461633</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="24" status="Passed" >
+<Disp><![CDATA[Url: worklistcolumns]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T21">
+<Obj plainTxt="False" ><![CDATA[Url: systemversion]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:33:53]]></Time>
+<TimeTick>1515461633</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="25" status="Passed" >
+<Disp><![CDATA[Url: systemversion]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T22">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:33:54]]></Time>
+<TimeTick>1515461634</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="26" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T23">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitor-template.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:33:55]]></Time>
+<TimeTick>1515461635</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="27" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitor-template.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t11.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T24">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitoring]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:33:56]]></Time>
+<TimeTick>1515461636</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="28" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitoring]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T25">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_5]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:33:57]]></Time>
+<TimeTick>1515461637</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="29" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_5]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T26">
+<Obj plainTxt="False" ><![CDATA[Url: reconciliation-list.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:03]]></Time>
+<TimeTick>1515461643</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="30" status="Passed" >
+<Disp><![CDATA[Url: reconciliation-list.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t14.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T27">
+<Obj plainTxt="False" ><![CDATA[Url: getUnmatchImages]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:03]]></Time>
+<TimeTick>1515461643</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="31" status="Passed" >
+<Disp><![CDATA[Url: getUnmatchImages]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T28">
+<Obj plainTxt="False" ><![CDATA[Url: allTerminals]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:04]]></Time>
+<TimeTick>1515461644</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="32" status="Passed" >
+<Disp><![CDATA[Url: allTerminals]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T29">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_6]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:05]]></Time>
+<TimeTick>1515461645</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="33" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_6]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T30">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_7]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:06]]></Time>
+<TimeTick>1515461646</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="34" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_7]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T31">
+<Obj plainTxt="False" ><![CDATA[Custom Request: GetDepartmentInfo]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:07]]></Time>
+<TimeTick>1515461647</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="35" status="Passed" >
+<Disp><![CDATA[Custom Request: GetDepartmentInfo]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T32">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitoring_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:08]]></Time>
+<TimeTick>1515461648</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="36" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitoring_2]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T33">
+<Obj plainTxt="False" ><![CDATA[Custom Request: GetDepartmentInfo]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:08]]></Time>
+<TimeTick>1515461648</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="37" status="Passed" >
+<Disp><![CDATA[Custom Request: GetDepartmentInfo]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T34">
+<Obj plainTxt="False" ><![CDATA[Custom Request: searchWorklist_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:10]]></Time>
+<TimeTick>1515461650</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="38" status="Passed" >
+<Disp><![CDATA[Custom Request: searchWorklist_2]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T35">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_20]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:11]]></Time>
+<TimeTick>1515461651</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="39" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_20]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/1/9 - 9:33:44" eTime="2018/1/9 - 9:34:16" passed="23" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="8" status="Passed" >
+<Disp><![CDATA[Action Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="7" status="Passed" >
+<Disp><![CDATA[Puma_worklist_WebHttpHtml_demo Iteration 1 (Row 1)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T36" iterID="2" >
+<Action rID="T37">
+<AName><![CDATA[Action]]></AName>
+<Step rID="T38">
+<Obj plainTxt="False" ><![CDATA[Service: Set Max Html Param Len]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Maximum length of a HTML string that can be retrieved and saved set to <STRONG><FONT COLOR=#00AF00>90000</FONT></STRONG> characters</CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:16]]></Time>
+<TimeTick>1515461656</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="44" >
+<Disp><![CDATA[Service: Set Max Html Param Len]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T39">
+<Obj plainTxt="False" ><![CDATA[Url: Platform]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:16]]></Time>
+<TimeTick>1515461656</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="45" status="Passed" >
+<Disp><![CDATA[Url: Platform]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T40">
+<Obj plainTxt="False" ><![CDATA[Url: login-view.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:16]]></Time>
+<TimeTick>1515461656</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="46" status="Passed" >
+<Disp><![CDATA[Url: login-view.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T41">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>ApiToken</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=ApiToken=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB= path=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:16]]></Time>
+<TimeTick>1515461656</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="47" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T42">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>AspToken</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB= .AspNet.ApplicationCookie=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=path=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:16]]></Time>
+<TimeTick>1515461656</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="48" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T43">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>access_token</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=access_token%22%3A%22</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=%22%2C%22token_typ</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:16]]></Time>
+<TimeTick>1515461656</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="49" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T44">
+<Obj plainTxt="False" ><![CDATA[Custom Request: login]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:16]]></Time>
+<TimeTick>1515461656</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="50" status="Passed" >
+<Disp><![CDATA[Custom Request: login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T45">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>ApiToken=%7B%22access_token%22%3A%22vPAryxQ0ePBslHWaPL6S4f6yCVcJWLSYyxSQxrGcgsbp9Wom6kO159jSVKWTm4TzYmeBDdKkIEHzXKkKlVx3adCelUxsMUTyv55_Wv2TTNrsl1uyRfHXGY_o8Hg2Crxm37eqe1WokYc4VB62ldqfN9lpCpzEotCveiejpFyqEEJzugaVVBnV9nIiVSoP613AqjnmM6bEVIFUshVMnuiEpQ%22%2C%22token_type%22%3A%22bearer%22%2C%22expires_in%22%3A604799%2C%22refresh_token%22%3A%226e74e722-bcc2-4e08-8854-cac16f33924f%22%2C%22userName%22%3A%222%22%2C%22currentRole%22%3A%22Administrator%22%2C%22strDepartments%22%3A%22%22%2C%22strModalities%22%3A%22%22%2C%22onlyReport%22%3A%22false%22%2C%22strUserPermissionList%22%3A%22CentralPrint%3A1%7CChangeHoldFlag%3A1%7CChangePrintMode%3A1%7CChangePrintStatus%3A1%7Cconfig%3A1%7CConfigRole%3A1%7CConfigSystem%3A1%7CConfigUser%3A1%7CCorrectReconciliation%3A1%7CDelete%3A1%7CPrinterMonitor%3A1%7CPrintTaskManagement%3A1%7CQCLog%3A1%7CReconciliation%3A1%7CRestoreFilm%3A1%7CStatisticsReport%3A1%7Cworklist%3A1%7C%22%7D;; DOMAIN=10.184.129.171</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:16]]></Time>
+<TimeTick>1515461656</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="51" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T46">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>.AspNet.ApplicationCookie=h0FA65SWCmdBtUty1ysIf1AhKgUb5eCQOLoJ57ZUNbvyNaZ0O-o8cBlDj3t4SyrFJh1fkjVKtnZNEXGjoo18HtnMnMelISL86JstgO6vvJ66ArGtZZmYA1ALzSDEVbMmlquPb8lL0ItFtr9wKizfl2T3qw9ME5ls8xMHvvXieOnttyCs2B-PH4ldY6fGmpPyrCxlkSJgoglPp7a11S47Xc_LtnulCYq29j8_AUB7BhvgMifN0zSiHV2ScxXKbB6qSxFzTqqi76XdWSa_9fHZZOmcK1QrTMLjHZxRWsKnxQC4CcpexfNPv1uSWAsRjxEm; ; DOMAIN=10.184.129.171</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:16]]></Time>
+<TimeTick>1515461656</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="52" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T47">
+<Obj plainTxt="False" ><![CDATA[Url: login_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:17]]></Time>
+<TimeTick>1515461657</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="53" status="Passed" >
+<Disp><![CDATA[Url: login_2]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T48">
+<Obj plainTxt="False" ><![CDATA[Url: workarea]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:18]]></Time>
+<TimeTick>1515461658</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="54" status="Passed" >
+<Disp><![CDATA[Url: workarea]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T49">
+<Obj plainTxt="False" ><![CDATA[Service: Add Auto Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to all subsequent HTTP requests :<BR><STRONG><FONT COLOR=#00AF00>Authorization: bearer vPAryxQ0ePBslHWaPL6S4f6yCVcJWLSYyxSQxrGcgsbp9Wom6kO159jSVKWTm4TzYmeBDdKkIEHzXKkKlVx3adCelUxsMUTyv55_Wv2TTNrsl1uyRfHXGY_o8Hg2Crxm37eqe1WokYc4VB62ldqfN9lpCpzEotCveiejpFyqEEJzugaVVBnV9nIiVSoP613AqjnmM6bEVIFUshVMnuiEpQ</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:18]]></Time>
+<TimeTick>1515461658</TimeTick>
+<NodeArgs eType="General" icon="9" nRep="55" >
+<Disp><![CDATA[Service: Add Auto Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T50">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>status</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:18]]></Time>
+<TimeTick>1515461658</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="56" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T51">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatusByUser]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:19]]></Time>
+<TimeTick>1515461659</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="57" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatusByUser]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T52">
+<Obj plainTxt="False" ><![CDATA[Url: tableRowsPerPage]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:19]]></Time>
+<TimeTick>1515461659</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="58" status="Passed" >
+<Disp><![CDATA[Url: tableRowsPerPage]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T53">
+<Obj plainTxt="False" ><![CDATA[Url: worklistcolumns]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:20]]></Time>
+<TimeTick>1515461660</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="59" status="Passed" >
+<Disp><![CDATA[Url: worklistcolumns]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T54">
+<Obj plainTxt="False" ><![CDATA[Url: systemversion]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:21]]></Time>
+<TimeTick>1515461661</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="60" status="Passed" >
+<Disp><![CDATA[Url: systemversion]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T55">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:22]]></Time>
+<TimeTick>1515461662</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="61" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T56">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitor-template.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:23]]></Time>
+<TimeTick>1515461663</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="62" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitor-template.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t11.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T57">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitoring]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:23]]></Time>
+<TimeTick>1515461663</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="63" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitoring]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T58">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_5]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:24]]></Time>
+<TimeTick>1515461664</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="64" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_5]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T59">
+<Obj plainTxt="False" ><![CDATA[Url: reconciliation-list.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:30]]></Time>
+<TimeTick>1515461670</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="65" status="Passed" >
+<Disp><![CDATA[Url: reconciliation-list.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration2\t14.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T60">
+<Obj plainTxt="False" ><![CDATA[Url: getUnmatchImages]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:31]]></Time>
+<TimeTick>1515461671</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="66" status="Passed" >
+<Disp><![CDATA[Url: getUnmatchImages]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T61">
+<Obj plainTxt="False" ><![CDATA[Url: allTerminals]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:31]]></Time>
+<TimeTick>1515461671</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="67" status="Passed" >
+<Disp><![CDATA[Url: allTerminals]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T62">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_6]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:32]]></Time>
+<TimeTick>1515461672</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="68" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_6]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T63">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_7]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:33]]></Time>
+<TimeTick>1515461673</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="69" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_7]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T64">
+<Obj plainTxt="False" ><![CDATA[Custom Request: GetDepartmentInfo]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:34]]></Time>
+<TimeTick>1515461674</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="70" status="Passed" >
+<Disp><![CDATA[Custom Request: GetDepartmentInfo]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T65">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitoring_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:35]]></Time>
+<TimeTick>1515461675</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="71" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitoring_2]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T66">
+<Obj plainTxt="False" ><![CDATA[Custom Request: GetDepartmentInfo]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:35]]></Time>
+<TimeTick>1515461675</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="72" status="Passed" >
+<Disp><![CDATA[Custom Request: GetDepartmentInfo]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T67">
+<Obj plainTxt="False" ><![CDATA[Custom Request: searchWorklist_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:37]]></Time>
+<TimeTick>1515461677</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="73" status="Passed" >
+<Disp><![CDATA[Custom Request: searchWorklist_2]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T68">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_20]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:37]]></Time>
+<TimeTick>1515461677</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="74" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_20]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/1/9 - 9:34:16" eTime="2018/1/9 - 9:34:42" passed="23" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="43" status="Passed" >
+<Disp><![CDATA[Action Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="42" status="Passed" >
+<Disp><![CDATA[Puma_worklist_WebHttpHtml_demo Iteration 2 (Row 2)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T69" iterID="3" >
+<Action rID="T70">
+<AName><![CDATA[Action]]></AName>
+<Step rID="T71">
+<Obj plainTxt="False" ><![CDATA[Service: Set Max Html Param Len]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Maximum length of a HTML string that can be retrieved and saved set to <STRONG><FONT COLOR=#00AF00>90000</FONT></STRONG> characters</CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:42]]></Time>
+<TimeTick>1515461682</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="79" >
+<Disp><![CDATA[Service: Set Max Html Param Len]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T72">
+<Obj plainTxt="False" ><![CDATA[Url: Platform]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:42]]></Time>
+<TimeTick>1515461682</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="80" status="Passed" >
+<Disp><![CDATA[Url: Platform]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T73">
+<Obj plainTxt="False" ><![CDATA[Url: login-view.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:42]]></Time>
+<TimeTick>1515461682</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="81" status="Passed" >
+<Disp><![CDATA[Url: login-view.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T74">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>ApiToken</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=ApiToken=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB= path=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:42]]></Time>
+<TimeTick>1515461682</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="82" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T75">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>AspToken</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB= .AspNet.ApplicationCookie=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=path=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:42]]></Time>
+<TimeTick>1515461682</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="83" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T76">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>access_token</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=access_token%22%3A%22</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=%22%2C%22token_typ</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:42]]></Time>
+<TimeTick>1515461682</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="84" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T77">
+<Obj plainTxt="False" ><![CDATA[Custom Request: login]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:43]]></Time>
+<TimeTick>1515461683</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="85" status="Passed" >
+<Disp><![CDATA[Custom Request: login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T78">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>ApiToken=%7B%22access_token%22%3A%22ifi02l7j-aM9COPg7xcOhdlYIFSPyfvFZwrk_ESAJb1lexbEyjfDXN01nY3CNunhCIAxDlSmqovKDEMmpmeTYQKh-S-8XsWSBhqiAXLm3ETjRIH9isXiDygmdUwZNKwnGaekEDfnUIlMaa4pPlk24FS_s6T3jBRu-wlf7qq9FpXAVoHI9RRKT9mUNXYD-hqnH46j-VOE9sAq7G5orYJYCg%22%2C%22token_type%22%3A%22bearer%22%2C%22expires_in%22%3A604799%2C%22refresh_token%22%3A%22524c3dfd-3f04-489d-a4b5-8d68b729c0d0%22%2C%22userName%22%3A%223%22%2C%22currentRole%22%3A%22Administrator%22%2C%22strDepartments%22%3A%22%22%2C%22strModalities%22%3A%22%22%2C%22onlyReport%22%3A%22false%22%2C%22strUserPermissionList%22%3A%22CentralPrint%3A1%7CChangeHoldFlag%3A1%7CChangePrintMode%3A1%7CChangePrintStatus%3A1%7Cconfig%3A1%7CConfigRole%3A1%7CConfigSystem%3A1%7CConfigUser%3A1%7CCorrectReconciliation%3A1%7CDelete%3A1%7CPrinterMonitor%3A1%7CPrintTaskManagement%3A1%7CQCLog%3A1%7CReconciliation%3A1%7CRestoreFilm%3A1%7CStatisticsReport%3A1%7Cworklist%3A1%7C%22%7D;; DOMAIN=10.184.129.171</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:43]]></Time>
+<TimeTick>1515461683</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="86" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T79">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>.AspNet.ApplicationCookie=5Efw7rTlub1guM95vTvQyApMPnlKVTD0Cg3cqHZAm2BNmzcDOFF51Coz_H3O3fEqwk78s1JNn5ZXZo2qKsyVM0vFcxauCs0gMaqxODGKznQfNVUyF8zhVnkDuBZpZaixct7I3xTABC9X6LeGTiICKzs8sdCN0N2FDhmuvv4YL6tDAn20UqrlWF0mRRFIav4lDCKAVA1gIAxwyiLFO3m3qTm34vqnH9ljX2PEIdiAz5yNYgH-y8Q0mK_AQXaecEjqrdpwBitNzhqLlUy5pNGwXtc2wn9Ums6fxo1_MvPLYA_dRnI05TdCAS6mMcPF0zAk; ; DOMAIN=10.184.129.171</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:43]]></Time>
+<TimeTick>1515461683</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="87" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T80">
+<Obj plainTxt="False" ><![CDATA[Url: login_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:44]]></Time>
+<TimeTick>1515461684</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="88" status="Passed" >
+<Disp><![CDATA[Url: login_2]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T81">
+<Obj plainTxt="False" ><![CDATA[Url: workarea]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:45]]></Time>
+<TimeTick>1515461685</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="89" status="Passed" >
+<Disp><![CDATA[Url: workarea]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T82">
+<Obj plainTxt="False" ><![CDATA[Service: Add Auto Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to all subsequent HTTP requests :<BR><STRONG><FONT COLOR=#00AF00>Authorization: bearer ifi02l7j-aM9COPg7xcOhdlYIFSPyfvFZwrk_ESAJb1lexbEyjfDXN01nY3CNunhCIAxDlSmqovKDEMmpmeTYQKh-S-8XsWSBhqiAXLm3ETjRIH9isXiDygmdUwZNKwnGaekEDfnUIlMaa4pPlk24FS_s6T3jBRu-wlf7qq9FpXAVoHI9RRKT9mUNXYD-hqnH46j-VOE9sAq7G5orYJYCg</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:45]]></Time>
+<TimeTick>1515461685</TimeTick>
+<NodeArgs eType="General" icon="9" nRep="90" >
+<Disp><![CDATA[Service: Add Auto Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T83">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>status</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:45]]></Time>
+<TimeTick>1515461685</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="91" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T84">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatusByUser]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:45]]></Time>
+<TimeTick>1515461685</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="92" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatusByUser]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T85">
+<Obj plainTxt="False" ><![CDATA[Url: tableRowsPerPage]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:46]]></Time>
+<TimeTick>1515461686</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="93" status="Passed" >
+<Disp><![CDATA[Url: tableRowsPerPage]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T86">
+<Obj plainTxt="False" ><![CDATA[Url: worklistcolumns]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:47]]></Time>
+<TimeTick>1515461687</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="94" status="Passed" >
+<Disp><![CDATA[Url: worklistcolumns]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T87">
+<Obj plainTxt="False" ><![CDATA[Url: systemversion]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:47]]></Time>
+<TimeTick>1515461687</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="95" status="Passed" >
+<Disp><![CDATA[Url: systemversion]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T88">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:48]]></Time>
+<TimeTick>1515461688</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="96" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T89">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitor-template.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:49]]></Time>
+<TimeTick>1515461689</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="97" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitor-template.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t11.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T90">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitoring]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:49]]></Time>
+<TimeTick>1515461689</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="98" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitoring]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T91">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_5]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:50]]></Time>
+<TimeTick>1515461690</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="99" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_5]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T92">
+<Obj plainTxt="False" ><![CDATA[Url: reconciliation-list.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:56]]></Time>
+<TimeTick>1515461696</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="100" status="Passed" >
+<Disp><![CDATA[Url: reconciliation-list.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration3\t14.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T93">
+<Obj plainTxt="False" ><![CDATA[Url: getUnmatchImages]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:57]]></Time>
+<TimeTick>1515461697</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="101" status="Passed" >
+<Disp><![CDATA[Url: getUnmatchImages]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T94">
+<Obj plainTxt="False" ><![CDATA[Url: allTerminals]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:57]]></Time>
+<TimeTick>1515461697</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="102" status="Passed" >
+<Disp><![CDATA[Url: allTerminals]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T95">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_6]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:58]]></Time>
+<TimeTick>1515461698</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="103" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_6]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T96">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_7]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:59]]></Time>
+<TimeTick>1515461699</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="104" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_7]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T97">
+<Obj plainTxt="False" ><![CDATA[Custom Request: GetDepartmentInfo]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:34:59]]></Time>
+<TimeTick>1515461699</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="105" status="Passed" >
+<Disp><![CDATA[Custom Request: GetDepartmentInfo]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T98">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitoring_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:00]]></Time>
+<TimeTick>1515461700</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="106" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitoring_2]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T99">
+<Obj plainTxt="False" ><![CDATA[Custom Request: GetDepartmentInfo]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:01]]></Time>
+<TimeTick>1515461701</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="107" status="Passed" >
+<Disp><![CDATA[Custom Request: GetDepartmentInfo]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T100">
+<Obj plainTxt="False" ><![CDATA[Custom Request: searchWorklist_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:02]]></Time>
+<TimeTick>1515461702</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="108" status="Passed" >
+<Disp><![CDATA[Custom Request: searchWorklist_2]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T101">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_20]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:02]]></Time>
+<TimeTick>1515461702</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="109" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_20]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/1/9 - 9:34:42" eTime="2018/1/9 - 9:35:07" passed="23" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="78" status="Passed" >
+<Disp><![CDATA[Action Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="77" status="Passed" >
+<Disp><![CDATA[Puma_worklist_WebHttpHtml_demo Iteration 3 (Row 3)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T102" iterID="4" >
+<Action rID="T103">
+<AName><![CDATA[Action]]></AName>
+<Step rID="T104">
+<Obj plainTxt="False" ><![CDATA[Service: Set Max Html Param Len]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Maximum length of a HTML string that can be retrieved and saved set to <STRONG><FONT COLOR=#00AF00>90000</FONT></STRONG> characters</CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:07]]></Time>
+<TimeTick>1515461707</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="114" >
+<Disp><![CDATA[Service: Set Max Html Param Len]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T105">
+<Obj plainTxt="False" ><![CDATA[Url: Platform]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:08]]></Time>
+<TimeTick>1515461708</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="115" status="Passed" >
+<Disp><![CDATA[Url: Platform]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration4\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T106">
+<Obj plainTxt="False" ><![CDATA[Url: login-view.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:08]]></Time>
+<TimeTick>1515461708</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="116" status="Passed" >
+<Disp><![CDATA[Url: login-view.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration4\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T107">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>ApiToken</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=ApiToken=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB= path=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:08]]></Time>
+<TimeTick>1515461708</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="117" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T108">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>AspToken</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB= .AspNet.ApplicationCookie=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=path=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:08]]></Time>
+<TimeTick>1515461708</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="118" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T109">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>access_token</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=access_token%22%3A%22</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=%22%2C%22token_typ</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:08]]></Time>
+<TimeTick>1515461708</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="119" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T110">
+<Obj plainTxt="False" ><![CDATA[Custom Request: login]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:08]]></Time>
+<TimeTick>1515461708</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="120" status="Passed" >
+<Disp><![CDATA[Custom Request: login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T111">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>ApiToken=%7B%22access_token%22%3A%22c1AgtOkmCslSVwDQpoffw3tCFpeyY194bkmobN78X8nZmbs8zflN6Cm-FadYuyVQnQd_ZWPZAtiDEm208265xowwGXOxIDo4SkMZgajg2KB7K1q799bCywDIuQZnPsR4xvUb9UzlAsR0AiYjJ1Gm5K478k0222yCpCMlCMZqTuzFJ6gEFtn_UxsPIM538TDp8gKiFxlhZhSxlYdSBkRkYg%22%2C%22token_type%22%3A%22bearer%22%2C%22expires_in%22%3A604799%2C%22refresh_token%22%3A%2262433700-0f61-4376-9146-823967a040bb%22%2C%22userName%22%3A%224%22%2C%22currentRole%22%3A%22Administrator%22%2C%22strDepartments%22%3A%22%22%2C%22strModalities%22%3A%22%22%2C%22onlyReport%22%3A%22false%22%2C%22strUserPermissionList%22%3A%22CentralPrint%3A1%7CChangeHoldFlag%3A1%7CChangePrintMode%3A1%7CChangePrintStatus%3A1%7Cconfig%3A1%7CConfigRole%3A1%7CConfigSystem%3A1%7CConfigUser%3A1%7CCorrectReconciliation%3A1%7CDelete%3A1%7CPrinterMonitor%3A1%7CPrintTaskManagement%3A1%7CQCLog%3A1%7CReconciliation%3A1%7CRestoreFilm%3A1%7CStatisticsReport%3A1%7Cworklist%3A1%7C%22%7D;; DOMAIN=10.184.129.171</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:08]]></Time>
+<TimeTick>1515461708</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="121" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T112">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>.AspNet.ApplicationCookie=D8ZZalelY-enmS2qBpxKXKfgPrdZwwD8GqRLN1ADWyQD9w9Dqi27EEwbOJcoZpQrjftxG59A5mLtm3MYY812cM4txilk50cTI5JA-qhXzJ_3cIuhOW76zx5E653nymXk-NpMCgF6yQn7Y-VTLdB1iThV50jzCv9DRg1jiezc08fD9qpQ2jBMpVuT1U2lmueWlp0eUttd0JJSFlwHUCSFHeMqeMWl0c-XPYKOokvqYTqKP6mxDm8wNUZ0Gx45tEPBtoujPtaatuRCLYmBl5MVrQbhUOeYuvTkAlaXcYpzVALPSl13ZMh8L6mRbgXdsAEx; ; DOMAIN=10.184.129.171</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:08]]></Time>
+<TimeTick>1515461708</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="122" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T113">
+<Obj plainTxt="False" ><![CDATA[Url: login_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:10]]></Time>
+<TimeTick>1515461710</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="123" status="Passed" >
+<Disp><![CDATA[Url: login_2]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration4\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T114">
+<Obj plainTxt="False" ><![CDATA[Url: workarea]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:10]]></Time>
+<TimeTick>1515461710</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="124" status="Passed" >
+<Disp><![CDATA[Url: workarea]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration4\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T115">
+<Obj plainTxt="False" ><![CDATA[Service: Add Auto Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to all subsequent HTTP requests :<BR><STRONG><FONT COLOR=#00AF00>Authorization: bearer c1AgtOkmCslSVwDQpoffw3tCFpeyY194bkmobN78X8nZmbs8zflN6Cm-FadYuyVQnQd_ZWPZAtiDEm208265xowwGXOxIDo4SkMZgajg2KB7K1q799bCywDIuQZnPsR4xvUb9UzlAsR0AiYjJ1Gm5K478k0222yCpCMlCMZqTuzFJ6gEFtn_UxsPIM538TDp8gKiFxlhZhSxlYdSBkRkYg</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:10]]></Time>
+<TimeTick>1515461710</TimeTick>
+<NodeArgs eType="General" icon="9" nRep="125" >
+<Disp><![CDATA[Service: Add Auto Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T116">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>status</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:10]]></Time>
+<TimeTick>1515461710</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="126" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T117">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatusByUser]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:11]]></Time>
+<TimeTick>1515461711</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="127" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatusByUser]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T118">
+<Obj plainTxt="False" ><![CDATA[Url: tableRowsPerPage]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:12]]></Time>
+<TimeTick>1515461712</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="128" status="Passed" >
+<Disp><![CDATA[Url: tableRowsPerPage]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T119">
+<Obj plainTxt="False" ><![CDATA[Url: worklistcolumns]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:13]]></Time>
+<TimeTick>1515461713</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="129" status="Passed" >
+<Disp><![CDATA[Url: worklistcolumns]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T120">
+<Obj plainTxt="False" ><![CDATA[Url: systemversion]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:13]]></Time>
+<TimeTick>1515461713</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="130" status="Passed" >
+<Disp><![CDATA[Url: systemversion]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T121">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:14]]></Time>
+<TimeTick>1515461714</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="131" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T122">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitor-template.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:15]]></Time>
+<TimeTick>1515461715</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="132" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitor-template.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration4\t11.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T123">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitoring]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:16]]></Time>
+<TimeTick>1515461716</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="133" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitoring]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T124">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_5]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:16]]></Time>
+<TimeTick>1515461716</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="134" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_5]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T125">
+<Obj plainTxt="False" ><![CDATA[Url: reconciliation-list.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:22]]></Time>
+<TimeTick>1515461722</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="135" status="Passed" >
+<Disp><![CDATA[Url: reconciliation-list.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration4\t14.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T126">
+<Obj plainTxt="False" ><![CDATA[Url: getUnmatchImages]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:23]]></Time>
+<TimeTick>1515461723</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="136" status="Passed" >
+<Disp><![CDATA[Url: getUnmatchImages]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T127">
+<Obj plainTxt="False" ><![CDATA[Url: allTerminals]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:24]]></Time>
+<TimeTick>1515461724</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="137" status="Passed" >
+<Disp><![CDATA[Url: allTerminals]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T128">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_6]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:25]]></Time>
+<TimeTick>1515461725</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="138" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_6]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T129">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_7]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:25]]></Time>
+<TimeTick>1515461725</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="139" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_7]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T130">
+<Obj plainTxt="False" ><![CDATA[Custom Request: GetDepartmentInfo]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:26]]></Time>
+<TimeTick>1515461726</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="140" status="Passed" >
+<Disp><![CDATA[Custom Request: GetDepartmentInfo]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T131">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitoring_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:27]]></Time>
+<TimeTick>1515461727</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="141" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitoring_2]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T132">
+<Obj plainTxt="False" ><![CDATA[Custom Request: GetDepartmentInfo]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:28]]></Time>
+<TimeTick>1515461728</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="142" status="Passed" >
+<Disp><![CDATA[Custom Request: GetDepartmentInfo]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T133">
+<Obj plainTxt="False" ><![CDATA[Custom Request: searchWorklist_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:29]]></Time>
+<TimeTick>1515461729</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="143" status="Passed" >
+<Disp><![CDATA[Custom Request: searchWorklist_2]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T134">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_20]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:29]]></Time>
+<TimeTick>1515461729</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="144" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_20]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/1/9 - 9:35:07" eTime="2018/1/9 - 9:35:34" passed="23" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="113" status="Passed" >
+<Disp><![CDATA[Action Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="112" status="Passed" >
+<Disp><![CDATA[Puma_worklist_WebHttpHtml_demo Iteration 4 (Row 4)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T135" iterID="5" >
+<Action rID="T136">
+<AName><![CDATA[Action]]></AName>
+<Step rID="T137">
+<Obj plainTxt="False" ><![CDATA[Service: Set Max Html Param Len]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Maximum length of a HTML string that can be retrieved and saved set to <STRONG><FONT COLOR=#00AF00>90000</FONT></STRONG> characters</CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:34]]></Time>
+<TimeTick>1515461734</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="149" >
+<Disp><![CDATA[Service: Set Max Html Param Len]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T138">
+<Obj plainTxt="False" ><![CDATA[Url: Platform]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:34]]></Time>
+<TimeTick>1515461734</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="150" status="Passed" >
+<Disp><![CDATA[Url: Platform]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration5\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T139">
+<Obj plainTxt="False" ><![CDATA[Url: login-view.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:35]]></Time>
+<TimeTick>1515461735</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="151" status="Passed" >
+<Disp><![CDATA[Url: login-view.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration5\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T140">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>ApiToken</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=ApiToken=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB= path=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:35]]></Time>
+<TimeTick>1515461735</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="152" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T141">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>AspToken</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB= .AspNet.ApplicationCookie=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=path=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:35]]></Time>
+<TimeTick>1515461735</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="153" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T142">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>access_token</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=access_token%22%3A%22</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=%22%2C%22token_typ</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:35]]></Time>
+<TimeTick>1515461735</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="154" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T143">
+<Obj plainTxt="False" ><![CDATA[Custom Request: login]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:35]]></Time>
+<TimeTick>1515461735</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="155" status="Passed" >
+<Disp><![CDATA[Custom Request: login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T144">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>ApiToken=%7B%22access_token%22%3A%22Zec0FQTnl54D6bp5vf3AggrYjp3HHIqSgrGq61ZBUqotyjNHrhL7v9R4HYHb8r5EjP-USs4AoyZNzHts1727h7hctCW-Pt5i7eq8vlzoxStA3isdyg2ANN1H2VBGq87dprj_USuGtHKUzQ9L1ThgSe07F_jtY46OqX8p-NPniVloD0ttme58Hycnrje6RxryK8Xn-clzj9s4l-zWKXw47w%22%2C%22token_type%22%3A%22bearer%22%2C%22expires_in%22%3A604799%2C%22refresh_token%22%3A%22392adb40-7a20-420d-a4a2-2a111e030540%22%2C%22userName%22%3A%225%22%2C%22currentRole%22%3A%22Administrator%22%2C%22strDepartments%22%3A%22%22%2C%22strModalities%22%3A%22%22%2C%22onlyReport%22%3A%22false%22%2C%22strUserPermissionList%22%3A%22CentralPrint%3A1%7CChangeHoldFlag%3A1%7CChangePrintMode%3A1%7CChangePrintStatus%3A1%7Cconfig%3A1%7CConfigRole%3A1%7CConfigSystem%3A1%7CConfigUser%3A1%7CCorrectReconciliation%3A1%7CDelete%3A1%7CPrinterMonitor%3A1%7CPrintTaskManagement%3A1%7CQCLog%3A1%7CReconciliation%3A1%7CRestoreFilm%3A1%7CStatisticsReport%3A1%7Cworklist%3A1%7C%22%7D;; DOMAIN=10.184.129.171</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:35]]></Time>
+<TimeTick>1515461735</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="156" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T145">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>.AspNet.ApplicationCookie=QOcCbRHIenQz4CGdc-e7p06drz_EOziNMyHsA4XhLeMtWFL4Z5Gqloa0kVlyNMCvBenwJ4tE3PT--5aAieJOwbB8U0lebyW1OyLGcVlZzVDsXhVTewKj0yEfiVo2i5a8byN_qxBuyVoA_vivrTdhrRNHvXrk5YuPCyWefQQRHIf2gLlu6TbnhKXKqkw811m8yuMzyFpq7QlGau9Z_cYDPQQT-7ArRfS7lXqYSUilxMlF0ADNwf5jv98wF5RaKoyHo9zZVo_f_7BYYoXkNPDlHOn5QFcMNl9pjDcsOa0u6vLjt047V-1wzigIcu_8gGO7; ; DOMAIN=10.184.129.171</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:35]]></Time>
+<TimeTick>1515461735</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="157" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T146">
+<Obj plainTxt="False" ><![CDATA[Url: login_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:36]]></Time>
+<TimeTick>1515461736</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="158" status="Passed" >
+<Disp><![CDATA[Url: login_2]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration5\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T147">
+<Obj plainTxt="False" ><![CDATA[Url: workarea]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:37]]></Time>
+<TimeTick>1515461737</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="159" status="Passed" >
+<Disp><![CDATA[Url: workarea]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration5\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T148">
+<Obj plainTxt="False" ><![CDATA[Service: Add Auto Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to all subsequent HTTP requests :<BR><STRONG><FONT COLOR=#00AF00>Authorization: bearer Zec0FQTnl54D6bp5vf3AggrYjp3HHIqSgrGq61ZBUqotyjNHrhL7v9R4HYHb8r5EjP-USs4AoyZNzHts1727h7hctCW-Pt5i7eq8vlzoxStA3isdyg2ANN1H2VBGq87dprj_USuGtHKUzQ9L1ThgSe07F_jtY46OqX8p-NPniVloD0ttme58Hycnrje6RxryK8Xn-clzj9s4l-zWKXw47w</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:37]]></Time>
+<TimeTick>1515461737</TimeTick>
+<NodeArgs eType="General" icon="9" nRep="160" >
+<Disp><![CDATA[Service: Add Auto Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T149">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>status</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:37]]></Time>
+<TimeTick>1515461737</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="161" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T150">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatusByUser]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:37]]></Time>
+<TimeTick>1515461737</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="162" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatusByUser]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T151">
+<Obj plainTxt="False" ><![CDATA[Url: tableRowsPerPage]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:38]]></Time>
+<TimeTick>1515461738</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="163" status="Passed" >
+<Disp><![CDATA[Url: tableRowsPerPage]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T152">
+<Obj plainTxt="False" ><![CDATA[Url: worklistcolumns]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:39]]></Time>
+<TimeTick>1515461739</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="164" status="Passed" >
+<Disp><![CDATA[Url: worklistcolumns]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T153">
+<Obj plainTxt="False" ><![CDATA[Url: systemversion]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:39]]></Time>
+<TimeTick>1515461739</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="165" status="Passed" >
+<Disp><![CDATA[Url: systemversion]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T154">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:40]]></Time>
+<TimeTick>1515461740</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="166" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T155">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitor-template.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:41]]></Time>
+<TimeTick>1515461741</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="167" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitor-template.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration5\t11.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T156">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitoring]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:42]]></Time>
+<TimeTick>1515461742</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="168" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitoring]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T157">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_5]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:42]]></Time>
+<TimeTick>1515461742</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="169" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_5]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T158">
+<Obj plainTxt="False" ><![CDATA[Url: reconciliation-list.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:48]]></Time>
+<TimeTick>1515461748</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="170" status="Passed" >
+<Disp><![CDATA[Url: reconciliation-list.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration5\t14.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T159">
+<Obj plainTxt="False" ><![CDATA[Url: getUnmatchImages]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:49]]></Time>
+<TimeTick>1515461749</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="171" status="Passed" >
+<Disp><![CDATA[Url: getUnmatchImages]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T160">
+<Obj plainTxt="False" ><![CDATA[Url: allTerminals]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:49]]></Time>
+<TimeTick>1515461749</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="172" status="Passed" >
+<Disp><![CDATA[Url: allTerminals]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T161">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_6]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:50]]></Time>
+<TimeTick>1515461750</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="173" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_6]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T162">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_7]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:50]]></Time>
+<TimeTick>1515461750</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="174" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_7]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T163">
+<Obj plainTxt="False" ><![CDATA[Custom Request: GetDepartmentInfo]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:51]]></Time>
+<TimeTick>1515461751</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="175" status="Passed" >
+<Disp><![CDATA[Custom Request: GetDepartmentInfo]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T164">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitoring_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:52]]></Time>
+<TimeTick>1515461752</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="176" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitoring_2]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T165">
+<Obj plainTxt="False" ><![CDATA[Custom Request: GetDepartmentInfo]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:53]]></Time>
+<TimeTick>1515461753</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="177" status="Passed" >
+<Disp><![CDATA[Custom Request: GetDepartmentInfo]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T166">
+<Obj plainTxt="False" ><![CDATA[Custom Request: searchWorklist_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:54]]></Time>
+<TimeTick>1515461754</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="178" status="Passed" >
+<Disp><![CDATA[Custom Request: searchWorklist_2]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T167">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_20]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:54]]></Time>
+<TimeTick>1515461754</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="179" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_20]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/1/9 - 9:35:34" eTime="2018/1/9 - 9:35:59" passed="23" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="148" status="Passed" >
+<Disp><![CDATA[Action Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="147" status="Passed" >
+<Disp><![CDATA[Puma_worklist_WebHttpHtml_demo Iteration 5 (Row 5)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T168" iterID="6" >
+<Action rID="T169">
+<AName><![CDATA[Action]]></AName>
+<Step rID="T170">
+<Obj plainTxt="False" ><![CDATA[Service: Set Max Html Param Len]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Maximum length of a HTML string that can be retrieved and saved set to <STRONG><FONT COLOR=#00AF00>90000</FONT></STRONG> characters</CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:59]]></Time>
+<TimeTick>1515461759</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="184" >
+<Disp><![CDATA[Service: Set Max Html Param Len]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T171">
+<Obj plainTxt="False" ><![CDATA[Url: Platform]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:35:59]]></Time>
+<TimeTick>1515461759</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="185" status="Passed" >
+<Disp><![CDATA[Url: Platform]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T172">
+<Obj plainTxt="False" ><![CDATA[Url: login-view.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:00]]></Time>
+<TimeTick>1515461760</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="186" status="Passed" >
+<Disp><![CDATA[Url: login-view.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T173">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>ApiToken</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=ApiToken=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB= path=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:00]]></Time>
+<TimeTick>1515461760</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="187" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T174">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>AspToken</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB= .AspNet.ApplicationCookie=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=path=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:00]]></Time>
+<TimeTick>1515461760</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="188" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T175">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>access_token</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=access_token%22%3A%22</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=%22%2C%22token_typ</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:00]]></Time>
+<TimeTick>1515461760</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="189" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T176">
+<Obj plainTxt="False" ><![CDATA[Custom Request: login]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:00]]></Time>
+<TimeTick>1515461760</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="190" status="Passed" >
+<Disp><![CDATA[Custom Request: login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T177">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>ApiToken=%7B%22access_token%22%3A%22RA45-oHuMtLTMitrsSM5PDW6wKF-2CzscVI4ftrIP2E7Vc8_arc7VTf8RQZh06aoZdvSbJgRkmriMoU1ashHJtrS1Aa0bDCyDEN3n6nWQsU6jwlp6jVvzIi0ccPSdJsZFKtJE4750l3-KM38yU3Wzq7AacR0QqQiINmf8PK33kTl6UO6G8OQnBDUIDkeqYRmZ4JKk8KfzLYUDjwKuf-K_g%22%2C%22token_type%22%3A%22bearer%22%2C%22expires_in%22%3A604799%2C%22refresh_token%22%3A%2230a10b1c-18ad-4ffd-8ad8-f569b93fa1ca%22%2C%22userName%22%3A%226%22%2C%22currentRole%22%3A%22Administrator%22%2C%22strDepartments%22%3A%22%22%2C%22strModalities%22%3A%22%22%2C%22onlyReport%22%3A%22false%22%2C%22strUserPermissionList%22%3A%22CentralPrint%3A1%7CChangeHoldFlag%3A1%7CChangePrintMode%3A1%7CChangePrintStatus%3A1%7Cconfig%3A1%7CConfigRole%3A1%7CConfigSystem%3A1%7CConfigUser%3A1%7CCorrectReconciliation%3A1%7CDelete%3A1%7CPrinterMonitor%3A1%7CPrintTaskManagement%3A1%7CQCLog%3A1%7CReconciliation%3A1%7CRestoreFilm%3A1%7CStatisticsReport%3A1%7Cworklist%3A1%7C%22%7D;; DOMAIN=10.184.129.171</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:00]]></Time>
+<TimeTick>1515461760</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="191" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T178">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>.AspNet.ApplicationCookie=HYm27P_lb6aBbZIaZFfsYncIiO3v-TVS8_GAXe7EPYmVGImrNmf7qqSd_kSzWqQbHTK1VYzKeDMWdQa2omx0hAqNhv8pZow1iRnT-RuO9Y57-T8VR8q9sAf72BqZpoYD_zoQFhXvrYRL4EN8bq7PBTUaPypEv1F_xkCEDkOAlrLVlZ7qKiDf5kKTatIe25QMU_hBMex0enMHPfY3uq6EvKS12mCqVPPDRgfPZFORBkTphP4Qe3-bGONHR31mHHkf-_iWelvg2ag_uoXq-iEt2jmR1Q51KFGG9IIEsot_iBbByQx5xJk1ISl3vVhmwpsL; ; DOMAIN=10.184.129.171</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:00]]></Time>
+<TimeTick>1515461760</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="192" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T179">
+<Obj plainTxt="False" ><![CDATA[Url: login_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:01]]></Time>
+<TimeTick>1515461761</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="193" status="Passed" >
+<Disp><![CDATA[Url: login_2]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T180">
+<Obj plainTxt="False" ><![CDATA[Url: workarea]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:02]]></Time>
+<TimeTick>1515461762</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="194" status="Passed" >
+<Disp><![CDATA[Url: workarea]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T181">
+<Obj plainTxt="False" ><![CDATA[Service: Add Auto Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to all subsequent HTTP requests :<BR><STRONG><FONT COLOR=#00AF00>Authorization: bearer RA45-oHuMtLTMitrsSM5PDW6wKF-2CzscVI4ftrIP2E7Vc8_arc7VTf8RQZh06aoZdvSbJgRkmriMoU1ashHJtrS1Aa0bDCyDEN3n6nWQsU6jwlp6jVvzIi0ccPSdJsZFKtJE4750l3-KM38yU3Wzq7AacR0QqQiINmf8PK33kTl6UO6G8OQnBDUIDkeqYRmZ4JKk8KfzLYUDjwKuf-K_g</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:02]]></Time>
+<TimeTick>1515461762</TimeTick>
+<NodeArgs eType="General" icon="9" nRep="195" >
+<Disp><![CDATA[Service: Add Auto Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T182">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>status</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:02]]></Time>
+<TimeTick>1515461762</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="196" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T183">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatusByUser]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:02]]></Time>
+<TimeTick>1515461762</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="197" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatusByUser]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T184">
+<Obj plainTxt="False" ><![CDATA[Url: tableRowsPerPage]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:03]]></Time>
+<TimeTick>1515461763</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="198" status="Passed" >
+<Disp><![CDATA[Url: tableRowsPerPage]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T185">
+<Obj plainTxt="False" ><![CDATA[Url: worklistcolumns]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:03]]></Time>
+<TimeTick>1515461763</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="199" status="Passed" >
+<Disp><![CDATA[Url: worklistcolumns]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T186">
+<Obj plainTxt="False" ><![CDATA[Url: systemversion]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:04]]></Time>
+<TimeTick>1515461764</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="200" status="Passed" >
+<Disp><![CDATA[Url: systemversion]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T187">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:05]]></Time>
+<TimeTick>1515461765</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="201" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T188">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitor-template.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:05]]></Time>
+<TimeTick>1515461765</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="202" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitor-template.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t11.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T189">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitoring]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:06]]></Time>
+<TimeTick>1515461766</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="203" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitoring]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T190">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_5]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:07]]></Time>
+<TimeTick>1515461767</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="204" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_5]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T191">
+<Obj plainTxt="False" ><![CDATA[Url: reconciliation-list.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:12]]></Time>
+<TimeTick>1515461772</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="205" status="Passed" >
+<Disp><![CDATA[Url: reconciliation-list.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration6\t14.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T192">
+<Obj plainTxt="False" ><![CDATA[Url: getUnmatchImages]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:13]]></Time>
+<TimeTick>1515461773</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="206" status="Passed" >
+<Disp><![CDATA[Url: getUnmatchImages]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T193">
+<Obj plainTxt="False" ><![CDATA[Url: allTerminals]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:14]]></Time>
+<TimeTick>1515461774</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="207" status="Passed" >
+<Disp><![CDATA[Url: allTerminals]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T194">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_6]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:14]]></Time>
+<TimeTick>1515461774</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="208" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_6]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T195">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_7]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:15]]></Time>
+<TimeTick>1515461775</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="209" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_7]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T196">
+<Obj plainTxt="False" ><![CDATA[Custom Request: GetDepartmentInfo]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:16]]></Time>
+<TimeTick>1515461776</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="210" status="Passed" >
+<Disp><![CDATA[Custom Request: GetDepartmentInfo]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T197">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitoring_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:16]]></Time>
+<TimeTick>1515461776</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="211" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitoring_2]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T198">
+<Obj plainTxt="False" ><![CDATA[Custom Request: GetDepartmentInfo]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:17]]></Time>
+<TimeTick>1515461777</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="212" status="Passed" >
+<Disp><![CDATA[Custom Request: GetDepartmentInfo]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T199">
+<Obj plainTxt="False" ><![CDATA[Custom Request: searchWorklist_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:18]]></Time>
+<TimeTick>1515461778</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="213" status="Passed" >
+<Disp><![CDATA[Custom Request: searchWorklist_2]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T200">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_20]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:19]]></Time>
+<TimeTick>1515461779</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="214" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_20]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/1/9 - 9:35:59" eTime="2018/1/9 - 9:36:24" passed="23" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="183" status="Passed" >
+<Disp><![CDATA[Action Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="182" status="Passed" >
+<Disp><![CDATA[Puma_worklist_WebHttpHtml_demo Iteration 6 (Row 6)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T201" iterID="7" >
+<Action rID="T202">
+<AName><![CDATA[Action]]></AName>
+<Step rID="T203">
+<Obj plainTxt="False" ><![CDATA[Service: Set Max Html Param Len]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Maximum length of a HTML string that can be retrieved and saved set to <STRONG><FONT COLOR=#00AF00>90000</FONT></STRONG> characters</CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:24]]></Time>
+<TimeTick>1515461784</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="219" >
+<Disp><![CDATA[Service: Set Max Html Param Len]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T204">
+<Obj plainTxt="False" ><![CDATA[Url: Platform]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:24]]></Time>
+<TimeTick>1515461784</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="220" status="Passed" >
+<Disp><![CDATA[Url: Platform]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T205">
+<Obj plainTxt="False" ><![CDATA[Url: login-view.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:24]]></Time>
+<TimeTick>1515461784</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="221" status="Passed" >
+<Disp><![CDATA[Url: login-view.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T206">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>ApiToken</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=ApiToken=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB= path=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:24]]></Time>
+<TimeTick>1515461784</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="222" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T207">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>AspToken</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB= .AspNet.ApplicationCookie=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=path=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:24]]></Time>
+<TimeTick>1515461784</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="223" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T208">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>access_token</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=access_token%22%3A%22</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=%22%2C%22token_typ</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:24]]></Time>
+<TimeTick>1515461784</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="224" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T209">
+<Obj plainTxt="False" ><![CDATA[Custom Request: login]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:24]]></Time>
+<TimeTick>1515461784</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="225" status="Passed" >
+<Disp><![CDATA[Custom Request: login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T210">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>ApiToken=%7B%22access_token%22%3A%22ctni7bKB3xU2pKiHmZHA-JhrvIyGpuQVPFnSn2XrS3VEQ7rCcUY1udbB-Trz_u-Bi0H9lwmOUwrS9tdHcrgSYyDLuhfrUWyITnHqqv7UOOaMuGr5PYfCndRMDCy9_dK-FiZGFkNytV_iS4XG-fgpEsDuoE7bryRLf68rc_dPlf9K8bmBWENpFclAP0-cqTgLBWVzV5ROVxn9kAooi_PqoQ%22%2C%22token_type%22%3A%22bearer%22%2C%22expires_in%22%3A604800%2C%22refresh_token%22%3A%225f62c303-cd0f-4bda-9abb-2549fcd227b7%22%2C%22userName%22%3A%227%22%2C%22currentRole%22%3A%22Administrator%22%2C%22strDepartments%22%3A%22%22%2C%22strModalities%22%3A%22%22%2C%22onlyReport%22%3A%22false%22%2C%22strUserPermissionList%22%3A%22CentralPrint%3A1%7CChangeHoldFlag%3A1%7CChangePrintMode%3A1%7CChangePrintStatus%3A1%7Cconfig%3A1%7CConfigRole%3A1%7CConfigSystem%3A1%7CConfigUser%3A1%7CCorrectReconciliation%3A1%7CDelete%3A1%7CPrinterMonitor%3A1%7CPrintTaskManagement%3A1%7CQCLog%3A1%7CReconciliation%3A1%7CRestoreFilm%3A1%7CStatisticsReport%3A1%7Cworklist%3A1%7C%22%7D;; DOMAIN=10.184.129.171</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:24]]></Time>
+<TimeTick>1515461784</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="226" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T211">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>.AspNet.ApplicationCookie=9jZiWtTI-IbSVijbwz0eP63H1sJHVK3vHhpKRrFOIhwLDwTnQ-gxjt-fzUOwDFSHxkI7ZiwkwnkzJmXX7PauJNqDt1EHA0mzy2axdIZE7z0E9s_HmI8BIsyrgJefSZ647lBNVVE-YVfMlvqbtEk182DoxXsGRAoqIsjQ2leS5kHtuUvhMnMz7MCXGajv16qgY1yXSsox1UYf8YDO_rKuH3V4WkN-8srWLhCYC88L_-KXE5vspv4qIB2cgWQnuZLIusaY1cwtxMFoEkX0a15UXyKdJeW7eStGFMpWyxPBVVoW2Vr6Hxb-nipE9Sob76s-; ; DOMAIN=10.184.129.171</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:24]]></Time>
+<TimeTick>1515461784</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="227" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T212">
+<Obj plainTxt="False" ><![CDATA[Url: login_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:26]]></Time>
+<TimeTick>1515461786</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="228" status="Passed" >
+<Disp><![CDATA[Url: login_2]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T213">
+<Obj plainTxt="False" ><![CDATA[Url: workarea]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:26]]></Time>
+<TimeTick>1515461786</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="229" status="Passed" >
+<Disp><![CDATA[Url: workarea]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T214">
+<Obj plainTxt="False" ><![CDATA[Service: Add Auto Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to all subsequent HTTP requests :<BR><STRONG><FONT COLOR=#00AF00>Authorization: bearer ctni7bKB3xU2pKiHmZHA-JhrvIyGpuQVPFnSn2XrS3VEQ7rCcUY1udbB-Trz_u-Bi0H9lwmOUwrS9tdHcrgSYyDLuhfrUWyITnHqqv7UOOaMuGr5PYfCndRMDCy9_dK-FiZGFkNytV_iS4XG-fgpEsDuoE7bryRLf68rc_dPlf9K8bmBWENpFclAP0-cqTgLBWVzV5ROVxn9kAooi_PqoQ</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:26]]></Time>
+<TimeTick>1515461786</TimeTick>
+<NodeArgs eType="General" icon="9" nRep="230" >
+<Disp><![CDATA[Service: Add Auto Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T215">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>status</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:26]]></Time>
+<TimeTick>1515461786</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="231" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T216">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatusByUser]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:27]]></Time>
+<TimeTick>1515461787</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="232" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatusByUser]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T217">
+<Obj plainTxt="False" ><![CDATA[Url: tableRowsPerPage]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:28]]></Time>
+<TimeTick>1515461788</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="233" status="Passed" >
+<Disp><![CDATA[Url: tableRowsPerPage]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T218">
+<Obj plainTxt="False" ><![CDATA[Url: worklistcolumns]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:29]]></Time>
+<TimeTick>1515461789</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="234" status="Passed" >
+<Disp><![CDATA[Url: worklistcolumns]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T219">
+<Obj plainTxt="False" ><![CDATA[Url: systemversion]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:29]]></Time>
+<TimeTick>1515461789</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="235" status="Passed" >
+<Disp><![CDATA[Url: systemversion]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T220">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:30]]></Time>
+<TimeTick>1515461790</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="236" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T221">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitor-template.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:31]]></Time>
+<TimeTick>1515461791</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="237" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitor-template.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t11.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T222">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitoring]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:32]]></Time>
+<TimeTick>1515461792</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="238" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitoring]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T223">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_5]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:32]]></Time>
+<TimeTick>1515461792</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="239" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_5]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T224">
+<Obj plainTxt="False" ><![CDATA[Url: reconciliation-list.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:38]]></Time>
+<TimeTick>1515461798</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="240" status="Passed" >
+<Disp><![CDATA[Url: reconciliation-list.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration7\t14.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T225">
+<Obj plainTxt="False" ><![CDATA[Url: getUnmatchImages]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:39]]></Time>
+<TimeTick>1515461799</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="241" status="Passed" >
+<Disp><![CDATA[Url: getUnmatchImages]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T226">
+<Obj plainTxt="False" ><![CDATA[Url: allTerminals]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:40]]></Time>
+<TimeTick>1515461800</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="242" status="Passed" >
+<Disp><![CDATA[Url: allTerminals]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T227">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_6]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:41]]></Time>
+<TimeTick>1515461801</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="243" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_6]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T228">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_7]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:41]]></Time>
+<TimeTick>1515461801</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="244" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_7]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T229">
+<Obj plainTxt="False" ><![CDATA[Custom Request: GetDepartmentInfo]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:42]]></Time>
+<TimeTick>1515461802</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="245" status="Passed" >
+<Disp><![CDATA[Custom Request: GetDepartmentInfo]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T230">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitoring_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:43]]></Time>
+<TimeTick>1515461803</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="246" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitoring_2]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T231">
+<Obj plainTxt="False" ><![CDATA[Custom Request: GetDepartmentInfo]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:44]]></Time>
+<TimeTick>1515461804</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="247" status="Passed" >
+<Disp><![CDATA[Custom Request: GetDepartmentInfo]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T232">
+<Obj plainTxt="False" ><![CDATA[Custom Request: searchWorklist_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:45]]></Time>
+<TimeTick>1515461805</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="248" status="Passed" >
+<Disp><![CDATA[Custom Request: searchWorklist_2]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T233">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_20]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:46]]></Time>
+<TimeTick>1515461806</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="249" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_20]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/1/9 - 9:36:24" eTime="2018/1/9 - 9:36:51" passed="23" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="218" status="Passed" >
+<Disp><![CDATA[Action Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="217" status="Passed" >
+<Disp><![CDATA[Puma_worklist_WebHttpHtml_demo Iteration 7 (Row 7)]]></Disp>
+</NodeArgs>
+</DIter>
+<DIter rID="T234" iterID="8" >
+<Action rID="T235">
+<AName><![CDATA[Action]]></AName>
+<Step rID="T236">
+<Obj plainTxt="False" ><![CDATA[Service: Set Max Html Param Len]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Maximum length of a HTML string that can be retrieved and saved set to <STRONG><FONT COLOR=#00AF00>90000</FONT></STRONG> characters</CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:51]]></Time>
+<TimeTick>1515461811</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="254" >
+<Disp><![CDATA[Service: Set Max Html Param Len]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T237">
+<Obj plainTxt="False" ><![CDATA[Url: Platform]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:51]]></Time>
+<TimeTick>1515461811</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="255" status="Passed" >
+<Disp><![CDATA[Url: Platform]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T238">
+<Obj plainTxt="False" ><![CDATA[Url: login-view.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:51]]></Time>
+<TimeTick>1515461811</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="256" status="Passed" >
+<Disp><![CDATA[Url: login-view.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T239">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>ApiToken</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=ApiToken=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB= path=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:51]]></Time>
+<TimeTick>1515461811</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="257" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T240">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>AspToken</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB= .AspNet.ApplicationCookie=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=path=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:51]]></Time>
+<TimeTick>1515461811</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="258" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T241">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>access_token</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=access_token%22%3A%22</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=%22%2C%22token_typ</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:51]]></Time>
+<TimeTick>1515461811</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="259" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T242">
+<Obj plainTxt="False" ><![CDATA[Custom Request: login]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:51]]></Time>
+<TimeTick>1515461811</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="260" status="Passed" >
+<Disp><![CDATA[Custom Request: login]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T243">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>ApiToken=%7B%22access_token%22%3A%222I4HmjOJMhINLk5vv9KxdzQLSz4f84HkAAUbiXjmiT2X-MTsxHpYUlfoccuxRg4HtEVjGNRf9JgYt7sCTEVZOfGF1UbflInAMkE2xqmFjwafeDALz9V64sRQLhJ0yudYtoBHi5lb9KYuBKK50zAR4374SBAH93GEP_qix4JDj9cym0NVmn20s2aJrIgmpQwwIYGFEPCejCdGNPS-ofkO6w%22%2C%22token_type%22%3A%22bearer%22%2C%22expires_in%22%3A604799%2C%22refresh_token%22%3A%222afb7df7-7efa-4678-b013-9a902b4e8bdb%22%2C%22userName%22%3A%228%22%2C%22currentRole%22%3A%22Administrator%22%2C%22strDepartments%22%3A%22%22%2C%22strModalities%22%3A%22%22%2C%22onlyReport%22%3A%22false%22%2C%22strUserPermissionList%22%3A%22CentralPrint%3A1%7CChangeHoldFlag%3A1%7CChangePrintMode%3A1%7CChangePrintStatus%3A1%7Cconfig%3A1%7CConfigRole%3A1%7CConfigSystem%3A1%7CConfigUser%3A1%7CCorrectReconciliation%3A1%7CDelete%3A1%7CPrinterMonitor%3A1%7CPrintTaskManagement%3A1%7CQCLog%3A1%7CReconciliation%3A1%7CRestoreFilm%3A1%7CStatisticsReport%3A1%7Cworklist%3A1%7C%22%7D;; DOMAIN=10.184.129.171</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:51]]></Time>
+<TimeTick>1515461811</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="261" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T244">
+<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>.AspNet.ApplicationCookie=1dVy9B9ip-LGrmim9NzPVagA7hxLhJAeB-8dYmZo08h43WVEh0GogWKoUGzUsv6iQXkJkOpx-QS4u0y_Xy2-qNwfpOlhM3ZebtfA3vrMl4RkmiJj4PVL-_FJmZCTTgnozwLgdxDmIQBq-rXh5kBHbxdo5HqEq6gU4f93BeQhAVUf9k-pxJ3mEfQaPUH278mQZzXjAp71apWlfYQCUTwlLKd42I0RzIXqNwvH9S9ziu11f7H9iLy3Dke3swobtiEZNtjGlEiKFvBEU-ibxLFO-1v6EIsJMzkFR05sIp3lpGuyF8YKzv8U1GRBEkpxj1Dc; ; DOMAIN=10.184.129.171</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:51]]></Time>
+<TimeTick>1515461811</TimeTick>
+<NodeArgs eType="General" icon="8" nRep="262" >
+<Disp><![CDATA[Service: Add Cookie]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T245">
+<Obj plainTxt="False" ><![CDATA[Url: login_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:52]]></Time>
+<TimeTick>1515461812</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="263" status="Passed" >
+<Disp><![CDATA[Url: login_2]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T246">
+<Obj plainTxt="False" ><![CDATA[Url: workarea]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:53]]></Time>
+<TimeTick>1515461813</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="264" status="Passed" >
+<Disp><![CDATA[Url: workarea]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T247">
+<Obj plainTxt="False" ><![CDATA[Service: Add Auto Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to all subsequent HTTP requests :<BR><STRONG><FONT COLOR=#00AF00>Authorization: bearer 2I4HmjOJMhINLk5vv9KxdzQLSz4f84HkAAUbiXjmiT2X-MTsxHpYUlfoccuxRg4HtEVjGNRf9JgYt7sCTEVZOfGF1UbflInAMkE2xqmFjwafeDALz9V64sRQLhJ0yudYtoBHi5lb9KYuBKK50zAR4374SBAH93GEP_qix4JDj9cym0NVmn20s2aJrIgmpQwwIYGFEPCejCdGNPS-ofkO6w</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:53]]></Time>
+<TimeTick>1515461813</TimeTick>
+<NodeArgs eType="General" icon="9" nRep="265" >
+<Disp><![CDATA[Service: Add Auto Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T248">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>status</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:53]]></Time>
+<TimeTick>1515461813</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="266" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T249">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatusByUser]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:53]]></Time>
+<TimeTick>1515461813</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="267" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatusByUser]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T250">
+<Obj plainTxt="False" ><![CDATA[Url: tableRowsPerPage]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:54]]></Time>
+<TimeTick>1515461814</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="268" status="Passed" >
+<Disp><![CDATA[Url: tableRowsPerPage]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T251">
+<Obj plainTxt="False" ><![CDATA[Url: worklistcolumns]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:55]]></Time>
+<TimeTick>1515461815</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="269" status="Passed" >
+<Disp><![CDATA[Url: worklistcolumns]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T252">
+<Obj plainTxt="False" ><![CDATA[Url: systemversion]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:55]]></Time>
+<TimeTick>1515461815</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="270" status="Passed" >
+<Disp><![CDATA[Url: systemversion]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T253">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:56]]></Time>
+<TimeTick>1515461816</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="271" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T254">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitor-template.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:56]]></Time>
+<TimeTick>1515461816</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="272" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitor-template.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t11.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T255">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitoring]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:57]]></Time>
+<TimeTick>1515461817</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="273" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitoring]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T256">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_5]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:36:58]]></Time>
+<TimeTick>1515461818</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="274" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_5]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T257">
+<Obj plainTxt="False" ><![CDATA[Url: reconciliation-list.html]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:37:03]]></Time>
+<TimeTick>1515461823</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="275" status="Passed" >
+<Disp><![CDATA[Url: reconciliation-list.html]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration8\t14.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T258">
+<Obj plainTxt="False" ><![CDATA[Url: getUnmatchImages]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:37:04]]></Time>
+<TimeTick>1515461824</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="276" status="Passed" >
+<Disp><![CDATA[Url: getUnmatchImages]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T259">
+<Obj plainTxt="False" ><![CDATA[Url: allTerminals]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:37:05]]></Time>
+<TimeTick>1515461825</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="277" status="Passed" >
+<Disp><![CDATA[Url: allTerminals]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T260">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_6]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:37:05]]></Time>
+<TimeTick>1515461825</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="278" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_6]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T261">
+<Obj plainTxt="False" ><![CDATA[Url: CheckLoginStatus_7]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:37:06]]></Time>
+<TimeTick>1515461826</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="279" status="Passed" >
+<Disp><![CDATA[Url: CheckLoginStatus_7]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T262">
+<Obj plainTxt="False" ><![CDATA[Custom Request: GetDepartmentInfo]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:37:06]]></Time>
+<TimeTick>1515461826</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="280" status="Passed" >
+<Disp><![CDATA[Custom Request: GetDepartmentInfo]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T263">
+<Obj plainTxt="False" ><![CDATA[Url: terminalmonitoring_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:37:07]]></Time>
+<TimeTick>1515461827</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="281" status="Passed" >
+<Disp><![CDATA[Url: terminalmonitoring_2]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T264">
+<Obj plainTxt="False" ><![CDATA[Custom Request: GetDepartmentInfo]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:37:08]]></Time>
+<TimeTick>1515461828</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="282" status="Passed" >
+<Disp><![CDATA[Custom Request: GetDepartmentInfo]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T265">
+<Obj plainTxt="False" ><![CDATA[Script Aborted!]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Pass</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/1/9 - 9:37:08]]></Time>
+<TimeTick>1515461828</TimeTick>
+<NodeArgs eType="General" icon="1" nRep="283" >
+<Disp><![CDATA[Script Aborted!]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/1/9 - 9:36:51" eTime="2018/1/9 - 9:37:08" passed="21" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="253" status="Passed" >
+<Disp><![CDATA[Action Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T266">
+<AName><![CDATA[vuser_end]]></AName>
+<Summary sTime="2018/1/9 - 9:37:08" eTime="2018/1/9 - 9:37:08" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="285" >
+<Disp><![CDATA[vuser_end Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="252" status="Passed" >
+<Disp><![CDATA[Puma_worklist_WebHttpHtml_demo Iteration 8 (Row 8)]]></Disp>
+</NodeArgs>
+</DIter>
+<Summary sTime="2018/1/9 - 9:33:42" eTime="2018/1/9 - 9:37:10" passed="182" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartTest" icon="1" nRep="4" status="Passed" >
+<Disp><![CDATA[Test Puma_worklist_WebHttpHtml_demo Summary]]></Disp>
+</NodeArgs>
+</Doc>
+</Report>

@@ -1,0 +1,225 @@
+
+
+<!DOCTYPE html>
+<html ng-app="workareaApp">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carestream Puma</title>
+    <base href="/Platform/" />
+    <link href="/Platform/Content/angular-material.css" rel="stylesheet"/>
+<link href="/Platform/Content/bootstrap.css" rel="stylesheet"/>
+<link href="/Platform/Content/bootstrap-theme.css" rel="stylesheet"/>
+<link href="/Platform/Content/site.css" rel="stylesheet"/>
+<link href="/Platform/Content/carestream.css" rel="stylesheet"/>
+<link href="/Platform/Content/ui-bootstrap-csp.css" rel="stylesheet"/>
+<link href="/Platform/app/common/controls/puma-switch/puma-switch.css" rel="stylesheet"/>
+<link href="/Platform/Content/ui-grid.min.css" rel="stylesheet"/>
+<link href="/Platform/Scripts/angular-tree-control/tree-control.css" rel="stylesheet"/>
+<link href="/Platform/Scripts/angular-tree-control/tree-control-attribute.css" rel="stylesheet"/>
+<link href="/Platform/Content/toaster.css" rel="stylesheet"/>
+<link href="/Platform/Content/select.css" rel="stylesheet"/>
+
+    <link href="/Platform/app-resources/css/site.css" rel="stylesheet"/>
+<link href="/Platform/app-resources/css/open-dialog.css" rel="stylesheet"/>
+<link href="/Platform/app-resources/css/terminalmonitor.css" rel="stylesheet"/>
+<link href="/Platform/app-resources/css/statistics.css" rel="stylesheet"/>
+<link href="/Platform/app-resources/css/barcode.css" rel="stylesheet"/>
+<link href="/Platform/app-resources/css/circle.css" rel="stylesheet"/>
+<link href="/Platform/app-resources/css/worklist.css" rel="stylesheet"/>
+<link href="/Platform/app-resources/css/adminsettings.css" rel="stylesheet"/>
+<link href="/Platform/app-resources/css/reconciliation.css" rel="stylesheet"/>
+<link href="/Platform/Scripts/PDF.js.1.3.91/text_layer_builder.css" rel="stylesheet"/>
+
+
+    
+
+</head>
+<body ng-controller="workareaAppController">
+    <div class="navbar navbar-default puma-navbar navbar-fixed-top">
+        <div class="container-fluid" style="margin-left:0px;padding-left:0px;">
+            <div class="col-md-12">
+                <div class="navbar-header" style="margin-left: -15px">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-brand">
+                        <span class="icon-ico_ps_logo icon-general" style="font-size: 2em;"></span>
+                    </div>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li ng-repeat="(key, value) in collapsePages" style="color:blue">
+                            <a ui-sref="workarea.{{key}}" ng-if="value.permission" ng-bind="value.displayName | translate" ng-class="{active:activeItem === key }" ng-click="selectedItem(key)"></a>
+                        </li>
+
+                        <li class="dropdown" dropdownmenu-change-title ng-if="hasconfigPermission">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ng-class="{active:activeItem === key }" ng-click="selectedItem(key)">
+                                <span class="icon-ico_setting_selected icon_font_size"></span>
+                                <span ng-bind="dropdownTitle | translate"></span>
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li ng-repeat="(key, value) in dropdownPages">
+                                    <a ui-sref="workarea.{{key}}" ng-if="value.permission" dropdownitem>{{value.displayName  | translate}}</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li title="">
+                            <span class="icon-general icon-ico_role_admin icon_font_size">
+                                <span class="path1"></span><span class="path2"></span><span class="path3"></span>
+                            </span>
+                        </li>
+                        <li class="dropdown" title="用户">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                5
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li id="logout"><a href="#" ng-click="logout()">{{ 'Logout' | translate }}</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown nav-download" title="下载">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="icon-ico_download icon_font_size"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" ng-click="downloadReconciliationTool()">{{ 'DownloadReconciliationTool' | translate }}</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <ui-view></ui-view>
+    </div>
+
+    <toaster-container toaster-options="{'close-button': true,'debug': false,'position-class': 'toast-top-center','limit':1, 'time-out': { 'toast-success': 1500, 'toast-info': 1500, 'toast-warning': 0, 'toast-error': 0 }}"></toaster-container>
+    
+    <footer>
+        <div class="footer-workarea">
+            <ul class="list-group ">
+                <li class="list-unstyled pull-left">&nbsp;&nbsp;© 2017 Carestream Health. All rights reserved</li>
+                <li class="list-unstyled pull-right">Version:{{systemVersion}}&nbsp;&nbsp;</li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="/Platform/Scripts/jquery-1.11.0.js"></script>
+<script src="/Platform/Scripts/jquery.validate.js"></script>
+<script src="/Platform/Scripts/jquery.validate.unobtrusive.js"></script>
+<script src="/Platform/Scripts/modernizr-2.6.2.js"></script>
+<script src="/Platform/Scripts/bootstrap.js"></script>
+<script src="/Platform/Scripts/respond.js"></script>
+<script src="/Platform/Scripts/PDF.js.1.3.91/compatibility.js"></script>
+<script src="/Platform/Scripts/PDF.js.1.3.91/pdf.js"></script>
+<script src="/Platform/Scripts/PDF.js.1.3.91/pdf.worker.js"></script>
+<script src="/Platform/Scripts/PDF.js.1.3.91/text_layer_builder.js"></script>
+<script src="/Platform/Scripts/angular.js"></script>
+<script src="/Platform/Scripts/angular-ui-router.js"></script>
+<script src="/Platform/Scripts/angular-ui/ui-bootstrap.js"></script>
+<script src="/Platform/Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+<script src="/Platform/Scripts/i18n/angular-locale_zh-cn.js"></script>
+<script src="/Platform/Scripts/angular-cookies.js"></script>
+<script src="/Platform/Scripts/angular-animate.min.js"></script>
+<script src="/Platform/Scripts/angular-busy.min.js"></script>
+<script src="/Platform/Scripts/angular-aria.min.js"></script>
+<script src="/Platform/Scripts/angular-material/angular-material.min.js"></script>
+<script src="/Platform/Scripts/angular-translate.js"></script>
+<script src="/Platform/Scripts/angular-translate-loader-partial.js"></script>
+<script src="/Platform/Scripts/ng-file-upload/ng-file-upload.min.js"></script>
+<script src="/Platform/Scripts/ui-grid-puma.js"></script>
+<script src="/Platform/Scripts/angular-tree-control/angular-tree-control.js"></script>
+<script src="/Platform/Scripts/toaster.js"></script>
+<script src="/Platform/Scripts/select.min.js"></script>
+<script src="/Platform/Scripts/Chart.min.js"></script>
+<script src="/Platform/Scripts/jsBarcode/JsBarcode.all.min.js"></script>
+<script src="/Platform/Scripts/angular-chart/angular-chart.js"></script>
+<script src="/Platform/Scripts/underscore.min.js"></script>
+
+    <script src="/Platform/app/common/common.module.js"></script>
+<script src="/Platform/app/common/behaviors/checklist-model.js"></script>
+<script src="/Platform/app/common/behaviors/drag-sortable.js"></script>
+<script src="/Platform/app/common/behaviors/dropdownMenu-changeTitle.js"></script>
+<script src="/Platform/app/common/behaviors/focus.js"></script>
+<script src="/Platform/app/common/behaviors/img-thumb.js"></script>
+<script src="/Platform/app/common/behaviors/notAllowDot.js"></script>
+<script src="/Platform/app/common/behaviors/notAllowSpecialChar.js"></script>
+<script src="/Platform/app/common/behaviors/vt-enter.js"></script>
+<script src="/Platform/app/common/controls/drag-sortable/Sortable.js"></script>
+<script src="/Platform/app/common/controls/puma-confirm/puma-confirm.js"></script>
+<script src="/Platform/app/common/controls/puma-delete-button/puma-delete-button.js"></script>
+<script src="/Platform/app/common/controls/puma-multi-select/puma-multi-select.js"></script>
+<script src="/Platform/app/common/controls/puma-multi-select/puma-multi-select.tpl.js"></script>
+<script src="/Platform/app/common/controls/puma-open-dialog/open-dialog.js"></script>
+<script src="/Platform/app/common/controls/puma-open-dialog/puma-dialog.js"></script>
+<script src="/Platform/app/common/controls/puma-switch/puma-switch.js"></script>
+<script src="/Platform/app/common/filters/as-date-filter.js"></script>
+<script src="/Platform/app/common/filters/camel-case-filter.js"></script>
+<script src="/Platform/app/common/filters/qclog-event-filter.js"></script>
+<script src="/Platform/app/common/filters/truncate-ellipsis-filter.js"></script>
+<script src="/Platform/app/common/utils/base64.js"></script>
+<script src="/Platform/app/common/utils/constants.js"></script>
+<script src="/Platform/app/common/utils/date.js"></script>
+<script src="/Platform/app/common/utils/enum.js"></script>
+<script src="/Platform/app/common/utils/errorCode.js"></script>
+<script src="/Platform/app/common/utils/ipAddressHandler.js"></script>
+<script src="/Platform/app/common/utils/kiosk.util.js"></script>
+<script src="/Platform/app/common/utils/loginContext.js"></script>
+<script src="/Platform/app/common/utils/permission.js"></script>
+<script src="/Platform/app/common/utils/reconciliationParam.js"></script>
+<script src="/Platform/app/common/utils/webservices.js"></script>
+<script src="/Platform/app/common/webservices/client-tool-svc.js"></script>
+<script src="/Platform/app/common/webservices/configuration-promise.js"></script>
+<script src="/Platform/app/common/webservices/configuration-svc.js"></script>
+<script src="/Platform/app/common/webservices/system-information-svc.js"></script>
+
+    <script src="/Platform/app/workarea/app.workarea.js"></script>
+<script src="/Platform/app/workarea/module.workarea.js"></script>
+<script src="/Platform/Scripts/angular-dropdown-multiselect.js"></script>
+<script src="/Platform/app/workarea/framework/workarea-app-container.ctl.js"></script>
+<script src="/Platform/app/workarea/worklist/controllers/worklist-mainbody-ctrl.js"></script>
+<script src="/Platform/app/workarea/worklist/controllers/worklist-view-ctrl.js"></script>
+<script src="/Platform/app/workarea/worklist/views/worklist-view.js"></script>
+<script src="/Platform/app/workarea/reconciliation/controllers/reconciliation-list-ctrl.js"></script>
+<script src="/Platform/app/workarea/terminalmonitor/controllers/terminalmonitor-view-ctrl.js"></script>
+<script src="/Platform/app/workarea/adminsettings/log/controllers/qclog-ctrl.js"></script>
+<script src="/Platform/app/workarea/adminsettings/log/views/qclog-view.js"></script>
+<script src="/Platform/app/workarea/adminsettings/printtask/controllers/print-task-ctrl.js"></script>
+<script src="/Platform/app/workarea/adminsettings/role/controllers/role-settings-ctrl.js"></script>
+<script src="/Platform/app/workarea/adminsettings/system/controllers/systeml-setting-ctr.js"></script>
+<script src="/Platform/app/workarea/adminsettings/user/contorllers/user-settings-ctrl.js"></script>
+<script src="/Platform/app/workarea/statistics/controllers/statistics-ctrl.js"></script>
+<script src="/Platform/app/workarea/webservices/adminsettings-svc.js"></script>
+<script src="/Platform/app/workarea/webservices/printtask-svc.js"></script>
+<script src="/Platform/app/workarea/webservices/qclog-svc.js"></script>
+<script src="/Platform/app/workarea/webservices/reconciliation-svc.js"></script>
+<script src="/Platform/app/workarea/webservices/role-svc.js"></script>
+<script src="/Platform/app/workarea/webservices/statistics-svc.js"></script>
+<script src="/Platform/app/workarea/webservices/terminalmonitor-svc.js"></script>
+<script src="/Platform/app/workarea/webservices/user-svc.js"></script>
+<script src="/Platform/app/workarea/webservices/worklist-svc.js"></script>
+<script src="/Platform/app/workarea/barcode/controllers/barcode-ctrl.js"></script>
+<script src="/Platform/app/workarea/dicomviewer/controllers/dicom-viewer-ctrl.js"></script>
+
+
+    <script>
+        var urlPrefix = /Platform/;
+        var urlPrefixWebApi = '/webapi';
+        window.urlPrefixWorkarea = '/workarea';
+        var userAdmin = 'admin';
+        var userCshsvc = 'cshsvc';
+    </script>
+</body>
+</html>

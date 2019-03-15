@@ -1,0 +1,27 @@
+[
+    {
+        "transactionName": "User_login",
+        "rawStartTime": 1534928873181,
+        "rawEndTime": 1534929012370
+    },
+    {
+        "transactionName": "ExpandFilmRecord",
+        "rawStartTime": 1534929012392,
+        "rawEndTime": 1534929013025
+    },
+    {
+        "transactionName": "ExpandReportRecord",
+        "rawStartTime": 1534929018105,
+        "rawEndTime": 1534929026459
+    },
+    {
+        "transactionName": "SetTheHoldingTime",
+        "rawStartTime": 1534929051992,
+        "rawEndTime": 1534929084023
+    },
+    {
+        "transactionName": "SetPrintMode",
+        "rawStartTime": 1534929085565,
+        "rawEndTime": 1534929086539
+    }
+]

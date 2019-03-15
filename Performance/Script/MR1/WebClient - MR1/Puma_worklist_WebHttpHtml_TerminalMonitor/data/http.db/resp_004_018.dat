@@ -1,0 +1,111 @@
+﻿// apiInterceptor is responsible to handle the aspect of each request and response.
+webservices.factory('apiInterceptor', ['$q', '$log', '$window', '$injector', '$location', 'loginContext',
+        function ($q, $log, $window, $injector, $location, loginContext) {
+            'use strict';
+
+            $log.debug('apiInterceptor.factory()...');
+
+            var apiToken = loginContext.apiToken;
+            var tokenType = loginContext.tokenType;
+            var webApiHostUrl = $location.protocol() + '://' + $location.host() + ':' + $location.port() + urlPrefixWebApi;
+
+            //var getCurrentHost = function () {
+            //    return $location.protocol() + '//' + $location.host() + ($location.port() ? (':' + $location.port()) : '') + urlPrefixWebApi;
+            //};
+
+            var redirectToLogOff = function () {
+                $window.location.href = urlPrefix + '/account/logOff';
+            };
+
+            var checkingLoginStatuscTimestamp = Date.now();
+
+            return {
+                //token save to services for further usage
+                tokenType: tokenType,
+                apiToken: apiToken,
+                webApiHostUrl: webApiHostUrl,
+
+
+                // On request success
+                request: function (config) {
+
+                    // check if this request is a web api call, we should only update url and header for each web api request.
+                    // because angular will use the $http service as well internally, such as ng-include to request a html file from server.
+                    // set this config to send request to a different web server will break the functions of angularjs.
+                    if (config.isWebApiRequest) {
+                        config.url = webApiHostUrl + config.url;
+                        config.headers = config.headers || {};
+                        config.headers.Authorization = tokenType + ' ' + apiToken;
+                        config.withCredentials = true;
+
+
+                        // after each api call, try to ensure user account has not been expired
+                        // otherwise, force user to login again
+                        //if (Date.now() - checkingLoginStatuscTimestamp > 5 * 60 * 1000) {
+                        //    checkingLoginStatuscTimestamp = Date.now();
+                        var $http = $injector.get('$http');
+                        $http.get(urlPrefix + 'Account/CheckLoginStatus').success(function (data) {
+                            if (data === false) {
+                                redirectToLogOff();
+                            }
+                        });
+                        //}
+
+                    }
+                    $log.debug('request url: ' + config.url);
+
+
+                    return config;
+                },
+                // On request failure
+                requestError: function (rejection) {
+                    $log.error(rejection); // Contains the data about the error on the request.
+
+                    // Return the promise rejection.
+                    return $q.reject(rejection);
+                },
+                // On response success
+                response: function (response) {
+                    if (response.status === 401) {
+                        redirectToLogOff();
+                    }
+                    return response || $q.when(response);
+                },
+                // On response failture
+                responseError: function (rejection) {
+                    $log.error(rejection); // Contains the data about the error.
+
+                    if (rejection.status === 401) {
+                        redirectToLogOff();
+                    }
+
+                    // Return the promise rejection.
+                    return $q.reject(rejection);
+                }
+            };
+        }
+]);
+webservices.config(['$httpProvider', function ($httpProvider) {
+    $httpProvider.interceptors.push('apiInterceptor');
+}]);
+
+// All web api request should use this service to create its config for request.
+webservices.factory('apiConfig', ['$log', function ($log) {
+    $log.debug('apiConfig.factory()...');
+    return {
+        create: function (params, config) {
+            var cfg = {};
+            if (config) {
+                cfg = config;
+            }
+            
+            cfg.isWebApiRequest = true;
+            if (params) {
+                cfg.params = params;
+            }
+            return cfg;
+        }
+    };
+}]);
+
+

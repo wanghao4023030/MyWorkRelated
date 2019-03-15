@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-ID:\WebClient\WebServices1
+-IC:\Program Files (x86)\HP\LoadRunner\include
+-ed:\webclient\webservices1\\logfile.log
+d:\webclient\webservices1\\combined_WebServices1.c
+d:\webclient\webservices1\\pre_cci.c

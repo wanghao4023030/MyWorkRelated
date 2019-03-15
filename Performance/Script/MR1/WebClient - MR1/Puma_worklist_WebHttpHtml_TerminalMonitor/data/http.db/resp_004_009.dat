@@ -1,0 +1,23 @@
+﻿commonModule.directive('dropdownmenuChangeTitle', function () {
+    return {
+        restrict: 'A',
+        controllerAs: 'dropdownmenuChangeTitleCtrl',
+        controller: ['$scope', function ($scope) {
+            this.setTitle = function (title) {
+                $scope.dropdownTitle = title;
+            }
+        }]
+    }
+});
+
+commonModule.directive('dropdownitem', function () {
+    return {
+        restrict: 'A',
+        require: '^dropdownmenuChangeTitle',
+        link: function (scope, element, attr, ctrl) {
+            element.on('click', function () {
+                ctrl.setTitle(element.text());
+            });
+        }
+    }
+});

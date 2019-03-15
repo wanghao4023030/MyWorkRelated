@@ -1,0 +1,5 @@
+"{"patientName":null,"patientID":null,"accessionNumber":null,"createDateRange":{"startTime":"20"
+"17-05-01T00:00:00.193Z","endTime":"2020-07-04T23:59:59.193Z"},"patientSex":"","reportStatus":""
+"","reportPrintStatus":"","filmPrintStatus":"","printMode":"","modalityType":"","patientType":""
+"","department":"","completeStatus":null,"pagination":{"pageIndex":1,"pageSize":50},"shortcutNa"
+"me":"","shortcutNameCache":""}"

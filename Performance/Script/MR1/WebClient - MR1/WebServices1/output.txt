@@ -1,0 +1,220 @@
+Virtual User Script started at : 2018/1/26 16:07:17
+Starting action vuser_init.
+Web Services replay version 12.53.0 for Windows 10; Toolkit: ".Net"; build 1203
+Run-Time Settings file: "D:\WebClient\WebServices1\\default.cfg"
+Vuser directory: "D:\WebClient\WebServices1"
+Vuser output directory: "D:\WebClient\WebServices1\"
+LOCAL start date/time : 2018-01-26 16:07:17
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Action.
+Action.c(18): Notify: Parameter Substitution: parameter "DateTime" =  "20180126160715000"
+Action.c(19): Notify: Saving Parameter "TreatmentID_new = 20180126160715000".
+Action.c(22): DB Connection "Connect" started ... Wait ....
+Action.c(30): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(30): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(32): Notify: Transaction "Create New Patient" started.
+Action.c(35): web_custom_request("web_custom_request") started  	[MsgId: MMSG-26355]
+Action.c(35): Notify: Parameter Substitution: parameter "DateTime" =  "20180126160715000"
+Action.c(35): Notify: Parameter Substitution: parameter "DateTime" =  "20180126160715000"
+Action.c(35): Notify: Parameter Substitution: parameter "TreatmentID_new" =  "20180126160715000"
+Action.c(35): Notify: Parameter Substitution: parameter "TreatmentID_new" =  "20180126160715000"
+Action.c(35): Notify: Parameter Substitution: parameter "DateTime" =  "20180126160715000"
+Action.c(35): Notify: Parameter Substitution: parameter "TreatmentID_new" =  "20180126160715000"
+Action.c(35): Notify: Parameter Substitution: parameter "TreatmentID_new" =  "20180126160715000"
+Action.c(35): Notify: Parameter Substitution: parameter "Grender" =  "F"
+Action.c(35): Notify: Parameter Substitution: parameter "Modality" =  "KO"
+Action.c(35): Notify: Parameter Substitution: parameter "Modality" =  "KO"
+Action.c(35): Notify: Parameter Substitution: parameter "department" =  "8"
+Action.c(35): Notify: Parameter Substitution: parameter "DateTime" =  "20180126160715000"
+Action.c(35): Notify: Parameter Substitution: parameter "DateTime" =  "20180126160715000"
+Action.c(35): Notify: Parameter Substitution: parameter "DateTime" =  "20180126160715000"
+Action.c(35): Notify: Parameter Substitution: parameter "DateTime" =  "20180126160715000"
+Action.c(35): Notify: Parameter Substitution: parameter "DateTime" =  "20180126160715000"
+Action.c(35): Notify: Parameter Substitution: parameter "DateTime" =  "20180126160715000"
+Action.c(35): Notify: Parameter Substitution: parameter "TreatmentID_new" =  "20180126160715000"
+Action.c(35): Notify: Parameter Substitution: parameter "BodayPart" =  "foot"
+Action.c(35): t=3106ms: Connecting [0] to host 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(35): t=3106ms: Connected socket [0] from 127.0.0.1:23677 to 127.0.0.1:8888 in 0 ms  	[MsgId: MMSG-26000]
+Action.c(35): t=3106ms: 409-byte request headers for "http://10.184.129.108/NotifyServer/NotifyService.asmx" (RelFrameId=1, Internal ID=1)
+Action.c(35):     POST http://10.184.129.108/NotifyServer/NotifyService.asmx HTTP/1.1\r\n
+Action.c(35):     Content-Type: application/soap+xml;charset=GB2312;\r\n
+Action.c(35):     Cache-Control: no-cache\r\n
+Action.c(35):     Referer: http://10.184.129.108/NotifyServer/NotifyService.asmx\r\n
+Action.c(35):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)\r\n
+Action.c(35):     Accept-Encoding: gzip, deflate\r\n
+Action.c(35):     Accept: */*\r\n
+Action.c(35):     Proxy-Connection: Keep-Alive\r\n
+Action.c(35):     Host: 10.184.129.108\r\n
+Action.c(35):     Content-Length: 1718\r\n
+Action.c(35):     \r\n
+Action.c(35): t=3109ms: 1718-byte request body for "http://10.184.129.108/NotifyServer/NotifyService.asmx" (RelFrameId=1, Internal ID=1)
+Action.c(35):     <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:car="http://care
+Action.c(35):     stream.org/"><soap:Header/><soap:Body> <car:NotifyExamInfo><car:exam><car:CreateDT>2018012
+Action.c(35):     6160715000</car:CreateDT><car:UpdateDT>20180126160715000</car:UpdateDT><car:PatientID>P201
+Action.c(35):     80126160715000</car:PatientID><car:AccessionNumber>A20180126160715000</car:AccessionNumber
+Action.c(35):     ><car:StudyInstanceUID>INS20180126160715000</car:StudyInstanceUID><car:NameCN>CN2018012616
+Action.c(35):     0715000</car:NameCN><car:NameEN>EN20180126160715000</car:NameEN><car:Gender>F</car:Gender>
+Action.c(35):     <car:Birthday></car:Birthday><car:Modality>KO</car:Modality> <car:ModalityName>KO</car:Mod
+Action.c(35):     alityName><car:PatientType>3</car:PatientType><car:VisitID></car:VisitID><car:RequestID></
+Action.c(35):     car:RequestID><car:RequestDepartment>8</car:RequestDepartment><car:RequestDT>2018012616071
+Action.c(35):     5000</car:RequestDT><car:RegisterDT>20180126160715000</car:RegisterDT> <car:ExamDT>2018012
+Action.c(35):     6160715000</car:ExamDT> <car:ReportDT>20180126160715000</car:ReportDT> <car:SubmitDT>20180
+Action.c(35):     126160715000</car:SubmitDT> <car:ApproveDT>20180126160715000</car:ApproveDT> <car:PDFRepor
+Action.c(35):     tURL></car:PDFReportURL> <car:StudyStatus></car:StudyStatus> <car:OutHospitalNo></car:OutH
+Action.c(35):     ospitalNo><car:InHospitalNo></car:InHospitalNo><car:PhysicalNumber></car:PhysicalNumber><c
+Action.c(35):     ar:ExamName>EN20180126160715000</car:ExamName><car:ExamBodyPart>foot</car:ExamBodyPart><ca
+Action.c(35):     r:Optional0></car:Optional0><car:Optional1></car:Optional1><car:Optional2></car:Optional2>
+Action.c(35):     <car:Optional3></car:Optional3><car:Optional4></car:Optional4><car:Optional5></car:Optiona
+Action.c(35):     l5><car:Optional6></car:Optional6><car:Optional7></car:Optional7><car:Optional8></car:Opti
+Action.c(35):     onal8><car:Optional9></car:Optional9> </car:exam></car:NotifyExamInfo></soap:Body></soap:E
+Action.c(35):     nvelope>
+Action.c(35): t=4674ms: 242-byte response headers for "http://10.184.129.108/NotifyServer/NotifyService.asmx" (RelFrameId=1, Internal ID=1)
+Action.c(35):     HTTP/1.1 200 OK\r\n
+Action.c(35):     Cache-Control: private, max-age=0\r\n
+Action.c(35):     Content-Type: application/soap+xml; charset=utf-8\r\n
+Action.c(35):     Server: Microsoft-IIS/7.5\r\n
+Action.c(35):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(35):     X-Powered-By: ASP.NET\r\n
+Action.c(35):     Date: Fri, 26 Jan 2018 08:01:54 GMT\r\n
+Action.c(35):     Content-Length: 373\r\n
+Action.c(35):     \r\n
+Action.c(35): t=4690ms: 373-byte response body for "http://10.184.129.108/NotifyServer/NotifyService.asmx" (RelFrameId=1, Internal ID=1)
+Action.c(35):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05
+Action.c(35):     /soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://ww
+Action.c(35):     w.w3.org/2001/XMLSchema"><soap:Body><NotifyExamInfoResponse xmlns="http://carestream.org/"
+Action.c(35):     ><NotifyExamInfoResult>true</NotifyExamInfoResult></NotifyExamInfoResponse></soap:Body></s
+Action.c(35):     oap:Envelope>
+Action.c(35): Notify: Saving Parameter "ServiceResult = true".
+Action.c(35): t=4696ms: Request done "http://10.184.129.108/NotifyServer/NotifyService.asmx"  	[MsgId: MMSG-26000]
+Action.c(35): web_custom_request("web_custom_request") was successful, 373 body bytes, 242 header bytes  	[MsgId: MMSG-26386]
+Action.c(93): Notify: Parameter Substitution: parameter "ServiceResult" =  "true"
+Action.c(101): Notify: Transaction "Create New Patient" ended with a "Pass" status (Duration: 1.6565 Wasted Time: 0.0699).
+Action.c(105): Notify: Parameter Substitution: parameter "TreatmentID_new" =  "20180126160715000"
+Action.c(105): Notify: Parameter Substitution: parameter "strDate" =  "20180126"
+Action.c(105): Notify: Parameter Substitution: parameter "strTime" =  "160715000"
+Action.c(105): Notify: Parameter Substitution: parameter "TreatmentID_new" =  "20180126160715000"
+Action.c(105): Notify: Parameter Substitution: parameter "TreatmentID_new" =  "20180126160715000"
+Action.c(105): Notify: Parameter Substitution: parameter "TreatmentID_new" =  "20180126160715000"
+Action.c(105): Notify: Parameter Substitution: parameter "TreatmentID_new" =  "20180126160715000"
+Action.c(105): Notify: Parameter Substitution: parameter "TreatmentID_new" =  "20180126160715000"
+Action.c(105): Notify: Parameter Substitution: parameter "TreatmentID_new" =  "20180126160715000"
+Action.c(105): Notify: Parameter Substitution: parameter "Grender" =  "F"
+Action.c(105): Notify: Parameter Substitution: parameter "Modality" =  "KO"
+Action.c(105): Notify: Parameter Substitution: parameter "BodayPart" =  "foot"
+Action.c(105): Web service call "CreateFilmFile_105" started
+Action.c(105): "SOAPAction: "http://tempuri.org/CreateFilmFile"" header registered for adding to requests from the immediately following Action function  	[MsgId: MMSG-26506]
+Action.c(105): "User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 1.1.4322.2032)" header registered for adding to requests from the immediately following Action function  	[MsgId: MMSG-26506]
+Action.c(105): "Content-Type: text/xml; charset=utf-8" header registered for adding to requests from the immediately following Action function  	[MsgId: MMSG-26506]
+Action.c(105): t=4813ms: Already connected [0] to 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(105): t=4813ms: 406-byte request headers for "http://10.184.129.108/PerformanceTest/CreateFilmTestData.asmx" (RelFrameId=1, Internal ID=2)
+Action.c(105):     POST http://10.184.129.108/PerformanceTest/CreateFilmTestData.asmx HTTP/1.1\r\n
+Action.c(105):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(105):     Cache-Control: no-cache\r\n
+Action.c(105):     SOAPAction: "http://tempuri.org/CreateFilmFile"\r\n
+Action.c(105):     User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 1.1.4322.20
+Action.c(105):     32)\r\n
+Action.c(105):     Accept-Encoding: gzip, deflate\r\n
+Action.c(105):     Accept: */*\r\n
+Action.c(105):     Proxy-Connection: Keep-Alive\r\n
+Action.c(105):     Host: 10.184.129.108\r\n
+Action.c(105):     Content-Length: 1280\r\n
+Action.c(105):     \r\n
+Action.c(105): t=4813ms: 1280-byte request body for "http://10.184.129.108/PerformanceTest/CreateFilmTestData.asmx" (RelFrameId=1, Internal ID=2)
+Action.c(105):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(105):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(105):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(105):     oap:Header><wsa:Action>http://tempuri.org/CreateFilmFile</wsa:Action><wsa:MessageID>uuid:0
+Action.c(105):     208a1f1-ac38-46dd-b3ae-4afeb5bdd4e6</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schema
+Action.c(105):     s.xmlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http
+Action.c(105):     ://10.184.129.108/PerformanceTest/CreateFilmTestData.asmx</wsa:To></soap:Header><soap:Body
+Action.c(105):     ><CreateFilmFile xmlns="http://tempuri.org/"><strfilename>A20180126160715000</strfilename>
+Action.c(105):     <strDate>20180126</strDate><strtime>160715000</strtime><strPID>P20180126160715000</strPID>
+Action.c(105):     <strStudyInstanceUID>StudyUID20180126160715000</strStudyInstanceUID><strSeriesInstanceUID>
+Action.c(105):     StudyUID20180126160715000</strSeriesInstanceUID><strSOPInstanceID>SOP20180126160715000</st
+Action.c(105):     rSOPInstanceID><strAccNo>A20180126160715000</strAccNo><strPatientName>PN20180126160715000<
+Action.c(105):     /strPatientName><strGrender>F</strGrender><strModality>KO</strModality><strBodayPart>foot<
+Action.c(105):     /strBodayPart><strDestFolder>E:\\GX Platform\\Inbox</strDestFolder></CreateFilmFile></soap
+Action.c(105):     :Body></soap:Envelope>
+Action.c(105): t=5283ms: 230-byte response headers for "http://10.184.129.108/PerformanceTest/CreateFilmTestData.asmx" (RelFrameId=1, Internal ID=2)
+Action.c(105):     HTTP/1.1 200 OK\r\n
+Action.c(105):     Cache-Control: private, max-age=0\r\n
+Action.c(105):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(105):     Server: Microsoft-IIS/7.5\r\n
+Action.c(105):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(105):     X-Powered-By: ASP.NET\r\n
+Action.c(105):     Date: Fri, 26 Jan 2018 08:01:56 GMT\r\n
+Action.c(105):     Content-Length: 372\r\n
+Action.c(105):     \r\n
+Action.c(105): t=5294ms: 372-byte response body for "http://10.184.129.108/PerformanceTest/CreateFilmTestData.asmx" (RelFrameId=1, Internal ID=2)
+Action.c(105):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(105):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(105):     www.w3.org/2001/XMLSchema"><soap:Body><CreateFilmFileResponse xmlns="http://tempuri.org/">
+Action.c(105):     <CreateFilmFileResult>true</CreateFilmFileResult></CreateFilmFileResponse></soap:Body></so
+Action.c(105):     ap:Envelope>
+Action.c(105): t=5300ms: Request done "http://10.184.129.108/PerformanceTest/CreateFilmTestData.asmx"  	[MsgId: MMSG-26000]
+Action.c(105): Notify: Saving Parameter "CreateFilmFile_105_Response = <CreateFilmFile><CreateFilmFileResult>True</CreateFilmFileResult></CreateFilmFile>".
+Action.c(105): Notify: Saving Parameter "response = <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><CreateFilmFileResponse xmlns="http://tempuri.org/"><CreateFilmFileResult>true</CreateFilmFileResult></CreateFilmFileResponse></soap:Body></soap:Envelope>".
+Action.c(105): Notify: Saving Parameter "Param_CreateFilmFileResult = True".
+Action.c(105): Web service call "CreateFilmFile_105" was successful
+Action.c(131): lr_think_time: 30.00 seconds.
+Action.c(133): Notify: Parameter Substitution: parameter "TreatmentID_new" =  "20180126160715000"
+Action.c(133): Web service call "QueryResult_101" started
+Action.c(133): "SOAPAction: "http://tempuri.org/QueryResult"" header registered for adding to requests from the immediately following Action function  	[MsgId: MMSG-26506]
+Action.c(133): "User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 1.1.4322.2032)" header registered for adding to requests from the immediately following Action function  	[MsgId: MMSG-26506]
+Action.c(133): "Content-Type: text/xml; charset=utf-8" header registered for adding to requests from the immediately following Action function  	[MsgId: MMSG-26506]
+Action.c(133): t=35337ms: Already connected [0] to 127.0.0.1:8888  	[MsgId: MMSG-26000]
+Action.c(133): t=35337ms: 402-byte request headers for "http://10.184.129.108/PerformanceTest/CreateFilmTestData.asmx" (RelFrameId=1, Internal ID=3)
+Action.c(133):     POST http://10.184.129.108/PerformanceTest/CreateFilmTestData.asmx HTTP/1.1\r\n
+Action.c(133):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(133):     Cache-Control: no-cache\r\n
+Action.c(133):     SOAPAction: "http://tempuri.org/QueryResult"\r\n
+Action.c(133):     User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 1.1.4322.20
+Action.c(133):     32)\r\n
+Action.c(133):     Accept-Encoding: gzip, deflate\r\n
+Action.c(133):     Accept: */*\r\n
+Action.c(133):     Proxy-Connection: Keep-Alive\r\n
+Action.c(133):     Host: 10.184.129.108\r\n
+Action.c(133):     Content-Length: 748\r\n
+Action.c(133):     \r\n
+Action.c(133): t=35337ms: 748-byte request body for "http://10.184.129.108/PerformanceTest/CreateFilmTestData.asmx" (RelFrameId=1, Internal ID=3)
+Action.c(133):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(133):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(133):     www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"><s
+Action.c(133):     oap:Header><wsa:Action>http://tempuri.org/QueryResult</wsa:Action><wsa:MessageID>uuid:9279
+Action.c(133):     4818-b735-41a2-b9c8-6ab65863145c</wsa:MessageID><wsa:ReplyTo><wsa:Address>http://schemas.x
+Action.c(133):     mlsoap.org/ws/2004/03/addressing/role/anonymous</wsa:Address></wsa:ReplyTo><wsa:To>http://
+Action.c(133):     10.184.129.108/PerformanceTest/CreateFilmTestData.asmx</wsa:To></soap:Header><soap:Body><Q
+Action.c(133):     ueryResult xmlns="http://tempuri.org/"><strACCN>A20180126160715000</strACCN></QueryResult>
+Action.c(133):     </soap:Body></soap:Envelope>
+Action.c(133): t=35432ms: 230-byte response headers for "http://10.184.129.108/PerformanceTest/CreateFilmTestData.asmx" (RelFrameId=1, Internal ID=3)
+Action.c(133):     HTTP/1.1 200 OK\r\n
+Action.c(133):     Cache-Control: private, max-age=0\r\n
+Action.c(133):     Content-Type: text/xml; charset=utf-8\r\n
+Action.c(133):     Server: Microsoft-IIS/7.5\r\n
+Action.c(133):     X-AspNet-Version: 4.0.30319\r\n
+Action.c(133):     X-Powered-By: ASP.NET\r\n
+Action.c(133):     Date: Fri, 26 Jan 2018 08:02:25 GMT\r\n
+Action.c(133):     Content-Length: 360\r\n
+Action.c(133):     \r\n
+Action.c(133): t=35441ms: 360-byte response body for "http://10.184.129.108/PerformanceTest/CreateFilmTestData.asmx" (RelFrameId=1, Internal ID=3)
+Action.c(133):     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(133):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(133):     www.w3.org/2001/XMLSchema"><soap:Body><QueryResultResponse xmlns="http://tempuri.org/"><Qu
+Action.c(133):     eryResultResult>true</QueryResultResult></QueryResultResponse></soap:Body></soap:Envelope>
+Action.c(133): t=35446ms: Request done "http://10.184.129.108/PerformanceTest/CreateFilmTestData.asmx"  	[MsgId: MMSG-26000]
+Action.c(133): Notify: Saving Parameter "QueryResult_101_Response = <QueryResult><QueryResultResult>True</QueryResultResult></QueryResult>".
+Action.c(133): Notify: Saving Parameter "response = <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><QueryResultResponse xmlns="http://tempuri.org/"><QueryResultResult>true</QueryResultResult></QueryResultResponse></soap:Body></soap:Envelope>".
+Action.c(133): Notify: Saving Parameter "Param_QueryResultResult = True".
+Action.c(133): Web service call "QueryResult_101" was successful
+Action.c(151): DB disconnect "Disconnect" started
+Action.c(151): ================================================
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.
+t=35500ms: Closed connection [0] to 127.0.0.1:8888 after completing 3 request(s)  	[MsgId: MMSG-26000]

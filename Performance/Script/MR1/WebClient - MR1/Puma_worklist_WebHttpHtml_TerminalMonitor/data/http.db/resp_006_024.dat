@@ -1,0 +1,167 @@
+﻿adminSettingModule.controller('qclogController', ['$scope', '$log', '$translate', 'i18nService', 'application', 'qclogService', 'toaster', 'enums', 'dates',
+    function ($scope, $log, $translate, i18nService, application, qclogService, toaster, enums, dates) {
+        $log.info('qclogController controller...');
+
+        var getQCLogs = function () {
+            $scope.searchCriteria.createDateRange = {
+                startTime: $scope.startDatePicker.pickedDate ? new Date($scope.startDatePicker.pickedDate) : null,
+                endTime: $scope.endDatePicker.pickedDate ? new Date($scope.endDatePicker.pickedDate) : null
+            };
+            $scope.searchCriteria.keyWords = $scope.keyWords.split(' ');
+            $scope.searchCriteria.shortcutItem = $scope.shortcutItem ? $scope.shortcutItem.id : '';
+            qclogService.getQCLogs($scope.searchCriteria).success(function (result) {
+                if (result.logRecordDto === null) {
+                    toaster.pop('info', $translate.instant('NoRecordsRetrieve'));
+                    return;
+                }
+                $scope.logGridOptions.data = result.logRecordDto;
+                $scope.logGridOptions.totalItems = result.pagination.totalCount;
+            });
+        };
+
+        $scope.setStartDateOption = function () {
+            $scope.startDatePicker.dateOptions = {
+                showWeeks: false,
+                maxDate: $scope.endDatePicker.pickedDate
+            };
+        };
+
+        $scope.setEndDateOption = function () {
+            $scope.endDatePicker.dateOptions = {
+                showWeeks: false,
+                minDate: $scope.startDatePicker.pickedDate,
+                maxDate: new Date()
+            };
+        };
+
+        var initDatePicker = function () {
+            return datePicker = {
+                opened: false,
+                pickedDate: null,
+                dateOptions: {
+                    showWeeks: false,
+                    maxDate: new Date()
+                }
+            };
+        };
+
+        $scope.startDatePickerOpen = function () {
+            $scope.startDatePicker.opened = !$scope.startDatePicker.opened;
+        };
+
+        $scope.endDatePickerOpen = function () {
+            $scope.endDatePicker.opened = !$scope.endDatePicker.opened;
+        };
+
+        var initLogGridOptions = function () {
+            $scope.logGridOptions = {
+                enableSorting: true,
+                columnDefs: [
+                    {
+                        field: 'qcuid', displayName: $translate.instant('qcuid'), headerTooltip: true, sort: { direction: 'asc' }, minWidth: 100, cellClass: 'center puma_grid_cell',
+                        cellTemplate: '<span>{{COL_FIELD}}</span>'
+                    },
+                    {
+                        field: 'qcLevel', displayName: $translate.instant('qcLevel'), headerTooltip: true, minWidth: 100, cellClass: 'center puma_grid_cell',
+                        cellTemplate: '<span>{{COL_FIELD}}</span>'
+                    },
+                    {
+                        field: 'operationTime', displayName: $translate.instant('operationTime'), headerTooltip: true, minWidth: 200, cellClass: 'center puma_grid_cell',
+                        cellTemplate: '<span>{{COL_FIELD}}</span>'
+                    },
+                    {
+                        field: 'operationUser', displayName: $translate.instant('operationUser'), headerTooltip: true, minWidth: 150, cellClass: 'puma_grid_cell',
+                        cellTemplate: '<span>{{COL_FIELD}}</span>'
+                    },
+                    {
+                        field: 'qcEvent', displayName: $translate.instant('qcEvent'), headerTooltip: true, minWidth: 100, cellClass: 'center puma_grid_cell',
+                        cellTemplate: '<span>{{row.entity.qcEvent | qceventFilter | translate}}</span>'
+                    },
+                    {
+                        field: 'description', displayName: $translate.instant('description'), headerTooltip: true, minWidth: 700, cellClass: 'puma_grid_cell',
+                        cellTemplate: '<span>{{COL_FIELD}}</span>'
+                    },
+
+                ],
+                //i18n: 'zh-cn',
+                paginationPageSizes: application.configuration.pageSizes,
+                paginationPageSize: application.configuration.pageSizeDefault,
+                rowHeight: 35,
+                enableGridMenu: true,
+                useExternalPagination: true,
+                enableHorizontalScrollbar: 0,
+                onRegisterApi: function (gridApi) {
+                    $scope.gridApi = gridApi;
+                    gridApi.pagination.on.paginationChanged($scope, function (pageIndex, pageSize) {
+                        $scope.searchCriteria.pagination.pageIndex = pageIndex;
+                        $scope.searchCriteria.pagination.pageSize = pageSize;
+                        getQCLogs();
+                    });
+                }
+            };
+        };
+        
+
+
+        $scope.linkageDatePicker = function (shortcutItem) {
+            switch (shortcutItem.id) {
+                case 1:
+                    $scope.startDatePicker.pickedDate = dates.today.start;
+                    $scope.endDatePicker.pickedDate = dates.today.end;
+                    break;
+                case 2:
+                    $scope.startDatePicker.pickedDate = dates.thisWeek.start;
+                    $scope.endDatePicker.pickedDate = dates.thisWeek.end;
+                    break;
+                case 3:
+                    $scope.startDatePicker.pickedDate = dates.thisMonth.start;
+                    $scope.endDatePicker.pickedDate = dates.thisMonth.end;
+                    break;
+                case 4:
+                    $scope.startDatePicker.pickedDate = dates.lastMonth.start;
+                    $scope.endDatePicker.pickedDate = dates.lastMonth.end;
+                    break;
+                case 5:
+                    $scope.startDatePicker.pickedDate = dates.recentThreeMonths.start;
+                    $scope.endDatePicker.pickedDate = dates.recentThreeMonths.end;
+                    break;
+                default:
+                    break;
+            }
+
+        };
+
+        var generateSearchCriteria = function (pageSize, pageIndex) {
+            return {
+                createDateRange: {
+                    startTime: $scope.startDatePicker.pickedDate ? new Date($scope.startDatePicker.pickedDate) : null,
+                    endTime: $scope.endDatePicker.pickedDate ? new Date($scope.endDatePicker.pickedDate) : null
+                },
+                keyWords: $scope.keyWords.split(' '),
+                shortcutItem: $scope.shortcutItem ? $scope.shortcutItem.id : '',
+                pagination: {
+                    pageSize: pageSize,
+                    pageIndex: pageIndex,
+                    totalCount: ''
+                }
+            };
+        };
+
+        (function initialize() {
+            $log.info('qclog controller initialize...');
+            $scope.shortcutItem = '';
+            $scope.keyWords = '';
+            $scope.shortcutTimes = enums.shortcutTimes;
+
+            $scope.startDatePicker = initDatePicker();
+            $scope.endDatePicker = initDatePicker();
+            i18nService.setCurrentLang(application.region);
+            $scope.searchCriteria = generateSearchCriteria(application.configuration.pageSizeDefault, 1);
+            initLogGridOptions();
+            $scope.getQCLogs = getQCLogs;
+
+        }());
+
+    }]);
+
+

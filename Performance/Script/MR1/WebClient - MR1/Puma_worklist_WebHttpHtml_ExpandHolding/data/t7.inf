@@ -1,0 +1,10 @@
+[t7]
+FileName1=t7_login.html
+URL1=http://10.184.129.208/Platform//account/login
+Total=1
+ContentType=
+SnapshotXmlFile=snapshot_7.xml
+RequestHeaderFile=t7_RequestHeader.txt
+RequestBodyFile=NONE
+[ProtocolInfo]
+ProtocolId=QTWeb

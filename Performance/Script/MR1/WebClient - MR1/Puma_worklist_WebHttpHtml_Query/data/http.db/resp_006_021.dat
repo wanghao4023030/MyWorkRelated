@@ -1,0 +1,56 @@
+﻿.full button span {
+    background-color: limegreen;
+    border-radius: 32px;
+    color: black;
+}
+
+.partially button span {
+    background-color: orange;
+    border-radius: 32px;
+    color: black;
+}
+
+.statisticsLeftMenu div, .statisticsLeftMenu ul, .statisticsLeftMenu ul li {
+    background-color: #49545F;
+}
+
+    .statisticsLeftMenu ul li {
+        color: #AAAAAA;
+        padding-left: 10px;
+    }
+
+        .statisticsLeftMenu ul li:hover {
+            color: #AAAAAA;
+        }
+
+
+        .statisticsLeftMenu ul li > a:link {
+            color: #AAAAAA;
+        }
+
+        .statisticsLeftMenu ul li > a:active {
+            color: #a4abde;
+        }
+
+        .statisticsLeftMenu ul li > a:hover {
+            color: #5a38be;
+        }
+
+#statisticsLeftPanel li label {
+    color: gray;
+    margin-left: 6px;
+}
+
+.statisticsTypeActive {
+    background-color: #AAAAAA;
+}
+
+.statisticsLeftPanel li ul li:hover {
+    color: #e07a26;
+    background-color: #AAAAAA;
+}
+
+.statisticsLeftPanel li ul li > a:hover {
+    color: #e07a26;
+    background-color: #AAAAAA;
+}

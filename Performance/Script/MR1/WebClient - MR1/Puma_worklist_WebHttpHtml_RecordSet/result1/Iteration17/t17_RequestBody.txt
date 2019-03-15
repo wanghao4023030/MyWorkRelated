@@ -1,0 +1,2 @@
+"{"StatusType":"FilmPrintStatus","AccessionNumber":"A20180801164416788","PreStatusValue":0,"New"
+"StatusValue":0,"IsExpanded":false}"

@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-ID:\WebClient\Puma_Statistic_WebHttpHtml
+-IC:\Program Files (x86)\HP\LoadRunner\include
+-ed:\webclient\puma_statistic_webhttphtml\\logfile.log
+d:\webclient\puma_statistic_webhttphtml\\combined_Puma_Statistic_WebHttpHtml.c
+d:\webclient\puma_statistic_webhttphtml\\pre_cci.c

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HTTPSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="20">
+  <HTTPTask id="21" url="http://10.184.129.108/webapi/api/department/departments" origin="Primary" startDateTime="2018-09-12T15:45:49.905+08:00" startTime="179498">
+    <HTTPRequest method="GET" />
+  </HTTPTask>
+</HTTPSnapshot>

@@ -1,0 +1,5 @@
+"{\"patientName\":null,\"patientID\":null,\"accessionNumber\":null,\"createDateRange\":{\"start"
+"Time\":\"2017-06-05T21:34:04.073Z\",\"endTime\":\"2017-07-04T21:34:04.073Z\"},\"patientSex\":\""
+"\",\"reportStatus\":\"\",\"reportPrintStatus\":\"\",\"filmPrintStatus\":\"\",\"printMode\":\"\""
+",\"patientType\":\"\",\"completeStatus\":null,\"pagination\":{\"pageIndex\":1,\"pageSize\":50}"
+",\"shortcutName\":\"\",\"shortcutNameCache\":\"\"}"

@@ -1,0 +1,19 @@
+﻿webservices.factory('clientToolService', ['$log', '$q', '$translate', 'openDialog', '$window',
+    function ($log, $q, $translate, openDialog, $window) {
+        'use strict';
+
+        var internalBarcodeToolDownload = function () {
+           // $window.open(urlPrefix + '/FileDownload/BarcodeTool', '_blank');
+            $window.location.href = urlPrefix + '/FileDownload/BarcodeTool';
+        };
+
+        var internalReconciliationToolDownload = function () {
+            //$window.open(urlPrefix + '/FileDownload/ReconciliationTool', '_blank');
+            $window.location.href = urlPrefix + '/FileDownload/ReconciliationTool';
+        };
+
+        return {
+            downloadBarcodeTool: internalBarcodeToolDownload,
+            downloadReconciliationTool: internalReconciliationToolDownload
+        }
+    }]);

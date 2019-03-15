@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Cache-Control: private
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/7.5
+Set-Cookie: ASP.NET_SessionId=uwkbfw0vbkr1invulpx4jvo3; path=/; HttpOnly
+X-AspNetMvc-Version: 5.2
+X-AspNet-Version: 4.0.30319
+Set-Cookie: ApiToken=%7B%22access_token%22%3A%22Dwl-jtib2jSoBPyrH9m7YZxBny3gW847E-bhdvXqcOrMBd96AKfxjbTjxMI7hZf0AbDfYiZhBoe6lmb9dizaITiRLn9Qr2-naGh403N3ZZzwgMQIdNIrOLNexwgQ4PKb26TZzr54ItA6WYZzJ-un90ERsp2Kwe3CfsTp699lPCNdIrsDnXvXl3t6WsrXFWtE9ZNh9an-EPIVSJarsM_2Aw%22%2C%22token_type%22%3A%22bearer%22%2C%22expires_in%22%3A604799%2C%22refresh_token%22%3A%22a105bd6c-e4ef-46a8-aede-542a397eab16%22%2C%22userName%22%3A%2219%22%2C%22currentRole%22%3A%22Administrator%22%2C%22strDepartments%22%3A%22%22%2C%22strModalities%22%3A%22%22%2C%22onlyReport%22%3A%22false%22%2C%22strUserPermissionList%22%3A%22CentralPrint%3A1%7CChangeHoldFlag%3A1%7CChangePrintMode%3A1%7CChangePrintStatus%3A1%7Cconfig%3A1%7CConfigRole%3A1%7CConfigSystem%3A1%7CConfigUser%3A1%7CCorrectReconciliation%3A1%7CDelete%3A1%7CPrinterMonitor%3A1%7CPrintTaskManagement%3A1%7CQCLog%3A1%7CReconciliation%3A1%7CRestoreFilm%3A1%7CStatisticsReport%3A1%7Cworklist%3A1%7C%22%7D; path=/
+Set-Cookie: .AspNet.ApplicationCookie=BHdOe2hTydr79j_avdq0oWv6kk1yj2vjOZ32LkDCBMjXlZQIRKJuUPEArODPmAEbRF5Ja9Ky29FQYPn6uH2Np0j6xTg65n-G65ya6JEiO7WN8Votb0uaSeXiqMqInNbeHLJE97csQqIuNYprnFWc4MosGM0GaMy84GYe11q0njqMq4MoZ2JPPdXoMQNHQjcvjoej3Q8M7tCKgbsqZ7cSqAAjv_wYpBbnmPp0JtmQ_4TBA5Mx6nQfaoBYwjN0Nin1F_tHTU_w9vpRxCVSow7rTtyO9RacAZSXrdHkjuyL9CG6F6Hqmc8ID3SzfrgxyRTY; path=/; HttpOnly
+X-Powered-By: ASP.NET
+Date: Wed, 01 Aug 2018 08:55:25 GMT
+Content-Length: 78
+

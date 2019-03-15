@@ -1,0 +1,288 @@
+﻿.PS_Zoom1X_common, .PS_Zoom1X_hover, .PS_Zoom1X_active, .PS_Zoom2X_common, .PS_Zoom2X_hover, .PS_Zoom2X_active, .PS_ZoomFit_common, .PS_ZoomFit_hover, .PS_ZoomFit_active, .PS_FitTL_common, .PS_FitTL_hover, .PS_FitTL_active, .PS_FitTR_common, .PS_FitTR_hover, .PS_FitTR_active, .PS_FitBL_common, .PS_FitBL_hover, .PS_FitBL_active, .PS_FitBR_common, .PS_FitBR_hover, .PS_FitBR_active, .PS_Download_common, .PS_Download_hover
+{
+    height: 32px;
+    width: 32px;
+}
+.PS_Zoom1X_common
+{
+    background: url(../Images/PS_Button/ico_toolbar_1x.png) no-repeat right top;
+}
+.PS_Zoom1X_hover
+{
+    background: url(../Images/PS_Button/ico_toolbar_1x_hover.png) no-repeat right top;
+}
+.PS_Zoom1X_active
+{
+    background: url(../Images/PS_Button/ico_toolbar_1x_selected.png) no-repeat right top;
+}
+.PS_Zoom2X_common
+{
+    background: url(../Images/PS_Button/ico_toolbar_2x.png) no-repeat right top;
+}
+.PS_Zoom2X_hover
+{
+    background: url(../Images/PS_Button/ico_toolbar_2x_hover.png) no-repeat right top;
+}
+.PS_Zoom2X_active
+{
+    background: url(../Images/PS_Button/ico_toolbar_2x_selected.png) no-repeat right top;
+}
+.PS_ZoomFit_common
+{
+    background: url(../Images/PS_Button/ico_toolbar_fit.png) no-repeat right top;
+}
+.PS_ZoomFit_hover
+{
+    background: url(../Images/PS_Button/ico_toolbar_fit_hover.png) no-repeat right top;
+}
+.PS_ZoomFit_active
+{
+    background: url(../Images/PS_Button/ico_toolbar_fit_selected.png) no-repeat right top;
+}
+.PS_FitTL_common
+{
+    background: url(../Images/PS_Button/ico_toolbar_fitTL.png) no-repeat right top;
+}
+.PS_FitTL_hover
+{
+    background: url(../Images/PS_Button/ico_toolbar_fitTL_hover.png) no-repeat right top;
+}
+.PS_FitTL_active
+{
+    background: url(../Images/PS_Button/ico_toolbar_fitTL_selected.png) no-repeat right top;
+}
+.PS_FitTR_common
+{
+    background: url(../Images/PS_Button/ico_toolbar_fitTR.png) no-repeat right top;
+}
+.PS_FitTR_hover
+{
+    background: url(../Images/PS_Button/ico_toolbar_fitTR_hover.png) no-repeat right top;
+}
+.PS_FitTR_active
+{
+    background: url(../Images/PS_Button/ico_toolbar_fitTR_selected.png) no-repeat right top;
+}
+.PS_FitBL_common
+{
+    background: url(../Images/PS_Button/ico_toolbar_fitBL.png) no-repeat right top;
+}
+.PS_FitBL_hover
+{
+    background: url(../Images/PS_Button/ico_toolbar_fitBL_hover.png) no-repeat right top;
+}
+.PS_FitBL_active
+{
+    background: url(../Images/PS_Button/ico_toolbar_fitBL_selected.png) no-repeat right top;
+}
+.PS_FitBR_common
+{
+    background: url(../Images/PS_Button/ico_toolbar_fitBR.png) no-repeat right top;
+}
+.PS_FitBR_hover
+{
+    background: url(../Images/PS_Button/ico_toolbar_fitBR_hover.png) no-repeat right top;
+}
+.PS_FitBR_active
+{
+    background: url(../Images/PS_Button/ico_toolbar_fitBR_selected.png) no-repeat right top;
+}
+.PS_Download_common
+{
+    background: url(../Images/PS_Button/ico_button_download.png) no-repeat right top;
+}
+.PS_Download_hover
+{
+    cursor: hand;
+    background: url(../Images/PS_Button/ico_button_download_hover.png) no-repeat right top;
+}
+/* 
+----------------------------
+ReconciliationList Report/Film Switch
+---------------------------- 
+*/
+.PS_FilmTab_hover, .PS_FilmTab_active, .PS_FilmTab_common, .PS_ReportTab_hover, .PS_ReportTab_active, .PS_ReportTab_common
+{
+    height: 30px;
+    width: 56px;
+}
+.PS_FilmTab_common
+{
+    background: url(../Images/PS_Button/tab_film_56x30.png) no-repeat right top;
+}
+.PS_FilmTab_hover
+{
+    background: url(../Images/PS_Button/tab_film_56x30_hover.png) no-repeat right top;
+}
+.PS_FilmTab_active
+{
+    background: url(../Images/PS_Button/tab_film_56x30_active.png) no-repeat right top;
+}
+.PS_ReportTab_common
+{
+    background: url(../Images/PS_Button/tab_report_56x30.png) no-repeat right top;
+}
+.PS_ReportTab_hover
+{
+    background: url(../Images/PS_Button/tab_report_56x30_hover.png) no-repeat right top;
+}
+.PS_ReportTab_active
+{
+    background: url(../Images/PS_Button/tab_report_56x30_active.png) no-repeat right top;
+}
+/* 
+----------------------------
+ReconciliationList Image Nav
+---------------------------- 
+*/
+.PS_NavPrev_common, .PS_NavPrev_hover, .PS_NavNext_common, .PS_NavNext_hover
+{
+    height: 10px;
+    width: 70px;
+    margin-left: 6px;
+}
+.PS_NavPrev_common
+{
+    background: transparent url(../Images/PS_Button/ico_upArrow.png);
+}
+.PS_NavPrev_hover
+{
+    background: transparent url(../Images/PS_Button/ico_upArrow_hover.png);
+}
+.PS_NavNext_common
+{
+    background: transparent url(../Images/PS_Button/ico_downArrow.png);
+}
+.PS_NavNext_hover
+{
+    background: transparent url(../Images/PS_Button/ico_downArrow_hover.png);
+}
+.PS_Spliter
+{
+    height: 2px;
+    width: 74px;
+    margin: 0px 5px;
+    background: url(../Images/PS_Button/Spliter.png) no-repeat;
+}
+table .film_img_viewer
+{
+    border: none;
+}
+
+table .film_img_viewer td
+{
+    padding: 5px;
+}
+
+.sidenav {
+    bottom: 30px;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 51px;
+    left: 0;
+    background-color: #32383F;
+    overflow-x: hidden;
+    transition: 0.3s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .3s;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.sidenav .title {
+    width: 250px;
+    height: 50px;
+    color: white;
+    font-size: 13px;
+}
+
+.sidenav .title {
+    background-color: #59636C;
+}
+
+.sidenav .title :hover{
+    background-color: #3B454F;
+}
+
+.sidenav .title span {
+    border-radius: 20px;
+    line-height: 22px;
+    width: 50px;
+    display: table-cell;
+    text-align: center;
+    top: 15px;
+}
+
+.sidenav .title span{
+    color: #CCCCCC;
+}
+
+.sidenav .title span.selected{
+    background-color: #49545F;
+    color: #FFFFFF;
+}
+
+.sidenav .title span.selected:hover{
+    background-color: #3C454F;
+    color: #FFFFFF;
+}
+
+#unmatchContainer {
+    margin: 6px;
+}
+
+#unmatchDropdown {
+    width: 100%;
+    height: 26px;
+    border-color: #f1f1f1;
+    background-color: #32383F;
+    color: #e5e5e5;
+}
+
+.center_cell {
+    vertical-align: middle !important;
+}
+
+#divReportViewer > canvas {
+    margin: 0 auto;
+    display: block;
+}
+
+treecontrol.film-leaf-icon li.tree-leaf i.tree-leaf-head:after {
+    content: "\e97f";
+    color: #d9d8d8;
+    font-size: 8px;
+}
+
+treecontrol.report-leaf-icon li.tree-leaf i.tree-leaf-head:after {
+    content: "\e9a2";
+    color: #d9d8d8;
+    font-size: 8px;
+}
