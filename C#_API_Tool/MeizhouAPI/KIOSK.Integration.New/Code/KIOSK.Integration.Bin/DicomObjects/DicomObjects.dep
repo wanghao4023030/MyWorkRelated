@@ -1,0 +1,10 @@
+
+; Dependency file for setup wizards.
+
+; Default Dependencies (none as of version 4)-------------
+
+[DicomObjects.ocx]
+Dest=$(WinSysPath)
+Register=$(DLLSelfRegister)
+
+

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Webservicedemo</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/log4net.dll">
+      <publishTime>03/08/2017 19:25:34</publishTime>
+    </File>
+    <File Include="bin/Webservicedemo.dll">
+      <publishTime>04/11/2018 12:31:03</publishTime>
+    </File>
+    <File Include="CreateFilmTestData.asmx">
+      <publishTime>01/25/2018 13:39:20</publishTime>
+    </File>
+    <File Include="CR_new.dcm">
+      <publishTime>07/12/2017 11:28:37</publishTime>
+    </File>
+    <File Include="dcmodify.exe">
+      <publishTime>03/01/2011 20:15:10</publishTime>
+    </File>
+    <File Include="log4Net.config">
+      <publishTime>04/11/2018 10:46:10</publishTime>
+    </File>
+    <File Include="Sample.bat">
+      <publishTime>01/26/2018 13:36:47</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/11/2018 15:02:14</publishTime>
+    </File>
+    <File Include="WebService1.asmx">
+      <publishTime>01/24/2018 16:03:44</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

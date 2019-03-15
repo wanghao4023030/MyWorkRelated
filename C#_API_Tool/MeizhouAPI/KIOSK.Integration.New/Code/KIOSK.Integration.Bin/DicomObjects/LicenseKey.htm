@@ -1,0 +1,142 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>License Key Issues for DicomObjects 3.0A</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<!-- Insert HTML here --><div align="center"><center>
+
+<table border="0" width="80%">
+    <tr>
+        <td width="60%"><h1 align="center"><font size="5">License
+        Key Issues for</font></h1>
+          <h1 align="center"><font size="6">DicomObjects</font><font
+        size="7"> </font><font size="6">v 4.1</font></h1>
+        </td>
+    </tr>
+    <tr>
+        <td width="60%"><h2><strong>Contents:</strong></h2>
+        <ul>
+            <li><a href="#Background"><font size="4">Background</font></a></li>
+            <li><a href="#Visual Basic"><font size="4">Visual
+                Basic </font></a></li>
+            <li><a href="#MSVC"><font size="4">MSVC </font></a></li>
+            <li><a href="#Borland"><font size="4">Borland Applications</font></a></li>
+            <li><a href="#Microsoft Access"><font size="4">Microsoft
+                Access</font></a></li>
+            <li><a href="#Web Applications"><font size="4">Web
+                Applications</font></a></li>
+        </ul>
+        <h2><a name="Background">Background</a></h2>
+        <p><font size="3">When a control such as the DicomViewer
+        control is created in most environments, it can be either
+        in &quot;design&quot; or &quot;user&quot; mode, depending
+        on whether the environment is a development or end-user
+        system. The DicomObjects licensing model uses this
+        difference to allow unlimited use by developers, but to
+        limit the ability of end-users to modify their systems.
+        Three modes of operation are supported:</font></p>
+        <ol>
+            <li><font size="3">The trial version of DicomObjects has
+                no license file, and use in either
+                &quot;design&quot; or &quot;user&quot; modes is
+                subject only to the 60 day limit on any machine.</font></li>
+            <li><font size="3">Those who have obtained developer
+                or &quot;end-user&quot; licences for DicomObjects
+                are given a full unrestricted version of the
+                DicomObjects.ocx file, and also a license file
+                called DicomObjects.lic. When present in the same
+                directory as DicomObjects.ocx, this allows use of
+                the full version in &quot;design&quot; mode. When
+                compiled version of the applications are
+                produced, these include in various ways (specific
+                to the development environment) the information
+                in the license file.</font></li>
+            <li><font size="3">Such applications may be run <strong>without
+                </strong>the<strong> </strong>license file, and
+                indeed this file must not be distributed with
+                applications, other than with the specific
+                permission of Medical Connections.</font></li>
+        </ol>
+        <p><font size="3">Note that many environments can use a
+        license file or embedded license information
+        interchangeably, and correct operation on a machine with
+        the license file does not guarantee correct operation on
+        machines without this file, so it is important to disable
+        this file (e.g. by renaming it) before distributing
+        applications to end-users.</font></p>
+        <h2><a name="Visual Basic">Visual Basic</a></h2>
+        <p><font size="3">No changes are required for development
+        use other than copying the OCX files and LIC files into
+        the same directory, and ensuring that the OCX is
+        registered.</font></p>
+        <p><font size="3">Applications must then simply be
+        recompiled to EXE files, and the new OCX and EXE used
+        together.</font></p>
+        <h2><a name="MSVC">MSVC</a></h2>
+        <p><font size="3">If creating DicomViewer objects
+        &quot;on-the-fly&quot; as in the DicomObjects example,
+        then the license string
+        _bstr_t(&quot;5A6B243015C61143&quot;) must be added
+        manually as the 8th parameter to the to the Create
+        function.</font></p>
+        <p><font size="3">If using ClassWizard to create
+        DicomViewer objects in a dialog box, then the easiest way
+        is simply to remove the viewer and re-add it.</font></p>
+        <p><font size="3">In either case, the application must of
+        course then be recompiled.</font></p>
+          <h2><a name="Borland">Borland Delphi &amp; CPP Builder</a></h2>
+          <p>When importing ActiveX controls, Borland environments store the
+          license information in the imported files and packages.&nbsp; This
+          therefore needs to be updated, but unfortunately not all version of
+          these environments use the same formats.</p>
+        <p>In general, you should re-import your support packages once you have
+        installed and re-registered the OCX and LIC files as above, as they will
+        then incorporate the license information.&nbsp; If you have problems
+        with this, please contact <a href="mailto:support@medicalconnections.co.uk">Medical
+        Connections</a> for assistance.</p>
+        <h2><a name="Microsoft Access">Microsoft Access</a></h2>
+        <p>This environment does not support the concept of user
+        mode, and the .lic file is always therefore necessary.
+        Please contact medical Connections for permission to
+        redistribute the .lic file.</p>
+        <h2><a name="Web Applications">Web Applications</a></h2>
+        <p>The licensing model for controls allows the licensing
+        information to be included in a &quot;license pack&quot;
+        (lpk) file for a web site. A suitable file is obtainable
+        from Medical Connections, though if you wish to include
+        other licensed controls on the same page, you will need
+        to construct your own, as documented in Microsoft
+        knowledge base article Q159923. Also as of version 4.0,
+        a range of &quot;signed&quot; .cab files is available to
+        allow auto-download of DicomObjects into PCs for use in
+        Internet Explorer. Different versions are available for
+        Internet/Intranet use and differing security levels, so
+        please ask for details.</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="60%"><div align="center"><center><table
+        border="0" cellpadding="3" cellspacing="5">
+            <tr>
+                <td>E-mail: </td>
+                <td><a
+                href="mailto:support@medicalconnections.co.uk">support@medicalconnections.co.uk</a></td>
+            </tr>
+            <tr>
+                <td>Fax:</td>
+                <td>+44 1792 390495</td>
+            </tr>
+        </table>
+        </center></div></td>
+    </tr>
+</table>
+</center></div>
+
+<p>&nbsp;</p>
+</body>
+</html>

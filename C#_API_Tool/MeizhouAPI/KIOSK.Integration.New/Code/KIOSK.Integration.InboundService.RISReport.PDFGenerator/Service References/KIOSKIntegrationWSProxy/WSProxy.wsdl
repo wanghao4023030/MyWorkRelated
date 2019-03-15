@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org">
+      <s:element name="QueryExamInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPatientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPatientID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAccessionNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strModality" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStartDT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEndDT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryExamInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryExamInfoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExamInfoList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryExamInfoEx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strParam" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryExamInfoExResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryExamInfoExResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryExamInfoForMOZI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPatientID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAccessionNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strModality" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStartDT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEndDT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryExamInfoForMOZIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryExamInfoForMOZIResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateExamInfoForMOZI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPatientID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAccessionNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strModality" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iType" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateExamInfoForMOZIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateExamInfoForMOZIResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryMWL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPatientID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPatientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAccessionNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strModality" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStudyDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStudyTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStudyStatusID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryMWLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryMWLResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTerminalInfo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCardType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strReturnType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPatientInfoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strReturnValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPatientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyStudyInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAccessionNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStudyInstanceUID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iStudyType" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iStatus" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyStudyInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NotifyStudyInfoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyReportInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="NotifyReportInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NotifyReportInfoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVersion">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="int" type="s:int" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="QueryExamInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryExamInfo" />
+  </wsdl:message>
+  <wsdl:message name="QueryExamInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryExamInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryExamInfoExSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryExamInfoEx" />
+  </wsdl:message>
+  <wsdl:message name="QueryExamInfoExSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryExamInfoExResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryExamInfoForMOZISoapIn">
+    <wsdl:part name="parameters" element="tns:QueryExamInfoForMOZI" />
+  </wsdl:message>
+  <wsdl:message name="QueryExamInfoForMOZISoapOut">
+    <wsdl:part name="parameters" element="tns:QueryExamInfoForMOZIResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateExamInfoForMOZISoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateExamInfoForMOZI" />
+  </wsdl:message>
+  <wsdl:message name="UpdateExamInfoForMOZISoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateExamInfoForMOZIResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryMWLSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryMWL" />
+  </wsdl:message>
+  <wsdl:message name="QueryMWLSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryMWLResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatientInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatientInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="NotifyStudyInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:NotifyStudyInfo" />
+  </wsdl:message>
+  <wsdl:message name="NotifyStudyInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:NotifyStudyInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="NotifyReportInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:NotifyReportInfo" />
+  </wsdl:message>
+  <wsdl:message name="NotifyReportInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:NotifyReportInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVersion" />
+  </wsdl:message>
+  <wsdl:message name="GetVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryExamInfoExHttpGetIn">
+    <wsdl:part name="strParam" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryExamInfoExHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryExamInfoForMOZIHttpGetIn">
+    <wsdl:part name="strPatientID" type="s:string" />
+    <wsdl:part name="strAccessionNumber" type="s:string" />
+    <wsdl:part name="strModality" type="s:string" />
+    <wsdl:part name="strStartDT" type="s:string" />
+    <wsdl:part name="strEndDT" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryExamInfoForMOZIHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateExamInfoForMOZIHttpGetIn">
+    <wsdl:part name="strPatientID" type="s:string" />
+    <wsdl:part name="strAccessionNumber" type="s:string" />
+    <wsdl:part name="strModality" type="s:string" />
+    <wsdl:part name="iType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateExamInfoForMOZIHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryMWLHttpGetIn">
+    <wsdl:part name="strPatientID" type="s:string" />
+    <wsdl:part name="strPatientName" type="s:string" />
+    <wsdl:part name="strAccessionNumber" type="s:string" />
+    <wsdl:part name="strModality" type="s:string" />
+    <wsdl:part name="strStudyDate" type="s:string" />
+    <wsdl:part name="strStudyTime" type="s:string" />
+    <wsdl:part name="strStudyStatusID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryMWLHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="NotifyStudyInfoHttpGetIn">
+    <wsdl:part name="strAccessionNumber" type="s:string" />
+    <wsdl:part name="strStudyInstanceUID" type="s:string" />
+    <wsdl:part name="iStudyType" type="s:string" />
+    <wsdl:part name="iStatus" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyStudyInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="NotifyReportInfoHttpGetIn" />
+  <wsdl:message name="NotifyReportInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetVersionHttpGetIn" />
+  <wsdl:message name="GetVersionHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryExamInfoExHttpPostIn">
+    <wsdl:part name="strParam" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryExamInfoExHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryExamInfoForMOZIHttpPostIn">
+    <wsdl:part name="strPatientID" type="s:string" />
+    <wsdl:part name="strAccessionNumber" type="s:string" />
+    <wsdl:part name="strModality" type="s:string" />
+    <wsdl:part name="strStartDT" type="s:string" />
+    <wsdl:part name="strEndDT" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryExamInfoForMOZIHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateExamInfoForMOZIHttpPostIn">
+    <wsdl:part name="strPatientID" type="s:string" />
+    <wsdl:part name="strAccessionNumber" type="s:string" />
+    <wsdl:part name="strModality" type="s:string" />
+    <wsdl:part name="iType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateExamInfoForMOZIHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryMWLHttpPostIn">
+    <wsdl:part name="strPatientID" type="s:string" />
+    <wsdl:part name="strPatientName" type="s:string" />
+    <wsdl:part name="strAccessionNumber" type="s:string" />
+    <wsdl:part name="strModality" type="s:string" />
+    <wsdl:part name="strStudyDate" type="s:string" />
+    <wsdl:part name="strStudyTime" type="s:string" />
+    <wsdl:part name="strStudyStatusID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryMWLHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="NotifyStudyInfoHttpPostIn">
+    <wsdl:part name="strAccessionNumber" type="s:string" />
+    <wsdl:part name="strStudyInstanceUID" type="s:string" />
+    <wsdl:part name="iStudyType" type="s:string" />
+    <wsdl:part name="iStatus" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyStudyInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="NotifyReportInfoHttpPostIn" />
+  <wsdl:message name="NotifyReportInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetVersionHttpPostIn" />
+  <wsdl:message name="GetVersionHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="WSProxySoap">
+    <wsdl:operation name="QueryExamInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">PS1000 or OCR Query Exam Info.</wsdl:documentation>
+      <wsdl:input message="tns:QueryExamInfoSoapIn" />
+      <wsdl:output message="tns:QueryExamInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryExamInfoEx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">PS1000 or OCR Query Exam Info For PDF Report.</wsdl:documentation>
+      <wsdl:input message="tns:QueryExamInfoExSoapIn" />
+      <wsdl:output message="tns:QueryExamInfoExSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryExamInfoForMOZI">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MOZI OCR Query Exam Info.</wsdl:documentation>
+      <wsdl:input message="tns:QueryExamInfoForMOZISoapIn" />
+      <wsdl:output message="tns:QueryExamInfoForMOZISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExamInfoForMOZI">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MOZI OCR Update Exam Info.</wsdl:documentation>
+      <wsdl:input message="tns:UpdateExamInfoForMOZISoapIn" />
+      <wsdl:output message="tns:UpdateExamInfoForMOZISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryMWL">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Integration Query MWL.</wsdl:documentation>
+      <wsdl:input message="tns:QueryMWLSoapIn" />
+      <wsdl:output message="tns:QueryMWLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">PS1000 get patient information, convert card number, the message to display and go/no go decision.</wsdl:documentation>
+      <wsdl:input message="tns:GetPatientInfoSoapIn" />
+      <wsdl:output message="tns:GetPatientInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyStudyInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">PS1000 notify study info.</wsdl:documentation>
+      <wsdl:input message="tns:NotifyStudyInfoSoapIn" />
+      <wsdl:output message="tns:NotifyStudyInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyReportInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Integration or 3rd System Notify Report Information To PS1000.</wsdl:documentation>
+      <wsdl:input message="tns:NotifyReportInfoSoapIn" />
+      <wsdl:output message="tns:NotifyReportInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Integration Version Info.</wsdl:documentation>
+      <wsdl:input message="tns:GetVersionSoapIn" />
+      <wsdl:output message="tns:GetVersionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WSProxyHttpGet">
+    <wsdl:operation name="QueryExamInfoEx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">PS1000 or OCR Query Exam Info For PDF Report.</wsdl:documentation>
+      <wsdl:input message="tns:QueryExamInfoExHttpGetIn" />
+      <wsdl:output message="tns:QueryExamInfoExHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryExamInfoForMOZI">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MOZI OCR Query Exam Info.</wsdl:documentation>
+      <wsdl:input message="tns:QueryExamInfoForMOZIHttpGetIn" />
+      <wsdl:output message="tns:QueryExamInfoForMOZIHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExamInfoForMOZI">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MOZI OCR Update Exam Info.</wsdl:documentation>
+      <wsdl:input message="tns:UpdateExamInfoForMOZIHttpGetIn" />
+      <wsdl:output message="tns:UpdateExamInfoForMOZIHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryMWL">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Integration Query MWL.</wsdl:documentation>
+      <wsdl:input message="tns:QueryMWLHttpGetIn" />
+      <wsdl:output message="tns:QueryMWLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyStudyInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">PS1000 notify study info.</wsdl:documentation>
+      <wsdl:input message="tns:NotifyStudyInfoHttpGetIn" />
+      <wsdl:output message="tns:NotifyStudyInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyReportInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Integration or 3rd System Notify Report Information To PS1000.</wsdl:documentation>
+      <wsdl:input message="tns:NotifyReportInfoHttpGetIn" />
+      <wsdl:output message="tns:NotifyReportInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Integration Version Info.</wsdl:documentation>
+      <wsdl:input message="tns:GetVersionHttpGetIn" />
+      <wsdl:output message="tns:GetVersionHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WSProxyHttpPost">
+    <wsdl:operation name="QueryExamInfoEx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">PS1000 or OCR Query Exam Info For PDF Report.</wsdl:documentation>
+      <wsdl:input message="tns:QueryExamInfoExHttpPostIn" />
+      <wsdl:output message="tns:QueryExamInfoExHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryExamInfoForMOZI">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MOZI OCR Query Exam Info.</wsdl:documentation>
+      <wsdl:input message="tns:QueryExamInfoForMOZIHttpPostIn" />
+      <wsdl:output message="tns:QueryExamInfoForMOZIHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExamInfoForMOZI">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MOZI OCR Update Exam Info.</wsdl:documentation>
+      <wsdl:input message="tns:UpdateExamInfoForMOZIHttpPostIn" />
+      <wsdl:output message="tns:UpdateExamInfoForMOZIHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryMWL">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Integration Query MWL.</wsdl:documentation>
+      <wsdl:input message="tns:QueryMWLHttpPostIn" />
+      <wsdl:output message="tns:QueryMWLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyStudyInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">PS1000 notify study info.</wsdl:documentation>
+      <wsdl:input message="tns:NotifyStudyInfoHttpPostIn" />
+      <wsdl:output message="tns:NotifyStudyInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyReportInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Integration or 3rd System Notify Report Information To PS1000.</wsdl:documentation>
+      <wsdl:input message="tns:NotifyReportInfoHttpPostIn" />
+      <wsdl:output message="tns:NotifyReportInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Integration Version Info.</wsdl:documentation>
+      <wsdl:input message="tns:GetVersionHttpPostIn" />
+      <wsdl:output message="tns:GetVersionHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSProxySoap" type="tns:WSProxySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryExamInfo">
+      <soap:operation soapAction="http://tempuri.org/QueryExamInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryExamInfoEx">
+      <soap:operation soapAction="http://tempuri.org/QueryExamInfoEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryExamInfoForMOZI">
+      <soap:operation soapAction="http://tempuri.org/QueryExamInfoForMOZI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExamInfoForMOZI">
+      <soap:operation soapAction="http://tempuri.org/UpdateExamInfoForMOZI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryMWL">
+      <soap:operation soapAction="http://tempuri.org/QueryMWL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <soap:operation soapAction="http://tempuri.org/GetPatientInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyStudyInfo">
+      <soap:operation soapAction="http://tempuri.org/NotifyStudyInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyReportInfo">
+      <soap:operation soapAction="http://tempuri.org/NotifyReportInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <soap:operation soapAction="http://tempuri.org/GetVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSProxySoap12" type="tns:WSProxySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryExamInfo">
+      <soap12:operation soapAction="http://tempuri.org/QueryExamInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryExamInfoEx">
+      <soap12:operation soapAction="http://tempuri.org/QueryExamInfoEx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryExamInfoForMOZI">
+      <soap12:operation soapAction="http://tempuri.org/QueryExamInfoForMOZI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExamInfoForMOZI">
+      <soap12:operation soapAction="http://tempuri.org/UpdateExamInfoForMOZI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryMWL">
+      <soap12:operation soapAction="http://tempuri.org/QueryMWL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetPatientInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyStudyInfo">
+      <soap12:operation soapAction="http://tempuri.org/NotifyStudyInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyReportInfo">
+      <soap12:operation soapAction="http://tempuri.org/NotifyReportInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <soap12:operation soapAction="http://tempuri.org/GetVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSProxyHttpGet" type="tns:WSProxyHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="QueryExamInfoEx">
+      <http:operation location="/QueryExamInfoEx" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryExamInfoForMOZI">
+      <http:operation location="/QueryExamInfoForMOZI" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExamInfoForMOZI">
+      <http:operation location="/UpdateExamInfoForMOZI" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryMWL">
+      <http:operation location="/QueryMWL" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyStudyInfo">
+      <http:operation location="/NotifyStudyInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyReportInfo">
+      <http:operation location="/NotifyReportInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <http:operation location="/GetVersion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSProxyHttpPost" type="tns:WSProxyHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="QueryExamInfoEx">
+      <http:operation location="/QueryExamInfoEx" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryExamInfoForMOZI">
+      <http:operation location="/QueryExamInfoForMOZI" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExamInfoForMOZI">
+      <http:operation location="/UpdateExamInfoForMOZI" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryMWL">
+      <http:operation location="/QueryMWL" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyStudyInfo">
+      <http:operation location="/NotifyStudyInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyReportInfo">
+      <http:operation location="/NotifyReportInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <http:operation location="/GetVersion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSProxy">
+    <wsdl:port name="WSProxySoap" binding="tns:WSProxySoap">
+      <soap:address location="http://127.0.0.1/KIOSK.Integration/WSProxy.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSProxySoap12" binding="tns:WSProxySoap12">
+      <soap12:address location="http://127.0.0.1/KIOSK.Integration/WSProxy.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSProxyHttpGet" binding="tns:WSProxyHttpGet">
+      <http:address location="http://127.0.0.1/KIOSK.Integration/WSProxy.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSProxyHttpPost" binding="tns:WSProxyHttpPost">
+      <http:address location="http://127.0.0.1/KIOSK.Integration/WSProxy.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

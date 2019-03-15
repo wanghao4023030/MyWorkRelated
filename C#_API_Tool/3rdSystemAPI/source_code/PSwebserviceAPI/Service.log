@@ -1,0 +1,8 @@
+[2018-12-13 17:05:52,603] INFO :PSwebserviceAPI.SyncToOtherSystem[SynchronizeInfo]: table_name: 1
+ table_key: 1
+ table_value: 1
+ Json: 1 
+[2018-12-13 17:08:22,088] INFO :PSwebserviceAPI.SyncToOtherSystem[SynchronizeInfo]: table_name: 1
+ table_key: 1
+ table_value: 1
+ Json: 1 

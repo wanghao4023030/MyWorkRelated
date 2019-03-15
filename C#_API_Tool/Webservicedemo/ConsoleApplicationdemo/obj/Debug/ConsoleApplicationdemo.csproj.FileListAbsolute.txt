@@ -1,0 +1,9 @@
+D:\C#Study\Webservicedemo\ConsoleApplicationdemo\bin\Debug\ConsoleApplicationdemo.exe.config
+D:\C#Study\Webservicedemo\ConsoleApplicationdemo\bin\Debug\ConsoleApplicationdemo.exe
+D:\C#Study\Webservicedemo\ConsoleApplicationdemo\bin\Debug\ConsoleApplicationdemo.pdb
+D:\C#Study\Webservicedemo\ConsoleApplicationdemo\obj\Debug\ConsoleApplicationdemo.csprojResolveAssemblyReference.cache
+D:\C#Study\Webservicedemo\ConsoleApplicationdemo\obj\Debug\ConsoleApplicationdemo.exe
+D:\C#Study\Webservicedemo\ConsoleApplicationdemo\obj\Debug\ConsoleApplicationdemo.pdb
+D:\C#Study\Webservicedemo\ConsoleApplicationdemo\bin\Debug\Webservicedemo.dll
+D:\C#Study\Webservicedemo\ConsoleApplicationdemo\bin\Debug\log4net.dll
+D:\C#Study\Webservicedemo\ConsoleApplicationdemo\bin\Debug\Webservicedemo.pdb

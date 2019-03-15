@@ -1,0 +1,7 @@
+D:\C#Study\Webservicedemo\CSService\bin\CSService.dll.config
+D:\C#Study\Webservicedemo\CSService\bin\CSService.dll
+D:\C#Study\Webservicedemo\CSService\bin\CSService.pdb
+D:\C#Study\Webservicedemo\CSService\bin\MySql.Data.dll
+D:\C#Study\Webservicedemo\CSService\obj\Debug\CSService.csprojResolveAssemblyReference.cache
+D:\C#Study\Webservicedemo\CSService\obj\Debug\CSService.dll
+D:\C#Study\Webservicedemo\CSService\obj\Debug\CSService.pdb

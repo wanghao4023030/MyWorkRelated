@@ -1,0 +1,14 @@
+D:\C#Study\PSwebserviceAPI\ResultView\obj\Debug\ResultView.Form1.resources
+D:\C#Study\PSwebserviceAPI\ResultView\obj\Debug\ResultView.Properties.Resources.resources
+D:\C#Study\PSwebserviceAPI\ResultView\obj\Debug\ResultView.csproj.GenerateResource.Cache
+D:\C#Study\PSwebserviceAPI\ResultView\bin\Debug\ResultView.exe.config
+D:\C#Study\PSwebserviceAPI\ResultView\bin\Debug\ResultView.exe.manifest
+D:\C#Study\PSwebserviceAPI\ResultView\bin\Debug\ResultView.application
+D:\C#Study\PSwebserviceAPI\ResultView\bin\Debug\ResultView.exe
+D:\C#Study\PSwebserviceAPI\ResultView\bin\Debug\ResultView.pdb
+D:\C#Study\PSwebserviceAPI\ResultView\bin\Debug\zxing.dll
+D:\C#Study\PSwebserviceAPI\ResultView\obj\Debug\ResultView.exe.manifest
+D:\C#Study\PSwebserviceAPI\ResultView\obj\Debug\ResultView.application
+D:\C#Study\PSwebserviceAPI\ResultView\obj\Debug\ResultView.exe
+D:\C#Study\PSwebserviceAPI\ResultView\obj\Debug\ResultView.pdb
+D:\C#Study\PSwebserviceAPI\ResultView\obj\Debug\ResultView.csprojResolveAssemblyReference.cache

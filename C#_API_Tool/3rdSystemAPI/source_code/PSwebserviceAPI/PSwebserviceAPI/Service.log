@@ -1,0 +1,26 @@
+[2018-11-30 13:40:56,286] INFO :PSwebserviceAPI.SyncToOtherSystem[SynchronizeInfo]: auth failed 
+[2018-11-30 13:40:58,783] INFO :PSwebserviceAPI.SyncToOtherSystem[SynchronizeInfo]: auth failed 
+[2018-11-30 13:41:01,173] INFO :PSwebserviceAPI.SyncToOtherSystem[SynchronizeInfo]: auth failed 
+[2018-11-30 13:41:03,185] INFO :PSwebserviceAPI.SyncToOtherSystem[SynchronizeInfo]: auth failed 
+[2018-11-30 13:41:05,445] INFO :PSwebserviceAPI.SyncToOtherSystem[SynchronizeInfo]: auth failed 
+[2018-12-05 10:06:01,899] INFO :PSwebserviceAPI.SyncToOtherSystem[SynchronizeInfo]: auth failed 
+[2018-12-05 10:06:34,795] INFO :PSwebserviceAPI.SyncToOtherSystem[SynchronizeInfo]: 1
+1
+1
+11111 
+[2018-12-05 10:06:53,137] INFO :PSwebserviceAPI.SyncToOtherSystem[SynchronizeInfo]: name
+key
+value
+jason 
+[2018-12-05 10:12:23,685] INFO :PSwebserviceAPI.SyncToOtherSystem[SynchronizeInfo]: table_name: name
+ table_name: key
+ + table_key: value
+ + table_value: {json} 
+[2018-12-13 17:09:08,980] INFO :PSwebserviceAPI.SyncToOtherSystem[SynchronizeInfo]: table_name: 1
+ table_key: 1
+ table_value: 1
+ Json: 1 
+[2018-12-13 17:09:13,272] INFO :PSwebserviceAPI.SyncToOtherSystem[SynchronizeInfo]: table_name: 1
+ table_key: 1
+ table_value: 1
+ Json: 1 

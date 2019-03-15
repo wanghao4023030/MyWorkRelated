@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="F:\WorkCode\KIOSK\trunk\Integration\KIOSK.Integration\Code\Publish\KIOSK.Integration.WSProxy" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="WSProxy.asmx" publishTime="08/26/2016 13:53:25" />
+    <file relUrl="bin/KIOSK.Integration.Log.dll" publishTime="09/13/2016 10:02:50" />
+    <file relUrl="bin/C1.C1Report.4.dll" publishTime="08/26/2016 13:53:36" />
+    <file relUrl="bin/KIOSK.Integration.Config.dll" publishTime="09/13/2016 10:02:50" />
+    <file relUrl="bin/itextsharp.dll" publishTime="08/26/2016 13:53:37" />
+    <file relUrl="bin/KIOSK.Integration.Util.dll" publishTime="09/13/2016 10:02:49" />
+    <file relUrl="bin/C1.C1Report.4.xml" publishTime="08/26/2016 13:53:37" />
+    <file relUrl="bin/KIOSK.Integration.Log.pdb" publishTime="09/13/2016 10:02:50" />
+    <file relUrl="bin/Interop.DicomObjects.dll" publishTime="09/13/2016 10:02:51" />
+    <file relUrl="bin/KIOSK.Integration.WSProxy.pdb" publishTime="09/13/2016 10:02:51" />
+    <file relUrl="bin/MySql.Data.dll" publishTime="08/26/2016 13:53:41" />
+    <file relUrl="Web.config" publishTime="09/13/2016 10:03:01" />
+    <file relUrl="bin/KIOSK.Integration.Util.pdb" publishTime="09/13/2016 10:02:49" />
+    <file relUrl="bin/KIOSK.Integration.WSProxy.dll" publishTime="09/13/2016 10:02:51" />
+    <file relUrl="bin/KIOSK.Integration.Config.pdb" publishTime="09/13/2016 10:02:50" />
+  </publishProfile>
+</publishData>

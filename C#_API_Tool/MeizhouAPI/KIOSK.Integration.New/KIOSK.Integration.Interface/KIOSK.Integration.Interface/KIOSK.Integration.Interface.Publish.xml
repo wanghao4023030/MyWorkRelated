@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="F:\WorkCode\KIOSK\trunk\Integration\湖南省.长沙市.中南大学湘雅二医院\Code\Publish.Interface\KIOSK.Integration.WSProxy" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Interface.asmx" publishTime="02/24/2016 14:24:07" />
+    <file relUrl="bin/KIOSK.Integration.Config.dll" publishTime="01/10/2017 20:04:38" />
+    <file relUrl="bin/KIOSK.Integration.Config.pdb" publishTime="01/10/2017 20:04:38" />
+    <file relUrl="bin/KIOSK.Integration.Interface.pdb" publishTime="01/10/2017 20:04:38" />
+    <file relUrl="bin/KIOSK.Integration.Log.dll" publishTime="01/10/2017 20:04:38" />
+    <file relUrl="Web.config" publishTime="01/10/2017 20:04:43" />
+    <file relUrl="bin/MySql.Data.dll" publishTime="12/27/2016 17:06:38" />
+    <file relUrl="bin/KIOSK.Integration.Log.pdb" publishTime="01/10/2017 20:04:38" />
+    <file relUrl="bin/KIOSK.Integration.Util.pdb" publishTime="01/10/2017 20:04:38" />
+    <file relUrl="bin/KIOSK.Integration.Util.dll" publishTime="01/10/2017 20:04:38" />
+    <file relUrl="bin/KIOSK.Integration.Interface.dll" publishTime="01/10/2017 20:04:38" />
+  </publishProfile>
+</publishData>

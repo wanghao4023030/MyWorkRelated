@@ -1,0 +1,1 @@
+Change the get patientinfoGolbal API

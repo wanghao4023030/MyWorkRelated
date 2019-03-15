@@ -1,0 +1,6 @@
+D:\KIOSK.Integration.New\Code\KIOSK.Integration.WSPrintService\bin\KIOSK.Integration.WSPrintService.dll.config
+D:\KIOSK.Integration.New\Code\KIOSK.Integration.WSPrintService\bin\KIOSK.Integration.WSPrintService.dll
+D:\KIOSK.Integration.New\Code\KIOSK.Integration.WSPrintService\bin\KIOSK.Integration.WSPrintService.pdb
+D:\KIOSK.Integration.New\Code\KIOSK.Integration.WSPrintService\obj\Debug\KIOSK.Integration.WSPrintService.csprojResolveAssemblyReference.cache
+D:\KIOSK.Integration.New\Code\KIOSK.Integration.WSPrintService\obj\Debug\KIOSK.Integration.WSPrintService.dll
+D:\KIOSK.Integration.New\Code\KIOSK.Integration.WSPrintService\obj\Debug\KIOSK.Integration.WSPrintService.pdb

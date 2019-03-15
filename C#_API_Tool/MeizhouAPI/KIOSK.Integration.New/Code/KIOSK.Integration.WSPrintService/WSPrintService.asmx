@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="WSPrintService.asmx.cs" Class="KIOSK.Integration.WSPrintService.PrintService" %>
