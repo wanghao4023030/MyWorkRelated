@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Owners>
+  <OwnerId>8139</OwnerId>
+  <OwnerType>TEST</OwnerType>
+  <Name><![CDATA[Test]]></Name>
+  <FSPath><![CDATA[Test\8139\8139\8004]]></FSPath>
+  <QCPath><![CDATA[Subject\AutomationTest\Common\Test]]></QCPath>
+  <Owner>
+    <OwnerId>1030</OwnerId>
+    <OwnerType>USER_ASSETS</OwnerType>
+    <Name><![CDATA[Action1]]></Name>
+    <FSPath><![CDATA[Test\8139\8139\8004]]></FSPath>
+    <QCPath><![CDATA[Subject\AutomationTest\Common\Test]]></QCPath>
+    <Relation>
+      <RelatedId>1029</RelatedId>
+      <RelatedType>USER_ASSETS</RelatedType>
+      <Name><![CDATA[TEST_Data]]></Name>
+      <FSPath><![CDATA[Test\8139\8139\8004]]></FSPath>
+      <QCPath><![CDATA[Subject\AutomationTest\Common\Test]]></QCPath>
+      <Condition>NONE</Condition>
+      <Order>634</Order>
+    </Relation>
+    <Relation>
+      <RelatedId>1045</RelatedId>
+      <RelatedType>RESOURCES</RelatedType>
+      <Name><![CDATA[WinDPSTester.tsr]]></Name>
+      <FSPath><![CDATA[resources\1045]]></FSPath>
+      <QCPath><![CDATA[Resources\Kiosk2.0.1.2\Object Repository\WinDPSTester.tsr]]></QCPath>
+      <Condition>NONE</Condition>
+      <Order>639</Order>
+      <FileName>WinDPSTester.tsr</FileName>
+      <SubType>Shared object repository</SubType>
+    </Relation>
+  </Owner>
+  <Owner>
+    <OwnerId>8139</OwnerId>
+    <OwnerType>TEST</OwnerType>
+    <Name><![CDATA[Test]]></Name>
+    <FSPath><![CDATA[Test\8139\8139\8004]]></FSPath>
+    <QCPath><![CDATA[Subject\AutomationTest\Common\Test]]></QCPath>
+    <Relation>
+      <RelatedId>1016</RelatedId>
+      <RelatedType>RESOURCES</RelatedType>
+      <Name><![CDATA[CommonFunc.vbs]]></Name>
+      <FSPath><![CDATA[resources\1016]]></FSPath>
+      <QCPath><![CDATA[Resources\Kiosk2.0.1.2\Function Library\CommonFunc.vbs]]></QCPath>
+      <Condition>NONE</Condition>
+      <Order>641</Order>
+      <FileName>CommonFunc.vbs</FileName>
+      <SubType>Function library</SubType>
+    </Relation>
+    <Relation>
+      <RelatedId>1029</RelatedId>
+      <RelatedType>USER_ASSETS</RelatedType>
+      <Name><![CDATA[TEST_Data]]></Name>
+      <FSPath><![CDATA[Test\8139\8139\8004]]></FSPath>
+      <QCPath><![CDATA[Subject\AutomationTest\Common\Test]]></QCPath>
+    </Relation>
+    <Relation>
+      <RelatedId>1028</RelatedId>
+      <RelatedType>USER_ASSETS</RelatedType>
+      <Name><![CDATA[Main Test Flow]]></Name>
+      <FSPath><![CDATA[Test\8139\8139\8004]]></FSPath>
+      <QCPath><![CDATA[Subject\AutomationTest\Common\Test]]></QCPath>
+    </Relation>
+    <Relation>
+      <RelatedId>1030</RelatedId>
+      <RelatedType>USER_ASSETS</RelatedType>
+      <Name><![CDATA[Action1]]></Name>
+      <FSPath><![CDATA[Test\8139\8139\8004]]></FSPath>
+      <QCPath><![CDATA[Subject\AutomationTest\Common\Test]]></QCPath>
+    </Relation>
+    <Relation>
+      <RelatedId>1025</RelatedId>
+      <RelatedType>RESOURCES</RelatedType>
+      <Name><![CDATA[Kiosk.xml]]></Name>
+      <FSPath><![CDATA[resources\1025]]></FSPath>
+      <QCPath><![CDATA[Resources\Kiosk2.0.1.2\Environment\Kiosk.xml]]></QCPath>
+      <Condition>NONE</Condition>
+      <Order>640</Order>
+      <FileName>Kiosk.xml</FileName>
+      <SubType>Environment variables</SubType>
+    </Relation>
+    <Relation>
+      <RelatedId>1019</RelatedId>
+      <RelatedType>RESOURCES</RelatedType>
+      <Name><![CDATA[KioskFunction.vbs]]></Name>
+      <FSPath><![CDATA[resources\1019]]></FSPath>
+      <QCPath><![CDATA[Resources\Kiosk2.0.1.2\Function Library\KioskFunction.vbs]]></QCPath>
+      <Condition>NONE</Condition>
+      <Order>642</Order>
+      <FileName>KioskFunction.vbs</FileName>
+      <SubType>Function library</SubType>
+    </Relation>
+  </Owner>
+</Owners>
