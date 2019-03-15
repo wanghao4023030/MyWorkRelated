@@ -1,0 +1,48 @@
+
+-- =============================================
+-- Author:		Song Yang
+-- Create date: 2017/03/09
+-- Description:	Query simple information of a specified print task
+-- =============================================
+CREATE PROCEDURE [dbo].[AFP_SP_GetTaskInfo]
+	-- Add the parameters for the stored procedure here
+	@TaskID int
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	SELECT SN AS TaskID, T.TerminalID, PatientID, PrinterDBID AS PrinterID, PrinterName, [Status], ReportPrinterFullName, 
+        EnableReportPrint, T.CreateTime, ExecuteTime, I.CheckFilmPrinterState, I.CheckReportPrinterState,ErrorCode
+    FROM AFP_PrintTask T
+	LEFT JOIN AFP_PrintTerminalInfo I ON I.TerminalID = T.TerminalID
+	LEFT JOIN PrinterReg R ON R.PrinterDBID = I.FilmPrinterID
+	WHERE SN=@TaskID
+END
+
+
+
+-- =============================================
+-- Author:		Song.Yang
+-- Create date: 2015/03/03
+-- Description:	Update a report to printed
+-- =============================================
+CREATE PROCEDURE [dbo].[AFP_SP_SetReportPrinted] 
+	-- Add the parameters for the stored procedure here
+	@ReportId nvarchar(80),
+	@TaskId int
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	IF EXISTS (SELECT * FROM AFP_PrintTaskOfReport WHERE TaskSN=@TaskId AND StudyInstanceUID=@ReportId)
+	BEGIN
+		UPDATE AFP_PrintTask SET ReportPrinted=ReportPrinted+1 WHERE SN=@TaskId
+		EXEC AFP_SP_UpdateReportPrintStatus '', @ReportId, 1
+	END
+	
+END
+

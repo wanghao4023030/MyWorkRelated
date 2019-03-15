@@ -1,0 +1,123 @@
+
+
+-- =============================================
+-- Author:		Lucia
+-- Create date: 2017/6/15
+-- Description:	Calculate complete status
+-- =============================================
+CREATE FUNCTION [dbo].[AFP_F_GetIncompleteStatus]
+(
+	-- Add the parameters for the function here
+	@PrintMode int,
+	@ImageCount int,
+	@ReportCount int,
+	@CreatedTime datetime
+)
+RETURNS INT
+AS
+BEGIN
+	IF NOT EXISTS (SELECT * FROM dbo.AFP_Parameters WHERE ParameterKey='IncompleteTask_Enabled' AND ParameterValue='1')
+		RETURN NULL
+	IF (@CreatedTime IS NULL)
+		RETURN NULL
+
+	DECLARE @Status int
+	
+	IF (@PrintMode <> 0 AND @PrintMode <> 3)
+		SET @Status=0
+	ELSE IF (@ImageCount > 0 AND @ReportCount > 0)
+		SET @Status=0
+	ELSE IF ((@ImageCount IS NULL OR @ImageCount=0) AND (@ReportCount IS NULL OR @ReportCount=0))
+		SET @Status=0
+	ELSE
+		BEGIN
+			DECLARE @ActiveMode nvarchar(20)
+			DECLARE @DurationType nvarchar(20)
+			DECLARE @DurationRange nvarchar(20)
+			DECLARE @DeadlineDay nvarchar(20)	
+			DECLARE @DeadlineTime nvarchar(20)
+			DECLARE @RelativeDT datetime
+			DECLARE @AbsoluteDT datetime
+			DECLARE @DeadlineDT datetime
+
+			SELECT @ActiveMode=ParameterValue FROM dbo.AFP_Parameters WHERE ParameterKey='IncompleteTask_ActiveMode'
+			IF (@ActiveMode&1 = 1)
+				BEGIN
+					SELECT @DurationType=ParameterValue FROM dbo.AFP_Parameters WHERE ParameterKey='IncompleteTask_DurationType'
+					SELECT @DurationRange=ParameterValue FROM dbo.AFP_Parameters WHERE ParameterKey='IncompleteTask_DurationRange'
+					SET @RelativeDT = 
+					CASE @DurationType
+						WHEN 'Days'	THEN DATEADD(day,CAST(@DurationRange AS int),@CreatedTime) 									
+						WHEN 'Hours' THEN DATEADD(hour,CAST(@DurationRange AS int),@CreatedTime) 
+						WHEN 'Minutes' THEN DATEADD(minute,CAST(@DurationRange AS int),@CreatedTime) 											
+					END
+				END
+			IF (@ActiveMode&2 = 2)
+				BEGIN
+					SELECT @DeadlineDay=ParameterValue FROM dbo.AFP_Parameters WHERE ParameterKey='IncompleteTask_DeadlineDay'
+					SELECT @DeadlineTime=ParameterValue FROM dbo.AFP_Parameters WHERE ParameterKey='IncompleteTask_DeadlineTime'
+					SET @AbsoluteDT = 
+					CASE @DeadlineDay
+						WHEN 'CurrentDay' THEN CONVERT(DATETIME,(CONVERT(varchar(10),@CreatedTime,120) + ' ' + @DeadlineTime))
+						WHEN 'NextDay' THEN CONVERT(DATETIME,DATEADD(day,1,CONVERT(varchar(10),@CreatedTime,120))+ ' ' + @DeadlineTime)
+					END
+					IF (@DeadlineDay='CurrentDay' AND @CreatedTime>=@AbsoluteDT)
+					SET @AbsoluteDT = DATEADD(day, 1, @AbsoluteDT)
+				END
+
+			
+			SET @DeadlineDT = 
+			CASE @ActiveMode&3
+				WHEN 1 THEN @RelativeDT
+				WHEN 2 THEN @AbsoluteDT
+				WHEN 3 THEN
+					CASE 
+						WHEN @RelativeDT > @AbsoluteDT THEN 
+							@AbsoluteDT
+						ELSE @RelativeDT
+					END
+			END
+
+			IF (@DeadlineDT <= GETDATE())
+				SET @Status=1
+			ELSE
+				SET @Status=2
+		END
+
+	RETURN @Status
+END
+
+
+
+CREATE TRIGGER [dbo].[AFP_Trigger_PrintMode] 
+   ON  [dbo].[AFP_PrintMode]
+   AFTER INSERT,UPDATE
+AS 
+BEGIN
+	SET NOCOUNT ON;
+
+	DECLARE @accessionNumber nvarchar(64)
+	DECLARE @printMode nvarchar(64)
+	DECLARE @holdFlag int
+
+	DECLARE @Temp TABLE(ID int IDENTITY(1,1), ACCNO NVARCHAR(100))
+	DECLARE @Index int
+	DECLARE @RowID int
+
+	SET @Index=1
+	INSERT INTO @TEMP SELECT AccessionNumber From inserted
+	SELECT @RowID = MAX(ID) FROM @Temp
+	WHILE(@Index <= @RowID)
+	BEGIN
+		SELECT @accessionNumber = ACCNO FROM @TEMP WHERE ID = @Index
+		SET @Index=@Index+1
+	
+		SELECT @printMode=PrintMode, @holdFlag=HoldFlag FROM inserted where AccessionNumber=@accessionNumber
+	
+		-- Update ExamInfo table	
+		UPDATE dbo.AFP_ExamInfo SET HoldFlag=@holdFlag, PrintMode=@printMode, 
+               FilmReadyTime=dbo.AFP_F_GetFilmReadyTime(@accessionNumber), ReportReadyTime=dbo.AFP_F_GetReportReadyTime(@accessionNumber), ProcessFlag=0 
+        WHERE AccessionNumber = @accessionNumber
+	END
+
+END

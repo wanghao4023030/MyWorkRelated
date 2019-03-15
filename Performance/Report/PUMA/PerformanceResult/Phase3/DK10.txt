@@ -1,0 +1,161 @@
+
+
+-- =============================================
+-- Author:		William	
+-- Create date: 20131120
+-- Description:	Add initial print items when receiving image
+-- Revisor:		William Xu 20130521 
+--				sync report print status when inserting film information
+--				Record patient name, ID 
+-- =============================================
+CREATE TRIGGER [dbo].[AFP_Trigger_FilmInfo] 
+   ON  [dbo].[Study] 
+   AFTER insert
+AS 
+BEGIN
+	SET NOCOUNT ON;
+
+    DECLARE @PatientID nvarchar(64)
+    DECLARE @PatientName nvarchar(64)
+    DECLARE @SIUID nvarchar(80)
+    DECLARE @AccNO nvarchar(64)	
+    DECLARE @ReportLevel int = 0 
+    DECLARE @PatientSex NVARCHAR(16)
+    DECLARE @StudyDate char(8)
+    DECLARE @StudyTime char(16)
+    DECLARE @ImageCount int
+	DECLARE @Modalities [varchar](64)
+	DECLARE @FilmSizeID VARCHAR(16)
+	DECLARE @PatientType nvarchar(50)
+	DECLARE @FilmOrientation [varchar](16)
+    DECLARE @MediumType [varchar](16)
+    DECLARE	@CallingAE varchar(16)
+    DECLARE @CallingIP varchar(20) 
+	DECLARE @ExamName nvarchar(256)
+    
+    DECLARE @BorderDensity varchar(16)
+    DECLARE @EmptyImageDensity varchar(16)
+    DECLARE @MinDensity int
+    DECLARE @MaxDensity int
+    DECLARE @Trim varchar(16)
+    DECLARE @ConfigurationInformation  varchar(1024)
+    DECLARE @MagnificationType  varchar(16)
+    DECLARE @SmoothingType  varchar(16)
+    DECLARE @FilmDestination  varchar(16)
+    DECLARE @FilmSessionLabel  varchar(64)
+    DECLARE @PrintPriority   varchar(16)
+    DECLARE @PhotoMetric varchar(16)
+    DECLARE @NumberOfCopy int
+	DECLARE @PrintStatus int
+	DECLARE @PrintCount int
+    
+    SET @MagnificationType = ''
+    SET @SmoothingType = ''
+    
+	-- Get general info 
+	SELECT	@AccNO = AccessionNo,
+			@SIUID = StudyInstanceUID,
+			@StudyDate=StudyDate, 
+			@StudyTime=StudyTime, 
+			@ImageCount=ImageCount
+		FROM inserted
+		
+    -- Get additional Info from DeliveryJob		
+    IF EXISTS(SELECT StudyInstanceUID FROM [Printer].[dbo].[DeliveryJob] D WHERE D.StudyInstanceUID = @SIUID)
+    BEGIN
+		SELECT	TOP 1
+				@FilmSizeID		= P.FilmSizeID,
+				@PatientName	= D.PatientName,
+				@PatientID		= D.PatientID, 
+				@PatientSex		= D.Gender, 
+				@Modalities		= D.ModalityType,
+				@ExamName       = D.ExamName,
+				@PatientType	= D.PatientType,
+				@FilmOrientation= P.FilmOrientation,
+				@MediumType     = D.MediumType,
+				@CallingAE		= S.CallingAE,
+				@CallingIP      = S.CallingIP,
+				@BorderDensity  = P.BorderDensity,
+				@EmptyImageDensity= P.EmptyImageDensity,
+				@MinDensity		= P.MinDensity,
+				@MaxDensity     = P.MaxDensity,
+				@Trim			= P.Trim,
+				@ConfigurationInformation = P.ConfigurationInformation,
+				@FilmDestination= D.FilmDestination,
+				@FilmSessionLabel=D.FilmSessionLabel,
+				@PrintPriority  = D.PrintPriority,
+				@NumberOfCopy	= D.NumberOfCopy,
+				@PrintStatus    = D.PrintStatus,
+                @PhotoMetric    = I.PhotometricInterpretation
+			FROM [Printer].[dbo].[DeliveryJob]	D
+			LEFT JOIN [Printer].[dbo].[Page]	P ON D.JobInstanceUID  = P.JobInstanceUID
+			LEFT JOIN [Printer].[dbo].[Session] S ON D.SessionInstanceUID = S.SessionInstanceUID
+			LEFT JOIN [Printer].[dbo].[ImageBox] I ON I.PageInstanceUID = P.JobInstanceUID
+			WHERE D.StudyInstanceUID  = @SIUID	
+	END
+	ELSE
+	BEGIN
+		SELECT	@FilmSizeID		= '',
+				@PatientName	= P.PatientName,
+				@PatientID		= P.PatientID, 
+				@PatientSex		= P.PatientSex, 
+				@Modalities		= S.Modalities,
+				@ExamName       = '',
+				@PatientType	= '',
+				@FilmOrientation= '',
+				@MediumType     = '',
+				@CallingAE		= '',
+				@CallingIP      = '',
+				@BorderDensity  = '',
+				@EmptyImageDensity= '',
+				@MinDensity		= NULL,
+				@MaxDensity     = NULL,
+				@Trim			= '',
+				@ConfigurationInformation = '',
+				@FilmDestination= '',
+				@FilmSessionLabel='',
+				@PrintPriority  = '',
+				@NumberOfCopy	= 1,
+				@PrintStatus    = 0				
+		FROM [WGGC].[dbo].[Study] S
+		LEFT JOIN [WGGC].[dbo].[Patient] P ON S.PatientGUID = P.PatientGUID
+		WHERE S.StudyInstanceUID  = @SIUID	
+	END
+		
+	IF @PrintStatus IS NULL
+		SELECT @PrintStatus=0
+		
+	SET @PrintCount = 0
+	IF (@PrintStatus = 1)
+		SET @PrintCount = 1
+	
+	IF NOT EXISTS(SELECT AccessionNumber FROM AFP_FilmInfo WHERE AFP_FilmInfo.StudyInstanceUID=@SIUID)
+	BEGIN
+		INSERT INTO AFP_FilmInfo(StudyInstanceUID,FilmFlag,AccessionNumber,PatientID,PatientName,PatientSex,StudyDate,StudyTime,Modalities,ImageCount,FilmSizeID,PatientType,FilmOrientation,MediumType,CallingAE,CallingIP,
+		    BorderDensity,EmptyImageDensity,MinDensity,MaxDensity,Trim,Configuration,MagnificationType,SmoothingType,FilmDestination,FilmSessionLabel,Priority,Copies,PrintCount, PhotoMetric, ExamName) 
+		VALUES( @SIUID,@PrintStatus,@AccNo,@PatientID,@PatientName,@PatientSex,@StudyDate,@StudyTime,@Modalities,@ImageCount,@FilmSizeID,@PatientType,@FilmOrientation,@MediumType,@CallingAE,@CallingIP,@BorderDensity,
+            @EmptyImageDensity,@MinDensity,@MaxDensity,@Trim,@ConfigurationInformation,@MagnificationType,@SmoothingType,@FilmDestination,@FilmSessionLabel,@PrintPriority,@NumberOfCopy,@PrintCount,@PhotoMetric, @ExamName)
+	END	
+			
+END
+
+
+-- =============================================
+-- Author:		Song Yang
+-- Create date: 2017/03/15
+-- Description:	Get image info according to study instance UID
+-- =============================================
+CREATE PROCEDURE [dbo].[AFP_SP_GetImageBoxes] 
+	@StudyInstanceUID nvarchar (100)
+AS
+BEGIN
+
+	SET NOCOUNT ON; 
+	SELECT [SamplesPerPixel],[ImageRows],[ImageColumns],[BitsAllocated],[ObjectFile],root_dir
+	FROM IMAGE JOIN Series ON Series.SeriesInstanceUID = Image.SeriesInstanceUID
+	JOIN Study ON Series.StudyInstanceUID = Study.StudyInstanceUID 
+	JOIN SMS ON SMS.SUID = Study.StudyInstanceUID
+	JOIN StorageAE ON StorageAE.storageAEName = SMS.sms_name
+	WHERE Study.StudyInstanceUID=@StudyInstanceUID
+ 	 
+END

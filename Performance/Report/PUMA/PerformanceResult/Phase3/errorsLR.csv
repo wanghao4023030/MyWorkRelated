@@ -1,0 +1,6 @@
+2,-47295,Monitor name :Windows Resources. Cannot access data for measurement Process|% Processor Time|Ltthunkserver#3 on machine 10.184.129.208.
+Details: The data is not valid.
+
+Hint:
+Check that there is such a measurement on the machine (use the Add Machine dialog box)  (entry point:  CNtMeasurement::GetNewData3).	[MsgId: MMSG-47295],485,Cntrl,0,0,1,,
+2,-17999,Action.c(265): Error: Add patient reports failed by using NotifyReportFile service, please reference the service is works well or not. The accn is   A20170722163441837,319,Cntrl,55,3,1,,

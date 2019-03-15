@@ -1,0 +1,2171 @@
+﻿2,1,24576,Parse Tree,View,CREATE FUNCTION sys.dm_exec_sql_text(@handle varbinary(64))
+RETURNS TABLE
+AS
+	RETURN SELECT * FROM OPENROWSET(TABLE FNGETSQL, @handle)
+
+2,1,24576,Parse Tree,View,
+create view sys.dm_exec_cached_plans as select * from OpenRowset(TABLE SYSDMEXECCACHEDPLANS)
+
+4,1,24576,Parse Tree,View,
+create view sys.dm_exec_cached_plans as select * from OpenRowset(TABLE SYSDMEXECCACHEDPLANS)
+
+2,1,57344,Parse Tree,View,CREATE VIEW sys.partitions AS
+	SELECT rs.rowsetid AS partition_id,
+		rs.idmajor AS object_id,
+		rs.idminor AS index_id,
+		rs.numpart AS partition_number,
+		rs.rowsetid AS hobt_id,
+		isnull(ct.rows, rs.rcrows) AS rows,
+		rs.fgidfs AS filestream_filegroup_id,
+		cmprlevel AS data_compression,
+		cl.name AS data_compression_desc
+	FROM sys.sysrowsets rs OUTER APPLY OpenRowset(TABLE ALUCOUNT, rs.rowsetid, 0) ct
+	LEFT JOIN sys.syspalvalues cl ON cl.class = 'CMPL' AND cl.value = cmprlevel
+
+2,1,24576,Parse Tree,View,CREATE VIEW sys.dm_os_buffer_descriptors AS
+	SELECT *
+	FROM OpenRowset(TABLE SYSBUFFERDESCRIPTORS)
+
+2,1,57344,Parse Tree,View,CREATE VIEW sys.allocation_units AS
+	SELECT au.auid AS allocation_unit_id,
+		au.type,
+		ip.name AS type_desc,
+		au.ownerid AS container_id,
+		convert(int, au.fgid) AS data_space_id,
+		isnull(ct.reserved_pages, au.pcreserved) AS total_pages,
+		isnull(ct.used_pages, au.pcused) AS used_pages,
+		isnull(ct.data_pages, au.pcdata) AS data_pages
+	FROM sys.sysallocunits au OUTER APPLY OpenRowset(TABLE ALUCOUNT, au.ownerid, au.type) ct
+	LEFT JOIN sys.syspalvalues ip ON ip.class = 'AUTY' AND ip.value = au.type
+
+2,1,49152,Parse Tree,View,CREATE VIEW sys.foreign_key_columns AS
+	SELECT constraint_object_id = p.depid,
+		constraint_column_id = p.depsubid,
+		parent_object_id = p.indepid,
+		parent_column_id = p.indepsubid,
+		referenced_object_id = r.indepid,
+		referenced_column_id = r.indepsubid
+	FROM sys.syssingleobjrefs p
+	JOIN sys.syssingleobjrefs r ON r.depid = p.depid AND r.class = 29 AND r.depsubid = p.depsubid	-- SRC_FK_REFERD_COL
+	WHERE p.class = 28 	-- SRC_FK_PARENT_COL
+		AND has_access('CO', p.indepid) = 1
+
+4,1,57344,Parse Tree,View,CREATE VIEW sys.objects AS
+	SELECT name, object_id, principal_id, schema_id, parent_object_id,
+		type, type_desc, create_date, modify_date,
+		is_ms_shipped, is_published, is_schema_published
+	FROM sys.objects$
+
+2,1,106496,Parse Tree,View,CREATE VIEW sys.computed_columns AS
+	SELECT object_id = id,
+		name = name,
+		column_id = colid,
+		system_type_id = xtype,
+		user_type_id = utype,
+		max_length = length,
+		precision = prec,
+		scale = scale,
+		collation_name = convert(sysname,CollationPropertyFromId(collationid,'name')),
+		is_nullable = sysconv(bit, 1 - (status & 1)), 		-- CPM_NOTNULL
+		is_ansi_padded = sysconv(bit, status & 2), 		-- CPM_NOTRIM
+		is_rowguidcol = sysconv(bit, status & 8), 		-- CPM_ROWGUIDCOL
+		is_identity = sysconv(bit, status & 4), 		-- CPM_IDENTCOL
+		is_filestream = sysconv(bit, status & 32), 		-- CPM_FILESTREAM
+		is_replicated = sysconv(bit, status & 0x20000), 	-- CPM_REPLICAT
+		is_non_sql_subscribed = sysconv(bit, status & 0x40000),	-- CPM_NONSQSSUB
+		is_merge_published = sysconv(bit, status & 0x80000), 	-- CPM_MERGEREPL
+		is_dts_replicated = sysconv(bit, status & 0x100000), 	-- CPM_REPLDTS
+		is_xml_document = sysconv(bit, status & 2048),		-- CPM_XML_DOC 		
+		xml_collection_id = xmlns,
+		default_object_id = dflt,
+		rule_object_id = chk,
+		definition = object_definition(id, colid),
+		uses_database_collation = sysconv(bit, status & 128),		-- CPM_USESDBCOLL
+		is_persisted = sysconv(bit, status & 64),			-- CPM_PERSISTEDCC	
+		is_computed = sysconv(bit, status & 16),			-- CPM_COMPUTED	
+		sysconv(bit, 0) as is_sparse,
+		sysconv(bit, 0) as is_column_set
+	FROM sys.syscolpars
+	WHERE number = 0
+		AND (status & 16) = 16			-- CPM_COMPUTED
+		AND has_access('CO', id) = 1
+
+2,1,114688,Parse Tree,View,CREATE VIEW sys.identity_columns AS
+	SELECT object_id = id,
+		name = name,
+		column_id = colid,
+		system_type_id = xtype,
+		user_type_id = utype,
+		max_length = length,
+		precision = prec,
+		scale = scale,
+		collation_name = convert(sysname,CollationPropertyFromId(collationid,'name')),
+		is_nullable = sysconv(bit, 1 - (status & 1)), 	-- CPM_NOTNULL
+		is_ansi_padded = sysconv(bit, status & 2), 	-- CPM_NOTRIM
+		is_rowguidcol = sysconv(bit, status & 8), 	-- CPM_ROWGUIDCOL
+		is_identity = sysconv(bit, status & 4), 		-- CPM_IDENTCOL
+		is_filestream = sysconv(bit, status & 32), 	-- CPM_FILESTREAM
+		is_replicated = sysconv(bit, status & 0x20000), 	-- CPM_REPLICAT
+		is_non_sql_subscribed = sysconv(bit, status & 0x40000), 	-- CPM_NONSQSSUB
+		is_merge_published = sysconv(bit, status & 0x80000), 		-- CPM_MERGEREPL
+		is_dts_replicated = sysconv(bit, status & 0x100000), 		-- CPM_REPLDTS
+		is_xml_document = sysconv(bit, 0),
+		xml_collection_id = sysconv(int, 0),
+		default_object_id = sysconv(int, 0),
+		rule_object_id = sysconv(int, 0),
+		seed_value = IdentityProperty(id, 'SeedValue'),
+		increment_value = IdentityProperty(id, 'IncrementValue'),
+		last_value = IdentityProperty(id, 'LastValue'),
+		is_not_for_replication = sysconv(bit, status & 0x10000),	-- CPM_ID_REPL
+		is_computed = sysconv(bit, status & 16),			-- CPM_COMPUTED				
+		sysconv(bit, 0) as is_sparse,
+		sysconv(bit, 0) as is_column_set
+	FROM sys.syscolpars
+	WHERE number = 0	-- SOC_COLUMN
+		AND (status & 4) = 4 	-- CPM_IDENTCOL
+		AND has_access('CO', id) = 1
+
+8,1,40960,Parse Tree,View,CREATE VIEW sys.schemas AS
+	SELECT s.name, schema_id = s.id,
+		principal_id = r.indepid
+	FROM sys.sysclsobjs s
+	LEFT JOIN sys.syssingleobjrefs r ON r.depid = s.id AND r.class = 50 AND r.depsubid = 0 -- SRC_SCHEMAOWNER
+	WHERE s.class = 50	-- SOC_SCHEMA
+
+4,1,57344,Parse Tree,View,CREATE VIEW sys.xml_schema_collections AS
+	SELECT xml_collection_id = s.id,
+		schema_id = s.nsid,
+		principal_id = r.indepid,
+		name = s.name,
+		create_date = s.created,
+		modify_date = s.modified
+	FROM sys.sysnsobjs s
+	LEFT JOIN sys.syssingleobjrefs r ON r.depid = s.id AND r.class = 59 AND r.depsubid = 0	-- SRC_XSDCOLTOOWNER
+	WHERE s.class = 27	-- SOC_XSDCOLLECTION
+		AND (s.nsid = 4 OR has_access('XC', 0, s.id) = 1)
+
+8,1,90112,Parse Tree,View,CREATE VIEW sys.types AS
+	SELECT name,
+		t.xtype AS system_type_id,
+		t.id AS user_type_id,
+		t.schid AS schema_id,
+		o.indepid AS principal_id,
+		t.length AS max_length,
+		t.prec AS precision,
+		t.scale AS scale,
+		convert(sysname, collationpropertyfromid(t.collationid, 'name')) AS collation_name,
+		sysconv(bit, 1 - (t.status & 1)) AS is_nullable,	-- TYPE_NOTNULL
+		sysconv(bit, case when t.id > 256 then 1 else 0 end) AS is_user_defined,	-- x_utypSSNAME
+		sysconv(bit, case when t.xtype = 240 then 1 else 0 end) AS is_assembly_type,	-- XVT_UDT
+		t.dflt AS default_object_id,
+		t.chk AS rule_object_id,
+		sysconv(bit, case when t.xtype = 243 then 1 else 0 end) AS is_table_type	-- XVT_TABLETYPE
+	FROM sys.sysscalartypes t
+	LEFT JOIN sys.syssingleobjrefs o ON o.depid = t.id AND o.class = 44 AND o.depsubid = 0	-- SRC_TYPETOOWNER
+	WHERE t.id <= 256 OR has_access('UT', t.id) = 1
+
+4,1,40960,Parse Tree,View,CREATE VIEW sys.index_columns AS
+	SELECT idmajor AS object_id,
+		idminor AS index_id,
+		subid AS index_column_id,
+		intprop AS column_id,
+	  	tinyprop1 AS key_ordinal,
+	  	tinyprop2 AS partition_ordinal,
+	  	convert (bit, status & 0x4) AS is_descending_key,	-- ISC_IC_DESC_KEY
+		convert (bit, status & 0x10) AS is_included_column	-- ISC_IC_INCLUDED
+	FROM sys.sysiscols
+	WHERE (status & 2) <> 0
+		AND has_access('CO', idmajor) = 1	-- ISC_IND_COL
+
+4,1,106496,Parse Tree,View,CREATE VIEW sys.indexes AS
+	SELECT i.id AS object_id,
+		i.name AS name,
+		i.indid AS index_id,
+		i.type,
+		n.name AS type_desc,
+		sysconv(bit, i.status & 0x8) AS is_unique,			-- IS_IND_UNIQUE
+		i.dataspace AS data_space_id,
+		sysconv(bit, i.status & 0x4) AS ignore_dup_key,		-- IS_IND_DPKEYS
+		sysconv(bit, i.status & 0x20) AS is_primary_key,	-- IS_IND_PRIMARY
+		sysconv(bit, i.status & 0x40) AS is_unique_constraint,	-- IS_IND_UNIQUE_CO
+		i.fillfact AS fill_factor,
+		sysconv(bit, i.status & 0x10) AS is_padded,		-- IS_IND_PADINDEX
+		sysconv(bit, i.status & 0x80) AS is_disabled,		-- IS_IND_OFFLINE
+		sysconv(bit, i.status & 0x100) AS is_hypothetical,	-- IS_IND_ITWINDEX
+		sysconv(bit, 1 - (i.status & 512)/512) AS allow_row_locks,		-- IS_IND_NO_ROWLOCK
+		sysconv(bit, 1 - (i.status & 1024)/1024) AS allow_page_locks,		-- IS_IND_NO_PAGELOCK
+		sysconv(bit, i.status & 0x20000) AS has_filter,	-- IS_HAS_FILTER
+		case when (i.status & 0x20000) != 0 then object_definition(i.id, i.indid, 7) else NULL end AS filter_definition -- x_euncIndex
+	FROM sys.sysidxstats i
+	LEFT JOIN sys.syspalvalues n ON n.class = 'IDXT' and n.value = i.type
+	WHERE (i.status & 1) <> 0
+		AND has_access('CO', i.id) = 1	-- IS_INDEX
+
+4,1,98304,Parse Tree,View,CREATE VIEW sys.all_columns AS
+ SELECT * FROM sys.columns
+3,1,90112,Parse Tree,View,CREATE VIEW sys.system_columns AS
+	SELECT id AS object_id,
+		name collate database_default AS name,
+		colid AS column_id,
+		xtype AS system_type_id,
+		utype AS user_type_id,
+		length AS max_length,
+		prec AS precision, scale,
+		convert(sysname, case cid
+			when -2 then ServerProperty('Collation')
+			else CollationPropertyFromId(cid, 'name') end) AS collation_name,
+		sysconv(bit, 1 - (status & 1)) AS is_nullable,
+		sysconv(bit, status & 2) AS is_ansi_padded,
+		sysconv(bit, 0) AS is_rowguidcol,
+		sysconv(bit, 0) AS is_identity,
+		sysconv(bit, 0) AS is_computed,
+		sysconv(bit, 0) AS is_filestream,
+		sysconv(bit, 0) AS is_replicated,
+		sysconv(bit, 0) AS is_non_sql_subscribed,
+		sysconv(bit, 0) AS is_merge_published,
+		sysconv(bit, 0) AS is_dts_replicated,
+		sysconv(bit, 0) AS is_xml_document,
+		sysconv(int, 0) AS xml_collection_id,
+		sysconv(int, 0) AS default_object_id,
+		sysconv(int, 0) AS rule_object_id,
+		sysconv(bit, 0) AS is_sparse,
+		sysconv(bit, 0) AS is_column_set
+	FROM sys.syscolrdb
+	WHERE number = 0
+
+3,1,98304,Parse Tree,View,CREATE VIEW sys.columns AS
+	SELECT id AS object_id,
+		name, colid AS column_id,
+		xtype AS system_type_id,
+		utype AS user_type_id,
+		length AS max_length,
+		prec AS precision, scale,
+		convert(sysname, CollationPropertyFromId(collationid, 'name')) AS collation_name,
+		sysconv(bit, 1 - (status & 1)) AS is_nullable,		-- CPM_NOTNULL
+		sysconv(bit, status & 2) AS is_ansi_padded,		-- CPM_NOTRIM
+		sysconv(bit, status & 8) AS is_rowguidcol,			-- CPM_ROWGUIDCOL
+		sysconv(bit, status & 4) AS is_identity,			-- CPM_IDENTCOL
+		sysconv(bit, status & 16) AS is_computed,			-- CPM_COMPUTED
+		sysconv(bit, status & 32) AS is_filestream,			-- CPM_FILESTREAM
+		sysconv(bit, status & 0x020000) AS is_replicated,			-- CPM_REPLICAT
+		sysconv(bit, status & 0x040000) AS is_non_sql_subscribed,	-- CPM_NONSQSSUB
+		sysconv(bit, status & 0x080000) AS is_merge_published,	-- CPM_MERGEREPL
+		sysconv(bit, status & 0x100000) AS is_dts_replicated,	-- CPM_REPLDTS
+		sysconv(bit, status & 2048) AS is_xml_document,		-- CPM_XML_DOC 
+		xmlns AS xml_collection_id,
+		dflt AS default_object_id,
+		chk AS rule_object_id,
+		sysconv(bit, status & 0x1000000) AS is_sparse,	-- CPM_SPARSE
+		sysconv(bit, status & 0x2000000) AS is_column_set	-- CPM_SPARSECOLUMNSET
+	FROM sys.syscolpars
+	WHERE number = 0 AND has_access('CO', id) = 1
+
+4,1,81920,Parse Tree,View,CREATE VIEW sys.all_views AS
+ SELECT * FROM sys.views
+3,1,57344,Parse Tree,View,CREATE VIEW sys.system_views AS
+	SELECT name, object_id, principal_id, schema_id, parent_object_id,
+		type, type_desc, create_date, modify_date,
+		is_ms_shipped, is_published, is_schema_published,
+		sysconv(bit, 0) AS is_replicated,
+		sysconv(bit, 0) AS has_replication_filter,
+		sysconv(bit, 0) AS has_opaque_metadata,
+		sysconv(bit, 0) AS has_unchecked_assembly_data,
+		sysconv(bit, 0) AS with_check_option,
+		sysconv(bit, 0) as is_date_correlation_view,
+		sysconv(bit, 0) as is_tracked_by_cdc
+	FROM sys.system_objects
+	WHERE type = 'V'
+
+3,1,57344,Parse Tree,View,CREATE VIEW sys.system_objects AS
+	SELECT o.name, o.object_id, o.principal_id, o.schema_id, o.parent_object_id,
+		o.type, n.name AS type_desc, o.create_date, o.modify_date,
+		o.is_ms_shipped, o.is_published, o.is_schema_published
+	FROM sys.system_objects$ o
+	LEFT JOIN sys.syspalnames n ON n.class = 'OBTY' AND n.value = o.type
+
+3,1,368640,Parse Tree,View,CREATE VIEW sys.system_objects$ AS
+ SELECT name00f008 collate database_default AS name,
+  id AS object_id,
+  convert(int, null) AS principal_id,
+  schid AS schema_id,
+  sysconv(int, 0) AS parent_object_id,
+  type,
+  crdate AS create_date,
+  crdate AS modify_date,
+  sysconv(bit, 1) AS is_ms_shipped,
+  sysconv(bit, 0) AS is_published,
+  sysconv(bit, 0) AS is_schema_published
+ FROM sys.sysobjrdb
+3,1,65536,Parse Tree,View,CREATE VIEW sys.views AS
+	SELECT name, object_id, principal_id, schema_id, parent_object_id,
+		type, type_desc,
+		create_date, modify_date,
+		is_ms_shipped, is_published, is_schema_published,
+		is_replicated, has_replication_filter, has_opaque_metadata,
+		has_unchecked_assembly_data, with_check_option,
+		is_auto_dropped as is_date_correlation_view,
+		is_tracked_by_cdc
+	FROM sys.objects$
+	WHERE type = 'V'
+
+6,1,196608,Parse Tree,View,CREATE VIEW sys.objects$ AS
+	SELECT
+		o.name,
+		o.id AS object_id,
+		r.indepid AS principal_id,
+		o.nsid AS schema_id,
+		o.pid AS parent_object_id,
+		o.type AS type,
+		n.name AS type_desc,
+		o.intprop AS property,
+		o.created AS create_date,
+		o.modified AS modify_date,
+		sysconv(bit, o.status & 1) AS is_ms_shipped,				-- OBJALL_MSSHIPPED
+		sysconv(bit, o.status & 2) AS is_auto_dropped,				-- OBJALL_AUTODROP
+		sysconv(bit, o.status & 4) AS is_system_named,			-- OBJALL_SYSNAMED
+		sysconv(bit, o.status & 16) AS is_published,				-- OBJALL_RPL_PUBLISHED
+		sysconv(bit, o.status & 64) AS is_schema_published,			-- OBJALL_RPL_PUB_SCHONLY
+		sysconv(bit, o.status & 256) AS lock_on_bulk_load,			-- OBJTAB_BCPTABLOCK
+		sysconv(bit, o.status & 256) AS is_disabled,				-- OBJCST_DISABLED
+		sysconv(bit, o.status & 256) AS is_auto_executed,			-- OBJPRC_STARTUP
+		sysconv(bit, o.status & 256) AS is_activation_enabled,		-- OBJSQ_ACTIVATIONON
+		sysconv(bit, o.status & 512) AS has_opaque_metadata,		-- OBJVW_OPAQUEBMM
+		sysconv(bit, o.status & 512) AS is_not_for_replication,		-- OBJCST_NOTFORREPL
+		sysconv(bit, o.status & 512) AS is_receive_enabled,			-- OBJSQ_RECEIVEON
+		sysconv(bit, o.status & 1024) AS is_not_trusted,			-- OBJCST_NOTRUST
+		sysconv(bit, o.status & 1024) AS is_enqueue_enabled,		-- OBJSQ_ENQUEUEON
+		sysconv(bit, o.status & 1024) AS with_check_option,		-- OBJVW_WITHCHECK
+		sysconv(bit, o.status & 2048) AS is_retention_enabled,		-- OBJSQ_RETENTIONON
+		sysconv(bit, o.status & 2048) AS has_unchecked_assembly_data,	-- OBJTAB_HAS_UNCHKED_ASM_DATA
+		convert(tinyint, (o.status/4096) & 3) AS update_referential_action,		-- ERefAct/OBJREF_UPDACTMASK
+		convert(tinyint, (o.status/16384) & 3) AS delete_referential_action,	-- ERefAct/OBJREF_DELACTMASK
+		sysconv(bit, o.status & 0x1000) AS is_replicated,			-- OBJTAB_REPLICATE
+		sysconv(bit, o.status & 0x1000) AS is_execution_replicated,	-- OBJPRC_PROC_EXEC
+		sysconv(bit, o.status & 0x2000) AS has_replication_filter,		-- OBJTAB_HAS_FILT_PROC
+		sysconv(bit, o.status & 0x2000) AS is_repl_serializable_only,	-- OBJPRC_PROC_SER_ONLY
+		sysconv(bit, o.status & 0x4000) AS is_merge_published,			-- OBJTAB_MERGE_PUBL
+		sysconv(bit, o.status & 0x4000) AS skips_repl_constraints,		-- OBJPRC_NO_REPL_CNST
+		sysconv(bit, o.status & 0x8000) AS is_sync_tran_subscribed,		-- OBJTAB_SYNCTRAN_SUB
+		sysconv(bit, o.status & 0x40000) AS uses_ansi_nulls,			-- OBJMOD_ANSINULLS
+		sysconv(bit, o.status & 0x200000) AS null_on_null_input, 		-- OBJMOD_NULLONNULL
+		sysconv(bit, o.status & 0x100000) AS uses_database_collation,	-- OBJMOD_ANSINULLS
+		sysconv(bit, o.status & 0x01000000) AS is_tracked_by_cdc,			-- OBJTAB_CDC_TRACKED
+		sysconv(bit, o.status & 0x02000000) AS large_value_types_out_of_row,	-- OBJTAB_LARGETYPE_OUTOFROW
+		sysconv(tinyint, (o.status & 0x30000000)/0x10000000) AS lock_escalation_option,
+		sysconv(bit, o.status & 0x04000000) AS is_poison_message_handling_enabled	-- OBJSQ_POISONMSGON
+	FROM sys.sysschobjs o
+	LEFT JOIN sys.syssingleobjrefs r ON r.depid = o.id AND r.class = 97 AND r.depsubid = 0	-- SRC_OBJOWNER
+	LEFT JOIN sys.syspalnames n ON n.class = 'OBTY' AND n.value = o.type
+	WHERE o.nsclass = 0 AND o.pclass = 1
+		AND has_access('CO', o.id) = 1
+
+2,1,57344,Parse Tree,View,CREATE VIEW sys.partitions AS
+	SELECT rs.rowsetid AS partition_id,
+		rs.idmajor AS object_id,
+		rs.idminor AS index_id,
+		rs.numpart AS partition_number,
+		rs.rowsetid AS hobt_id,
+		isnull(ct.rows, rs.rcrows) AS rows,
+		rs.fgidfs AS filestream_filegroup_id,
+		cmprlevel AS data_compression,
+		cl.name AS data_compression_desc
+	FROM sys.sysrowsets rs OUTER APPLY OpenRowset(TABLE ALUCOUNT, rs.rowsetid, 0) ct
+	LEFT JOIN sys.syspalvalues cl ON cl.class = 'CMPL' AND cl.value = cmprlevel
+
+2,1,24576,Parse Tree,View,CREATE VIEW sys.dm_os_buffer_descriptors AS
+	SELECT *
+	FROM OpenRowset(TABLE SYSBUFFERDESCRIPTORS)
+
+2,1,57344,Parse Tree,View,CREATE VIEW sys.allocation_units AS
+	SELECT au.auid AS allocation_unit_id,
+		au.type,
+		ip.name AS type_desc,
+		au.ownerid AS container_id,
+		convert(int, au.fgid) AS data_space_id,
+		isnull(ct.reserved_pages, au.pcreserved) AS total_pages,
+		isnull(ct.used_pages, au.pcused) AS used_pages,
+		isnull(ct.data_pages, au.pcdata) AS data_pages
+	FROM sys.sysallocunits au OUTER APPLY OpenRowset(TABLE ALUCOUNT, au.ownerid, au.type) ct
+	LEFT JOIN sys.syspalvalues ip ON ip.class = 'AUTY' AND ip.value = au.type
+
+8,1,294912,Parse Tree,View,CREATE VIEW sys.databases AS
+	SELECT d.name, d.id AS database_id,
+		r.indepid AS source_database_id,
+		d.sid AS owner_sid,
+		d.crdate AS create_date,
+		d.cmptlevel AS compatibility_level,
+		convert(sysname, CollationPropertyFromID(p.cid, 'name')) AS collation_name,
+		p.user_access, ua.name AS user_access_desc,
+		sysconv(bit, d.status & 0x400) AS is_read_only,			-- DBR_RDONLY
+		sysconv(bit, d.status & 1) AS is_auto_close_on,			-- DBR_CLOSE_ON_EXIT
+		sysconv(bit, d.status & 0x400000) AS is_auto_shrink_on,		-- DBR_AUTOSHRINK
+		p.state, st.name AS state_desc,
+		sysconv(bit, d.status & 0x200000) AS is_in_standby,		-- DBR_STANDBY
+		sysconv(bit, d.status & 0x40000000) AS is_cleanly_shutdown,	-- DBR_CLEANLY_SHUTDOWN
+		sysconv(bit, d.status & 0x80000000) AS is_supplemental_logging_enabled,	-- DBR_SUPPLEMENT_LOG
+		p.snapshot_isolation_state, si.name AS snapshot_isolation_state_desc,
+		sysconv(bit, d.status & 0x800000) AS is_read_committed_snapshot_on,		-- DBR_READCOMMITTED_SNAPSHOT
+		p.recovery_model, ro.name AS recovery_model_desc,
+		p.page_verify_option, pv.name AS page_verify_option_desc,
+		sysconv(bit, d.status2 & 0x1000000) AS is_auto_create_stats_on,			-- DBR_AUTOCRTSTATS
+		sysconv(bit, d.status2 & 0x40000000) AS is_auto_update_stats_on,		-- DBR_AUTOUPDSTATS
+		sysconv(bit, d.status2 & 0x80000000) AS is_auto_update_stats_async_on,	-- DBR_AUTOUPDSTATSASYNC
+		sysconv(bit, d.status2 & 0x4000) AS is_ansi_null_default_on,			-- DBR_ANSINULLDFLT
+		sysconv(bit, d.status2 & 0x4000000) AS is_ansi_nulls_on,				-- DBR_ANSINULLS
+		sysconv(bit, d.status2 & 0x2000) AS is_ansi_padding_on,					-- DBR_ANSIPADDING
+		sysconv(bit, d.status2 & 0x10000000) AS is_ansi_warnings_on,			-- DBR_ANSIWARNINGS
+		sysconv(bit, d.status2 & 0x1000) AS is_arithabort_on,					-- DBR_ARITHABORT
+		sysconv(bit, d.status2 & 0x10000) AS is_concat_null_yields_null_on,		-- DBR_CATNULL
+		sysconv(bit, d.status2 & 0x800) AS is_numeric_roundabort_on,			-- DBR_NUMEABORT
+		sysconv(bit, d.status2 & 0x800000) AS is_quoted_identifier_on,			-- DBR_QUOTEDIDENT
+		sysconv(bit, d.status2 & 0x20000) AS is_recursive_triggers_on,			-- DBR_RECURTRIG
+		sysconv(bit, d.status2 & 0x2000000) AS is_cursor_close_on_commit_on,	-- DBR_CURSCLOSEONCOM
+		sysconv(bit, d.status2 & 0x100000) AS is_local_cursor_default,			-- DBR_DEFLOCALCURS
+		sysconv(bit, d.status2 & 0x20000000) AS is_fulltext_enabled,			-- DBR_FTENABLED
+		sysconv(bit, d.status2 & 0x200) AS is_trustworthy_on,				-- DBR_TRUSTWORTHY
+		sysconv(bit, d.status2 & 0x400) AS is_db_chaining_on,				-- DBR_DBCHAINING
+		sysconv(bit, d.status2 & 0x08000000) AS is_parameterization_forced,	-- DBR_UNIVERSALAUTOPARAM
+		sysconv(bit, d.status2 & 64) AS is_master_key_encrypted_by_server,	-- DBR_MASTKEY
+		sysconv(bit, d.category & 1) AS is_published,
+		sysconv(bit, d.category & 2) AS is_subscribed,
+		sysconv(bit, d.category & 4) AS is_merge_published,
+		sysconv(bit, d.category & 16) AS is_distributor,
+		sysconv(bit, d.category & 32) AS is_sync_with_backup,
+		d.svcbrkrguid AS service_broker_guid,
+		sysconv(bit, case when d.scope = 0 then 1 else 0 end) AS is_broker_enabled,
+		p.log_reuse_wait, lr.name AS log_reuse_wait_desc,
+		sysconv(bit, d.status2 & 4) AS is_date_correlation_on, 		-- DBR_DATECORRELATIONOPT
+		sysconv(bit, d.category & 64) AS is_cdc_enabled,
+		sysconv(bit, d.status2 & 0x100) AS is_encrypted,						-- DBR_ENCRYPTION
+		sysconv(bit, d.status2 & 0x8) AS is_honor_broker_priority_on				-- DBR_HONORBRKPRI
+	FROM master.sys.sysdbreg d OUTER APPLY OpenRowset(TABLE DBPROP, d.id) p
+	LEFT JOIN sys.syssingleobjrefs r ON r.depid = d.id AND r.class = 96 AND r.depsubid = 0	-- SRC_VIEWPOINTDB
+	LEFT JOIN sys.syspalvalues st ON st.class = 'DBST' AND st.value = p.state
+	LEFT JOIN sys.syspalvalues ua ON ua.class = 'DBUA' AND ua.value = p.user_access
+	LEFT JOIN sys.syspalvalues si ON si.class = 'DBSI' AND si.value = p.snapshot_isolation_state
+	LEFT JOIN sys.syspalvalues ro ON ro.class = 'DBRO' AND ro.value = p.recovery_model
+	LEFT JOIN sys.syspalvalues pv ON pv.class = 'DBPV' AND pv.value = p.page_verify_option
+	LEFT JOIN sys.syspalvalues lr ON lr.class = 'LRWT' AND lr.value = p.log_reuse_wait
+	WHERE d.id < 0x7fff
+		AND has_access('DB', d.id) = 1
+
+2,1,57344,Parse Tree,View,CREATE VIEW sys.partitions AS
+	SELECT rs.rowsetid AS partition_id,
+		rs.idmajor AS object_id,
+		rs.idminor AS index_id,
+		rs.numpart AS partition_number,
+		rs.rowsetid AS hobt_id,
+		isnull(ct.rows, rs.rcrows) AS rows,
+		rs.fgidfs AS filestream_filegroup_id,
+		cmprlevel AS data_compression,
+		cl.name AS data_compression_desc
+	FROM sys.sysrowsets rs OUTER APPLY OpenRowset(TABLE ALUCOUNT, rs.rowsetid, 0) ct
+	LEFT JOIN sys.syspalvalues cl ON cl.class = 'CMPL' AND cl.value = cmprlevel
+
+2,1,24576,Parse Tree,View,CREATE VIEW sys.dm_os_buffer_descriptors AS
+	SELECT *
+	FROM OpenRowset(TABLE SYSBUFFERDESCRIPTORS)
+
+2,1,57344,Parse Tree,View,CREATE VIEW sys.allocation_units AS
+	SELECT au.auid AS allocation_unit_id,
+		au.type,
+		ip.name AS type_desc,
+		au.ownerid AS container_id,
+		convert(int, au.fgid) AS data_space_id,
+		isnull(ct.reserved_pages, au.pcreserved) AS total_pages,
+		isnull(ct.used_pages, au.pcused) AS used_pages,
+		isnull(ct.data_pages, au.pcdata) AS data_pages
+	FROM sys.sysallocunits au OUTER APPLY OpenRowset(TABLE ALUCOUNT, au.ownerid, au.type) ct
+	LEFT JOIN sys.syspalvalues ip ON ip.class = 'AUTY' AND ip.value = au.type
+
+2,1,49152,Parse Tree,View,CREATE VIEW sys.foreign_key_columns AS
+	SELECT constraint_object_id = p.depid,
+		constraint_column_id = p.depsubid,
+		parent_object_id = p.indepid,
+		parent_column_id = p.indepsubid,
+		referenced_object_id = r.indepid,
+		referenced_column_id = r.indepsubid
+	FROM sys.syssingleobjrefs p
+	JOIN sys.syssingleobjrefs r ON r.depid = p.depid AND r.class = 29 AND r.depsubid = p.depsubid	-- SRC_FK_REFERD_COL
+	WHERE p.class = 28 	-- SRC_FK_PARENT_COL
+		AND has_access('CO', p.indepid) = 1
+
+4,1,57344,Parse Tree,View,CREATE VIEW sys.objects AS
+	SELECT name, object_id, principal_id, schema_id, parent_object_id,
+		type, type_desc, create_date, modify_date,
+		is_ms_shipped, is_published, is_schema_published
+	FROM sys.objects$
+
+2,1,106496,Parse Tree,View,CREATE VIEW sys.computed_columns AS
+	SELECT object_id = id,
+		name = name,
+		column_id = colid,
+		system_type_id = xtype,
+		user_type_id = utype,
+		max_length = length,
+		precision = prec,
+		scale = scale,
+		collation_name = convert(sysname,CollationPropertyFromId(collationid,'name')),
+		is_nullable = sysconv(bit, 1 - (status & 1)), 		-- CPM_NOTNULL
+		is_ansi_padded = sysconv(bit, status & 2), 		-- CPM_NOTRIM
+		is_rowguidcol = sysconv(bit, status & 8), 		-- CPM_ROWGUIDCOL
+		is_identity = sysconv(bit, status & 4), 		-- CPM_IDENTCOL
+		is_filestream = sysconv(bit, status & 32), 		-- CPM_FILESTREAM
+		is_replicated = sysconv(bit, status & 0x20000), 	-- CPM_REPLICAT
+		is_non_sql_subscribed = sysconv(bit, status & 0x40000),	-- CPM_NONSQSSUB
+		is_merge_published = sysconv(bit, status & 0x80000), 	-- CPM_MERGEREPL
+		is_dts_replicated = sysconv(bit, status & 0x100000), 	-- CPM_REPLDTS
+		is_xml_document = sysconv(bit, status & 2048),		-- CPM_XML_DOC 		
+		xml_collection_id = xmlns,
+		default_object_id = dflt,
+		rule_object_id = chk,
+		definition = object_definition(id, colid),
+		uses_database_collation = sysconv(bit, status & 128),		-- CPM_USESDBCOLL
+		is_persisted = sysconv(bit, status & 64),			-- CPM_PERSISTEDCC	
+		is_computed = sysconv(bit, status & 16),			-- CPM_COMPUTED	
+		sysconv(bit, 0) as is_sparse,
+		sysconv(bit, 0) as is_column_set
+	FROM sys.syscolpars
+	WHERE number = 0
+		AND (status & 16) = 16			-- CPM_COMPUTED
+		AND has_access('CO', id) = 1
+
+2,1,114688,Parse Tree,View,CREATE VIEW sys.identity_columns AS
+	SELECT object_id = id,
+		name = name,
+		column_id = colid,
+		system_type_id = xtype,
+		user_type_id = utype,
+		max_length = length,
+		precision = prec,
+		scale = scale,
+		collation_name = convert(sysname,CollationPropertyFromId(collationid,'name')),
+		is_nullable = sysconv(bit, 1 - (status & 1)), 	-- CPM_NOTNULL
+		is_ansi_padded = sysconv(bit, status & 2), 	-- CPM_NOTRIM
+		is_rowguidcol = sysconv(bit, status & 8), 	-- CPM_ROWGUIDCOL
+		is_identity = sysconv(bit, status & 4), 		-- CPM_IDENTCOL
+		is_filestream = sysconv(bit, status & 32), 	-- CPM_FILESTREAM
+		is_replicated = sysconv(bit, status & 0x20000), 	-- CPM_REPLICAT
+		is_non_sql_subscribed = sysconv(bit, status & 0x40000), 	-- CPM_NONSQSSUB
+		is_merge_published = sysconv(bit, status & 0x80000), 		-- CPM_MERGEREPL
+		is_dts_replicated = sysconv(bit, status & 0x100000), 		-- CPM_REPLDTS
+		is_xml_document = sysconv(bit, 0),
+		xml_collection_id = sysconv(int, 0),
+		default_object_id = sysconv(int, 0),
+		rule_object_id = sysconv(int, 0),
+		seed_value = IdentityProperty(id, 'SeedValue'),
+		increment_value = IdentityProperty(id, 'IncrementValue'),
+		last_value = IdentityProperty(id, 'LastValue'),
+		is_not_for_replication = sysconv(bit, status & 0x10000),	-- CPM_ID_REPL
+		is_computed = sysconv(bit, status & 16),			-- CPM_COMPUTED				
+		sysconv(bit, 0) as is_sparse,
+		sysconv(bit, 0) as is_column_set
+	FROM sys.syscolpars
+	WHERE number = 0	-- SOC_COLUMN
+		AND (status & 4) = 4 	-- CPM_IDENTCOL
+		AND has_access('CO', id) = 1
+
+8,1,40960,Parse Tree,View,CREATE VIEW sys.schemas AS
+	SELECT s.name, schema_id = s.id,
+		principal_id = r.indepid
+	FROM sys.sysclsobjs s
+	LEFT JOIN sys.syssingleobjrefs r ON r.depid = s.id AND r.class = 50 AND r.depsubid = 0 -- SRC_SCHEMAOWNER
+	WHERE s.class = 50	-- SOC_SCHEMA
+
+4,1,57344,Parse Tree,View,CREATE VIEW sys.xml_schema_collections AS
+	SELECT xml_collection_id = s.id,
+		schema_id = s.nsid,
+		principal_id = r.indepid,
+		name = s.name,
+		create_date = s.created,
+		modify_date = s.modified
+	FROM sys.sysnsobjs s
+	LEFT JOIN sys.syssingleobjrefs r ON r.depid = s.id AND r.class = 59 AND r.depsubid = 0	-- SRC_XSDCOLTOOWNER
+	WHERE s.class = 27	-- SOC_XSDCOLLECTION
+		AND (s.nsid = 4 OR has_access('XC', 0, s.id) = 1)
+
+8,1,90112,Parse Tree,View,CREATE VIEW sys.types AS
+	SELECT name,
+		t.xtype AS system_type_id,
+		t.id AS user_type_id,
+		t.schid AS schema_id,
+		o.indepid AS principal_id,
+		t.length AS max_length,
+		t.prec AS precision,
+		t.scale AS scale,
+		convert(sysname, collationpropertyfromid(t.collationid, 'name')) AS collation_name,
+		sysconv(bit, 1 - (t.status & 1)) AS is_nullable,	-- TYPE_NOTNULL
+		sysconv(bit, case when t.id > 256 then 1 else 0 end) AS is_user_defined,	-- x_utypSSNAME
+		sysconv(bit, case when t.xtype = 240 then 1 else 0 end) AS is_assembly_type,	-- XVT_UDT
+		t.dflt AS default_object_id,
+		t.chk AS rule_object_id,
+		sysconv(bit, case when t.xtype = 243 then 1 else 0 end) AS is_table_type	-- XVT_TABLETYPE
+	FROM sys.sysscalartypes t
+	LEFT JOIN sys.syssingleobjrefs o ON o.depid = t.id AND o.class = 44 AND o.depsubid = 0	-- SRC_TYPETOOWNER
+	WHERE t.id <= 256 OR has_access('UT', t.id) = 1
+
+4,1,40960,Parse Tree,View,CREATE VIEW sys.index_columns AS
+	SELECT idmajor AS object_id,
+		idminor AS index_id,
+		subid AS index_column_id,
+		intprop AS column_id,
+	  	tinyprop1 AS key_ordinal,
+	  	tinyprop2 AS partition_ordinal,
+	  	convert (bit, status & 0x4) AS is_descending_key,	-- ISC_IC_DESC_KEY
+		convert (bit, status & 0x10) AS is_included_column	-- ISC_IC_INCLUDED
+	FROM sys.sysiscols
+	WHERE (status & 2) <> 0
+		AND has_access('CO', idmajor) = 1	-- ISC_IND_COL
+
+4,1,106496,Parse Tree,View,CREATE VIEW sys.indexes AS
+	SELECT i.id AS object_id,
+		i.name AS name,
+		i.indid AS index_id,
+		i.type,
+		n.name AS type_desc,
+		sysconv(bit, i.status & 0x8) AS is_unique,			-- IS_IND_UNIQUE
+		i.dataspace AS data_space_id,
+		sysconv(bit, i.status & 0x4) AS ignore_dup_key,		-- IS_IND_DPKEYS
+		sysconv(bit, i.status & 0x20) AS is_primary_key,	-- IS_IND_PRIMARY
+		sysconv(bit, i.status & 0x40) AS is_unique_constraint,	-- IS_IND_UNIQUE_CO
+		i.fillfact AS fill_factor,
+		sysconv(bit, i.status & 0x10) AS is_padded,		-- IS_IND_PADINDEX
+		sysconv(bit, i.status & 0x80) AS is_disabled,		-- IS_IND_OFFLINE
+		sysconv(bit, i.status & 0x100) AS is_hypothetical,	-- IS_IND_ITWINDEX
+		sysconv(bit, 1 - (i.status & 512)/512) AS allow_row_locks,		-- IS_IND_NO_ROWLOCK
+		sysconv(bit, 1 - (i.status & 1024)/1024) AS allow_page_locks,		-- IS_IND_NO_PAGELOCK
+		sysconv(bit, i.status & 0x20000) AS has_filter,	-- IS_HAS_FILTER
+		case when (i.status & 0x20000) != 0 then object_definition(i.id, i.indid, 7) else NULL end AS filter_definition -- x_euncIndex
+	FROM sys.sysidxstats i
+	LEFT JOIN sys.syspalvalues n ON n.class = 'IDXT' and n.value = i.type
+	WHERE (i.status & 1) <> 0
+		AND has_access('CO', i.id) = 1	-- IS_INDEX
+
+4,1,98304,Parse Tree,View,CREATE VIEW sys.all_columns AS
+ SELECT * FROM sys.columns
+3,1,90112,Parse Tree,View,CREATE VIEW sys.system_columns AS
+	SELECT id AS object_id,
+		name collate database_default AS name,
+		colid AS column_id,
+		xtype AS system_type_id,
+		utype AS user_type_id,
+		length AS max_length,
+		prec AS precision, scale,
+		convert(sysname, case cid
+			when -2 then ServerProperty('Collation')
+			else CollationPropertyFromId(cid, 'name') end) AS collation_name,
+		sysconv(bit, 1 - (status & 1)) AS is_nullable,
+		sysconv(bit, status & 2) AS is_ansi_padded,
+		sysconv(bit, 0) AS is_rowguidcol,
+		sysconv(bit, 0) AS is_identity,
+		sysconv(bit, 0) AS is_computed,
+		sysconv(bit, 0) AS is_filestream,
+		sysconv(bit, 0) AS is_replicated,
+		sysconv(bit, 0) AS is_non_sql_subscribed,
+		sysconv(bit, 0) AS is_merge_published,
+		sysconv(bit, 0) AS is_dts_replicated,
+		sysconv(bit, 0) AS is_xml_document,
+		sysconv(int, 0) AS xml_collection_id,
+		sysconv(int, 0) AS default_object_id,
+		sysconv(int, 0) AS rule_object_id,
+		sysconv(bit, 0) AS is_sparse,
+		sysconv(bit, 0) AS is_column_set
+	FROM sys.syscolrdb
+	WHERE number = 0
+
+3,1,98304,Parse Tree,View,CREATE VIEW sys.columns AS
+	SELECT id AS object_id,
+		name, colid AS column_id,
+		xtype AS system_type_id,
+		utype AS user_type_id,
+		length AS max_length,
+		prec AS precision, scale,
+		convert(sysname, CollationPropertyFromId(collationid, 'name')) AS collation_name,
+		sysconv(bit, 1 - (status & 1)) AS is_nullable,		-- CPM_NOTNULL
+		sysconv(bit, status & 2) AS is_ansi_padded,		-- CPM_NOTRIM
+		sysconv(bit, status & 8) AS is_rowguidcol,			-- CPM_ROWGUIDCOL
+		sysconv(bit, status & 4) AS is_identity,			-- CPM_IDENTCOL
+		sysconv(bit, status & 16) AS is_computed,			-- CPM_COMPUTED
+		sysconv(bit, status & 32) AS is_filestream,			-- CPM_FILESTREAM
+		sysconv(bit, status & 0x020000) AS is_replicated,			-- CPM_REPLICAT
+		sysconv(bit, status & 0x040000) AS is_non_sql_subscribed,	-- CPM_NONSQSSUB
+		sysconv(bit, status & 0x080000) AS is_merge_published,	-- CPM_MERGEREPL
+		sysconv(bit, status & 0x100000) AS is_dts_replicated,	-- CPM_REPLDTS
+		sysconv(bit, status & 2048) AS is_xml_document,		-- CPM_XML_DOC 
+		xmlns AS xml_collection_id,
+		dflt AS default_object_id,
+		chk AS rule_object_id,
+		sysconv(bit, status & 0x1000000) AS is_sparse,	-- CPM_SPARSE
+		sysconv(bit, status & 0x2000000) AS is_column_set	-- CPM_SPARSECOLUMNSET
+	FROM sys.syscolpars
+	WHERE number = 0 AND has_access('CO', id) = 1
+
+4,1,81920,Parse Tree,View,CREATE VIEW sys.all_views AS
+ SELECT * FROM sys.views
+3,1,57344,Parse Tree,View,CREATE VIEW sys.system_views AS
+	SELECT name, object_id, principal_id, schema_id, parent_object_id,
+		type, type_desc, create_date, modify_date,
+		is_ms_shipped, is_published, is_schema_published,
+		sysconv(bit, 0) AS is_replicated,
+		sysconv(bit, 0) AS has_replication_filter,
+		sysconv(bit, 0) AS has_opaque_metadata,
+		sysconv(bit, 0) AS has_unchecked_assembly_data,
+		sysconv(bit, 0) AS with_check_option,
+		sysconv(bit, 0) as is_date_correlation_view,
+		sysconv(bit, 0) as is_tracked_by_cdc
+	FROM sys.system_objects
+	WHERE type = 'V'
+
+3,1,57344,Parse Tree,View,CREATE VIEW sys.system_objects AS
+	SELECT o.name, o.object_id, o.principal_id, o.schema_id, o.parent_object_id,
+		o.type, n.name AS type_desc, o.create_date, o.modify_date,
+		o.is_ms_shipped, o.is_published, o.is_schema_published
+	FROM sys.system_objects$ o
+	LEFT JOIN sys.syspalnames n ON n.class = 'OBTY' AND n.value = o.type
+
+3,1,368640,Parse Tree,View,CREATE VIEW sys.system_objects$ AS
+ SELECT name00f008 collate database_default AS name,
+  id AS object_id,
+  convert(int, null) AS principal_id,
+  schid AS schema_id,
+  sysconv(int, 0) AS parent_object_id,
+  type,
+  crdate AS create_date,
+  crdate AS modify_date,
+  sysconv(bit, 1) AS is_ms_shipped,
+  sysconv(bit, 0) AS is_published,
+  sysconv(bit, 0) AS is_schema_published
+ FROM sys.sysobjrdb
+3,1,65536,Parse Tree,View,CREATE VIEW sys.views AS
+	SELECT name, object_id, principal_id, schema_id, parent_object_id,
+		type, type_desc,
+		create_date, modify_date,
+		is_ms_shipped, is_published, is_schema_published,
+		is_replicated, has_replication_filter, has_opaque_metadata,
+		has_unchecked_assembly_data, with_check_option,
+		is_auto_dropped as is_date_correlation_view,
+		is_tracked_by_cdc
+	FROM sys.objects$
+	WHERE type = 'V'
+
+6,1,196608,Parse Tree,View,CREATE VIEW sys.objects$ AS
+	SELECT
+		o.name,
+		o.id AS object_id,
+		r.indepid AS principal_id,
+		o.nsid AS schema_id,
+		o.pid AS parent_object_id,
+		o.type AS type,
+		n.name AS type_desc,
+		o.intprop AS property,
+		o.created AS create_date,
+		o.modified AS modify_date,
+		sysconv(bit, o.status & 1) AS is_ms_shipped,				-- OBJALL_MSSHIPPED
+		sysconv(bit, o.status & 2) AS is_auto_dropped,				-- OBJALL_AUTODROP
+		sysconv(bit, o.status & 4) AS is_system_named,			-- OBJALL_SYSNAMED
+		sysconv(bit, o.status & 16) AS is_published,				-- OBJALL_RPL_PUBLISHED
+		sysconv(bit, o.status & 64) AS is_schema_published,			-- OBJALL_RPL_PUB_SCHONLY
+		sysconv(bit, o.status & 256) AS lock_on_bulk_load,			-- OBJTAB_BCPTABLOCK
+		sysconv(bit, o.status & 256) AS is_disabled,				-- OBJCST_DISABLED
+		sysconv(bit, o.status & 256) AS is_auto_executed,			-- OBJPRC_STARTUP
+		sysconv(bit, o.status & 256) AS is_activation_enabled,		-- OBJSQ_ACTIVATIONON
+		sysconv(bit, o.status & 512) AS has_opaque_metadata,		-- OBJVW_OPAQUEBMM
+		sysconv(bit, o.status & 512) AS is_not_for_replication,		-- OBJCST_NOTFORREPL
+		sysconv(bit, o.status & 512) AS is_receive_enabled,			-- OBJSQ_RECEIVEON
+		sysconv(bit, o.status & 1024) AS is_not_trusted,			-- OBJCST_NOTRUST
+		sysconv(bit, o.status & 1024) AS is_enqueue_enabled,		-- OBJSQ_ENQUEUEON
+		sysconv(bit, o.status & 1024) AS with_check_option,		-- OBJVW_WITHCHECK
+		sysconv(bit, o.status & 2048) AS is_retention_enabled,		-- OBJSQ_RETENTIONON
+		sysconv(bit, o.status & 2048) AS has_unchecked_assembly_data,	-- OBJTAB_HAS_UNCHKED_ASM_DATA
+		convert(tinyint, (o.status/4096) & 3) AS update_referential_action,		-- ERefAct/OBJREF_UPDACTMASK
+		convert(tinyint, (o.status/16384) & 3) AS delete_referential_action,	-- ERefAct/OBJREF_DELACTMASK
+		sysconv(bit, o.status & 0x1000) AS is_replicated,			-- OBJTAB_REPLICATE
+		sysconv(bit, o.status & 0x1000) AS is_execution_replicated,	-- OBJPRC_PROC_EXEC
+		sysconv(bit, o.status & 0x2000) AS has_replication_filter,		-- OBJTAB_HAS_FILT_PROC
+		sysconv(bit, o.status & 0x2000) AS is_repl_serializable_only,	-- OBJPRC_PROC_SER_ONLY
+		sysconv(bit, o.status & 0x4000) AS is_merge_published,			-- OBJTAB_MERGE_PUBL
+		sysconv(bit, o.status & 0x4000) AS skips_repl_constraints,		-- OBJPRC_NO_REPL_CNST
+		sysconv(bit, o.status & 0x8000) AS is_sync_tran_subscribed,		-- OBJTAB_SYNCTRAN_SUB
+		sysconv(bit, o.status & 0x40000) AS uses_ansi_nulls,			-- OBJMOD_ANSINULLS
+		sysconv(bit, o.status & 0x200000) AS null_on_null_input, 		-- OBJMOD_NULLONNULL
+		sysconv(bit, o.status & 0x100000) AS uses_database_collation,	-- OBJMOD_ANSINULLS
+		sysconv(bit, o.status & 0x01000000) AS is_tracked_by_cdc,			-- OBJTAB_CDC_TRACKED
+		sysconv(bit, o.status & 0x02000000) AS large_value_types_out_of_row,	-- OBJTAB_LARGETYPE_OUTOFROW
+		sysconv(tinyint, (o.status & 0x30000000)/0x10000000) AS lock_escalation_option,
+		sysconv(bit, o.status & 0x04000000) AS is_poison_message_handling_enabled	-- OBJSQ_POISONMSGON
+	FROM sys.sysschobjs o
+	LEFT JOIN sys.syssingleobjrefs r ON r.depid = o.id AND r.class = 97 AND r.depsubid = 0	-- SRC_OBJOWNER
+	LEFT JOIN sys.syspalnames n ON n.class = 'OBTY' AND n.value = o.type
+	WHERE o.nsclass = 0 AND o.pclass = 1
+		AND has_access('CO', o.id) = 1
+
+2,1,16384,Parse Tree,View,create function sys.fn_helpcollations
+	(
+	)
+
+returns table
+as
+	return select * from OpenRowset(collations)
+
+4,1,294912,Parse Tree,View,CREATE VIEW sys.databases AS
+	SELECT d.name, d.id AS database_id,
+		r.indepid AS source_database_id,
+		d.sid AS owner_sid,
+		d.crdate AS create_date,
+		d.cmptlevel AS compatibility_level,
+		convert(sysname, CollationPropertyFromID(p.cid, 'name')) AS collation_name,
+		p.user_access, ua.name AS user_access_desc,
+		sysconv(bit, d.status & 0x400) AS is_read_only,			-- DBR_RDONLY
+		sysconv(bit, d.status & 1) AS is_auto_close_on,			-- DBR_CLOSE_ON_EXIT
+		sysconv(bit, d.status & 0x400000) AS is_auto_shrink_on,		-- DBR_AUTOSHRINK
+		p.state, st.name AS state_desc,
+		sysconv(bit, d.status & 0x200000) AS is_in_standby,		-- DBR_STANDBY
+		sysconv(bit, d.status & 0x40000000) AS is_cleanly_shutdown,	-- DBR_CLEANLY_SHUTDOWN
+		sysconv(bit, d.status & 0x80000000) AS is_supplemental_logging_enabled,	-- DBR_SUPPLEMENT_LOG
+		p.snapshot_isolation_state, si.name AS snapshot_isolation_state_desc,
+		sysconv(bit, d.status & 0x800000) AS is_read_committed_snapshot_on,		-- DBR_READCOMMITTED_SNAPSHOT
+		p.recovery_model, ro.name AS recovery_model_desc,
+		p.page_verify_option, pv.name AS page_verify_option_desc,
+		sysconv(bit, d.status2 & 0x1000000) AS is_auto_create_stats_on,			-- DBR_AUTOCRTSTATS
+		sysconv(bit, d.status2 & 0x40000000) AS is_auto_update_stats_on,		-- DBR_AUTOUPDSTATS
+		sysconv(bit, d.status2 & 0x80000000) AS is_auto_update_stats_async_on,	-- DBR_AUTOUPDSTATSASYNC
+		sysconv(bit, d.status2 & 0x4000) AS is_ansi_null_default_on,			-- DBR_ANSINULLDFLT
+		sysconv(bit, d.status2 & 0x4000000) AS is_ansi_nulls_on,				-- DBR_ANSINULLS
+		sysconv(bit, d.status2 & 0x2000) AS is_ansi_padding_on,					-- DBR_ANSIPADDING
+		sysconv(bit, d.status2 & 0x10000000) AS is_ansi_warnings_on,			-- DBR_ANSIWARNINGS
+		sysconv(bit, d.status2 & 0x1000) AS is_arithabort_on,					-- DBR_ARITHABORT
+		sysconv(bit, d.status2 & 0x10000) AS is_concat_null_yields_null_on,		-- DBR_CATNULL
+		sysconv(bit, d.status2 & 0x800) AS is_numeric_roundabort_on,			-- DBR_NUMEABORT
+		sysconv(bit, d.status2 & 0x800000) AS is_quoted_identifier_on,			-- DBR_QUOTEDIDENT
+		sysconv(bit, d.status2 & 0x20000) AS is_recursive_triggers_on,			-- DBR_RECURTRIG
+		sysconv(bit, d.status2 & 0x2000000) AS is_cursor_close_on_commit_on,	-- DBR_CURSCLOSEONCOM
+		sysconv(bit, d.status2 & 0x100000) AS is_local_cursor_default,			-- DBR_DEFLOCALCURS
+		sysconv(bit, d.status2 & 0x20000000) AS is_fulltext_enabled,			-- DBR_FTENABLED
+		sysconv(bit, d.status2 & 0x200) AS is_trustworthy_on,				-- DBR_TRUSTWORTHY
+		sysconv(bit, d.status2 & 0x400) AS is_db_chaining_on,				-- DBR_DBCHAINING
+		sysconv(bit, d.status2 & 0x08000000) AS is_parameterization_forced,	-- DBR_UNIVERSALAUTOPARAM
+		sysconv(bit, d.status2 & 64) AS is_master_key_encrypted_by_server,	-- DBR_MASTKEY
+		sysconv(bit, d.category & 1) AS is_published,
+		sysconv(bit, d.category & 2) AS is_subscribed,
+		sysconv(bit, d.category & 4) AS is_merge_published,
+		sysconv(bit, d.category & 16) AS is_distributor,
+		sysconv(bit, d.category & 32) AS is_sync_with_backup,
+		d.svcbrkrguid AS service_broker_guid,
+		sysconv(bit, case when d.scope = 0 then 1 else 0 end) AS is_broker_enabled,
+		p.log_reuse_wait, lr.name AS log_reuse_wait_desc,
+		sysconv(bit, d.status2 & 4) AS is_date_correlation_on, 		-- DBR_DATECORRELATIONOPT
+		sysconv(bit, d.category & 64) AS is_cdc_enabled,
+		sysconv(bit, d.status2 & 0x100) AS is_encrypted,						-- DBR_ENCRYPTION
+		sysconv(bit, d.status2 & 0x8) AS is_honor_broker_priority_on				-- DBR_HONORBRKPRI
+	FROM master.sys.sysdbreg d OUTER APPLY OpenRowset(TABLE DBPROP, d.id) p
+	LEFT JOIN sys.syssingleobjrefs r ON r.depid = d.id AND r.class = 96 AND r.depsubid = 0	-- SRC_VIEWPOINTDB
+	LEFT JOIN sys.syspalvalues st ON st.class = 'DBST' AND st.value = p.state
+	LEFT JOIN sys.syspalvalues ua ON ua.class = 'DBUA' AND ua.value = p.user_access
+	LEFT JOIN sys.syspalvalues si ON si.class = 'DBSI' AND si.value = p.snapshot_isolation_state
+	LEFT JOIN sys.syspalvalues ro ON ro.class = 'DBRO' AND ro.value = p.recovery_model
+	LEFT JOIN sys.syspalvalues pv ON pv.class = 'DBPV' AND pv.value = p.page_verify_option
+	LEFT JOIN sys.syspalvalues lr ON lr.class = 'LRWT' AND lr.value = p.log_reuse_wait
+	WHERE d.id < 0x7fff
+		AND has_access('DB', d.id) = 1
+
+2,1,32768,Parse Tree,View,CREATE VIEW sys.dm_os_memory_clerks AS
+	SELECT *
+	FROM OpenRowSet(TABLE SYSMEMCLERKS)
+
+402,1,368640,Parse Tree,View,
+CREATE VIEW [dbo].[APF_View_TerminalPrinterStatus]
+AS
+SELECT     
+   /* TerminalInfo*/ 
+    ROW_NUMBER() OVER (ORDER BY TI.TerminalID) AS TerminalNumber,
+    TI.TerminalID AS TerminalID, 
+    TI.TerminalName AS TerminalName,
+    TI.TerminalIP AS TerminalIP, 
+    TI.TerminalDesc AS TerminalDesc, 
+    TI.TerminalType as TerminalType,
+    TI.EnabledFlag AS TerminalEnabledFlag,     
+    TI.CheckFilmPrinterState,
+	TI.CheckReportPrinterState,
+	TI.CheckTerminalState, 
+    ISNULL(dbo.AFP_F_GetTerminalOnlineStatus(TI.TerminalID), 1) AS TerminalStatus, 
+    TerminalStatusLevel = 
+        CASE WHEN dbo.AFP_F_GetTerminalOnlineStatus(TI.TerminalID) = 1 
+        THEN 'Error' 
+        ELSE 'Normal' 
+        END, 
+    TerminalErrorCode = 
+		CASE WHEN LEN(ISNULL(TS.ErrorCode, '')) > 0 THEN TS.ErrorCode
+		WHEN TI.EnabledFlag = 0 THEN '80005017'
+		WHEN dbo.AFP_F_GetTerminalOnlineStatus(TI.TerminalID) = 1 THEN '80005018'
+		END,
+    TS.StatusTime AS TerminalStatusTime
+    /*FilmPrinterInfo*/ , 
+    TI.FilmPrinterID AS FilmPrinterID, 
+    PR.PrinterName AS FilmPrinterName,
+    PR.PrinterType AS FilmPrinterType,
+    FS.MediaType1 AS FilmPrinterMediaType1, 
+    FS.MediaSize1 AS FilmPrinterMediaSize1, 
+    FS.FilmCount1 AS FilmPrinterFilmCount1, 
+    FilmPrinterMediaStatusLevel1 = 
+        CASE WHEN FS.FilmCount1 > 10 
+        THEN 'Normal' 
+        ELSE 'Warning' 
+        END, FS.MediaType2 AS FilmPrinterMediaType2, 
+    FS.MediaSize2 AS FilmPrinterMediaSize2,
+    FS.FilmCount2 AS FilmPrinterFilmCount2, 
+    FilmPrinterMediaStatusLevel2 = 
+        CASE WHEN FS.FilmCount2 > 10 
+        THEN 'Normal' 
+        ELSE 'Warning' 
+        END, 
+    FS.MediaType3 AS FilmPrinterMediaType3, 
+    FS.MediaSize3 AS FilmPrinterMediaSize3, 
+    FS.FilmCount3 AS FilmPrinterFilmCount3, 
+    FilmPrinterMediaStatusLevel3 = 
+        CASE WHEN FS.FilmCount3 > 10
+        THEN 'Normal' 
+        ELSE 'Warning' 
+        END, 
+    ISNULL(dbo.AFP_F_GetFilmPrinterStatusByID(TI.TerminalID, TI.FilmPrinterID), 6) AS FilmPrinterStatus, 
+    FilmPrinterStatusLevel = 
+        CASE WHEN ISNULL(dbo.AFP_F_GetFilmPrinterStatusByID(TI.TerminalID,TI.FilmPrinterID), 6) IN (0, 3, 4, 5) 
+        THEN 'Warning' 
+        WHEN ISNULL(dbo.AFP_F_GetFilmPrinterStatusByID(TI.TerminalID,TI.FilmPrinterID), 6) IN (1, 2, 6, 7)  
+        THEN 'Error' 
+        ELSE 'Normal' 
+        END, 
+    FS.TotalFilmCount1 AS FilmPrinterTotalFilmCount1,
+    FS.TotalFilmCount2 AS FilmPrinterTotalFilmCount2,
+    FS.TotalFilmCount3 AS FilmPrinterTotalFilmCount3,
+    FS.PrintState AS FilmPrinterPrintState,
+    FilmPrinterErrorCode = 
+		CASE 
+			WHEN LEN(ISNULL(FS.ErrorCode, '')) = 0 AND 
+				ISNULL(dbo.AFP_F_GetFilmPrinterStatusByID(TI.TerminalID,TI.FilmPrinterID), 6) = 6 
+			THEN '80803006'
+			ELSE FS.ErrorCode
+		END,
+    FS.ErrorDesc AS FilmPrinterErrorDesc, 
+    FS.StatusTime AS FilmPrinterStatusTime,
+    FS.RefreshTime AS FilmPrinterRefreshTime, 
+    /*ReportPrinterInfo*/
+    RS.PrinterName AS ReportPrinterDisplayName,
+    ReportPrinterFullName =
+   		CASE 
+            WHEN TI.ReportPrinterFullName = RS.PrinterID 
+            THEN Ti.ReportPrinterFullName
+		    ELSE ''
+		END, 
+    RS.PrinterID AS ReportPrinterID,
+    ISNULL(dbo.AFP_F_GetReportPrinterStatusByID(TI.TerminalID, RS.PrinterID), 2) AS ReportPrinterStatus, 
+    ReportPrinterStatusText = 
+        CASE WHEN ISNULL(dbo.AFP_F_GetReportPrinterStatusByID(TI.TerminalID, RS.PrinterID), 2) = 0 
+        THEN 'Normal' 
+        WHEN ISNULL(dbo.AFP_F_GetReportPrinterStatusByID(TI.TerminalID, RS.PrinterID), 2) = 1 
+        THEN 'Warning' 
+        ELSE 'Error' 
+        END,
+    RawStatus = 
+    	CASE 
+			WHEN RS.RawStatus <> 0 THEN RS.RawStatus 
+			WHEN ISNULL(dbo.AFP_F_GetReportPrinterStatusByID(TI.TerminalID, RS.PrinterID), 2) = 2 THEN 128
+			ELSE 0
+		END,
+    RS.StatusDesc,
+    RS.Ink,
+    ReportPrinterErrorCode = 
+		CASE WHEN LEN(ISNULL(RS.ErrorCode, '')) = 0 AND
+				ISNULL(dbo.AFP_F_GetReportPrinterStatusByID(TI.TerminalID, RS.PrinterID), 2) = 2
+			THEN '80804008'
+			ELSE RS.ErrorCode
+		END,
+    RS.ErrorDesc AS ReportPrinterErrorDesc,
+    RS.RefreshTime AS ReportPrinterRefreshTime,
+    RS.PrinterName AS ReportPrinterName,
+    RS.PrinterType AS ReportPrinterType,
+    RS.PrinterModel,
+    RS.PaperSize1,
+    RS.PaperType1,
+    RS.PaperSize2,
+    RS.PaperType2,
+    RS.DrawerStatus1,
+    RS.DrawerStatus2,
+    RS.BlackInkLevel,
+    RS.CyanInkLevel,
+    RS.MagentaInkLevel,
+    RS.YellowInkLevel,
+	RS.MarkerLifeCount,
+	RS.FullRawStatus
+FROM
+    AFP_PrintTerminalInfo TI WITH(NOLOCK) LEFT OUTER JOIN
+    AFP_TerminalStatus TS WITH(NOLOCK) ON TI.TerminalID = TS .TerminalID LEFT OUTER JOIN
+    AFP_FilmPrinterStatus FS WITH(NOLOCK) ON TI.FilmPrinterID = FS.PrinterID LEFT OUTER JOIN
+    AFP_ReportPrinterStatus RS WITH(NOLOCK) ON TI.TerminalID = RS.TerminalID LEFT OUTER JOIN
+    PrinterReg PR WITH(NOLOCK) ON TI.FilmPrinterID = PR.PrinterDBID
+
+
+4,1,57344,Parse Tree,View,CREATE VIEW sys.configurations AS
+	SELECT p.id AS configuration_id,
+		p.name,
+		v.value,
+		convert(sql_variant, p.minval) AS minimum,
+		convert(sql_variant, p.maxval) AS maximum,
+		convert(sql_variant, p.value) AS value_in_use,
+		p.description,
+		sysconv(bit, p.status & 1) AS is_dynamic,	-- x_eco_Dynamic
+		sysconv(bit, p.status & 2) AS is_advanced	-- x_eco_Advanced
+	FROM OpenRowset(TABLE CFGPROP) p
+	LEFT JOIN master.sys.sysobjvalues v ON v.valclass = 50 AND v.objid = p.id AND v.subobjid = 0 AND v.valnum = 0	-- SVC_CONFIG
+
+2,1,40960,Parse Tree,View,CREATE VIEW sys.dm_exec_connections AS
+	SELECT *
+	FROM OpenRowset(TABLE SYSCONNECTIONS)
+
+2,1,106496,Parse Tree,View,CREATE VIEW sys.endpoints AS
+	SELECT
+		e.name, e.id AS endpoint_id,
+		o.indepid AS principal_id,
+		e.protocol, p.name AS protocol_desc,
+		e.type, t.name AS type_desc,
+		state = convert(tinyint, bstat & 3),	-- BSTAT_STATEMASK
+		s.name AS state_desc,
+		sysconv(bit, case when e.affinity = -1 then 1 else 0 end) AS is_admin_endpoint
+	FROM master.sys.sysendpts e
+	LEFT JOIN sys.syssingleobjrefs o ON o.depid = e.id AND o.class = 60 AND o.depsubid = 0	-- SRC_ENDPTLOGINOWNER
+	LEFT JOIN sys.syspalvalues p ON p.class = 'EPPR' AND p.value = e.protocol
+	LEFT JOIN sys.syspalvalues t ON t.class = 'EPTY' AND t.value = e.type
+	LEFT JOIN sys.syspalvalues s ON s.class = 'EPST' AND s.value = e.bstat & 3
+	WHERE has_access('HE', e.id) = 1
+
+25547,13,540672,Compiled Plan,Proc,-- =============================================
+-- Author:		Song Yang
+-- Create date: 2017/03/20
+-- Description:	Add more selected columns
+-- =============================================
+CREATE PROCEDURE [dbo].[AFP_SP_GetPrintTask]  
+	@TerminalId nvarchar(20)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	
+    -- Insert statements for procedure here
+    
+	SELECT CONVERT(nvarchar(20),sn) as SN, PatientID,AFP_PrintTerminalInfo.FilmPrinterID,PrinterReg.PrinterName,
+		AFP_PrintTerminalInfo.ReportPrinterFullName, EnableReportPrint,AFP_PrintTerminalInfo.TerminalID, ErrorCode,
+        CheckFilmPrinterState, CheckReportPrinterState
+	FROM AFP_PrintTask  WITH(NOLOCK)
+	INNER JOIN AFP_PrintTerminalInfo ON
+		AFP_PrintTask.TerminalID= AFP_PrintTerminalInfo.TerminalID 
+	LEFT JOIN PrinterReg ON 
+		AFP_PrintTerminalInfo.FilmPrinterID=PrinterReg.PrinterDBID 
+	WHERE AFP_PrintTask.TerminalID=@TerminalId AND AFP_PrintTask.Status =0	
+	--UPDATE AFP_PrintTask SET [Status]=0 WHERE SN=@sn 
+END
+
+935,9,417792,Compiled Plan,Proc,-- =============================================
+-- Author:		Song Yang
+-- Create date: 2017/02/17
+-- Description:	Update film printer status
+-- =============================================
+CREATE PROCEDURE [dbo].[AFP_SP_UpdateFilmPrinterStatus]
+	-- Add the parameters for the stored procedure here
+	@PrinterId int , 
+	@MediaType1 int ,
+	@MediaSize1 int ,
+	@FilmCount1 int ,
+	@MediaType2 int ,
+	@MediaSize2 int ,
+	@FilmCount2 int ,
+	@MediaType3 int ,
+	@MediaSize3 int ,
+	@FilmCount3 int ,
+	@Status int,
+	@PrintStatus int = 0,
+	@Capacity1 int = 125,
+	@Capacity2 int = 125,
+	@Capacity3 int = 125,
+	@TerminalID nvarchar(256)='',
+	@ErrorCode nvarchar(20)='' 
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	IF NOT EXISTS(SELECT PrinterID FROM AFP_FilmPrinterStatus WHERE PrinterID=@PrinterID)
+	BEGIN
+		INSERT INTO AFP_FilmPrinterStatus(PrinterID, MediaType1, MediaSize1, FilmCount1, 
+		MediaType2, MediaSize2, FilmCount2, MediaType3, MediaSize3, FilmCount3, [Status], PrintState, ErrorCode, 
+        ErrorDesc, StatusTime, RefreshTime) VALUES (@PrinterId,@MediaType1,@MediaSize1,@FilmCount1,
+        @MediaType2,@MediaSize2,@FilmCount2,@MediaType3,@MediaSize3,@FilmCount3,@Status , @PrintStatus, @ErrorCode,'' ,GETDATE(),GETDATE())
+	END
+	ELSE 
+	BEGIN
+		UPDATE AFP_FilmPrinterStatus SET
+		MediaType1=@MediaType1, 
+		MediaSize1=@MediaSize1, 
+		FilmCount1=@FilmCount1,
+		
+		MediaType2=@MediaType2, 
+		MediaSize2=@MediaSize2, 
+		FilmCount2=@FilmCount2,
+		
+		MediaType3=@MediaType3, 
+		MediaSize3=@MediaSize3, 
+		FilmCount3=@FilmCount3,
+		
+		[ErrorCode]=@ErrorCode,
+		[Status] = @Status,
+        PrintState = @PrintStatus,
+		StatusTime = case WHEN [Status] = @Status THEN StatusTime ELSE GETDATE() END,
+		RefreshTime = GETDATE()
+		WHERE PrinterID =@PrinterId
+	END
+END
+
+77,2,49152,Compiled Plan,Proc,-- =============================================
+-- Author:		William Xu
+-- Create date: 20140613
+-- Description:	Get the int value from parameter table
+-- =============================================
+CREATE FUNCTION [dbo].[AFP_F_GetParameterInt]
+(
+	@ParameterKey nvarchar(64)
+)
+RETURNS int
+AS
+BEGIN
+
+	DECLARE @val int = 0 
+	SELECT @val = AFP_Parameters.ParameterValue FROM AFP_Parameters WHERE AFP_Parameters.ParameterKey=@ParameterKey 
+	RETURN  @val
+
+END
+
+436,8,647168,Compiled Plan,Proc,-- =============================================
+-- Author:		Song Yang
+-- Create date: 2017/02/17
+-- Description:	Update report printer status 
+-- =============================================
+CREATE PROCEDURE [dbo].[AFP_SP_UpdateReportPrinterStatus]
+	-- Add the parameters for the stored procedure here
+	@TerminalID nvarchar(256), 
+	@PrinterID nvarchar(256),
+	@PrinterName nvarchar(256),
+	@PrinterModel nvarchar(256),
+	@PrinterType int,
+	@PrinterStatus int,
+	@CyanLevel int,
+	@MagentaLevel int,
+	@YellowLevel int,
+	@BlackLevel int,
+	@Tray1Status int,
+	@Tray1PaperSize int,
+	@Tray1PaperType int,
+	@Tray2Status int,
+	@Tray2PaperSize int,
+	@Tray2PaperType int,
+	@ErrorCode nvarchar(20),
+	@MarkerLifeCount int = 0,
+	@FullPrinterStatus int = 0
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+    DECLARE @Status int
+    SELECT @Status = [Status] FROM AFP_ReportPrinterStatusMap WHERE PrinterStatusCode = @PrinterStatus
+	IF EXISTS (SELECT * FROM AFP_ReportPrinterStatus WHERE TerminalID = @TerminalID AND PrinterID = @PrinterID)
+	BEGIN
+		UPDATE AFP_ReportPrinterStatus 
+		SET PrinterName=@PrinterName,
+			PrinterModel = @PrinterModel,
+            PrinterType = @PrinterType,
+			[Status] = @Status,
+            RawStatus=@PrinterStatus,
+			FullRawStatus=@FullPrinterStatus,
+			DrawerStatus1 = @Tray1Status,
+			PaperSize1 = @Tray1PaperSize,
+			PaperType1 = @Tray1PaperType,
+			DrawerStatus2 = @Tray2Status,
+			PaperSize2 = @Tray2PaperSize,
+			PaperType2 = @Tray2PaperType,
+			CyanInkLevel = @CyanLevel,
+			MagentaInkLevel = @MagentaLevel,
+			YellowInkLevel = @YellowLevel,
+			BlackInkLevel = @BlackLevel,
+			MarkerLifeCount = @MarkerLifeCount,
+			ErrorCode = @ErrorCode,
+			RefreshTime = GETDATE()
+		WHERE TerminalID = @TerminalID AND PrinterID = @PrinterID
+	END
+	ELSE
+	BEGIN
+		INSERT INTO AFP_ReportPrinterStatus ([TerminalID],[PrinterID],[Status],[RawStatus],[FullRawStatus],[Ink],[PrinterName],[PrinterType],[PrinterModel],[PaperType1],[PaperSize1],[DrawerStatus1],
+				[PaperType2],[PaperSize2],[DrawerStatus2],[CyanInkLevel],[MagentaInkLevel],[YellowInkLevel],[BlackInkLevel],[MarkerLifeCount],[ErrorCode],[StatusTime],[RefreshTime])
+		VALUES
+			(@TerminalID,@PrinterID,@Status,@PrinterStatus,@FullPrinterStatus,@BlackLevel,@PrinterName,@PrinterType,@PrinterModel,@Tray1PaperType,@Tray1PaperSize,@Tray1Status,
+			@Tray2PaperType,@Tray2PaperSize,@Tray2Status,@CyanLevel,@MagentaLevel,@YellowLevel,@BlackLevel,@MarkerLifeCount,@ErrorCode, GETDATE(), GETDATE())
+	END
+    DELETE FROM AFP_ReportPrinterStatus WHERE DATEDIFF(second, RefreshTime, GETDATE()) > dbo.AFP_F_GetTerminalStatusTimeout() AND TerminalID=@TerminalID
+END
+
+121,2,90112,Compiled Plan,Proc,-- =============================================
+-- Author:		Song Yang
+-- Create date: 2017/03/20
+-- Description:	Add more selected columns
+-- =============================================
+CREATE PROCEDURE [dbo].[AFP_SP_GetActiveTaskOfTerminal]  
+	@TerminalId nvarchar(20)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	
+    -- Insert statements for procedure here
+    
+	SELECT CONVERT(nvarchar(20),sn) as SN, PatientID,AFP_PrintTerminalInfo.FilmPrinterID,PrinterReg.PrinterName,
+		AFP_PrintTerminalInfo.ReportPrinterFullName, EnableReportPrint,AFP_PrintTerminalInfo.TerminalID, ErrorCode,
+        CheckFilmPrinterState, CheckReportPrinterState
+	FROM AFP_PrintTask  WITH(NOLOCK)
+	INNER JOIN AFP_PrintTerminalInfo ON
+		AFP_PrintTask.TerminalID= AFP_PrintTerminalInfo.TerminalID 
+	LEFT JOIN PrinterReg ON 
+		AFP_PrintTerminalInfo.FilmPrinterID=PrinterReg.PrinterDBID 
+	WHERE AFP_PrintTask.TerminalID=@TerminalId AND AFP_PrintTask.Status IN (0, 1, 5)
+END
+
+7357,5,163840,Compiled Plan,Proc,
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date, ,>
+-- Description:	<Description, ,>
+-- =============================================
+CREATE FUNCTION [dbo].[AFP_F_GetReportPrinterStatusByID]
+(
+	-- Add the parameters for the function here
+	@TerminalId nvarchar(20),
+	@PrinterID nvarchar(256)
+)
+RETURNS int
+AS
+BEGIN
+	-- Declare the return variable here
+	DECLARE @val int
+	
+	-- Add the T-SQL statements to compute the return value here
+	SELECT @val=(CASE 
+		WHEN AFP_PrintTerminalInfo.CheckReportPrinterState = 0 THEN 0
+		WHEN DateDiff(second,dbo.AFP_ReportPrinterStatus.RefreshTime, GetDate()) < dbo.AFP_F_GetTerminalStatusTimeout() THEN [Status] 
+		ELSE 2 
+		END) 
+	FROM AFP_PrintTerminalInfo 
+	LEFT JOIN AFP_ReportPrinterStatus ON AFP_ReportPrinterStatus.TerminalID=AFP_PrintTerminalInfo.TerminalID AND PrinterID=@PrinterID
+	WHERE AFP_PrintTerminalInfo.TerminalID=@TerminalId 
+
+	-- Return the result of the function
+	RETURN @val
+
+END
+
+
+7357,5,196608,Compiled Plan,Proc,
+
+-- =============================================
+-- Author:		Song Yang
+-- Create date: 2017/08/11
+-- Description:	Calculate film printer status
+-- =============================================
+CREATE FUNCTION [dbo].[AFP_F_GetFilmPrinterStatusByID] 
+(
+	-- Add the parameters for the function here
+	@TerminalID nvarchar(20),
+	@PrinterId int
+)
+RETURNS INT
+AS
+BEGIN
+	-- Declare the return variable here
+	DECLARE @val int
+
+	-- Add the T-SQL statements to compute the return value here
+	SELECT @val=(CASE 
+		WHEN dbo.AFP_PrintTerminalInfo.CheckFilmPrinterState = 0 THEN 8
+		WHEN DateDiff(second,dbo.AFP_FilmPrinterStatus.RefreshTime, GetDate()) < dbo.AFP_F_GetTerminalStatusTimeout() THEN [Status] 
+		ELSE 6 END)
+    FROM dbo.AFP_PrintTerminalInfo 
+	LEFT JOIN AFP_FilmPrinterStatus ON FilmPrinterID = PrinterID AND PrinterID=@PrinterId
+	WHERE AFP_PrintTerminalInfo.TerminalID = @TerminalID
+
+	-- Return the result of the function
+	RETURN @val
+
+END
+
+
+131610,5,122880,Compiled Plan,Proc,-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date, ,>
+-- Description:	<Description, ,>
+-- =============================================
+CREATE FUNCTION [dbo].[AFP_F_GetTerminalStatusTimeout] 
+(
+	-- Add the parameters for the function here
+)
+RETURNS int
+AS
+BEGIN
+	-- Declare the return variable here
+	DECLARE @val int
+	SELECT @val=30
+	-- Add the T-SQL statements to compute the return value here
+	SELECT @val = AFP_Parameters.ParameterValue FROM AFP_Parameters WHERE AFP_Parameters.ParameterKey='TerminalStatusTimeout'
+
+	-- Return the result of the function
+	RETURN @val
+
+END
+
+7357,5,163840,Compiled Plan,Proc,
+-- =============================================
+-- Author:		Song Yang
+-- Create date: 2017/07/04
+-- Description:	Check terminal status
+-- =============================================
+CREATE FUNCTION [dbo].[AFP_F_GetTerminalOnlineStatus] 
+(
+	-- Add the parameters for the function here
+	@TerminalId nvarchar(20)
+)
+RETURNS int
+AS
+BEGIN
+	-- Declare the return variable here
+	DECLARE @val int
+
+	-- Add the T-SQL statements to compute the return value here
+	SELECT @val=(CASE 
+		WHEN dbo.AFP_PrintTerminalInfo.CheckTerminalState = 0 THEN 0
+		WHEN dbo.AFP_PrintTerminalInfo.EnabledFlag = 0 THEN 1 
+		WHEN DateDiff(second, dbo.AFP_TerminalStatus.StatusTime, GetDate()) < dbo.AFP_F_GetTerminalStatusTimeout() THEN IsNull(dbo.AFP_TerminalStatus.Status,1) 
+		ELSE 1 END) 
+	FROM dbo.AFP_PrintTerminalInfo 
+	LEFT OUTER JOIN dbo.AFP_TerminalStatus ON dbo.AFP_PrintTerminalInfo.TerminalID = dbo.AFP_TerminalStatus.TerminalID 
+    WHERE dbo.AFP_PrintTerminalInfo.TerminalID = @TerminalId
+
+	-- Return the result of the function
+	RETURN @val
+
+END
+
+121,2,65536,Compiled Plan,Proc,-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[AFP_SP_SetTerminalStatus]
+	-- Add the parameters for the stored procedure here
+	@TerminalId nvarchar(20),
+	@Status int
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+	DECLARE @ct int
+    -- Insert statements for procedure here
+	UPDATE AFP_TerminalStatus SET Status=@Status,StatusTime=GETDATE() WHERE TerminalID=@TerminalId
+	SELECT @ct=@@ROWCOUNT
+	
+	if @ct=0 
+	BEGIN
+		INSERT INTO AFP_TerminalStatus(TerminalID,Status,StatusTime) VALUES(@TerminalId,@Status,GETDATE())
+	END
+	
+END
+
+78,2,49152,Compiled Plan,Proc,-- =============================================
+-- Author:		William Xu
+-- Create date: 20140613
+-- Description:	Get the int value from parameter table
+-- =============================================
+CREATE FUNCTION [dbo].[AFP_F_GetParameterInt]
+(
+	@ParameterKey nvarchar(64)
+)
+RETURNS int
+AS
+BEGIN
+
+	DECLARE @val int = 0 
+	SELECT @val = AFP_Parameters.ParameterValue FROM AFP_Parameters WHERE AFP_Parameters.ParameterKey=@ParameterKey 
+	RETURN  @val
+
+END
+
+78,2,57344,Compiled Plan,Proc,
+
+-- =============================================
+-- Author:		Song Ynag
+-- Create date: 2017/11/1
+-- Description:	Get the first outdated job
+-- =============================================
+CREATE PROCEDURE [dbo].[AFP_SP_GetFirstOutdatedJob]  
+AS
+BEGIN
+	DECLARE @Outdate INT
+	SET @Outdate = [WGGC].[dbo].AFP_F_GetParameterInt('Outdated_RawImage_Hours')
+	SELECT TOP 100 JobInstanceUID FROM dbo.DeliveryJob WHERE DATEDIFF(HOUR,DeliveryJob.CreateDateTime,GETDATE())> @Outdate  
+	AND (DeleteStatus = 0 AND JobStatus IN (2, 11))
+END
+
+
+393,2,73728,Compiled Plan,Proc,CREATE PROCEDURE [dbo].[AFP_SP_GetForwardJobs] 
+
+AS
+BEGIN
+
+	SET NOCOUNT ON;
+
+SELECT JobInstanceUID, ForwardStatus = CASE WHEN ForwardStatus IS NULL THEN -1 ELSE ForwardStatus END,
+ForwardFlag = CASE WHEN ForwardFlag IS NULL THEN -1 ELSE ForwardFlag END,ForwardDestination,ModalityType, CallingAE ,CallingIP,PatientName,PatientID,
+PatientType = CASE WHEN PatientType IS NULL THEN '' ELSE PatientType END
+FROM Printer.dbo.DeliveryJob J INNER JOIN printer.dbo.Session S
+ON J.SessionInstanceUID = S.SessionInstanceUID
+WHERE J.DeleteStatus = 0 AND (
+(ForwardStatus = -1 OR ForwardStatus IS NULL ) OR
+(ForwardStatus = 0 AND ForwardFlag = 1)
+)
+END
+
+421,2,180224,Compiled Plan,Proc,
+-- =============================================
+-- Author:		Song.Yang
+-- Create date: 2016/03/24
+-- Description:	Query one delivery job for processing and update it job staus to new status
+-- =============================================
+CREATE PROCEDURE [dbo].[AFP_SP_GetNextDeliveryJob]
+	-- Add the parameters for the stored procedure here
+	@OldStatus int, 
+	@NewStatus int
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON
+	DECLARE @JobInstanceUID varchar(64)
+
+	SET @JobInstanceUID = (SELECT TOP 1 JobInstanceUID FROM DeliveryJob WHERE JobStatus = @OldStatus ORDER BY CreateDateTime ASC)
+	UPDATE DeliveryJob SET JobStatus = @NewStatus WHERE JobInstanceUID=@JobInstanceUID
+	SELECT * FROM DeliveryJob WHERE JobInstanceUID=@JobInstanceUID
+
+END
+
+1,3,57344,Compiled Plan,Prepared,(@1 varchar(8000))SELECT [ParameterValue] FROM [WGGC].[dbo].[AFP_Parameters] WHERE [ParameterKey]=@1
+50,5,1835008,Compiled Plan,Prepared,(@_msparam_0 nvarchar(4000),@_msparam_1 nvarchar(4000),@_msparam_2 nvarchar(4000),@_msparam_3 nvarchar(4000))SELECT
+clmns.name AS [Name],
+clmns.column_id AS [ID],
+clmns.is_nullable AS [Nullable],
+clmns.is_computed AS [Computed],
+CAST(ISNULL(cik.index_column_id, 0) AS bit) AS [InPrimaryKey],
+clmns.is_ansi_padded AS [AnsiPaddingStatus],
+CAST(clmns.is_rowguidcol AS bit) AS [RowGuidCol],
+ISNULL(ic.is_not_for_replication, 0) AS [NotForReplication],
+CAST(COLUMNPROPERTY(clmns.object_id, clmns.name, N'IsFulltextIndexed') AS bit) AS [IsFullTextIndexed],
+CAST(ISNULL(COLUMNPROPERTY(clmns.object_id, clmns.name, N'IsDeterministic'),0) AS bit) AS [IsDeterministic],
+CAST(ISNULL(COLUMNPROPERTY(clmns.object_id, clmns.name, N'IsPrecise'),0) AS bit) AS [IsPrecise],
+CAST(ISNULL(cc.is_persisted, 0) AS bit) AS [IsPersisted],
+ISNULL(clmns.collation_name, N'') AS [Collation],
+CAST(ISNULL((select TOP 1 1 from sys.foreign_key_columns AS colfk where colfk.parent_column_id = clmns.column_id and colfk.parent_object_id = clmns.object_id), 0) AS bit) AS [IsForeignKey],
+clmns.is_identity AS [Identity],
+CAST(ISNULL(ic.seed_value,0) AS bigint) AS [IdentitySeed],
+CAST(ISNULL(ic.increment_value,0) AS bigint) AS [IdentityIncrement],
+(case when clmns.default_object_id = 0 then N'' when d.parent_object_id > 0 then N'' else d.name end) AS [Default],
+(case when clmns.default_object_id = 0 then N'' when d.parent_object_id > 0 then N'' else schema_name(d.schema_id) end) AS [DefaultSchema],
+(case when clmns.rule_object_id = 0 then N'' else r.name end) AS [Rule],
+(case when clmns.rule_object_id = 0 then N'' else schema_name(r.schema_id) end) AS [RuleSchema],
+CAST(clmns.is_filestream AS bit) AS [IsFileStream],
+CAST(clmns.is_sparse AS bit) AS [IsSparse],
+CAST(clmns.is_column_set AS bit) AS [IsColumnSet],
+usrt.name AS [DataType],
+sclmns.name AS [DataTypeSchema],
+ISNULL(baset.name, N'') AS [SystemType],
+CAST(CASE WHEN baset.name IN (N'nchar', N'nvarchar') AND clmns.max_length <> -1 THEN clmns.max_length/2 ELSE clmns.max_length END AS int) AS [Length],
+CAST(clmns.precision AS int) AS [NumericPrecision],
+CAST(clmns.scale AS int) AS [NumericScale],
+ISNULL(xscclmns.name, N'') AS [XmlSchemaNamespace],
+ISNULL(s2clmns.name, N'') AS [XmlSchemaNamespaceSchema],
+ISNULL( (case clmns.is_xml_document when 1 then 2 else 1 end), 0) AS [XmlDocumentConstraint],
+CASE WHEN usrt.is_table_type = 1 THEN N'structured' ELSE N'' END AS [UserType]
+FROM
+sys.all_views AS v
+INNER JOIN sys.all_columns AS clmns ON clmns.object_id=v.object_id
+LEFT OUTER JOIN sys.indexes AS ik ON ik.object_id = clmns.object_id and 1=ik.is_primary_key
+LEFT OUTER JOIN sys.index_columns AS cik ON cik.index_id = ik.index_id and cik.column_id = clmns.column_id and cik.object_id = clmns.object_id and 0 = cik.is_included_column
+LEFT OUTER JOIN sys.identity_columns AS ic ON ic.object_id = clmns.object_id and ic.column_id = clmns.column_id
+LEFT OUTER JOIN sys.computed_columns AS cc ON cc.object_id = clmns.object_id and cc.column_id = clmns.column_id
+LEFT OUTER JOIN sys.objects AS d ON d.object_id = clmns.default_object_id
+LEFT OUTER JOIN sys.objects AS r ON r.object_id = clmns.rule_object_id
+LEFT OUTER JOIN sys.types AS usrt ON usrt.user_type_id = clmns.user_type_id
+LEFT OUTER JOIN sys.schemas AS sclmns ON sclmns.schema_id = usrt.schema_id
+LEFT OUTER JOIN sys.types AS baset ON (baset.user_type_id = clmns.system_type_id and baset.user_type_id = baset.system_type_id) or ((baset.system_type_id = clmns.system_type_id) and (baset.user_type_id = clmns.user_type_id) and (baset.is_user_defined = 0) and (baset.is_assembly_type = 1)) 
+LEFT OUTER JOIN sys.xml_schema_collections AS xscclmns ON xscclmns.xml_collection_id = clmns.xml_collection_id
+LEFT OUTER JOIN sys.schemas AS s2clmns ON s2clmns.schema_id = xscclmns.schema_id
+WHERE
+(clmns.name=@_msparam_0)and((v.type = @_msparam_1)and(v.name=@_msparam_2 and SCHEMA_NAME(v.schema_id)=@_msparam_3))
+5,5,1073152,Compiled Plan,Prepared,(@_msparam_0 nvarchar(4000),@_msparam_1 nvarchar(4000),@_msparam_2 nvarchar(4000))SELECT
+clmns.column_id AS [ID],
+clmns.name AS [Name],
+clmns.is_nullable AS [Nullable],
+CAST(ISNULL(cik.index_column_id, 0) AS bit) AS [InPrimaryKey],
+clmns.is_identity AS [Identity],
+usrt.name AS [DataType],
+ISNULL(baset.name, N'') AS [SystemType],
+CAST(CASE WHEN baset.name IN (N'nchar', N'nvarchar') AND clmns.max_length <> -1 THEN clmns.max_length/2 ELSE clmns.max_length END AS int) AS [Length],
+CAST(clmns.precision AS int) AS [NumericPrecision],
+CAST(clmns.scale AS int) AS [NumericScale],
+ISNULL(xscclmns.name, N'') AS [XmlSchemaNamespace],
+ISNULL(s2clmns.name, N'') AS [XmlSchemaNamespaceSchema],
+ISNULL( (case clmns.is_xml_document when 1 then 2 else 1 end), 0) AS [XmlDocumentConstraint],
+sclmns.name AS [DataTypeSchema]
+FROM
+sys.all_views AS v
+INNER JOIN sys.all_columns AS clmns ON clmns.object_id=v.object_id
+LEFT OUTER JOIN sys.indexes AS ik ON ik.object_id = clmns.object_id and 1=ik.is_primary_key
+LEFT OUTER JOIN sys.index_columns AS cik ON cik.index_id = ik.index_id and cik.column_id = clmns.column_id and cik.object_id = clmns.object_id and 0 = cik.is_included_column
+LEFT OUTER JOIN sys.types AS usrt ON usrt.user_type_id = clmns.user_type_id
+LEFT OUTER JOIN sys.types AS baset ON (baset.user_type_id = clmns.system_type_id and baset.user_type_id = baset.system_type_id) or ((baset.system_type_id = clmns.system_type_id) and (baset.user_type_id = clmns.user_type_id) and (baset.is_user_defined = 0) and (baset.is_assembly_type = 1)) 
+LEFT OUTER JOIN sys.xml_schema_collections AS xscclmns ON xscclmns.xml_collection_id = clmns.xml_collection_id
+LEFT OUTER JOIN sys.schemas AS s2clmns ON s2clmns.schema_id = xscclmns.schema_id
+LEFT OUTER JOIN sys.schemas AS sclmns ON sclmns.schema_id = usrt.schema_id
+WHERE
+(v.type = @_msparam_0)and(v.name=@_msparam_1 and SCHEMA_NAME(v.schema_id)=@_msparam_2)
+ORDER BY
+[ID] ASC
+5,5,114688,Compiled Plan,Prepared,(@_msparam_0 nvarchar(4000))SELECT
+CAST(COLLATIONPROPERTY(name, 'LCID') AS int) AS [LocaleID]
+FROM
+sys.fn_helpcollations() cl
+WHERE
+(cl.name=@_msparam_0)
+5,5,196608,Compiled Plan,Prepared,(@_msparam_0 nvarchar(4000))SELECT
+dtb.collation_name AS [Collation],
+dtb.name AS [DatabaseName2]
+FROM
+master.sys.databases AS dtb
+WHERE
+(dtb.name=@_msparam_0)
+1,7,524288,Compiled Plan,Prepared,(@1 varchar(8000))SELECT * FROM [AFP_PrintTerminalInfo] WHERE [TerminalIP]=@1
+36,5,1810432,Compiled Plan,Prepared,(@_msparam_0 nvarchar(4000),@_msparam_1 nvarchar(4000),@_msparam_2 nvarchar(4000),@_msparam_3 nvarchar(4000))SELECT
+clmns.name AS [Name],
+clmns.column_id AS [ID],
+clmns.is_nullable AS [Nullable],
+clmns.is_computed AS [Computed],
+CAST(ISNULL(cik.index_column_id, 0) AS bit) AS [InPrimaryKey],
+clmns.is_ansi_padded AS [AnsiPaddingStatus],
+CAST(clmns.is_rowguidcol AS bit) AS [RowGuidCol],
+ISNULL(ic.is_not_for_replication, 0) AS [NotForReplication],
+CAST(COLUMNPROPERTY(clmns.object_id, clmns.name, N'IsFulltextIndexed') AS bit) AS [IsFullTextIndexed],
+CAST(ISNULL(COLUMNPROPERTY(clmns.object_id, clmns.name, N'IsDeterministic'),0) AS bit) AS [IsDeterministic],
+CAST(ISNULL(COLUMNPROPERTY(clmns.object_id, clmns.name, N'IsPrecise'),0) AS bit) AS [IsPrecise],
+CAST(ISNULL(cc.is_persisted, 0) AS bit) AS [IsPersisted],
+ISNULL(clmns.collation_name, N'') AS [Collation],
+CAST(ISNULL((select TOP 1 1 from sys.foreign_key_columns AS colfk where colfk.parent_column_id = clmns.column_id and colfk.parent_object_id = clmns.object_id), 0) AS bit) AS [IsForeignKey],
+clmns.is_identity AS [Identity],
+CAST(ISNULL(ic.seed_value,0) AS bigint) AS [IdentitySeed],
+CAST(ISNULL(ic.increment_value,0) AS bigint) AS [IdentityIncrement],
+(case when clmns.default_object_id = 0 then N'' when d.parent_object_id > 0 then N'' else d.name end) AS [Default],
+(case when clmns.default_object_id = 0 then N'' when d.parent_object_id > 0 then N'' else schema_name(d.schema_id) end) AS [DefaultSchema],
+(case when clmns.rule_object_id = 0 then N'' else r.name end) AS [Rule],
+(case when clmns.rule_object_id = 0 then N'' else schema_name(r.schema_id) end) AS [RuleSchema],
+CAST(clmns.is_filestream AS bit) AS [IsFileStream],
+CAST(clmns.is_sparse AS bit) AS [IsSparse],
+CAST(clmns.is_column_set AS bit) AS [IsColumnSet],
+usrt.name AS [DataType],
+sclmns.name AS [DataTypeSchema],
+ISNULL(baset.name, N'') AS [SystemType],
+CAST(CASE WHEN baset.name IN (N'nchar', N'nvarchar') AND clmns.max_length <> -1 THEN clmns.max_length/2 ELSE clmns.max_length END AS int) AS [Length],
+CAST(clmns.precision AS int) AS [NumericPrecision],
+CAST(clmns.scale AS int) AS [NumericScale],
+ISNULL(xscclmns.name, N'') AS [XmlSchemaNamespace],
+ISNULL(s2clmns.name, N'') AS [XmlSchemaNamespaceSchema],
+ISNULL( (case clmns.is_xml_document when 1 then 2 else 1 end), 0) AS [XmlDocumentConstraint],
+CASE WHEN usrt.is_table_type = 1 THEN N'structured' ELSE N'' END AS [UserType]
+FROM
+sys.all_views AS v
+INNER JOIN sys.all_columns AS clmns ON clmns.object_id=v.object_id
+LEFT OUTER JOIN sys.indexes AS ik ON ik.object_id = clmns.object_id and 1=ik.is_primary_key
+LEFT OUTER JOIN sys.index_columns AS cik ON cik.index_id = ik.index_id and cik.column_id = clmns.column_id and cik.object_id = clmns.object_id and 0 = cik.is_included_column
+LEFT OUTER JOIN sys.identity_columns AS ic ON ic.object_id = clmns.object_id and ic.column_id = clmns.column_id
+LEFT OUTER JOIN sys.computed_columns AS cc ON cc.object_id = clmns.object_id and cc.column_id = clmns.column_id
+LEFT OUTER JOIN sys.objects AS d ON d.object_id = clmns.default_object_id
+LEFT OUTER JOIN sys.objects AS r ON r.object_id = clmns.rule_object_id
+LEFT OUTER JOIN sys.types AS usrt ON usrt.user_type_id = clmns.user_type_id
+LEFT OUTER JOIN sys.schemas AS sclmns ON sclmns.schema_id = usrt.schema_id
+LEFT OUTER JOIN sys.types AS baset ON (baset.user_type_id = clmns.system_type_id and baset.user_type_id = baset.system_type_id) or ((baset.system_type_id = clmns.system_type_id) and (baset.user_type_id = clmns.user_type_id) and (baset.is_user_defined = 0) and (baset.is_assembly_type = 1)) 
+LEFT OUTER JOIN sys.xml_schema_collections AS xscclmns ON xscclmns.xml_collection_id = clmns.xml_collection_id
+LEFT OUTER JOIN sys.schemas AS s2clmns ON s2clmns.schema_id = xscclmns.schema_id
+WHERE
+(clmns.name=@_msparam_0)and((v.type = @_msparam_1)and(v.name=@_msparam_2 and SCHEMA_NAME(v.schema_id)=@_msparam_3))
+4,4,843776,Compiled Plan,Prepared,(@_msparam_0 nvarchar(4000),@_msparam_1 nvarchar(4000),@_msparam_2 nvarchar(4000))SELECT
+clmns.column_id AS [ID],
+clmns.name AS [Name],
+clmns.is_nullable AS [Nullable],
+CAST(ISNULL(cik.index_column_id, 0) AS bit) AS [InPrimaryKey],
+clmns.is_identity AS [Identity],
+usrt.name AS [DataType],
+ISNULL(baset.name, N'') AS [SystemType],
+CAST(CASE WHEN baset.name IN (N'nchar', N'nvarchar') AND clmns.max_length <> -1 THEN clmns.max_length/2 ELSE clmns.max_length END AS int) AS [Length],
+CAST(clmns.precision AS int) AS [NumericPrecision],
+CAST(clmns.scale AS int) AS [NumericScale],
+ISNULL(xscclmns.name, N'') AS [XmlSchemaNamespace],
+ISNULL(s2clmns.name, N'') AS [XmlSchemaNamespaceSchema],
+ISNULL( (case clmns.is_xml_document when 1 then 2 else 1 end), 0) AS [XmlDocumentConstraint],
+sclmns.name AS [DataTypeSchema]
+FROM
+sys.all_views AS v
+INNER JOIN sys.all_columns AS clmns ON clmns.object_id=v.object_id
+LEFT OUTER JOIN sys.indexes AS ik ON ik.object_id = clmns.object_id and 1=ik.is_primary_key
+LEFT OUTER JOIN sys.index_columns AS cik ON cik.index_id = ik.index_id and cik.column_id = clmns.column_id and cik.object_id = clmns.object_id and 0 = cik.is_included_column
+LEFT OUTER JOIN sys.types AS usrt ON usrt.user_type_id = clmns.user_type_id
+LEFT OUTER JOIN sys.types AS baset ON (baset.user_type_id = clmns.system_type_id and baset.user_type_id = baset.system_type_id) or ((baset.system_type_id = clmns.system_type_id) and (baset.user_type_id = clmns.user_type_id) and (baset.is_user_defined = 0) and (baset.is_assembly_type = 1)) 
+LEFT OUTER JOIN sys.xml_schema_collections AS xscclmns ON xscclmns.xml_collection_id = clmns.xml_collection_id
+LEFT OUTER JOIN sys.schemas AS s2clmns ON s2clmns.schema_id = xscclmns.schema_id
+LEFT OUTER JOIN sys.schemas AS sclmns ON sclmns.schema_id = usrt.schema_id
+WHERE
+(v.type = @_msparam_0)and(v.name=@_msparam_1 and SCHEMA_NAME(v.schema_id)=@_msparam_2)
+ORDER BY
+[ID] ASC
+3,2,106496,Compiled Plan,Adhoc,select p.object_id, object_name=object_name(p.object_id), p.index_id, buffer_pages=count(*) 
+from sys.allocation_units a, 
+    sys.dm_os_buffer_descriptors b, 
+    sys.partitions p 
+where a.allocation_unit_id=b.allocation_unit_id 
+    and a.container_id=p.hobt_id 
+    and b.database_id=db_id()
+group by p.object_id,p.index_id 
+order by buffer_pages desc 
+
+3,3,24576,Compiled Plan,Adhoc,SET SHOWPLAN_XML OFF
+3,3,24576,Compiled Plan,Adhoc,SET SHOWPLAN_ALL OFF
+3,3,24576,Compiled Plan,Adhoc,SET SHOWPLAN_TEXT OFF
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000001A 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:44:43')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+3,3,81920,Compiled Plan,Adhoc,SELECT dtb.name AS [Name], dtb.state AS [State] FROM master.sys.databases dtb
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000019 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:44:39')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000018 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:44:35')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000017 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:44:30')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+2,2,90112,Compiled Plan,Adhoc,select p.object_id, object_name=object_name(p.object_id), p.index_id, buffer_pages=count(*) 
+from sys.allocation_units a, 
+    sys.dm_os_buffer_descriptors b, 
+    sys.partitions p 
+where a.allocation_unit_id=b.allocation_unit_id 
+    and a.container_id=p.hobt_id 
+    and b.database_id=db_id()
+group by p.object_id,p.index_id 
+order by buffer_pages desc 
+
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000016 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:44:26')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000015 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:44:22')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000014 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:44:18')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000013 
+1,2,139264,Compiled Plan,Adhoc,select Status,CreatedDateTime,HostJobID,HostName from PrintJob where AppServerName = 'LOCALAPP' and (( Status = 5 or Status =3 or Status =4 or Status =2 or Status=7) and CreatedDateTime <= '2018-01-21 06:47:15') or (Status = 6) order by CreatedDateTime 
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000012 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:44:14')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000011 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:44:10')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000010 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:44:05')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000000F 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:44:01')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000000E 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:43:57')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000000D 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:43:53')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000000C 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:43:49')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000000B 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:43:44')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000000A 
+1,2,139264,Compiled Plan,Adhoc,select Status,CreatedDateTime,HostJobID,HostName from PrintJob where AppServerName = 'LOCALAPP' and (( Status = 5 or Status =3 or Status =4 or Status =2 or Status=7) and CreatedDateTime <= '2018-01-21 06:46:42') or (Status = 6) order by CreatedDateTime 
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000009 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:43:40')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000008 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:43:36')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000007 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:43:32')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000006 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:43:28')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000005 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:43:23')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000004 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:43:19')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000003 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:43:15')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal9' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal9' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal9'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal8' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal8' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal8'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal7' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal7' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal7'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal6' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal6' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal6'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal50' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal50' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal50'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal5' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal5' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal5'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal49' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal49' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal49'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal48' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal48' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal48'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal47' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal47' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal47'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal46' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal46' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal46'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal45' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal45' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal45'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal44' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal44' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal44'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal43' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal43' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal43'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal42' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal42' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal42'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal41' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal41' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal41'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal40' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal40' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal40'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal4' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal4' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal4'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal39' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal39' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal39'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal38' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal38' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal38'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal37' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal37' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal37'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal36' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal36' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal36'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal35' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal35' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal35'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal34' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal34' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal34'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal33' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal33' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal33'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal32' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal32' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal32'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal31' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal31' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal31'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal30' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal30' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal30'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal3' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal3' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal3'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal29' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal29' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal29'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal28' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal28' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal28'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal27' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal27' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal27'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal26' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal26' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal26'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal25' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal25' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal25'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal24' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal24' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal24'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal23' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal23' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal23'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal22' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal22' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal22'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal21' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal21' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal21'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal20' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal20' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal20'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal2' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal2' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal2'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal19' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal19' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal19'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal18' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal18' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal18'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal17' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal17' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal17'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal16' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal16' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal16'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal15' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal15' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal15'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal14' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal14' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal14'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal13' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal13' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal13'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal12' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal12' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal12'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal11' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal11' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal11'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal10' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal10' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal10'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal1' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal1' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal1'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WHERE TerminalID='Terminal_62' AND FilmPrinterID='2'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal_62'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='T10' AND ReportPrinterID='Default'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WHERE TerminalID='T10' AND FilmPrinterID='9'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='T10'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='T09' AND ReportPrinterID='Default'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WHERE TerminalID='T09' AND FilmPrinterID='10'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='T09'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='T08' AND ReportPrinterID='Default'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WHERE TerminalID='T08' AND FilmPrinterID='8'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='T08'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='T07' AND ReportPrinterID='Default'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WHERE TerminalID='T07' AND FilmPrinterID='7'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='T07'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='T06' AND ReportPrinterID='Default'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WHERE TerminalID='T06' AND FilmPrinterID='6'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='T06'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='T05' AND ReportPrinterID='Default'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WHERE TerminalID='T05' AND FilmPrinterID='5'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='T05'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='T04' AND ReportPrinterID='Default'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WHERE TerminalID='T04' AND FilmPrinterID='4'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='T04'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='T03' AND ReportPrinterID='Default'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WHERE TerminalID='T03' AND FilmPrinterID='3'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='T03'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='T02' AND ReportPrinterID='Default'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WHERE TerminalID='T02' AND FilmPrinterID='2'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='T02'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='T01' AND ReportPrinterID='Default'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WHERE TerminalID='T01' AND FilmPrinterID='1'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='T01'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='PUMA136' AND ReportPrinterID='Upper'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='PUMA136' AND ReportPrinterID='Lower'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WHERE TerminalID='K2_8' AND FilmPrinterID='4'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='K2_8'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WHERE TerminalID='K2_7' AND FilmPrinterID='8'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='K2_7'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WHERE TerminalID='K2_6' AND FilmPrinterID='7'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='K2_6'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WHERE TerminalID='K2_5' AND FilmPrinterID='6'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='K2_5'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WHERE TerminalID='K2_4' AND FilmPrinterID='5'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='K2_4'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WHERE TerminalID='K2_3' AND FilmPrinterID='3'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='K2_3'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WHERE TerminalID='K2_2' AND FilmPrinterID='1'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='K2_2'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WHERE TerminalID='K2_1' AND FilmPrinterID='2'
+36,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='K2_1'
+36,5,114688,Compiled Plan,Adhoc,SELECT TerminalID FROM AFP_PrintTerminalInfo
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000002 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:43:11')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+13,5,204800,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000001 
+13,5,311296,Compiled Plan,Adhoc,select RuleJob.JobUID,JobName,ItemSerialNo,UIDType,UID,Command,CmdExtent,MaxRetryNumber,RetryInterval,Status,ExecStatus from RuleJob inner join RuleJobItem on RuleJob.JobUID=RuleJobItem.JobUID where RuleJobItem.ExecStatus='FRESH' and (ExpectExecTime is NULL or ExpectExecTime < GETDATE()) order by Priority desc, ExpectExecTime 
+26,2,24576,Compiled Plan,Adhoc,Select ParameterValue from WGGC.dbo.AFP_Parameters WHERE ParameterKey='DataAcquire_EnableDataAcquisition'
+2,3,319488,Compiled Plan,Adhoc,IF (@@microsoftversion / 0x01000000) >= 9 AND ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 1
+            BEGIN
+                SELECT se.is_admin_endpoint AS N'AdminConnection', 
+                	(SELECT CAST(cfg.value AS bit) AS [ConfigValue]
+                    		FROM
+                    		sys.configurations AS cfg WHERE configuration_id=16387) 
+			        AS N'SmoEnabled' 
+                FROM  sys.endpoints se 
+                INNER JOIN sys.dm_exec_connections dmc ON dmc.endpoint_id = se.endpoint_id
+                                                                            WHERE
+                                                                            dmc.session_id = @@spid
+            END
+            ELSE
+            BEGIN
+		        IF (@@microsoftversion / 0x01000000) >= 9
+		        BEGIN
+                    SELECT CAST(0 AS BIT) AS N'AdminConnection', 
+                        (SELECT CAST(cfg.value AS bit) AS [ConfigValue]
+	                            FROM
+	                            sys.configurations AS cfg WHERE configuration_id=16387) 
+                    AS N'SmoEnabled' 
+		        END
+		        ELSE
+		        BEGIN
+                    SELECT CAST(0 AS BIT) AS N'AdminConnection', 
+                    CAST(0 AS BIT) AS N'SmoEnabled' 
+		        END
+            END
+1,2,57344,Compiled Plan,Adhoc,select      type
+        , sum(virtual_memory_reserved_kb) VM_Reserved
+        , sum(virtual_memory_committed_kb) VM_Commited
+        , sum(awe_allocated_kb) AWE_Allocated
+        , sum(shared_memory_reserved_kb) Shared_Reserved
+        , sum(shared_memory_committed_kb) Shared_Commited
+        --, sum(single_pages_kb)    --SQL2005、2008
+        --, sum(multi_pages_kb)        --SQL2005、2008
+from    sys.dm_os_memory_clerks
+group by type
+order by type
+
+77,2,81920,Compiled Plan,Adhoc,SELECT TerminalID, FilmPrinterID, NetAEName, IPAddress, dbo.AFP_F_GetParameterint('FilmPrinterPort') AS Port, PrinterType, 
+                                          MonitorFilmPrinterStatus, ReportPrinterDisplayName, ReportPrinterFullName, MonitorReportPrinterStatus 
+                                   FROM AFP_PrintTerminalInfo
+                                   LEFT JOIN PrinterReg ON PrinterDBID=FilmPrinterID 
+                                   LEFT JOIN NetAE ON NetAEConfigDBID=NetAEDBID
+                                   WHERE MonitorFilmPrinterStatus=1 OR MonitorReportPrinterStatus=1
+388,2,106496,Compiled Plan,Adhoc,SELECT * FROM AFP_MessageQueue ORDER BY PublishDate
+157,5,73728,Compiled Plan,Adhoc,SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='PUMA136'
+557,6,90112,Compiled Plan,Adhoc,SELECT * FROM AFP_PrintTerminalInfo WHERE TerminalIP='10.184.129.136'
+5,5,204800,Compiled Plan,Adhoc,SELECT
+dtb.name AS [Name],
+dtb.database_id AS [ID],
+CAST(case when dtb.name in ('master','model','msdb','tempdb') then 1 else dtb.is_distributor end AS bit) AS [IsSystemObject],
+CAST(has_dbaccess(dtb.name) AS bit) AS [IsAccessible]
+FROM
+master.sys.databases AS dtb
+ORDER BY
+[Name] ASC
+1,2,57344,Compiled Plan,Adhoc,SELECT  usecounts ,
+        refcounts ,
+        size_in_bytes ,
+        cacheobjtype ,
+        objtype ,
+        TEXT
+FROM    sys.dm_exec_cached_plans cp
+        CROSS APPLY sys.dm_exec_sql_text(plan_handle)
+ORDER BY objtype DESC ;
+
+1,3,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000064 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:49:15')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000063 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:49:11')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000062 
+1,2,139264,Compiled Plan,Adhoc,select Status,CreatedDateTime,HostJobID,HostName from PrintJob where AppServerName = 'LOCALAPP' and (( Status = 5 or Status =3 or Status =4 or Status =2 or Status=7) and CreatedDateTime <= '2018-01-21 06:52:10') or (Status = 6) order by CreatedDateTime 
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000061 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:49:07')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000060 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:49:03')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000005F 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:48:58')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000005E 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:48:54')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000005D 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:48:50')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000005C 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:48:46')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000005B 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:48:42')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000005A 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:48:38')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000059 
+1,2,139264,Compiled Plan,Adhoc,select Status,CreatedDateTime,HostJobID,HostName from PrintJob where AppServerName = 'LOCALAPP' and (( Status = 5 or Status =3 or Status =4 or Status =2 or Status=7) and CreatedDateTime <= '2018-01-21 06:51:37') or (Status = 6) order by CreatedDateTime 
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000058 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:48:33')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000057 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:48:29')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000056 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:48:25')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000055 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:48:21')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+5,2,57344,Compiled Plan,Adhoc,select    cacheobjtype
+        , objtype
+        , sum(cast(size_in_bytes as bigint))/1024 as size_in_kb
+        , count(bucketid) as cache_count
+from    sys.dm_exec_cached_plans
+group by cacheobjtype, objtype
+order by cacheobjtype, objtype
+
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000054 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:48:17')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000053 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:48:12')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000052 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:48:08')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000051 
+1,2,139264,Compiled Plan,Adhoc,select Status,CreatedDateTime,HostJobID,HostName from PrintJob where AppServerName = 'LOCALAPP' and (( Status = 5 or Status =3 or Status =4 or Status =2 or Status=7) and CreatedDateTime <= '2018-01-21 06:51:04') or (Status = 6) order by CreatedDateTime 
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000050 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:48:04')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000004F 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:48:00')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000004E 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:47:56')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+3,2,57344,Compiled Plan,Adhoc,select    cacheobjtype
+        , objtype
+        , sum(cast(size_in_bytes as bigint))/1024 as size_in_kb
+        , count(bucketid) as cache_count
+from    sys.dm_exec_cached_plans
+group by cacheobjtype, objtype
+order by cacheobjtype, objtype
+
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000004D 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:47:51')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000004C 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:47:47')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000004B 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:47:43')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000004A 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:47:39')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000049 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:47:35')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000048 
+1,2,139264,Compiled Plan,Adhoc,select Status,CreatedDateTime,HostJobID,HostName from PrintJob where AppServerName = 'LOCALAPP' and (( Status = 5 or Status =3 or Status =4 or Status =2 or Status=7) and CreatedDateTime <= '2018-01-21 06:50:32') or (Status = 6) order by CreatedDateTime 
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000047 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:47:31')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000046 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:47:26')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000045 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:47:22')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000044 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:47:18')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000043 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:47:14')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000042 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:47:10')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000041 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:47:05')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000040 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:47:01')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000003F 
+1,2,139264,Compiled Plan,Adhoc,select Status,CreatedDateTime,HostJobID,HostName from PrintJob where AppServerName = 'LOCALAPP' and (( Status = 5 or Status =3 or Status =4 or Status =2 or Status=7) and CreatedDateTime <= '2018-01-21 06:49:59') or (Status = 6) order by CreatedDateTime 
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000003E 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:46:57')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000003D 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:46:53')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000003C 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:46:49')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000003B 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:46:44')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000003A 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:46:40')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000039 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:46:36')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,16384,Compiled Plan,Adhoc,SET SHOWPLAN_XML OFF
+1,2,16384,Compiled Plan,Adhoc,SET SHOWPLAN_ALL OFF
+1,2,16384,Compiled Plan,Adhoc,SET SHOWPLAN_TEXT OFF
+1,2,57344,Compiled Plan,Adhoc,SELECT dtb.name AS [Name], dtb.state AS [State] FROM master.sys.databases dtb
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000038 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:46:32')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000037 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:46:28')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000036 
+1,2,139264,Compiled Plan,Adhoc,select Status,CreatedDateTime,HostJobID,HostName from PrintJob where AppServerName = 'LOCALAPP' and (( Status = 5 or Status =3 or Status =4 or Status =2 or Status=7) and CreatedDateTime <= '2018-01-21 06:49:26') or (Status = 6) order by CreatedDateTime 
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000035 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:46:24')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000034 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:46:19')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000033 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:46:15')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000032 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:46:11')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,90112,Compiled Plan,Adhoc,select p.object_id, object_name=object_name(p.object_id), p.index_id, buffer_pages=count(*) 
+from sys.allocation_units a, 
+    sys.dm_os_buffer_descriptors b, 
+    sys.partitions p 
+where a.allocation_unit_id=b.allocation_unit_id 
+    and a.container_id=p.hobt_id 
+    and b.database_id=db_id()
+group by p.object_id,p.index_id 
+order by buffer_pages desc 
+
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000031 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:46:07')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000030 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:46:03')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000002F 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:45:58')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000002E 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:45:54')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000002D 
+1,2,139264,Compiled Plan,Adhoc,select Status,CreatedDateTime,HostJobID,HostName from PrintJob where AppServerName = 'LOCALAPP' and (( Status = 5 or Status =3 or Status =4 or Status =2 or Status=7) and CreatedDateTime <= '2018-01-21 06:48:53') or (Status = 6) order by CreatedDateTime 
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000002C 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:45:50')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000002B 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:45:46')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000002A 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:45:42')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000029 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:45:37')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000028 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:45:33')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000027 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:45:29')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000026 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:45:25')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000025 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:45:21')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000024 
+1,2,139264,Compiled Plan,Adhoc,select Status,CreatedDateTime,HostJobID,HostName from PrintJob where AppServerName = 'LOCALAPP' and (( Status = 5 or Status =3 or Status =4 or Status =2 or Status=7) and CreatedDateTime <= '2018-01-21 06:48:20') or (Status = 6) order by CreatedDateTime 
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000023 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:45:17')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000022 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:45:12')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+3,3,24576,Compiled Plan,Adhoc,SET SHOWPLAN_XML OFF
+3,3,24576,Compiled Plan,Adhoc,SET SHOWPLAN_ALL OFF
+3,3,24576,Compiled Plan,Adhoc,SET SHOWPLAN_TEXT OFF
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000021 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:45:08')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+3,3,81920,Compiled Plan,Adhoc,SELECT dtb.name AS [Name], dtb.state AS [State] FROM master.sys.databases dtb
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR0000000000000020 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:45:04')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000001F 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:45:00')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000001E 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:44:56')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000001D 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:44:51')) order by Status,RetryCount ASC,Priority,CreatedDateTime
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000001C 
+1,2,139264,Compiled Plan,Adhoc,select Status,CreatedDateTime,HostJobID,HostName from PrintJob where AppServerName = 'LOCALAPP' and (( Status = 5 or Status =3 or Status =4 or Status =2 or Status=7) and CreatedDateTime <= '2018-01-21 06:47:48') or (Status = 6) order by CreatedDateTime 
+1,2,40960,Compiled Plan,Adhoc,FETCH API_CURSOR000000000000001B 
+1,2,147456,Compiled Plan,Adhoc,select *  from PrintJob  where AppServerName = 'LOCALAPP' and (Status = 0 or (Status = 4 and DeliveredDateTime<= '2018-01-22 09:44:47')) order by Status,RetryCount ASC,Priority,CreatedDateTime

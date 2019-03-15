@@ -1,0 +1,39 @@
+
+
+-- =============================================
+-- Author:		Song Yang
+-- Create date: 20140715
+-- Description:	Update all films flim flags of task
+-- =============================================
+CREATE PROCEDURE [dbo].[AFP_SP_UpdateReportsPrintStatusOfTask]  
+	@TaskSN  nvarchar(20),
+	@Status  int,
+	@TerminalID nvarchar(20) = ''
+AS
+BEGIN
+	SET NOCOUNT ON;
+	
+    DECLARE @PrintDateTime AS DATETIME
+    DECLARE @PrintCount AS INT
+    DECLARE @OldStatus AS INT
+    
+    SET @PrintDateTime=NULL
+    SET @PrintCount=0
+    SET @OldStatus = NULL
+    IF @Status=1
+    BEGIN
+		SET @PrintCount=1
+		SET @PrintDateTime = GETDATE()
+        SET @OldStatus = 3
+    END
+	UPDATE AFP_ReportInfo 
+	SET PrintCount = PrintCount + @PrintCount, PrintStatus = @Status, PrintTime = ISNULL(@PrintDateTime, PrintTime), StatusTime=GETDATE(), TerminalID=@TerminalID 
+    WHERE FileName IN (
+		SELECT FileName FROM AFP_ReportInfo WHERE PrintStatus=ISNULL(@OldStatus, PrintStatus) AND StudyInstanceUID IN (
+			SELECT StudyInstanceUID FROM AFP_PrintTaskOfReport WHERE TaskSN=@TaskSN))
+
+END
+
+
+
+(@TotalItemsOut int OUTPUT)SELECT @TotalItemsOut = COUNT(*) FROM AFP_ExamInfo where AccessionNumber IS NOT NULL AND (DeleteStatus IS NULL OR DeleteStatus = 0) AND CreatedTime>=CAST('2017-07-22' as date) AND CreatedTime<=DATEADD(day, 1, CAST('2017-07-23' as date)) AND (DeleteStatus is null or DeleteStatus<>1)

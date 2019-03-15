@@ -1,0 +1,59 @@
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[AFP_SP_SetTerminalStatus]
+	-- Add the parameters for the stored procedure here
+	@TerminalId nvarchar(20),
+	@Status int
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+	DECLARE @ct int
+    -- Insert statements for procedure here
+	UPDATE AFP_TerminalStatus SET Status=@Status,StatusTime=GETDATE() WHERE TerminalID=@TerminalId
+	SELECT @ct=@@ROWCOUNT
+	
+	if @ct=0 
+	BEGIN
+		INSERT INTO AFP_TerminalStatus(TerminalID,Status,StatusTime) VALUES(@TerminalId,@Status,GETDATE())
+	END
+	
+END
+
+
+
+-- =============================================
+-- Author:		Song Yang
+-- Create date: 2017/07/04
+-- Description:	Check terminal status
+-- =============================================
+CREATE FUNCTION [dbo].[AFP_F_GetTerminalOnlineStatus] 
+(
+	-- Add the parameters for the function here
+	@TerminalId nvarchar(20)
+)
+RETURNS int
+AS
+BEGIN
+	-- Declare the return variable here
+	DECLARE @val int
+
+	-- Add the T-SQL statements to compute the return value here
+	SELECT @val=(CASE 
+		WHEN dbo.AFP_PrintTerminalInfo.CheckTerminalState = 0 THEN 0
+		WHEN dbo.AFP_PrintTerminalInfo.EnabledFlag = 0 THEN 1 
+		WHEN DateDiff(second, dbo.AFP_TerminalStatus.StatusTime, GetDate()) < dbo.AFP_F_GetTerminalStatusTimeout() THEN IsNull(dbo.AFP_TerminalStatus.Status,1) 
+		ELSE 1 END) 
+	FROM dbo.AFP_PrintTerminalInfo 
+	LEFT OUTER JOIN dbo.AFP_TerminalStatus ON dbo.AFP_PrintTerminalInfo.TerminalID = dbo.AFP_TerminalStatus.TerminalID 
+    WHERE dbo.AFP_PrintTerminalInfo.TerminalID = @TerminalId
+
+	-- Return the result of the function
+	RETURN @val
+
+END

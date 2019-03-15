@@ -1,0 +1,87 @@
+-- =============================================
+-- Author:		Song Yang
+-- Create date: 04/01/2017
+-- Description:	Prepare task information, update film count, report count and estimated time
+-- =============================================
+CREATE PROCEDURE AFP_SP_PrepareTask
+	-- Add the parameters for the stored procedure here
+	@TaskID nvarchar(64)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+	DECLARE @FilmPrinter nvarchar(64)
+	DECLARE @FilmSize nvarchar(64)
+	DECLARE @RowID int
+	DECLARE @ID int
+	DECLARE @TerminalID int
+	DECLARE @ReportCount int
+	DECLARE @FilmCount int
+	DECLARE @ReportPrintTime int
+	DECLARE @TaskTime int
+	DECLARE @TaskFilm Table
+	( 
+		ID int identity(1,1),
+		FilmSize nvarchar(20)
+	)
+	INSERT INTO @TaskFilm SELECT FilmSizeID FROM AFP_FilmInfo WHERE StudyInstanceUID IN 
+	(SELECT StudyInstanceUID FROM AFP_PrintTaskOfFilm WHERE TaskSN=@TaskID)
+
+	SELECT @FilmPrinter = Model FROM AFP_PrintTask S
+	LEFT JOIN AFP_PrintTerminalInfo T ON T.TerminalID = S.TerminalID
+	LEFT JOIN PrinterReg P ON P.PrinterDBID = T.FilmPrinterID
+	WHERE SN=@TaskID
+
+
+	SET @TaskTime = 0
+	SET @ID=1
+	SELECT @FilmCount = COUNT(*) FROM AFP_PrintTaskOfFilm WHERE TaskSN=@TaskID
+	SELECT @ReportCount = COUNT(*) FROM AFP_PrintTaskOfReport WHERE TaskSN=@TaskID
+	SELECT @ReportPrintTime = dbo.AFP_F_GetParameterInt('TimeToPrintReport')
+	SELECT @RowID=MAX(ID) FROM @TaskFilm
+	WHILE(@ID <= @RowID)
+	BEGIN
+		SELECT @FilmSize=FilmSize FROM @TaskFilm WHERE ID=@ID
+		IF @TaskTime = 0
+		BEGIN
+			SELECT @TaskTime=@TaskTime+FirstTime FROM AFP_PrintTime WHERE PrintModal=@FilmPrinter AND Remark=@FilmSize
+		END
+		ELSE
+		BEGIN
+			SELECT @TaskTime = @TaskTime+ OtherTime FROM AFP_PrintTime WHERE PrintModal=@FilmPrinter AND Remark=@FilmSize
+		END
+		SET @ID=@ID+1
+	END
+	IF @TaskTime = 0
+	BEGIN
+		SET @TaskTime = (@ReportCount - 1) * @ReportPrintTime + @ReportPrintTime
+	END
+	UPDATE AFP_PrintTask SET ImageCount=@FilmCount, ReportCount=@ReportCount,EstimateTime=@TaskTime WHERE SN=@TaskID
+END
+
+
+
+-- =============================================
+-- Author:		Song.Yang
+-- Create date: 2015/03/03
+-- Description:	Update a report to printed
+-- =============================================
+CREATE PROCEDURE [dbo].[AFP_SP_SetReportPrinted] 
+	-- Add the parameters for the stored procedure here
+	@ReportId nvarchar(80),
+	@TaskId int
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	IF EXISTS (SELECT * FROM AFP_PrintTaskOfReport WHERE TaskSN=@TaskId AND StudyInstanceUID=@ReportId)
+	BEGIN
+		UPDATE AFP_PrintTask SET ReportPrinted=ReportPrinted+1 WHERE SN=@TaskId
+		EXEC AFP_SP_UpdateReportPrintStatus '', @ReportId, 1
+	END
+	
+END
+

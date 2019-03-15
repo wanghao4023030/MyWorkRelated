@@ -1,0 +1,94 @@
+-- =============================================
+-- Author:		Song Yang
+-- Create date: 2017/02/17
+-- Description:	Update film printer status
+-- =============================================
+CREATE PROCEDURE [dbo].[AFP_SP_UpdateFilmPrinterStatus]
+	-- Add the parameters for the stored procedure here
+	@PrinterId int , 
+	@MediaType1 int ,
+	@MediaSize1 int ,
+	@FilmCount1 int ,
+	@MediaType2 int ,
+	@MediaSize2 int ,
+	@FilmCount2 int ,
+	@MediaType3 int ,
+	@MediaSize3 int ,
+	@FilmCount3 int ,
+	@Status int,
+	@PrintStatus int = 0,
+	@Capacity1 int = 125,
+	@Capacity2 int = 125,
+	@Capacity3 int = 125,
+	@TerminalID nvarchar(256)='',
+	@ErrorCode nvarchar(20)='' 
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	IF NOT EXISTS(SELECT PrinterID FROM AFP_FilmPrinterStatus WHERE PrinterID=@PrinterID)
+	BEGIN
+		INSERT INTO AFP_FilmPrinterStatus(PrinterID, MediaType1, MediaSize1, FilmCount1, 
+		MediaType2, MediaSize2, FilmCount2, MediaType3, MediaSize3, FilmCount3, [Status], PrintState, ErrorCode, 
+        ErrorDesc, StatusTime, RefreshTime) VALUES (@PrinterId,@MediaType1,@MediaSize1,@FilmCount1,
+        @MediaType2,@MediaSize2,@FilmCount2,@MediaType3,@MediaSize3,@FilmCount3,@Status , @PrintStatus, @ErrorCode,'' ,GETDATE(),GETDATE())
+	END
+	ELSE 
+	BEGIN
+		UPDATE AFP_FilmPrinterStatus SET
+		MediaType1=@MediaType1, 
+		MediaSize1=@MediaSize1, 
+		FilmCount1=@FilmCount1,
+		
+		MediaType2=@MediaType2, 
+		MediaSize2=@MediaSize2, 
+		FilmCount2=@FilmCount2,
+		
+		MediaType3=@MediaType3, 
+		MediaSize3=@MediaSize3, 
+		FilmCount3=@FilmCount3,
+		
+		[ErrorCode]=@ErrorCode,
+		[Status] = @Status,
+        PrintState = @PrintStatus,
+		StatusTime = case WHEN [Status] = @Status THEN StatusTime ELSE GETDATE() END,
+		RefreshTime = GETDATE()
+		WHERE PrinterID =@PrinterId
+	END
+END
+
+
+-- =============================================
+-- Author:		Song Yang
+-- Create date: 2017/07/04
+-- Description:	Get film printer status
+-- =============================================
+CREATE FUNCTION [dbo].[AFP_F_GetFilmPrinterStatus] 
+(
+	-- Add the parameters for the function here
+	@PrinterId int
+)
+RETURNS int
+AS
+BEGIN
+	-- Declare the return variable here
+	DECLARE @val int
+
+	-- Add the T-SQL statements to compute the return value here
+	SELECT @val=(CASE 
+		WHEN dbo.AFP_PrintTerminalInfo.CheckFilmPrinterState = 0 THEN 8
+		WHEN DateDiff(second,dbo.AFP_FilmPrinterStatus.RefreshTime, GetDate()) < dbo.AFP_F_GetTerminalStatusTimeout() THEN [Status] 
+		ELSE 6 END)
+    FROM dbo.AFP_FilmPrinterStatus 
+	LEFT JOIN AFP_PrintTerminalInfo ON FilmPrinterID = PrinterID
+	WHERE PrinterID = @PrinterId
+
+	-- Return the result of the function
+	RETURN @val
+
+END
+
+
