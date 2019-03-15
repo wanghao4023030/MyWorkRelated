@@ -1,0 +1,102 @@
+bcp "select * from GCPACSWS.wggc.dbo.Users" queryout c:\1.txt -n -T
+
+--export data
+bcp "select * from wggc.dbo.Patient                   "   queryout E:\BCP\data\wggc\Patient.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.Study                     "   queryout E:\BCP\data\wggc\Study.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.AFP_PrintTerminalInfo     "   queryout E:\BCP\data\wggc\AFP_PrintTerminalInfo.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.Series                    "   queryout E:\BCP\data\wggc\Series.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.Image                     "   queryout E:\BCP\data\wggc\Image.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.AFP_Department            "   queryout E:\BCP\data\wggc\AFP_Department.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.AFP_FilmInfo              "   queryout E:\BCP\data\wggc\AFP_FilmInfo.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.AFP_PrintTaskOfFilm       "   queryout E:\BCP\data\wggc\AFP_PrintTaskOfFilm.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.AFP_ReportInfo            "   queryout E:\BCP\data\wggc\AFP_ReportInfo.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.AFP_ExamInfo " queryout E:\BCP\data\wggc\AFP_ExamInfo.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.AFP_PrintTaskOfReport     "   queryout E:\BCP\data\wggc\AFP_PrintTaskOfReport.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.AFP_PrintTask             "   queryout E:\BCP\data\wggc\AFP_PrintTask.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.users                     "   queryout E:\BCP\data\wggc\users.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.T_Integration_ExamInfo    "   queryout E:\BCP\data\wggc\T_Integration_ExamInfo.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.T_Integration_Dictionary  "   queryout E:\BCP\data\wggc\T_Integration_Dictionary.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.AFP_PrintMode " queryout E:\BCP\data\wggc\AFP_PrintMode.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.AFP_Parameters "   		  queryout E:\BCP\data\wggc\AFP_Parameters.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+//bcp "select * from wggc.dbo.vi_KIOSK_ExamInfo_Patient "   queryout E:\BCP\data\wggc\vi_KIOSK_ExamInfo_Patient.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+
+--Inport data
+bcp wggc.dbo.Patient                   IN E:\BCP\data\wggc\Patient.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.Study                     IN E:\BCP\data\wggc\Study.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.AFP_PrintTerminalInfo     IN E:\BCP\data\wggc\AFP_PrintTerminalInfo.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.Series                    IN E:\BCP\data\wggc\Series.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.Image                     IN E:\BCP\data\wggc\Image.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.AFP_Department            IN E:\BCP\data\wggc\AFP_Department.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.AFP_FilmInfo              IN E:\BCP\data\wggc\AFP_FilmInfo.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.AFP_PrintTaskOfFilm       IN E:\BCP\data\wggc\AFP_PrintTaskOfFilm.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.AFP_ReportInfo            IN E:\BCP\data\wggc\AFP_ReportInfo.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.AFP_ExamInfo IN E:\BCP\data\wggc\AFP_ExamInfo.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.AFP_PrintTaskOfReport     IN E:\BCP\data\wggc\AFP_PrintTaskOfReport.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.AFP_PrintTask             IN E:\BCP\data\wggc\AFP_PrintTask.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.users                     IN E:\BCP\data\wggc\users.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.T_Integration_ExamInfo    IN E:\BCP\data\wggc\T_Integration_ExamInfo.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.T_Integration_Dictionary  IN E:\BCP\data\wggc\T_Integration_Dictionary.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.AFP_PrintMode IN E:\BCP\data\wggc\AFP_PrintMode.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp wggc.dbo.AFP_Parameters IN E:\BCP\data\wggc\AFP_Parameters.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+
+//bcp wggc.dbo.vi_KIOSK_ExamInfo_Patient IN E:\BCP\data\wggc\vi_KIOSK_ExamInfo_Patient.dat -n  -S localhost\GCPACSWS -U sa -P sa20021224$
+
+
+select count(*) from wggc.dbo.Patient                   
+select count(*) from wggc.dbo.Study                     
+select count(*) from wggc.dbo.AFP_PrintTerminalInfo     
+select count(*) from wggc.dbo.Series                    
+select count(*) from wggc.dbo.Image                     
+select count(*) from wggc.dbo.AFP_Department            
+select count(*) from wggc.dbo.AFP_FilmInfo              
+select count(*) from wggc.dbo.AFP_PrintTaskOfFilm       
+select count(*) from wggc.dbo.AFP_ReportInfo            
+select count(*) from wggc.dbo.AFP_PrintTaskOfReport     
+select count(*) from wggc.dbo.AFP_PrintTask             
+select count(*) from wggc.dbo.users                     
+select count(*) from wggc.dbo.T_Integration_ExamInfo    
+select count(*) from wggc.dbo.T_Integration_Dictionary  
+select count(*) from wggc.dbo.vi_KIOSK_ExamInfo_Patient 
+select count(*) from wggc.dbo.AFP_PrintMode  	       
+select count(*) from wggc.dbo.AFP_Parameters 	       
+select count(*) from wggc.dbo.AFP_ExamInfo 	  
+
+
+
+
+
+
+
+OCR OK
+
+bcp "select * from printer.dbo.AutoForwardRule " queryout E:\BCP\data\printer\AutoForwardRule.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from printer.dbo.DeliveryJob     " queryout E:\BCP\data\printer\DeliveryJob.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from printer.dbo.ImageBox        " queryout E:\BCP\data\printer\ImageBox.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from printer.dbo.Media           " queryout E:\BCP\data\printer\Media.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from printer.dbo.OCRCache        " queryout E:\BCP\data\printer\OCRCache.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from printer.dbo.Page            " queryout E:\BCP\data\printer\Page.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from printer.dbo.PLut            " queryout E:\BCP\data\printer\PLut.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from printer.dbo.Session         " queryout E:\BCP\data\printer\Session.dat -n -T -S localhost\GCPACSWS -U sa -P sa20021224$
+
+
+
+bcp printer.dbo.AutoForwardRule IN E:\BCP\data\printer\AutoForwardRule.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp printer.dbo.DeliveryJob     IN E:\BCP\data\printer\DeliveryJob.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp printer.dbo.ImageBox        IN E:\BCP\data\printer\ImageBox.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp printer.dbo.Media           IN E:\BCP\data\printer\Media.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp printer.dbo.OCRCache        IN E:\BCP\data\printer\OCRCache.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp printer.dbo.Page            IN E:\BCP\data\printer\Page.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp printer.dbo.PLut            IN E:\BCP\data\printer\PLut.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp printer.dbo.Session         IN E:\BCP\data\printer\Session.dat -n -S localhost\GCPACSWS -U sa -P sa20021224$
+
+select count(*) from printer.dbo.AutoForwardRule
+select count(*) from printer.dbo.DeliveryJob    
+select count(*) from printer.dbo.ImageBox       
+select count(*) from printer.dbo.Media          
+select count(*) from printer.dbo.OCRCache       
+select count(*) from printer.dbo.Page           
+select count(*) from printer.dbo.PLut           
+select count(*) from printer.dbo.Session      
+
+
+

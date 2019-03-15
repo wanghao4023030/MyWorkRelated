@@ -1,0 +1,18 @@
+
+bcp "select * from wggc.dbo.Patient                   "   queryout E:\wggc\Patient.dat -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.Study                     "   queryout E:\wggc\Study.dat -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.AFP_PrintTerminalInfo     "   queryout E:\wggc\AFP_PrintTerminalInfo.dat -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.Series                    "   queryout E:\wggc\Series.dat -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.Image                     "   queryout E:\wggc\Image.dat -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.AFP_Department            "   queryout E:\wggc\AFP_Department.dat -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.AFP_FilmInfo              "   queryout E:\wggc\AFP_FilmInfo.dat -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.AFP_PrintTaskOfFilm       "   queryout E:\wggc\AFP_PrintTaskOfFilm.dat -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.AFP_ReportInfo            "   queryout E:\wggc\AFP_ReportInfo.dat -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.AFP_PrintTaskOfReport     "   queryout E:\wggc\AFP_PrintTaskOfReport.dat -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.AFP_PrintTask             "   queryout E:\wggc\AFP_PrintTask.dat -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.users                     "   queryout E:\wggc\users.dat -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.T_Integration_ExamInfo    "   queryout E:\wggc\T_Integration_ExamInfo.dat -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.T_Integration_Dictionary  "   queryout E:\wggc\T_Integration_Dictionary.dat -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.vi_KIOSK_ExamInfo_Patient "   queryout E:\wggc\vi_KIOSK_ExamInfo_Patient.dat -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.AFP_PrintMode "   queryout E:\wggc\AFP_PrintMode.dat -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+bcp "select * from wggc.dbo.AFP_Parameters "   queryout E:\wggc\AFP_Parameters.dat -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
