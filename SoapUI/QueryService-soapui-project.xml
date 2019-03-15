@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="QueryService" resourceRoot="" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="QueryServiceSoap12" type="wsdl" bindingName="{http://tempuri.org/}QueryServiceSoap12" soapVersion="1_2" anonymous="optional" definition="http://10.184.129.164/PSPrintQueryServer/QueryService.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://10.184.129.164/PSPrintQueryServer/QueryService.asmx</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://tempuri.org/Get2DCodeImage" name="Get2DCodeImage" bindingOperationName="Get2DCodeImage" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/PSPrintQueryServer/QueryService.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:Get2DCodeImage>
+         <!--Optional:-->
+         <tem:patientID>?</tem:patientID>
+         <!--Optional:-->
+         <tem:qrcodeParam>
+            <tem:QRCodeScale>?</tem:QRCodeScale>
+            <tem:QRCodeErrorCorrect>?</tem:QRCodeErrorCorrect>
+         </tem:qrcodeParam>
+      </tem:Get2DCodeImage>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/QueryServiceSoap/Get2DCodeImageRequest"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/Get2DCodeImageForPrinter" name="Get2DCodeImageForPrinter" bindingOperationName="Get2DCodeImageForPrinter" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/PSPrintQueryServer/QueryService.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:Get2DCodeImageForPrinter>
+         <!--Optional:-->
+         <tem:departmentID>?</tem:departmentID>
+         <!--Optional:-->
+         <tem:printerID>?</tem:printerID>
+         <!--Optional:-->
+         <tem:qrcodeParam>
+            <tem:QRCodeScale>?</tem:QRCodeScale>
+            <tem:QRCodeErrorCorrect>?</tem:QRCodeErrorCorrect>
+         </tem:qrcodeParam>
+      </tem:Get2DCodeImageForPrinter>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/QueryServiceSoap/Get2DCodeImageForPrinterRequest"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/Get2DCodeImageWithRegisterType" name="Get2DCodeImageWithRegisterType" bindingOperationName="Get2DCodeImageWithRegisterType" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/PSPrintQueryServer/QueryService.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:Get2DCodeImageWithRegisterType>
+         <!--Optional:-->
+         <tem:patientID>?</tem:patientID>
+         <!--Optional:-->
+         <tem:registerType>?</tem:registerType>
+         <!--Optional:-->
+         <tem:qrcodeParam>
+            <tem:QRCodeScale>?</tem:QRCodeScale>
+            <tem:QRCodeErrorCorrect>?</tem:QRCodeErrorCorrect>
+         </tem:qrcodeParam>
+      </tem:Get2DCodeImageWithRegisterType>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/QueryServiceSoap/Get2DCodeImageWithRegisterTypeRequest"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/Get2DCodeUrl" name="Get2DCodeUrl" bindingOperationName="Get2DCodeUrl" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/PSPrintQueryServer/QueryService.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:Get2DCodeUrl>
+         <!--Optional:-->
+         <tem:patientID>?</tem:patientID>
+      </tem:Get2DCodeUrl>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/QueryServiceSoap/Get2DCodeUrlRequest"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/GetFilmReportInfos" name="GetFilmReportInfos" bindingOperationName="GetFilmReportInfos" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/PSPrintQueryServer/QueryService.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:GetFilmReportInfos>
+         <!--Optional:-->
+         <tem:patientID>?</tem:patientID>
+         <tem:hospitalID>?</tem:hospitalID>
+         <tem:queryDays>?</tem:queryDays>
+      </tem:GetFilmReportInfos>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/QueryServiceSoap/GetFilmReportInfosRequest"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/GetSystemHealthInformation" name="GetSystemHealthInformation" bindingOperationName="GetSystemHealthInformation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/PSPrintQueryServer/QueryService.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:GetSystemHealthInformation/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/QueryServiceSoap/GetSystemHealthInformationRequest"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/SubscribePatient" name="SubscribePatient" bindingOperationName="SubscribePatient" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/PSPrintQueryServer/QueryService.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:SubscribePatient>
+         <!--Optional:-->
+         <tem:patientID>?</tem:patientID>
+         <tem:hospitalID>?</tem:hospitalID>
+      </tem:SubscribePatient>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/QueryServiceSoap/SubscribePatientRequest"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="QueryServiceSoap" type="wsdl" bindingName="{http://tempuri.org/}QueryServiceSoap" soapVersion="1_1" anonymous="optional" definition="http://10.184.129.164/PSPrintQueryServer/QueryService.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://10.184.129.164/PSPrintQueryServer/QueryService.asmx?wsdl"><con:part><con:url>http://10.184.129.164/PSPrintQueryServer/QueryService.asmx?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetSystemHealthInformation">
+        <s:complexType/>
+      </s:element>
+      <s:element name="GetSystemHealthInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSystemHealthInformationResult" type="tns:SystemHealth"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SystemHealth">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CPUUsage" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DiskIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DiskSpace" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Folder" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="HardDisk" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Memory" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SQLServer" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="IIS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Service" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="UPS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="WindowsEvent" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubscribePatient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="patientID" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="hospitalID" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubscribePatientResponse">
+        <s:complexType/>
+      </s:element>
+      <s:element name="Get2DCodeUrl">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="patientID" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get2DCodeUrlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get2DCodeUrlResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get2DCodeImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="patientID" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="qrcodeParam" type="tns:QRCodeParam"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="QRCodeParam">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="QRCodeScale" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="QRCodeErrorCorrect" type="s:int"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get2DCodeImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get2DCodeImageResult" type="s:base64Binary"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get2DCodeImageWithRegisterType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="patientID" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="registerType" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="qrcodeParam" type="tns:QRCodeParam"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get2DCodeImageWithRegisterTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get2DCodeImageWithRegisterTypeResult" type="s:base64Binary"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get2DCodeImageForPrinter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="departmentID" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="printerID" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="qrcodeParam" type="tns:QRCodeParam"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get2DCodeImageForPrinterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get2DCodeImageForPrinterResult" type="s:base64Binary"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFilmReportInfos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="patientID" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="hospitalID" type="s:int"/>
+            <s:element minOccurs="1" maxOccurs="1" name="queryDays" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFilmReportInfosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFilmReportInfosResult" type="tns:ArrayOfFilmReportStatus"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfFilmReportStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FilmReportStatus" nillable="true" type="tns:FilmReportStatus"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FilmReportStatus">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HospitalID" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ExamID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PatientID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PatientName" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PatientType" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Modality" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="StatusID" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusMessage" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="StatusCreateTime" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="StatusUpdateTime" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="PrintTime" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="FilmCount" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="ReportCount" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PrintLocation" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSystemHealthInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSystemHealthInformation"/>
+  </wsdl:message>
+  <wsdl:message name="GetSystemHealthInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSystemHealthInformationResponse"/>
+  </wsdl:message>
+  <wsdl:message name="SubscribePatientSoapIn">
+    <wsdl:part name="parameters" element="tns:SubscribePatient"/>
+  </wsdl:message>
+  <wsdl:message name="SubscribePatientSoapOut">
+    <wsdl:part name="parameters" element="tns:SubscribePatientResponse"/>
+  </wsdl:message>
+  <wsdl:message name="Get2DCodeUrlSoapIn">
+    <wsdl:part name="parameters" element="tns:Get2DCodeUrl"/>
+  </wsdl:message>
+  <wsdl:message name="Get2DCodeUrlSoapOut">
+    <wsdl:part name="parameters" element="tns:Get2DCodeUrlResponse"/>
+  </wsdl:message>
+  <wsdl:message name="Get2DCodeImageSoapIn">
+    <wsdl:part name="parameters" element="tns:Get2DCodeImage"/>
+  </wsdl:message>
+  <wsdl:message name="Get2DCodeImageSoapOut">
+    <wsdl:part name="parameters" element="tns:Get2DCodeImageResponse"/>
+  </wsdl:message>
+  <wsdl:message name="Get2DCodeImageWithRegisterTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:Get2DCodeImageWithRegisterType"/>
+  </wsdl:message>
+  <wsdl:message name="Get2DCodeImageWithRegisterTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:Get2DCodeImageWithRegisterTypeResponse"/>
+  </wsdl:message>
+  <wsdl:message name="Get2DCodeImageForPrinterSoapIn">
+    <wsdl:part name="parameters" element="tns:Get2DCodeImageForPrinter"/>
+  </wsdl:message>
+  <wsdl:message name="Get2DCodeImageForPrinterSoapOut">
+    <wsdl:part name="parameters" element="tns:Get2DCodeImageForPrinterResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetFilmReportInfosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFilmReportInfos"/>
+  </wsdl:message>
+  <wsdl:message name="GetFilmReportInfosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFilmReportInfosResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="QueryServiceSoap">
+    <wsdl:operation name="GetSystemHealthInformation">
+      <wsdl:input message="tns:GetSystemHealthInformationSoapIn"/>
+      <wsdl:output message="tns:GetSystemHealthInformationSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="SubscribePatient">
+      <wsdl:input message="tns:SubscribePatientSoapIn"/>
+      <wsdl:output message="tns:SubscribePatientSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="Get2DCodeUrl">
+      <wsdl:input message="tns:Get2DCodeUrlSoapIn"/>
+      <wsdl:output message="tns:Get2DCodeUrlSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="Get2DCodeImage">
+      <wsdl:input message="tns:Get2DCodeImageSoapIn"/>
+      <wsdl:output message="tns:Get2DCodeImageSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="Get2DCodeImageWithRegisterType">
+      <wsdl:input message="tns:Get2DCodeImageWithRegisterTypeSoapIn"/>
+      <wsdl:output message="tns:Get2DCodeImageWithRegisterTypeSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="Get2DCodeImageForPrinter">
+      <wsdl:input message="tns:Get2DCodeImageForPrinterSoapIn"/>
+      <wsdl:output message="tns:Get2DCodeImageForPrinterSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilmReportInfos">
+      <wsdl:input message="tns:GetFilmReportInfosSoapIn"/>
+      <wsdl:output message="tns:GetFilmReportInfosSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="QueryServiceSoap" type="tns:QueryServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetSystemHealthInformation">
+      <soap:operation soapAction="http://tempuri.org/GetSystemHealthInformation" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubscribePatient">
+      <soap:operation soapAction="http://tempuri.org/SubscribePatient" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get2DCodeUrl">
+      <soap:operation soapAction="http://tempuri.org/Get2DCodeUrl" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get2DCodeImage">
+      <soap:operation soapAction="http://tempuri.org/Get2DCodeImage" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get2DCodeImageWithRegisterType">
+      <soap:operation soapAction="http://tempuri.org/Get2DCodeImageWithRegisterType" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get2DCodeImageForPrinter">
+      <soap:operation soapAction="http://tempuri.org/Get2DCodeImageForPrinter" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilmReportInfos">
+      <soap:operation soapAction="http://tempuri.org/GetFilmReportInfos" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="QueryServiceSoap12" type="tns:QueryServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetSystemHealthInformation">
+      <soap12:operation soapAction="http://tempuri.org/GetSystemHealthInformation" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubscribePatient">
+      <soap12:operation soapAction="http://tempuri.org/SubscribePatient" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get2DCodeUrl">
+      <soap12:operation soapAction="http://tempuri.org/Get2DCodeUrl" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get2DCodeImage">
+      <soap12:operation soapAction="http://tempuri.org/Get2DCodeImage" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get2DCodeImageWithRegisterType">
+      <soap12:operation soapAction="http://tempuri.org/Get2DCodeImageWithRegisterType" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get2DCodeImageForPrinter">
+      <soap12:operation soapAction="http://tempuri.org/Get2DCodeImageForPrinter" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilmReportInfos">
+      <soap12:operation soapAction="http://tempuri.org/GetFilmReportInfos" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QueryService">
+    <wsdl:port name="QueryServiceSoap" binding="tns:QueryServiceSoap">
+      <soap:address location="http://10.184.129.164/PSPrintQueryServer/QueryService.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="QueryServiceSoap12" binding="tns:QueryServiceSoap12">
+      <soap12:address location="http://10.184.129.164/PSPrintQueryServer/QueryService.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://10.184.129.164/PSPrintQueryServer/QueryService.asmx</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://tempuri.org/Get2DCodeImage" name="Get2DCodeImage" bindingOperationName="Get2DCodeImage" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/PSPrintQueryServer/QueryService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Get2DCodeImage>
+         <!--Optional:-->
+         <tem:patientID>CD004</tem:patientID>
+         <!--Optional:-->
+         <tem:qrcodeParam>
+            <tem:QRCodeScale>3</tem:QRCodeScale>
+            <tem:QRCodeErrorCorrect>1</tem:QRCodeErrorCorrect>
+         </tem:qrcodeParam>
+      </tem:Get2DCodeImage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/Get2DCodeImage"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/Get2DCodeImageForPrinter" name="Get2DCodeImageForPrinter" bindingOperationName="Get2DCodeImageForPrinter" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/PSPrintQueryServer/QueryService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Get2DCodeImageForPrinter>
+         <!--Optional:-->
+         <tem:departmentID>?</tem:departmentID>
+         <!--Optional:-->
+         <tem:printerID>?</tem:printerID>
+         <!--Optional:-->
+         <tem:qrcodeParam>
+            <tem:QRCodeScale>?</tem:QRCodeScale>
+            <tem:QRCodeErrorCorrect>?</tem:QRCodeErrorCorrect>
+         </tem:qrcodeParam>
+      </tem:Get2DCodeImageForPrinter>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/Get2DCodeImageForPrinter"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/Get2DCodeImageWithRegisterType" name="Get2DCodeImageWithRegisterType" bindingOperationName="Get2DCodeImageWithRegisterType" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/PSPrintQueryServer/QueryService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Get2DCodeImageWithRegisterType>
+         <!--Optional:-->
+         <tem:patientID>?</tem:patientID>
+         <!--Optional:-->
+         <tem:registerType>?</tem:registerType>
+         <!--Optional:-->
+         <tem:qrcodeParam>
+            <tem:QRCodeScale>?</tem:QRCodeScale>
+            <tem:QRCodeErrorCorrect>?</tem:QRCodeErrorCorrect>
+         </tem:qrcodeParam>
+      </tem:Get2DCodeImageWithRegisterType>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/Get2DCodeImageWithRegisterType"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/Get2DCodeUrl" name="Get2DCodeUrl" bindingOperationName="Get2DCodeUrl" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/PSPrintQueryServer/QueryService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Get2DCodeUrl>
+         <!--Optional:-->
+         <tem:patientID>?</tem:patientID>
+      </tem:Get2DCodeUrl>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/Get2DCodeUrl"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/GetFilmReportInfos" name="GetFilmReportInfos" bindingOperationName="GetFilmReportInfos" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/PSPrintQueryServer/QueryService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:GetFilmReportInfos>
+         <!--Optional:-->
+         <tem:patientID>?</tem:patientID>
+         <tem:hospitalID>?</tem:hospitalID>
+         <tem:queryDays>?</tem:queryDays>
+      </tem:GetFilmReportInfos>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GetFilmReportInfos"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/GetSystemHealthInformation" name="GetSystemHealthInformation" bindingOperationName="GetSystemHealthInformation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/PSPrintQueryServer/QueryService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:GetSystemHealthInformation/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GetSystemHealthInformation"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/SubscribePatient" name="SubscribePatient" bindingOperationName="SubscribePatient" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/PSPrintQueryServer/QueryService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:SubscribePatient>
+         <!--Optional:-->
+         <tem:patientID>?</tem:patientID>
+         <tem:hospitalID>?</tem:hospitalID>
+      </tem:SubscribePatient>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/SubscribePatient"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

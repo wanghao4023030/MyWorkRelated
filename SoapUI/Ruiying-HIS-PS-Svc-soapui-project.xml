@@ -1,0 +1,1583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="Ruiying_HIS_PS_Svc" resourceRoot="" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="HIS_PS_SvcSoap" type="wsdl" bindingName="{http://tempuri.org/}HIS_PS_SvcSoap" soapVersion="1_1" anonymous="optional" definition="http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://tempuri.org/ExamStatusUpdateNotify" name="ExamStatusUpdateNotify" bindingOperationName="ExamStatusUpdateNotify" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ExamStatusUpdateNotify>
+         <!--Optional:-->
+         <tem:examInfo>?</tem:examInfo>
+      </tem:ExamStatusUpdateNotify>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ExamStatusUpdateNotify"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/HISGetWechat2DcodeImage" name="HISGetWechat2DcodeImage" bindingOperationName="HISGetWechat2DcodeImage" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:HISGetWechat2DcodeImage>
+         <!--Optional:-->
+         <tem:wechat>?</tem:wechat>
+      </tem:HISGetWechat2DcodeImage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/HISGetWechat2DcodeImage"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/HISStatusUpdateNotify" name="HISStatusUpdateNotify" bindingOperationName="HISStatusUpdateNotify" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:HISStatusUpdateNotify>
+         <!--Optional:-->
+         <tem:infoXml>?</tem:infoXml>
+      </tem:HISStatusUpdateNotify>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/HISStatusUpdateNotify"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/ReportReadyNotify" name="ReportReadyNotify" bindingOperationName="ReportReadyNotify" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ReportReadyNotify>
+         <!--Optional:-->
+         <tem:xml_para>?</tem:xml_para>
+      </tem:ReportReadyNotify>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ReportReadyNotify"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/SynchDepartmentFromHIS" name="SynchDepartmentFromHIS" bindingOperationName="SynchDepartmentFromHIS" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:SynchDepartmentFromHIS/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/SynchDepartmentFromHIS"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/TestMethod" name="TestMethod" bindingOperationName="TestMethod" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:TestMethod/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/TestMethod"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="HIS_PS_SvcSoap12" type="wsdl" bindingName="{http://tempuri.org/}HIS_PS_SvcSoap12" soapVersion="1_2" anonymous="optional" definition="http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx?wsdl"><con:part><con:url>http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HISStatusUpdateNotify">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="infoXml" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HISStatusUpdateNotifyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HISStatusUpdateNotifyResult" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SynchDepartmentFromHIS">
+        <s:complexType/>
+      </s:element>
+      <s:element name="SynchDepartmentFromHISResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SynchDepartmentFromHISResult" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportReadyNotify">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml_para" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportReadyNotifyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReportReadyNotifyResult" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HISGetWechat2DcodeImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wechat" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HISGetWechat2DcodeImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HISGetWechat2DcodeImageResult" type="s:base64Binary"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExamStatusUpdateNotify">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="examInfo" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExamStatusUpdateNotifyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExamStatusUpdateNotifyResult" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestMethod">
+        <s:complexType/>
+      </s:element>
+      <s:element name="TestMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestMethodResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HISStatusUpdateNotifySoapIn">
+    <wsdl:part name="parameters" element="tns:HISStatusUpdateNotify"/>
+  </wsdl:message>
+  <wsdl:message name="HISStatusUpdateNotifySoapOut">
+    <wsdl:part name="parameters" element="tns:HISStatusUpdateNotifyResponse"/>
+  </wsdl:message>
+  <wsdl:message name="SynchDepartmentFromHISSoapIn">
+    <wsdl:part name="parameters" element="tns:SynchDepartmentFromHIS"/>
+  </wsdl:message>
+  <wsdl:message name="SynchDepartmentFromHISSoapOut">
+    <wsdl:part name="parameters" element="tns:SynchDepartmentFromHISResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ReportReadyNotifySoapIn">
+    <wsdl:part name="parameters" element="tns:ReportReadyNotify"/>
+  </wsdl:message>
+  <wsdl:message name="ReportReadyNotifySoapOut">
+    <wsdl:part name="parameters" element="tns:ReportReadyNotifyResponse"/>
+  </wsdl:message>
+  <wsdl:message name="HISGetWechat2DcodeImageSoapIn">
+    <wsdl:part name="parameters" element="tns:HISGetWechat2DcodeImage"/>
+  </wsdl:message>
+  <wsdl:message name="HISGetWechat2DcodeImageSoapOut">
+    <wsdl:part name="parameters" element="tns:HISGetWechat2DcodeImageResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ExamStatusUpdateNotifySoapIn">
+    <wsdl:part name="parameters" element="tns:ExamStatusUpdateNotify"/>
+  </wsdl:message>
+  <wsdl:message name="ExamStatusUpdateNotifySoapOut">
+    <wsdl:part name="parameters" element="tns:ExamStatusUpdateNotifyResponse"/>
+  </wsdl:message>
+  <wsdl:message name="TestMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:TestMethod"/>
+  </wsdl:message>
+  <wsdl:message name="TestMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:TestMethodResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="HIS_PS_SvcSoap">
+    <wsdl:operation name="HISStatusUpdateNotify">
+      <wsdl:input message="tns:HISStatusUpdateNotifySoapIn"/>
+      <wsdl:output message="tns:HISStatusUpdateNotifySoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="SynchDepartmentFromHIS">
+      <wsdl:input message="tns:SynchDepartmentFromHISSoapIn"/>
+      <wsdl:output message="tns:SynchDepartmentFromHISSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ReportReadyNotify">
+      <wsdl:input message="tns:ReportReadyNotifySoapIn"/>
+      <wsdl:output message="tns:ReportReadyNotifySoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="HISGetWechat2DcodeImage">
+      <wsdl:input message="tns:HISGetWechat2DcodeImageSoapIn"/>
+      <wsdl:output message="tns:HISGetWechat2DcodeImageSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ExamStatusUpdateNotify">
+      <wsdl:input message="tns:ExamStatusUpdateNotifySoapIn"/>
+      <wsdl:output message="tns:ExamStatusUpdateNotifySoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="TestMethod">
+      <wsdl:input message="tns:TestMethodSoapIn"/>
+      <wsdl:output message="tns:TestMethodSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HIS_PS_SvcSoap" type="tns:HIS_PS_SvcSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="HISStatusUpdateNotify">
+      <soap:operation soapAction="http://tempuri.org/HISStatusUpdateNotify" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SynchDepartmentFromHIS">
+      <soap:operation soapAction="http://tempuri.org/SynchDepartmentFromHIS" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportReadyNotify">
+      <soap:operation soapAction="http://tempuri.org/ReportReadyNotify" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HISGetWechat2DcodeImage">
+      <soap:operation soapAction="http://tempuri.org/HISGetWechat2DcodeImage" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExamStatusUpdateNotify">
+      <soap:operation soapAction="http://tempuri.org/ExamStatusUpdateNotify" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestMethod">
+      <soap:operation soapAction="http://tempuri.org/TestMethod" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="HIS_PS_SvcSoap12" type="tns:HIS_PS_SvcSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="HISStatusUpdateNotify">
+      <soap12:operation soapAction="http://tempuri.org/HISStatusUpdateNotify" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SynchDepartmentFromHIS">
+      <soap12:operation soapAction="http://tempuri.org/SynchDepartmentFromHIS" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportReadyNotify">
+      <soap12:operation soapAction="http://tempuri.org/ReportReadyNotify" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HISGetWechat2DcodeImage">
+      <soap12:operation soapAction="http://tempuri.org/HISGetWechat2DcodeImage" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExamStatusUpdateNotify">
+      <soap12:operation soapAction="http://tempuri.org/ExamStatusUpdateNotify" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestMethod">
+      <soap12:operation soapAction="http://tempuri.org/TestMethod" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HIS_PS_Svc">
+    <wsdl:port name="HIS_PS_SvcSoap" binding="tns:HIS_PS_SvcSoap">
+      <soap:address location="http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="HIS_PS_SvcSoap12" binding="tns:HIS_PS_SvcSoap12">
+      <soap12:address location="http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://tempuri.org/ExamStatusUpdateNotify" name="ExamStatusUpdateNotify" bindingOperationName="ExamStatusUpdateNotify" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:ExamStatusUpdateNotify>
+         <!--Optional:-->
+         <tem:examInfo>?</tem:examInfo>
+      </tem:ExamStatusUpdateNotify>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/HIS_PS_SvcSoap/ExamStatusUpdateNotifyRequest"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/HISGetWechat2DcodeImage" name="HISGetWechat2DcodeImage" bindingOperationName="HISGetWechat2DcodeImage" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:HISGetWechat2DcodeImage>
+         <!--Optional:-->
+         <tem:wechat>?</tem:wechat>
+      </tem:HISGetWechat2DcodeImage>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/HIS_PS_SvcSoap/HISGetWechat2DcodeImageRequest"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/HISStatusUpdateNotify" name="HISStatusUpdateNotify" bindingOperationName="HISStatusUpdateNotify" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:HISStatusUpdateNotify>
+         <!--Optional:-->
+         <tem:infoXml>?</tem:infoXml>
+      </tem:HISStatusUpdateNotify>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/HIS_PS_SvcSoap/HISStatusUpdateNotifyRequest"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/ReportReadyNotify" name="ReportReadyNotify" bindingOperationName="ReportReadyNotify" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:ReportReadyNotify>
+         <!--Optional:-->
+         <tem:xml_para>?</tem:xml_para>
+      </tem:ReportReadyNotify>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/HIS_PS_SvcSoap/ReportReadyNotifyRequest"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/SynchDepartmentFromHIS" name="SynchDepartmentFromHIS" bindingOperationName="SynchDepartmentFromHIS" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:SynchDepartmentFromHIS/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/HIS_PS_SvcSoap/SynchDepartmentFromHISRequest"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/TestMethod" name="TestMethod" bindingOperationName="TestMethod" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:TestMethod/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/HIS_PS_SvcSoap/TestMethodRequest"/></con:call></con:operation></con:interface><con:testSuite name="GCRIS Reservation"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Exam Reservation" searchProperties="true"><con:settings/><con:testStep type="groovy" name="02.02.01 Create new exam reservation"><con:settings/><con:config><script>import groovy.sql.Sql;   
+//import java.lang.String;
+
+//get value from property of testcase for some parameters
+def CSIP = testRunner.testCase.testSuite.getPropertyValue("CSIP")
+def PSIP = testRunner.testCase.testSuite.getPropertyValue("PSIP")
+def hospitalID = testRunner.testCase.testSuite.getPropertyValue("hospitalID")
+def patientID = testRunner.testCase.getPropertyValue("patientID")
+def patientname = testRunner.testCase.getPropertyValue("patientname")
+def exam = ["Acc0012","Acc0013","Acc0014","Acc0015"] as String[]
+def examID = "\'" +exam[0] + "\'";
+log.info examID
+
+//get database instance of PS->ecs
+def username = "sa"  
+def password = "sa20021224\$"  
+def url = "jdbc:sqlserver://" + PSIP +"\\gcpacsws;databaseName=ecs"  
+def driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"       
+def database = Sql.newInstance(url,username,password,driver)  
+
+
+//get timestamp to create value for some parameters
+def time = new Date()
+def createtime = time.format("yyyy-MM-dd HH:mm:ss.SSS")
+def restimebegin = new Date(3600*1000)
+restimebegin = restimebegin + 365*47 - 40 
+restimebegin =restimebegin.format("yyyy-MM-dd HH:mm:ss.SSS") 
+log.info ("start time "+restimebegin)
+
+def restimeend = new Date(2*3600*1000)
+restimeend = restimeend + 365*47 - 40
+restimeend = restimeend.format("yyyy-MM-dd HH:mm:ss.SSS") 
+log.info ("end time "+restimeend)
+//if there is no reservation for the exam, insert a record into "examreservation" to simulate the action for create reservatoin for specific exam
+//modality is CT
+def examreservation = database.firstRow('select * from examreservation where examID =' + examID)
+if (examreservation == null)
+{
+	database.execute ("insert into examreservation values (${exam[0]},${"0"},${"0"},${0},${patientID},${patientname},${""},${"CR Room1"},${"CT"},${"CT"},${"Reco"},${"0"},${createtime},${NULL},${NULL},${""},${""},${restimebegin},${restimeend}) ")
+}
+
+//check there is reservation for this exam
+examreservation = database.firstRow('select * from examreservation where examID =' + examID)
+assert examreservation != null
+
+
+sleep(5000)
+
+//assert database record of CS
+def CSdatabase= Sql.newInstance("jdbc:mysql://" + CSIP +":3306/ecs","sa", "sa20021224\$", "com.mysql.jdbc.Driver");
+def hospital = CSdatabase.firstRow('select * from hospital where hospitalID =' + hospitalID)
+assert hospital != null
+def CSexamreservation = CSdatabase.firstRow('select * from examreservation where examID =' + examID)
+assert CSexamreservation != null
+def globalstatus = CSdatabase.firstRow('select * from globalstatus where statusID = \'' +CSexamreservation.statusID +'\'' + 'and hospitalID = ' + hospitalID  )
+assert globalstatus != null
+
+assert CSexamreservation.statusID == 231
+assert CSexamreservation.actionID == 0
+//print out info for wechat "check report status"
+log.info globalstatus.querymessage
+log.info hospital.hospitalname
+log.info patientname
+log.info CSexamreservation.resexamdatetimebegin
+log.info CSexamreservation.resexamdatetimeend
+log.info CSexamreservation.examroom
+log.info CSexamreservation.examname
+log.info globalstatus.statusdescription
+log.info globalstatus.notificationmessage
+log.info("//////")</script></con:config></con:testStep><con:testStep type="groovy" name="02.02.02 Update exam reservation"><con:settings/><con:config><script>import groovy.sql.Sql;   
+import java.lang.String;
+
+//get value from property of testcase for some parameters
+def CSIP = testRunner.testCase.testSuite.getPropertyValue("CSIP")
+def PSIP = testRunner.testCase.testSuite.getPropertyValue("PSIP")
+def hospitalID = testRunner.testCase.testSuite.getPropertyValue("hospitalID")
+def patientID = testRunner.testCase.getPropertyValue("patientID")
+def patientname = testRunner.testCase.getPropertyValue("patientname")-
+def exam = ["Acc0012","Acc0013","Acc0014","Acc0015"] as String[]
+def examID = "\'" +exam[1] + "\'";
+log.info examID
+
+//get database instance of PS->ecs
+def username = "sa"  
+def password = "sa20021224\$"  
+def url = "jdbc:sqlserver://" + PSIP +"\\gcpacsws;databaseName=ecs"  
+def driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"       
+def database = Sql.newInstance(url,username,password,driver)  
+
+/*
+//get timestamp to create value for some parameters
+def time = new Date()
+def createtime = time.format("yyyy-MM-dd HH:mm:ss.SSS")
+def restimebegin = new Date(3600*1000)
+restimebegin = restimebegin + 365*47 - 41 
+restimebegin =restimebegin.format("yyyy-MM-dd HH:mm:ss.SSS") 
+log.info ("start time "+restimebegin)
+def restimeend = new Date(2*3600*1000)
+restimeend = restimeend + 365*47 - 41 
+restimeend = restimeend.format("yyyy-MM-dd HH:mm:ss.SSS") 
+log.info ("end time "+restimeend)
+//if there is no reservation for the exam, insert a record into "examreservation" to simulate the action for create reservatoin for specific exam
+//modality is CR
+def examreservation = database.firstRow('select * from examreservation where examID =' + examID)
+if (examreservation == null)
+{
+	database.execute ("insert into examreservation values (${exam[1]},${"0"},${"0"},${0},${patientID},${patientname},${""},${"CR Room1"},${"CR"},${"CR"},${"Reco"},${"0"},${createtime},${"NULL"},${"NULL"},${""},${""},${restimebegin},${restimeend}) ")
+}
+*/
+
+//check there is reservation for this exam
+examreservation = database.firstRow('select * from examreservation where examID =' + examID)
+assert examreservation != null
+
+//sleep(5000)
+/*
+//update exam reservation
+restimebegin = new Date(3600*1000)
+restimebegin = restimebegin + 365*47 - 40 
+restimebegin =restimebegin.format("yyyy-MM-dd HH:mm:ss.SSS") 
+log.info ("start time "+restimebegin)
+restimeend = new Date(2*3600*1000)
+restimeend = restimeend + 365*47 - 40 
+restimeend = restimeend.format("yyyy-MM-dd HH:mm:ss.SSS")
+log.info ("start time "+restimeend)
+
+if (examreservation != null)
+{
+	database.execute "update examreservation set resexamdatetimebegin = \'" + restimebegin + "\' where examID = " + examID
+	database.execute "update examreservation set resexamdatetimeend = \'" + restimeend +"\' where examID = " + examID
+	database.execute ("update examreservation set actionID = 1 where examID = " + examID)
+
+}
+*/
+//assert database record of CS
+def CSdatabase= Sql.newInstance("jdbc:mysql://" + CSIP +":3306/ecs","sa", "sa20021224\$", "com.mysql.jdbc.Driver");
+def hospital = CSdatabase.firstRow('select * from hospital where hospitalID =' + hospitalID)
+assert hospital != null
+def CSexamreservation = CSdatabase.firstRow('select * from examreservation where examID =' + examID)
+assert CSexamreservation != null
+def globalstatus = CSdatabase.firstRow('select * from globalstatus where statusID = \'' +CSexamreservation.statusID +'\'' + 'and hospitalID = ' + hospitalID  )
+assert globalstatus != null
+
+assert CSexamreservation.statusID == 232
+assert CSexamreservation.actionID == 1
+//print out info for wechat "check report status"
+log.info globalstatus.querymessage
+log.info hospital.hospitalname
+log.info patientname
+log.info CSexamreservation.resexamdatetimebegin
+log.info CSexamreservation.resexamdatetimeend
+log.info CSexamreservation.examroom
+log.info CSexamreservation.examname
+log.info globalstatus.statusdescription
+log.info globalstatus.notificationmessage
+log.info("//////")</script></con:config></con:testStep><con:testStep type="groovy" name="02.02.03 Cancel exam reservation"><con:settings/><con:config><script>import groovy.sql.Sql;   
+import java.lang.String;
+
+//get value from property of testcase for some parameters
+def CSIP = testRunner.testCase.testSuite.getPropertyValue("CSIP")
+def PSIP = testRunner.testCase.testSuite.getPropertyValue("PSIP")
+def hospitalID = testRunner.testCase.testSuite.getPropertyValue("hospitalID")
+def patientID = testRunner.testCase.getPropertyValue("patientID")
+def patientname = testRunner.testCase.getPropertyValue("patientname")
+def exam = ["Acc0012","Acc0013","Acc0014","Acc0015"] as String[]
+def examID = "\'" +exam[0] + "\'";
+log.info examID
+
+//get database instance of PS->ecs
+def username = "sa"  
+def password = "sa20021224\$"  
+def url = "jdbc:sqlserver://" + PSIP +"\\gcpacsws;databaseName=ecs"  
+def driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"       
+def database = Sql.newInstance(url,username,password,driver)  
+
+/*
+//get timestamp to create value reservation start time and end time. 
+def time = new Date()
+def createtime = time.format("yyyy-MM-dd HH:mm:ss.SSS")
+def restimebegin = new Date(3600*1000)
+restimebegin = restimebegin + 365*47 - 39
+restimebegin =restimebegin.format("yyyy-MM-dd HH:mm:ss.SSS") 
+log.info ("start time "+restimebegin)
+
+def restimeend = new Date(2*3600*1000)
+restimeend = restimeend + 365*47 - 39
+restimeend = restimeend.format("yyyy-MM-dd HH:mm:ss.SSS") 
+log.info ("end time "+restimeend)
+//if there is no reservation for the exam, insert a record into "examreservation" to simulate the action for create reservatoin for specific exam
+//modality is DX
+def examreservation = database.firstRow('select * from examreservation where examID =' + examID)
+if (examreservation == null)
+{
+	database.execute ("insert into examreservation values (${exam[2]},${"0"},${"0"},${0},${patientID},${patientname},${""},${"DX Room1"},${"DX"},${"DX"},${"Reco"},${"0"},${createtime},${"NULL"},${"NULL"},${""},${""},${restimebegin},${restimeend}) ")
+}
+*/
+
+//check there is reservation for this exam
+examreservation = database.firstRow('select * from examreservation where examID =' + examID)
+assert examreservation != null
+
+sleep(10000)
+/*
+//Cancel exam reservation
+if (examreservation != null &amp;&amp; examreservation.actionID != 2)
+{
+	database.execute ("update examreservation set actionID = 2 where examID = " + examID)
+
+}
+*/
+//assert database record of CS
+def CSdatabase= Sql.newInstance("jdbc:mysql://" + CSIP +":3306/ecs","sa", "sa20021224\$", "com.mysql.jdbc.Driver");
+def hospital = CSdatabase.firstRow('select * from hospital where hospitalID =' + hospitalID)
+assert hospital != null
+def CSexamreservation = CSdatabase.firstRow('select * from examreservation where examID =' + examID)
+assert CSexamreservation != null
+def globalstatus = CSdatabase.firstRow('select * from globalstatus where statusID = \'' +CSexamreservation.statusID +'\'' + 'and hospitalID = ' + hospitalID  )
+assert globalstatus != null
+
+assert CSexamreservation.statusID == 233
+assert CSexamreservation.actionID == 2
+//print out info for wechat "check report status"
+log.info globalstatus.querymessage
+log.info hospital.hospitalname
+log.info patientname
+log.info CSexamreservation.resexamdatetimebegin
+log.info CSexamreservation.resexamdatetimeend
+log.info CSexamreservation.examroom
+log.info CSexamreservation.examname
+log.info globalstatus.statusdescription
+log.info globalstatus.notificationmessage
+log.info("//////")</script></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script"><con:settings/><con:config><script>def time = new Date()
+def createtime = time.format("yyyy-MM-dd HH:mm:ss.SSS")
+def restimebegin = new Date(3600*1000)
+restimebegin = restimebegin + 365*47 - 41 
+restimebegin =restimebegin.format("yyyy-MM-dd HH:mm:ss.SSS") 
+log.info ("start time "+restimebegin)
+
+def restimeend = new Date(2*3600*1000)
+restimeend = restimeend + 365*47 - 41 
+restimeend = restimeend.format("yyyy-MM-dd HH:mm:ss.SSS") 
+log.info ("end time "+restimeend)</script></con:config></con:testStep><con:properties><con:property><con:name>patientID</con:name><con:value>CD003</con:value></con:property><con:property><con:name>patientname</con:name><con:value>黄蓉</con:value></con:property></con:properties></con:testCase><con:properties><con:property><con:name>CSIP</con:name><con:value>10.184.129.203</con:value></con:property><con:property><con:name>PSIP</con:name><con:value>10.184.129.164</con:value></con:property><con:property><con:name>hospitalID</con:name><con:value>'1'</con:value></con:property></con:properties></con:testSuite><con:testSuite name="Film and report"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Push Notification" searchProperties="true"><con:settings/><con:testStep type="groovy" name="01.03.04.01 Both mode send film to ExamA by script only film ready"><con:settings/><con:config><script>import groovy.sql.Sql;   
+//import java.lang.String;
+
+//get value from property of testcase for some parameters
+def CSIP = testRunner.testCase.testSuite.getPropertyValue("CSIP")
+def PSIP = testRunner.testCase.testSuite.getPropertyValue("PSIP")
+def hospitalID = testRunner.testCase.testSuite.getPropertyValue("hospitalID")
+def patientID = testRunner.testCase.getPropertyValue("patientID")
+def patientname = testRunner.testCase.getPropertyValue("patientname")
+def exam = ["Acc0004","Acc0005","Acc0006","Acc0007","Acc0008","Acc0009","Acc0010","Acc0011"] as String[]
+def examID = "\'" +exam[0] + "\'";
+log.info examID
+
+//get database instance of PS->ecs
+def username = "sa"  
+def password = "sa20021224\$"  
+def url = "jdbc:sqlserver://" + PSIP +"\\gcpacsws;databaseName=ecs"  
+def driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"       
+def database = Sql.newInstance(url,username,password,driver)  
+
+
+//get database instance of PS->WGGC and update printmode to "both mode"
+def WGGCurl = "jdbc:sqlserver://"+ PSIP + "\\gcpacsws;databaseName=WGGC" 
+def wggcdatabase = Sql.newInstance(WGGCurl,username,password,driver) 
+
+//get timestamp to create value for some parameters
+def time = new Date()
+def studyinstanceUID = "1.2.840.113564.86.3.0.18467." + time.format("yyyyMMddHHmmss.SSS") + ".8378"
+def studydate = time.format("yyyyMMdd")
+def studytime = time.format("HHmmss")
+def createtime = time.format("yyyy-MM-dd HH:mm:ss.SSS")
+
+//if there is no film for the exam, insert a record into "filminfo" to simulate the action for sending film to specific exam
+def filminfo = wggcdatabase.firstRow('select * from AFP_filminfo where accessionnumber =' + examID)
+if (filminfo == null)
+{
+	wggcdatabase.execute ("insert into AFP_filminfo values (${studyinstanceUID},${"0"},${"0"},${createtime},${exam[0]},${patientname},${patientID},${""},${""},${studydate},${studytime},${""},${"ImageSuite"},${"10.184.129.199"},${"0"},${"0"},${"0"},${"8INX10IN"},${"BLUE FILM"},${"PORTRAIT"},${""},${"PROCESSOR"},${"MED"},${"1"},${"BLACK"},${"BLACK"},${"21"},${"300"},${"NO"},${""},${""},${""},${createtime}) ")
+}
+
+def printmode =  wggcdatabase.firstRow('select * from AFP_printmode where accessionnumber =' + examID)
+for (def i=1;printmode == null &amp;&amp; i&lt;10; i++)
+{
+	printmode =  wggcdatabase.firstRow('select * from AFP_printmode where accessionnumber =' + examID)
+	sleep(1000)
+} 
+assert printmode != null
+//update printmode
+wggcdatabase.execute "update AFP_printmode set printmode = 0 where accessionnumber = "+ examID
+wggcdatabase.execute "update AFP_printmode set holdflag = 0 where accessionnumber = "+ examID
+//check there is no report for this exam
+def reportinfo = wggcdatabase.firstRow('select * from AFP_reportinfo where accessionnumber =' + examID)
+assert reportinfo == null
+
+//assert database record of PS->ECS
+def examinfo = database.firstRow('select * from examinfo where accessionnumber = ' + examID)
+assert  examinfo != null
+sleep(5000)
+def filmreportstatus =  database.firstRow('select * from filmreportstatus where examID = ' +examID)
+assert filmreportstatus != null
+
+//assert database record of CS
+def CSdatabase= Sql.newInstance("jdbc:mysql://" + CSIP +":3306/ecs","sa", "sa20021224\$", "com.mysql.jdbc.Driver");
+
+def CSfilmreportstatus = CSdatabase.firstRow('select * from filmreportstatus where examID =' + examID)
+assert CSfilmreportstatus != null
+def globalstatus = CSdatabase.firstRow('select * from globalstatus where statusID = \'' +CSfilmreportstatus.statusID +'\'' + 'and hospitalID = ' + hospitalID  )
+assert globalstatus != null
+
+assert CSfilmreportstatus.statusID == 240
+//print out info for wechat "check report status"
+log.info globalstatus.querymessage
+log.info patientname
+log.info CSfilmreportstatus.statuscreatetime
+log.info globalstatus.statusdescription
+log.info CSfilmreportstatus.statusmessage
+log.info globalstatus.notificationmessage
+log.info("//////")</script></con:config></con:testStep><con:testStep type="request" name="01.03.04.01 Both mode ExamB only report ready"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HIS_PS_SvcSoap</con:interface><con:operation>ReportReadyNotify</con:operation><con:request name="01.03.04.01 Both mode ExamB only report ready" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.185/HisIntegration/HIS_PS_Svc.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ReportReadyNotify>
+         <!--Optional:-->
+         <tem:xml_para><![CDATA[<ReportReadyNotify>  <PatientName>杨康</PatientName>  <PatientID>CD004</PatientID>  <ReportType>PRIS</ReportType>  <applyInfos>    <applyInfo>      <applyNo>Acc0005</applyNo>        <reportID>Acc0005</reportID>      <FilePath>\\10.184.129.235\Kiosk K1\Site Data\PDF\遂宁\20140608\1374254.pdf</FilePath>    </applyInfo>  </applyInfos></ReportReadyNotify>]]]]>><![CDATA[</tem:xml_para>
+      </tem:ReportReadyNotify>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="GroovyScriptAssertion" name="Check PS"><con:configuration><scriptText>import groovy.sql.Sql;   
+
+
+//get value from property for some parameters
+def testCase = messageExchange.modelItem.testCase
+def CSIP = testCase.testSuite.getPropertyValue("CSIP")
+def PSIP = testCase.testSuite.getPropertyValue("PSIP")
+def patientID = testCase.getPropertyValue("patientID")
+def patientname = testCase.getPropertyValue("patientname")
+def exam = ["Acc0004","Acc0005","Acc0006","Acc0007","Acc0008","Acc0009","Acc0010","Acc0011"] as String[]
+def examID = "\'" +exam[1] + "\'";
+log.info examID
+
+sleep(25000)
+
+def username = "sa"  
+def password = "sa20021224\$"  
+def url = "jdbc:sqlserver://"+PSIP+"\\gcpacsws;databaseName=ecs"  
+def driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"     
+def database = Sql.newInstance(url,username,password,driver)  
+
+def WGGCurl = "jdbc:sqlserver://"+PSIP+"\\gcpacsws;databaseName=WGGC" 
+def wggcdatabase = Sql.newInstance(WGGCurl,username,password,driver) 
+def printmode =  wggcdatabase.firstRow('select * from AFP_printmode where accessionnumber =' + examID)
+assert printmode != null
+wggcdatabase.execute "update AFP_printmode set printmode = 0 where accessionnumber = "+ examID
+
+def filminfo = wggcdatabase.firstRow('select * from AFP_filminfo where accessionnumber =' + examID)
+//assert filminfo == null
+def reportinfo = wggcdatabase.firstRow('select * from AFP_reportinfo where accessionnumber =' + examID)
+assert reportinfo != null
+def examinfo = database.firstRow('select * from examinfo where accessionnumber = ' + examID)
+assert  examinfo != null
+def filmreportstatus =  database.firstRow('select * from filmreportstatus where examID = ' +examID)
+assert filmreportstatus != null
+log.info ("/////////////")</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" name="Click Check report"><con:configuration><scriptText>import groovy.sql.Sql
+def testCase = messageExchange.modelItem.testCase
+def CSIP = testCase.testSuite.getPropertyValue("CSIP")
+def database= Sql.newInstance("jdbc:mysql://"+CSIP+":3306/ecs","sa", "sa20021224\$", "com.mysql.jdbc.Driver");
+
+//get value from property for some parameters
+def hospitalID = testCase.testSuite.getPropertyValue("hospitalID")
+def patientID = testCase.getPropertyValue("patientID")
+def patientname = testCase.getPropertyValue("patientname")
+
+def count = database.firstRow('select count(*) from filmreportstatus where patientID = \'' + patientID + '\'')
+def exam = database.rows('select * from filmreportstatus where patientID = \'' + patientID + '\'')
+log.info patientname
+
+for(def i=0; i&lt;count[0]; i++)
+{
+	def examID = "\'" +exam[i].examID + "\'";
+	log.info ("examID is " +examID)
+	def filmreportstatus = database.firstRow('select * from filmreportstatus where examID =' + examID)
+	assert filmreportstatus != null
+     def globalstatus = database.firstRow('select * from globalstatus where statusID = \'' +filmreportstatus.statusID +'\'' + 'and hospitalID = ' + hospitalID  )
+	assert globalstatus != null
+	
+	
+	log.info filmreportstatus.statuscreatetime
+	log.info globalstatus.querymessage
+	log.info filmreportstatus.statusmessage
+	log.info CSfilmreportstatus.statusmessage
+	log.info globalstatus.notificationmessage
+}
+
+log.info("//////")
+
+
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ReportReadyNotify"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Assert statusID of ExamB"><con:settings/><con:config><script>import groovy.sql.Sql
+
+def CSIP = testRunner.testCase.testSuite.getPropertyValue("CSIP")
+def database= Sql.newInstance("jdbc:mysql://"+CSIP+":3306/ecs","sa", "sa20021224\$", "com.mysql.jdbc.Driver");
+
+//get value from property for some parameters
+def hospitalID = testRunner.testCase.testSuite.getPropertyValue("hospitalID")
+def patientID = testRunner.testCase.getPropertyValue("patientID")
+def patientname = testRunner.testCase.getPropertyValue("patientname")
+def examIDs = ["Acc0004","Acc0005","Acc0006","Acc0007","Acc0008","Acc0009","Acc0010","Acc0011"] as String[]
+def examID = "\'" +examIDs[1] + "\'";
+//log.info examID
+def filmreportstatus = database.firstRow('select * from filmreportstatus where examID =' + examID)
+assert filmreportstatus != null
+def globalstatus = database.firstRow('select * from globalstatus where statusID =' + "\'"+filmreportstatus.statusID + "\'")
+assert globalstatus != null
+assert filmreportstatus.statusID == 240</script></con:config></con:testStep><con:testStep type="groovy" name="01.03.04.01 Both mode  ExamB both report and film are ready"><con:settings/><con:config><script>import groovy.sql.Sql;   
+//import java.lang.String;
+
+//get value from property of testcase for some parameters
+def PSIP = testRunner.testCase.testSuite.getPropertyValue("PSIP")
+def CSIP = testRunner.testCase.testSuite.getPropertyValue("CSIP")
+def hospitalID = testRunner.testCase.testSuite.getPropertyValue("hospitalID")
+def patientID = testRunner.testCase.getPropertyValue("patientID")
+def patientname = testRunner.testCase.getPropertyValue("patientname")
+def exam = ["Acc0004","Acc0005","Acc0006","Acc0007","Acc0008","Acc0009","Acc0010","Acc0011"] as String[]
+def examID = "\'" +exam[1] + "\'";
+log.info examID
+
+//get database instance of PS->ecs
+def username = "sa"  
+def password = "sa20021224\$"  
+def url = "jdbc:sqlserver://"+PSIP+"\\gcpacsws;databaseName=ecs"  
+def driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"     
+def database = Sql.newInstance(url,username,password,driver) 
+
+
+//get database instance of PS->WGGC
+def WGGCurl = "jdbc:sqlserver://"+PSIP+"\\gcpacsws;databaseName=WGGC" 
+def wggcdatabase = Sql.newInstance(WGGCurl,username,password,driver) 
+
+//get timestamp to create value for some parameters
+def time = new Date()
+def studyinstanceUID = "1.2.840.113564.86.3.0.18467." + time.format("yyyyMMddHHmmss.SSS") + ".8378"
+def studydate = time.format("yyyyMMdd")
+def studytime = time.format("HHmmss")
+def createtime = time.format("yyyy-MM-dd HH:mm:ss.SSS")
+
+//if there is no film for the exam, insert a record into "filminfo" to simulate the action for sending film to specific exam
+def filminfo = wggcdatabase.firstRow('select * from AFP_filminfo where accessionnumber =' + examID)
+if (filminfo == null)
+{
+	wggcdatabase.execute ("insert into AFP_filminfo values (${studyinstanceUID},${"0"},${"0"},${createtime},${exam[1]},${patientname},${patientID},${""},${""},${studydate},${studytime},${""},${"ImageSuite"},${"10.184.129.199"},${"0"},${"0"},${"0"},${"8INX10IN"},${"BLUE FILM"},${"PORTRAIT"},${""},${"PROCESSOR"},${"MED"},${"1"},${"BLACK"},${"BLACK"},${"21"},${"300"},${"NO"},${""},${""},${""},${createtime}) ")
+}
+
+def printmode =  wggcdatabase.firstRow('select * from AFP_printmode where accessionnumber =' + examID)
+for (def i=1;printmode == null &amp;&amp; i&lt;10; i++)
+{
+	printmode =  wggcdatabase.firstRow('select * from AFP_printmode where accessionnumber =' + examID)
+	sleep(1000)
+} 
+assert printmode != null
+// update print mode to "Both report and film"
+wggcdatabase.execute "update AFP_printmode set printmode = 0 where accessionnumber = "+ examID
+wggcdatabase.execute "update AFP_printmode set holdflag = 0 where accessionnumber = "+ examID
+// there should be a new record of the exam inserted in reportinfo
+def reportinfo = wggcdatabase.firstRow('select * from AFP_reportinfo where accessionnumber =' + examID)
+assert reportinfo != null
+
+//assert database record of PS->ECS
+def examinfo = database.firstRow('select * from examinfo where accessionnumber = ' + examID)
+assert  examinfo != null
+def filmreportstatus =  database.firstRow('select * from filmreportstatus where examID = ' +examID)
+assert filmreportstatus != null
+//sleep(20000)
+//assert database record of CS
+def CSdatabase= Sql.newInstance("jdbc:mysql://"+CSIP+":3306/ecs","sa", "sa20021224\$", "com.mysql.jdbc.Driver");
+def CSfilmreportstatus = CSdatabase.firstRow('select * from filmreportstatus where examID =' + examID)
+assert CSfilmreportstatus != null
+def globalstatus = CSdatabase.firstRow('select * from globalstatus where statusID = \'' +CSfilmreportstatus.statusID +'\'' + 'and hospitalID = ' + hospitalID  )
+assert globalstatus != null
+
+//print out info for wechat "check report status"
+assert CSfilmreportstatus.statusID == 243
+log.info globalstatus.querymessage
+log.info patientname
+log.info CSfilmreportstatus.statuscreatetime
+log.info globalstatus.statusdescription
+log.info CSfilmreportstatus.statusmessage
+log.info globalstatus.notificationmessage
+log.info("//////")</script></con:config></con:testStep><con:testStep type="request" name="01.03.04.02 Film Only ExamC  report is ready"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HIS_PS_SvcSoap</con:interface><con:operation>ReportReadyNotify</con:operation><con:request name="01.03.04.02 Film Only ExamC  report is ready" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ReportReadyNotify>
+         <!--Optional:-->
+         <tem:xml_para><![CDATA[<ReportReadyNotify>  <PatientName>杨康</PatientName>  <PatientID>CD004</PatientID>  <ReportType>PRIS</ReportType>  <applyInfos>    <applyInfo>      <applyNo>Acc0006</applyNo>        <reportID>Acc0006</reportID>      <FilePath>\\10.184.129.235\Kiosk K1\Site Data\PDF\遂宁\20140608\1383770.pdf</FilePath>    </applyInfo>  </applyInfos></ReportReadyNotify>]]]]>><![CDATA[</tem:xml_para>
+      </tem:ReportReadyNotify>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="GroovyScriptAssertion" name="Check PS"><con:configuration><scriptText>import groovy.sql.Sql;   
+//import java.lang.String;
+
+
+//get value from property for some parameters
+def testCase = messageExchange.modelItem.testCase
+def CSIP = testCase.testSuite.getPropertyValue("CSIP")
+def PSIP = testCase.testSuite.getPropertyValue("PSIP")
+def patientID = testCase.getPropertyValue("patientID")
+def patientname = testCase.getPropertyValue("patientname")
+def exam = ["Acc0004","Acc0005","Acc0006","Acc0007","Acc0008","Acc0009","Acc0010","Acc0011"] as String[]
+def examID = "\'" +exam[2] + "\'";
+log.info examID
+
+def username = "sa"  
+def password = "sa20021224\$"  
+def url = "jdbc:sqlserver://"+PSIP+"\\gcpacsws;databaseName=ecs"  
+def driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"     
+def database = Sql.newInstance(url,username,password,driver)  
+sleep(25000)
+
+
+def WGGCurl = "jdbc:sqlserver://"+PSIP+"\\gcpacsws;databaseName=WGGC" 
+def wggcdatabase = Sql.newInstance(WGGCurl,username,password,driver) 
+def printmode =  wggcdatabase.firstRow('select * from AFP_printmode where accessionnumber =' + examID)
+assert printmode != null
+wggcdatabase.execute "update AFP_printmode set printmode = 1 where accessionnumber = "+ examID
+wggcdatabase.execute "update AFP_printmode set holdflag = 0 where accessionnumber = "+ examID
+
+//def filminfo = wggcdatabase.firstRow('select * from AFP_filminfo where accessionnumber =' + examID)
+//assert filminfo == null
+def reportinfo = wggcdatabase.firstRow('select * from AFP_reportinfo where accessionnumber =' + examID)
+assert reportinfo != null
+def examinfo = database.firstRow('select * from examinfo where accessionnumber = ' + examID)
+assert  examinfo != null
+def filmreportstatus =  database.firstRow('select * from filmreportstatus where examID = ' +examID)
+assert filmreportstatus != null</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" name="Click Check report"><con:configuration><scriptText>import groovy.sql.Sql
+
+
+//get value from property for some parameters
+def testCase = messageExchange.modelItem.testCase
+def hospitalID = testCase.testSuite.getPropertyValue("hospitalID")
+def CSIP = testCase.testSuite.getPropertyValue("CSIP")
+def PSIP = testCase.testSuite.getPropertyValue("PSIP")
+def patientID = testCase.getPropertyValue("patientID")
+def patientname = testCase.getPropertyValue("patientname")
+def exam = ["Acc0004","Acc0005","Acc0006","Acc0007","Acc0008","Acc0009","Acc0010","Acc0011"] as String[]
+def examID = "\'" +exam[2] + "\'";
+log.info examID
+
+def database= Sql.newInstance("jdbc:mysql://"+CSIP+":3306/ecs","sa", "sa20021224\$", "com.mysql.jdbc.Driver");
+
+def filmreportstatus = database.firstRow('select * from filmreportstatus where examID =' + examID)
+assert filmreportstatus != null
+def globalstatus = database.firstRow('select * from globalstatus where statusID = \'' +filmreportstatus.statusID +'\'' + 'and hospitalID = ' + hospitalID  )
+assert globalstatus != null
+
+log.info globalstatus.querymessage
+log.info patientname
+log.info filmreportstatus.statuscreatetime
+log.info globalstatus.statusdescription
+log.info filmreportstatus.statusmessage
+log.info globalstatus.notificationmessage
+log.info("//////")
+
+
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ReportReadyNotify"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Assert statusID of ExamC"><con:settings/><con:config><script>import groovy.sql.Sql
+
+def CSIP = testRunner.testCase.testSuite.getPropertyValue("CSIP")
+def database= Sql.newInstance("jdbc:mysql://"+CSIP+":3306/ecs","sa", "sa20021224\$", "com.mysql.jdbc.Driver");
+
+//get value from property for some parameters
+def hospitalID = testRunner.testCase.testSuite.getPropertyValue("hospitalID")
+def patientID = testRunner.testCase.getPropertyValue("patientID")
+def patientname = testRunner.testCase.getPropertyValue("patientname")
+def examIDs = ["Acc0004","Acc0005","Acc0006","Acc0007","Acc0008","Acc0009","Acc0010","Acc0011"] as String[]
+def examID = "\'" +examIDs[2] + "\'";
+//log.info examID
+def filmreportstatus = database.firstRow('select * from filmreportstatus where examID =' + examID)
+assert filmreportstatus != null
+def globalstatus = database.firstRow('select * from globalstatus where statusID =' + "\'"+filmreportstatus.statusID + "\'")
+assert globalstatus != null
+assert filmreportstatus.statusID == 240</script></con:config></con:testStep><con:testStep type="groovy" name="01.03.04.02 Film Only ExamC both report and film are ready"><con:settings/><con:config><script>import groovy.sql.Sql;   
+//import java.lang.String;
+
+//get value from property of testcase for some parameters
+def hospitalID = testRunner.testCase.testSuite.getPropertyValue("hospitalID")
+def CSIP = testRunner.testCase.testSuite.getPropertyValue("CSIP")
+def PSIP = testRunner.testCase.testSuite.getPropertyValue("PSIP")
+def patientID = testRunner.testCase.getPropertyValue("patientID")
+def patientname = testRunner.testCase.getPropertyValue("patientname")
+def exam = ["Acc0004","Acc0005","Acc0006","Acc0007","Acc0008","Acc0009","Acc0010","Acc0011"] as String[]
+def examID = "\'" +exam[2] + "\'";
+log.info examID
+
+//get database instance of PS->ecs
+def username = "sa"  
+def password = "sa20021224\$"  
+def url = "jdbc:sqlserver://"+PSIP+"\\gcpacsws;databaseName=ecs"  
+def driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"     
+def database = Sql.newInstance(url,username,password,driver)  
+
+
+//get database instance of PS->WGGC
+def WGGCurl = "jdbc:sqlserver://"+PSIP+"\\gcpacsws;databaseName=WGGC" 
+def wggcdatabase = Sql.newInstance(WGGCurl,username,password,driver) 
+
+//get timestamp to create value for some parameters
+def time = new Date()
+def studyinstanceUID = "1.2.840.113564.86.3.0.18467." + time.format("yyyyMMddHHmmss.SSS") + ".8378"
+def studydate = time.format("yyyyMMdd")
+def studytime = time.format("HHmmss")
+def createtime = time.format("yyyy-MM-dd HH:mm:ss.SSS")
+
+//if there is no film for the exam, insert a record into "filminfo" to simulate the action for sending film to specific exam
+def filminfo = wggcdatabase.firstRow('select * from AFP_filminfo where accessionnumber =' + examID)
+if (filminfo == null)
+{
+	wggcdatabase.execute ("insert into AFP_filminfo values (${studyinstanceUID},${"0"},${"0"},${createtime},${exam[2]},${patientname},${patientID},${""},${""},${studydate},${studytime},${""},${"ImageSuite"},${"10.184.129.199"},${"0"},${"0"},${"0"},${"8INX10IN"},${"BLUE FILM"},${"PORTRAIT"},${""},${"PROCESSOR"},${"MED"},${"1"},${"BLACK"},${"BLACK"},${"21"},${"300"},${"NO"},${""},${""},${""},${createtime}) ")
+}
+
+def printmode =  wggcdatabase.firstRow('select * from AFP_printmode where accessionnumber =' + examID)
+for (def i=1;printmode == null &amp;&amp; i&lt;10; i++)
+{
+	printmode =  wggcdatabase.firstRow('select * from AFP_printmode where accessionnumber =' + examID)
+	sleep(1000)
+} 
+//assert the record is insert to filminfo successfully
+assert printmode != null
+
+// verify table reportinfo
+def reportinfo = wggcdatabase.firstRow('select * from AFP_reportinfo where accessionnumber =' + examID)
+assert reportinfo != null
+
+//assert database record of PS->ECS
+def examinfo = database.firstRow('select * from examinfo where accessionnumber = ' + examID)
+assert  examinfo != null
+def filmreportstatus =  database.firstRow('select * from filmreportstatus where examID = ' +examID)
+assert filmreportstatus != null
+
+sleep(10000)
+//assert database record of CS
+def CSdatabase= Sql.newInstance("jdbc:mysql://"+CSIP+":3306/ecs","sa", "sa20021224\$", "com.mysql.jdbc.Driver");
+
+def CSfilmreportstatus = CSdatabase.firstRow('select * from filmreportstatus where examID =' + examID)
+assert CSfilmreportstatus != null
+//assert CSfilmreportstatus.filmcount == 1
+//assert CSfilmreportstatus.reportcount == 1
+def globalstatus = CSdatabase.firstRow('select * from globalstatus where statusID = \'' +CSfilmreportstatus.statusID +'\'' + 'and hospitalID = ' + hospitalID  )
+assert globalstatus != null
+
+assert filmreportstatus.statusID == 241
+//print out info for wechat "check report status"
+log.info globalstatus.querymessage
+log.info patientname
+log.info CSfilmreportstatus.statuscreatetime
+log.info globalstatus.statusdescription
+log.info CSfilmreportstatus.statusmessage
+log.info globalstatus.notificationmessage
+log.info("//////")</script></con:config></con:testStep><con:testStep type="groovy" name="01.03.04.02 Film Only ExamD film is ready"><con:settings/><con:config><script>import groovy.sql.Sql;   
+//import java.lang.String;
+
+//get value from property of testcase for some parameters
+def hospitalID = testRunner.testCase.testSuite.getPropertyValue("hospitalID")
+def CSIP = testRunner.testCase.testSuite.getPropertyValue("CSIP")
+def PSIP = testRunner.testCase.testSuite.getPropertyValue("PSIP")
+def patientID = testRunner.testCase.getPropertyValue("patientID")
+def patientname = testRunner.testCase.getPropertyValue("patientname")
+def exam = ["Acc0004","Acc0005","Acc0006","Acc0007","Acc0008","Acc0009","Acc0010","Acc0011"] as String[]
+def examID = "\'" +exam[3] + "\'";
+log.info examID
+
+//get database instance of PS->ecs
+def username = "sa"  
+def password = "sa20021224\$"  
+def url = "jdbc:sqlserver://"+PSIP+"\\gcpacsws;databaseName=ecs"  
+def driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"     
+def database = Sql.newInstance(url,username,password,driver)  
+
+//get database instance of PS->WGGC
+def WGGCurl = "jdbc:sqlserver://"+PSIP+"\\gcpacsws;databaseName=WGGC" 
+def wggcdatabase = Sql.newInstance(WGGCurl,username,password,driver) 
+
+//get timestamp to create value for some parameters
+def time = new Date()
+def studyinstanceUID = "1.2.840.113564.86.3.0.18467." + time.format("yyyyMMddHHmmss.SSS") + ".8378"
+def studydate = time.format("yyyyMMdd")
+def studytime = time.format("HHmmss")
+def createtime = time.format("yyyy-MM-dd HH:mm:ss.SSS")
+
+//if there is no film for the exam, insert a record into "filminfo" to simulate the action for sending film to specific exam
+def filminfo = wggcdatabase.firstRow('select * from AFP_filminfo where accessionnumber =' + examID)
+if (filminfo == null)
+{
+	wggcdatabase.execute ("insert into AFP_filminfo values (${studyinstanceUID},${"0"},${"0"},${createtime},${exam[3]},${patientname},${patientID},${""},${""},${studydate},${studytime},${""},${"ImageSuite"},${"10.184.129.199"},${"0"},${"0"},${"0"},${"8INX10IN"},${"BLUE FILM"},${"PORTRAIT"},${""},${"PROCESSOR"},${"MED"},${"1"},${"BLACK"},${"BLACK"},${"21"},${"300"},${"NO"},${""},${""},${""},${createtime}) ")
+}
+
+def printmode =  wggcdatabase.firstRow('select * from AFP_printmode where accessionnumber =' + examID)
+for (def i=1;printmode == null &amp;&amp; i&lt;10; i++)
+{
+	printmode =  wggcdatabase.firstRow('select * from AFP_printmode where accessionnumber =' + examID)
+	sleep(1000)
+} 
+//assert the record is insert to filminfo successfully
+assert printmode != null
+//  update print mode to "Film Only"
+wggcdatabase.execute "update AFP_printmode set printmode = 1 where accessionnumber = "+ examID
+wggcdatabase.execute "update AFP_printmode set holdflag = 0 where accessionnumber = "+ examID
+// there is no record for the exam in reportinfo
+def reportinfo = wggcdatabase.firstRow('select * from AFP_reportinfo where accessionnumber =' + examID)
+assert reportinfo == null
+
+//assert database record of PS->ECS
+def examinfo = database.firstRow('select * from examinfo where accessionnumber = ' + examID)
+assert  examinfo != null
+sleep(5000)
+def filmreportstatus =  database.firstRow('select * from filmreportstatus where examID = ' +examID)
+assert filmreportstatus != null
+
+sleep(20000)
+//assert database record of CS
+def CSdatabase= Sql.newInstance("jdbc:mysql://"+CSIP+":3306/ecs","sa", "sa20021224\$", "com.mysql.jdbc.Driver");
+
+def CSfilmreportstatus = CSdatabase.firstRow('select * from filmreportstatus where examID =' + examID)
+assert CSfilmreportstatus != null
+//assert CSfilmreportstatus.filmcount == 1
+
+def globalstatus = CSdatabase.firstRow('select * from globalstatus where statusID = \'' +CSfilmreportstatus.statusID +'\'' + 'and hospitalID = ' + hospitalID  )
+assert globalstatus != null
+assert filmreportstatus.statusID == 241
+//print out info for wechat "check report status"
+log.info globalstatus.querymessage
+log.info patientname
+log.info CSfilmreportstatus.statuscreatetime
+log.info globalstatus.statusdescription
+log.info CSfilmreportstatus.statusmessage
+log.info globalstatus.notificationmessage
+log.info("//////")</script></con:config></con:testStep><con:testStep type="groovy" name="01.03.04.03  Report only mode, only send film to ExamE by script"><con:settings/><con:config><script>import groovy.sql.Sql;   
+//import java.lang.String;
+
+//get value from property of testcase for some parameters
+def hospitalID = testRunner.testCase.testSuite.getPropertyValue("hospitalID")
+def CSIP = testRunner.testCase.testSuite.getPropertyValue("CSIP")
+def PSIP = testRunner.testCase.testSuite.getPropertyValue("PSIP")
+def patientID = testRunner.testCase.getPropertyValue("patientID")
+def patientname = testRunner.testCase.getPropertyValue("patientname")
+def exam = ["Acc0004","Acc0005","Acc0006","Acc0007","Acc0008","Acc0009","Acc0010","Acc0011"] as String[]
+def examID = "\'" +exam[4] + "\'";
+log.info examID
+
+//get database instance of PS->ecs
+def username = "sa"  
+def password = "sa20021224\$"  
+def url = "jdbc:sqlserver://"+PSIP+"\\gcpacsws;databaseName=ecs"  
+def driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"       
+def database = Sql.newInstance(url,username,password,driver)  
+
+
+//get database instance of PS->WGGC and update printmode to "both mode"
+def WGGCurl = "jdbc:sqlserver://"+PSIP+"\\gcpacsws;databaseName=WGGC" 
+def wggcdatabase = Sql.newInstance(WGGCurl,username,password,driver) 
+
+//get timestamp to create value for some parameters
+def time = new Date()
+def studyinstanceUID = "1.2.840.113564.86.3.0.18467." + time.format("yyyyMMddHHmmss.SSS") + ".8378"
+def studydate = time.format("yyyyMMdd")
+def studytime = time.format("HHmmss")
+def createtime = time.format("yyyy-MM-dd HH:mm:ss.SSS")
+
+//if there is no film for the exam, insert a record into "filminfo" to simulate the action for sending film to specific exam
+def filminfo = wggcdatabase.firstRow('select * from AFP_filminfo where accessionnumber =' + examID)
+if (filminfo == null)
+{
+	wggcdatabase.execute ("insert into AFP_filminfo values (${studyinstanceUID},${"0"},${"0"},${createtime},${exam[4]},${patientname},${patientID},${""},${""},${studydate},${studytime},${""},${"ImageSuite"},${"10.184.129.199"},${"0"},${"0"},${"0"},${"8INX10IN"},${"BLUE FILM"},${"PORTRAIT"},${""},${"PROCESSOR"},${"MED"},${"1"},${"BLACK"},${"BLACK"},${"21"},${"300"},${"NO"},${""},${""},${""},${createtime}) ")
+}
+
+def printmode =  wggcdatabase.firstRow('select * from AFP_printmode where accessionnumber =' + examID)
+for (def i=1;printmode == null &amp;&amp; i&lt;10; i++)
+{
+	printmode =  wggcdatabase.firstRow('select * from AFP_printmode where accessionnumber =' + examID)
+	sleep(1000)
+} 
+//assert the record is insert to filminfo successfully
+assert printmode != null
+
+// modify print mode to "Report only"
+wggcdatabase.execute "update AFP_printmode set printmode = 2 where accessionnumber = "+ examID
+wggcdatabase.execute "update AFP_printmode set holdflag = 0 where accessionnumber = "+ examID
+//check there is no report for this exam
+def reportinfo = wggcdatabase.firstRow('select * from AFP_reportinfo where accessionnumber =' + examID)
+assert reportinfo == null
+
+//assert database record of PS->ECS
+def examinfo = database.firstRow('select * from examinfo where accessionnumber = ' + examID)
+assert  examinfo != null
+sleep(5000)
+def filmreportstatus =  database.firstRow('select * from filmreportstatus where examID = ' +examID)
+assert filmreportstatus != null
+
+//assert database record of CS
+def CSdatabase= Sql.newInstance("jdbc:mysql://"+CSIP+":3306/ecs","sa", "sa20021224\$", "com.mysql.jdbc.Driver");
+
+def CSfilmreportstatus = CSdatabase.firstRow('select * from filmreportstatus where examID =' + examID)
+assert CSfilmreportstatus != null
+def globalstatus = CSdatabase.firstRow('select * from globalstatus where statusID = \'' +CSfilmreportstatus.statusID +'\'' + 'and hospitalID = ' + hospitalID  )
+assert globalstatus != null
+
+//print out info for wechat "check report status"
+assert filmreportstatus.statusID == 240
+log.info globalstatus.querymessage
+log.info patientname
+log.info CSfilmreportstatus.statuscreatetime
+log.info CSfilmreportstatus.statusmessage
+log.info globalstatus.notificationmessage
+log.info("//////")</script></con:config></con:testStep><con:testStep type="request" name="01.03.04.03 Report Only ExamE film and report are ready"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HIS_PS_SvcSoap</con:interface><con:operation>ReportReadyNotify</con:operation><con:request name="01.03.04.03 Report Only ExamE film and report are ready" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ReportReadyNotify>
+         <!--Optional:-->
+         <tem:xml_para><![CDATA[<ReportReadyNotify>  <PatientName>杨康</PatientName>  <PatientID>CD004</PatientID>  <ReportType>PRIS</ReportType>  <applyInfos>    <applyInfo>      <applyNo>Acc0008</applyNo>        <reportID>Acc0008</reportID>      <FilePath>\\10.184.129.235\Kiosk K1\Site Data\PDF\遂宁\20140608\1388667.pdf</FilePath>    </applyInfo>  </applyInfos></ReportReadyNotify>]]]]>><![CDATA[</tem:xml_para>
+      </tem:ReportReadyNotify>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="GroovyScriptAssertion" name="Check PS"><con:configuration><scriptText>import groovy.sql.Sql;   
+//import java.lang.String;
+ 
+
+//get value from property for some parameters
+def testCase = messageExchange.modelItem.testCase
+def CSIP = testCase.testSuite.getPropertyValue("CSIP")
+def PSIP = testCase.testSuite.getPropertyValue("PSIP")
+def exam = ["Acc0004","Acc0005","Acc0006","Acc0007","Acc0008","Acc0009","Acc0010","Acc0011"] as String[]
+def examID = "\'" +exam[4] + "\'";
+log.info examID
+
+def username = "sa"  
+def password = "sa20021224\$"  
+def url = "jdbc:sqlserver://"+PSIP+"\\gcpacsws;databaseName=ecs"  
+def driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"     
+def database = Sql.newInstance(url,username,password,driver) 
+
+def WGGCurl = "jdbc:sqlserver://"+PSIP+"\\gcpacsws;databaseName=WGGC" 
+def wggcdatabase = Sql.newInstance(WGGCurl,username,password,driver) 
+def printmode =  wggcdatabase.firstRow('select * from AFP_printmode where accessionnumber =' + examID)
+assert printmode != null
+
+def filminfo = wggcdatabase.firstRow('select * from AFP_filminfo where accessionnumber =' + examID)
+assert filminfo != null
+def reportinfo = wggcdatabase.firstRow('select * from AFP_reportinfo where accessionnumber =' + examID)
+assert reportinfo != null
+def examinfo = database.firstRow('select * from examinfo where accessionnumber = ' + examID)
+assert  examinfo != null
+def filmreportstatus =  database.firstRow('select * from filmreportstatus where examID = ' +examID)
+assert filmreportstatus != null</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" name="check notification in wechat"><con:configuration><scriptText>import groovy.sql.Sql
+
+
+//get value from property for some parameters
+def testCase = messageExchange.modelItem.testCase
+def hospitalID = testCase.testSuite.getPropertyValue("hospitalID")
+def CSIP = testCase.testSuite.getPropertyValue("CSIP")
+def PSIP = testCase.testSuite.getPropertyValue("PSIP")
+def patientname = testCase.getPropertyValue("patientname")
+def exam = ["Acc0004","Acc0005","Acc0006","Acc0007","Acc0008","Acc0009","Acc0010","Acc0011"] as String[]
+def examID = "\'" +exam[4] + "\'";
+log.info examID
+
+sleep(25000)
+def database= Sql.newInstance("jdbc:mysql://"+CSIP+":3306/ecs","sa", "sa20021224\$", "com.mysql.jdbc.Driver");
+
+def filmreportstatus = database.firstRow('select * from filmreportstatus where examID =' + examID)
+assert filmreportstatus != null
+def globalstatus = database.firstRow('select * from globalstatus where statusID = \'' +filmreportstatus.statusID +'\'' + 'and hospitalID = ' + hospitalID  )
+assert globalstatus != null
+
+log.info globalstatus.querymessage
+log.info patientname
+log.info filmreportstatus.statuscreatetime
+log.info globalstatus.statusdescription
+log.info filmreportstatus.statusmessage
+log.info globalstatus.notificationmessage
+log.info("//////")
+
+
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ReportReadyNotify"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="01.03.04.03 Report Only ExamF send report is ready"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HIS_PS_SvcSoap</con:interface><con:operation>ReportReadyNotify</con:operation><con:request name="01.03.04.03 Report Only ExamF send report is ready" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ReportReadyNotify>
+         <!--Optional:-->
+         <tem:xml_para><![CDATA[<ReportReadyNotify>  <PatientName>杨康</PatientName>  <PatientID>CD004</PatientID>  <ReportType>PRIS</ReportType>  <applyInfos>    <applyInfo>      <applyNo>Acc0009</applyNo>        <reportID>Acc0009</reportID>      <FilePath>\\10.184.129.235\Kiosk K1\Site Data\PDF\遂宁\20140608\1385921.pdf</FilePath>    </applyInfo>  </applyInfos></ReportReadyNotify>]]]]>><![CDATA[</tem:xml_para>
+      </tem:ReportReadyNotify>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="GroovyScriptAssertion" name="Check PS"><con:configuration><scriptText>import groovy.sql.Sql;   
+//import java.lang.String;
+ 
+
+//get value from property for some parameters
+def testCase = messageExchange.modelItem.testCase
+def CSIP = testCase.testSuite.getPropertyValue("CSIP")
+def PSIP = testCase.testSuite.getPropertyValue("PSIP")
+def exam = ["Acc0004","Acc0005","Acc0006","Acc0007","Acc0008","Acc0009","Acc0010","Acc0011"] as String[]
+def examID = "\'" +exam[5] + "\'";
+log.info examID
+
+def username = "sa"  
+def password = "sa20021224\$"  
+def url = "jdbc:sqlserver://"+PSIP+"\\gcpacsws;databaseName=ecs"  
+def driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"     
+def database = Sql.newInstance(url,username,password,driver) 
+
+def WGGCurl = "jdbc:sqlserver://"+PSIP+"\\gcpacsws;databaseName=WGGC" 
+def wggcdatabase = Sql.newInstance(WGGCurl,username,password,driver) 
+sleep(5000)
+def printmode =  wggcdatabase.firstRow('select * from AFP_printmode where accessionnumber =' + examID)
+assert printmode != null
+wggcdatabase.execute "update AFP_printmode set printmode = 2 where accessionnumber = "+ examID
+wggcdatabase.execute "update AFP_printmode set holdflag = 0 where accessionnumber = "+ examID
+
+def filminfo = wggcdatabase.firstRow('select * from AFP_filminfo where accessionnumber =' + examID)
+assert filminfo == null
+def reportinfo = wggcdatabase.firstRow('select * from AFP_reportinfo where accessionnumber =' + examID)
+assert reportinfo != null
+def examinfo = database.firstRow('select * from examinfo where accessionnumber = ' + examID)
+assert  examinfo != null
+def filmreportstatus =  database.firstRow('select * from filmreportstatus where examID = ' +examID)
+assert filmreportstatus != null</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" name="check notification in wechat"><con:configuration><scriptText>import groovy.sql.Sql
+
+
+//get value from property for some parameters
+def testCase = messageExchange.modelItem.testCase
+def hospitalID = testCase.testSuite.getPropertyValue("hospitalID")
+def CSIP = testCase.testSuite.getPropertyValue("CSIP")
+def PSIP = testCase.testSuite.getPropertyValue("PSIP")
+def patientname = testCase.getPropertyValue("patientname")
+def exam = ["Acc0004","Acc0005","Acc0006","Acc0007","Acc0008","Acc0009","Acc0010","Acc0011"] as String[]
+def examID = "\'" +exam[5] + "\'";
+log.info examID
+
+sleep(25000)
+def database= Sql.newInstance("jdbc:mysql://"+CSIP+":3306/ecs","sa", "sa20021224\$", "com.mysql.jdbc.Driver");
+
+def filmreportstatus = database.firstRow('select * from filmreportstatus where examID =' + examID)
+assert filmreportstatus != null
+def globalstatus = database.firstRow('select * from globalstatus where statusID = \'' +filmreportstatus.statusID +'\'' + 'and hospitalID = ' + hospitalID  )
+assert globalstatus != null
+
+log.info globalstatus.querymessage
+log.info patientname
+log.info filmreportstatus.statuscreatetime
+log.info globalstatus.statusdescription
+log.info filmreportstatus.statusmessage
+log.info globalstatus.notificationmessage
+log.info("//////")
+
+
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ReportReadyNotify"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="01.03.04.04 Any mode, Send film to examG"><con:settings/><con:config><script>import groovy.sql.Sql;   
+//import java.lang.String;
+
+//get value from property of testcase for some parameters
+def hospitalID = testRunner.testCase.testSuite.getPropertyValue("hospitalID")
+def CSIP = testRunner.testCase.testSuite.getPropertyValue("CSIP")
+def PSIP = testRunner.testCase.testSuite.getPropertyValue("PSIP")
+def patientID = testRunner.testCase.getPropertyValue("patientID")
+def patientname = testRunner.testCase.getPropertyValue("patientname")
+def exam = ["Acc0004","Acc0005","Acc0006","Acc0007","Acc0008","Acc0009","Acc0010","Acc0011"] as String[]
+def examID = "\'" +exam[6] + "\'";
+log.info examID
+
+//get database instance of PS->ecs
+def username = "sa"  
+def password = "sa20021224\$"  
+def url = "jdbc:sqlserver://"+PSIP+"\\gcpacsws;databaseName=ecs"  
+def driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"       
+def database = Sql.newInstance(url,username,password,driver)  
+
+//get database instance of PS->WGGC
+def WGGCurl = "jdbc:sqlserver://"+PSIP+"\\gcpacsws;databaseName=WGGC" 
+def wggcdatabase = Sql.newInstance(WGGCurl,username,password,driver)
+
+//get timestamp to create value for some parameters
+def time = new Date()
+def studyinstanceUID = "1.2.840.113564.86.3.0.18467." + time.format("yyyyMMddHHmmss.SSS") + ".8378"
+def studydate = time.format("yyyyMMdd")
+def studytime = time.format("HHmmss")
+def createtime = time.format("yyyy-MM-dd HH:mm:ss.SSS")
+
+//if there is no film for the exam, insert a record into "filminfo" to simulate the action for sending film to specific exam
+def filminfo = wggcdatabase.firstRow('select * from AFP_filminfo where accessionnumber =' + examID)
+if (filminfo == null)
+{
+	wggcdatabase.execute ("insert into AFP_filminfo values (${studyinstanceUID},${"0"},${"0"},${createtime},${exam[6]},${patientname},${patientID},${""},${""},${studydate},${studytime},${""},${"ImageSuite"},${"10.184.129.199"},${"0"},${"0"},${"0"},${"8INX10IN"},${"BLUE FILM"},${"PORTRAIT"},${""},${"PROCESSOR"},${"MED"},${"1"},${"BLACK"},${"BLACK"},${"21"},${"300"},${"NO"},${""},${""},${""},${createtime}) ")
+}
+
+def printmode =  wggcdatabase.firstRow('select * from AFP_printmode where accessionnumber =' + examID)
+for (def i=1;printmode == null &amp;&amp; i&lt;10; i++)
+{
+	printmode =  wggcdatabase.firstRow('select * from AFP_printmode where accessionnumber =' + examID)
+	sleep(1000)
+} 
+assert printmode != null
+wggcdatabase.execute "update AFP_printmode set printmode = 3 where accessionnumber = "+ examID
+wggcdatabase.execute "update AFP_printmode set holdflag = 0 where accessionnumber = "+ examID
+sleep(9000)
+//assert database record of CS
+def CSdatabase= Sql.newInstance("jdbc:mysql://"+CSIP+":3306/ecs","sa", "sa20021224\$", "com.mysql.jdbc.Driver");
+
+
+def CSfilmreportstatus = CSdatabase.firstRow('select * from filmreportstatus where examID =' + examID)
+assert CSfilmreportstatus != null
+def globalstatus = CSdatabase.firstRow('select * from globalstatus where statusID = \'' +CSfilmreportstatus.statusID +'\'' + 'and hospitalID = ' + hospitalID  )
+assert globalstatus != null
+
+//print out info for wechat "check report status"
+assert CSfilmreportstatus.statusID == 241
+
+log.info globalstatus.querymessage
+log.info patientname
+log.info CSfilmreportstatus.statuscreatetime
+log.info globalstatus.statusdescription
+log.info CSfilmreportstatus.statusmessage
+log.info globalstatus.notificationmessage
+log.info("//////")
+</script></con:config></con:testStep><con:testStep type="request" name="01.03.04.04 Any Mode ExamG send report, film and report are ready"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HIS_PS_SvcSoap</con:interface><con:operation>ReportReadyNotify</con:operation><con:request name="01.03.04.04 Any Mode ExamG send report, film and report are ready" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ReportReadyNotify>
+         <!--Optional:-->
+         <tem:xml_para><![CDATA[<ReportReadyNotify>  <PatientName>杨康</PatientName>  <PatientID>CD004</PatientID>  <ReportType>PRIS</ReportType>  <applyInfos>    <applyInfo>      <applyNo>Acc0010</applyNo>        <reportID>Acc0010</reportID>      <FilePath>\\10.184.129.235\Kiosk K1\Site Data\PDF\遂宁\20140608\1389006.pdf</FilePath>    </applyInfo>  </applyInfos></ReportReadyNotify>]]]]>><![CDATA[</tem:xml_para>
+      </tem:ReportReadyNotify>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="GroovyScriptAssertion" name="Check PS"><con:configuration><scriptText>import groovy.sql.Sql;   
+//import java.lang.String;
+  
+
+//get value from property for some parameters
+def testCase = messageExchange.modelItem.testCase
+def CSIP = testCase.testSuite.getPropertyValue("CSIP")
+def PSIP = testCase.testSuite.getPropertyValue("PSIP")
+def patientID = testCase.getPropertyValue("patientID")
+def patientname = testCase.getPropertyValue("patientname")
+def exam = ["Acc0004","Acc0005","Acc0006","Acc0007","Acc0008","Acc0009","Acc0010","Acc0011"] as String[]
+def examID = "\'" +exam[6] + "\'";
+log.info examID
+
+def username = "sa"  
+def password = "sa20021224\$"  
+def url = "jdbc:sqlserver://"+PSIP+"\\gcpacsws;databaseName=ecs"  
+def driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"     
+def database = Sql.newInstance(url,username,password,driver)
+sleep(1000)
+
+def WGGCurl = "jdbc:sqlserver://"+PSIP+"\\gcpacsws;databaseName=WGGC" 
+def wggcdatabase = Sql.newInstance(WGGCurl,username,password,driver) 
+def printmode =  wggcdatabase.firstRow('select * from AFP_printmode where accessionnumber =' + examID)
+assert printmode != null
+
+def filminfo = wggcdatabase.firstRow('select * from AFP_filminfo where accessionnumber =' + examID)
+assert filminfo != null
+def reportinfo = wggcdatabase.firstRow('select * from AFP_reportinfo where accessionnumber =' + examID)
+assert reportinfo != null
+def examinfo = database.firstRow('select * from examinfo where accessionnumber = ' + examID)
+assert  examinfo != null
+def filmreportstatus =  database.firstRow('select * from filmreportstatus where examID = ' +examID)
+assert filmreportstatus != null</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" name="check notification in wechat"><con:configuration><scriptText>import groovy.sql.Sql
+
+
+//get value from property for some parameters
+def testCase = messageExchange.modelItem.testCase
+def hospitalID = testCase.testSuite.getPropertyValue("hospitalID")
+def CSIP = testCase.testSuite.getPropertyValue("CSIP")
+def PSIP = testCase.testSuite.getPropertyValue("PSIP")
+def patientID = testCase.getPropertyValue("patientID")
+def patientname = testCase.getPropertyValue("patientname")
+def exam = ["Acc0004","Acc0005","Acc0006","Acc0007","Acc0008","Acc0009","Acc0010","Acc0011"] as String[]
+def examID = "\'" +exam[6] + "\'";
+log.info examID
+def database= Sql.newInstance("jdbc:mysql://"+CSIP+":3306/ecs","sa", "sa20021224\$", "com.mysql.jdbc.Driver");
+
+//sleep(10000)
+def filmreportstatus = database.firstRow('select * from filmreportstatus where examID =' + examID)
+assert filmreportstatus != null
+def globalstatus = database.firstRow('select * from globalstatus where statusID = \'' +filmreportstatus.statusID +'\'' + 'and hospitalID = ' + hospitalID  )
+assert globalstatus != null
+
+assert filmreportstatus.statusID == 243
+log.info globalstatus.querymessage
+log.info patientname
+log.info filmreportstatus.statuscreatetime
+log.info globalstatus.statusdescription
+log.info filmreportstatus.statusmessage
+log.info globalstatus.notificationmessage
+log.info("//////")
+
+
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ReportReadyNotify"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="01.03.04.04 Any Mode ExamH send report only"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HIS_PS_SvcSoap</con:interface><con:operation>ReportReadyNotify</con:operation><con:request name="01.03.04.04 Any Mode ExamH send report only" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.164/HisIntegration/HIS_PS_Svc.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ReportReadyNotify>
+         <!--Optional:-->
+         <tem:xml_para><![CDATA[<ReportReadyNotify>  <PatientName>杨康</PatientName>  <PatientID>CD004</PatientID>  <ReportType>PRIS</ReportType>  <applyInfos>    <applyInfo>      <applyNo>Acc0011</applyNo>        <reportID>Acc0011</reportID>      <FilePath>\\10.184.129.235\Kiosk K1\Site Data\PDF\遂宁\20140608\1389727.pdf</FilePath>    </applyInfo>  </applyInfos></ReportReadyNotify>]]]]>><![CDATA[</tem:xml_para>
+      </tem:ReportReadyNotify>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="GroovyScriptAssertion" name="Check PS"><con:configuration><scriptText>import groovy.sql.Sql;   
+//import java.lang.String;
+  
+
+//get value from property for some parameters
+def testCase = messageExchange.modelItem.testCase
+def CSIP = testCase.testSuite.getPropertyValue("CSIP")
+def PSIP = testCase.testSuite.getPropertyValue("PSIP")
+def patientID = testCase.getPropertyValue("patientID")
+def patientname = testCase.getPropertyValue("patientname")
+def exam = ["Acc0004","Acc0005","Acc0006","Acc0007","Acc0008","Acc0009","Acc0010","Acc0011"] as String[]
+def examID = "\'" +exam[7] + "\'";
+log.info examID
+
+def username = "sa"  
+def password = "sa20021224\$"  
+def url = "jdbc:sqlserver://"+PSIP+"\\gcpacsws;databaseName=ecs"  
+def driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"     
+def database = Sql.newInstance(url,username,password,driver)
+sleep(10000)
+
+def WGGCurl = "jdbc:sqlserver://"+PSIP+"\\gcpacsws;databaseName=WGGC" 
+def wggcdatabase = Sql.newInstance(WGGCurl,username,password,driver) 
+def printmode =  wggcdatabase.firstRow('select * from AFP_printmode where accessionnumber =' + examID)
+assert printmode != null
+wggcdatabase.execute "update AFP_printmode set printmode = 3 where accessionnumber = "+ examID
+wggcdatabase.execute "update AFP_printmode set holdflag = 0 where accessionnumber = "+ examID
+
+def filminfo = wggcdatabase.firstRow('select * from AFP_filminfo where accessionnumber =' + examID)
+assert filminfo == null
+def reportinfo = wggcdatabase.firstRow('select * from AFP_reportinfo where accessionnumber =' + examID)
+assert reportinfo != null
+def examinfo = database.firstRow('select * from examinfo where accessionnumber = ' + examID)
+assert  examinfo != null
+def filmreportstatus =  database.firstRow('select * from filmreportstatus where examID = ' +examID)
+assert filmreportstatus != null</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" name="check notification in wechat"><con:configuration><scriptText>import groovy.sql.Sql
+
+
+//get value from property for some parameters
+def testCase = messageExchange.modelItem.testCase
+def hospitalID = testCase.testSuite.getPropertyValue("hospitalID")
+def CSIP = testCase.testSuite.getPropertyValue("CSIP")
+def PSIP = testCase.testSuite.getPropertyValue("PSIP")
+def patientID = testCase.getPropertyValue("patientID")
+def patientname = testCase.getPropertyValue("patientname")
+def exam = ["Acc0004","Acc0005","Acc0006","Acc0007","Acc0008","Acc0009","Acc0010","Acc0011"] as String[]
+def examID = "\'" +exam[7] + "\'";
+log.info examID
+def database= Sql.newInstance("jdbc:mysql://"+CSIP+":3306/ecs","sa", "sa20021224\$", "com.mysql.jdbc.Driver");
+
+sleep(10000)
+def filmreportstatus = database.firstRow('select * from filmreportstatus where examID =' + examID)
+assert filmreportstatus != null
+def globalstatus = database.firstRow('select * from globalstatus where statusID = \'' +filmreportstatus.statusID +'\'' + 'and hospitalID = ' + hospitalID  )
+assert globalstatus != null
+
+assert filmreportstatus.statusID == 242
+log.info globalstatus.querymessage
+log.info patientname
+log.info filmreportstatus.statuscreatetime
+log.info globalstatus.statusdescription
+log.info filmreportstatus.statusmessage
+log.info globalstatus.notificationmessage
+log.info("//////")
+
+
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ReportReadyNotify"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="01.03.04.04 Check report status for all exams"><con:settings/><con:config><script>import groovy.sql.Sql;   
+//import java.lang.String;
+
+//get value from property of testcase for some parameters
+def hospitalID = testRunner.testCase.testSuite.getPropertyValue("hospitalID")
+def CSIP = testRunner.testCase.testSuite.getPropertyValue("CSIP")
+def PSIP = testRunner.testCase.testSuite.getPropertyValue("PSIP")
+def patientID = testRunner.testCase.getPropertyValue("patientID")
+def patientname = testRunner.testCase.getPropertyValue("patientname")
+def exam = ["Acc0004","Acc0005","Acc0006","Acc0007","Acc0008","Acc0009","Acc0010","Acc0011"] as String[]
+
+//assert database record of CS
+def CSdatabase= Sql.newInstance("jdbc:mysql://"+CSIP+":3306/ecs","sa", "sa20021224\$", "com.mysql.jdbc.Driver");
+def count  = 8
+for(def i=0;i&lt;count;i++)
+{
+
+	def examID = "\'" +exam[i] + "\'";
+	log.info examID
+
+	def filmreportstatus = CSdatabase.firstRow('select * from filmreportstatus where examID =' + examID)
+	assert filmreportstatus != null
+	def globalstatus = CSdatabase.firstRow('select * from globalstatus where statusID = \'' +filmreportstatus.statusID +'\'' + 'and hospitalID = ' + hospitalID  )
+	assert globalstatus != null
+
+	switch(i)
+	{
+		case 0:
+		assert filmreportstatus.statusID == 240
+		break
+		
+		case 1:
+		assert filmreportstatus.statusID == 243
+		break
+		
+		case 2:
+		assert filmreportstatus.statusID == 241
+		break
+
+		case 3:
+		assert filmreportstatus.statusID == 241
+		break
+
+		case 4:
+		assert filmreportstatus.statusID == 242
+		break
+
+		case 5:
+		assert filmreportstatus.statusID == 242
+		break
+
+		case 6:
+		assert filmreportstatus.statusID == 243
+		break
+
+		case 7:
+		assert filmreportstatus.statusID == 242
+		break
+
+	}
+	
+	//print out info for wechat "check report status"
+
+	log.info globalstatus.querymessage
+	log.info patientname
+	log.info filmreportstatus.statuscreatetime
+	log.info globalstatus.statusdescription
+	log.info filmreportstatus.statusmessage
+	//log.info globalstatus.notificationmessage
+	log.info("//////")
+}
+
+
+
+</script></con:config></con:testStep><con:properties><con:property><con:name>patientname</con:name><con:value>杨康</con:value></con:property><con:property><con:name>patientID</con:name><con:value>CD004</con:value></con:property></con:properties></con:testCase><con:properties><con:property><con:name>hospitalID</con:name><con:value>'1'</con:value></con:property><con:property><con:name>PSIP</con:name><con:value>10.184.129.164</con:value></con:property><con:property><con:name>CSIP</con:name><con:value>10.184.129.203</con:value></con:property></con:properties></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

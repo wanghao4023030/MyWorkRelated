@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="PrintService" resourceRoot="" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="PrintServiceSoap" type="wsdl" bindingName="{http://carestream.com/}PrintServiceSoap" soapVersion="1_1" anonymous="optional" definition="http://10.184.129.185/RemotePrint/PrintService.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://10.184.129.185/RemotePrint/PrintService.asmx</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://carestream.com/RemotePrint" name="RemotePrint" bindingOperationName="RemotePrint" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.185/RemotePrint/PrintService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:car="http://carestream.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <car:RemotePrint>
+         <!--Optional:-->
+         <car:printReq>
+            <!--Optional:-->
+            <car:RequestID>R002</car:RequestID>
+            <!--Optional:-->
+            <car:PatientID>PID001</car:PatientID>
+            <!--Optional:-->
+            <car:TerminalID>1234</car:TerminalID>
+         </car:printReq>
+      </car:RemotePrint>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://carestream.com/RemotePrint"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="PrintServiceSoap12" type="wsdl" bindingName="{http://carestream.com/}PrintServiceSoap12" soapVersion="1_2" anonymous="optional" definition="http://10.184.129.185/RemotePrint/PrintService.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://10.184.129.185/RemotePrint/PrintService.asmx?wsdl"><con:part><con:url>http://10.184.129.185/RemotePrint/PrintService.asmx?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://carestream.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://carestream.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://carestream.com/">
+      <s:element name="RemotePrint">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="printReq" type="tns:PrintRequest"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PrintRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RequestID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PatientID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TerminalID" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RemotePrintResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RemotePrintResult" type="tns:PrintResponse"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PrintResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RequestID" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="tns:PrintResponsResult"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDescription" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Terminal" type="tns:SimpleTerminalInfo"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PrintTask" type="tns:PrintTaskInfo"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Exclude" type="tns:ExcludedItem"/>
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="PrintResponsResult">
+        <s:restriction base="s:string">
+          <s:enumeration value="OK"/>
+          <s:enumeration value="NoData"/>
+          <s:enumeration value="Exception"/>
+          <s:enumeration value="ExistMemo"/>
+          <s:enumeration value="TerminalBusy"/>
+          <s:enumeration value="UnknownTerminal"/>
+          <s:enumeration value="InvalidPatietId"/>
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="SimpleTerminalInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="FilmPrinter" type="tns:FilmPrinterInfo"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ReportPrinter" type="tns:ReportPrinterInfo"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FilmPrinterInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ReportPrinterInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PrintTaskInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TaskID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorCode" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDesc" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Films" type="tns:ArrayOfFilmInfo"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Reports" type="tns:ArrayOfReportInfo"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfFilmInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FilmInfo" nillable="true" type="tns:FilmInfo"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FilmInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Modality" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="FilmSize" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfReportInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ReportInfo" nillable="true" type="tns:ReportInfo"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ReportInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TypeAlias" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="AccessionNumber" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ExamName" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PrinterLocation" type="tns:ArrayOfString"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ExcludedItem">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Reason" type="tns:ExcludeReason"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Films" type="tns:ArrayOfFilmInfo"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Reports" type="tns:ArrayOfReportInfo"/>
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ExcludeReason">
+        <s:restriction base="s:string">
+          <s:enumeration value="Undefined"/>
+          <s:enumeration value="UnsupportedType"/>
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RemotePrintSoapIn">
+    <wsdl:part name="parameters" element="tns:RemotePrint"/>
+  </wsdl:message>
+  <wsdl:message name="RemotePrintSoapOut">
+    <wsdl:part name="parameters" element="tns:RemotePrintResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="PrintServiceSoap">
+    <wsdl:operation name="RemotePrint">
+      <wsdl:input message="tns:RemotePrintSoapIn"/>
+      <wsdl:output message="tns:RemotePrintSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PrintServiceSoap" type="tns:PrintServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="RemotePrint">
+      <soap:operation soapAction="http://carestream.com/RemotePrint" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PrintServiceSoap12" type="tns:PrintServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="RemotePrint">
+      <soap12:operation soapAction="http://carestream.com/RemotePrint" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PrintService">
+    <wsdl:port name="PrintServiceSoap" binding="tns:PrintServiceSoap">
+      <soap:address location="http://10.184.129.185/RemotePrint/PrintService.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="PrintServiceSoap12" binding="tns:PrintServiceSoap12">
+      <soap12:address location="http://10.184.129.185/RemotePrint/PrintService.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://10.184.129.185/RemotePrint/PrintService.asmx</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://carestream.com/RemotePrint" name="RemotePrint" bindingOperationName="RemotePrint" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.184.129.185/RemotePrint/PrintService.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:car="http://carestream.com/">
+   <soap:Header/>
+   <soap:Body>
+      <car:RemotePrint>
+         <!--Optional:-->
+         <car:printReq>
+            <!--Optional:-->
+            <car:RequestID>?</car:RequestID>
+            <!--Optional:-->
+            <car:PatientID>?</car:PatientID>
+            <!--Optional:-->
+            <car:TerminalID>?</car:TerminalID>
+         </car:printReq>
+      </car:RemotePrint>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://carestream.com/PrintServiceSoap/RemotePrintRequest"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

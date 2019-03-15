@@ -1,0 +1,44 @@
+//Groovy ??SQL Server??import groovy.sql.Sql  
+import groovy.sql.Sql;   
+//import java.lang.String;
+def username = "sa"  
+def password = "sa20021224\$"  
+def url = "jdbc:sqlserver://10.184.129.140\\gcpacsws;databaseName=ecs"  
+def driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver"  
+   
+def sql1 = Sql.newInstance(url,username,password,driver)  
+def row = sql1.firstRow('select * from request')  
+
+/////////////////////////////////////////////////////////////
+import groovy.sql.Sql
+
+def database= Sql.newInstance("jdbc:mysql://10.184.129.203:3306/ecs","sa", "sa20021224\$", "com.mysql.jdbc.Driver");
+def exam = database.firstRow('select * from examination where requestID = \'R013\'') 
+assert exam != null
+
+def patient = database.firstRow('select * from patient where patientID = \'PID003\'')
+log.info patient.patientname
+
+def treatment = database.firstRow('select * from treatment where treatmentID = \'T008\'')
+log.info treatment.createdatetime
+
+
+def department = database.firstRow('select * from department where departmentID in (select departmentID from treatment where treatmentID = \'T008\' )')
+log.info department.departmentname
+log.info treatment.roomname
+log.info department.examlocation
+
+def order = database.firstRow('select * from placeorder where treatmentID = \'T008\'')
+log.info order.diagnosis
+
+def request = database.firstRow('select * from request where requestID = \'R013\'')
+log.info request.itemname
+
+if (exam.actionID==0)
+{log.info '???'}
+log.info department.departmentname
+log.info department.examlocation
+log.info request.price
+log.info request.quatity
+log.info request.comments
+
