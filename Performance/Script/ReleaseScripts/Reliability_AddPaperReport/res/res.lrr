@@ -1,0 +1,32 @@
+[Scenario]
+Product=HP LoadRunner Controller
+Version=11.0.0.0
+Path=Scenario1
+Subject=
+Result_file=E:\ECS\Reliability\Scripts\Reliability_AddPaperReport\res\res.lrr
+Description=
+ResultName=res
+Time_Zone=-28800
+Start_time=1499947565
+Daylight_Bias=0
+Stop_time=1499948415
+[Configuration]
+Public_local=1
+Is_mix=1
+Is_runner_file=0
+Runner_file=
+[Running_mode]
+Start_reason=By command
+Stop_reason=By a user
+[Data Collection]
+FullData=1
+[Scenario_summary]
+Scenario Type=Manual Scenario
+Goal Profile Name=Default Schedule
+Mode=Scenario Scheduling
+Scenario Duration=Until Completion
+Load Behavior=Property
+[Scripts]
+Reliability_AddPaperReport=E:\ECS\Reliability\Scripts\Reliability_AddPaperReport\Reliability_AddPaperReport.usr
+[Scripts_types]
+Reliability_AddPaperReport=Multi+QTWeb+WS_SOAP

@@ -1,0 +1,18 @@
+[Graph definition]
+count=1
+GraphTitle=Split IO/Sec (PhysicalDisk _Total)
+DataPointLabel_1=offline_datapoint_19
+LineTitle_1=10.184.129.108
+LineGroup_1=0
+YAxisTitle=Split IO/Sec (PhysicalDisk _Total)
+GraphGroupMenuTitle=Windows Resources
+XAxisTitle=Elapsed Scenario Time (seconds)
+XAxisIsElapsedTime=TRUE
+LineType=NOSTEP
+BuildUnderLoadGraph=TRUE
+AggregateFunction=AVG
+MissingData=PREVIOUS
+GranularityMode=NOTINCLUDEZERO
+NoDataBehavior=RemoveGraph
+GraphType=es_rm_svr_res_nt
+DataPointDescr_1=Split IO/Sec reports the rate at which I/Os to the disk were split into multiple I/Os. A split I/O may result from requesting data of a size that is too large to fit into a single I/O or that the disk is fragmented.

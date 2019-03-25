@@ -1,0 +1,17 @@
+Registry settings:
+	COM Options
+	General Options
+	JS Options
+		JSComRecordingSupport	false
+	Protocol Options
+		WS_SOAP
+			Recording
+				WSDL
+					wsi11TestAssertionFileLocation	\common\profiles\SSBP10_BP11_TAD.xml
+					wsiCsExecutable	\cs\bin\analyzer.exe
+					wsiJavaExecutable	\java\bin\analyzer.bat
+					wsiNs	http://www.ws-i.org/testing/2003/03/analyzerConfig/
+					wsiTestAssertionFileLocation	\common\profiles\basicprofiletestassertions.xml
+					wsiXslFileLocation	\common\xsl\report.xsl
+	Script Options
+

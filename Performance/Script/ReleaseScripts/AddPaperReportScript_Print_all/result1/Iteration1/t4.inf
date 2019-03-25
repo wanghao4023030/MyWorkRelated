@@ -1,0 +1,12 @@
+[t4]
+SnapshotXmlFile=snapshot_4.xml
+ContentType=text/plain
+StepName=Custom Request: Update report printerInfo
+Total=1
+FileName1=t4.UNK
+RequestHeaderFile=t4_RequestHeader.txt
+ResponseHeaderFile=t4_ResponseHeader.txt
+RequestBodyFile=t4_RequestBody.txt
+URL1=http://10.184.129.108/EHDUS/upload/printer/report/info?tid=Terminal1
+[AdditionalInfo]
+IsIgnorable=1

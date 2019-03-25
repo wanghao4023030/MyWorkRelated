@@ -1,0 +1,10 @@
+<?xml-stylesheet href="..\db_executesql.xsl" type="text/xsl"?>
+<report vuGenInstallDir="C:\Program Files (x86)\HP\LoadRunner">
+  <database_validation>
+    <validation count="0" />
+    <source>ConnectGCPACS</source>
+    <source_1>MyDataset</source_1>
+    <source_2>update wggc.dbo.AFP_FilmInfo  set FilmFlag=0  where AccessionNumber ='A20180912103528438'  and DeleteStatus =0  </source_2>
+    <source_3>0</source_3>
+  </database_validation>
+</report>

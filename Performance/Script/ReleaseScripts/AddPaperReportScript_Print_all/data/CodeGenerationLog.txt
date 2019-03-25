@@ -1,0 +1,24 @@
+WebServices notify: version 2 (11.0.0.8859)
+WebServices notify: Loading WSDL file http://10.184.129.208/NotifyServer/NotifyService.asmx?wsdl
+****** Start Log Message ******
+Web Recorder version : 11.0.0.8859 
+Recording Mode: HTML-based script
+Correlation is enabled system wide
+Recording headers in list:
+	accept-charset
+	accept-encoding
+	accept-language
+	soapaction
+	user-agent
+Not excluding content types
+Do not record this content types as a resource:
+	text/html
+	text/xml
+Reset context between actions
+Record non-HTML elements in current HTML function
+Protocol Type: Multi-WS_SOAP
+
+$$$$$$ End Log Message $$$$$$
+
+Code generation version: 11.0.0.8859
+

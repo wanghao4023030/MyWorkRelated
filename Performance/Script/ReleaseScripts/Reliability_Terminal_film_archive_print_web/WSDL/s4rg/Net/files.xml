@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<services>
+  <service>
+    <name>CreateFilmTestData</name>
+    <id>0</id>
+    <ports>
+      <port>
+        <name>CreateFilmTestDataSoap</name>
+        <id>0</id>
+      </port>
+      <port>
+        <name>CreateFilmTestDataSoap12</name>
+        <id>1</id>
+      </port>
+    </ports>
+  </service>
+</services>

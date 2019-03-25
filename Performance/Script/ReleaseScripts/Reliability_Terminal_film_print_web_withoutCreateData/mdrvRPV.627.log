@@ -1,0 +1,44 @@
+Start auto log messages stack - Iteration 14.	[MsgId: MMSG-10545]
+Action.c(116): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+Action.c(116): web_add_auto_header("content-type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(118): Warning -26377: No match found for the requested parameter "TaskID". Check whether the requested boundaries exist in the response data. Also, if the data you want to save exceeds 10240 bytes, use web_set_max_html_param_len to increase the parameter size  	[MsgId: MWAR-26377]
+Action.c(118): web_custom_request("web_custom_request") highest severity level was "warning", 265 body bytes, 259 header bytes  	[MsgId: MMSG-26388]
+Action.c(129): Notify: Transaction "Film Create_PrintTask" ended with "Pass" status (Duration: 33.6225 Wasted Time: 0.0001).	[MsgId: MMSG-16871]
+Action.c(136): Notify: Transaction "Fim GetTaskID_fail" started.	[MsgId: MMSG-16999]
+Action.c(137): Error: Create print task failed. Try again. The accession number is A20180815104539952,K2_7	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 15.	[MsgId: MMSG-10545]
+Action.c(116): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+Action.c(116): web_add_auto_header("content-type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(118): Warning -26377: No match found for the requested parameter "TaskID". Check whether the requested boundaries exist in the response data. Also, if the data you want to save exceeds 10240 bytes, use web_set_max_html_param_len to increase the parameter size  	[MsgId: MWAR-26377]
+Action.c(118): web_custom_request("web_custom_request") highest severity level was "warning", 265 body bytes, 259 header bytes  	[MsgId: MMSG-26388]
+Action.c(129): Notify: Transaction "Film Create_PrintTask" ended with "Pass" status (Duration: 31.9143 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+Action.c(136): Notify: Transaction "Fim GetTaskID_fail" started.	[MsgId: MMSG-16999]
+Action.c(137): Error: Create print task failed. Try again. The accession number is A20180815105307232,K2_2	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 15.	[MsgId: MMSG-10545]
+Action.c(116): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+Action.c(116): web_add_auto_header("content-type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(118): Warning -26377: No match found for the requested parameter "TaskID". Check whether the requested boundaries exist in the response data. Also, if the data you want to save exceeds 10240 bytes, use web_set_max_html_param_len to increase the parameter size  	[MsgId: MWAR-26377]
+Action.c(118): web_custom_request("web_custom_request") highest severity level was "warning", 265 body bytes, 259 header bytes  	[MsgId: MMSG-26388]
+Action.c(129): Notify: Transaction "Film Create_PrintTask" ended with "Pass" status (Duration: 34.5794 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+Action.c(136): Notify: Transaction "Fim GetTaskID_fail" started.	[MsgId: MMSG-16999]
+Action.c(137): Error: Create print task failed. Try again. The accession number is A20180815104401319,K2_8	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 16.	[MsgId: MMSG-10545]
+Action.c(116): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+Action.c(116): web_add_auto_header("content-type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(118): Warning -26377: No match found for the requested parameter "TaskID". Check whether the requested boundaries exist in the response data. Also, if the data you want to save exceeds 10240 bytes, use web_set_max_html_param_len to increase the parameter size  	[MsgId: MWAR-26377]
+Action.c(118): web_custom_request("web_custom_request") highest severity level was "warning", 265 body bytes, 259 header bytes  	[MsgId: MMSG-26388]
+Action.c(129): Notify: Transaction "Film Create_PrintTask" ended with "Pass" status (Duration: 31.9840 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+Action.c(136): Notify: Transaction "Fim GetTaskID_fail" started.	[MsgId: MMSG-16999]
+Action.c(137): Error: Create print task failed. Try again. The accession number is A20180815104655822,K2_6	[MsgId: MERR-17999]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

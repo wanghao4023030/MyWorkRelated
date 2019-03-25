@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="C:\Program Files (x86)\HP\LoadRunner\dat\lr_message.xsl" type="text/xsl"?><report vuGenInstallDir="C:\Program Files (x86)\HP\LoadRunner"><lr_output_message><message>The value is: 0c2c1c5c-e002-46c9-94d0-6f68f849701c</message></lr_output_message></report>

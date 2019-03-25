@@ -1,0 +1,48 @@
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(111):     SeriesUID20180411163629000</strSeriesInstanceUID><strSOPInstanceID>SOP20180411163629000</s
+Action.c(111):     trSOPInstanceID><strAccNo>A20180411163629000</strAccNo><strPatientName>PN20180411163629000
+Action.c(111):     </strPatientName><strGrender>F</strGrender><strModality>PR</strModality><strBodayPart></st
+Action.c(111):     rBodayPart><strDestFolder>E:\\GX Platform\\Inbox</strDestFolder></CreateFilmFile></soap:Bo
+Action.c(111):     dy></soap:Envelope>
+Action.c(111): t=224954ms: Pending STATE_READ 070A4C2C [0] URL="http://10.184.129.208/PerformanceTest/CreateFilmTestData.asmx" in most_essential_active_task  	[MsgId: MMSG-26000]
+Action.c(111): t=224954ms: recvd bytes=0, content length=-1, keepalive=0  	[MsgId: MMSG-26000]
+Action.c(111): Continuing after Error -27728: Step download timeout (120 seconds) has expired  	[MsgId: MERR-27728]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(111): t=224956ms: Closed connection [0] to 10.184.129.208:80 after completing 1 request  	[MsgId: MMSG-26000]
+Action.c(111): Aborting pending download of URL="http://10.184.129.208/PerformanceTest/CreateFilmTestData.asmx"  	[MsgId: MMSG-27656]
+Action.c(111): Continuing after Error -26377: No match found for the requested parameter "CreateFilmDataResult". Check whether the requested boundaries exist in the response data. Also, if the data you want to save exceeds 10240 bytes, use web_set_max_html_param_len to increase the parameter size  	[MsgId: MERR-26377]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
+Action.c(111): Notify: Saving Parameter "CreateFilmDataResult = ".	[MsgId: MMSG-13798]
+Action.c(111): Continuing after Error -26374: The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively.  	[MsgId: MERR-26374]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 25.	[MsgId: MMSG-10545]
+Action.c(111):     \r\n
+Action.c(111):                 <b> 说明: </b>HTTP 404。您正在查找的资�\x90(或�\x80�它的一个依
+Action.c(111):     赖项)可能已被移除，或其名称已更改，或暂时不可用�\x80�请�\x80查以
+Action.c(111):     �\x8B URL 并确保其拼写正确�\x82\r\n
+Action.c(111):                 <br><br>\r\n
+Action.c(111):     \r\n
+Action.c(111):                 <b> 请求�\x84 URL: </b>/PerformanceTest/CreateFilmTestData.asmx<br><br>\r\n
+Action.c(111):     \r\n
+Action.c(111):         </body>\r\n
+Action.c(111):     </html>\r\n
+Action.c(111): Continuing after Error -26627: HTTP Status-Code=404 (Not Found) for "http://10.184.129.208/PerformanceTest/CreateFilmTestData.asmx"  	[MsgId: MERR-26627]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 25.	[MsgId: MMSG-10545]
+Action.c(111): t=2049884ms: Closing connection [0] to 10.184.129.208 after receiving status code 404  	[MsgId: MMSG-26000]
+Action.c(111): t=2049884ms: Closed connection [0] to 10.184.129.208:80 after completing 1 request  	[MsgId: MMSG-26000]
+Action.c(111): t=2049884ms: Request done "http://10.184.129.208/PerformanceTest/CreateFilmTestData.asmx"  	[MsgId: MMSG-26000]
+Action.c(111): Continuing after Error -26377: No match found for the requested parameter "CreateFilmDataResult". Check whether the requested boundaries exist in the response data. Also, if the data you want to save exceeds 10240 bytes, use web_set_max_html_param_len to increase the parameter size  	[MsgId: MERR-26377]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

@@ -1,0 +1,7 @@
+<?xml-stylesheet href="..\db_connection.xsl" type="text/xsl"?>
+<report vuGenInstallDir="C:\Program Files (x86)\HP\LoadRunner">
+  <database_validation>
+    <validation count="0" />
+    <source>Data Source=10.184.129.248\GCPACSWS;Password=sa20021224$;User ID=sa;Initial Catalog=WGGC;</source>
+  </database_validation>
+</report>

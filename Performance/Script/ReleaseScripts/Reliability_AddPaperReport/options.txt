@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-ID:\Scripts\ReleaseScripts\Reliability_AddPaperReport
+-IC:\Program Files (x86)\HP\LoadRunner\include
+-ed:\scripts\releasescripts\reliability_addpaperreport\\logfile.log
+d:\scripts\releasescripts\reliability_addpaperreport\\combined_Reliability_AddPaperReport.c
+d:\scripts\releasescripts\reliability_addpaperreport\\pre_cci.c

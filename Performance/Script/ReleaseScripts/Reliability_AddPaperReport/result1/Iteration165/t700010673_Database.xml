@@ -1,0 +1,11 @@
+<?xml-stylesheet href="..\db_getdbvalue.xsl" type="text/xsl"?>
+<report vuGenInstallDir="C:\Program Files (x86)\HP\LoadRunner">
+  <database_validation>
+    <validation count="0" />
+    <source>MyDataset</source>
+    <source_1>UID</source_1>
+    <source_2>next</source_2>
+    <source_3>InstanceUID</source_3>
+    <source_4>ab1f34a8-0df4-49c5-b0d4-7bf8e12c8143</source_4>
+  </database_validation>
+</report>

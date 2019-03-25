@@ -1,0 +1,6 @@
+"{"TerminalID":null,"PrinterID":"Lower","Name":"Lower","Model":"HP LaserJet M403n","ErrorCode":"
+"null,"Status":0,"Type":0,"Cyan":{"Name":"Cartridge","Description":"","Level":0},"Magenta":{"Na"
+"me":"Cartridge","Description":"","Level":0},"Yellow":{"Name":"Cartridge","Description":"","Lev"
+"el":0},"Black":{"Name":"BLACK","Description":"Black Cartridge HP CF228A","Level":71},"Tray1":{"
+""DisplayName":null,"Name":"Tray 1","Status":3,"PaperType":0,"PaperSize":0},"Tray2":{"DisplayNa"
+"me":null,"Name":"Tray 2","Status":0,"PaperType":0,"PaperSize":0}}"

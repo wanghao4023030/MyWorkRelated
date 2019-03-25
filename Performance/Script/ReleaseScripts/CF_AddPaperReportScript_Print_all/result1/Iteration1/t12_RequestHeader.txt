@@ -1,0 +1,7 @@
+GET /EHDPS/printtask/status/4368112?tid=Terminal1 HTTP/1.0
+Content-Type: application/json
+User-Agent: Mozilla/4.0 (compatible; MSIE 4.0; Windows NT)
+Accept: */*
+Connection: Keep-Alive
+Host: 10.184.129.248
+

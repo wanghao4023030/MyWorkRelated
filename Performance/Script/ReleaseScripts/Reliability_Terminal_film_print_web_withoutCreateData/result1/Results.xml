@@ -1,0 +1,458 @@
+﻿<?xml version="1.0"?>
+  <!DOCTYPE Report
+[
+<!ELEMENT Report (General ,(Doc|BPT)) >
+<!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
+
+<!ELEMENT General ( DocLocation ) >
+<!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED>
+
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,Doc*) >
+<!ATTLIST BPT rID ID #REQUIRED >
+
+<!ELEMENT Doc (DName, Res, DVer?, TSet?, TInst?, RunType?, DT?, Step*, Action+, DIter*, Action*, Summary?, NodeArgs?)> 
+<!ATTLIST Doc rID ID #REQUIRED type (Test|BC) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
+
+<!ELEMENT RunType ( #PCDATA )>
+<!ATTLIST RunType fmStep (False|True) "False" batch (False|True) "False" upDesc (False|True) "False" upChk (False|True) "False" upAS (False|True) "False">
+
+<!ELEMENT DName ( #PCDATA ) >
+
+<!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT DVer ( #PCDATA ) >
+
+<!ELEMENT TSet ( #PCDATA ) >
+
+<!ELEMENT TInst ( #PCDATA ) >
+
+<!ELEMENT DIter (Step?,Action+,Summary?,NodeArgs)>
+<!ATTLIST DIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT DocLocation ( #PCDATA )>
+
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*,Summary,NodeArgs) >
+<!ATTLIST Action rID ID #REQUIRED>
+
+<!ELEMENT AIter ((Step|HtmlStep|Action)*,Summary?,NodeArgs) >
+<!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT Step (Obj,Details,Time,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
+
+<!ELEMENT HtmlStep (HTML,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST HtmlStep rID ID #REQUIRED >
+
+<!ELEMENT Obj ( #PCDATA ) >
+<!ATTLIST Obj plainTxt (False|True) "True">
+
+<!ELEMENT Details ( #PCDATA ) >
+<!ATTLIST Details plainTxt (False|True) "True">
+
+<!ELEMENT Time ( #PCDATA ) >
+
+<!ELEMENT HTML ( #PCDATA ) >
+
+<!ELEMENT Disp ( #PCDATA ) >
+
+<!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?)>
+<!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED filter (False|True) "True">
+<!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED >
+
+<!ELEMENT TopPane (Path)>
+
+<!ELEMENT BtmPane ( (Path|WR)?,ASHilite?)>
+<!ATTLIST BtmPane vType CDATA "HTML">
+
+<!ELEMENT Path ( #PCDATA ) >
+
+<!ELEMENT ASHilite ( #PCDATA ) >
+
+<!ELEMENT WR ( #PCDATA ) >
+
+<!ELEMENT DT (NodeArgs) >
+<!ATTLIST DT rID ID #REQUIRED>
+
+<!ELEMENT Summary (Param*)>
+<!ATTLIST Summary sTime CDATA #IMPLIED eTime CDATA #IMPLIED passed CDATA #IMPLIED failed CDATA #IMPLIED warnings CDATA #IMPLIED retval CDATA #IMPLIED stopped (False|True) "False" >
+
+<!ELEMENT Param (ParamName,ParamVal)+ >
+<!ATTLIST Param paramInOut (In|Out) "In">
+
+<!ELEMENT ParamName ( #PCDATA ) >
+
+<!ELEMENT ParamVal ( #PCDATA ) >
+
+]
+> <Report ver="2.0" tmZone="China Standard Time">
+<General productName="Vugen" productVer="11" os="" host="KIOSKLAB-PC"><DocLocation><![CDATA[D:\Scripts\ReleaseScripts\Reliability_Terminal_film_print_web_withoutCreateData]]></DocLocation></General>
+<Doc rID="T1"   productName= "Vugen"  >
+<DName><![CDATA[Reliability_Terminal_film_print_web_withoutCreateData]]></DName>
+<Res><![CDATA[result1]]></Res>
+<Action rID="T2">
+<AName><![CDATA[vuser_init]]></AName>
+<Step rID="T3">
+<Obj plainTxt="False" ><![CDATA[Connect]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Connection was successful</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:52:40]]></Time>
+<NodeArgs eType="General" icon="3" nRep="6" status="Passed" >
+<Disp><![CDATA[Connect]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/9/12 - 10:52:39" eTime="2018/9/12 - 10:52:40" passed="1" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="5" status="Passed" >
+<Disp><![CDATA[vuser_init Summary]]></Disp>
+</NodeArgs>
+</Action>
+<DIter rID="T4" iterID="1" >
+<Action rID="T5">
+<AName><![CDATA[Action]]></AName>
+<Step rID="T6">
+<Obj plainTxt="False" ><![CDATA[Service: Set Max Html Param Len]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Maximum length of a HTML string that can be retrieved and saved set to <STRONG><FONT COLOR=#00AF00>10240</FONT></STRONG> characters</CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:52:40]]></Time>
+<NodeArgs eType="General" icon="5" nRep="10" >
+<Disp><![CDATA[Service: Set Max Html Param Len]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T7">
+<Obj plainTxt="False" ><![CDATA[QueryReportStatus]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>SQL Statement execution was successful</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:52:40]]></Time>
+<NodeArgs eType="General" icon="3" nRep="11" status="Passed" >
+<Disp><![CDATA[QueryReportStatus]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t773155047_Database.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T8">
+<Obj plainTxt="False" ><![CDATA[QueryReportStatus]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>SQL Statement execution was successful</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:52:50]]></Time>
+<NodeArgs eType="General" icon="3" nRep="12" status="Passed" >
+<Disp><![CDATA[QueryReportStatus]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t862211992_Database.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T9">
+<Obj plainTxt="False" ><![CDATA[Service: Add Auto Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to all subsequent HTTP requests :<BR><STRONG><FONT COLOR=#00AF00>content-type: application/json</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:52:50]]></Time>
+<NodeArgs eType="General" icon="6" nRep="13" >
+<Disp><![CDATA[Service: Add Auto Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T10">
+<Obj plainTxt="False" ><![CDATA[Custom Request: web_custom_request]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:53:40]]></Time>
+<NodeArgs eType="General" icon="7" nRep="14" status="Passed" >
+<Disp><![CDATA[Custom Request: web_custom_request]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t1.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T11">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>TaskID</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="TaskId":"</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:53:45]]></Time>
+<NodeArgs eType="General" icon="8" nRep="15" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T12">
+<Obj plainTxt="False" ><![CDATA[Service: Add Auto Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to all subsequent HTTP requests :<BR><STRONG><FONT COLOR=#00AF00>content-type: application/json</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:53:45]]></Time>
+<NodeArgs eType="General" icon="6" nRep="16" >
+<Disp><![CDATA[Service: Add Auto Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T13">
+<Obj plainTxt="False" ><![CDATA[Custom Request: web_custom_request]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:53:47]]></Time>
+<NodeArgs eType="General" icon="7" nRep="17" status="Passed" >
+<Disp><![CDATA[Custom Request: web_custom_request]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t2.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T14">
+<Obj plainTxt="False" ><![CDATA[Service: Add Auto Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to all subsequent HTTP requests :<BR><STRONG><FONT COLOR=#00AF00>content-type: application/json</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:53:47]]></Time>
+<NodeArgs eType="General" icon="6" nRep="18" >
+<Disp><![CDATA[Service: Add Auto Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T15">
+<Obj plainTxt="False" ><![CDATA[Custom Request: web_custom_request]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:53:47]]></Time>
+<NodeArgs eType="General" icon="7" nRep="19" status="Passed" >
+<Disp><![CDATA[Custom Request: web_custom_request]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t3.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T16">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>TaskStatus</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=,"Status":</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=,"</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:53:57]]></Time>
+<NodeArgs eType="General" icon="8" nRep="20" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T17">
+<Obj plainTxt="False" ><![CDATA[Service: Add Auto Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to all subsequent HTTP requests :<BR><STRONG><FONT COLOR=#00AF00>content-type: application/json</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:53:58]]></Time>
+<NodeArgs eType="General" icon="6" nRep="21" >
+<Disp><![CDATA[Service: Add Auto Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T18">
+<Obj plainTxt="False" ><![CDATA[Custom Request: web_custom_request]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:53:58]]></Time>
+<NodeArgs eType="General" icon="7" nRep="22" status="Passed" >
+<Disp><![CDATA[Custom Request: web_custom_request]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t4.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T19">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:53:58]]></Time>
+<NodeArgs eType="General" icon="9" nRep="23" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t83198260.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T20">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:53:58]]></Time>
+<NodeArgs eType="General" icon="9" nRep="24" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t42304813.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T21">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>TaskStatus</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=,"Status":</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=,"</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:54:08]]></Time>
+<NodeArgs eType="General" icon="8" nRep="25" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T22">
+<Obj plainTxt="False" ><![CDATA[Service: Add Auto Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to all subsequent HTTP requests :<BR><STRONG><FONT COLOR=#00AF00>content-type: application/json</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:54:08]]></Time>
+<NodeArgs eType="General" icon="6" nRep="26" >
+<Disp><![CDATA[Service: Add Auto Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T23">
+<Obj plainTxt="False" ><![CDATA[Custom Request: web_custom_request]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:54:08]]></Time>
+<NodeArgs eType="General" icon="7" nRep="27" status="Passed" >
+<Disp><![CDATA[Custom Request: web_custom_request]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t5.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T24">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:54:08]]></Time>
+<NodeArgs eType="General" icon="9" nRep="28" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t48329651.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T25">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:54:08]]></Time>
+<NodeArgs eType="General" icon="9" nRep="29" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t57975788.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T26">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>TaskStatus</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=,"Status":</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=,"</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:54:18]]></Time>
+<NodeArgs eType="General" icon="8" nRep="30" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T27">
+<Obj plainTxt="False" ><![CDATA[Service: Add Auto Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to all subsequent HTTP requests :<BR><STRONG><FONT COLOR=#00AF00>content-type: application/json</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:54:18]]></Time>
+<NodeArgs eType="General" icon="6" nRep="31" >
+<Disp><![CDATA[Service: Add Auto Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T28">
+<Obj plainTxt="False" ><![CDATA[Custom Request: web_custom_request]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:54:18]]></Time>
+<NodeArgs eType="General" icon="7" nRep="32" status="Passed" >
+<Disp><![CDATA[Custom Request: web_custom_request]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t6.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T29">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:54:18]]></Time>
+<NodeArgs eType="General" icon="9" nRep="33" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t449628.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T30">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:54:18]]></Time>
+<NodeArgs eType="General" icon="9" nRep="34" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t581226.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T31">
+<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>TaskStatus</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=,"Status":</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=,"</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00></FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:54:28]]></Time>
+<NodeArgs eType="General" icon="8" nRep="35" >
+<Disp><![CDATA[Service: Reg Save Param]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T32">
+<Obj plainTxt="False" ><![CDATA[Service: Add Auto Header]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to all subsequent HTTP requests :<BR><STRONG><FONT COLOR=#00AF00>content-type: application/json</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:54:28]]></Time>
+<NodeArgs eType="General" icon="6" nRep="36" >
+<Disp><![CDATA[Service: Add Auto Header]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T33">
+<Obj plainTxt="False" ><![CDATA[Custom Request: web_custom_request]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:54:28]]></Time>
+<NodeArgs eType="General" icon="7" nRep="37" status="Passed" >
+<Disp><![CDATA[Custom Request: web_custom_request]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t7.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T34">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:54:28]]></Time>
+<NodeArgs eType="General" icon="9" nRep="38" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t3186374.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T35">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:54:28]]></Time>
+<NodeArgs eType="General" icon="9" nRep="39" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t67703360.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T36">
+<Obj plainTxt="False" ><![CDATA[lr_output_message]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Output message</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:54:28]]></Time>
+<NodeArgs eType="General" icon="9" nRep="40" status="Passed" >
+<Disp><![CDATA[lr_output_message]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t23871058.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T37">
+<Obj plainTxt="False" ><![CDATA[UpdateFilmToUnPrinted]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>SQL Statement execution was successful</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:54:34]]></Time>
+<NodeArgs eType="General" icon="3" nRep="41" status="Passed" >
+<Disp><![CDATA[UpdateFilmToUnPrinted]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t23871058_Database.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/9/12 - 10:52:40" eTime="2018/9/12 - 10:54:39" passed="19" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="9" status="Passed" >
+<Disp><![CDATA[Action Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="4" nRep="8" status="Passed" >
+<Disp><![CDATA[Reliability_Terminal_film_print_web_withoutCreateData Iteration 1 (Row 1)]]></Disp>
+</NodeArgs>
+</DIter>
+<Action rID="T38">
+<AName><![CDATA[vuser_end]]></AName>
+<Step rID="T39">
+<Obj plainTxt="False" ><![CDATA[Disconnect]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Disconnection was successful</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2018/9/12 - 10:54:39]]></Time>
+<NodeArgs eType="General" icon="3" nRep="45" status="Passed" >
+<Disp><![CDATA[Disconnect]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t1392033999_Database.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Summary sTime="2018/9/12 - 10:54:39" eTime="2018/9/12 - 10:54:39" passed="1" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="44" status="Passed" >
+<Disp><![CDATA[vuser_end Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Summary sTime="2018/9/12 - 10:52:07" eTime="2018/9/12 - 10:54:39" passed="21" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartTest" icon="1" nRep="4" status="Passed" >
+<Disp><![CDATA[Test Reliability_Terminal_film_print_web_withoutCreateData Summary]]></Disp>
+</NodeArgs>
+</Doc>
+</Report>

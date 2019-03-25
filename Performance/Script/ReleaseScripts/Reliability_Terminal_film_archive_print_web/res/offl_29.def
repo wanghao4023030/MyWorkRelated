@@ -1,0 +1,18 @@
+[Graph definition]
+count=1
+GraphTitle=Pool Paged Failures (Server)
+DataPointLabel_1=offline_datapoint_29
+LineTitle_1=10.184.129.108
+LineGroup_1=0
+YAxisTitle=Pool Paged Failures (Server)
+GraphGroupMenuTitle=Windows Resources
+XAxisTitle=Elapsed Scenario Time (seconds)
+XAxisIsElapsedTime=TRUE
+LineType=NOSTEP
+BuildUnderLoadGraph=TRUE
+AggregateFunction=AVG
+MissingData=PREVIOUS
+GranularityMode=NOTINCLUDEZERO
+NoDataBehavior=RemoveGraph
+GraphType=es_rm_svr_res_nt
+DataPointDescr_1=The number of times allocations from paged pool have failed.  Indicates that the computer's physical memory or paging file are too small.

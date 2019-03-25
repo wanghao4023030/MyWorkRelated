@@ -1,0 +1,18 @@
+[Graph definition]
+count=1
+GraphTitle=Bytes Total/sec (Server)
+DataPointLabel_1=offline_datapoint_17
+LineTitle_1=10.184.129.108
+LineGroup_1=0
+YAxisTitle=Bytes Total/sec (Server)
+GraphGroupMenuTitle=Windows Resources
+XAxisTitle=Elapsed Scenario Time (seconds)
+XAxisIsElapsedTime=TRUE
+LineType=NOSTEP
+BuildUnderLoadGraph=TRUE
+AggregateFunction=AVG
+MissingData=PREVIOUS
+GranularityMode=NOTINCLUDEZERO
+NoDataBehavior=RemoveGraph
+GraphType=es_rm_svr_res_nt
+DataPointDescr_1=The number of bytes the server has sent to and received from the network.  This value provides an overall indication of how busy the server is.

@@ -1,0 +1,2 @@
+[Hosts]
+localhost=D:\Scripts\ReleaseScripts\AddPaperReportScript_Print_all\res\localhost_1.eve

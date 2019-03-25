@@ -1,0 +1,12 @@
+[t9]
+SnapshotXmlFile=snapshot_9.xml
+ContentType=text/plain
+StepName=Custom Request: web_custom_request
+Total=1
+FileName1=t9.UNK
+RequestHeaderFile=t9_RequestHeader.txt
+ResponseHeaderFile=t9_ResponseHeader.txt
+RequestBodyFile=t9_RequestBody.txt
+URL1=http://10.184.129.108/EHDPS/printtask/create?tid=Terminal1
+[AdditionalInfo]
+IsIgnorable=1

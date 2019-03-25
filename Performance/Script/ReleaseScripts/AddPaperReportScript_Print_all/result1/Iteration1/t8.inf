@@ -1,0 +1,12 @@
+[t8]
+SnapshotXmlFile=snapshot_8.xml
+ContentType=text/plain
+StepName=Custom Request: Item_query
+Total=1
+FileName1=t8.UNK
+RequestHeaderFile=t8_RequestHeader.txt
+ResponseHeaderFile=t8_ResponseHeader.txt
+RequestBodyFile=t8_RequestBody.txt
+URL1=http://10.184.129.108/EHDPS/printtask/items?Value=A20180823124751572&Type=0&tid=Terminal1
+[AdditionalInfo]
+IsIgnorable=1

@@ -1,0 +1,18 @@
+[Graph definition]
+count=1
+GraphTitle=File Data Operations/sec (System)
+DataPointLabel_1=offline_datapoint_25
+LineTitle_1=10.184.129.108
+LineGroup_1=0
+YAxisTitle=File Data Operations/sec (System)
+GraphGroupMenuTitle=Windows Resources
+XAxisTitle=Elapsed Scenario Time (seconds)
+XAxisIsElapsedTime=TRUE
+LineType=NOSTEP
+BuildUnderLoadGraph=TRUE
+AggregateFunction=AVG
+MissingData=PREVIOUS
+GranularityMode=NOTINCLUDEZERO
+NoDataBehavior=RemoveGraph
+GraphType=es_rm_svr_res_nt
+DataPointDescr_1=File Data Operations per second is the rate that the computer is issuing Read and Write operations to file system devices.  It does not include File Control Operations.

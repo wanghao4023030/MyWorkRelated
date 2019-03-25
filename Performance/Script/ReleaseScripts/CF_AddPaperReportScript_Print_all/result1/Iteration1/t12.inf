@@ -1,0 +1,12 @@
+[t12]
+SnapshotXmlFile=snapshot_12.xml
+ContentType=text/plain
+StepName=Custom Request: web_custom_request
+Total=1
+FileName1=t12.UNK
+RequestHeaderFile=t12_RequestHeader.txt
+ResponseHeaderFile=t12_ResponseHeader.txt
+RequestBodyFile=t12_RequestBody.txt
+URL1=http://10.184.129.248/EHDPS/printtask/status/4368112?tid=Terminal1
+[AdditionalInfo]
+IsIgnorable=1

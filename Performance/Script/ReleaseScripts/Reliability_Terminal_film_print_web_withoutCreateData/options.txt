@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-ID:\Scripts\ReleaseScripts\Reliability_Terminal_film_print_web_withoutCreateData
+-IC:\Program Files (x86)\HP\LoadRunner\include
+-ed:\scripts\releasescripts\reliability_terminal_film_print_web_withoutcreatedata\\logfile.log
+d:\scripts\releasescripts\reliability_terminal_film_print_web_withoutcreatedata\\combined_Reliability_Terminal_film_print_web_withoutCreateData.c
+d:\scripts\releasescripts\reliability_terminal_film_print_web_withoutcreatedata\\pre_cci.c

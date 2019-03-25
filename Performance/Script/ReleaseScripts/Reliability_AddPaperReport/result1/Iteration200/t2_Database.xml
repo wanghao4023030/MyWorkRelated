@@ -1,0 +1,7 @@
+<?xml-stylesheet href="..\db_disconnection.xsl" type="text/xsl"?>
+<report vuGenInstallDir="C:\Program Files (x86)\HP\LoadRunner">
+  <database_validation>
+    <validation count="0" />
+    <source>ConnectGCPACS</source>
+  </database_validation>
+</report>

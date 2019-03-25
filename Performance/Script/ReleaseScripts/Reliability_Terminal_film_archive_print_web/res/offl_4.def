@@ -1,0 +1,18 @@
+[Graph definition]
+count=1
+GraphTitle=Pool Nonpaged Bytes (Memory)
+DataPointLabel_1=offline_datapoint_4
+LineTitle_1=10.184.129.108
+LineGroup_1=0
+YAxisTitle=Pool Nonpaged Bytes (Memory)
+GraphGroupMenuTitle=Windows Resources
+XAxisTitle=Elapsed Scenario Time (seconds)
+XAxisIsElapsedTime=TRUE
+LineType=NOSTEP
+BuildUnderLoadGraph=TRUE
+AggregateFunction=AVG
+MissingData=PREVIOUS
+GranularityMode=NOTINCLUDEZERO
+NoDataBehavior=RemoveGraph
+GraphType=es_rm_svr_res_nt
+DataPointDescr_1=Pool Nonpaged Bytes is the number of bytes in the Nonpaged Pool, a system memory area where space is acquired by operating system components as they accomplish their appointed tasks.  Nonpaged Pool pages cannot be paged out to the paging file, but instead remain in main memory as long as they are allocated.

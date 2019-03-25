@@ -1,0 +1,900 @@
+Virtual User Script started at : 2018-10-10 16:16:00
+Starting action vuser_init.
+vuser_init.c(3): DB Connection "Connect" started ... Wait ....
+vuser_init.c(3): DB connection was successful
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: 88b4fd2b-f7a6-4b0f-b8cf-4a8f17677629
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.5033 Wasted Time: 0.2250).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 1.6958 Wasted Time: 0.0027).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 1.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 2.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: 6c10d6ca-7865-41e8-af0f-23904896449a
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.7224 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.5907 Wasted Time: 0.0024).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 2.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 3.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: a241d4d1-47d7-4c1b-a0c0-5d734d89a1a1
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.3406 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 1.1505 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 3.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 4.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: b4596d3d-c889-4afe-b3fb-3833005532e0
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.1575 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.4781 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 4.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 5.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: 6a5ed619-911b-4490-8443-09bcc9010ad0
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.1746 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.2671 Wasted Time: 0.0022).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 5.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 6.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: 36d8f53b-fc9b-4bcc-a721-6b8e46ca9f3d
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.5976 Wasted Time: 0.0023).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.4313 Wasted Time: 0.0024).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 6.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 7.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: fe629b4c-e264-4557-a349-37dd5f1a98b2
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.2680 Wasted Time: 0.0023).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.9158 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 7.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 8.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: 96fdc62c-3589-4e02-9401-cd12fb5496e1
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.5836 Wasted Time: 0.0023).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(132): Notify: Transaction "Notify File 4M" started.
+Action.c(137): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(143): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(212): Notify: Transaction "Notify File 4M" ended with "Pass" status (Duration: 0.8183 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 8.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 9.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: 8953acc8-13b9-4fc9-8a19-c78944ff8b42
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.4215 Wasted Time: 0.0024).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.5872 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 9.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 10.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: 29b9fbd5-c086-4e75-a17a-92fd91db38fe
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.1935 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 1.0102 Wasted Time: 0.0024).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 10.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 11.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: 84000142-928e-4072-9f15-b88a5fddbe3e
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.1697 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.3699 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 11.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 12.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: d6472112-ca80-4417-813f-95b0915573ab
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.1752 Wasted Time: 0.0023).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.3292 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 12.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 13.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: 45ff57b6-059f-4666-9e94-fb0406d71ffa
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.1790 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.9488 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 13.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 14.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: 31015572-2734-4695-84df-035b0748da40
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.1736 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.5177 Wasted Time: 0.0115).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 14.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 15.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: dca981a5-53ca-40b9-9100-ce6f32797a4b
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.4087 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.3258 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 15.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 16.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: b6f33a4e-caf7-44ae-959a-2b3b3c08d678
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.1983 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.5516 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 16.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 17.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: d2411609-e88d-43f0-b211-9d078527837a
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.1820 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.8402 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 17.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 18.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: d780962d-29cf-4a60-91ab-8e233a3d7f36
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.1983 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.2803 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 18.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 19.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: 6fd8117a-2969-4392-b13d-4bd313913f2e
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.2425 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.5611 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 19.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 20.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: d3f99774-3588-4142-b751-ca4ad27007a1
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.4217 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.5337 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 20.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 21.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: 2f5b98f3-c400-470e-b879-d35e0ce02303
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.4791 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.2639 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 21.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 22.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: 86245d61-a0d5-441b-b132-20fdea9a24f9
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.1443 Wasted Time: 0.0011).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.5617 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 22.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 23.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: af1e16e2-69a6-4159-97a9-7f12c67d44a3
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.2147 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.3031 Wasted Time: 0.0022).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 23.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 24.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: bff15a32-c95c-4139-a679-50ac2eda9a13
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.2763 Wasted Time: 0.0018).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.2620 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 24.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 25.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: 2c2bf2ae-b82e-40c3-8a40-dd71e5063980
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.1557 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.3296 Wasted Time: 0.0022).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 25.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 26.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: cf25e8ba-d0fb-4665-8de7-740da0e18baa
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.1632 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.2957 Wasted Time: 0.0024).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 26.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 27.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: 2745877c-1451-4f06-907e-0206b5f04dc1
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.1876 Wasted Time: 0.0016).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.2448 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 27.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 28.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: 05885015-6b07-4bc5-b28f-6fee4a4055cd
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.3843 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 1.5962 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 28.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 29.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: 814d3bc1-ab8f-488c-a8b8-ae6d7a3eb732
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.4050 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.9265 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 29.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 30.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: 547d1308-5676-447b-93c5-dd91d39d20d8
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.1565 Wasted Time: 0.0023).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.4504 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 30.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 31.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: 2550bc96-0eb1-4371-ba0a-4db5c097eb29
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.2322 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.2739 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 31.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 32.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: 4b5db25b-bfca-4d28-9c22-423ba5c9a2a2
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.5181 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.3313 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 32.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 33.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: 14d5783d-a560-4a7d-b918-6dfe4d3542e3
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.5579 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.4376 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 33.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 34.
+Starting action Action.
+Action.c(29): SQL Statement  execution "QueryReportStatus" started
+Action.c(29): SQL Statement  execution was successful
+Action.c(29): ================================================
+Action.c(37): Get db value "QueryReportStatus" started
+Action.c(37): Get db value was successful
+Action.c(37): ================================================
+Action.c(44): The value is: 96e1fb49-9afa-4a07-880e-2992a42be625
+Action.c(50): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(52): Notify: Transaction "Create New Patient" started.
+Action.c(55): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(121): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 0.1822 Wasted Time: 0.0022).
+Action.c(125): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(125): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(220): Notify: Transaction "Notify File 100k" started.
+Action.c(225): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(230): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(298): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 0.2769 Wasted Time: 0.0023).
+Action.c(304): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(304): lr_think_time: 5.00 seconds (recorded think time was 10.00 seconds).
+Action.c(318): Think time - Waiting 5.00 seconds (according to limit).
+Action.c(318): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 34.
+Waiting 5.0000 seconds for iteration pacing.
+Starting iteration 35.
+Starting action Action.
+Abort was called from an action.
+Ending Vuser...
+Starting action vuser_end.
+vuser_end.c(3): DB disconnect "Disconnect" started
+vuser_end.c(3): DB disconnect was successful
+vuser_end.c(3): ================================================
+Ending action vuser_end.
+Vuser Terminated.

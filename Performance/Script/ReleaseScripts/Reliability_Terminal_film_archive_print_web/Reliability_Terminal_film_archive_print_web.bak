@@ -1,0 +1,85 @@
+[General]
+Type=Multi
+AdditionalTypes=WS_SOAP,QTWeb
+ActiveTypes=WS_SOAP
+GenerateTypes=WS_SOAP
+RecordedProtocols=
+DefaultCfg=default.cfg
+AppName=
+BuildTarget=
+ParamRightBrace=}
+ParamLeftBrace={
+NewFunctionHeader=1
+LastActiveAction=Action
+CorrInfoReportDir=result1
+LastResultDir=result1
+DevelopTool=Vugen
+ActionLogicExt=action_logic
+MajorVersion=12
+MinorVersion=53
+ParameterFile=Reliability_Terminal_film_archive_print_web.prm
+GlobalParameterFile=
+RunType=cci
+LastModifyVer=11.0.0.0
+AddOnName=SOA
+AddOnVersion=1.0
+[TransactionsOrder]
+Order="Create New Patient__*delimiter*__Film TerminalStatus__*delimiter*__Film Create_PrintTask__*delimiter*__Fim GetTaskID_fail__*delimiter*__Film Create_PrintTask Fail__*delimiter*__Film PrintTask__*delimiter*__Film_PrintStatus_CheckService__*delimiter*__Film PrintTask_Result_Correct__*delimiter*__Film PrintTask_Result_Fail"
+[ExtraFiles]
+globals.h=
+[Actions]
+vuser_init=vuser_init.c
+Action=Action.c
+vuser_end=vuser_end.c
+[Recorded Actions]
+vuser_init=0
+Action=0
+vuser_end=0
+[Replayed Actions]
+vuser_init=1
+Action=1
+vuser_end=1
+[Modified Actions]
+vuser_init=1
+Action=1
+vuser_end=1
+[Interpreters]
+vuser_init=cci
+Action=cci
+vuser_end=cci
+[ProtocolsVersion]
+QTWeb=11.0.0.0
+WS_SOAP=11.0.0.0
+[RunLogicFiles]
+Default Profile=default.usp
+[StateManagement]
+1=1
+5=0
+6=0
+9=0
+10=0
+11=0
+12=0
+17=0
+18=0
+20=0
+21=0
+CurrentState=1
+VuserStateHistory= 0 65536 65552
+LastReplayStatus=2
+LastReplayErrorID1=-17999
+LastReplayErrorMsg1=Action.c(147): Error: Create film test data faile, it`s not an error. The http return 503
+LastReplayErrorID2=-26377
+LastReplayErrorMsg2=Action.c(113): Continuing after Error -26377: No match found for the requested parameter "CreateFilmDataResult". Check whether the requested boundaries exist in the response data. Also, if the data you want to save exceeds 10240 bytes, use web_set_max_html_param_len to increase the parameter size  	[MsgId: MERR-26377]
+LastReplayErrorID3=-26609
+LastReplayErrorMsg3=Action.c(113): Continuing after Error -26609: HTTP Status-Code=503 (Service Unavailable) for "http://10.184.129.108/PerformanceTest/CreateFilmTestData.asmx"  	[MsgId: MERR-26609]
+[Transactions]
+"Create New Patient"=
+"Film TerminalStatus"=
+"Film Create_PrintTask"=
+"Fim GetTaskID_fail"=
+"Film Create_PrintTask Fail"=
+"Film PrintTask"=
+Film_PrintStatus_CheckService=
+"Film PrintTask_Result_Correct"=
+"Film PrintTask_Result_Fail"=

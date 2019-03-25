@@ -1,0 +1,179 @@
+.hl0
+{
+    COLOR: black;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 18pt;
+    FONT-WEIGHT: bold
+}
+.hl1
+{
+    COLOR: #669;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 16pt;
+    FONT-WEIGHT: bold
+}
+.hl2
+{
+    COLOR: #669;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 13pt;
+    FONT-WEIGHT: bold
+}
+.hl3 { color: #666; font-weight: bold; font-size: 10pt; font-family: Mic Shell Dlg; height: 28px }
+.hl1name
+{
+    COLOR: #669;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 16pt;
+    FONT-WEIGHT: normal
+}
+.bg_yellow
+{
+    BACKGROUND-COLOR: #fc0
+}
+.bg_gray_eee
+{
+    BACKGROUND-COLOR: #eee
+}
+.bg_gray_ccc { background-color: #ccc }
+.bg_gray_999 { background-color: #999 }
+.bg_midblue
+{
+    BACKGROUND-COLOR: #99c
+}
+.bg_ligtblue
+{
+    BACKGROUND-COLOR: #ccf
+}
+.bg_darkblue
+{
+    BACKGROUND-COLOR: #669
+}
+.text
+{
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 10pt
+}
+.text_small
+{
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 8pt
+}
+.text_pitzi
+{
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 6.5pt
+}
+.text_bold
+{
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-WEIGHT: bold
+}
+
+
+.Failed
+{
+    COLOR: #f03;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+.FailedLow
+{
+    COLOR: #f03;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 10pt;    
+}
+
+.FailedHigh
+{
+    COLOR: #f03;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 16pt;
+    FONT-WEIGHT: bold
+}
+.Passed
+{
+    COLOR: #096;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+.PassedHigh
+{
+    COLOR: #096;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 16pt;
+    FONT-WEIGHT: bold
+}
+
+.Done
+{
+    COLOR: #999;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+.DoneHigh
+{
+    COLOR: #999;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 16pt;
+    FONT-WEIGHT: bold
+}
+.Information
+{
+    COLOR: #999;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+.InformationHigh
+{
+    COLOR: #999;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 16pt;
+    FONT-WEIGHT: bold
+}
+.Warning
+{
+    COLOR: #f96;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+.WarningHigh
+{
+    COLOR: #f96;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 16pt;
+    FONT-WEIGHT: bold
+}
+.tablehl
+{
+    BACKGROUND-COLOR: #eee;
+    COLOR: #669;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold;
+    LINE-HEIGHT: 14pt
+}
+A
+{
+    COLOR: #33f;
+    FONT-FAMILY: Mic Shell Dlg
+}
+A:hover
+{
+    COLOR: #f03;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-WEIGHT: bold
+}
+.Condition
+{
+    COLOR: #333399;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+body { font-family: Mic Shell Dlg; }

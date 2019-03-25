@@ -1,0 +1,10 @@
+<?xml-stylesheet href="..\db_executesql.xsl" type="text/xsl"?>
+<report vuGenInstallDir="C:\Program Files (x86)\HP\LoadRunner">
+  <database_validation>
+    <validation count="0" />
+    <source>ConnectGCPACS</source>
+    <source_1>MyDataset</source_1>
+    <source_2> insert wggc.dbo.Patient ([PatientGUID],[PatientID],[PatientName],[LocalName],[PatientBirthDate],[PatientAge],[PatientSex],[Comments],[StudyCount],[SeriesCount],[ImageCount],[LatestStudyDateTime],[patientaddress],[contactinfo],[OperateServerAE],[OperateStatus],[vip],[PhoneticName],[PatientSize],[PatientWeight],[Neutered],[Breed],[Species],[Owner],[IdCard],[Phone],[Birthday],[MedicalCard],[HomeAddress])values (NewID(),'P201903151633001461','N201903151633001461','N201903151633001461','19760118','026','F','','1','1','1',REPLACE(REPLACE(REPLACE(REPLACE(CONVERT(varchar,GETDATE(),121),':',''),'-',''),' ',''),'.',''),null,null,'',0,0,'',null,null,null,null,null,null,null,null,null,null,null)</source_2>
+    <source_3>0</source_3>
+  </database_validation>
+</report>

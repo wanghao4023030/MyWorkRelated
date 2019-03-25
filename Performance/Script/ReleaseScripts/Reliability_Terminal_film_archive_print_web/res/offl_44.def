@@ -1,0 +1,18 @@
+[Graph definition]
+count=1
+GraphTitle=Disk Write Bytes/sec (PhysicalDisk _Total)
+DataPointLabel_1=offline_datapoint_44
+LineTitle_1=10.184.129.108
+LineGroup_1=0
+YAxisTitle=Disk Write Bytes/sec (PhysicalDisk _Total)
+GraphGroupMenuTitle=Windows Resources1
+XAxisTitle=Elapsed Scenario Time (seconds)
+XAxisIsElapsedTime=TRUE
+LineType=NOSTEP
+BuildUnderLoadGraph=TRUE
+AggregateFunction=AVG
+MissingData=PREVIOUS
+GranularityMode=NOTINCLUDEZERO
+NoDataBehavior=RemoveGraph
+GraphType=es_rm_svr_res_nt
+DataPointDescr_1=Disk Write Bytes/sec is rate at which bytes are transferred to the disk during write operations.

@@ -1,0 +1,9 @@
+POST /EHDUS/upload/printer/report/info?tid=Terminal1 HTTP/1.0
+Content-Type: application/json
+Cache-Control: no-cache
+User-Agent: Mozilla/4.0 (compatible; MSIE 4.0; Windows NT)
+Accept: */*
+Connection: Keep-Alive
+Host: 10.184.129.248
+Content-Length: 535
+

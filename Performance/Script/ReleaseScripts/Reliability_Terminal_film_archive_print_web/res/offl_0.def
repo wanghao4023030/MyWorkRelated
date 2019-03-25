@@ -1,0 +1,18 @@
+[Graph definition]
+count=1
+GraphTitle=Pool Nonpaged Bytes (Server)
+DataPointLabel_1=offline_datapoint_0
+LineTitle_1=10.184.129.108
+LineGroup_1=0
+YAxisTitle=Pool Nonpaged Bytes (Server)
+GraphGroupMenuTitle=Windows Resources
+XAxisTitle=Elapsed Scenario Time (seconds)
+XAxisIsElapsedTime=TRUE
+LineType=NOSTEP
+BuildUnderLoadGraph=TRUE
+AggregateFunction=AVG
+MissingData=PREVIOUS
+GranularityMode=NOTINCLUDEZERO
+NoDataBehavior=RemoveGraph
+GraphType=es_rm_svr_res_nt
+DataPointDescr_1=The number of bytes of non-pageable computer memory the server is using.  This value is useful for determining the values of the MaxNonpagedMemoryUsage value entry in the Windows NT Registry.

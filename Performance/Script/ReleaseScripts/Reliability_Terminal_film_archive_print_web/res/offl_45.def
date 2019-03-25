@@ -1,0 +1,18 @@
+[Graph definition]
+count=1
+GraphTitle=Disk Read Bytes/sec (PhysicalDisk _Total)
+DataPointLabel_1=offline_datapoint_45
+LineTitle_1=10.184.129.108
+LineGroup_1=0
+YAxisTitle=Disk Read Bytes/sec (PhysicalDisk _Total)
+GraphGroupMenuTitle=Windows Resources1
+XAxisTitle=Elapsed Scenario Time (seconds)
+XAxisIsElapsedTime=TRUE
+LineType=NOSTEP
+BuildUnderLoadGraph=TRUE
+AggregateFunction=AVG
+MissingData=PREVIOUS
+GranularityMode=NOTINCLUDEZERO
+NoDataBehavior=RemoveGraph
+GraphType=es_rm_svr_res_nt
+DataPointDescr_1=Disk Read Bytes/sec is the rate at which bytes are transferred from the disk during read operations.

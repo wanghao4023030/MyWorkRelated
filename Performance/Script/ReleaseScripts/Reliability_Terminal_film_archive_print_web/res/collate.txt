@@ -1,0 +1,5 @@
+[Diagnostics]
+Status=-1
+[Collate Recovery]
+Scenario=E:\ECS\Performance\Script\208\ScenarioPUMA_Reliability_Monitor.lrs
+Completed=0

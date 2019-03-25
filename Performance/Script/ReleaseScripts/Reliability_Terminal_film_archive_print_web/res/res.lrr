@@ -1,0 +1,36 @@
+[Scenario]
+Product=HP LoadRunner Controller
+Version=11.0.0.0
+Path=E:\ECS\Performance\Script\208\ScenarioPUMA_Reliability_Monitor.lrs
+Subject=ScenarioPUMA
+Result_file=D:\Scripts\ReleaseScripts\Reliability_Terminal_film_archive_print_web\res\res.lrr
+Description=
+ResultName=res
+Time_Zone=-28800
+Start_time=1528880215
+Daylight_Bias=0
+Stop_time=1528909478
+[Configuration]
+Public_local=1
+Is_mix=1
+Is_runner_file=0
+Runner_file=
+[Running_mode]
+Start_reason=By command
+Stop_reason=By a user
+[Data Collection]
+FullData=1
+[Scenario_summary]
+Scenario Type=Manual Scenario
+Goal Profile Name=Default Schedule
+Mode=Scenario Scheduling
+Scenario Duration=Until Completion
+Load Behavior=Property
+[Wan_Emulation]
+10.184.129.145=
+[Scripts]
+addpaperreportscript_print_all.1=D:\Scripts\ReleaseScripts\AddPaperReportScript_Print_all\AddPaperReportScript_Print_all.usr
+reliability_terminal_film_archive_print_web=D:\Scripts\ReleaseScripts\Reliability_Terminal_film_archive_print_web\Reliability_Terminal_film_archive_print_web.usr
+[Scripts_types]
+addpaperreportscript_print_all.1=Multi+QTWeb+WS_SOAP
+reliability_terminal_film_archive_print_web=Multi+WS_SOAP

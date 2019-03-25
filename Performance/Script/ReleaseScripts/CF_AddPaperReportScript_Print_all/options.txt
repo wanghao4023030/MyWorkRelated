@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-ID:\Scripts\ReleaseScripts\CF_AddPaperReportScript_Print_all
+-IC:\Program Files (x86)\HP\LoadRunner\include
+-ed:\scripts\releasescripts\cf_addpaperreportscript_print_all\\logfile.log
+d:\scripts\releasescripts\cf_addpaperreportscript_print_all\\combined_CF_AddPaperReportScript_Print_all.c
+d:\scripts\releasescripts\cf_addpaperreportscript_print_all\\pre_cci.c

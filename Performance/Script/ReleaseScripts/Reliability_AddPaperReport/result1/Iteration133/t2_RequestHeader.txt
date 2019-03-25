@@ -1,0 +1,10 @@
+POST /NotifyServer/NotifyService.asmx HTTP/1.0
+Content-Type: application/soap+xml;charset=GB2312;
+Cache-Control: no-cache
+Referer: http://10.184.129.108/NotifyServer/NotifyService.asmx
+User-Agent: Mozilla/4.0 (compatible; MSIE 4.0; Windows NT)
+Accept: */*
+Connection: Keep-Alive
+Host: 10.184.129.108
+Content-Length: 1860
+

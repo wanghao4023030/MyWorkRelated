@@ -1,0 +1,18 @@
+[Graph definition]
+count=1
+GraphTitle=SQL Cache Memory (KB) (MSSQL$GCPACSWS:Memory Manager)
+DataPointLabel_1=offline_datapoint_57
+LineTitle_1=10.184.129.108
+LineGroup_1=0
+YAxisTitle=SQL Cache Memory (KB) (MSSQL$GCPACSWS:Memory Manager)
+GraphGroupMenuTitle=SQL Server1
+XAxisTitle=Elapsed Scenario Time (seconds)
+XAxisIsElapsedTime=TRUE
+LineType=NOSTEP
+BuildUnderLoadGraph=TRUE
+AggregateFunction=AVG
+MissingData=PREVIOUS
+GranularityMode=NOTINCLUDEZERO
+NoDataBehavior=RemoveGraph
+GraphType=es_rm_svr_res_nt_mssql65
+DataPointDescr_1=Total amount of dynamic memory the server is using for the dynamic SQL cache

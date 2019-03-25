@@ -1,0 +1,92 @@
+Virtual User Script started at : 2018-09-12 10:52:39
+Starting action vuser_init.
+vuser_init.c(3): DB Connection "Connect" started ... Wait ....
+vuser_init.c(3): DB connection was successful
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action Action.
+Action.c(22): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
+Action.c(36): SQL Statement  execution "QueryReportStatus" started
+Action.c(36): SQL Statement  execution was successful
+Action.c(36): ================================================
+The result is 1
+Action.c(44): lr_think_time: 5.00 seconds.
+Action.c(64): lr_think_time: 5.00 seconds.
+Action.c(69): SQL Statement  execution "QueryReportStatus" started
+Action.c(69): SQL Statement  execution was successful
+Action.c(69): ================================================
+Action.c(84): Notify: Transaction "Film TerminalStatus" started.
+Action.c(86): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+Action.c(86): web_add_auto_header("content-type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(87): web_custom_request("web_custom_request") was successful, 540 body bytes, 259 header bytes  	[MsgId: MMSG-26386]
+Action.c(97): Notify: Transaction "Film TerminalStatus" ended with "Pass" status (Duration: 50.2859 Wasted Time: 50.2311).
+Action.c(105): lr_think_time: 5.00 seconds.
+Action.c(108): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(114): Notify: Transaction "Film Create_PrintTask" started.
+Action.c(116): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+Action.c(116): web_add_auto_header("content-type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(118): web_custom_request("web_custom_request") was successful, 674 body bytes, 259 header bytes  	[MsgId: MMSG-26386]
+Action.c(129): Notify: Transaction "Film Create_PrintTask" ended with "Pass" status (Duration: 2.1123 Wasted Time: 0.0041).
+Action.c(158): Notify: Transaction "Film PrintTask" started.
+Action.c(160): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+Action.c(160): web_add_auto_header("content-type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(162): web_custom_request("web_custom_request") was successful, 671 body bytes, 259 header bytes  	[MsgId: MMSG-26386]
+Action.c(173): Notify: Transaction "Film PrintTask" ended with "Pass" status (Duration: 0.2456 Wasted Time: 0.0023).
+Action.c(183): lr_think_time: 10.00 seconds.
+Action.c(185): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(190): Notify: Transaction "Film_PrintStatus_CheckService" started.
+Action.c(192): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+Action.c(192): web_add_auto_header("content-type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(193): web_custom_request("web_custom_request") was successful, 681 body bytes, 259 header bytes  	[MsgId: MMSG-26386]
+Action.c(203): Notify: Transaction "Film_PrintStatus_CheckService" ended with "Pass" status (Duration: 0.0803 Wasted Time: 0.0023).
+Action.c(205): PrintStatus in DataBase-------,0
+Action.c(207): PrintStatus Check result-------,-4
+Action.c(183): lr_think_time: 10.00 seconds.
+Action.c(185): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(190): Notify: Transaction "Film_PrintStatus_CheckService" started.
+Action.c(192): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+Action.c(192): web_add_auto_header("content-type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(193): web_custom_request("web_custom_request") was successful, 672 body bytes, 259 header bytes  	[MsgId: MMSG-26386]
+Action.c(203): Notify: Transaction "Film_PrintStatus_CheckService" ended with "Pass" status (Duration: 0.0774 Wasted Time: 0.0025).
+Action.c(205): PrintStatus in DataBase-------,1
+Action.c(207): PrintStatus Check result-------,-3
+Action.c(183): lr_think_time: 10.00 seconds.
+Action.c(185): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(190): Notify: Transaction "Film_PrintStatus_CheckService" started.
+Action.c(192): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+Action.c(192): web_add_auto_header("content-type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(193): web_custom_request("web_custom_request") was successful, 672 body bytes, 259 header bytes  	[MsgId: MMSG-26386]
+Action.c(203): Notify: Transaction "Film_PrintStatus_CheckService" ended with "Pass" status (Duration: 0.0570 Wasted Time: 0.0012).
+Action.c(205): PrintStatus in DataBase-------,1
+Action.c(207): PrintStatus Check result-------,-3
+Action.c(183): lr_think_time: 10.00 seconds.
+Action.c(185): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(190): Notify: Transaction "Film_PrintStatus_CheckService" started.
+Action.c(192): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+Action.c(192): web_add_auto_header("content-type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(193): web_custom_request("web_custom_request") was successful, 668 body bytes, 259 header bytes  	[MsgId: MMSG-26386]
+Action.c(203): Notify: Transaction "Film_PrintStatus_CheckService" ended with "Pass" status (Duration: 0.0813 Wasted Time: 0.0022).
+Action.c(205): PrintStatus in DataBase-------,4
+Action.c(207): PrintStatus Check result-------,0
+Action.c(212): PrintStatus-------,4
+Action.c(217): Notify: Transaction "Film PrintTask_Result_Correct" started.
+Action.c(218): lr_think_time: 1.00 seconds.
+Action.c(219): Notify: Transaction "Film PrintTask_Result_Correct" ended with "Pass" status (Duration: 1.0461 Think Time: 1.0130).
+Action.c(221): lr_think_time: 5.00 seconds.
+Action.c(227): SQL Statement  execution "UpdateFilmToUnPrinted" started
+Action.c(227): Warning :No dataset was created.
+Action.c(227): SQL Statement  execution was successful
+Action.c(227): ================================================
+Action.c(265): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+vuser_end.c(3): DB disconnect "Disconnect" started
+vuser_end.c(3): DB disconnect was successful
+vuser_end.c(3): ================================================
+Ending action vuser_end.
+Vuser Terminated.
+Warning: Extension LrXml.dll reports error -1 on call to function ExtPerThreadTerminate
+Warning: Vuser failed to terminate extension.

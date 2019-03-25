@@ -1,0 +1,18 @@
+[Graph definition]
+count=1
+GraphTitle=Avg. Disk Queue Length (PhysicalDisk _Total)
+DataPointLabel_1=offline_datapoint_21
+LineTitle_1=10.184.129.108
+LineGroup_1=0
+YAxisTitle=Avg. Disk Queue Length (PhysicalDisk _Total)
+GraphGroupMenuTitle=Windows Resources
+XAxisTitle=Elapsed Scenario Time (seconds)
+XAxisIsElapsedTime=TRUE
+LineType=NOSTEP
+BuildUnderLoadGraph=TRUE
+AggregateFunction=AVG
+MissingData=PREVIOUS
+GranularityMode=NOTINCLUDEZERO
+NoDataBehavior=RemoveGraph
+GraphType=es_rm_svr_res_nt
+DataPointDescr_1=Avg. Disk Queue Length is the average number of both read and write requests that were queued for the selected disk during the sample interval.

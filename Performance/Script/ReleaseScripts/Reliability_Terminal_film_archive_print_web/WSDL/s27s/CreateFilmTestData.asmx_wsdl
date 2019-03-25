@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="QueryResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strACCN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryResultResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryResultResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateFilmFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strfilename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strtime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStudyInstanceUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSeriesInstanceUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSOPInstanceID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAccNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPatientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGrender" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strModality" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strBodayPart" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDestFolder" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateFilmFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateFilmFileResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="QueryResultSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryResult" />
+  </wsdl:message>
+  <wsdl:message name="QueryResultSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateFilmFileSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateFilmFile" />
+  </wsdl:message>
+  <wsdl:message name="CreateFilmFileSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateFilmFileResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CreateFilmTestDataSoap">
+    <wsdl:operation name="QueryResult">
+      <wsdl:input message="tns:QueryResultSoapIn" />
+      <wsdl:output message="tns:QueryResultSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFilmFile">
+      <wsdl:input message="tns:CreateFilmFileSoapIn" />
+      <wsdl:output message="tns:CreateFilmFileSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CreateFilmTestDataSoap" type="tns:CreateFilmTestDataSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryResult">
+      <soap:operation soapAction="http://tempuri.org/QueryResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFilmFile">
+      <soap:operation soapAction="http://tempuri.org/CreateFilmFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CreateFilmTestDataSoap12" type="tns:CreateFilmTestDataSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryResult">
+      <soap12:operation soapAction="http://tempuri.org/QueryResult" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFilmFile">
+      <soap12:operation soapAction="http://tempuri.org/CreateFilmFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CreateFilmTestData">
+    <wsdl:port name="CreateFilmTestDataSoap" binding="tns:CreateFilmTestDataSoap">
+      <soap:address location="http://10.184.129.108/PerformanceTest/CreateFilmTestData.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CreateFilmTestDataSoap12" binding="tns:CreateFilmTestDataSoap12">
+      <soap12:address location="http://10.184.129.108/PerformanceTest/CreateFilmTestData.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

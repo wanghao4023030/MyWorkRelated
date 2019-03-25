@@ -1,0 +1,10 @@
+[t6]
+SnapshotXmlFile=snapshot_6.xml
+ContentType=text/plain
+StepName=Custom Request: web_custom_request
+Total=1
+FileName1=t6.UNK
+RequestHeaderFile=t6_RequestHeader.txt
+ResponseHeaderFile=t6_ResponseHeader.txt
+RequestBodyFile=t6_RequestBody.txt
+URL1=http://10.184.129.108/EHDPS/printtask/status/5071329?tid=K2_1

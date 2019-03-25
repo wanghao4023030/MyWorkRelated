@@ -1,0 +1,2 @@
+[Hosts]
+localhost=D:\Scripts\ReleaseScripts\Reliability_Terminal_film_archive_print_web\res\localhost_1.eve

@@ -1,0 +1,18 @@
+[Graph definition]
+count=1
+GraphTitle=Pool Paged Bytes (Memory)
+DataPointLabel_1=offline_datapoint_3
+LineTitle_1=10.184.129.108
+LineGroup_1=0
+YAxisTitle=Pool Paged Bytes (Memory)
+GraphGroupMenuTitle=Windows Resources
+XAxisTitle=Elapsed Scenario Time (seconds)
+XAxisIsElapsedTime=TRUE
+LineType=NOSTEP
+BuildUnderLoadGraph=TRUE
+AggregateFunction=AVG
+MissingData=PREVIOUS
+GranularityMode=NOTINCLUDEZERO
+NoDataBehavior=RemoveGraph
+GraphType=es_rm_svr_res_nt
+DataPointDescr_1=Pool Paged Bytes is the size, in bytes, of the paged pool, an area of system memory (physical memory used by the operating system) for objects that can be written to disk when they are not being used.  Memory\Pool Paged Bytes is calculated differently than Process\Pool Paged Bytes, so it might not equal Process\Pool Paged Bytes\_Total. This counter displays the last observed value only; it is not an average.

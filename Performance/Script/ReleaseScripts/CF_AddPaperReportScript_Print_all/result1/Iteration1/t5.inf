@@ -1,0 +1,12 @@
+[t5]
+SnapshotXmlFile=snapshot_5.xml
+ContentType=text/plain
+StepName=Custom Request: Terminal_status
+Total=1
+FileName1=t5.UNK
+RequestHeaderFile=t5_RequestHeader.txt
+ResponseHeaderFile=t5_ResponseHeader.txt
+RequestBodyFile=t5_RequestBody.txt
+URL1=http://10.184.129.248/EHDPS/status?tid=Terminal1
+[AdditionalInfo]
+IsIgnorable=1

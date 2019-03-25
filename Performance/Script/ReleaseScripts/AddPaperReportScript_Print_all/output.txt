@@ -1,0 +1,110 @@
+Virtual User Script started at : 2018-08-23 12:48:24
+Starting action vuser_init.
+vuser_init.c(3): DB Connection "Connect" started ... Wait ....
+vuser_init.c(3): DB connection was successful
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action Action.
+Action.c(30): SQL Statement  execution "QueryReportStatus" started
+Action.c(30): SQL Statement  execution was successful
+Action.c(30): ================================================
+Action.c(41): Get db value "QueryReportStatus" started
+Action.c(41): Get db value was successful
+Action.c(41): ================================================
+Action.c(48): The value is: 8ec86ea0-12cd-4b9a-b44f-b49fe096bfa8
+Action.c(53): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(55): Notify: Transaction "Create New Patient" started.
+Action.c(58): web_custom_request("web_custom_request") was successful, 373 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(126): Notify: Transaction "Create New Patient" ended with "Pass" status (Duration: 3.9538 Wasted Time: 0.2071).
+Action.c(129): lr_think_time: 5.00 seconds.
+Action.c(222): Notify: Transaction "Notify File 100k" started.
+Action.c(227): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(232): web_custom_request("web_custom_request") was successful, 381 body bytes, 266 header bytes  	[MsgId: MMSG-26386]
+Action.c(301): Notify: Transaction "Notify File 100k" ended with "Pass" status (Duration: 5.7131 Wasted Time: 0.0026).
+Action.c(311): lr_think_time: 5.00 seconds.
+Action.c(318): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
+Action.c(348): lr_think_time: 5.00 seconds.
+Action.c(353): SQL Statement  execution "QueryReportStatus" started
+Action.c(353): SQL Statement  execution was successful
+Action.c(353): ================================================
+Action.c(370): Notify: Transaction "Report Update report printer info" started.
+Action.c(372): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+Action.c(372): web_add_auto_header("content-type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(373): web_custom_request("Update report printerInfo") was successful, 74 body bytes, 282 header bytes  	[MsgId: MMSG-26386]
+Action.c(383): Notify: Transaction "Report Update report printer info" ended with "Pass" status (Duration: 0.1270 Wasted Time: 0.0113).
+Action.c(385): lr_think_time: 5.00 seconds.
+Action.c(387): Notify: Transaction "Report Update report printer info" started.
+Action.c(389): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+Action.c(389): web_add_auto_header("content-type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(390): web_custom_request("Update report printerInfo") was successful, 74 body bytes, 282 header bytes  	[MsgId: MMSG-26386]
+Action.c(400): Notify: Transaction "Report Update report printer info" ended with "Pass" status (Duration: 0.0733 Wasted Time: 0.0011).
+Action.c(402): lr_think_time: 5.00 seconds.
+Action.c(410): Notify: Transaction "Report TerminalStatus" started.
+Action.c(412): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+Action.c(412): web_add_auto_header("content-type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(413): web_custom_request("Terminal_status") was successful, 1285 body bytes, 284 header bytes  	[MsgId: MMSG-26386]
+Action.c(424): Notify: Transaction "Report TerminalStatus" ended with "Pass" status (Duration: 4.0109 Wasted Time: 0.0022).
+Action.c(426): lr_think_time: 5.00 seconds.
+Action.c(433): Notify: Transaction "Report TerminalStatus" started.
+Action.c(436): web_custom_request("Terminal_status") was successful, 1285 body bytes, 284 header bytes  	[MsgId: MMSG-26386]
+Action.c(447): Notify: Transaction "Report TerminalStatus" ended with "Pass" status (Duration: 0.0507 Wasted Time: 0.0012).
+Action.c(449): lr_think_time: 5.00 seconds.
+Action.c(466): lr_think_time: 6.00 seconds.
+Action.c(469): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(475): Notify: Transaction "Report QueryFilmReportInfo" started.
+Action.c(477): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+Action.c(477): web_add_auto_header("content-type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(478): web_custom_request("Item_query") was successful, 1033 body bytes, 284 header bytes  	[MsgId: MMSG-26386]
+Action.c(489): Notify: Transaction "Report QueryFilmReportInfo" ended with "Pass" status (Duration: 24.9178 Wasted Time: 0.0024).
+Action.c(519): lr_think_time: 6.00 seconds.
+Action.c(522): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(528): Notify: Transaction "Report QueryFilmReportInfo" started.
+Action.c(530): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+Action.c(530): web_add_auto_header("content-type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(531): web_custom_request("Item_query") was successful, 1033 body bytes, 284 header bytes  	[MsgId: MMSG-26386]
+Action.c(543): Notify: Transaction "Report QueryFilmReportInfo" ended with "Pass" status (Duration: 0.5628 Wasted Time: 0.0030).
+Action.c(596): Notify: Transaction "Report Create_PrintTask" started.
+Action.c(598): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(609): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+Action.c(609): web_add_auto_header("content-type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(611): web_custom_request("web_custom_request") was successful, 1411 body bytes, 284 header bytes  	[MsgId: MMSG-26386]
+Action.c(622): Notify: Transaction "Report Create_PrintTask" ended with "Pass" status (Duration: 0.8471 Wasted Time: 0.0024).
+TaskID is : 4368468
+Action.c(627): lr_think_time: 5.00 seconds.
+Action.c(651): Notify: Transaction "Report PrintTask" started.
+Action.c(653): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+Action.c(653): web_add_auto_header("content-type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(655): web_custom_request("web_custom_request") was successful, 1408 body bytes, 284 header bytes  	[MsgId: MMSG-26386]
+Action.c(666): Notify: Transaction "Report PrintTask" ended with "Pass" status (Duration: 0.3971 Wasted Time: 0.0023).
+Action.c(668): lr_think_time: 5.00 seconds.
+Action.c(674): Notify: Transaction "Report Update PrintTask" started.
+Action.c(676): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+Action.c(676): web_add_auto_header("content-type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(678): web_custom_request("web_custom_request") was successful, 224 body bytes, 283 header bytes  	[MsgId: MMSG-26386]
+Action.c(689): Notify: Transaction "Report Update PrintTask" ended with "Pass" status (Duration: 0.1987 Wasted Time: 0.0023).
+Action.c(691): lr_think_time: 5.00 seconds.
+Action.c(701): lr_think_time: 10.00 seconds.
+Action.c(705): Notify: Transaction "Report PrintTask Status Check" started.
+Action.c(707): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(712): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+Action.c(712): web_add_auto_header("content-type") highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(714): web_custom_request("web_custom_request") was successful, 1413 body bytes, 284 header bytes  	[MsgId: MMSG-26386]
+Action.c(724): Notify: Transaction "Report PrintTask Status Check" ended with "Pass" status (Duration: 0.1176 Wasted Time: 0.0017).
+Action.c(726): PrintStatus-------,4
+Action.c(728): Compare Result-------,0
+Action.c(732): lr_think_time: 5.00 seconds.
+Action.c(735): Notify: Transaction "Report  Print Task Correct" started.
+Action.c(736): lr_think_time: 1.00 seconds.
+Action.c(737): Notify: Transaction "Report  Print Task Correct" ended with "Pass" status (Duration: 1.0292 Think Time: 1.0003).
+Action.c(774): Try Time-------,1
+Action.c(784): lr_think_time: 5.00 seconds.
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+vuser_end.c(3): DB disconnect "Disconnect" started
+vuser_end.c(3): DB disconnect was successful
+vuser_end.c(3): ================================================
+Ending action vuser_end.
+Vuser Terminated.

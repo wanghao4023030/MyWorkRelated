@@ -1,0 +1,94 @@
+[General]
+Type=Multi
+AdditionalTypes=QTWeb,WS_SOAP
+ActiveTypes=QTWeb,WS_SOAP
+GenerateTypes=QTWeb,WS_SOAP
+RecordedProtocols=
+DefaultCfg=default.cfg
+AppName=
+BuildTarget=
+ParamRightBrace=}
+ParamLeftBrace={
+NewFunctionHeader=1
+LastActiveAction=Action
+CorrInfoReportDir=result1
+LastResultDir=result1
+DevelopTool=Vugen
+ActionLogicExt=action_logic
+MajorVersion=12
+MinorVersion=53
+ParameterFile=AddPaperReportScript_Print_all.prm
+GlobalParameterFile=
+RunType=cci
+LastModifyVer=11.0.0.0
+AddOnName=SOA
+AddOnVersion=1.0
+[TransactionsOrder]
+Order="Create New Patient__*delimiter*__Notify File 4M__*delimiter*__Notify File 100k__*delimiter*__Report Update report printer info__*delimiter*__Report TerminalStatus__*delimiter*__Report QueryFilmReportInfo__*delimiter*__Report GetReportPath_fail__*delimiter*__Report GetReportID_fail__*delimiter*__Report Create_PrintTask__*delimiter*__Create Report PrintTask Fail__*delimiter*__Report PrintTask__*delimiter*__Report Update PrintTask__*delimiter*__Report PrintTask Status Check__*delimiter*__Report  Print Task Correct__*delimiter*__Report  Print Task fail"
+[Actions]
+vuser_init=vuser_init.c
+Action=Action.c
+vuser_end=vuser_end.c
+[ProtocolsVersion]
+QTWeb=11.0.0.0
+WS_SOAP=11.0.0.0
+[RunLogicFiles]
+Default Profile=default.usp
+[StateManagement]
+1=1
+5=0
+6=1
+9=0
+10=0
+11=0
+12=0
+13=0
+17=0
+18=0
+20=0
+21=0
+CurrentState=6
+VuserStateHistory= 0 65536 65552 1048576 1048592
+LastReplayStatus=2
+LastReplayErrorID1=-17999
+LastReplayErrorMsg1=Action.c(495): Error: The accession number is A20180822162822361,Terminal33
+LastReplayErrorID2=-17999
+LastReplayErrorMsg2=Action.c(495): Error: The accession number is A20180822155131310,Terminal13
+LastReplayErrorID3=-17999
+LastReplayErrorMsg3=Action.c(636): Error: The system create report print task fail!:   From Terminal: Terminal11 and accession number  is 
+LastReplayErrorID4=-26377
+LastReplayErrorMsg4=Action.c(611): Continuing after Error -26377: No match found for the requested parameter "TaskID". Check whether the requested boundaries exist in the response data. Also, if the data you want to save exceeds 809400 bytes, use web_set_max_html_param_len to increase the parameter size  	[MsgId: MERR-26377]
+[Transactions]
+"Create New Patient"=
+"Notify File 4M"=
+"Notify File 100k"=
+"Report Update report printer info"=
+"Report TerminalStatus"=
+"Report QueryFilmReportInfo"=
+"Report GetReportPath_fail"=
+"Report GetReportID_fail"=
+"Report Create_PrintTask"=
+"Create Report PrintTask Fail"=
+"Report PrintTask"=
+"Report Update PrintTask"=
+"Report PrintTask Status Check"=
+"Report  Print Task Correct"=
+"Report  Print Task fail"=
+[ExtraFiles]
+globals.h=
+[Recorded Actions]
+vuser_init=0
+Action=1
+vuser_end=0
+[Replayed Actions]
+vuser_init=1
+Action=1
+vuser_end=1
+[Modified Actions]
+vuser_init=1
+Action=1
+vuser_end=1
+[Interpreters]
+vuser_init=cci
+Action=cci
+vuser_end=cci

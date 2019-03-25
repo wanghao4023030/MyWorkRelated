@@ -1,0 +1,2 @@
+"{"CardInfo":{"Value":"A20180912103528438","Type":0},"RequestId":null,"RequestDate":"2018-09-12"
+" 10:53:45.7211992+08:00"}"

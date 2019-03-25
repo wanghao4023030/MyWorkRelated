@@ -1,0 +1,10 @@
+<?xml-stylesheet href="..\db_executesql.xsl" type="text/xsl"?>
+<report vuGenInstallDir="C:\Program Files (x86)\HP\LoadRunner">
+  <database_validation>
+    <validation count="0" />
+    <source>ConnectGCPACS</source>
+    <source_1>MyDataset</source_1>
+    <source_2> select AccessionNumber from wggc.dbo.AFP_ReportInfo where AccessionNumber ='A20180823124751572' and ReportStatus =2 and PrintStatus=0 and DeleteStatus = 0</source_2>
+    <source_3>1</source_3>
+  </database_validation>
+</report>

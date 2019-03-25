@@ -1,0 +1,18 @@
+[Graph definition]
+count=1
+GraphTitle=Cache Hit Ratio (MSSQL$GCPACSWS:Plan Cache SQL Plans)
+DataPointLabel_1=offline_datapoint_70
+LineTitle_1=10.184.129.108
+LineGroup_1=0
+YAxisTitle=Cache Hit Ratio (MSSQL$GCPACSWS:Plan Cache SQL Plans)
+GraphGroupMenuTitle=SQL Server2
+XAxisTitle=Elapsed Scenario Time (seconds)
+XAxisIsElapsedTime=TRUE
+LineType=NOSTEP
+BuildUnderLoadGraph=TRUE
+AggregateFunction=AVG
+MissingData=PREVIOUS
+GranularityMode=NOTINCLUDEZERO
+NoDataBehavior=RemoveGraph
+GraphType=es_rm_svr_res_nt_mssql65
+DataPointDescr_1=Ratio between cache hits and lookups
