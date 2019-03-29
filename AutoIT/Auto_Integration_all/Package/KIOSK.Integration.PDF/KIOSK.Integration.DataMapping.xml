@@ -1,0 +1,38 @@
+<dataMapping>
+  <dataView name="wggc.dbo.vi_KIOSK_ExamInfo_Order">
+    <patientID regex="">PatientID</patientID>
+    <accessionNumber regex="">AccessionNumber</accessionNumber>
+    <patientName regex="">NameCN</patientName>
+    <otherPatientName regex="">NameEN</otherPatientName>
+    <gender regex="">Gender</gender>
+    <birthday regex="">Birthday</birthday>
+    <patientType regex="">PatientType</patientType>
+    <outHospitalNo regex="">OutHospitalNo</outHospitalNo>
+    <inHospitalNo regex="">InHospitalNo</inHospitalNo>
+    <physicalExamNo regex="">PhysicalNumber</physicalExamNo>
+    <referringDepartment regex="">RequestDepartment</referringDepartment>
+    <modality regex="">Modality</modality>
+    <modalityName regex="">ModalityName</modalityName>
+    <examName regex="">ExamName</examName>
+    <examBodypart regex="">ExamBodyPart</examBodypart>
+    <visitID regex="">VisitID</visitID>
+    <requestID regex="">RequestID</requestID>
+    <requestDT regex="">RequestDT</requestDT>
+    <registerDT regex="">RegisterDT</registerDT>
+    <examDT regex="">ExamDT</examDT>
+    <submitDT regex="">SubmitDt</submitDT>
+    <studyStatus regex="">StudyStatus</studyStatus>
+    <pdfReportURL regex="">PDFReportURL</pdfReportURL>
+    <approveDT regex="">ApproveDT</approveDT>
+    <optional0 regex="">Optional0</optional0>
+    <optional1 regex="">Optional1</optional1>
+    <optional2 regex="">Optional2</optional2>
+    <optional3 regex="">Optional3</optional3>
+    <optional4 regex="">Optional4</optional4>
+    <optional5 regex="">Optional5</optional5>
+    <optional6 regex="">Optional6</optional6>
+    <optional7 regex="">Optional7</optional7>
+    <optional8 regex="">Optional8</optional8>
+    <optional9 regex="">Optional9</optional9>
+  </dataView>
+</dataMapping>
