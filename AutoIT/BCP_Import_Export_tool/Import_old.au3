@@ -13,7 +13,6 @@
 #include <File.au3>
 #include <Array.au3>
 #include <MsgBoxConstants.au3>
-#include <Constants.au3>
 
 
 ; Script Start - Add your code below here
@@ -33,14 +32,6 @@ $adoRecordSet = ObjCreate("ADODB.RecordSet")
 $adoRecordSet2 = ObjCreate("ADODB.RecordSet")
 $adoRecordSet3 = ObjCreate("ADODB.RecordSet")
 $adoRecordSet4 = ObjCreate("ADODB.RecordSet")
-$Log_path = @ScriptDir & "\import_log.txt"
-
-;~ Delete the log file if exist
-If FileExists($Log_path) Then
-	FileDelete($Log_path)
-EndIf
-
-_FileWriteLog($Log_path, "Start to import the data....")
 
 $SQL_queryDB = "select name from sys.sysdatabases where filename not like '%Microsoft%'"
 $SQL = "use OCRConfigDB  select name from sys.tables "
@@ -48,31 +39,14 @@ $SQL = "use OCRConfigDB  select name from sys.tables "
 
 if @error Then
 		MsgBox(0, "ERROR", "Failed to connect to the database,please run the application in PS server.")
-		_FileWriteLog($Log_path, "Failed to connect to the database,please run the application in PS server.")
 		Exit
 	Else
 		MsgBox(0, "Success!", "Connection to database successful!")
-		_FileWriteLog($Log_path, "Connection to database successful!")
 	EndIf
 
+
+
 $adoRecordSet.Open($SQL_queryDB,$adCN)
-
-$Delete_sql =  "use wggc delete from wggc.dbo.NetAE where NetAEName not in ('MainServer', 'LOCALAPP', 'SIMPRINTER')"
-$adCN.execute($Delete_sql)
-_FileWriteLog($Log_path, "Delete data of wggc.dbo.NetAE")
-
-$Delete_sql =  "use WGGC delete from wggc.dbo.AFP_Department where ID not in (select distinct DepartmentID from wggc.dbo.AFP_FilmInfo)"
-$adCN.execute($Delete_sql)
-_FileWriteLog($Log_path, "Delete data of wggc.dbo.AFP_Department")
-
-$Delete_sql = "use WGGC delete from wggc.dbo.Users where UserID not in ('Admin', 'cshsvc')"
-$adCN.execute($Delete_sql)
-_FileWriteLog($Log_path, "Delete data of  wggc.dbo.Users")
-
-$Delete_sql = "use WGGC delete from wggc.dbo.UserProfile where UserName not in ('admin', 'cshsvc')"
-$adCN.execute($Delete_sql)
-_FileWriteLog($Log_path, "Delete data of  wggc.dbo.UserProfile")
-
 While $adoRecordSet.EOF <> True
 	;MsgBox (1,1,$adoRecordSet.Fields("name").Value)
 	$DBName = $adoRecordSet.Fields("name").Value
@@ -89,15 +63,8 @@ While $adoRecordSet.EOF <> True
 	While $adoRecordSet2.EOF <> True
 		Local $TableName = $adoRecordSet2.Fields("name").Value
 		Local $BCP_statement = "bcp " & $DBName&".dbo."&$TableName& " IN "&$ExportPath&"\"&$TableName&".txt -e "&$ScriptfilePath&"ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$"
-		_FileWriteLog($Log_path, "Execute the BCP command: " & $BCP_statement)
 		;MsgBox(1,1,$BCP_statement)
-;~ 		RunWait (@ComSpec & " /c " & $BCP_statement)
-		local $PID = Run(@ComSpec & " /c " & $BCP_statement,"", @SW_HIDE, $STDERR_MERGED)
-		ProcessWaitClose($PID)
-		Local $sOutput = StdoutRead($PID,1, True )
-		$sOutput = BinaryToString($sOutput)
-		_FileWriteLog($Log_path, "Execute command result: " & $sOutput)
-
+		RunWait (@ComSpec & " /c " & $BCP_statement)
 		$adoRecordSet2.MoveNext
 	WEnd
 
@@ -125,10 +92,10 @@ While $adoRecordSet3.EOF <> True
 Wend
 
 $adCN.Close
-$adoRecordSet.Close()
-$adoRecordSet2.Close()
-$adoRecordSet3.Close()
-$adoRecordSet4.Close()
+;~ $adoRecordSet.Close()
+;~ $adoRecordSet2.Close()
+;~ $adoRecordSet3.Close()
+;~ $adoRecordSet4.Close()
 
 
 MsgBox(0, "Finish", "Operation Finished!")
