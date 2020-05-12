@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>fo-dicom.Desktop</id>
+    <version>3.0.2</version>
+    <title>Fellow Oak DICOM .NET Framework Libraries</title>
+    <authors>fo-dicom contributors</authors>
+    <owners>fo-dicom contributors</owners>
+    <licenseUrl>http://opensource.org/licenses/MS-PL</licenseUrl>
+    <projectUrl>https://github.com/fo-dicom/fo-dicom</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/-Fq3nigRUo7U/VfaIPuJMjfI/AAAAAAAAALo/7oaLrrTBhnw/s1600/Fellow%2BOak%2BSquare%2BTransp.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Core fo-dicom libraries for .NET Framework (Windows Desktop).</description>
+    <summary />
+    <language>en-US</language>
+  </metadata>
+</package>

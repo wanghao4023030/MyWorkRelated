@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>fo-dicom</id>
+    <version>3.0.2</version>
+    <title>Fellow Oak DICOM</title>
+    <authors>fo-dicom contributors</authors>
+    <owners>fo-dicom contributors</owners>
+    <licenseUrl>http://opensource.org/licenses/MS-PL</licenseUrl>
+    <projectUrl>https://github.com/fo-dicom/fo-dicom</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/-Fq3nigRUo7U/VfaIPuJMjfI/AAAAAAAAALo/7oaLrrTBhnw/s1600/Fellow%2BOak%2BSquare%2BTransp.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A portable DICOM library for .NET Framework, .NET Core, Universal Windows Platform, Xamarin iOS and Xamarin Android.</description>
+    <summary />
+    <language>en-US</language>
+    <dependencies>
+      <group targetFramework=".NETPortable0.0-net45+win8+wpa81">
+        <dependency id="fo-dicom.Portable" version="3.0.2" />
+      </group>
+      <group targetFramework="Unsupported0.0">
+        <dependency id="fo-dicom.NetCore" version="3.0.2" />
+        <dependency id="fo-dicom.Universal" version="3.0.2" />
+        <dependency id="fo-dicom.iOS" version="3.0.2" />
+      </group>
+      <group targetFramework=".NETFramework4.5.2">
+        <dependency id="fo-dicom.Desktop" version="3.0.2" />
+      </group>
+      <group targetFramework="MonoAndroid1.0">
+        <dependency id="fo-dicom.Android" version="3.0.2" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

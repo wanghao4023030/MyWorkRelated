@@ -1,0 +1,68 @@
+﻿//    CancellationTokenSource cts =new CancellationTokenSource();
+            //    //等待按下任意一个键取消任务
+            //    TaskFactory taskFactory =new TaskFactory();
+            //    Task[] tasks =new Task[]
+            //        {
+            //            taskFactory.StartNew(() => Add(cts.Token)),
+            //            taskFactory.StartNew(() => Add(cts.Token)),
+            //            taskFactory.StartNew(() => Add(cts.Token))
+            //        };
+
+            //    //tasks[0] = Task.Factory.StartNew(() => files = Directory.GetFiles(docsDirectory));
+            //    //tasks[1] = Task.Factory.StartNew(() => dirs = Directory.GetDirectories(docsDirectory));
+
+            //    //CancellationToken.None指示TasksEnded不能被取消
+            //    taskFactory.ContinueWhenAll(tasks, TasksEnded, CancellationToken.None);
+            //    Console.ReadKey();
+            //    cts.Cancel();
+
+            //    Console.ReadKey();
+            //}
+
+            //private static void Add(CancellationToken cancellationToken)
+            //{
+            //    while (cancellationToken.IsCancellationRequested)
+            //    {
+            //        Console.Out.WriteLine("Hi");
+            //        Thread.Sleep(1000);
+            //    }
+            //    Console.Out.WriteLine("I Quit....");
+            //}
+
+            //static void TasksEnded(Task[] tasks)
+            //{
+            //    Console.WriteLine("所有任务已完成！");
+            //}
+
+            //    WaterMarkClass WaterMark = new WaterMarkClass();
+
+            //    //Define the patient object
+            //    PatitentClass Patient = new PatitentClass();
+
+            //    //SCU print object
+            //    ClassSCU SCUClient = new ClassSCU();
+
+            //    //////Create the WaterMark for thread folder
+            //    WaterMark.CreateFolderByThreadCount();
+            //    for (int i = 1; i <= Int32.Parse(WaterMark.threadCount); i++)
+            //    {
+            //        string RootFolder = WaterMark.executePath + @"WaterMark" + i + @"\SCU\";
+            //        SCUClient.ConfigPrinterIP(RootFolder);
+
+            //    }
+
+            //    for (int i = 1; i <= Int32.Parse(WaterMark.threadCount); i++)
+            //    {
+            //        Patient.getPatientInfo();
+
+            //        string patientInfo = Patient.DateWithMS;
+            //        IntergrationWebClass IntergrationWeb = new IntergrationWebClass();
+            //        string result = IntergrationWeb.request_CreatePatient(patientInfo);
+
+            //        string localpath = WaterMark.executePath + @"WaterMark" + i + @"\";
+            //        WaterMark.AddWaterMarkByFolder(localpath, Patient.PatientID, Patient.AccessionNumber);
+
+            //        SCUClient.CreateDicomFile(localpath);
+            //        SCUClient.SendDicomFile(localpath);
+            //        //Thread.Sleep(1000);
+            //    }
