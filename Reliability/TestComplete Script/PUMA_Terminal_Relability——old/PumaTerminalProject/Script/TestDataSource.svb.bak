@@ -1,0 +1,154 @@
+﻿'USEUNIT DataBaseFunction
+
+
+
+
+'Get all test data of files.
+Function GetTestData()
+    Dim strProjectPath
+    strProjectPath = Project.Variables.strTestDataSource
+    
+    Set myFile = aqFile.OpenTextFile(strProjectPath, aqFile.faRead, aqFile.ctANSI)
+    AllContent = myFile.ReadAll
+    Call myFile.Close()
+  
+    Arry = Split(AllContent,vbCrLf)
+  
+    GetTestData = Arry
+
+End Function
+
+
+'Reset the report and film status to unprinted.
+Function ResetInfo(strACCN) 
+    Dim strSQL 
+    strSQL = "USE WGGC UPDATE WGGC.DBO.AFP_ReportInfo Set PrintStatus ='0' WHERE AccessionNumber ='"& strACCN &"' ;UPDATE WGGC.DBO.AFP_FilmInfo Set FilmFlag ='0' WHERE AccessionNumber ='"& strACCN & "'"
+
+    ConnectDatabase() 
+    UpdateDatabase(strSql) 
+    CloseDatabase() 
+
+End Function
+
+
+
+'Get the can printed report number
+Function GetReportCount(strACCN)
+    Dim strSQL 
+    str_Array_QueryResult = Array()
+    strSQL = "USE WGGC SELECT count(*) as ReportCount FROM WGGC.DBO.AFP_ReportInfo WHERE DeleteStatus ='0' AND ReportStatus ='2' AND PrintStatus = '0' AND AccessionNumber = '"& strACCN &"'"
+    ConnectDatabase() 
+    str_Array_QueryResult = QueryDatabase(strSql, "ReportCount", str_Array_QueryResult) 
+    CloseDatabase() 
+    GetReportCount = str_Array_QueryResult(0)
+
+End Function
+
+
+'Get the can printed Film number
+Function GetFilmCount(strACCN)
+    Dim strSQL
+    str_Array_QueryResult = Array()
+    strSQL = "USE WGGC SELECT count(*) as FilmCount FROM Wggc.dbo.AFP_FilmInfo Where  DeleteStatus ='0' AND FilmFlag = '0' AND AccessionNumber = '"& strACCN &"'" 
+
+    ConnectDatabase() 
+    str_Array_QueryResult = QueryDatabase(strSql, "FilmCount", str_Array_QueryResult) 
+    CloseDatabase() 
+
+    GetFilmCount = str_Array_QueryResult(0)
+
+End Function
+
+'Get the can printed report number
+Function GetReportPrintedCount(strACCN)
+    Dim strSQL 
+    str_Array_QueryResult = Array()
+    strSQL = "USE WGGC SELECT count(*) as ReportCount FROM WGGC.DBO.AFP_ReportInfo WHERE DeleteStatus ='0' AND ReportStatus ='2' AND PrintStatus = '1' AND AccessionNumber = '"& strACCN &"'"
+    ConnectDatabase() 
+    str_Array_QueryResult = QueryDatabase(strSql, "ReportCount", str_Array_QueryResult) 
+    CloseDatabase() 
+    GetReportPrintedCount = str_Array_QueryResult(0)
+
+End Function
+
+'Get the printed Film number
+Function GetFilmPrintedCount(strACCN)
+    Dim strSQL
+    str_Array_QueryResult = Array()
+    strSQL = "USE WGGC SELECT count(*) as FilmCount FROM Wggc.dbo.AFP_FilmInfo Where  DeleteStatus ='0' AND FilmFlag = '1' AND AccessionNumber = '"& strACCN &"'" 
+
+    ConnectDatabase() 
+    str_Array_QueryResult = QueryDatabase(strSql, "FilmCount", str_Array_QueryResult) 
+    CloseDatabase() 
+
+    GetFilmPrintedCount = str_Array_QueryResult(0)
+
+End Function
+
+Function GetPatientName(strACCN)
+    str_Array_QueryResult = Array()
+    strSQL = "USE WGGC SELECT PatientName FROM WGGC.DBO.AFP_ExamInfo Where DeleteStatus ='0' AND AccessionNumber = '"& strACCN &"'" 
+
+    ConnectDatabase() 
+    str_Array_QueryResult = QueryDatabase(strSql, "PatientName", str_Array_QueryResult) 
+    CloseDatabase() 
+    
+    If Ubound(str_Array_QueryResult) = 0 Then
+        GetPatientName = str_Array_QueryResult(0)
+'      log.Message(str_Array_QueryResult(0))
+      Else
+        GetPatientName = False
+    End If
+'    GetFilmPrintedCount = str_Array_QueryResult(0)
+
+End Function
+
+Function GetPatientID(strACCN)
+    str_Array_QueryResult = Array()
+    strSQL = "USE WGGC SELECT PatientID FROM WGGC.DBO.AFP_ExamInfo Where DeleteStatus ='0' AND AccessionNumber = '"& strACCN &"'" 
+
+    ConnectDatabase() 
+    str_Array_QueryResult = QueryDatabase(strSql, "PatientID", str_Array_QueryResult) 
+    CloseDatabase() 
+    
+    If Ubound(str_Array_QueryResult) = 0 Then
+        GetPatientID = str_Array_QueryResult(0)
+'      log.Message(str_Array_QueryResult(0))
+      Else
+        GetPatientID = False
+    End If
+'    GetFilmPrintedCount = str_Array_QueryResult(0)
+
+End Function
+
+Function GetGender(strACCN)
+    str_Array_QueryResult = Array()
+    strSQL = "USE WGGC SELECT PatientSex FROM WGGC.DBO.AFP_ExamInfo Where DeleteStatus ='0' AND AccessionNumber = '"& strACCN &"'" 
+
+    ConnectDatabase() 
+    str_Array_QueryResult = QueryDatabase(strSql, "PatientSex", str_Array_QueryResult) 
+    CloseDatabase() 
+    
+    If Ubound(str_Array_QueryResult) = 0 Then
+        GetGender = str_Array_QueryResult(0)
+'      log.Message(str_Array_QueryResult(0))
+      Else
+        GetGender = False
+    End If
+'    GetFilmPrintedCount = str_Array_QueryResult(0)
+
+End Function
+
+
+
+Sub Test()
+    str_Array_QueryResult = Array()
+    strACCN = "acc198400dsafdf05"
+
+   log.Message(  GetGender(strACCN))
+End Sub
+
+
+
+
+

@@ -1,6 +1,0 @@
-Start auto log messages stack - Iteration 1.	[MsgId: MMSG-10545]
-Action.c(143): Warning -27496: Internal Error - _eStat (5) != LRW_ITEM_STAT_ENUM_UNHANDLED for HandledTask at 06E49F00  	[MsgId: MWAR-27496]
-Action.c(143): Warning -27496: Internal Error - _eStat (5) != LRW_ITEM_STAT_ENUM_UNHANDLED for HandledTask at 06E4A3D0  	[MsgId: MWAR-27496]
-Action.c(143): Warning -27496: Internal Error - _eStat (5) != LRW_ITEM_STAT_ENUM_UNHANDLED for HandledTask at 06E49FB0  	[MsgId: MWAR-27496]
-Action.c(143): Warning -27496: Internal Error - _eStat (5) != LRW_ITEM_STAT_ENUM_UNHANDLED for HandledTask at 06E4A008  	[MsgId: MWAR-27496]
-Action.c(143): Warning -27492: "HttpSendRequest" failed, Windows error code=12017 and retry limit (0) exceeded for URL="http://10.184.129.149/Platform/app/common/common.module.js"  	[MsgId: MWAR-27492]

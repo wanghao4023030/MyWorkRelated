@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="folders"/>
+		<Node name="logs">
+			<Node name="log idx=0000">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42836.6409561458"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{18C84D10-A63A-4BF1-9F87-EBD1AF12D7BA}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [Terminal\demo]"/>
+				<Prp name="relpath" type="S" value="2017_4_11_15_22_58_611\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0001">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42836.6426440278"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{05958CBB-7F7C-4B03-841A-F305A4FC9750}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [Parameter\a]"/>
+				<Prp name="relpath" type="S" value="2017_4_11_15_25_24_444\Description.tcLog"/>
+				<Prp name="status" type="I" value="0"/>
+			</Node>
+			<Node name="log idx=0002">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42836.6440479745"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{31C06C73-2CE3-4BB0-988D-9EC54533C28A}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [Terminal\demo]"/>
+				<Prp name="relpath" type="S" value="2017_4_11_15_27_25_745\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0003">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42836.6451169329"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{E7EB8928-FD38-4575-9E26-EAFBE80652F2}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [Terminal\Terminal_Start]"/>
+				<Prp name="relpath" type="S" value="2017_4_11_15_28_58_103\Description.tcLog"/>
+				<Prp name="status" type="I" value="1"/>
+			</Node>
+			<Node name="log idx=0004">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42836.6459860301"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{833CED0E-4A54-447A-996A-A28A30E07B08}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [Terminal\demo]"/>
+				<Prp name="relpath" type="S" value="2017_4_11_15_30_13_193\Description.tcLog"/>
+				<Prp name="status" type="I" value="1"/>
+			</Node>
+			<Node name="log idx=0005">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42836.6481449884"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{6FF8A0DF-17F0-4E50-9CD6-5F9983E44215}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [Terminal\demo]"/>
+				<Prp name="relpath" type="S" value="2017_4_11_15_33_19_727\Description.tcLog"/>
+				<Prp name="status" type="I" value="0"/>
+			</Node>
+			<Node name="log idx=0006">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42836.6502574537"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{0153AF4F-45ED-4FEB-A3B7-DA2FAE96D19B}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [Terminal\demo]"/>
+				<Prp name="relpath" type="S" value="2017_4_11_15_36_22_244\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0007">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42836.6545929514"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{6DE3C758-5AEB-4853-BA55-630C36A327D2}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [Terminal\demo]"/>
+				<Prp name="relpath" type="S" value="2017_4_11_15_42_36_831\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0008">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42836.6570793866"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{C504655D-0CAA-415F-9F75-8572A532F6E4}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [Terminal\demo]"/>
+				<Prp name="relpath" type="S" value="2017_4_11_15_46_11_659\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0009">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42836.6590415972"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{60EE7D43-3C0A-429C-BE52-2535AAF1A52A}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [Terminal\demo]"/>
+				<Prp name="relpath" type="S" value="2017_4_11_15_49_01_194\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0010">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42836.6628166088"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{41C59DA6-EF7E-482D-B4D7-A675E2DF1144}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [Terminal\demo]"/>
+				<Prp name="relpath" type="S" value="2017_4_11_15_54_27_355\Description.tcLog"/>
+				<Prp name="status" type="I" value="0"/>
+			</Node>
+			<Node name="log idx=0011">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42836.6660283681"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{DB6A6E22-4176-4B87-873D-C4FE9425ECA5}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [Terminal\demo]"/>
+				<Prp name="relpath" type="S" value="2017_4_11_15_59_04_851\Description.tcLog"/>
+				<Prp name="status" type="I" value="0"/>
+			</Node>
+			<Node name="log idx=0012">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42836.6770467477"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{6CBABB9B-5033-4FF9-BC98-BE40947C947B}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [Terminal\demo]"/>
+				<Prp name="relpath" type="S" value="2017_4_11_16_14_56_839\Description.tcLog"/>
+				<Prp name="status" type="I" value="0"/>
+			</Node>
+			<Node name="log idx=0013">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42836.6896757755"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{D76705EC-0AC1-493A-9696-79F6867A8823}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [Terminal\demo]"/>
+				<Prp name="relpath" type="S" value="2017_4_11_16_33_07_987\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0014">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42836.6904808796"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{752331D1-C5FD-4CC8-BA75-78CCAFCBD30B}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [Terminal\demo]"/>
+				<Prp name="relpath" type="S" value="2017_4_11_16_34_17_548\Description.tcLog"/>
+				<Prp name="status" type="I" value="0"/>
+			</Node>
+			<Node name="log idx=0015">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42836.6919693056"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{057EF8A9-B60E-4FC7-92C5-3F313CB28E98}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [Terminal\demo]"/>
+				<Prp name="relpath" type="S" value="2017_4_11_16_36_26_148\Description.tcLog"/>
+				<Prp name="status" type="I" value="0"/>
+			</Node>
+			<Node name="log idx=0016">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42836.7091163426"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{BEE32CBC-1890-4E67-A7B8-1A42B08D1D01}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [Terminal\demo]"/>
+				<Prp name="relpath" type="S" value="2017_4_11_17_01_07_652\Description.tcLog"/>
+				<Prp name="status" type="I" value="0"/>
+			</Node>
+			<Node name="log idx=0017">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="42836.7175989931"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{BDBFDED3-A04D-4FFE-B818-16C7EF444388}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [Terminal\demo]"/>
+				<Prp name="relpath" type="S" value="2017_4_11_17_13_20_553\Description.tcLog"/>
+				<Prp name="status" type="I" value="0"/>
+			</Node>
+		</Node>
+		<Prp name="signature" type="S" value="{681DCC69-A39F-4C4D-8E7D-B2D9362FAF4F}"/>
+		<Prp name="version" type="S" value="11.0"/>
+	</Node>
+</Nodes>

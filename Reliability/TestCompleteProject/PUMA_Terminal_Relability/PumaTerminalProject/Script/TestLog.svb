@@ -1,0 +1,62 @@
+﻿Function GetLogFilePath()
+
+LogPath = Project.Variables.strLogFilePath &"Test.log"
+
+If aqfile.Exists(LogPath)=False Then
+      If aqfile.Create(LogPath) = 0 Then
+'          log.Message("File not exist,create log file successfully!")
+          GetLogFilePath = LogPath
+          Else
+            log.Error("Create log file falied")
+       End If
+        
+   Else 
+      
+      If CheckLogFileSize()= False  Then
+        GetLogFilePath = LogPath
+'        log.Message("File exist but do not need rename" )
+      End If   
+      
+          
+      If CheckLogFileSize() = True Then
+          str = aqstring.Replace(aqDateTime.Now(),"/","")
+          str = aqstring.Replace(str," " ,"")
+          str = aqstring.Replace(str,":" ,"")
+
+          call aqfile.Rename(LogPath, LogPath & str)
+
+          If aqfile.Create(LogPath) = 0 Then
+'            log.Message("File exist and rename and create log file successfully!")
+            GetLogFilePath = LogPath
+            Else
+              log.Error("Create log file falied")
+          End If
+      End If
+
+End If  
+
+End Function
+
+
+Function CheckLogFileSize()
+  LogPath = Project.Variables.strLogFilePath &"Test.log"
+  filesize = aqfile.GetSize(LogPath)
+  filesize = filesize/1024/1024
+  
+  If filesize >= 10 Then 
+    CheckLogFileSize = True
+'    log.Message(True)
+    Else
+      CheckLogFileSize = False
+'      log.Message(False)
+  End If
+
+End Function
+
+
+Function WriteLog(strMessage)
+  strPath = GetLogFilePath()
+  strMessage = strMessage 
+  call aqFile.WriteToTextFile(strPath, strMessage, aqFile.ctANSI, false)
+End Function
+

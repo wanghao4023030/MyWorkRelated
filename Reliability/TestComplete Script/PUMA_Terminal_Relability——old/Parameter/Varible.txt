@@ -1,0 +1,2 @@
+TerminalName=Unicorn.exe
+TerminalAppPath=C:\Carestream\KioskTerminal\Unicorn.exe

@@ -1,0 +1,309 @@
+﻿'USEUNIT AppFunction
+'USEUNIT Parameter
+'USEUNIT DataBaseFunction
+'USEUNIT TestDataSource
+'USEUNIT PerformanceMonitor
+'USEUNIT TestLog
+Public ObjTerminalMainPage,btnReportPrint,CountdownWidget,RtbExamInfo,BtnSelfPrint,ListView_PatientInfo
+Set ObjTerminalMainPage = Aliases.Terminal.MainWindow
+Set CountdownWidget = Aliases.Terminal.MainWindow.Grid.MainContainer.CountdownWidget
+Set RtbPatientInfo = Aliases.Terminal.MainWindow.Grid.MainContainer.DockPanel.ExamViewCtrl1280X1024.Grid.RtbPatientInfo
+Set RtbExamInfo = Aliases.Terminal.MainWindow.Grid.MainContainer.DockPanel.ExamViewCtrl1280X1024.Grid.Grid.RtbExamInfo
+Set BtnSelfPrint = Aliases.Terminal.MainWindow.Grid.MainContainer.DockPanel.Btn_Print
+Set progPrint = Aliases.Terminal.MainPage_middle_panel.PrintingGrid.progPrint
+Set rtbPrintTaskInfo = Aliases.Terminal.MainPage_middle_panel.PrintingGrid.rtbPrintTaskInfo
+
+Set ListView_PatientInfo = Aliases.Terminal.MainWindow.Grid.MainContainer.DockPanel.ExamViewCtrl1280X1024.Grid.Grid.ListView.ListView_PatientInfo
+
+Sub demo
+'  Terminal_Start()
+'  aqUtils.Delay(10000)
+'  strACCN = "A20170411105517420"
+'  
+'  'Get the patient film and report count which can print
+'    Dim FilmNumber,ReportMumber
+'    FilmNumber = TestDataSource.GetFilmCount(strACCN)
+'    ReportMumber = TestDataSource.GetReportCount(strACCN)
+'    
+'      
+'  InputACCN(strACCN)
+'  PatientInfoCheck(strACCN)
+'  call FilmReportCheck(FilmNumber,ReportMumber)
+'  'Terminal_Stop()
+
+log.Message(Aliases.Terminal.MainWindow.Grid.MainContainer.DockPanel.ExamViewCtrl1280X1024.Grid.Grid.ListView.ListView_PatientInfo.DataContext.get_ExamName)
+  
+End sub
+
+Function Terminal_Start()
+  Dim strFullPath, strTerminalName
+
+  'Get the terminal name and Path and store to var
+  strFullPath = project.Variables.strTerminalAppPath
+  strTerminalName = project.Variables.strTerminalName
+
+  aqUtils.Delay(3000)
+  
+  If ObjTerminalMainPage.Exists Then
+    sys.Process(strTerminalName).Terminate()
+    aqUtils.Delay(10000)
+  End If 
+  
+  'Add the object to test object
+  call TerminalAdd (strFullPath,strTerminalName)
+  'Laungh the terminal
+  call TerminalRun(strTerminalName)
+  aqUtils.Delay(10000)
+
+  IF ObjTerminalMainPage.Exists Then
+    log.Message("Terminal lanugh successfully.")
+    Terminal_Start = True
+    ELSE
+      log.Error("Terminal lanugh failed.")
+      Terminal_Start = False
+  END IF
+
+End Function
+
+Function Terminal_Stop()
+  Dim strFullPath, strTerminalName
+ 
+  'Get the terminal name and Path and store to var
+  strFullPath = project.Variables.strTerminalAppPath
+  strTerminalName = project.Variables.strTerminalName
+
+  'ShutDown the terminal.
+  call TerminalClose(strTerminalName)
+'  sys.Process(strTerminalName).Terminate()
+  aqUtils.Delay(10000)
+  
+  IF Not sys.Process(strTerminalName).Exists Then
+    log.Message("Terminal Stop successfully.")
+    Terminal_Stop = True
+    ELSE
+      log.Error("Terminal Stop failed.")
+      Terminal_Stop = False
+  END IF
+ 
+
+End Function
+
+Function InputACCN(strACCN)
+  
+SET  Ctr_InputTextBox = Aliases.Terminal.MainPage_CardNumber
+SET  BtnReturn = Aliases.Terminal.MainPage_middle_panel.BtnReturn  
+  
+  If ObjTerminalMainPage.Exists Then
+    ObjTerminalMainPage.Click
+    sys.Keys(strACCN & "[Enter]")
+  End If
+  
+  If Not CountdownWidget.Exists Then
+    aqutils.Delay(3000)
+  End If
+  
+  If CountdownWidget.Exists Then
+    TestLog.WriteLog(aqDateTime.Now & ", Input accn " & strACCN &" successfully,")
+    InputACCN = True
+    Else
+      TestLog.WriteLog(aqDateTime.Now & ", Try to input accn " & strACCN &" but start print task failed,")
+      InputACCN = False
+  End If
+End Function
+
+
+Function PatientInfoCheck(strACCN)
+    
+    If Not RtbPatientInfo.Exists Then
+        aqutils.Delay(5000)
+    End If
+    
+    If RtbPatientInfo.Exists Then
+        T_PatientInfo = RtbPatientInfo.Text
+        Name = TestDataSource.GetPatientName(strACCN)
+        PID = TestDataSource.GetPatientID(strACCN)
+        result1 = aqString.Find(T_PatientInfo,Name,0,true)
+        result2 = aqString.Find(T_PatientInfo,strACCN,0,true)   
+        
+        EnName = ListView_PatientInfo.DataContext.ExamName  
+        Film = ListView_PatientInfo.DataContext.FilmInfo
+        Report = ListView_PatientInfo.DataContext.ReportInfo
+        
+'        
+'        result3 = aqString.Find(T_PatientInfo,EnName,0,true) 
+'        result4 = aqString.Find(T_PatientInfo,Film,0,true) 
+'        result5 = aqString.Find(T_PatientInfo,Report,0,true) 
+        
+
+        If result1 <> -1 and result2 <> -1 Then
+          PatientInfoCheck = True
+          TestLog.WriteLog("Patient information is correct.")
+          Else
+            PatientInfoCheck = False
+            TestLog.WriteLog("Patient information is incorrect and output information is: " & T_PatientInfo)
+        End if
+        Else
+          PatientInfoCheck = False
+          TestLog.WriteLog("The patient information control do not exist.")
+    End If
+
+End Function
+
+
+Function FilmReportCheck(strFilm,strReport)
+    
+    If Not RtbExamInfo.Exists Then
+        aqutils.Delay(5000)
+    End If
+    
+    If RtbExamInfo.Exists Then
+        T_ExzamInfo = RtbExamInfo.Text
+        ExzamInfo = "您有<span style='color:red;font-size:36'>"&strFilm&"</span>张胶片,<span style='color:red;font-size:36'>"&strReport&"</span>份报告待打印"
+        result1 = aqstring.Find(T_ExzamInfo,strFilm&"</span>张胶片")
+        result2 = aqstring.Find(T_ExzamInfo,strReport&"</span>份报告待打印")
+        
+        If result2 <> -1 and result1 <> -1 Then
+          FilmReportCheck = True
+          TestLog.WriteLog("Exzam information is correct")
+          Else
+            FilmReportCheck = False
+            TestLog.WriteLog("Exzam information is incorrect and the output informations is " & T_ExzamInfo)
+        End if
+        Else
+          FilmReportCheck = False
+          TestLog.WriteLog("The Exzam information control do not exist.")
+    End If
+    
+    
+End Function
+
+Function PrintTaskCheck(strFilm,strReport,strACCN)
+    
+    If Not  BtnSelfPrint.Exists Then
+      aqutils.Delay(3000)
+      Else
+        BtnSelfPrint.Click()
+    End If    
+    
+
+    
+    If Not rtbPrintTaskInfo.Exists Then
+      aqutils.Delay(1000)
+    End If 
+    
+    Dim TimeOut
+    TimeOut = 0
+    
+    If progPrint.Exists And rtbPrintTaskInfo.Exists Then
+
+        While rtbPrintTaskInfo.Exists And TimeOut < 300 
+          aqutils.Delay(1000)
+          TimeOut = TimeOut + 1
+        Wend
+      Else
+        PrintTaskCheck = False
+        TestLog.WriteLog( " Print task page do not exist!")
+    End If
+    
+    Set CardNumber =  Aliases.Terminal.MainPage_CardNumber
+    If Not CardNumber.Exists Then
+      aqutils.Delay(5000)
+    End If
+    
+    Dim PrintFilm,PrintReport
+    PrintFilm = TestDataSource.GetFilmPrintedCount(strACCN)
+    PrintReport = TestDataSource.GetReportPrintedCount(strACCN)
+    
+    If CardNumber.Exists Then
+      ResultFilm = aqstring.Compare(PrintFilm,strFilm,true)
+      ResultReport = aqstring.Compare(PrintReport,strReport,true)
+      If ResultFilm = 0 And ResultReport = 0 Then
+        PrintTaskCheck = True
+        TestLog.WriteLog(" ,Patient Film and report Print successully")
+        Else
+          PrintTaskCheck = False
+          TestLog.WriteLog(" ,Patient Film and report Print failed")
+      End If
+    End If
+    
+    If TimeOut>= 300 Then
+      TestLog.WriteLog(" ,The terminal has some error, try to restart.")
+      PrintTaskCheck = False
+      Terminal.Terminal_Stop()
+      Terminal.Terminal_Start()
+    End If
+    
+
+End Function
+
+
+
+
+sub Test
+    Terminal_Start()
+    PerformanceMonitor.PerMonitor(1)
+
+    'Get the patient film and report count which can print
+    Dim FilmNumber,ReportMumber
+    FilmNumber = TestDataSource.GetFilmCount(strACCN)
+    ReportMumber = TestDataSource.GetReportCount(strACCN)
+
+    Dim ResultInput,ResultPatientCheck,ResultFilmReportCheck,ResultPrintTask
+
+    'Ipout the patient accnumber 
+    ResultInput = Terminal.InputACCN(strACCN)
+
+    PerformanceMonitor.PerMonitor(1)
+    
+    ' Check the patient information
+    ResultPatientCheck = Terminal.PatientInfoCheck(strACCN)
+
+    PerformanceMonitor.PerMonitor(1)
+    
+    ' Check the patient film and report count
+    ResultFilmReportCheck = Terminal.FilmReportCheck(FilmNumber,ReportMumber)
+
+    PerformanceMonitor.PerMonitor(1)
+    
+    ' Check the print task start and finished successfully.
+    ResultPrintTask = Terminal.PrintTaskCheck(FilmNumber,ReportMumber,strACCN)
+
+    PerformanceMonitor.PerMonitor(1)
+    ' Reset the patient information
+    call TestDataSource.ResetInfo(strACCN)
+
+    ' Confimed the final result.
+    If ResultInput And ResultPatientCheck And ResultFilmReportCheck And ResultPrintTask Then
+      TestLog.WriteLog(", Test Case Pass"&vbCrLf)
+    Else
+      TestLog.WriteLog(", Test Case Failed"&vbCrLf)
+    End If
+
+    PerformanceMonitor.PerMonitor(1)
+    
+    Terminal_Stop()
+
+End sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

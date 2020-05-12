@@ -1,0 +1,35 @@
+USE [WGGC]
+GO
+
+/****** Object:  Index [NonClusteredIndex-20170814-125818]    Script Date: 2017/8/17 10:11:17 ******/
+CREATE CLUSTERED INDEX [NonClusteredIndex_ACCN] ON [dbo].[T_Integration_ExamInfo]
+(
+	[AccessionNumber] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+USE [WGGC]
+GO
+
+/****** Object:  Index [NonClusteredIndex-20170814-125842]    Script Date: 2017/8/17 10:11:41 ******/
+CREATE NONCLUSTERED INDEX [NonClusteredIndex_PID] ON [dbo].[T_Integration_ExamInfo]
+(
+	[PatientID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+
+
+USE [WGGC]
+GO
+
+/****** Object:  Index [NonClusteredIndex-20170814-125910]    Script Date: 2017/8/17 10:11:55 ******/
+CREATE NONCLUSTERED INDEX [NonClusteredIndex_Date_Flag] ON [dbo].[T_Integration_ExamInfo]
+(
+	[CreateDT] DESC,
+	[FilmPrintFlag] ASC,
+	[ReportPrintFlag] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+

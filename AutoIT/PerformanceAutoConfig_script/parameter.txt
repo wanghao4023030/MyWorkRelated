@@ -1,0 +1,12 @@
+FolderPath = \\10.184.129.236\kiosk\PUMA\Team\Ralf\Tool\PerformanceAutoConfig\
+IntegrationPath = E:\
+IntegrationOption = local
+DBInstallAppPath = BCP
+SQLPath = SQL
+CreateFilmDataPath = CreateFilmData
+FilmsCount = 10
+ReportDataPath = ReportTestData
+ReportDestPath = E:\
+ReconlicationReportPath = Reconlication\Unreport.pdf
+ReconlicationReportDestPath = E:\Report\Received
+ReconlicationReportResultPath = Reconlication\UnReconReport.dat

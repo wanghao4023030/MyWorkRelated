@@ -1,0 +1,90 @@
+﻿'USEUNIT AppFunction
+'USEUNIT Parameter
+'USEUNIT DataBaseFunction
+'USEUNIT TestDataSource
+'USEUNIT PerformanceMonitor
+'USEUNIT Terminal
+
+
+Sub demo()
+  Parameter.AddVariables
+  Terminal.Terminal_Start()
+  
+  Dim strACCNArray
+  strACCNArray = Array()
+  strACCNArray = GetTestData()
+  
+  For Each strACCN in strACCNArray
+    call PerformanceMonitor.PerMonitor()
+    log.Message(strACCN)
+    'Get the patient film and report count which can print
+    Dim FilmNumber,ReportMumber
+    FilmNumber = TestDataSource.GetFilmCount(strACCN)
+    ReportMumber = TestDataSource.GetReportCount(strACCN)
+
+    Dim ResultInput,ResultPatientCheck,ResultFilmReportCheck,ResultPrintTask
+
+    'Ipout the patient accnumber 
+    ResultInput = Terminal.InputACCN(strACCN)
+   
+    If ResultInput = True Then
+        ' Check the patient information
+        ResultPatientCheck = Terminal.PatientInfoCheck(strACCN)
+    
+        ' Check the patient film and report count
+        ResultFilmReportCheck = Terminal.FilmReportCheck(FilmNumber,ReportMumber)
+   
+        ' Check the print task start and finished successfully.
+        ResultPrintTask = Terminal.PrintTaskCheck(FilmNumber,ReportMumber,strACCN)
+    
+    End If
+    
+    ' Reset the patient information
+    call TestDataSource.ResetInfo(strACCN)
+
+    ' Confimed the final result.
+    If ResultInput And ResultPatientCheck And ResultFilmReportCheck And ResultPrintTask Then
+      TestLog.WriteLog(", Test Case Pass"&vbCrLf)
+    Else
+      TestLog.WriteLog(", Test Case Failed"&vbCrLf)
+    End If
+    
+    log.Message("ResultInput" & ResultInput)
+    log.Message("ResultPatientCheck" & ResultPatientCheck)
+    log.Message("ResultFilmReportCheck" & ResultFilmReportCheck)
+    log.Message("ResultPrintTask" & ResultPrintTask)
+    
+    PerformanceMonitor.EndMonitor()
+    
+  Next
+  
+  Terminal.Terminal_Stop()
+End Sub
+
+
+
+Sub Timer()
+
+
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

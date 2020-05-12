@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="data">
+			<Node name="logs">
+				<Prp name="key" type="S" value="{937C8C1E-9ED0-42D0-A194-3F719E26A427}"/>
+				<Prp name="relpath" type="S" value="Log"/>
+			</Node>
+			<Node name="variables">
+				<Node name="datav3">
+					<Node name="var0">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="55006E00690063006F0072006E00"/>
+						</Node>
+						<Prp name="name" type="S" value="strTerminalName"/>
+					</Node>
+					<Node name="var1">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="43003A005C004300610072006500730074007200650061006D005C004B0069006F0073006B005400650072006D0069006E0061006C005C0055006E00690063006F0072006E002E00650078006500"/>
+						</Node>
+						<Prp name="name" type="S" value="strTerminalAppPath"/>
+					</Node>
+					<Node name="var10">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="43003A005C00540065007300740043006F006D0070006C00650074006500500072006F006A006500630074005C00500055004D0041005F005400650072006D0069006E0061006C005F00520065006C006100620069006C006900740079005C00500075006D0061005400650072006D0069006E0061006C00500072006F006A006500630074005C004D006F006E00690074006F0072004C006F0067005C004D006F006E00690074006F0072004C006F0067002E00740078007400"/>
+						</Node>
+						<Prp name="name" type="S" value="strMonitorLogPath"/>
+					</Node>
+					<Node name="var11">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="43003A005C00540065007300740043006F006D0070006C00650074006500500072006F006A006500630074005C00500055004D0041005F005400650072006D0069006E0061006C005F00520065006C006100620069006C006900740079005C00500075006D0061005400650072006D0069006E0061006C00500072006F006A006500630074005C0054006500730074004C006F0067005C00"/>
+						</Node>
+						<Prp name="name" type="S" value="strLogFilePath"/>
+					</Node>
+					<Node name="var12">
+						<Node name="value">
+							<Prp name="intvalue" type="I" value="0"/>
+						</Node>
+						<Prp name="name" type="S" value="PatientFilmNum"/>
+					</Node>
+					<Node name="var13">
+						<Node name="value">
+							<Prp name="intvalue" type="I" value="0"/>
+						</Node>
+						<Prp name="name" type="S" value="PatientReportNum"/>
+					</Node>
+					<Node name="var14">
+						<Node name="value">
+							<Prp name="intvalue" type="I" value="10000"/>
+						</Node>
+						<Prp name="name" type="S" value="PerformanceMonitorInterval"/>
+					</Node>
+					<Node name="var2">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="530051004C00"/>
+						</Node>
+						<Prp name="name" type="S" value="strDBType"/>
+					</Node>
+					<Node name="var3">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="5700470047004300"/>
+						</Node>
+						<Prp name="name" type="S" value="strDBAlias"/>
+					</Node>
+					<Node name="var4">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="73006100"/>
+						</Node>
+						<Prp name="name" type="S" value="strUID"/>
+					</Node>
+					<Node name="var5">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="73006100320030003000320031003200320034002400"/>
+						</Node>
+						<Prp name="name" type="S" value="strPWD"/>
+					</Node>
+					<Node name="var6">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="310030002E003100380034002E003100320039002E003200300038005C0047004300500041004300530057005300"/>
+						</Node>
+						<Prp name="name" type="S" value="strIP"/>
+					</Node>
+					<Node name="var7">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="6300730070007300"/>
+						</Node>
+						<Prp name="name" type="S" value="strLocalHostName"/>
+					</Node>
+					<Node name="var8">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value=" "/>
+						</Node>
+						<Prp name="name" type="S" value="strDataSource"/>
+					</Node>
+					<Node name="var9">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="43003A005C00540065007300740043006F006D0070006C00650074006500500072006F006A006500630074005C00500055004D0041005F005400650072006D0069006E0061006C005F00520065006C006100620069006C006900740079005C00500075006D0061005400650072006D0069006E0061006C00500072006F006A006500630074005C005400650073007400440061007400610053006F0075007200630065002E00740078007400"/>
+						</Node>
+						<Prp name="name" type="S" value="strTestDataSource"/>
+					</Node>
+				</Node>
+				<Prp name="version" type="I" value="3"/>
+			</Node>
+		</Node>
+		<Prp name="signature" type="S" value="{49FC0C30-9EF7-4DBD-97A8-B7A00E79A2AF}"/>
+	</Node>
+</Nodes>

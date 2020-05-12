@@ -1,0 +1,14 @@
+2019-05-30 13:29:41 : ***********************************************Start prepared the peformance environment....*********************************************
+2019-05-30 13:29:41 : Get the parameter 'FolderPath' successfully
+2019-05-30 13:29:41 : Get the parameter 'IntegrationPath' successfully
+2019-05-30 13:29:41 : Get the parameter 'IntegrationOption' successfully
+2019-05-30 13:29:41 : Get the parameter 'DBInstallAppPath' successfully
+2019-05-30 13:29:41 : Get the parameter 'SQLPath' successfully
+2019-05-30 13:29:41 : Get the parameter 'CreateFilmDataPath' successfully
+2019-05-30 13:29:42 : Get the parameter 'FilmsCount' successfully
+2019-05-30 13:29:42 : Get the parameter 'ReportDataPath ' successfully
+2019-05-30 13:29:42 : Get the parameter 'ReportDestPath  ' successfully
+2019-05-30 13:29:42 : Get the parameter 'ReconlicationReportPath  ' successfully
+2019-05-30 13:29:42 : Get the parameter 'ReconlicationReportDestPath  ' successfully
+2019-05-30 13:29:42 : Get the parameter 'ReconlicationReportResultPath  ' successfully
+2019-05-30 13:29:42 : ****************************Start Create Report *********************************

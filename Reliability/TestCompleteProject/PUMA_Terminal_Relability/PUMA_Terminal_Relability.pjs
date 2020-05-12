@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root signature="{24B6FA0B-0143-461A-9758-AEB9E9A9428B}" version="12.0" key="{2A771E29-948B-4C88-B2DC-DDDE635DD14B}">
+	<children>
+		<child name="PumaTerminalProject" key="{F81740FE-E606-4115-877B-8CB9EE460224}" type="Project" typeId="{362A8EE5-675E-43A9-869D-06ECE80B0CB4}" pluginName="">
+			<data path="PumaTerminalProject\PumaTerminalProject.mds" />
+		</child>
+	</children>
+	<folders />
+	<testItems key="{E09F5CEE-64D0-4528-94BD-E1B4AE9157C6}">
+		<children>
+			<testItem key="{F81740FE-E606-4115-877B-8CB9EE460224}" enabled="True" timeout="0" stopOnError="True" description="" />
+		</children>
+	</testItems>
+	<variables key="{02F56606-0D97-4272-833A-E298CD2799F2}">
+		<data Version="3" />
+	</variables>
+	<analysis key="{28991153-9DB3-487D-8908-0A4FD691D80D}" />
+	<scc key="{00000000-0000-0000-0000-000000000000}" name="">
+		<data />
+	</scc>
+	<extender key="{1A3FC97E-9A66-4716-B166-35D10B4146E0}" />
+</Root>

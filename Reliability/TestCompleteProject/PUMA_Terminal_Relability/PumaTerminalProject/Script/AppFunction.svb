@@ -1,0 +1,32 @@
+﻿
+
+
+Function TerminalAdd(strFullPath,strTerminalName)
+  Dim TestApp, TestAppIndex
+  TestAppIndex = TestedApps.Find(strTerminalName)
+  
+  While TestAppIndex > -1 
+    TestedApps.Delete(TestAppIndex)
+    TestAppIndex = TestedApps.Find(strTerminalName)
+  Wend
+  
+  TestedApps.Add(strFullPath)
+End Function
+
+Function TerminalRun(strTerminalName)
+  dim index
+  
+  call TerminalClose(strTerminalName)
+  
+  index = TestedApps.Find(strTerminalName)
+  Set App = TestedApps.Items(index)
+  App.run()
+End Function
+
+Function TerminalClose(strTerminalName)
+  dim index
+  index = TestedApps.Find(strTerminalName)
+  Set App = TestedApps.Items(index)
+  App.Terminate()
+  
+End Function

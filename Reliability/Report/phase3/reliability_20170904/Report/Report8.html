@@ -1,0 +1,4628 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+		<title></title>
+		<link href="Properties.css" rel="stylesheet" media="screen">
+		<link href="adv_properties.css" rel="stylesheet" media="screen">
+		<csactions>
+			<csaction name="BC43C8C88" class="Goto Link" type="onevent" val0="Report8.xls" val1="" urlparams="1"></csaction>
+		</csactions>
+		<csscriptdict>
+			<script type="text/javascript"><!--
+function CSClickReturn () {
+	var bAgent = window.navigator.userAgent;
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return true; // dont follow link
+	else return false; // dont follow link
+}
+CSStopExecution=false;
+function CSAction(array) {return CSAction2(CSAct, array);}
+function CSAction2(fct, array) {
+	var result;
+	for (var i=0;i<array.length;i++) {
+		if(CSStopExecution) return false;
+		var aa = fct[array[i]];
+		if (aa == null) return false;
+		var ta = new Array;
+		for(var j=1;j<aa.length;j++) {
+			if((aa[j]!=null)&&(typeof(aa[j])=="object")&&(aa[j].length==2)){
+				if(aa[j][0]=="VAR"){ta[j]=CSStateArray[aa[j][1]];}
+				else{if(aa[j][0]=="ACT"){ta[j]=CSAction(new Array(new String(aa[j][1])));}
+				else ta[j]=aa[j];}
+			} else ta[j]=aa[j];
+		}
+		result=aa[0](ta);
+	}
+	return result;
+}
+CSAct = new Object;
+function CSGotoLink(action) {
+	if (action[2].length) {
+		var hasFrame=false;
+		for(i=0;i<parent.frames.length;i++) { if (parent.frames[i].name==action[2]) { hasFrame=true; break;}}
+		if (hasFrame==true)
+			parent.frames[action[2]].location = action[1];
+		else
+			window.open (action[1],action[2],"");
+	}
+	else location = action[1];
+}
+
+// --></script>
+		</csscriptdict>
+		<csactiondict>
+			<script type="text/javascript"><!--
+CSAct[/*CMP*/ 'BC43C8C88'] = new Array(CSGotoLink,/*URL*/ 'Report8.xls','');
+
+// --></script>
+		</csactiondict>
+	</head> 
+	<body class="main">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td class="sp_10px_row"></td>
+			</tr>
+			<tr>
+				<td>
+					<table cols="2" width="100%" height="20" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+<td class="header_page">Errors per Second (by Description)</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td class="sp_10px_row"></td>
+			</tr>
+			<tr>
+				<td>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td>
+								<table class="TableSummary" summary="Graph Summary Table">
+									<tr>
+									<td class="text_em" id="LraTitle" width="120"><font class="SummaryHeader">Title:</font></td>
+									<td headers="LraTitle"><font class="Verbl8">Errors per Second (by Description)</font></td>
+									</tr>
+		<tr>
+									<tr>
+									<td class="text_em" id="LraCurrent Results" width="120"><font class="SummaryHeader">Current Results:</font></td>
+									<td headers="LraCurrent Results"><font class="Verbl8">C:\Users\Administrator\AppData\Local\Temp\res\res.lrr</font></td>
+									</tr>
+		<tr>
+									<tr>
+									<td class="text_em" id="LraFilters" width="120"><font class="SummaryHeader">Filters:</font></td>
+									<td headers="LraFilters"><font class="Verbl8">None</font></td>
+									</tr>
+		<tr>
+									<tr>
+									<td class="text_em" id="LraGroup By" width="120"><font class="SummaryHeader">Group By:</font></td>
+									<td headers="LraGroup By"><font class="Verbl8">Error Message</font></td>
+									</tr>
+		<tr>
+									<tr>
+									<td class="text_em" id="LraGranularity" width="120"><font class="SummaryHeader">Granularity:</font></td>
+									<td headers="LraGranularity"><font class="Verbl8"> 16384 Seconds</font></td>
+									</tr>
+								</table>
+							</td>
+							<td align="right" valign="top" width="180">
+								<table border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td>Graph data in Excel format</td>
+										<td>&nbsp;&nbsp;</td>
+										<td><button class="bu_toexcel" onclick="CSAction(new Array(/*CMP*/'BC43C8C88'));" name="buttonName" type="button" csclick="BC43C8C88">&nbsp;</button></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td class="sp_10px_row"></td>
+			</tr>
+			<tr>
+				<td>
+					<div class="pane_full">
+              						<img src="Report8.png" alt="Errors per Second (by Description) Graph" class="general"></div>
+				</td>
+			</tr>
+			<tr>
+				<td class="sp_10px_row"></td>
+			</tr>
+			<tr>
+				<td>
+					<div class="pane_full">
+<table width="100%" border="1" frame="box" rules="all" cellpadding="1" cellspacing="0" class="legendTable">
+<tr class="legendHeader">
+<td>
+Color
+</td>
+<td>
+Scale
+</td>
+<td>
+Measurement
+</td>
+<td>
+Graph Minimum
+</td>
+<td>
+Average
+</td>
+<td>
+Graph Maximum
+</td>
+<td>
+Graph Median
+</td>
+<td>
+Graph Std. Deviation
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #CC3366;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(134) Error Try to get the Print task ID failedStatus A20170824133120232   K2_1
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #9933FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(134) Error Try to get the Print task ID failedStatus A20170824133213332   K2_2
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #339966;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(134) Error Try to get the Print task ID failedStatus A20170824133234379   K2_3
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FFCC33;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(134) Error Try to get the Print task ID failedStatus A20170824133424574   K2_7
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #000099;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(134) Error Try to get the Print task ID failedStatus A20170824133514408   K2_5
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #99CCCC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(134) Error Try to get the Print task ID failedStatus A20170824133522267   K2_5
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #996633;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(134) Error Try to get the Print task ID failedStatus A20170824133524892   K2_5
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FF9966;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(209) Error Add patient reports failed by using NotifyReportFile service, please reference the service is works well or not. The accn is   A20170901042427576
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #CCCC66;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(216) Error Try to get the report path and ID failedStatus {QueryFilmReportError}  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0.001
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FFCCCC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4263167  From Terminal K2_7
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #9999FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4263229  From Terminal K2_7
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FFFF66;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4263310  From Terminal K2_7
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #66CC99;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4263382  From Terminal K2_7
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FF3366;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4272046  From Terminal K2_6
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #999999;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4276622  From Terminal K2_6
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #00CC00;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4280386  From Terminal K2_3
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #000000;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4280387  From Terminal K2_4
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #999900;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4280388  From Terminal K2_1
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #339999;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4280444  From Terminal K2_3
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #3333FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4280449  From Terminal K2_4
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #33CCCC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4280520  From Terminal K2_3
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FFCC99;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4280523  From Terminal K2_4
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #0099FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4280586  From Terminal K2_3
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #663300;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4280590  From Terminal K2_4
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FF00CC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4280925  From Terminal K2_4
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #CC99FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4280998  From Terminal K2_4
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FF6600;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4281075  From Terminal K2_4
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #006600;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4281154  From Terminal K2_4
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #990000;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4281750  From Terminal K2_7
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #9966CC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4297330  From Terminal K2_6
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #666666;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4297392  From Terminal K2_6
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #990066;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4297468  From Terminal K2_6
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #999966;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4297539  From Terminal K2_6
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #336666;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4297878  From Terminal K2_1
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #666699;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4297957  From Terminal K2_1
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #9933FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4298035  From Terminal K2_1
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #339966;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4298120  From Terminal K2_1
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #CC3366;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4347304  From Terminal K2_5
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FFCC33;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4347305  From Terminal K2_8
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #000099;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4347363  From Terminal K2_8
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #99CCCC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4347364  From Terminal K2_5
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #996633;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4347429  From Terminal K2_8
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FF9966;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4347441  From Terminal K2_5
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #CCCC66;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4347502  From Terminal K2_8
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FFCCCC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4347512  From Terminal K2_5
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #9999FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4352128  From Terminal K2_7
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FFFF66;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4354073  From Terminal K2_8
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #66CC99;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4354091  From Terminal K2_1
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FF3366;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4354156  From Terminal K2_8
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #999999;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4354169  From Terminal K2_1
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #00CC00;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4354241  From Terminal K2_8
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #000000;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4354256  From Terminal K2_1
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #999900;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4354323  From Terminal K2_8
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #339999;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(219) Error The task do not finish correct TaskID 4354342  From Terminal K2_1
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #3333FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(291) Error The system create report print task fail!   From Terminal Terminal1 and error message is 
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #33CCCC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(291) Error The system create report print task fail!   From Terminal Terminal13 and error message is 
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FFCC99;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(291) Error The system create report print task fail!   From Terminal Terminal17 and error message is 
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #0099FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(291) Error The system create report print task fail!   From Terminal Terminal22 and error message is 
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #663300;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(291) Error The system create report print task fail!   From Terminal Terminal23 and error message is 
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FF00CC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(291) Error The system create report print task fail!   From Terminal Terminal24 and error message is 
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #CC99FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(291) Error The system create report print task fail!   From Terminal Terminal27 and error message is 
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FF6600;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(291) Error The system create report print task fail!   From Terminal Terminal28 and error message is 
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #006600;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(291) Error The system create report print task fail!   From Terminal Terminal3 and error message is 
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #990000;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(291) Error The system create report print task fail!   From Terminal Terminal30 and error message is 
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #9966CC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(291) Error The system create report print task fail!   From Terminal Terminal34 and error message is 
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #666666;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(291) Error The system create report print task fail!   From Terminal Terminal36 and error message is 
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #990066;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(291) Error The system create report print task fail!   From Terminal Terminal40 and error message is 
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #999966;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(291) Error The system create report print task fail!   From Terminal Terminal42 and error message is 
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #336666;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(294) Error Add patient reports failed by using NotifyReportFile service, please reference the service is works well or not. The accn is   A20170903235432638
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #666699;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(294) Error Add patient reports failed by using NotifyReportFile service, please reference the service is works well or not. The accn is   A20170904094759076
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #9933FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(294) Error Add patient reports failed by using NotifyReportFile service, please reference the service is works well or not. The accn is   A20170904094800807
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #339966;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(410) Error The report task print failed! taskID 4263168  From Terminal Terminal14
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #CC3366;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(410) Error The report task print failed! taskID 4263169  From Terminal Terminal4
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FFCC33;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(410) Error The report task print failed! taskID 4280923  From Terminal Terminal19
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #000099;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(410) Error The report task print failed! taskID 4280924  From Terminal Terminal21
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #99CCCC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(410) Error The report task print failed! taskID 4280926  From Terminal Terminal17
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #996633;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(410) Error The report task print failed! taskID 4297331  From Terminal Terminal43
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FF9966;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(410) Error The report task print failed! taskID 4297332  From Terminal Terminal10
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #CCCC66;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(410) Error The report task print failed! taskID 4297333  From Terminal Terminal18
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FFCCCC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(410) Error The report task print failed! taskID 4297334  From Terminal Terminal37
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #9999FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(410) Error The report task print failed! taskID 4314363  From Terminal Terminal45
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FFFF66;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(410) Error The report task print failed! taskID 4330845  From Terminal Terminal27
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #66CC99;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(410) Error The report task print failed! taskID 4330846  From Terminal Terminal34
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FF3366;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(410) Error The report task print failed! taskID 4347306  From Terminal Terminal15
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #999999;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -17999:Action.c(410) Error The report task print failed! taskID 4347307  From Terminal Terminal20
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #00CC00;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -26374:Action.c(146) Continuing after Error -26374 The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively.  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #000000;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -26374:Action.c(163) Continuing after Error -26374 The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively.  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0.001
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #999900;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -26374:Action.c(192) Continuing after Error -26374 The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively.  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #339999;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -26374:Action.c(231) Continuing after Error -26374 The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively.  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #3333FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -26374:Action.c(266) Continuing after Error -26374 The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively.  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #33CCCC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -26374:Action.c(367) Continuing after Error -26374 The above "not found" error(s) may be explained by header and body byte counts being 0 and 0, respectively.  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FFCC99;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -26377:Action.c(114) Continuing after Error -26377 No match found for the requested parameter "TaskID". Check whether the requested boundaries exist in the response data. Also, if the data you want to save exceeds 10240 bytes, use web_set_max_html_param_len 0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #0099FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -26377:Action.c(146) Continuing after Error -26377 No match found for the requested parameter "ServiceResult". Check whether the requested boundaries exist in the response data. Also, if the data you want to save exceeds 256 bytes, use web_set_max_html_param93
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #663300;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -26377:Action.c(163) Continuing after Error -26377 No match found for the requested parameter "ReportPath". Check whether the requested boundaries exist in the response data. Also, if the data you want to save exceeds 809400 bytes, use web_set_max_html_param19
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0.001
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FF00CC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -26377:Action.c(192) Continuing after Error -26377 No match found for the requested parameter "ReportID". Check whether the requested boundaries exist in the response data. Also, if the data you want to save exceeds 809400 bytes, use web_set_max_html_param_l8
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #CC99FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -26377:Action.c(231) Continuing after Error -26377 No match found for the requested parameter "ServiceResult". Check whether the requested boundaries exist in the response data. Also, if the data you want to save exceeds 256 bytes, use web_set_max_html_param139
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FF6600;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -26377:Action.c(266) Continuing after Error -26377 No match found for the requested parameter "Taskerror". Check whether the requested boundaries exist in the response data. Also, if the data you want to save exceeds 809400 bytes, use web_set_max_html_param_4
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #006600;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -26377:Action.c(266) Continuing after Error -26377 No match found for the requested parameter "TaskID". Check whether the requested boundaries exist in the response data. Also, if the data you want to save exceeds 809400 bytes, use web_set_max_html_param_len3
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #990000;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -26377:Action.c(367) Continuing after Error -26377 No match found for the requested parameter "TaskStatus". Check whether the requested boundaries exist in the response data. Also, if the data you want to save exceeds 809400 bytes, use web_set_max_html_param64
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #9966CC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(146) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/NotifyServer/NotifyService.asmx"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #666666;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095146041&Type=0&tid=Terminal37"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #990066;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095155915&Type=0&tid=Terminal22"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #999966;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095158334&Type=0&tid=Terminal14"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #336666;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095205667&Type=0&tid=Terminal16"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #666699;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095208115&Type=0&tid=Terminal38"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #9933FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095227819&Type=0&tid=Terminal32"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #339966;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095237521&Type=0&tid=Terminal18"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #CC3366;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095249736&Type=0&tid=Terminal40"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FFCC33;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095302118&Type=0&tid=Terminal37"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #000099;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095304556&Type=0&tid=Terminal1"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #99CCCC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095319250&Type=0&tid=Terminal36"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #996633;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095321685&Type=0&tid=Terminal36"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FF9966;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095326567&Type=0&tid=Terminal14"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #CCCC66;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095353695&Type=0&tid=Terminal39"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FFCCCC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095356129&Type=0&tid=Terminal1"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #9999FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095400981&Type=0&tid=Terminal16"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FFFF66;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095408297&Type=0&tid=Terminal28"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #66CC99;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095410762&Type=0&tid=Terminal44"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FF3366;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095413180&Type=0&tid=Terminal20"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #999999;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095425390&Type=0&tid=Terminal32"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #00CC00;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095430356&Type=0&tid=Terminal26"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #000000;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095437749&Type=0&tid=Terminal30"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #999900;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095442617&Type=0&tid=Terminal28"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #339999;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095445050&Type=0&tid=Terminal41"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #3333FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095449935&Type=0&tid=Terminal44"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #33CCCC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095459714&Type=0&tid=Terminal11"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FFCC99;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095504599&Type=0&tid=Terminal11"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #0099FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095529026&Type=0&tid=Terminal35"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #663300;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095531490&Type=0&tid=Terminal26"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FF00CC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095541256&Type=0&tid=Terminal2"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #CC99FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(163) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095543721&Type=0&tid=Terminal41"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FF6600;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(192) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095205667&Type=0&tid=Terminal16"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #006600;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(192) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095227819&Type=0&tid=Terminal32"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #990000;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(192) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095319250&Type=0&tid=Terminal36"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #9966CC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(192) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095346254&Type=0&tid=Terminal2"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #666666;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(192) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095356129&Type=0&tid=Terminal1"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #990066;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(192) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095408297&Type=0&tid=Terminal28"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #999966;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(192) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095413180&Type=0&tid=Terminal20"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #336666;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(192) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095418031&Type=0&tid=Terminal17"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #666699;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(192) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095437749&Type=0&tid=Terminal30"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #9933FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(192) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095529026&Type=0&tid=Terminal35"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #339966;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(192) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095531490&Type=0&tid=Terminal26"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #CC3366;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(192) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/items?Value=A20170824095541256&Type=0&tid=Terminal2"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FFCC33;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(231) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/NotifyServer/NotifyService.asmx"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #000099;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(266) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/create?tid=Terminal1"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #99CCCC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(266) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/create?tid=Terminal17"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #996633;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(266) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/create?tid=Terminal23"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FF9966;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(266) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/create?tid=Terminal24"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #CCCC66;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(266) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/create?tid=Terminal27"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FFCCCC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(266) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/create?tid=Terminal28"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #9999FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(266) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/create?tid=Terminal3"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FFFF66;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(266) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/create?tid=Terminal30"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #66CC99;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(266) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/create?tid=Terminal34"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FF3366;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(266) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/create?tid=Terminal36"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #999999;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(266) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/create?tid=Terminal40"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #00CC00;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(266) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/create?tid=Terminal42"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #000000;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(308) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/print/4263169?tid=Terminal4"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #999900;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(308) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/print/4280926?tid=Terminal17"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #339999;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(308) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/print/4347307?tid=Terminal20"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #3333FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(331) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/report/4263168/1DD12F1C142A166D8829184E61A8B3DF/1?tid=Terminal14"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #33CCCC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(331) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/report/4280923/B6D36C6AEF9FFE826A28CEDD22A5A6EC/1?tid=Terminal19"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FFCC99;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(331) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/report/4280924/56F2EF31520225AC46CE0EE9624E3298/1?tid=Terminal21"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #0099FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(331) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/report/4314363/E2B790EEE8C77177D004309B39C7C2BE/1?tid=Terminal45"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #663300;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(331) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/report/4330845/D76D5AF2881FCEDD7E28BC970173D3B3/1?tid=Terminal27"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FF00CC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(331) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/report/4347306/6B2909BD1CD29E52C3A6BDA231BE4A0B/1?tid=Terminal15"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #CC99FF;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(367) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/status/4280922?tid=Terminal35"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #FF6600;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(367) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/status/4354068?tid=Terminal23"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #006600;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(367) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/status/4354069?tid=Terminal29"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #990000;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(367) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDPS/printtask/status/4354071?tid=Terminal40"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+<tr class="legendRow">
+<td style="background-color: #9966CC;">
+&nbsp;
+</td>
+<td>
+1
+</td>
+<td>
+Error -27492:Action.c(71) Continuing after Error -27492 "HttpSendRequest" failed, Windows error code=12002 and retry limit (0) exceeded for URL="http//10.184.129.208/EHDUS/upload/printer/report/info?tid=Terminal17"  
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+<td>
+0
+</td>
+</tr>
+</table>
+
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="sp_10px_row"></td>
+			</tr>
+			<tr>
+				<td class="sp_5px_row"></td>
+			</tr>
+			<tr>
+				<td class="sp_h_line"><img src="dot_trans.gif" alt="" height="1" width="1" border="0"></td>
+			</tr>
+			<tr>
+				<td class="sp_5px_row"></td>
+			</tr>
+			<tr>
+				<td>
+					<div class="pane_full">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td valign="top"><font class="VerBl8"><b>Description: </b></font><font class="VerBl8">Displays the average number of errors that occurred during each second of the scenario run, grouped by error code and Error Message.<br>
+									</font></td>
+							</tr>
+			<tr>
+				<td class="sp_5px_row"></td>
+			</tr>
+						</table>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+		</table>
+	</body>
+</html>

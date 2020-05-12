@@ -1,0 +1,67 @@
+﻿Class PerformanceMonitorObj
+
+  public property get ProcessName
+    ProcessName = Project.Variables.strTerminalName
+  End property
+  
+  public property get MonitorLogPath
+    MonitorLogPath = Project.Variables.strMonitorLogPath
+  End property
+  
+  Public Function CreateFile()
+    FilePath = Project.Variables.strMonitorLogPath
+   
+    If Not aqFile.Exists(FilePath) Then 
+      Flag = aqFile.Create(FilePath)
+      Call aqFile.WriteToTextFile(MonitorLogPath, "Time,CPU usage (%),Mem usage (MB), VM usage (MB)"&vbCrLf, aqFile.ctANSI, false)
+      Else
+            If aqfile.GetSize(FilePath)/1024/1024 > 1 Then
+                str = aqstring.Replace(aqDateTime.Now(),"/","")
+                str = aqstring.Replace(str," " ,"")
+                str = aqstring.Replace(str,":" ,"")
+                call aqfile.Rename(FilePath,FilePath & str)
+                aqFile.Create(FilePath)
+                Call aqFile.WriteToTextFile(MonitorLogPath, "Time,CPU usage (%),Mem usage (MB), VM usage (MB)"&vbCrLf, aqFile.ctANSI, false)
+            End If
+    End If 
+
+  End Function
+
+  Public Function WriteLog()
+    IF NOT sys.Process(ProcessName).Exists Then
+      Exit Function
+    ELSE  
+      strCpuusage = Round(Sys.Process(ProcessName).CPUUsage,2)
+      strMemusage = Round(Sys.Process(ProcessName).MemUsage/2/1024,2)
+      strVMusage  = Round(Sys.Process(ProcessName).VMSize/2/1024,2)
+      strTime = aqDateTime.Now
+      LogMessage = aqDateTime.Now & "," & strCpuusage & "," & strMemusage & "," & strVMusage &vbCrLf
+      Call aqFile.WriteToTextFile(MonitorLogPath, LogMessage, aqFile.ctANSI, false)
+    END IF
+  End Function
+  
+     
+  Public Function StartMonitor()
+    Flag = sys.Process(ProcessName).Exists
+    If Flag Then
+      call WriteLog()
+'      aqutils.Delay(intInterval*1000)
+    End If
+  End Function
+  
+
+
+End Class
+
+Sub PerMonitor()
+  IntervalTime = project.Variables.PerformanceMonitorInterval
+  Set Timer1 = Utils.Timers.Add(IntervalTime, "PerformanceMonitor.Monitor", True)
+  
+End Sub
+
+Sub Monitor()
+  Set obj = new PerformanceMonitorObj
+  obj.CreateFile()
+  obj.StartMonitor()
+  Set obj = NOTHING
+End Sub

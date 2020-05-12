@@ -1,0 +1,26 @@
+﻿Sub TestProc
+  ' Adds a new object to the Timers collection
+  Set Timer1 = Utils.Timers.Add(10000, "Unit1.TimerRoutine", True)
+  log.message(Utils.Timers.Count)
+  ' Modifies the timer’s properties
+  Timer1.Name = "MyTimer"
+  Timer1.Interval = 20000
+  Timer1.TimerProc = "Unit1.NewTimerRoutine"
+  log.Message("Timer" & aqDateTime.Now)
+  
+  aqutils.Delay(5000000)
+End Sub
+
+Sub TimerRoutine
+  ' Specify your code here.
+  ' This routine will be executed after the specified timeout expires.
+  aqutils.Delay(1000)
+  log.Message( "TimerRoutine")
+  
+End Sub
+
+Sub NewTimerRoutine
+  ' Specify your code here.
+  ' This is a new timer routine.
+  log.Message( "NewTimerRoutine")
+End Sub

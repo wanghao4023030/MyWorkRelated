@@ -1,0 +1,8 @@
+﻿
+'TerminalName	String	Unicorn	Unicorn
+'TerminalAppPath	String	C:\Carestream\KioskTerminal\Unicorn.exe	C:\Carestream\KioskTerminal\Unicorn.exe
+Sub AddVariables()
+Project.Variables.AddVariable "TerminalName","string"
+Project.Variables.TerminalName = "123"
+
+End Sub

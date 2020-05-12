@@ -1,0 +1,70 @@
+﻿[Workspace]
+SessionStartTime=0
+SessionEndTime=59355
+VerNo=10
+IsSummaryData=0
+TimeFormat=3
+SesLang=CHS
+ABuild=0
+DataBaseName=resl1091965115DB
+DBType=1
+CurrServer=KIOSKLAB-PC
+CurrUser=sa
+CurrPswd===
+StorageLoc=\\KIOSKLAB-PC\Data\
+PhStorageLoc=C:\MSSQL7\Data
+LocStorageLoc=
+LocPhStorageLoc=
+WinIntSec=0
+UseNetworkMode=0
+UseParallel=1
+UseManagedIndexes=1
+UseSpecMSSQLParams=1
+NumResults=1
+
+[Data Config]
+CollectionMode=3
+IngnoreFlds=Vuser ID
+IngnoreUIFlds=VuserID
+AggSecGran=24
+TransAgg=1
+DataPointAgg=1
+WebAgg=1
+MonAgg=1
+ErrAgg=0
+FilterEdge=0
+FSartTime=0
+FEndTime=0
+
+[Result0]
+LRRID=
+ResultPath=C:\Users\Administrator\AppData\Local\Temp\res\res.lrr
+ResultTDPath=
+NumFilters=0
+ScenarioTimeZone=-28800
+DaylightSavingSecsAddition=0
+ScenarioStartTime=1500194432
+ScenarioEndTime=1500253787
+ResInSD=0
+WebGran=5
+FilterEdge=0
+FSartTime=0
+FEndTime=0
+TDTestID=-1
+TDRunID=-1
+IsProTuneResult=0
+Scenario Type=Manual
+Schedule Name=Default Schedule
+Mode=Scenario Scheduling
+Load Behavior=Property
+Scenario Duration=Until Completion
+NumGraphs=10
+
+[DimensionFunctions]
+DimeFuncCount=1
+DimeFuncType0=FuncFragment
+FunctionName_UI0=Think Time
+DimensionName_UI0=Transaction Response Time,Aminimum,Amaximum
+FunctionFragmentValues_UI0=-Include Think Time
+DimensionFragmentValues_UI0=!([Value]-[Think Time])!
+

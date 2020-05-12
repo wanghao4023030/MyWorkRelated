@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root signature="{AA2F3067-5C9B-4CCF-89D4-1F93CE1C510F}" version="12.0">
+	<children>
+		<child name="Varible_txt" key="{0CDEE91A-7AD0-4877-88F6-18D826F11EC5}" type="File" typeId="{FC92F8D9-8A57-4D74-B8B4-479AA50BF647}" pluginName="Stores">
+			<data signature="{FC92F8D9-8A57-4D74-B8B4-479AA50BF647}" version="12.0" caption="Varible_txt" ID="{0CDEE91A-7AD0-4877-88F6-18D826F11EC5}" FileName="Files\Varible.txt" Update="False" />
+		</child>
+	</children>
+	<folders />
+</Root>

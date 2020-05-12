@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root signature="{9252F941-DB23-4FCA-AA50-858B33BB4A19}" version="11.40">
+	<children>
+		<child name="Main" key="{A23E0BE8-65BD-41C2-AE8A-E3D77E41BED2}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="Main.svb" />
+		</child>
+		<child name="AppFunction" key="{D807F062-186B-471E-9DA9-F0E0647462DA}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="AppFunction.svb" />
+		</child>
+		<child name="Parameter" key="{6100EB1E-C443-4C56-B8CC-C79A34A117FC}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="Parameter.svb" />
+		</child>
+		<child name="DataBaseFunction" key="{126D4A32-3E46-4E1B-9E3B-D21620034556}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="DataBaseFunction.svb" />
+		</child>
+		<child name="TestDataSource" key="{F71CED9B-210B-42C3-A8AE-B986DC410577}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="TestDataSource.svb" />
+		</child>
+		<child name="PerformanceMonitor" key="{07D56FF8-9EF0-4238-9532-1EE08173F5E4}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="PerformanceMonitor.svb" />
+		</child>
+		<child name="Terminal" key="{F3674DB3-AABB-4C91-9786-5A80D07B670D}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="Terminal.svb" />
+		</child>
+		<child name="TestLog" key="{4746D8D9-4BF9-4CAD-A2B9-A2CC3D4CB38E}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="TestLog.svb" />
+		</child>
+		<child name="Unit1" key="{F02E952B-6374-4595-B7AC-52B99CF6C412}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="Unit1.svb" />
+		</child>
+	</children>
+	<folders />
+</Root>

@@ -1,0 +1,74 @@
+﻿
+Function AddVariables()
+    dim ProjVarObject
+    Set varObj = Project.Variables
+    
+    call DeleteVariables()
+
+    varObj.AddVariable "strTerminalName","string"
+    varObj.strTerminalName = "Unicorn"
+
+    varObj.AddVariable "strTerminalAppPath","string"
+    varObj.strTerminalAppPath = "C:\Carestream\KioskTerminal\Unicorn.exe"
+
+
+    varObj.AddVariable "strDBType","string"
+    varObj.strDBType = "SQL"
+    
+    varObj.AddVariable "strDBAlias","string"
+    varObj.strDBAlias = "WGGC"
+    
+    varObj.AddVariable "strUID","string"
+    varObj.strUID = "sa"
+    
+    varObj.AddVariable "strPWD","string"
+    varObj.strPWD = "sa20021224$"
+    
+    varObj.AddVariable "strIP","string"
+    varObj.strIP = "10.184.129.208\GCPACSWS"
+    
+    varObj.AddVariable "strLocalHostName","string"
+    varObj.strLocalHostName = "csps"
+    
+    varObj.AddVariable "strDataSource","string"
+    varObj.strDataSource = ""
+    
+    varObj.AddVariable "strTestDataSource","string"
+    varObj.strTestDataSource = Project.Path + "TestDataSource.txt"
+
+    varObj.AddVariable "strMonitorLogPath","string"
+    varObj.strMonitorLogPath = Project.Path + "MonitorLog\MonitorLog.txt"
+    
+    varObj.AddVariable "strLogFilePath","string"
+    varObj.strLogFilePath = Project.Path & "TestLog\"     
+    
+    varObj.AddVariable "PatientFilmNum","Integer"
+    varObj.PatientFilmNum = 0
+    
+    varObj.AddVariable "PatientReportNum","Integer"
+    varObj.PatientReportNum = 0  
+    
+    varObj.AddVariable "PerformanceMonitorInterval","Integer"
+    varObj.PerformanceMonitorInterval = 10000  
+    
+End Function
+
+
+Function DeleteVariables()
+Dim count
+count = project.Variables.VariableCount
+
+for i = 0 to count-1 step 1 
+  name = project.Variables.GetVariableName(0)
+  project.Variables.RemoveVariable(name)
+
+Next
+
+End Function
+
+
+
+sub a 
+call DeleteVariables()
+
+end sub

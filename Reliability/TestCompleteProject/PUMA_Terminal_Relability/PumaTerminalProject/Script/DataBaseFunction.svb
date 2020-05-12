@@ -1,0 +1,181 @@
+﻿' DATABASE公用函数 
+' 
+'########################################################################################################### 
+'########################################################################################################### 
+
+public objConnection                          'CONNECTION对象实例 
+public objRecordSet                                   'RECORDSET对象实例        
+public objCommand                                '命令对象实例 
+public strConnectionString                        '连接字符串 
+
+' ******************************************************************** 
+' 函数说明：连接数据库; 
+' 参数说明：(1)strDBType（数据库类型：如ORACEL；DB2；SQL；ACCESS） 
+'           (2)strDBAlias（数据库别名） 
+'           (3)strUID（用户名） 
+'           (4)strPWD（密码） 
+'           (5)strIP（数据库IP地址：仅SQL SERVER 使用） 
+'           (6)strLocalHostName（本地主机名：仅SQL SERVER 使用） 
+'           (7)strDataSource（数据源：仅ACCESS使用；如d:\yysc.mdb） 
+' 返回结果：无 
+' 调用方法: ConnectDatabase(strDBType, strDBAlias, strUID, strPWD, strIP, strLocalHostName, strDataSource) 
+' ******************************************************************** 
+Function ConnectDatabase() 
+
+    strDBType = project.Variables.strDBType
+    strDBAlias = project.Variables.strDBAlias
+    strUID = project.Variables.strUID
+    strPWD = project.Variables.strPWD
+    strIP = project.Variables.strIP
+    strLocalHostName = project.Variables.strLocalHostName
+    strDataSource = project.Variables.strDataSource
+
+    Set objConnection = CreateObject("ADODB.CONNECTION" )               '1 - 建立CONNECTION对象的实例 
+    
+    Select Case UCase(Trim(strDBType)) 
+        Case "ORACLE" 
+            strConnectionString = "Driver={Microsoft ODBC for Oracle};Server=" & strDBAlias & ";Uid="_ 
+                & strUID & ";Pwd=" & strPWD & ";"                                '2 - 建立连接字符串 
+            objConnection.Open strConnectionString                                '3 - 用Open 方法建立与数据库连接 
+        Case "DB2" 
+            strConnectionString = "Driver={IBM DB2 ODBC DRIVER};DBALIAS=" & strDBAlias & ";Uid="_ 
+                & strUID & ";Pwd=" & strPWD & ";"                                
+            objConnection.Open strConnectionString                                
+        Case "SQL" 
+             strConnectionString = "DRIVER=SQL Server; SERVER=" & strIP & "; UID=" & strUID & "; PWD="_ 
+                 & strPWD & "; APP=Microsoft Office 2003;WSID=" & strLocalHostName & "; DATABASE=" & strDBAlias & ";" 
+            objConnection.Open strConnectionString                                            
+        Case "ACCESS" 
+            strConnectionString = "provider=microsoft.jet.oledb.4.0;data source=" & strDataSource &_ 
+                ";Jet OLEDBatabase Password=" & strPWD & ";" 
+            objConnection.Open strConnectionString                                                  
+        Case Else 
+            MsgBox "输入的数据库类型格式有误" & vbCrLf & "支持的数据库类型格式：ORACLE；DB2；SQL；ACCESS；EXCEL" 
+    End Select 
+    
+    If (objConnection.State = 0) Then 
+        MsgBox "连接数据库失败！" 
+    End If 
+    
+End Function 
+
+
+' ******************************************************************** 
+' 函数说明：查询数据库（查询单列）; 
+' 参数说明：  (1)strSql：SQL语句 
+'           (2)strFieldName：字段名 
+'           (3)str_Array_QueryResult：数组名（用来返回单列查询结果） 
+' 返回结果：  intArrayLength：查询数据库返回的记录行数 
+'           str_Array_QueryResult：数组名（用来返回单列查询结果） 
+' 调用方法: intArrayLength = QueryDatabase(strSql, strFieldName, str_Array_QueryResult) 
+' ******************************************************************** 
+Function QueryDatabase(strSql, strFieldName, str_Array_QueryResult) 
+    Dim intArrayLength                                                                                     '数组长度 
+    i = 0   
+    str_Array_QueryResult = Array()                                '重新初始化数组为一个空数组 
+    
+    Set objRecordSet = CreateObject("ADODB.RECORDSET" )               '4 - 建立RECORDSET对象实例 
+    Set objCommand = CreateObject("ADODB.COMMAND" )             '5 - 建立COMMAND对象实例 
+    objCommand.ActiveConnection = objConnection 
+    objCommand.CommandText = strSql 
+        objRecordSet.CursorLocation = 3 
+        objRecordSet.Open objCommand                            '6 - 执行SQL语句,将结果保存在RECORDSET对象实例中 
+    
+    intArrayLength = objRecordSet.RecordCount                  '将查询结果的行数作为数组的长度 
+    
+    If intArrayLength > 0 Then 
+                ReDim str_Array_QueryResult(intArrayLength-1) 
+                
+                Do While NOT objRecordSet.EOF                                                '将数据库查询的列值赋值给数组             
+                    str_Array_QueryResult(i) = objRecordSet(strFieldName) 
+                        'Debug.WriteLine str_Array_QueryResult(i) 
+                        objRecordSet.MoveNext 
+                        i = i + 1 
+                Loop 
+'        Else 
+                'ReDim str_Array_QueryResult(0)       
+                'str_Array_QueryResult(0) = ""     
+    End If 
+    
+    QueryDatabase = str_Array_QueryResult 
+End Function 
+
+' ******************************************************************** 
+' 函数说明：更新数据库;包括INSERT、DELETE 和 UPDATE操作 
+' 参数说明：(1)strSql：SQL语句 
+' 返回结果：无 
+' 调用方法: UpdateDatabase(strSql) 
+' ******************************************************************** 
+Function UpdateDatabase(strSql) 
+        Dim objCommand 
+        Dim objField        
+        
+        Set objCommand = CreateObject("ADODB.COMMAND") 
+        Set objRecordSet = CreateObject("ADODB.RECORDSET") 
+        objCommand.CommandText = strSql 
+        objCommand.ActiveConnection = objConnection 
+        Set objRecordSet = objCommand.Execute 
+        
+'        Do Until objRecordSet.EOF 
+        
+'                For Each objField In objRecordSet.Fields 
+'                        Debug.Write objField.Name & ": " & objField.Value & "   " 
+'                Next 
+                
+'                objRecordSet.MoveNext 
+'                Debug.WriteLine 
+'        Loop        
+        
+        Set objCommand = Nothing 
+        Set objRecordSet = Nothing 
+                
+End Function 
+
+
+
+
+
+' ******************************************************************** 
+' 函数说明：返回符合查询结果的列的长度 
+' 参数说明：(1)strSql：SQL语句 
+' 返回结果：返回符合查询结果的列的长度 
+' 调用方法: MaxLength = GetLenOfField(strSql) 
+' ******************************************************************** 
+Function GetLenOfField(strSql) 
+    '如果SQL语句为空，则默认返回的列长度为0，结束函数;否则返回列的实际长度 
+    If strSql = "" Then 
+        GetLenOfField  = 0 
+                Exit Function 
+    Else 
+            Set objRecordSet = CreateObject("ADODB.RECORDSET")                        '4 - 建立RECORDSET对象实例 
+            Set objCommand = CreateObject("ADODB.COMMAND")              '5 - 建立COMMAND对象实例 
+            objCommand.ActiveConnection = objConnection 
+            objCommand.CommandText = strSql 
+                objRecordSet.CursorLocation = 3 
+                objRecordSet.Open objCommand                                '6 - 执行SQL语句,将结果保存在RECORDSET对象实例中 
+            
+            GetLenOfField = objRecordSet.RecordCount                              '返回符合查询结果的列的长度 
+        
+                Set objCommand = Nothing        
+                Set objRecordSet = Nothing 
+        End If 
+End Function 
+
+
+' ******************************************************************** 
+' 函数说明：关闭数据库连接; 
+' 参数说明：无 
+' 返回结果：无 
+' 调用方法: CloseDatabase() 
+' ******************************************************************** 
+Function CloseDatabase() 
+'    objRecordSet.Close 
+    objConnection.Close 
+    
+    Set objCommand = Nothing 
+    Set objRecordSet = Nothing 
+    Set objConnection = Nothing 
+End Function 
+
+
+
