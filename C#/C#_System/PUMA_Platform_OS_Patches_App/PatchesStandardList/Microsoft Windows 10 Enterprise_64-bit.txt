@@ -1,0 +1,21 @@
+﻿KB4092455; Office 2013; Succeeded; Update for Microsoft Office 2013 (KB4092455) 32-Bit Edition; 12/3/2019 7:33:13 AM
+KB3172471; Office 2013; Succeeded; Update for Microsoft Office 2013 (KB3172471) 32-Bit Edition; 12/3/2019 7:55:18 AM
+KB4022189; Office 2013; Succeeded; Security Update for Microsoft Office 2013 (KB4022189) 32-Bit Edition; 12/3/2019 7:55:20 AM
+KB4018378; Office 2013; Succeeded; Update for Microsoft Office 2013 (KB4018378) 32-Bit Edition; 12/3/2019 7:55:30 AM
+KB4018351; Office 2013; Succeeded; Security Update for Microsoft Access 2013 (KB4018351) 32-Bit Edition; 12/3/2019 7:55:43 AM
+KB4484096; Office 2013; Succeeded; Update for Microsoft Outlook 2013 (KB4484096) 32-Bit Edition; 12/3/2019 8:20:36 AM
+KB4475562; Office 2013; Succeeded; Update for Microsoft Office 2013 (KB4475562) 32-Bit Edition; 12/3/2019 8:21:56 AM
+KB4475607; Office 2013; Succeeded; Security Update for Microsoft Office 2013 (KB4475607) 32-Bit Edition; 12/3/2019 8:22:46 AM
+KB4464548; Office 2013; Succeeded; Security Update for Microsoft Project 2013 (KB4464548) 32-Bit Edition; 12/3/2019 8:22:49 AM
+KB4475519; Office 2013; Succeeded; Security Update for Skype for Business 2015 (KB4475519) 32-Bit Edition; 12/3/2019 8:24:54 AM
+KB4011677; Office 2013; Succeeded; Update for Microsoft Office 2013 (KB4011677) 32-Bit Edition; 12/3/2019 8:25:14 AM
+KB4475564; Office 2013; Succeeded; Update for Skype for Business 2015 (KB4475564) 32-Bit Edition; 12/3/2019 8:25:23 AM
+KB4462200; Office 2013; Succeeded; Update for Microsoft Office 2013 (KB4462200) 32-Bit Edition; 12/3/2019 8:25:44 AM
+KB4475547; Office 2013; Succeeded; Security Update for Microsoft Word 2013 (KB4475547) 32-Bit Edition; 12/3/2019 8:26:17 AM
+KB4032252; Office 2013; Succeeded; Update for Microsoft Access 2013 (KB4032252) 32-Bit Edition; 12/3/2019 8:28:54 AM
+KB3172473; Office 2013; Succeeded; Update for Microsoft Office 2013 (KB3172473) 32-Bit Edition; 12/3/2019 8:29:02 AM
+KB3039794; Office 2013; Succeeded; Security Update for Microsoft Office 2013 (KB3039794) 32-Bit Edition; 12/4/2019 4:32:09 AM
+KB2726958; Office 2013; Succeeded; Security Update for Microsoft Office 2013 (KB2726958) 32-Bit Edition; 12/4/2019 4:32:23 AM
+KB4516115; Windows 10; Succeeded; 2019-09 Security Update for Adobe Flash Player for Windows 10 Version 1809 for x64-based Systems (KB4516115); 12/4/2019 6:49:56 AM
+KB4523204; Windows 10; Succeeded; 2019-11 Servicing Stack Update for Windows 10 Version 1809 for x64-based Systems (KB4523204); 12/16/2019 3:21:52 AM
+KB4537759; Windows 10; Succeeded; 2020-02 Security Update for Adobe Flash Player for Windows 10 Version 1809 for x64-based Systems (KB4537759); 3/24/2020 9:19:16 AM

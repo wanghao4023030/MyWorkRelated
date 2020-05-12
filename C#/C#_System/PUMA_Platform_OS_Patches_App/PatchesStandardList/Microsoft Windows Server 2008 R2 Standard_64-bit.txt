@@ -1,0 +1,100 @@
+﻿ KB2506014; Update; 2020/4/14 0:00:00
+ KB2506212; Security Update; 2020/4/14 0:00:00
+ KB2552343; Update; 2020/4/14 0:00:00
+ KB2560656; Security Update; 2020/4/14 0:00:00
+ KB2564958; Security Update; 2020/4/14 0:00:00
+ KB2585542; Security Update; 2020/4/14 0:00:00
+ KB2604115; Security Update; 2020/4/14 0:00:00
+ KB2620704; Security Update; 2020/4/14 0:00:00
+ KB2621440; Security Update; 2020/4/14 0:00:00
+ KB2643719; Security Update; 2020/4/14 0:00:00
+ KB2653956; Security Update; 2020/4/14 0:00:00
+ KB2654428; Security Update; 2020/4/14 0:00:00
+ KB2656356; Security Update; 2020/4/14 0:00:00
+ KB2667402; Security Update; 2020/4/14 0:00:00
+ KB2685939; Security Update; 2020/4/14 0:00:00
+ KB2690533; Security Update; 2020/4/14 0:00:00
+ KB2698365; Security Update; 2020/4/14 0:00:00
+ KB2705219; Security Update; 2020/4/14 0:00:00
+ KB2716513; Security Update; 2020/4/14 0:00:00
+ KB2729452; Security Update; 2020/4/14 0:00:00
+ KB2736422; Security Update; 2020/4/14 0:00:00
+ KB2742599; Security Update; 2020/4/14 0:00:00
+ KB2758857; Security Update; 2020/4/14 0:00:00
+ KB2770660; Security Update; 2020/4/14 0:00:00
+ KB2786081; Update; 2020/4/14 0:00:00
+ KB2789645; Security Update; 2020/4/14 0:00:00
+ KB2807986; Security Update; 2020/4/14 0:00:00
+ KB2809215; Update; 2020/4/14 0:00:00
+ KB2813430; Security Update; 2020/4/14 0:00:00
+ KB2836942; Update; 2020/4/14 0:00:00
+ KB2836943; Update; 2020/4/14 0:00:00
+ KB2840631; Security Update; 2020/4/14 0:00:00
+ KB2861698; Security Update; 2020/4/14 0:00:00
+ KB2862330; Security Update; 2020/4/14 0:00:00
+ KB2864202; Security Update; 2020/4/14 0:00:00
+ KB2868038; Security Update; 2020/4/14 0:00:00
+ KB2871997; Security Update; 2020/4/14 0:00:00
+ KB2872035; Hotfix; 2020/4/14 0:00:00
+ KB2884256; Security Update; 2020/4/14 0:00:00
+ KB2893294; Security Update; 2020/4/14 0:00:00
+ KB2894844; Security Update; 2020/4/14 0:00:00
+ KB2900986; Security Update; 2020/4/14 0:00:00
+ KB2911501; Security Update; 2020/4/14 0:00:00
+ KB2931356; Security Update; 2020/4/14 0:00:00
+ KB2937610; Security Update; 2020/4/14 0:00:00
+ KB2943357; Security Update; 2020/4/14 0:00:00
+ KB2968294; Security Update; 2020/4/14 0:00:00
+ KB2972100; Security Update; 2020/4/14 0:00:00
+ KB2972211; Security Update; 2020/4/14 0:00:00
+ KB2973201; Security Update; 2020/4/14 0:00:00
+ KB2977292; Security Update; 2020/4/14 0:00:00
+ KB2984972; Security Update; 2020/4/14 0:00:00
+ KB2991963; Security Update; 2020/4/14 0:00:00
+ KB2992611; Security Update; 2020/4/14 0:00:00
+ KB3004375; Security Update; 2020/4/14 0:00:00
+ KB3010788; Security Update; 2020/4/14 0:00:00
+ KB3011780; Security Update; 2020/4/14 0:00:00
+ KB3018238; Update; 2020/4/14 0:00:00
+ KB3019978; Security Update; 2020/4/14 0:00:00
+ KB3023215; Security Update; 2020/4/14 0:00:00
+ KB3030377; Security Update; 2020/4/14 0:00:00
+ KB3031432; Security Update; 2020/4/14 0:00:00
+ KB3033929; Security Update; 2020/4/14 0:00:00
+ KB3035126; Security Update; 2020/4/14 0:00:00
+ KB3037574; Security Update; 2020/4/14 0:00:00
+ KB3042058; Security Update; 2020/4/14 0:00:00
+ KB3045685; Security Update; 2020/4/14 0:00:00
+ KB3046017; Security Update; 2020/4/14 0:00:00
+ KB3046269; Security Update; 2020/4/14 0:00:00
+ KB3059317; Security Update; 2020/4/14 0:00:00
+ KB3060716; Security Update; 2020/4/14 0:00:00
+ KB3071756; Security Update; 2020/4/14 0:00:00
+ KB3072305; Security Update; 2020/4/14 0:00:00
+ KB3074543; Security Update; 2020/4/14 0:00:00
+ KB3075220; Security Update; 2020/4/14 0:00:00
+ KB3086255; Security Update; 2020/4/14 0:00:00
+ KB3092601; Security Update; 2020/4/14 0:00:00
+ KB3097989; Security Update; 2020/4/14 0:00:00
+ KB3101722; Security Update; 2020/4/14 0:00:00
+ KB3108371; Security Update; 2020/4/14 0:00:00
+ KB3108664; Security Update; 2020/4/14 0:00:00
+ KB3109103; Security Update; 2020/4/14 0:00:00
+ KB3109560; Security Update; 2020/4/14 0:00:00
+ KB3110329; Security Update; 2020/4/14 0:00:00
+ KB3124275; Security Update; 2020/4/14 0:00:00
+ KB3127220; Security Update; 2020/4/14 0:00:00
+ KB3133043; Security Update; 2020/4/14 0:00:00
+ KB3138612; Update; 2020/4/14 0:00:00
+ KB3139398; Security Update; 2020/4/14 0:00:00
+ KB3139914; Security Update; 2020/4/14 0:00:00
+ KB3156016; Security Update; 2020/4/14 0:00:00
+ KB3159398; Security Update; 2020/4/14 0:00:00
+ KB3161949; Security Update; 2020/4/14 0:00:00
+ KB3191566; Update; 2020/4/14 0:00:00
+ KB4019990; Update; 2020/4/14 0:00:00
+ KB4474419; Security Update; 2020/4/14 0:00:00
+ KB4490628; Update; 2020/4/14 0:00:00
+ KB4532945; Update; 2020/4/14 0:00:00
+ KB4534310; Security Update; 2020/4/14 0:00:00
+ KB976902; Update; 2010/11/21 0:00:00
