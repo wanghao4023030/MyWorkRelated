@@ -1,9 +1,0 @@
-D:\KIOSK.Integration.New\Code\KIOSK.Integration.Bin\KIOSK.Integration.InboundService.RISReport.PDFGenerator.exe.config
-D:\KIOSK.Integration.New\Code\KIOSK.Integration.Bin\KIOSK.Integration.InboundService.RISReport.PDFGenerator.exe
-D:\KIOSK.Integration.New\Code\KIOSK.Integration.Bin\KIOSK.Integration.InboundService.RISReport.PDFGenerator.pdb
-D:\KIOSK.Integration.New\Code\KIOSK.Integration.InboundService.RISReport.PDFGenerator\obj\x86\Debug\KIOSK.Integration.InboundService.RISReport.PDFGenerator.csprojResolveAssemblyReference.cache
-D:\KIOSK.Integration.New\Code\KIOSK.Integration.InboundService.RISReport.PDFGenerator\obj\x86\Debug\KIOSK.Integration.InboundService.RISReport.PDFGenerator.InboundService.resources
-D:\KIOSK.Integration.New\Code\KIOSK.Integration.InboundService.RISReport.PDFGenerator\obj\x86\Debug\KIOSK.Integration.InboundService.RISReport.PDFGenerator.InboundServiceInstaller.resources
-D:\KIOSK.Integration.New\Code\KIOSK.Integration.InboundService.RISReport.PDFGenerator\obj\x86\Debug\KIOSK.Integration.InboundService.RISReport.PDFGenerator.csproj.GenerateResource.Cache
-D:\KIOSK.Integration.New\Code\KIOSK.Integration.InboundService.RISReport.PDFGenerator\obj\x86\Debug\KIOSK.Integration.InboundService.RISReport.PDFGenerator.exe
-D:\KIOSK.Integration.New\Code\KIOSK.Integration.InboundService.RISReport.PDFGenerator\obj\x86\Debug\KIOSK.Integration.InboundService.RISReport.PDFGenerator.pdb

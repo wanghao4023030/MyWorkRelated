@@ -1,8 +1,0 @@
-D:\C#Study\Get2DImage\Get2DImage\bin\Debug\Get2DImage.exe.config
-D:\C#Study\Get2DImage\Get2DImage\bin\Debug\Get2DImage.exe
-D:\C#Study\Get2DImage\Get2DImage\bin\Debug\Get2DImage.pdb
-D:\C#Study\Get2DImage\Get2DImage\obj\Debug\Get2DImage.Form1.resources
-D:\C#Study\Get2DImage\Get2DImage\obj\Debug\Get2DImage.Properties.Resources.resources
-D:\C#Study\Get2DImage\Get2DImage\obj\Debug\Get2DImage.csproj.GenerateResource.Cache
-D:\C#Study\Get2DImage\Get2DImage\obj\Debug\Get2DImage.exe
-D:\C#Study\Get2DImage\Get2DImage\obj\Debug\Get2DImage.pdb

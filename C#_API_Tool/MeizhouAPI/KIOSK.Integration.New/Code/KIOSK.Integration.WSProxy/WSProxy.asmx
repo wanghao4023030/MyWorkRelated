@@ -1,1 +1,0 @@
-﻿<%@ WebService Language="C#" CodeBehind="WSProxy.asmx.cs" Class="KIOSK.Integration.WSProxy.WSProxy" %>

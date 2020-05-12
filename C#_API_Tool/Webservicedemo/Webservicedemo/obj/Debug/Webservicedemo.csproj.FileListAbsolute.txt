@@ -1,6 +1,0 @@
-D:\C#Study\Webservicedemo\Webservicedemo\bin\Webservicedemo.dll.config
-D:\C#Study\Webservicedemo\Webservicedemo\bin\Webservicedemo.dll
-D:\C#Study\Webservicedemo\Webservicedemo\bin\Webservicedemo.pdb
-D:\C#Study\Webservicedemo\Webservicedemo\obj\Debug\Webservicedemo.csprojResolveAssemblyReference.cache
-D:\C#Study\Webservicedemo\Webservicedemo\obj\Debug\Webservicedemo.dll
-D:\C#Study\Webservicedemo\Webservicedemo\obj\Debug\Webservicedemo.pdb

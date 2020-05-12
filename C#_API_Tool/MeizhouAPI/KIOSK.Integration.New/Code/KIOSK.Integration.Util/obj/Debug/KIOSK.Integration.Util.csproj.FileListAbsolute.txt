@@ -1,5 +1,0 @@
-D:\KIOSK.Integration.New\Code\KIOSK.Integration.Bin\KIOSK.Integration.Util.dll
-D:\KIOSK.Integration.New\Code\KIOSK.Integration.Bin\KIOSK.Integration.Util.pdb
-D:\KIOSK.Integration.New\Code\KIOSK.Integration.Util\obj\Debug\KIOSK.Integration.Util.csprojResolveAssemblyReference.cache
-D:\KIOSK.Integration.New\Code\KIOSK.Integration.Util\obj\Debug\KIOSK.Integration.Util.dll
-D:\KIOSK.Integration.New\Code\KIOSK.Integration.Util\obj\Debug\KIOSK.Integration.Util.pdb

@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<publishData>
-  <publishProfile publishUrl="D:\Kiosk\KioskSVN\trunk\Integration\KIOSK.Integration\Code\KIOSK.Integration.Bin\KIOSK.Integration.WSPrintService" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
-    <file relUrl="bin/KIOSK.Integration.WSPrintService.pdb" publishTime="11/06/2014 14:57:38" />
-    <file relUrl="bin/KIOSK.Integration.WSPrintService.dll" publishTime="11/06/2014 14:57:38" />
-    <file relUrl="Web.config" publishTime="11/06/2014 14:57:57" />
-    <file relUrl="WSPrintService.asmx" publishTime="09/29/2014 00:19:30" />
-  </publishProfile>
-</publishData>

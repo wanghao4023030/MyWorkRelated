@@ -1,9 +1,0 @@
-[2018-04-11 15:50:21,573]  3 -- INFO  -- Webservicedemo.CreateFilmTestData [CreateFilmFile] -- Copy sampleBat file successfully.
-[2018-04-11 15:50:21,605]  3 -- INFO  -- Webservicedemo.CreateFilmTestData [CreateFilmFile] -- Copy sample DICOM  file successfully.
-[2018-04-11 15:50:21,605]  3 -- INFO  -- Webservicedemo.CreateFilmTestData [CreateFilmFile] -- Copy DCMModify application successfully.
-[2018-04-11 15:50:32,089]  3 -- INFO  -- Webservicedemo.CreateFilmTestData [CreateFilmFile] -- Delete E:\PerformanceTestWebservice\CreateFilmDataService\A20180411155051000\A20180411155051000 .bat successfully
-[2018-04-11 15:50:32,089]  3 -- INFO  -- Webservicedemo.CreateFilmTestData [CreateFilmFile] -- Delete E:\PerformanceTestWebservice\CreateFilmDataService\A20180411155051000\Sample.bat successfully
-[2018-04-11 15:50:32,089]  3 -- INFO  -- Webservicedemo.CreateFilmTestData [CreateFilmFile] -- Delete E:\PerformanceTestWebservice\CreateFilmDataService\A20180411155051000\CR_new.dcm successfully
-[2018-04-11 15:50:32,089]  3 -- INFO  -- Webservicedemo.CreateFilmTestData [CreateFilmFile] -- Delete E:\PerformanceTestWebservice\CreateFilmDataService\A20180411155051000\dcmodify.exe successfully
-[2018-04-11 15:50:32,089]  3 -- INFO  -- Webservicedemo.CreateFilmTestData [CreateFilmFile] -- Create new dicom file to PS successfully.
-[2018-04-11 15:50:42,107]  3 -- INFO  -- Webservicedemo.CreateFilmTestData [CreateFilmFile] -- Archive new Film to PS successfully.

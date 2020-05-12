@@ -1,9 +1,0 @@
-D:\C#Study\PSwebserviceAPI\PSwebserviceAPI\bin\PSwebserviceAPI.dll.config
-D:\C#Study\PSwebserviceAPI\PSwebserviceAPI\bin\PSwebserviceAPI.dll
-D:\C#Study\PSwebserviceAPI\PSwebserviceAPI\bin\PSwebserviceAPI.pdb
-D:\C#Study\PSwebserviceAPI\PSwebserviceAPI\obj\Debug\PSwebserviceAPI.csprojResolveAssemblyReference.cache
-D:\C#Study\PSwebserviceAPI\PSwebserviceAPI\obj\Debug\PSwebserviceAPI.dll
-D:\C#Study\PSwebserviceAPI\PSwebserviceAPI\obj\Debug\PSwebserviceAPI.pdb
-D:\C#Study\PSwebserviceAPI\PSwebserviceAPI\bin\Newtonsoft.Json.dll
-D:\C#Study\PSwebserviceAPI\PSwebserviceAPI\bin\Newtonsoft.Json.pdb
-D:\C#Study\PSwebserviceAPI\PSwebserviceAPI\bin\Newtonsoft.Json.xml
