@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.4 on win32)" generated="20191123 01:59:01.112" rpa="false">
+<suite id="s1" name="SmokeTest" source="D:\PUMA_AUTO\RF_PUMA\PUMA\SmokeTest.robot">
+<test id="s1-t1" name="SmokeTest_005_Core_4715_03.01.01 Report receive from Virtual Print success.">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Step 1\n Description:\n1. Create a patient with an exam in RIS or local table in PS.\nExpected:\n 1. The patient with an exam can create successfully.</arg>
+</arguments>
+<msg timestamp="20191123 01:59:01.785" level="INFO">Step 1
+Description:
+1. Create a patient with an exam in RIS or local table in PS.
+Expected:
+1. The patient with an exam can create successfully.</msg>
+<status status="PASS" starttime="20191123 01:59:01.785" endtime="20191123 01:59:01.785"></status>
+</kw>
+<kw name="Patient Create Randomly" library="PUMA_PatientLibrary">
+<doc>create patient with random information</doc>
+<assign>
+<var>${patientinfo}</var>
+</assign>
+<msg timestamp="20191123 01:59:01.785" level="DEBUG">Starting new HTTP connection (1): 10.112.20.84:80</msg>
+<msg timestamp="20191123 01:59:01.832" level="DEBUG">http://10.112.20.84:80 "POST /NotifyServer/NotifyService.asmx HTTP/1.1" 200 373</msg>
+<msg timestamp="20191123 01:59:01.832" level="INFO">Patient.patient_create_randomly:Patient create successfully.
+ {"Status": true, "CreateDT": "2019-11-23 01:59:01.784884", "UpdateDT": "2019-11-23 01:59:01.784884", "PatientID": "P20191123015901", "AccessionNumber": "A20191123015901", "StudyInstanceUID": "UID20191123015901", "NameCN": "CN20191123015901", "NameEN": "EN20191123015901", "Gender": "F", "Birthday": "1920-12-17", "Modality": "XA", "ModalityName": "US", "PatientType": "\u95e8\u8bca\u75c5\u4eba", "VisitID": "", "RequestID": "", "RequestDepartment": 1, "RequestDT": "2019-11-23 01:59:01.784884", "RegisterDT": "2019-11-23 01:59:01.784884", "ExamDT": "2019-11-23 01:59:01.784884", "ReportDT": "2019-11-23 01:59:01.784884", "SubmitDT": "2019-11-23 01:59:01.784884", "ApproveDT": "2019-11-23 01:59:01.784884", "PDFReportURL": "", "StudyStatus": "", "OutHospitalNo": "", "InHospitalNo": "", "PhysicalNumber": "", "ExamName": "Exam20191123015901", "ExamBodyPart": "Chest", "RefferingDepartment": "", "Optional0": "", "Optional1": "", "Optional2": "", "Optional3": "", "Optional4": "", "Optional5": "", "Optional6": "", "Optional7": "", "Optional8": "", "Optional9": "", "notifyserver_url": "http://10.112.20.84/NotifyServer/NotifyService.asmx"}</msg>
+<msg timestamp="20191123 01:59:01.832" level="INFO">${patientinfo} = {"Status": true, "CreateDT": "2019-11-23 01:59:01.784884", "UpdateDT": "2019-11-23 01:59:01.784884", "PatientID": "P20191123015901", "AccessionNumber": "A20191123015901", "StudyInstanceUID": "UID20191...</msg>
+<status status="PASS" starttime="20191123 01:59:01.785" endtime="20191123 01:59:01.832"></status>
+</kw>
+<kw name="Convert String to JSON" library="JSONLibrary">
+<doc>Convert String to JSON object</doc>
+<arguments>
+<arg>${patientinfo}</arg>
+</arguments>
+<assign>
+<var>${json_object}</var>
+</assign>
+<msg timestamp="20191123 01:59:01.832" level="INFO">${json_object} = {'Status': True, 'CreateDT': '2019-11-23 01:59:01.784884', 'UpdateDT': '2019-11-23 01:59:01.784884', 'PatientID': 'P20191123015901', 'AccessionNumber': 'A20191123015901', 'StudyInstanceUID': 'UID20191...</msg>
+<status status="PASS" starttime="20191123 01:59:01.832" endtime="20191123 01:59:01.832"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${json_object}</arg>
+<arg>Status</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<msg timestamp="20191123 01:59:01.879" level="INFO">${status} = [True]</msg>
+<status status="PASS" starttime="20191123 01:59:01.832" endtime="20191123 01:59:01.879"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${status}[0]</arg>
+<arg>Patient create successfully.</arg>
+</arguments>
+<status status="PASS" starttime="20191123 01:59:01.879" endtime="20191123 01:59:01.879"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${json_object}</arg>
+<arg>PatientID</arg>
+</arguments>
+<assign>
+<var>${patientID}</var>
+</assign>
+<msg timestamp="20191123 01:59:01.926" level="INFO">${patientID} = ['P20191123015901']</msg>
+<status status="PASS" starttime="20191123 01:59:01.879" endtime="20191123 01:59:01.926"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${json_object}</arg>
+<arg>AccessionNumber</arg>
+</arguments>
+<assign>
+<var>${AccessionNumber}</var>
+</assign>
+<msg timestamp="20191123 01:59:01.957" level="INFO">${AccessionNumber} = ['A20191123015901']</msg>
+<status status="PASS" starttime="20191123 01:59:01.926" endtime="20191123 01:59:01.957"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${json_object}</arg>
+<arg>NameCN</arg>
+</arguments>
+<assign>
+<var>${PatientName}</var>
+</assign>
+<msg timestamp="20191123 01:59:01.988" level="INFO">${PatientName} = ['CN20191123015901']</msg>
+<status status="PASS" starttime="20191123 01:59:01.957" endtime="20191123 01:59:01.988"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Step 2: \n Description \n 1. Configure the report OCR service in PS. \n 2. Make sure it can identify the patient report in step1. \n Expected:\n The operation can execute successfully.</arg>
+</arguments>
+<msg timestamp="20191123 01:59:02.004" level="INFO">Step 2: 
+Description 
+1. Configure the report OCR service in PS. 
+2. Make sure it can identify the patient report in step1. 
+Expected:
+The operation can execute successfully.</msg>
+<status status="PASS" starttime="20191123 01:59:01.988" endtime="20191123 01:59:02.004"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Step 3: \n Description \n 1. Prepare a report of patient which create in step1. \n 2. Print the report to PS by virtul printing. \n Expected: \n 1. The report can print to PS successfully. \n</arg>
+</arguments>
+<msg timestamp="20191123 01:59:02.004" level="INFO">Step 3: 
+Description 
+1. Prepare a report of patient which create in step1. 
+2. Print the report to PS by virtul printing. 
+Expected: 
+1. The report can print to PS successfully. 
+</msg>
+<status status="PASS" starttime="20191123 01:59:02.004" endtime="20191123 01:59:02.004"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20191123 01:59:07.004" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20191123 01:59:02.004" endtime="20191123 01:59:07.004"></status>
+</kw>
+<kw name="Report Create Report With Sample" library="PUMA_ReportLibrary">
+<doc>report create report with sample</doc>
+<arguments>
+<arg>${patientID}[0]</arg>
+<arg>${AccessionNumber}[0]</arg>
+</arguments>
+<assign>
+<var>${Report_archived_Info}</var>
+</assign>
+<msg timestamp="20191123 01:59:17.067" level="INFO">Delete File: D:\PUMA_AUTO\RF_PUMA\PUMA\Libs\PUMA_ReportLibrary\ReportSample\P20191123015626.pdf
+PUMA_ReportLibrary._convert_report_to_PDF: The PDF file create successfully. [D:\PUMA_AUTO\RF_PUMA\PUMA\Libs\PUMA_ReportLibrary\ReportSample\P20191123015901.pdf]
+['', '', '10.112.20.84', 'Report', 'Received']
+本地名称     
+远程名称     \\10.112.20.84\Report\Received
+资源类型     Disk
+状态         OK
+# 打开       0
+# 连接       1
+命令成功完成。
+
+
+已复制         1 个文件。
+
+PUMA_ReportLibrary._copy_file_to_share_folder: The file copy successfully.
+PUMA_ReportLibrary._archive_check: Report achived successfully.
+Report achived successfully. {"Status": true, "server": "10.112.20.84", "patient_id": "P20191123015901", "accession_number": "A20191123015901", "report_file": "D:\\PUMA_AUTO\\RF_PUMA\\PUMA\\Libs\\PUMA_ReportLibrary\\ReportSample\\Report.txt", "report_template_file": "D:\\PUMA_AUTO\\RF_PUMA\\PUMA\\Libs\\PUMA_ReportLibrary\\ReportSample\\Template.txt", "pdf_report_folder": "D:\\PUMA_AUTO\\RF_PUMA\\PUMA\\Libs\\PUMA_ReportLibrary\\ReportSample\\", "pdf_report_path": "D:\\PUMA_AUTO\\RF_PUMA\\PUMA\\Libs\\PUMA_ReportLibrary\\ReportSample\\P20191123015901.pdf", "PS_report_shared_folder": "\\\\10.112.20.84\\Report\\Received", "powershell_path": "D:\\PUMA_AUTO\\RF_PUMA\\PUMA\\Libs\\PUMA_ReportLibrary\\PowerShellScripts", "default_printer": "PDFCreator", "report_check_file_path": "", "notify_server_url": "http://10.112.20.84/NotifyServer/NotifyService.asmx?wsdl", "print_server_url": "http://10.112.20.84/PrintServer/PrintService.asmx?wsdl", "reportstatus_mode_value": {"not ready": "0", "temporary": "1", "formal": "2"}, "Reportstatus_value_mode": {"0": "not ready", "1": "temporary", "2": "formal"}}</msg>
+<msg timestamp="20191123 01:59:17.067" level="INFO">${Report_archived_Info} = {"Status": true, "server": "10.112.20.84", "patient_id": "P20191123015901", "accession_number": "A20191123015901", "report_file": "D:\\PUMA_AUTO\\RF_PUMA\\PUMA\\Libs\\PUMA_ReportLibrary\\ReportSample\...</msg>
+<status status="PASS" starttime="20191123 01:59:07.004" endtime="20191123 01:59:17.067"></status>
+</kw>
+<kw name="Convert String to JSON" library="JSONLibrary">
+<doc>Convert String to JSON object</doc>
+<arguments>
+<arg>${Report_archived_Info}</arg>
+</arguments>
+<assign>
+<var>${Report_archived_Info_Json}</var>
+</assign>
+<msg timestamp="20191123 01:59:17.068" level="INFO">${Report_archived_Info_Json} = {'Status': True, 'server': '10.112.20.84', 'patient_id': 'P20191123015901', 'accession_number': 'A20191123015901', 'report_file': 'D:\\PUMA_AUTO\\RF_PUMA\\PUMA\\Libs\\PUMA_ReportLibrary\\ReportSample\...</msg>
+<status status="PASS" starttime="20191123 01:59:17.067" endtime="20191123 01:59:17.068"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${Report_archived_Info_Json}</arg>
+<arg>Status</arg>
+</arguments>
+<assign>
+<var>${Report_archived_result}</var>
+</assign>
+<msg timestamp="20191123 01:59:17.106" level="INFO">${Report_archived_result} = [True]</msg>
+<status status="PASS" starttime="20191123 01:59:17.068" endtime="20191123 01:59:17.106"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${Report_archived_result}[0] == True</arg>
+<arg>The report can print to PS successfully.</arg>
+</arguments>
+<status status="PASS" starttime="20191123 01:59:17.107" endtime="20191123 01:59:17.107"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20191123 01:59:27.107" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20191123 01:59:17.107" endtime="20191123 01:59:27.107"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Step 4 \n \ Description \n 1. Check the WGGC.dbo.AFP_ReportInfo table. \n Expected: \n 1. New record can be found in AFP_ReportInfo table for received report, and the ReportStatus value should be 2. \n</arg>
+</arguments>
+<msg timestamp="20191123 01:59:27.107" level="INFO">Step 4 
+ Description 
+1. Check the WGGC.dbo.AFP_ReportInfo table. 
+Expected: 
+1. New record can be found in AFP_ReportInfo table for received report, and the ReportStatus value should be 2. 
+</msg>
+<status status="PASS" starttime="20191123 01:59:27.107" endtime="20191123 01:59:27.107"></status>
+</kw>
+<kw name="Report Get Info From Afp Reportinfo" library="PUMA_ReportLibrary">
+<doc>report_get_info_from_afp_reportinfo</doc>
+<arguments>
+<arg>${patientID}[0]</arg>
+<arg>${AccessionNumber}[0]</arg>
+</arguments>
+<assign>
+<var>${Report_Check_ReportInfo_Info_Info}</var>
+</assign>
+<msg timestamp="20191123 01:59:27.110" level="INFO">['StudyInstanceUID', 'ReportStatus', 'StatusTime', 'AccessionNumber', 'FileName', 'PatientID', 'PatientName', 'PrintTime', 'PrintStatus', 'DeleteStatus', 'PrintCount', 'Gender', 'ExamName', 'PatientType', 'ModalityName', 'ExamDateTime', 'ReferringDepartment', 'VerifyDateTime', 'ModalityType', 'ForwardDestination', 'ForwardDateTime', 'BodyPart', 'AAccessionNumber', 'AStudyInstanceUID', 'CreatedTime', 'DepartmentID', 'PageCount', 'TerminalID', 'SyncToECS', 'CopiesCount', 'PdfPassword']
+{'result': True, 'StudyInstanceUID': ('14bf7d94e22a4d149d549fda4c6d8f13',), 'ReportStatus': (2,), 'StatusTime': ('2019-11-23 01:59:10.883000',), 'AccessionNumber': ('A20191123015901',), 'FileName': ('E:\\Report\\Archive\\20191123\\A20191123015901_015910_b5d1df836af3490b8468d01f3f78c9a9.pdf',), 'PatientID': ('P20191123015901                                                 ',), 'PatientName': ('CN20191123015901',), 'PrintTime': (None,), 'PrintStatus': (0,), 'DeleteStatus': (0,), 'PrintCount': (0,), 'Gender': ('F',), 'ExamName': ('Exam20191123015901',), 'PatientType': ('2',), 'ModalityName': ('US',), 'ExamDateTime': ('2019-11-23 01:59:01.784884',), 'ReferringDepartment': ('',), 'VerifyDateTime': ('2019-11-23 01:59:10',), 'ModalityType': ('XA',), 'ForwardDestination': (None,), 'ForwardDateTime': (None,), 'BodyPart': ('',), 'AAccessionNumber': (None,), 'AStudyInstanceUID': (None,), 'CreatedTime': ('2019-11-23 01:59:10.883000',), 'DepartmentID': (1,), 'PageCount': (1,), 'TerminalID': (None,), 'SyncToECS': (0,), 'CopiesCount': (1,), 'PdfPassword': (None,)}</msg>
+<msg timestamp="20191123 01:59:27.110" level="INFO">${Report_Check_ReportInfo_Info_Info} = {"result": true, "StudyInstanceUID": ["14bf7d94e22a4d149d549fda4c6d8f13"], "ReportStatus": [2], "StatusTime": ["2019-11-23 01:59:10.883000"], "AccessionNumber": ["A20191123015901"], "FileName": ["E:\\...</msg>
+<status status="PASS" starttime="20191123 01:59:27.108" endtime="20191123 01:59:27.110"></status>
+</kw>
+<kw name="Convert String to JSON" library="JSONLibrary">
+<doc>Convert String to JSON object</doc>
+<arguments>
+<arg>${Report_Check_ReportInfo_Info_Info}</arg>
+</arguments>
+<assign>
+<var>${Report_Check_ReportInfo_Info_Json}</var>
+</assign>
+<msg timestamp="20191123 01:59:27.111" level="INFO">${Report_Check_ReportInfo_Info_Json} = {'result': True, 'StudyInstanceUID': ['14bf7d94e22a4d149d549fda4c6d8f13'], 'ReportStatus': [2], 'StatusTime': ['2019-11-23 01:59:10.883000'], 'AccessionNumber': ['A20191123015901'], 'FileName': ['E:\\...</msg>
+<status status="PASS" starttime="20191123 01:59:27.110" endtime="20191123 01:59:27.111"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${Report_Check_ReportInfo_Info_Json}</arg>
+<arg>result</arg>
+</arguments>
+<assign>
+<var>${Report_Check_ReportInfo_Info_Result}</var>
+</assign>
+<msg timestamp="20191123 01:59:27.149" level="INFO">${Report_Check_ReportInfo_Info_Result} = [True]</msg>
+<status status="PASS" starttime="20191123 01:59:27.111" endtime="20191123 01:59:27.149"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${Report_Check_ReportInfo_Info_Json}</arg>
+<arg>ReportStatus</arg>
+</arguments>
+<assign>
+<var>${Report_Check_ReportInfo_Info_ReportStatus}</var>
+</assign>
+<msg timestamp="20191123 01:59:27.187" level="INFO">${Report_Check_ReportInfo_Info_ReportStatus} = [[2]]</msg>
+<status status="PASS" starttime="20191123 01:59:27.149" endtime="20191123 01:59:27.187"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${Report_Check_ReportInfo_Info_Json}</arg>
+<arg>FileName</arg>
+</arguments>
+<assign>
+<var>${Report_Check_ReportInfo_Info_ReportPath}</var>
+</assign>
+<msg timestamp="20191123 01:59:27.216" level="INFO">${Report_Check_ReportInfo_Info_ReportPath} = [['E:\\Report\\Archive\\20191123\\A20191123015901_015910_b5d1df836af3490b8468d01f3f78c9a9.pdf']]</msg>
+<status status="PASS" starttime="20191123 01:59:27.187" endtime="20191123 01:59:27.216"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${Report_Check_ReportInfo_Info_Result}[0]</arg>
+<arg>Wggc.dbo.AFP_ReportInfo table have new records of this report</arg>
+</arguments>
+<status status="PASS" starttime="20191123 01:59:27.216" endtime="20191123 01:59:27.216"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${Report_Check_ReportInfo_Info_ReportStatus}[0][0]</arg>
+<arg>2</arg>
+<arg>The report status value in table wggc.dbo.afp_reportinfo is 2</arg>
+</arguments>
+<msg timestamp="20191123 01:59:27.216" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20191123 01:59:27.216" endtime="20191123 01:59:27.216"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20191123 01:59:32.218" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20191123 01:59:27.216" endtime="20191123 01:59:32.218"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Step 5: \n Description:\n 1. Check the WGGC.dbo.AFP_ReportInfo table. \n Expected: \n 1. New record can be found in AFP_ReportInfo table for received report, and the printstatus value should be 0. \n</arg>
+</arguments>
+<msg timestamp="20191123 01:59:32.218" level="INFO">Step 5: 
+Description:
+1. Check the WGGC.dbo.AFP_ReportInfo table. 
+Expected: 
+1. New record can be found in AFP_ReportInfo table for received report, and the printstatus value should be 0. 
+</msg>
+<status status="PASS" starttime="20191123 01:59:32.218" endtime="20191123 01:59:32.218"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${Report_Check_ReportInfo_Info_Json}</arg>
+<arg>PrintStatus</arg>
+</arguments>
+<assign>
+<var>${Report_Check_ReportInfo_Info_PrintStatus}</var>
+</assign>
+<msg timestamp="20191123 01:59:32.267" level="INFO">${Report_Check_ReportInfo_Info_PrintStatus} = [[0]]</msg>
+<status status="PASS" starttime="20191123 01:59:32.218" endtime="20191123 01:59:32.267"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${Report_Check_ReportInfo_Info_Result}[0]</arg>
+<arg>Wggc.dbo.AFP_ReportInfo table have new records of this report</arg>
+</arguments>
+<status status="PASS" starttime="20191123 01:59:32.268" endtime="20191123 01:59:32.268"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${Report_Check_ReportInfo_Info_PrintStatus}[0][0]</arg>
+<arg>0</arg>
+<arg>The report printstatus value is 0</arg>
+</arguments>
+<msg timestamp="20191123 01:59:32.269" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20191123 01:59:32.268" endtime="20191123 01:59:32.269"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20191123 01:59:37.270" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20191123 01:59:32.269" endtime="20191123 01:59:37.270"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Step 6 \n Description: \n 1. Check the WGGC.dbo.AFP_PrintMode table \n Expected:\n 1. Can find a new record in this table and value should be correct. \n</arg>
+</arguments>
+<msg timestamp="20191123 01:59:37.270" level="INFO">Step 6 
+Description: 
+1. Check the WGGC.dbo.AFP_PrintMode table 
+Expected:
+1. Can find a new record in this table and value should be correct. 
+</msg>
+<status status="PASS" starttime="20191123 01:59:37.270" endtime="20191123 01:59:37.270"></status>
+</kw>
+<kw name="Printmode Get Info From Db By Accn" library="PUMA_PrintModeLibrary">
+<doc>printmode_get_info_from_db_by_accn</doc>
+<arguments>
+<arg>${AccessionNumber}[0]</arg>
+</arguments>
+<assign>
+<var>${PrintMode_info}</var>
+</assign>
+<msg timestamp="20191123 01:59:37.273" level="INFO">${PrintMode_info} = {"result": true, "AccessionNumber": "A20191123015901", "StudyInstanceUID": "", "PrintMode": 0, "StatusTime": "2019-11-23 01:59:11.830000", "HoldFlag": 1, "PrintWaitTime": "60", "ReportWaitTime": "10"}</msg>
+<status status="PASS" starttime="20191123 01:59:37.271" endtime="20191123 01:59:37.273"></status>
+</kw>
+<kw name="Convert String to JSON" library="JSONLibrary">
+<doc>Convert String to JSON object</doc>
+<arguments>
+<arg>${PrintMode_info}</arg>
+</arguments>
+<assign>
+<var>${PrintMode_info_Json}</var>
+</assign>
+<msg timestamp="20191123 01:59:37.273" level="INFO">${PrintMode_info_Json} = {'result': True, 'AccessionNumber': 'A20191123015901', 'StudyInstanceUID': '', 'PrintMode': 0, 'StatusTime': '2019-11-23 01:59:11.830000', 'HoldFlag': 1, 'PrintWaitTime': '60', 'ReportWaitTime': '10'}</msg>
+<status status="PASS" starttime="20191123 01:59:37.273" endtime="20191123 01:59:37.273"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${PrintMode_info_Json}</arg>
+<arg>result</arg>
+</arguments>
+<assign>
+<var>${PrintMode_result}</var>
+</assign>
+<msg timestamp="20191123 01:59:37.311" level="INFO">${PrintMode_result} = [True]</msg>
+<status status="PASS" starttime="20191123 01:59:37.273" endtime="20191123 01:59:37.311"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${PrintMode_info_Json}</arg>
+<arg>PrintMode</arg>
+</arguments>
+<assign>
+<var>${PrintMode_value}</var>
+</assign>
+<msg timestamp="20191123 01:59:37.349" level="INFO">${PrintMode_value} = [0]</msg>
+<status status="PASS" starttime="20191123 01:59:37.311" endtime="20191123 01:59:37.349"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${PrintMode_result}</arg>
+</arguments>
+<status status="PASS" starttime="20191123 01:59:37.350" endtime="20191123 01:59:37.350"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${PrintMode_value}[0]</arg>
+<arg>0</arg>
+<arg>The patient print mode is 0 for "门诊病人"</arg>
+</arguments>
+<msg timestamp="20191123 01:59:37.350" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20191123 01:59:37.350" endtime="20191123 01:59:37.351"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20191123 01:59:42.352" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20191123 01:59:37.351" endtime="20191123 01:59:42.352"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Step 7 \n Description: \n 1. Check the ReportStoredFlag value in T_Integration_ExamInfo table in WGGC database for this report. \n Expected: \n 1. The ReportStoredFlag value should be 9 \n</arg>
+</arguments>
+<msg timestamp="20191123 01:59:42.352" level="INFO">Step 7 
+Description: 
+1. Check the ReportStoredFlag value in T_Integration_ExamInfo table in WGGC database for this report. 
+Expected: 
+1. The ReportStoredFlag value should be 9 
+</msg>
+<status status="PASS" starttime="20191123 01:59:42.352" endtime="20191123 01:59:42.352"></status>
+</kw>
+<kw name="Report Check ReportStoredFlag In T Integration ExamInfo" library="PUMA_ReportLibrary">
+<doc>report_check_ReportStoredFlag_in_T_Integration_ExamInfo</doc>
+<arguments>
+<arg>${patientID}[0]</arg>
+<arg>${AccessionNumber}[0]</arg>
+</arguments>
+<assign>
+<var>${Report_ReportStoreFlag_info}</var>
+</assign>
+<msg timestamp="20191123 01:59:42.354" level="INFO">Report.report_check_ReportStoredFlag_in_T_Integration_ExamInfo: Get the ReportStoredFlag of patient [P20191123015901, A20191123015901] correct and value is 9</msg>
+<msg timestamp="20191123 01:59:42.355" level="INFO">${Report_ReportStoreFlag_info} = {"result": true, "ReportStoredFlag": 9}</msg>
+<status status="PASS" starttime="20191123 01:59:42.353" endtime="20191123 01:59:42.355"></status>
+</kw>
+<kw name="Convert String to JSON" library="JSONLibrary">
+<doc>Convert String to JSON object</doc>
+<arguments>
+<arg>${Report_ReportStoreFlag_info}</arg>
+</arguments>
+<assign>
+<var>${Report_ReportStoreFlag_info_json}</var>
+</assign>
+<msg timestamp="20191123 01:59:42.356" level="INFO">${Report_ReportStoreFlag_info_json} = {'result': True, 'ReportStoredFlag': 9}</msg>
+<status status="PASS" starttime="20191123 01:59:42.355" endtime="20191123 01:59:42.356"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${Report_ReportStoreFlag_info_json}</arg>
+<arg>result</arg>
+</arguments>
+<assign>
+<var>${Report_ReportStoreFlage_info_result}</var>
+</assign>
+<msg timestamp="20191123 01:59:42.401" level="INFO">${Report_ReportStoreFlage_info_result} = [True]</msg>
+<status status="PASS" starttime="20191123 01:59:42.356" endtime="20191123 01:59:42.401"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${Report_ReportStoreFlag_info_json}</arg>
+<arg>ReportStoredFlag</arg>
+</arguments>
+<assign>
+<var>${Report_ReportStoreFlage_value}</var>
+</assign>
+<msg timestamp="20191123 01:59:42.443" level="INFO">${Report_ReportStoreFlage_value} = [9]</msg>
+<status status="PASS" starttime="20191123 01:59:42.401" endtime="20191123 01:59:42.443"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${Report_ReportStoreFlage_info_result}[0]</arg>
+</arguments>
+<status status="PASS" starttime="20191123 01:59:42.444" endtime="20191123 01:59:42.444"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${Report_ReportStoreFlage_value}[0]</arg>
+<arg>9</arg>
+<arg>The ReportStoredFlag value should be 9 in T_integration_examInfo table</arg>
+</arguments>
+<msg timestamp="20191123 01:59:42.444" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20191123 01:59:42.444" endtime="20191123 01:59:42.444"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20191123 01:59:47.446" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20191123 01:59:42.445" endtime="20191123 01:59:47.446"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Step 8: \n Description: \n 1. Check the records in WGGC.dbo.AFP_ExamInfo table in WGGC database for this report. \n Expected: \n1. The Report can find in the table. \n</arg>
+</arguments>
+<msg timestamp="20191123 01:59:47.446" level="INFO">Step 8: 
+Description: 
+1. Check the records in WGGC.dbo.AFP_ExamInfo table in WGGC database for this report. 
+Expected: 
+1. The Report can find in the table. 
+</msg>
+<status status="PASS" starttime="20191123 01:59:47.446" endtime="20191123 01:59:47.446"></status>
+</kw>
+<kw name="DB Get Wggc Dbo Afp Examinfo By Accn" library="PUMA_DatabaseLibrary">
+<doc>This function is query the data with accnession number from table wggc.dbp.afp_examinfo in database.
+The data will order by create time desc as default.
+The each column data will organize as list and map to dict with column name to return.</doc>
+<arguments>
+<arg>${AccessionNumber}[0]</arg>
+</arguments>
+<assign>
+<var>${Report_exam_info}</var>
+</assign>
+<msg timestamp="20191123 01:59:47.449" level="INFO">${Report_exam_info} = {"Result": true, "AccessionNumber": "A20191123015901", "FilmPrintStatus": -1, "FilmPrintTime": null, "HoldFlag": 1, "ImageCount": 0, "Modalities": "XA", "ExamName": null, "BodyPart": null, "PatientID"...</msg>
+<status status="PASS" starttime="20191123 01:59:47.447" endtime="20191123 01:59:47.449"></status>
+</kw>
+<kw name="Convert String to JSON" library="JSONLibrary">
+<doc>Convert String to JSON object</doc>
+<arguments>
+<arg>${Report_exam_info}</arg>
+</arguments>
+<assign>
+<var>${Report_exam_info_Json}</var>
+</assign>
+<msg timestamp="20191123 01:59:47.449" level="INFO">${Report_exam_info_Json} = {'Result': True, 'AccessionNumber': 'A20191123015901', 'FilmPrintStatus': -1, 'FilmPrintTime': None, 'HoldFlag': 1, 'ImageCount': 0, 'Modalities': 'XA', 'ExamName': None, 'BodyPart': None, 'PatientID'...</msg>
+<status status="PASS" starttime="20191123 01:59:47.449" endtime="20191123 01:59:47.449"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${Report_exam_info_Json}</arg>
+<arg>Result</arg>
+</arguments>
+<assign>
+<var>${Report_exam_info_Result}</var>
+</assign>
+<msg timestamp="20191123 01:59:47.488" level="INFO">${Report_exam_info_Result} = [True]</msg>
+<status status="PASS" starttime="20191123 01:59:47.449" endtime="20191123 01:59:47.488"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${Report_exam_info_Result}[0]</arg>
+<arg>The report can find in the wggc.dbo.afp_ExamInfo table.</arg>
+</arguments>
+<status status="PASS" starttime="20191123 01:59:47.488" endtime="20191123 01:59:47.488"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20191123 01:59:52.489" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20191123 01:59:47.489" endtime="20191123 01:59:52.489"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Step 9 \n Description \n 1. Check the report in archived folder. (default is E:\\Report\\Archive.) \n Expected: \n 1.The file should exist in the folder \n</arg>
+</arguments>
+<msg timestamp="20191123 01:59:52.489" level="INFO">Step 9 
+Description 
+1. Check the report in archived folder. (default is E:\Report\Archive.) 
+Expected: 
+1.The file should exist in the folder 
+</msg>
+<status status="PASS" starttime="20191123 01:59:52.489" endtime="20191123 01:59:52.489"></status>
+</kw>
+<kw name="Report Check File Exist By Path Remote" library="PUMA_ReportLibrary">
+<doc>report_check_file_exist_by_path_remote</doc>
+<arguments>
+<arg>${Report_Check_ReportInfo_Info_ReportPath}[0][0]</arg>
+</arguments>
+<assign>
+<var>${Report_File_Pathc_Check_Result}</var>
+</assign>
+<msg timestamp="20191123 01:59:57.916" level="INFO">D:\PUMA_AUTO\RF_PUMA\PUMA\Libs\PUMA_ReportLibrary\PowerShellScripts\PS_Check_File_Exist_temp.ps1
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe D:\PUMA_AUTO\RF_PUMA\PUMA\Libs\PUMA_ReportLibrary\PowerShellScripts\PS_Check_File_Exist_temp.ps1
+b'True\r\n'
+Report.report_check_file_exist_by_path_remote: Message come from powershell: b'True\r\n'
+Report.report_check_file_exist_by_path_remote: The file is exsit in the PS system [E:\Report\Archive\20191123\A20191123015901_015910_b5d1df836af3490b8468d01f3f78c9a9.pdf].</msg>
+<msg timestamp="20191123 01:59:57.916" level="INFO">${Report_File_Pathc_Check_Result} = True</msg>
+<status status="PASS" starttime="20191123 01:59:52.490" endtime="20191123 01:59:57.916"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${Report_File_Pathc_Check_Result}</arg>
+<arg>The file exist in the folder.</arg>
+</arguments>
+<status status="PASS" starttime="20191123 01:59:57.916" endtime="20191123 01:59:57.917"></status>
+</kw>
+<tags>
+<tag>Fail</tag>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" starttime="20191123 01:59:01.785" endtime="20191123 01:59:57.917" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20191123 01:59:01.115" endtime="20191123 01:59:57.917"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">Fail</stat>
+<stat pass="1" fail="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="SmokeTest">SmokeTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

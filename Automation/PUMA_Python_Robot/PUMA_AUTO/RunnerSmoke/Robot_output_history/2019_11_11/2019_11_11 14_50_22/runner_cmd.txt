@@ -1,0 +1,1 @@
+robot  --include Smoke -d D:\PUMA_AUTO\RunnerSmoke\Robot_output\ -l puma_auto_log -l puma_auto_report --maxerrorlines NONE -L DEBUG  D:\PUMA_AUTO\RF_PUMA\PUMA\SmokeTest.robot

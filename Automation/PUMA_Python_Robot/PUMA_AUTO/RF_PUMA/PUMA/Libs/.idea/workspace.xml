@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5c6f33c9-5f50-48c4-8a3f-32a4a10816d9" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Libs" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="HierarchyBrowserManager">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
+  </component>
+  <component name="ProjectId" id="1SathfTKGyzuAwaA6IXZKYghFfH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/PUMA_ServerLibrary/powershell" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PUMA_AUTO\RF_PUMA\PUMA\Libs\PUMA_ServerLibrary\powershell" />
+      <recent name="D:\PUMA_AUTO\RF_PUMA\PUMA\Libs\PUMA_PlatformLibrary" />
+      <recent name="D:\PUMA_AUTO\RF_PUMA\PUMA\Libs\PUMA_ReportLibrary" />
+      <recent name="D:\PUMA_AUTO\RF_PUMA\PUMA\Libs\PUMA_ReportLibrary\PowerShellScripts" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.Server">
+    <configuration name="Platform" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Libs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PUMA_PlatformLibrary" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PUMA_PlatformLibrary/Platform.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Prepare" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Prepare" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../Prepare" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../Prepare/Prepare.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SendSampleDICOM" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Prepare" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../Prepare/SCU" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../Prepare/SCU/SendSampleDICOM.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Server" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Libs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PUMA_ServerLibrary" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PUMA_ServerLibrary/Server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="serverlib" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Libs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PUMA_ServerLibrary" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:\PUMA_AUTO\RF_PUMA\PUMA\Libs\PUMA_ServerLibrary\Server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Server" />
+        <item itemvalue="Python.serverlib" />
+        <item itemvalue="Python.SendSampleDICOM" />
+        <item itemvalue="Python.Prepare" />
+        <item itemvalue="Python.Platform" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_MODE" value="false" />
+    <option name="ACTIVE_ACTIONS" value=",SHOW_INHERITED,SHOW_FIELDS" />
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c6f33c9-5f50-48c4-8a3f-32a4a10816d9" name="Default Changelist" comment="" />
+      <created>1571813654504</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571813654504</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="699" y="146" key="#Report" timestamp="1575448146397">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="699" y="146" key="#Report/0.0.1920.1040@0.0.1920.1040" timestamp="1575448146397" />
+    <state x="414" y="174" width="1092" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575447514317">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" width="1092" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1575447514317" />
+    <state width="463" height="466" key="DebuggerActiveHint" timestamp="1575448501884">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="463" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1575448501884" />
+    <state x="611" y="458" key="FileChooserDialogImpl" timestamp="1575447407933">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="611" y="458" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1575447407933" />
+    <state width="1877" height="158" key="GridCell.Tab.0.bottom" timestamp="1575513360979">
+      <screen x="0" y="0" width="1099" height="527" />
+    </state>
+    <state width="1877" height="158" key="GridCell.Tab.0.bottom/0.0.1099.527@0.0.1099.527" timestamp="1575513360979" />
+    <state width="1877" height="322" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1575466755747" />
+    <state width="1877" height="158" key="GridCell.Tab.0.center" timestamp="1575513360979">
+      <screen x="0" y="0" width="1099" height="527" />
+    </state>
+    <state width="1877" height="158" key="GridCell.Tab.0.center/0.0.1099.527@0.0.1099.527" timestamp="1575513360979" />
+    <state width="1877" height="322" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1575466755747" />
+    <state width="1877" height="158" key="GridCell.Tab.0.left" timestamp="1575513360979">
+      <screen x="0" y="0" width="1099" height="527" />
+    </state>
+    <state width="1877" height="158" key="GridCell.Tab.0.left/0.0.1099.527@0.0.1099.527" timestamp="1575513360979" />
+    <state width="1877" height="322" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1575466755747" />
+    <state width="1877" height="158" key="GridCell.Tab.0.right" timestamp="1575513360979">
+      <screen x="0" y="0" width="1099" height="527" />
+    </state>
+    <state width="1877" height="158" key="GridCell.Tab.0.right/0.0.1099.527@0.0.1099.527" timestamp="1575513360979" />
+    <state width="1877" height="322" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1575466755747" />
+    <state width="1877" height="158" key="GridCell.Tab.1.bottom" timestamp="1575513360979">
+      <screen x="0" y="0" width="1099" height="527" />
+    </state>
+    <state width="1877" height="158" key="GridCell.Tab.1.bottom/0.0.1099.527@0.0.1099.527" timestamp="1575513360979" />
+    <state width="1877" height="158" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1575465629029" />
+    <state width="1877" height="158" key="GridCell.Tab.1.center" timestamp="1575513360979">
+      <screen x="0" y="0" width="1099" height="527" />
+    </state>
+    <state width="1877" height="158" key="GridCell.Tab.1.center/0.0.1099.527@0.0.1099.527" timestamp="1575513360979" />
+    <state width="1877" height="158" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1575465629029" />
+    <state width="1877" height="158" key="GridCell.Tab.1.left" timestamp="1575513360979">
+      <screen x="0" y="0" width="1099" height="527" />
+    </state>
+    <state width="1877" height="158" key="GridCell.Tab.1.left/0.0.1099.527@0.0.1099.527" timestamp="1575513360979" />
+    <state width="1877" height="158" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1575465629029" />
+    <state width="1877" height="158" key="GridCell.Tab.1.right" timestamp="1575513360979">
+      <screen x="0" y="0" width="1099" height="527" />
+    </state>
+    <state width="1877" height="158" key="GridCell.Tab.1.right/0.0.1099.527@0.0.1099.527" timestamp="1575513360979" />
+    <state width="1877" height="158" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1575465629029" />
+    <state x="461" y="161" key="SettingsEditor" timestamp="1575447795494">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="161" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1575447795494" />
+    <state x="427" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1575529176292">
+      <screen x="0" y="0" width="1280" height="640" />
+    </state>
+    <state x="427" y="211" key="com.intellij.ide.util.TipDialog/0.0.1280.640@0.0.1280.640" timestamp="1575529176292" />
+    <state x="640" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1575447657730" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

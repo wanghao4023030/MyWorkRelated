@@ -1,0 +1,1 @@
+robot --include tag demo -d D:\demo -o output -l log -r report -T --timestampoutputs --maxerrorlines NONE -L DEBUG D:\PUMA_AUTO\RF_PUMA\PUMA\demo.robot

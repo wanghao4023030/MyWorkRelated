@@ -1,0 +1,1061 @@
+物理读较多的语句：
+
+SQL 1:
+avg_logical_reads	avg_logical_writes	avg_phys_reads	Execution_count	stmt_start_offset	stmt_end_offset
+165088				0					57801			4857			15716				20310
+-- =============================================
+-- Author:		Sam Shen
+-- Create date: 2018/04/27
+-- Description:	Get exam info for synchronising to ECS
+-- =============================================
+CREATE PROCEDURE  AFP_SP_GetExamsForSyncToECS
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	DECLARE @CanUploadEFilm bit
+	DECLARE @CanUploadEReport bit
+	DECLARE @FilmCompressionRatio tinyint
+	DECLARE @FilmScalingRatio tinyint	
+	DECLARE @RootDirectory nvarchar(260)
+	DECLARE @EFilmFileTypeKey tinyint
+	DECLARE @EReportFileTypeKey tinyint
+	DECLARE @ERawImgFileTypeKey tinyint
+	DECLARE	@MaxRetriesOfUpload tinyint
+	DECLARE @EnableCloudFilm bit
+	DECLARE @DaysOfExamHistory int
+	DECLARE @BeginDate datetime
+
+	SELECT 
+	@EnableCloudFilm = EnableCloudFilm
+	, @CanUploadEFilm = CanUploadEFilm
+	, @CanUploadEReport = CanUploadEReport
+	, @FilmCompressionRatio = FilmCompressionRatio
+	, @FilmScalingRatio = FilmScalingRatio
+	, @RootDirectory = LocalDirectory
+	, @EFilmFileTypeKey = EFilmFileType
+	, @EReportFileTypeKey = EReportFileType
+	, @ERawImgFileTypeKey = ERawImgFileType
+	, @DaysOfExamHistory = DaysOfExamHistory
+	 FROM AFP_CloudFilmConfiguration
+	 
+	 IF ISNULL(@DaysOfExamHistory, 0) = 0
+		SET @BeginDate = NULL
+	ELSE
+		SET @BeginDate = DATEADD(DAY, -@DaysOfExamHistory, GETDATE());
+
+	-- exam that has study but does not have any film or report
+	DECLARE @ExamOnlyForStudy TABLE(
+		[AccessionNumber] [nvarchar](64) NOT NULL,
+		[PatientID] [char](64) NOT NULL,
+		[PatientName] [nvarchar](64),
+		[PatientSex] [nvarchar](16),
+		[ExamName] [nvarchar](256),
+		[ExamDate] [datetime2](0) NOT NULL,
+		[Modalities] [varchar](64) NULL,
+		[BodyPart] [nvarchar](256), 
+		[FilmCount] int, 
+		[ReportCount] int, 
+		[FilmPrintStatus] int,
+		[ReportPrintStatus] int
+	)
+
+	 DECLARE @FilmInfo TABLE (
+		[StudyInstanceUID] [nvarchar](80) NOT NULL, --PRIMARY KEY,
+		[AccessionNumber] [nvarchar](64) NOT NULL,
+		[PrintStatus] [tinyint] NOT NULL,
+		[StatusUpdateTime] [datetime] NULL,
+		[LocalPath] [nvarchar](260) NULL,
+		[FileTypeKey] [tinyint] NOT NULL,
+		[BodyPart] [nvarchar](256) NULL,
+		[Deleted] bit NOT NULL DEFAULT 0,
+		[PrintTime] [datetime] NULL,
+		[SyncToECS] [int] NOT NULL DEFAULT 0
+		--UNIQUE CLUSTERED ([AccessionNumber],[StudyInstanceUID])
+	)
+
+	DECLARE @ReportInfo TABLE (
+		[StudyInstanceUID] [nvarchar](80) NOT NULL, -- PRIMARY KEY,
+		[AccessionNumber] [nvarchar](64) NOT NULL,
+		[PrintStatus] [tinyint] NOT NULL,
+		[StatusUpdateTime] [datetime] NULL,
+		[LocalPath] [nvarchar](260) NULL,
+		[FileTypeKey] [tinyint] NOT NULL,
+		[BodyPart] [nvarchar](256) NULL,
+		[Deleted] bit NOT NULL DEFAULT 0,
+		[PrintTime] [datetime] NULL,
+		[SyncToECS] [int] NOT NULL DEFAULT 0
+		--UNIQUE CLUSTERED ([AccessionNumber],[StudyInstanceUID])
+	)
+
+	DECLARE @ExamAndPatient TABLE(
+		AccessionNumber nvarchar(64) NOT NULL, --PRIMARY KEY,
+		PatientId nvarchar(64) NOT NULL--,
+		--UNIQUE CLUSTERED (AccessionNumber,PatientId)
+		)
+
+	DECLARE @Study TABLE (
+		[SerialNo] [numeric](12,0) not null,
+		[StudyInstanceUID] [char](65) NOT NULL,
+		[StudyDate] [char](8) NULL,
+		[StudyTime] [char](16) NULL,
+		[StudyID] [char](16) NULL,
+		[StudyDescription] [char](64) NULL,
+		[AccessionNo] [varchar](64) NULL,
+		[Modalities] [varchar](64) NULL,
+		[ReferPhysician] [char](64) NULL,
+		[Printed] [char](1) NOT NULL,
+		[Readed] [char](1) NOT NULL,
+		[PatientGUID] [char](64) NOT NULL,
+		[PatientID] [nvarchar](64) NOT NULL,
+		[SeriesCount] [int] NULL,
+		[ImageCount] [int] NULL,
+		[Reserved] [char](1) NULL,
+		[InstanceAvailability] [char](16) NULL,
+		[Hide] [tinyint] NOT NULL,
+		[OperateServerAE] [varchar](32) NULL,
+		[OperateStatus] [int] NOT NULL,
+		[Problemed] [char](1) NOT NULL,
+		[StudyDir] [varchar](128) NOT NULL,
+		[AcqDateTime] [datetime] NOT NULL,
+		[QCStatus] [int] NOT NULL,
+		[Matched] [char](1) NOT NULL,
+		[Send] [char](1) NOT NULL,
+		[AcquireStatus] [char](1) NOT NULL,
+		[ErrStatus] [char](1) NOT NULL,
+		[Reordered] [int] NULL,
+		[DICOMStorageAE] [char](16) NULL,
+		[BackupAE] [char](16) NULL
+	)
+
+
+	DECLARE @Series TABLE(
+		[SerialNo] [numeric](12,0) not null,
+		[SeriesInstanceUID] [char](65) NOT NULL,
+		[SeriesNo] [char](12) NULL,
+		[SeriesDate] [char](8) NULL,
+		[SeriesTime] [char](16) NULL,
+		[SeriesDescription] [varchar](64) NULL,
+		[BodyPart] [char](32) NULL,
+		[PatientPosition] [char](16) NULL,
+		[ViewPosition] [char](16) NULL,
+		[ContrastBolus] [varchar](64) NULL,
+		[Modality] [char](16) NULL,
+		[ReferHospital] [varchar](64) NULL,
+		[StationName] [varchar](64) NULL,
+		[ReferDepartment] [varchar](64) NULL,
+		[StudyInstanceUID] [char](65) NOT NULL,
+		[NetAEName] [char](32) NULL,
+		[ImageCount] [int] NULL,
+		[OperatorName] [char](64) NULL,
+		[ForwardStatus] [char](1) NULL,
+		[Laterality] [varchar](16) NULL,
+		[Grade] [char](1) NOT NULL
+	) 
+
+	DECLARE @Image TABLE (
+		[SerialNo] [numeric](12,0) not null,
+		[SOPInstanceUID] [char](65) NOT NULL,
+		[ImageNo] [char](12) NULL,
+		[ImageDate] [char](8) NULL,
+		[ImageTime] [char](16) NULL,
+		[NumberOfFrames] [int] NULL,
+		[SamplesPerPixel] [int] NULL,
+		[ImageRows] [int] NULL,
+		[ImageColumns] [int] NULL,
+		[BitsAllocated] [int] NULL,
+		[Remarks] [varchar](256) NULL,
+		[SeriesInstanceUID] [char](65) NOT NULL,
+		[ObjectFile] [varchar](256) NOT NULL,
+		[KeyImage] [char](1) NULL,
+		[Annotation] [image] NULL,
+		[ImageType] [varchar](256) NULL,
+		[SliceLocation] [varchar](16) NULL,
+		[SeriesNo] [char](12) NULL,
+		[SeriesDescription] [varchar](64) NULL,
+		[EchoID] [varchar](16) NULL,
+		[AcquisitionNo] [char](12) NULL,
+		[AcquisitionDate] [char](8) NULL,
+		[AcquisitionTime] [char](16) NULL,
+		[PositionerType] [varchar](16) NULL,
+		[ImageLaterality] [varchar](8) NULL,
+		[JP2FileName] [varchar](65) NULL,
+		[FileTypeKey] [tinyint] NOT NULL,
+		[SyncToECS] [int] NOT NULL
+	) 
+
+
+	INSERT INTO @FilmInfo 
+	SELECT TOP 50  F.StudyInstanceUID
+			, E.AccessionNumber
+			, FilmFlag AS PrintStatus
+			, StatusTime AS StatusUpdateTime
+			, dbo.AFP_F_GetFilmPath(F.StudyInstanceUID)
+			, @EFilmFileTypeKey AS FileTypeKey
+			, F.BodyPart
+			, F.DeleteStatus
+			, F.FilmPrintTime AS PrintTime
+			, F.SyncToECS
+	 FROM AFP_ExamInfo (NOLOCK) E
+		INNER JOIN AFP_FilmInfo (NOLOCK) F ON E.AccessionNumber = F.AccessionNumber
+	WHERE (F.SyncToECS = 0 OR F.SyncToECS = 2)-- un-sync
+		  AND (@BeginDate IS NULL OR E.CreatedTime > @BeginDate)
+		  AND @EnableCloudFilm = 1
+		  AND @CanUploadEFilm = 1
+		  AND (  HoldFlag = 0 OR 
+			    (HoldFlag = 1 AND ((FilmReadyTime < GETDATE() OR FilmReadyTime IS NULL) AND PrintMode IN (1,3) OR
+								   (FilmReadyTime < GETDATE() OR FilmReadyTime IS NULL) 
+								   AND (ReportReadyTime < GETDATE() OR ReportReadyTime IS NULL) AND PrintMode = 0
+								  )
+				)
+			  )
+	ORDER BY F.CreatedTime DESC -- NEW RECORDS COME FIREST
+
+	INSERT INTO @ReportInfo
+	SELECT TOP 50 StudyInstanceUID
+		, E.AccessionNumber
+		, PrintStatus
+		, StatusTime AS StatusUpdateTime
+		, [FileName] AS [LocalPath]
+		, @EReportFileTypeKey AS FileTypeKey
+		, R.BodyPart
+		, R.DeleteStatus
+		, PrintTime
+		, R.SyncToECS
+	FROM AFP_ExamInfo (NOLOCK) E
+		INNER JOIN AFP_ReportInfo (NOLOCK) R ON E.AccessionNumber = R.AccessionNumber
+	WHERE (R.SyncToECS = 0 OR R.SyncToECS = 2) -- un-sync
+		  AND (@BeginDate IS NULL OR E.CreatedTime > @BeginDate)
+	      AND @EnableCloudFilm = 1
+		  AND @CanUploadEReport = 1
+		  AND (  HoldFlag = 0 OR 
+			    (HoldFlag = 1 AND ((ReportReadyTime < GETDATE() OR ReportReadyTime IS NULL) AND PrintMode IN (2,3) OR
+								   (FilmReadyTime < GETDATE() OR FilmReadyTime IS NULL) 
+								   AND (ReportReadyTime < GETDATE() OR ReportReadyTime IS NULL) AND PrintMode = 0
+								  )
+				)
+			  )
+		  AND R.ReportStatus = 2 
+	ORDER BY R.CreatedTime DESC -- NEW RECORDS COME FIREST
+
+	;WITH T(SerialNo, StudyInstanceUID, StudyDate, StudyTime, StudyID, StudyDescription, AccessionNo, Modalities
+		, ReferPhysician, Printed, Readed, PatientGUID, PatientID, SeriesCount, ImageCount, Reserved, InstanceAvailability
+		, Hide, OperateServerAE, OperateStatus, Problemed, StudyDir, AcqDateTime, QCStatus, Matched, [Send]
+		, AcquireStatus, ErrStatus, Reordered, DICOMStorageAE, BackupAE, RNUM) AS
+	(SELECT STD.SerialNo, STD.StudyInstanceUID, StudyDate, StudyTime, StudyID, StudyDescription, AccessionNo, Modalities
+		, ReferPhysician, Printed, Readed, PatientGUID, (SELECT PatientID FROM Patient WHERE PatientGUID = STD.PatientGUID)
+		, SeriesCount, STD.ImageCount, Reserved, InstanceAvailability
+		, Hide, OperateServerAE, OperateStatus, Problemed, StudyDir, AcqDateTime, QCStatus, Matched, [Send]
+		, AcquireStatus, ErrStatus, Reordered, DICOMStorageAE, BackupAE
+		, ROW_NUMBER() OVER (PARTITION BY STD.StudyInstanceUID ORDER BY IMG.SerialNo)
+	FROM Study STD 
+		INNER JOIN Series SRS ON STD.StudyInstanceUID = SRS.StudyInstanceUID
+		INNER JOIN [Image] IMG ON SRS.SeriesInstanceUID = IMG.SeriesInstanceUID
+	WHERE ISNULL(STD.AccessionNo, '') <> '' AND AcquireStatus = 1 -- must has accession number 
+		  AND SyncToECS = 0 AND IMG.SeriesDescription <> 'Electronic Film'  AND STD.StudyDate > @BeginDate
+	-- the newest records come first. This can skip records that can not be synced successfully 
+	)
+	INSERT INTO @Study(SerialNo, StudyInstanceUID, StudyDate, StudyTime, StudyID, StudyDescription, AccessionNo, Modalities
+				, ReferPhysician, Printed, Readed, PatientGUID, PatientID, SeriesCount, ImageCount, Reserved, InstanceAvailability
+				, Hide, OperateServerAE, OperateStatus, Problemed, StudyDir, AcqDateTime, QCStatus, Matched, [Send]
+				, AcquireStatus, ErrStatus, Reordered, DICOMStorageAE, BackupAE )
+	SELECT TOP 10 SerialNo, StudyInstanceUID, StudyDate, StudyTime, StudyID, StudyDescription, AccessionNo, Modalities
+		, ReferPhysician, Printed, Readed, PatientGUID, PatientID, SeriesCount, ImageCount, Reserved, InstanceAvailability
+		, Hide, OperateServerAE, OperateStatus, Problemed, StudyDir, AcqDateTime, QCStatus, Matched, [Send]
+		, AcquireStatus, ErrStatus, Reordered, DICOMStorageAE, BackupAE
+	FROM T WHERE RNUM = 1 ORDER BY T.SerialNo DESC
+
+
+	INSERT INTO @Series(SerialNo, SeriesInstanceUID, SeriesNo, SeriesDate, SeriesTime, SeriesDescription, BodyPart
+						, PatientPosition, ViewPosition, ContrastBolus, Modality, ReferHospital, StationName
+						, ReferDepartment, StudyInstanceUID, NetAEName, ImageCount, OperatorName, ForwardStatus
+						, Laterality, Grade)
+	SELECT SerialNo, SeriesInstanceUID, SeriesNo, SeriesDate, SeriesTime, SeriesDescription, BodyPart, PatientPosition
+						, ViewPosition, ContrastBolus, Modality, ReferHospital, StationName, ReferDepartment
+						, StudyInstanceUID, NetAEName, ImageCount, OperatorName, ForwardStatus, Laterality, Grade
+	FROM Series 
+	WHERE StudyInstanceUID IN (SELECT StudyInstanceUID FROM @Study)
+
+	INSERT INTO @Image( SerialNo, SOPInstanceUID, ImageNo, ImageDate, ImageTime, NumberOfFrames, SamplesPerPixel, ImageRows
+						, ImageColumns, BitsAllocated, Remarks, SeriesInstanceUID, ObjectFile, KeyImage, Annotation
+						, ImageType, SliceLocation, SeriesNo, SeriesDescription, EchoID, AcquisitionNo, AcquisitionDate
+						, AcquisitionTime, PositionerType, ImageLaterality, JP2FileName, FileTypeKey, SyncToECS)
+	SELECT IMG.SerialNo, SOPInstanceUID, ImageNo, ImageDate, ImageTime, NumberOfFrames, SamplesPerPixel, ImageRows
+						, ImageColumns, BitsAllocated, Remarks, IMG.SeriesInstanceUID, dbo.AFP_F_GetImagePath(SOPInstanceUID)
+						, KeyImage, Annotation, ImageType, SliceLocation, IMG.SeriesNo, IMG.SeriesDescription, EchoID, AcquisitionNo
+						, AcquisitionDate, AcquisitionTime, PositionerType, ImageLaterality, JP2FileName, @ERawImgFileTypeKey, SyncToECS 
+	FROM  [Image] IMG WHERE SeriesInstanceUID IN (SELECT SeriesInstanceUID FROM @Series)
+	
+
+	INSERT INTO @ExamAndPatient
+	SELECT AccessionNumber, PatientID
+      FROM AFP_ExamInfo (NOLOCK) 
+	  WHERE  AccessionNumber IN 
+		(SELECT AccessionNumber FROM @FilmInfo 
+			UNION SELECT AccessionNumber FROM @ReportInfo)
+
+	INSERT INTO @ExamOnlyForStudy(AccessionNumber, Modalities, PatientID, ExamDate, BodyPart, ExamName, ReportCount, FilmCount
+								  , ReportPrintStatus, FilmPrintStatus, PatientName, PatientSex)
+	SELECT STD.AccessionNo, CASE WHEN E.AccessionNumber IS NULL THEN STD.Modalities ELSE E.Modalities END, 
+			CASE WHEN E.AccessionNumber IS NULL THEN (SELECT PatientID FROM Patient WHERE PatientGUID = STD.PatientGUID)
+				ELSE E.PatientID END,
+			CASE WHEN E.AccessionNumber IS NULL THEN 
+					CONVERT(DATETIME, StudyDate) + ' ' +
+					CASE WHEN ISNULL(StudyTime, '') = '' THEN null
+					WHEN DATALENGTH(CONVERT(varchar(6),StudyTime)) = 1 THEN '00:00:0' + CONVERT(varchar(1),StudyTime)
+					WHEN DATALENGTH(CONVERT(varchar(6),StudyTime)) = 2 THEN '00:00:' + CONVERT(varchar(2),StudyTime)
+					WHEN DATALENGTH(CONVERT(varchar(6),StudyTime)) = 3 THEN '00:0' + STUFF(CONVERT(varchar(8),StudyTime),2,0,':')
+					WHEN DATALENGTH(CONVERT(varchar(6),StudyTime)) = 4 THEN '00:' + STUFF(CONVERT(varchar(8),StudyTime),3,0,':')                    
+					WHEN DATALENGTH(CONVERT(varchar(6),StudyTime)) = 5 THEN '0' + STUFF(STUFF(CONVERT(varchar(8),StudyTime),4,0,':'),2,0,':')
+					ELSE STUFF(STUFF(CONVERT(varchar(8),StudyTime),5,0,':'),3,0,':') END 
+				ELSE E.CreatedTime END,
+			CASE WHEN E.AccessionNumber IS NULL THEN NULL ELSE E.BodyPart END,
+			CASE WHEN E.AccessionNumber IS NULL THEN NULL ELSE E.ExamName END,
+			CASE WHEN E.AccessionNumber IS NULL THEN 0 ELSE E.ReportCount END,
+			CASE WHEN E.AccessionNumber IS NULL THEN 0 ELSE E.ImageCount END,
+			CASE WHEN E.AccessionNumber IS NULL THEN NULL ELSE E.ReportPrintStatus END,
+			CASE WHEN E.AccessionNumber IS NULL THEN NULL ELSE E.FilmPrintStatus END,
+			CASE WHEN E.AccessionNumber IS NULL THEN NULL ELSE E.PatientName END,
+			CASE WHEN E.AccessionNumber IS NULL THEN NULL ELSE E.PatientSex END
+		FROM @Study STD LEFT JOIN AFP_ExamInfo E ON STD.AccessionNo = E.AccessionNumber 
+		WHERE ISNULL(STD.AccessionNo, '') <> '' 
+			AND STD.AccessionNo NOT IN (SELECT AccessionNumber FROM @ExamAndPatient) -- Exams only from study 
+
+	-- exam table 0
+	SELECT	AccessionNumber, Modalities, ExamName, BodyPart, CreatedTime AS ExamDate, PatientID
+			, ImageCount AS FilmCount, ReportCount, FilmPrintStatus, ReportPrintStatus
+		FROM  AFP_ExamInfo (NOLOCK)
+		WHERE AccessionNumber IN (SELECT AccessionNumber FROM @ExamAndPatient)
+	UNION ALL
+	SELECT E.AccessionNumber,E.Modalities,E.ExamName, E.BodyPart, E.ExamDate, E.PatientID
+			, E.FilmCount, E.ReportCount, E.FilmPrintStatus, E.ReportPrintStatus
+		FROM @ExamOnlyForStudy E
+
+	-- patient table 1
+	DECLARE @Patient TABLE(
+		PatientID nvarchar(64),
+		PatientName nvarchar(64),
+		PatientSex nvarchar(16)
+	)
+	INSERT INTO @Patient
+	SELECT DISTINCT PatientID, PatientName, PatientSex 
+		FROM AFP_ExamInfo (NOLOCK) 
+		WHERE AccessionNumber IN (SELECT AccessionNumber FROM @ExamAndPatient)
+	UNION ALL
+	SELECT PatientID, PatientName, PatientSex FROM @ExamOnlyForStudy
+
+	SELECT PatientGUID 
+	    , CASE WHEN ISNULL(P.PatientID, '') = '' THEN T.PatientID ELSE P.PatientID END AS PatientID
+		, CASE WHEN ISNULL(P.PatientName, '') = '' THEN T.PatientName ELSE P.PatientName END AS PatientName
+		, P.PatientAge AS PatientAge
+		, CASE ISNULL(P.PatientSex , '')
+			WHEN '男' THEN 1
+			WHEN '女' THEN 2
+			WHEN 'M' THEN 1
+			WHEN 'F' THEN 2
+			WHEN 'Male' THEN 1
+			WHEN 'Female' THEN 2
+			WHEN '' THEN (
+			 CASE ISNULL(T.PatientSex , '')
+				WHEN '男' THEN 1
+				WHEN '女' THEN 2
+				WHEN 'M' THEN 1
+				WHEN 'F' THEN 2
+				WHEN 'Male' THEN 1
+				WHEN 'Female' THEN 2
+				ELSE 0
+			END
+			 )
+			ELSE 0
+			END AS PatientSex
+		, Birthday
+		, Phone
+		, IdCard
+		, MedicalCard
+		, HomeAddress
+		, SocialSecurityCard
+	FROM @Patient T
+		LEFT JOIN  Patient P
+		  ON P.PatientID = T.PatientID
+
+	-- films table 2
+	SELECT * FROM @FilmInfo
+
+	-- reports table 3
+	SELECT * FROM @ReportInfo
+
+	SELECT * FROM @Study
+
+	SELECT * FROM @Series
+
+	SELECT * FROM @Image
+
+END
+
+SQL2: 
+avg_logical_reads	avg_logical_writes	avg_phys_reads	Execution_count	stmt_start_offset	stmt_end_offset
+68496				0					0				48437			734					1076
+
+-- =============================================
+-- Author:		Song Ynag
+-- Create date: 2017/11/1
+-- Description:	Get the first outdated job
+-- =============================================
+CREATE PROCEDURE [dbo].[AFP_SP_GetFirstOutdatedJob]  
+AS
+BEGIN
+	DECLARE @Outdate INT
+	SET @Outdate = [WGGC].[dbo].AFP_F_GetParameterInt('Outdated_RawImage_Hours')
+	SELECT TOP 100 JobInstanceUID FROM dbo.DeliveryJob WHERE DATEDIFF(HOUR,DeliveryJob.CreateDateTime,GETDATE())> @Outdate  
+	AND (DeleteStatus = 0 AND JobStatus IN (2, 11))
+END
+
+1. JobInstanceUID 不是索引列，需要修改
+2. 不要在过滤条件中，使用函数，会有丢失索引的风险。
+3. 99%花费在键值查找中
+
+
+SQL3:
+avg_logical_reads	avg_logical_writes	avg_phys_reads	Execution_count	stmt_start_offset	stmt_end_offset
+68407				0					0				201262			168					1304
+
+CREATE PROCEDURE [dbo].[AFP_SP_GetForwardJobs] 
+
+AS
+BEGIN
+
+	SET NOCOUNT ON;
+
+SELECT JobInstanceUID, ForwardStatus = CASE WHEN ForwardStatus IS NULL THEN -1 ELSE ForwardStatus END,
+ForwardFlag = CASE WHEN ForwardFlag IS NULL THEN -1 ELSE ForwardFlag END,ForwardDestination,ModalityType, CallingAE ,CallingIP,PatientName,PatientID,
+PatientType = CASE WHEN PatientType IS NULL THEN '' ELSE PatientType END
+FROM Printer.dbo.DeliveryJob J INNER JOIN printer.dbo.Session S
+ON J.SessionInstanceUID = S.SessionInstanceUID
+WHERE J.DeleteStatus = 0 AND (
+(ForwardStatus = -1 OR ForwardStatus IS NULL ) OR
+(ForwardStatus = 0 AND ForwardFlag = 1)
+)
+END
+1. 98%资源用在键值查找。
+
+avg_logical_reads	avg_logical_writes	avg_phys_reads	Execution_count	stmt_start_offset	stmt_end_offset
+62975				0					26816			7				54					-1
+SQl4:
+(@TotalItemsOut int OUTPUT)SELECT @TotalItemsOut = COUNT(1) FROM AFP_ExamInfo where  (DeleteStatus is null or DeleteStatus<>1)
+
+1. 新建一个deleteStatus的字段索引
+2. 建议默认值从NUll 改为 0。
+3. 索引值使用过滤索引，只记录值为0的值。
+
+
+SQL5：
+avg_logical_reads	avg_logical_writes	avg_phys_reads	Execution_count	stmt_start_offset	stmt_end_offset
+62481				0					0				265564			0					-1
+SELECT * FROM AFP_MessageQueue ORDER BY PublishDate
+avg_logical_reads	avg_logical_writes	avg_phys_reads	Execution_count	stmt_start_offset	stmt_end_offset
+62481				0					0				5564			36					-1
+(@1 varchar(8000))DELETE [AFP_MessageQueue]  WHERE [SN]=@1
+
+1. 该表是个堆表，没有主键和索引。建议改成常规表。
+
+SQL6：
+avg_logical_reads	avg_logical_writes	avg_phys_reads	Execution_count	stmt_start_offset	stmt_end_offset
+61223				0					3				2797			4198				6774
+
+
+-- =============================================
+-- Author:		William	
+-- Create date: 20131120
+-- Description:	Add initial print items when receiving image
+-- Revisor:		William Xu 20130521 
+--				sync report print status when inserting film information
+--				Record patient name, ID 
+-- =============================================
+CREATE TRIGGER [dbo].[AFP_Trigger_FilmInfo] 
+   ON  [dbo].[Study] 
+   AFTER insert
+AS 
+BEGIN
+	SET NOCOUNT ON;
+
+    DECLARE @PatientID nvarchar(64)
+    DECLARE @PatientName nvarchar(64)
+    DECLARE @SIUID nvarchar(80)
+    DECLARE @AccNO nvarchar(64)	
+    DECLARE @ReportLevel int = 0 
+    DECLARE @PatientSex NVARCHAR(16)
+    DECLARE @StudyDate char(8)
+    DECLARE @StudyTime char(16)
+    DECLARE @ImageCount int
+	DECLARE @Modalities [varchar](64)
+	DECLARE @FilmSizeID VARCHAR(16)
+	DECLARE @PatientType nvarchar(50)
+	DECLARE @FilmOrientation [varchar](16)
+    DECLARE @MediumType [varchar](16)
+    DECLARE	@CallingAE varchar(16)
+    DECLARE @CallingIP varchar(20) 
+	DECLARE @ExamName nvarchar(256)
+    
+    DECLARE @BorderDensity varchar(16)
+    DECLARE @EmptyImageDensity varchar(16)
+    DECLARE @MinDensity int
+    DECLARE @MaxDensity int
+    DECLARE @Trim varchar(16)
+    DECLARE @ConfigurationInformation  varchar(1024)
+    DECLARE @MagnificationType  varchar(16)
+    DECLARE @SmoothingType  varchar(16)
+    DECLARE @FilmDestination  varchar(16)
+    DECLARE @FilmSessionLabel  varchar(64)
+    DECLARE @PrintPriority   varchar(16)
+    DECLARE @PhotoMetric varchar(16)
+    DECLARE @NumberOfCopy int
+	DECLARE @PrintStatus int
+	DECLARE @PrintCount int
+    DECLARE @DepartmentID int
+    
+    SET @MagnificationType = ''
+    SET @SmoothingType = ''
+    
+	-- Get general info 
+	SELECT	@AccNO = AccessionNo,
+			@SIUID = StudyInstanceUID,
+			@StudyDate=StudyDate, 
+			@StudyTime=StudyTime, 
+			@ImageCount=ImageCount
+		FROM inserted
+		
+    -- Get additional Info from DeliveryJob		
+    IF EXISTS(SELECT StudyInstanceUID FROM [Printer].[dbo].[DeliveryJob] D WHERE D.StudyInstanceUID = @SIUID)
+    BEGIN
+		SELECT	TOP 1
+				@FilmSizeID		= P.FilmSizeID,
+				@PatientName	= D.PatientName,
+				@PatientID		= D.PatientID, 
+				@PatientSex		= D.Gender, 
+				@Modalities		= D.ModalityType,
+				@ExamName       = D.ExamName,
+				@PatientType	= D.PatientType,
+				@FilmOrientation= P.FilmOrientation,
+				@MediumType     = D.MediumType,
+				@CallingAE		= S.CallingAE,
+				@CallingIP      = S.CallingIP,
+				@BorderDensity  = P.BorderDensity,
+				@EmptyImageDensity= P.EmptyImageDensity,
+				@MinDensity		= P.MinDensity,
+				@MaxDensity     = P.MaxDensity,
+				@Trim			= P.Trim,
+				@ConfigurationInformation = P.ConfigurationInformation,
+				@FilmDestination= D.FilmDestination,
+				@FilmSessionLabel=D.FilmSessionLabel,
+				@PrintPriority  = D.PrintPriority,
+				@NumberOfCopy	= D.NumberOfCopy,
+				@PrintStatus    = D.PrintStatus,
+                @DepartmentID   = D.DepartmentID,
+                @PhotoMetric    = I.PhotometricInterpretation
+			FROM [Printer].[dbo].[DeliveryJob]	D
+			LEFT JOIN [Printer].[dbo].[Page]	P ON D.JobInstanceUID  = P.JobInstanceUID
+			LEFT JOIN [Printer].[dbo].[Session] S ON D.SessionInstanceUID = S.SessionInstanceUID
+			LEFT JOIN [Printer].[dbo].[ImageBox] I ON I.PageInstanceUID = P.PageInstanceUID
+			WHERE D.StudyInstanceUID  = @SIUID	
+	END
+	ELSE
+	BEGIN
+		SELECT	@FilmSizeID		= '',
+				@PatientName	= P.PatientName,
+				@PatientID		= P.PatientID, 
+				@PatientSex		= P.PatientSex, 
+				@Modalities		= S.Modalities,
+				@ExamName       = '',
+				@PatientType	= '',
+				@FilmOrientation= '',
+				@MediumType     = '',
+				@CallingAE		= '',
+				@CallingIP      = '',
+				@BorderDensity  = '',
+				@EmptyImageDensity= '',
+				@MinDensity		= NULL,
+				@MaxDensity     = NULL,
+				@Trim			= '',
+				@ConfigurationInformation = '',
+				@FilmDestination= '',
+				@FilmSessionLabel='',
+				@PrintPriority  = '',
+				@NumberOfCopy	= 1,
+				@PrintStatus    = 0,
+                @DepartmentID   = 1
+		FROM [WGGC].[dbo].[Study] S
+		LEFT JOIN [WGGC].[dbo].[Patient] P ON S.PatientGUID = P.PatientGUID
+		WHERE S.StudyInstanceUID  = @SIUID	
+	END
+		
+	IF @PrintStatus IS NULL
+		SELECT @PrintStatus=0
+		
+	SET @PrintCount = 0
+	IF (@PrintStatus = 1)
+		SET @PrintCount = 1
+	
+	IF NOT EXISTS(SELECT AccessionNumber FROM AFP_FilmInfo WHERE AFP_FilmInfo.StudyInstanceUID=@SIUID)
+	BEGIN
+		INSERT INTO AFP_FilmInfo(StudyInstanceUID,FilmFlag,AccessionNumber,PatientID,PatientName,PatientSex,StudyDate,StudyTime,Modalities,ImageCount,FilmSizeID,PatientType,FilmOrientation,MediumType,CallingAE,CallingIP,
+		    BorderDensity,EmptyImageDensity,MinDensity,MaxDensity,Trim,Configuration,MagnificationType,SmoothingType,FilmDestination,FilmSessionLabel,Priority,Copies,PrintCount, PhotoMetric, ExamName, DepartmentID) 
+		VALUES( @SIUID,@PrintStatus,@AccNo,@PatientID,@PatientName,@PatientSex,@StudyDate,@StudyTime,@Modalities,@ImageCount,@FilmSizeID,@PatientType,@FilmOrientation,@MediumType,@CallingAE,@CallingIP,@BorderDensity,
+            @EmptyImageDensity,@MinDensity,@MaxDensity,@Trim,@ConfigurationInformation,@MagnificationType,@SmoothingType,@FilmDestination,@FilmSessionLabel,@PrintPriority,@NumberOfCopy,@PrintCount,@PhotoMetric, @ExamName, @DepartmentID)
+	END	
+			
+END
+1. 有键值查找。
+2. 建议增加JobInstanceUID，PageInstanceUID为索引值。
+
+
+SQL7:
+avg_logical_reads	avg_logical_writes	avg_phys_reads	Execution_count	stmt_start_offset	stmt_end_offset
+18943				0					5				6684			4608				4814
+
+-- =============================================
+-- Author:		Song Yang
+-- Create date: 2015-08-15
+-- Description:	Create or update an exam information in table vi_KIOSK_ExamInfo_Order
+-- =============================================
+CREATE PROCEDURE AFP_SP_CreateExamInfo
+	-- Add the parameters for the stored procedure here
+	@StudyUID nvarchar(128),
+	@AccNo nvarchar(128), 
+	@PatientID nvarchar(128),
+	@NameCN nvarchar(128),
+	@NameEN nvarchar(128),
+	@Gender nvarchar(32),
+	@Birthday nvarchar(32),
+	@Modality nvarchar(32),
+	@ModalityName nvarchar(128),
+	@PatientType nvarchar(32),
+	@VisitID nvarchar(32),
+	@RequestID nvarchar(128),
+	@RequestDepartment nvarchar(128),
+	@RequestDT nvarchar(32),
+	@RegisterDT nvarchar(32),
+	@ExamDT nvarchar(32),
+	@ReportDT nvarchar(32),
+	@SubmitDT nvarchar(32),
+	@ApproveDT nvarchar(32),
+	@ReportURL nvarchar(256),
+	@StudyStatus nvarchar(32),
+	@OutHospitalNo nvarchar(128),
+	@InHospitalNo nvarchar(128),
+	@PhysicalNumber nvarchar(128),
+	@ExamName nvarchar(256),
+	@ExamBodyPart nvarchar(256),
+	@Optional0 nvarchar(256) = '',
+	@Optional1 nvarchar(256) = '',
+	@Optional2 nvarchar(256) = '',
+	@Optional3 nvarchar(256) = '',
+	@Optional4 nvarchar(256) = '',
+	@Optional5 nvarchar(256) = '',
+	@Optional6 nvarchar(256) = '',
+	@Optional7 nvarchar(256) = '',
+	@Optional8 nvarchar(256) = '',
+	@Optional9 nvarchar(256) = ''
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+    DECLARE @MapPatientType nvarchar(50)
+    DECLARE @MapPatientKey nvarchar(50)
+
+    IF (LEN(ISNULL(@PatientType,''))=0)
+    BEGIN
+    	SET @PatientType='2'
+    	IF (LEN(ISNULL(@PhysicalNumber,'')) > 0)
+    	BEGIN
+    		SET @PatientType='4'
+    	END
+    	ELSE IF (LEN(ISNULL(@InHospitalNo, '')) > 0)
+    	BEGIN
+    		SET @PatientType='1'
+    	END
+    	ELSE IF (LEN(ISNULL(@OutHospitalNo, '')) > 0)
+    	BEGIN
+    		SET @PatientType='2'
+    	END
+    END
+
+    EXEC AFP_SP_MapPatientType @PatientType, @MapPatientKey output, @MapPatientType output
+
+    IF (LEN(ISNULL(@ExamDT, '')) = 0)
+    BEGIN
+    	SET @ExamDT = CONVERT(nvarchar(32), GETDATE(), 120)
+    END
+
+    IF (LEN(ISNULL(@StudyUID, '')) > 0)
+    BEGIN
+		IF EXISTS(SELECT StudyInstanceUID FROM dbo.vi_KIOSK_ExamInfo_Order WHERE StudyInstanceUID=@StudyUID)
+		BEGIN
+			UPDATE dbo.vi_KIOSK_ExamInfo_Order 
+			SET 
+				UpdateDT=GETDATE(),
+				PatientID=@PatientID,
+				AccessionNumber=@AccNo,
+				NameCN=@NameCN,
+				NameEN=@NameEN,
+				Gender=@Gender,
+				Birthday=@Birthday,
+				Modality=@Modality,
+				ModalityName=@ModalityName,
+				PatientType=@MapPatientType,
+				VisitID=@VisitID,
+				RequestID=@RequestID,
+				RequestDepartment=@RequestDepartment,
+				RequestDT=@RequestDT,
+				RegisterDT=@RegisterDT,
+				ExamDT=@ExamDT,
+				ReportDT=@ReportDT,
+				SubmitDT=@SubmitDT,
+				ApproveDT=@ApproveDT,
+				PDFReportURL=@ReportURL,
+				StudyStatus=@StudyStatus,
+				OutHospitalNo=@OutHospitalNo,
+				InHospitalNo=@InHospitalNo,
+				PhysicalNumber=@PhysicalNumber,
+				ExamName=@ExamName,
+				ExamBodyPart=@ExamBodyPart,
+				Optional0=@Optional0,
+				Optional1=@Optional1,
+				Optional2=@Optional2,
+				Optional3=@Optional3,
+				Optional4=@Optional4,
+				Optional5=@Optional5,
+				Optional6=@Optional6,
+				Optional7=@Optional7,
+				Optional8=@Optional8,
+				Optional9=@Optional9
+			WHERE StudyInstanceUID=@StudyUID
+		END
+		ELSE
+		BEGIN
+			INSERT INTO dbo.vi_KIOSK_ExamInfo_Order (CreateDT,UpdateDT,StudyInstanceUID,PatientID,AccessionNumber,NameCN,NameEN,Gender,Birthday,Modality,ModalityName,
+				PatientType,VisitID,RequestID,RequestDepartment,RequestDT,RegisterDT,ExamDT,ReportDT,SubmitDT,ApproveDT,PDFReportURL,StudyStatus,OutHospitalNo,InHospitalNo,PhysicalNumber,ExamName,ExamBodyPart,
+				Optional0,Optional1,Optional2,Optional3,Optional4,Optional5,Optional6,Optional7,Optional8,Optional9) 
+			VALUES (GETDATE(),GETDATE(),@StudyUID,@PatientID,@AccNo,@NameCN,@NameEN,@Gender,@Birthday,@Modality,@ModalityName,
+				@MapPatientType,@VisitID,@RequestID,@RequestDepartment,@RequestDT,@RegisterDT,@ExamDT,@ReportDT,@SubmitDT,@ApproveDT,@ReportURL,@StudyStatus,@OutHospitalNo,@InHospitalNo,@PhysicalNumber,@ExamName,@ExamBodyPart,
+				@Optional0,@Optional1,@Optional2,@Optional3,@Optional4,@Optional5,@Optional6,@Optional7,@Optional8,@Optional9)
+		END
+    END
+    ELSE
+    BEGIN
+	    INSERT INTO dbo.vi_KIOSK_ExamInfo_Order (CreateDT,UpdateDT,StudyInstanceUID,PatientID,AccessionNumber,NameCN,NameEN,Gender,Birthday,Modality,ModalityName,
+	    	PatientType,VisitID,RequestID,RequestDepartment,RequestDT,RegisterDT,ExamDT,ReportDT,SubmitDT,ApproveDT,PDFReportURL,StudyStatus,OutHospitalNo,InHospitalNo,PhysicalNumber,ExamName,ExamBodyPart,
+	    	Optional0,Optional1,Optional2,Optional3,Optional4,Optional5,Optional6,Optional7,Optional8,Optional9) 
+	    VALUES (GETDATE(),GETDATE(),@StudyUID,@PatientID,@AccNo,@NameCN,@NameEN,@Gender,@Birthday,@Modality,@ModalityName,
+	    	@MapPatientType,@VisitID,@RequestID,@RequestDepartment,@RequestDT,@RegisterDT,@ExamDT,@ReportDT,@SubmitDT,@ApproveDT,@ReportURL,@StudyStatus,@OutHospitalNo,@InHospitalNo,@PhysicalNumber,@ExamName,@ExamBodyPart,
+	    	@Optional0,@Optional1,@Optional2,@Optional3,@Optional4,@Optional5,@Optional6,@Optional7,@Optional8,@Optional9)
+	END
+END
+
+
+SQL8:
+avg_logical_reads	avg_logical_writes	avg_phys_reads	Execution_count	stmt_start_offset	stmt_end_offset
+2353				0					0				5606			3974				15894
+(@pPatientID as nvarchar (128),
+								@pAccessionNumber as nvarchar (128),
+								@pStudyInstanceUID as nvarchar (128),
+								@pNameCN as nvarchar (128),
+								@pNameEN as nvarchar (128),
+								@pGender as nvarchar (32),
+								@pBirthday as nvarchar (32),
+								@pModality as nvarchar (32),
+								@pModalityName as nvarchar (128),
+								@pPatientType as nvarchar (32),
+								@pVisitID as nvarchar (32),
+								@pRequestID as nvarchar (128),
+								@pRequestDepartment as nvarchar (128),
+								@pRequestDT as nvarchar (32),
+								@pRegisterDT as nvarchar (32),
+								@pExamDT as nvarchar (32),
+								@pSubmitDT as nvarchar (32),
+								@pApproveDT as nvarchar (32),
+								@pPDFReportURL as nvarchar (256),
+								@pStudyStatus as nvarchar (32),
+								@pReportStatus as int,
+								@pPDFFlag as int,
+								@pVerifyFilmFlag as int,
+								@pVerifyReportFlag as int,
+								@pFilmStoredFlag as int,
+								@pReportStoredFlag as int,
+								@pNotifyReportFlag as int,
+								@pSetPrintModeFlag as int,
+								@pFilmPrintFlag as int,
+								@pFilmPrintDoctor as nvarchar (128),
+								@pReportPrintFlag as int,
+								@pReportPrintDoctor as nvarchar (128),
+								@pOutHospitalNo as nvarchar(128),
+								@pInHospitalNo as nvarchar(128),
+								@pPhysicalNumber as nvarchar(128),
+								@pExamName as nvarchar(256),
+								@pExamBodyPart as nvarchar(256),
+								@pOptional0 as nvarchar (256),
+								@pOptional1 as nvarchar (256),
+								@pOptional2 as nvarchar (256),
+								@pOptional3 as nvarchar (256),
+								@pOptional4 as nvarchar (256),
+								@pOptional5 as nvarchar (256),
+								@pOptional6 as nvarchar (256),
+								@pOptional7 as nvarchar (256),
+								@pOptional8 as nvarchar (256),
+								@pOptional9 as nvarchar (256),
+								@pCurrentDT as datetime)IF EXISTS(SELECT ID FROM [dbo].[T_Integration_ExamInfo] WHERE [AccessionNumber]=@pAccessionNumber)
+				BEGIN
+					UPDATE [dbo].[T_Integration_ExamInfo]
+						SET [UpdateDT] = @pCurrentDT
+						,[PatientID] = (CASE WHEN @pPatientID='' THEN [PatientID] ELSE @pPatientID END)
+						,[AccessionNumber] = (CASE WHEN @pAccessionNumber='' THEN [AccessionNumber] ELSE @pAccessionNumber END)
+						,[StudyInstanceUID] = (CASE WHEN @pStudyInstanceUID='' THEN [StudyInstanceUID] ELSE @pStudyInstanceUID END)
+						,[NameCN] = (CASE WHEN @pNameCN='' THEN [NameCN] ELSE @pNameCN END)
+						,[NameEN] = (CASE WHEN @pNameEN='' THEN [NameEN] ELSE @pNameEN END)
+						,[Gender] = (CASE WHEN @pGender='' THEN [Gender] ELSE @pGender END)
+						,[Birthday] = (CASE WHEN @pBirthday='' THEN [Birthday] ELSE @pBirthday END)
+						,[Modality] = (CASE WHEN @pModality='' THEN [Modality] ELSE @pModality END)
+						,[ModalityName] = (CASE WHEN @pModalityName='' THEN [ModalityName] ELSE @pModalityName END)
+						,[PatientType] = (CASE WHEN @pPatientType='' THEN [PatientType] ELSE @pPatientType END)
+						,[VisitID] = (CASE WHEN @pVisitID='' THEN [VisitID] ELSE @pVisitID END)
+						,[RequestID] = (CASE WHEN @pRequestID='' THEN [RequestID] ELSE @pRequestID END)
+						,[RequestDepartment] = (CASE WHEN @pRequestDepartment='' THEN [RequestDepartment] ELSE @pRequestDepartment END)
+						,[RequestDT] = (CASE WHEN @pRequestDT='' THEN [RequestDT] ELSE @pRequestDT END)
+						,[RegisterDT] = (CASE WHEN @pRegisterDT='' THEN [RegisterDT] ELSE @pRegisterDT END)
+						,[ExamDT] = (CASE WHEN @pExamDT='' THEN [ExamDT] ELSE @pExamDT END)
+						,[SubmitDT] = (CASE WHEN @pSubmitDT='' THEN [SubmitDT] ELSE @pSubmitDT END)
+						,[ApproveDT] = (CASE WHEN @pApproveDT='' THEN [ApproveDT] ELSE @pApproveDT END)
+						,[PDFReportURL] = (CASE WHEN @pPDFReportURL='' THEN [PDFReportURL] ELSE @pPDFReportURL END)
+						,[StudyStatus] = (CASE WHEN @pStudyStatus='' THEN [StudyStatus] ELSE @pStudyStatus END)
+						,[ReportStatus] = (CASE WHEN @pReportStatus=-10 THEN [ReportStatus] ELSE @pReportStatus END)
+						,[PDFFlag] = (CASE WHEN @pPDFFlag=-10 THEN [PDFFlag] ELSE @pPDFFlag END)
+						,[PDFDT] = (CASE WHEN @pPDFFlag=-10 THEN [PDFDT] ELSE @pCurrentDT END)
+						,[VerifyFilmFlag] = (CASE WHEN @pVerifyFilmFlag=-10 THEN [VerifyFilmFlag] ELSE @pVerifyFilmFlag END)
+						,[VerifyFilmDT] = (CASE WHEN @pVerifyFilmFlag=-10 THEN [VerifyFilmDT] ELSE @pCurrentDT END)
+						,[VerifyReportFlag] = (CASE WHEN @pVerifyReportFlag=-10 THEN [VerifyReportFlag] ELSE @pVerifyReportFlag END)
+						,[VerifyReportDT] = (CASE WHEN @pVerifyReportFlag='' THEN [VerifyReportDT] ELSE @pCurrentDT END)
+						,[FilmStoredFlag] = (CASE WHEN @pFilmStoredFlag=-10 THEN [FilmStoredFlag] WHEN @pFilmStoredFlag=-8 THEN -10 ELSE @pFilmStoredFlag END)
+						,[FilmStoredDT] = (CASE WHEN @pFilmStoredFlag=-10 THEN [FilmStoredDT] ELSE @pCurrentDT END)
+						,[ReportStoredFlag] = (CASE WHEN @pReportStoredFlag=-10 THEN [ReportStoredFlag] WHEN @pReportStoredFlag=-8 THEN -10 ELSE @pReportStoredFlag END)
+						,[ReportStoredDT] = (CASE WHEN @pReportStoredFlag=-10 THEN [ReportStoredDT] ELSE @pCurrentDT END)
+						,[NotifyReportFlag] = (CASE WHEN @pNotifyReportFlag=-10 THEN [NotifyReportFlag] ELSE @pNotifyReportFlag END)
+						,[NotifyReportDT] = (CASE WHEN @pNotifyReportFlag=-10 THEN [NotifyReportDT] ELSE @pCurrentDT END)
+						,[SetPrintModeFlag] = (CASE WHEN @pSetPrintModeFlag=-10 THEN [SetPrintModeFlag] ELSE @pSetPrintModeFlag END)
+						,[SetPrintModeDT] = (CASE WHEN @pSetPrintModeFlag=-10 THEN [SetPrintModeDT] ELSE @pCurrentDT END)
+						,[FilmPrintFlag] = (CASE WHEN @pFilmStoredFlag=9 AND [FilmPrintFlag]<>3 THEN 0 WHEN @pFilmPrintFlag= -10 THEN [FilmPrintFlag] ELSE @pFilmPrintFlag END)
+						,[FilmPrintDoctor] = (CASE WHEN @pFilmStoredFlag=9 AND [FilmPrintFlag]<>3 THEN @pFilmPrintDoctor WHEN @pFilmPrintFlag= -10 THEN [FilmPrintDoctor] ELSE @pFilmPrintDoctor END)
+						,[FilmPrintDT] = (CASE WHEN @pFilmStoredFlag=9 AND [FilmPrintFlag]<>3 THEN @pCurrentDT WHEN @pFilmPrintFlag= -10 THEN [FilmPrintDT] ELSE @pCurrentDT END)
+						,[ReportPrintFlag] = (CASE WHEN @pReportStoredFlag=9 AND [ReportPrintFlag]<>3 THEN 0 WHEN @pReportPrintFlag= -10 THEN [ReportPrintFlag] ELSE @pReportPrintFlag END)
+						,[ReportPrintDoctor] = (CASE WHEN @pReportStoredFlag=9 AND [ReportPrintFlag]<>3 THEN @pReportPrintDoctor WHEN @pReportPrintFlag= -10 THEN [ReportPrintDoctor] ELSE @pReportPrintDoctor END)
+						,[ReportPrintDT] = (CASE WHEN @pReportStoredFlag=9 AND [ReportPrintFlag]<>3 THEN @pCurrentDT WHEN @pReportPrintFlag= -10 THEN [ReportPrintDT] ELSE @pCurrentDT END)
+						,[OutHospitalNo] = (CASE WHEN @pOutHospitalNo = '' THEN [OutHospitalNo] ELSE @pOutHospitalNo END)
+						,[InHospitalNo] = (CASE WHEN @pInHospitalNo = '' THEN [InHospitalNo] ELSE @pInHospitalNo END)
+						,[PhysicalNumber] = (CASE WHEN @pPhysicalNumber = '' THEN [PhysicalNumber] ELSE @pPhysicalNumber END)
+						,[ExamName] = (CASE WHEN @pExamName = '' THEN [ExamName] ELSE @pExamName END)
+						,[ExamBodyPart] = (CASE WHEN @pExamBodyPart = '' THEN [ExamBodyPart] ELSE @pExamBodyPart END)
+						,[Optional0] = (CASE WHEN @pOptional0='' THEN [Optional0] ELSE @pOptional0 END)
+						,[Optional1] = (CASE WHEN @pOptional1='' THEN [Optional1] ELSE @pOptional1 END)
+						,[Optional2] = (CASE WHEN @pOptional2='' THEN [Optional2] ELSE @pOptional2 END)
+						,[Optional3] = (CASE WHEN @pOptional3='' THEN [Optional3] ELSE @pOptional3 END)
+						,[Optional4] = (CASE WHEN @pOptional4='' THEN [Optional4] ELSE @pOptional4 END)
+						,[Optional5] = (CASE WHEN @pOptional5='' THEN [Optional5] ELSE @pOptional5 END)
+						,[Optional6] = (CASE WHEN @pOptional6='' THEN [Optional6] ELSE @pOptional6 END)
+						,[Optional7] = (CASE WHEN @pOptional7='' THEN [Optional7] ELSE @pOptional7 END)
+						,[Optional8] = (CASE WHEN @pOptional8='' THEN [Optional8] ELSE @pOptional8 END)
+						,[Optional9] = (CASE WHEN @pOptional9='' THEN [Optional9] ELSE @pOptional9 END)
+					WHERE [AccessionNumber]=@pAccessionNumber
+				END
+				ELSE
+				BEGIN
+					INSERT INTO [dbo].[T_Integration_ExamInfo]
+						([CreateDT]
+						,[UpdateDT]
+						,[PatientID]
+						,[AccessionNumber]
+						,[StudyInstanceUID]
+						,[NameCN]
+						,[NameEN]
+						,[Gender]
+						,[Birthday]
+						,[Modality]
+						,[ModalityName]
+						,[PatientType]
+						,[VisitID]
+						,[RequestID]
+						,[RequestDepartment]
+						,[RequestDT]
+						,[RegisterDT]
+						,[ExamDT]
+						,[SubmitDT]
+						,[ApproveDT]
+						,[PDFReportURL]
+						,[StudyStatus]
+						,[ReportStatus]
+						,[PDFFlag]
+						,[PDFDT]
+						,[VerifyFilmFlag]
+						,[VerifyFilmDT]
+						,[VerifyReportFlag]
+						,[VerifyReportDT]
+						,[FilmStoredFlag]
+						,[FilmStoredDT]
+						,[ReportStoredFlag]
+						,[ReportStoredDT]
+						,[NotifyReportFlag]
+						,[NotifyReportDT]
+						,[SetPrintModeFlag]
+						,[SetPrintModeDT]
+						,[FilmPrintFlag]
+						,[FilmPrintDoctor]
+						,[FilmPrintDT]
+						,[ReportPrintFlag]
+						,[ReportPrintDoctor]
+						,[ReportPrintDT]
+						,[OutHospitalNo]
+						,[InHospitalNo]
+						,[PhysicalNumber]
+						,[ExamName]
+						,[ExamBodyPart]
+						,[Optional0]
+						,[Optional1]
+						,[Optional2]
+						,[Optional3]
+						,[Optional4]
+						,[Optional5]
+						,[Optional6]
+						,[Optional7]
+						,[Optional8]
+						,[Optional9])
+					VALUES(@pCurrentDT
+						,@pCurrentDT
+						,@pPatientID
+						,@pAccessionNumber
+						,@pStudyInstanceUID
+						,@pNameCN
+						,@pNameEN
+						,@pGender
+						,@pBirthday
+						,@pModality
+						,@pModalityName
+						,@pPatientType
+						,@pVisitID
+						,@pRequestID
+						,@pRequestDepartment
+						,@pRequestDT
+						,@pRegisterDT
+						,@pExamDT
+						,@pSubmitDT
+						,@pApproveDT
+						,@pPDFReportURL
+						,@pStudyStatus
+						,@pReportStatus
+						,@pPDFFlag
+						,(CASE WHEN @pPDFFlag<>-10 THEN @pCurrentDT ELSE NULL END)
+						,@pVerifyFilmFlag
+						,(CASE WHEN @pVerifyFilmFlag<>-10 THEN @pCurrentDT ELSE NULL END)
+						,@pVerifyReportFlag
+						,(CASE WHEN @pVerifyReportFlag<>-10 THEN @pCurrentDT ELSE NULL END)
+						,@pFilmStoredFlag
+						,(CASE WHEN @pFilmStoredFlag<>-10 THEN @pCurrentDT ELSE NULL END)
+						,@pReportStoredFlag
+						,(CASE WHEN @pReportStoredFlag<>-10 THEN @pCurrentDT ELSE NULL END)
+						,@pNotifyReportFlag
+						,(CASE WHEN @pNotifyReportFlag<>-10 THEN @pCurrentDT ELSE NULL END)
+						,@pSetPrintModeFlag
+						,(CASE WHEN @pSetPrintModeFlag<>-10 THEN @pCurrentDT ELSE NULL END)
+						,@pFilmPrintFlag
+						,@pFilmPrintDoctor
+						,(CASE WHEN @pFilmPrintFlag<>-10 THEN @pCurrentDT ELSE NULL END)
+						,@pReportPrintFlag
+						,@pReportPrintDoctor
+						,(CASE WHEN @pReportPrintFlag<>-10 THEN @pCurrentDT ELSE NULL END)
+						,@pOutHospitalNo
+						,@pInHospitalNo
+						,@pPhysicalNumber
+						,@pExamName
+						,@pExamBodyPart
+						,@pOptional0
+						,@pOptional1
+						,@pOptional2
+						,@pOptional3
+						,@pOptional4
+						,@pOptional5
+						,@pOptional6
+						,@pOptional7
+						,@pOptional8
+						,@pOptional9)
+				END
+
+1. 增加accession number 为索引。
+
+
+
+SQL9 
+avg_logical_reads	avg_logical_writes	avg_phys_reads	Execution_count	stmt_start_offset	stmt_end_offset
+15528				0					0				873				1418				2048
+-- =============================================
+-- Author:		Sam Shen
+-- Create date: 6/27/2018
+-- Description:		
+--   UploadStatus, FailedReason, UploadBeginTime, and UploadEndTime are the global status
+--   UploadRetries is the retry times of the basicdata upload not the retries of the file upload
+
+-- Update upload status 0 to 1, 1 to 2, 1 to 99,  (2 to 0)?, 2 to 1, 1 to 1
+-- Not 2 to 99, 99 to 0, 99 to 1.
+-- =============================================
+CREATE PROCEDURE SP_UpdateExamUploadStatus 
+	@ExamInfoKeys varchar(max),
+	@UploadStatus smallint,
+	@FailedReasion nvarchar(100),
+	@IsGlobalOnly bit
+AS
+BEGIN
+	BEGIN TRAN
+
+	-- update the global status from un-upload to uploading
+	UPDATE dbo.ExamInfo SET UploadStatus = @UploadStatus, UploadBeginTime = GETDATE()
+	  WHERE UploadStatus = 0 AND @UploadStatus = 1 OR (UploadStatus = 2 AND @UploadStatus = 1)
+	    AND ExamInfoKey IN (SELECT * FROM dbo.FN_SplitString(@ExamInfoKeys, ','))
+
+	-- update the global status from uploading to uploaded
+	UPDATE dbo.ExamInfo SET UploadStatus = @UploadStatus, UploadEndTime = GETDATE()
+	  WHERE UploadStatus = 1 AND @UploadStatus = 2  
+	    AND ExamInfoKey IN (SELECT * FROM dbo.FN_SplitString(@ExamInfoKeys, ','))
+		AND NOT EXISTS(SELECT 1 FROM FileInfo (NOLOCK) I WHERE I.ExamInfoKey = ExamInfo.ExamInfoKey AND I.UploadStatus <> 2)
+
+	-- update thte global status from uploading to failed and set the failed reasion
+	UPDATE dbo.ExamInfo SET UploadStatus = @UploadStatus, FailedReason = @FailedReasion
+						, UploadEndTime = GETDATE()
+	  WHERE  UploadStatus = 1 AND @UploadStatus = 99
+	    AND ExamInfoKey IN (SELECT * FROM dbo.FN_SplitString(@ExamInfoKeys, ','))
+
+	-- only set the failed reasion during retry
+	UPDATE dbo.ExamInfo SET FailedReason = @FailedReasion
+	  WHERE UploadStatus = 1 AND @UploadStatus = 1
+	    AND ExamInfoKey IN (SELECT * FROM dbo.FN_SplitString(@ExamInfoKeys, ','))
+
+	-- update basic data upload retries
+	IF @IsGlobalOnly = 0
+	BEGIN
+		UPDATE dbo.ExamInfo SET UploadRetries = UploadRetries + 1
+		  WHERE ExamInfoKey IN (SELECT * FROM dbo.FN_SplitString(@ExamInfoKeys, ',')) 
+			    AND UploadStatus = 1 AND @UploadStatus = 1
+	END
+
+	EXEC SP_UpdateExamState @ExamInfoKeys
+	COMMIT TRAN
+END
+
+1. SELECT * FROM dbo.FN_SplitString(@ExamInfoKeys, ',') 存在表扫描。
+2. 逻辑读较多。
+
+
+SQL10： 
+avg_logical_reads	avg_logical_writes	avg_phys_reads	Execution_count	stmt_start_offset	stmt_end_offset
+1354				0					0				30801			0					-1
+SELECT * FROM APF_View_TerminalPrinterStatus WITH(NOLOCK) WHERE TerminalID='Terminal45'
+
+1. 该服务运行次数较多，产生的逻辑多较多。
+2. 该view的效率是否比直接访问表要高？

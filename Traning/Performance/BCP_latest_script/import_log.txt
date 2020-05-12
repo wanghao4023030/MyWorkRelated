@@ -1,0 +1,1128 @@
+2019-04-10 13:45:38 : Start to import the data....
+2019-04-10 13:45:39 : Connection to database successful!
+2019-04-10 13:45:39 : Delete data of wggc.dbo.NetAE
+2019-04-10 13:45:39 : Delete data of wggc.dbo.AFP_Department
+2019-04-10 13:45:39 : Delete data of  wggc.dbo.Users
+2019-04-10 13:45:39 : Delete data of  wggc.dbo.UserProfile
+2019-04-10 13:45:39 : Execute the BCP command: bcp WGGC.dbo.AFP_EFilmUploadStatus IN E:\BCPdemo\WGGC\AFP_EFilmUploadStatus.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:40 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_AFP_EFilmUploadStatus'。不能在对象 'dbo.AFP_EFilmUploadStatus' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:45:40 : Execute the BCP command: bcp WGGC.dbo.EclipseApplication IN E:\BCPdemo\WGGC\EclipseApplication.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:40 : Execute command result: 
+开始复制...
+
+已复制 792 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 49500.00 行。)
+2019-04-10 13:45:40 : Execute the BCP command: bcp WGGC.dbo.CDJobList IN E:\BCPdemo\WGGC\CDJobList.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:40 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:45:40 : Execute the BCP command: bcp WGGC.dbo.AFP_SupportedPrinter IN E:\BCPdemo\WGGC\AFP_SupportedPrinter.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:41 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_AFP_SupportedPrinter'。不能在对象 'dbo.AFP_SupportedPrinter' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:45:41 : Execute the BCP command: bcp WGGC.dbo.AFP_QRCodeSetting IN E:\BCPdemo\WGGC\AFP_QRCodeSetting.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:41 : Execute command result: 
+开始复制...
+
+已复制 2 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 125.00 行。)
+2019-04-10 13:45:41 : Execute the BCP command: bcp WGGC.dbo.AFP_PrintTaskOfFilm IN E:\BCPdemo\WGGC\AFP_PrintTaskOfFilm.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:41 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_AFP_PrintTaskOfFilm'。不能在对象 'dbo.AFP_PrintTaskOfFilm' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:45:41 : Execute the BCP command: bcp WGGC.dbo.ModalityTypeList IN E:\BCPdemo\WGGC\ModalityTypeList.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:42 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'MTL_PK_ModalityType'。不能在对象 'dbo.ModalityTypeList' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:45:42 : Execute the BCP command: bcp WGGC.dbo.Alarm_Message IN E:\BCPdemo\WGGC\Alarm_Message.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:45 : Execute command result: 
+开始复制...
+1000 rows sent to SQL Server. Total sent: 1000
+1000 rows sent to SQL Server. Total sent: 2000
+1000 rows sent to SQL Server. Total sent: 3000
+1000 rows sent to SQL Server. Total sent: 4000
+1000 rows sent to SQL Server. Total sent: 5000
+1000 rows sent to SQL Server. Total sent: 6000
+1000 rows sent to SQL Server. Total sent: 7000
+1000 rows sent to SQL Server. Total sent: 8000
+1000 rows sent to SQL Server. Total sent: 9000
+1000 rows sent to SQL Server. Total sent: 10000
+1000 rows sent to SQL Server. Total sent: 11000
+1000 rows sent to SQL Server. Total sent: 12000
+1000 rows sent to SQL Server. Total sent: 13000
+1000 rows sent to SQL Server. Total sent: 14000
+1000 rows sent to SQL Server. Total sent: 15000
+1000 rows sent to SQL Server. Total sent: 16000
+1000 rows sent to SQL Server. Total sent: 17000
+1000 rows sent to SQL Server. Total sent: 18000
+1000 rows sent to SQL Server. Total sent: 19000
+
+已复制 19324 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 2922   平均值: (每秒 6613.28 行。)
+2019-04-10 13:45:45 : Execute the BCP command: bcp WGGC.dbo.NetAE IN E:\BCPdemo\WGGC\NetAE.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:45 : Execute command result: 
+开始复制...
+
+已复制 10 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 625.00 行。)
+2019-04-10 13:45:45 : Execute the BCP command: bcp WGGC.dbo.AFP_PrintTask IN E:\BCPdemo\WGGC\AFP_PrintTask.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:45 : Execute command result: 
+开始复制...
+
+已复制 224 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 15     平均值: (每秒 14933.33 行。)
+2019-04-10 13:45:45 : Execute the BCP command: bcp WGGC.dbo.Patient IN E:\BCPdemo\WGGC\Patient.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:46 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PAT_ID_PatGUID'。不能在对象 'dbo.Patient' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:45:46 : Execute the BCP command: bcp WGGC.dbo.Alarm_ReceiverList IN E:\BCPdemo\WGGC\Alarm_ReceiverList.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:46 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:45:46 : Execute the BCP command: bcp WGGC.dbo.AFP_FilmPrinterStatus IN E:\BCPdemo\WGGC\AFP_FilmPrinterStatus.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:46 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_AFP_FilmPrinterStatus'。不能在对象 'dbo.AFP_FilmPrinterStatus' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:45:46 : Execute the BCP command: bcp WGGC.dbo.AFP_WorkingCalendar IN E:\BCPdemo\WGGC\AFP_WorkingCalendar.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:47 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:45:47 : Execute the BCP command: bcp WGGC.dbo.PrintJob IN E:\BCPdemo\WGGC\PrintJob.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:47 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:45:47 : Execute the BCP command: bcp WGGC.dbo.UserFollowTerminals IN E:\BCPdemo\WGGC\UserFollowTerminals.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:47 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:45:47 : Execute the BCP command: bcp WGGC.dbo.AFP_PrintTaskOfReport IN E:\BCPdemo\WGGC\AFP_PrintTaskOfReport.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:48 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_AFP_PrintTaskOfReport'。不能在对象 'dbo.AFP_PrintTaskOfReport' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:45:48 : Execute the BCP command: bcp WGGC.dbo.AFP_ModalityTypeExt IN E:\BCPdemo\WGGC\AFP_ModalityTypeExt.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:48 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_AFP_ModalityTypeExt'。不能在对象 'dbo.AFP_ModalityTypeExt' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:45:48 : Execute the BCP command: bcp WGGC.dbo.Alarm_Dispatch IN E:\BCPdemo\WGGC\Alarm_Dispatch.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:48 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:45:48 : Execute the BCP command: bcp WGGC.dbo.PrintStatistic IN E:\BCPdemo\WGGC\PrintStatistic.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:48 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:45:48 : Execute the BCP command: bcp WGGC.dbo.PrinterReg IN E:\BCPdemo\WGGC\PrinterReg.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:49 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PRG_PK_PrinterDBID'。不能在对象 'dbo.PrinterReg' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:45:49 : Execute the BCP command: bcp WGGC.dbo.Alarm_Dispatch_P3F IN E:\BCPdemo\WGGC\Alarm_Dispatch_P3F.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:49 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:45:49 : Execute the BCP command: bcp WGGC.dbo.T_Integration_RecognizeParam IN E:\BCPdemo\WGGC\T_Integration_RecognizeParam.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:49 : Execute command result: 
+开始复制...
+
+已复制 2 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 2000.00 行。)
+2019-04-10 13:45:49 : Execute the BCP command: bcp WGGC.dbo.PrinterInfo IN E:\BCPdemo\WGGC\PrinterInfo.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:50 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_PrinterInfo'。不能在对象 'dbo.PrinterInfo' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:45:50 : Execute the BCP command: bcp WGGC.dbo.RoleProfile IN E:\BCPdemo\WGGC\RoleProfile.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:50 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_RoleProfile'。不能在对象 'dbo.RoleProfile' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:45:50 : Execute the BCP command: bcp WGGC.dbo.RuleJob IN E:\BCPdemo\WGGC\RuleJob.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:50 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:45:50 : Execute the BCP command: bcp WGGC.dbo.RuleJobItem IN E:\BCPdemo\WGGC\RuleJobItem.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:51 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:45:51 : Execute the BCP command: bcp WGGC.dbo.RuleList IN E:\BCPdemo\WGGC\RuleList.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:51 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:45:51 : Execute the BCP command: bcp WGGC.dbo.SystemProfile IN E:\BCPdemo\WGGC\SystemProfile.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:51 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_SystemProfile'。不能在对象 'dbo.SystemProfile' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:45:51 : Execute the BCP command: bcp WGGC.dbo.T_Integration_Dictionary IN E:\BCPdemo\WGGC\T_Integration_Dictionary.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:52 : Execute command result: 
+开始复制...
+
+已复制 268 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 16750.00 行。)
+2019-04-10 13:45:52 : Execute the BCP command: bcp WGGC.dbo.UserProfile IN E:\BCPdemo\WGGC\UserProfile.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:52 : Execute command result: 
+开始复制...
+
+已复制 20 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 31     平均值: (每秒 645.16 行。)
+2019-04-10 13:45:52 : Execute the BCP command: bcp WGGC.dbo.T_Integration_ExamInfo IN E:\BCPdemo\WGGC\T_Integration_ExamInfo.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:52 : Execute command result: 
+开始复制...
+
+已复制 334 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 20875.00 行。)
+2019-04-10 13:45:52 : Execute the BCP command: bcp WGGC.dbo.AFP_ReportPrinterProperty IN E:\BCPdemo\WGGC\AFP_ReportPrinterProperty.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:53 : Execute command result: 
+开始复制...
+
+已复制 28 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 32     平均值: (每秒 875.00 行。)
+2019-04-10 13:45:53 : Execute the BCP command: bcp WGGC.dbo.Users IN E:\BCPdemo\WGGC\Users.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:53 : Execute command result: 
+开始复制...
+
+已复制 1 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 62.50 行。)
+2019-04-10 13:45:53 : Execute the BCP command: bcp WGGC.dbo.BodyPartSynonym IN E:\BCPdemo\WGGC\BodyPartSynonym.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:53 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:45:53 : Execute the BCP command: bcp WGGC.dbo.MWLPatient IN E:\BCPdemo\WGGC\MWLPatient.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:53 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:45:53 : Execute the BCP command: bcp WGGC.dbo.Study IN E:\BCPdemo\WGGC\Study.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:54 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'STY_PK_StudyInstUID'。不能在对象 'dbo.Study' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:45:54 : Execute the BCP command: bcp WGGC.dbo.AFP_CustomizedStatistics IN E:\BCPdemo\WGGC\AFP_CustomizedStatistics.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:54 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:45:54 : Execute the BCP command: bcp WGGC.dbo.FunctionList IN E:\BCPdemo\WGGC\FunctionList.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:54 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_FunctionList'。不能在对象 'dbo.FunctionList' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:45:54 : Execute the BCP command: bcp WGGC.dbo.NotificationConfigure IN E:\BCPdemo\WGGC\NotificationConfigure.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:55 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:45:55 : Execute the BCP command: bcp WGGC.dbo.OverlayGroup IN E:\BCPdemo\WGGC\OverlayGroup.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:55 : Execute command result: 
+开始复制...
+1000 rows sent to SQL Server. Total sent: 1000
+1000 rows sent to SQL Server. Total sent: 2000
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_OverlayGroup'。不能在对象 'dbo.OverlayGroup' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:45:55 : Execute the BCP command: bcp WGGC.dbo.vi_KIOSK_ExamInfo_Patient IN E:\BCPdemo\WGGC\vi_KIOSK_ExamInfo_Patient.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:55 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:45:55 : Execute the BCP command: bcp WGGC.dbo.HotkeyMenuGroup IN E:\BCPdemo\WGGC\HotkeyMenuGroup.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:56 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_HotkeyMenuGroup'。不能在对象 'dbo.HotkeyMenuGroup' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:45:56 : Execute the BCP command: bcp WGGC.dbo.WorklistColumnGroup_Language IN E:\BCPdemo\WGGC\WorklistColumnGroup_Language.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:56 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_WorklistColumnGroup_Language'。不能在对象 'dbo.WorklistColumnGroup_Language' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:45:56 : Execute the BCP command: bcp WGGC.dbo.Role IN E:\BCPdemo\WGGC\Role.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:56 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_Role'。不能在对象 'dbo.Role' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:45:56 : Execute the BCP command: bcp WGGC.dbo.AFP_FilmPrinterProperty IN E:\BCPdemo\WGGC\AFP_FilmPrinterProperty.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:57 : Execute command result: 
+开始复制...
+
+已复制 28 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 1750.00 行。)
+2019-04-10 13:45:57 : Execute the BCP command: bcp WGGC.dbo.RoleFunction IN E:\BCPdemo\WGGC\RoleFunction.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:57 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_RoleFunction'。不能在对象 'dbo.RoleFunction' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:45:57 : Execute the BCP command: bcp WGGC.dbo.Overlay_Language IN E:\BCPdemo\WGGC\Overlay_Language.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:57 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_Overlay_Language'。不能在对象 'dbo.Overlay_Language' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:45:57 : Execute the BCP command: bcp WGGC.dbo.WebReport IN E:\BCPdemo\WGGC\WebReport.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:57 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:45:57 : Execute the BCP command: bcp WGGC.dbo.Series IN E:\BCPdemo\WGGC\Series.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:58 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'SRI_PK_SeriesInstUID'。不能在对象 'dbo.Series' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:45:58 : Execute the BCP command: bcp WGGC.dbo.vi_KIOSK_ExamInfo_Order IN E:\BCPdemo\WGGC\vi_KIOSK_ExamInfo_Order.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:58 : Execute command result: 
+开始复制...
+
+已复制 34 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 2125.00 行。)
+2019-04-10 13:45:58 : Execute the BCP command: bcp WGGC.dbo.Image IN E:\BCPdemo\WGGC\Image.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:58 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'IMG_PK_SOPInstUID'。不能在对象 'dbo.Image' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:45:58 : Execute the BCP command: bcp WGGC.dbo.WebReportDiagnosesHistory IN E:\BCPdemo\WGGC\WebReportDiagnosesHistory.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:59 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:45:59 : Execute the BCP command: bcp WGGC.dbo.AFP_IncompleteTaskRule IN E:\BCPdemo\WGGC\AFP_IncompleteTaskRule.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:59 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:45:59 : Execute the BCP command: bcp WGGC.dbo.DiagnosesTemplate IN E:\BCPdemo\WGGC\DiagnosesTemplate.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:45:59 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:45:59 : Execute the BCP command: bcp WGGC.dbo.SiteInfo IN E:\BCPdemo\WGGC\SiteInfo.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:00 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:00 : Execute the BCP command: bcp WGGC.dbo.TransferSyntaxPolicy IN E:\BCPdemo\WGGC\TransferSyntaxPolicy.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:00 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:00 : Execute the BCP command: bcp WGGC.dbo.Element IN E:\BCPdemo\WGGC\Element.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:00 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:00 : Execute the BCP command: bcp WGGC.dbo.AFP_Memo IN E:\BCPdemo\WGGC\AFP_Memo.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:01 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:01 : Execute the BCP command: bcp WGGC.dbo.Element_setting IN E:\BCPdemo\WGGC\Element_setting.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:01 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_Element_setting'。不能在对象 'dbo.Element_setting' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:01 : Execute the BCP command: bcp WGGC.dbo.AFP_Message IN E:\BCPdemo\WGGC\AFP_Message.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:01 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:01 : Execute the BCP command: bcp WGGC.dbo.Report IN E:\BCPdemo\WGGC\Report.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:01 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:01 : Execute the BCP command: bcp WGGC.dbo.MWLStatus IN E:\BCPdemo\WGGC\MWLStatus.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:02 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:02 : Execute the BCP command: bcp WGGC.dbo.ClientAE IN E:\BCPdemo\WGGC\ClientAE.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:02 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:02 : Execute the BCP command: bcp WGGC.dbo.AFP_ExceptionalStudy IN E:\BCPdemo\WGGC\AFP_ExceptionalStudy.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:02 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:02 : Execute the BCP command: bcp WGGC.dbo.StorageAE IN E:\BCPdemo\WGGC\StorageAE.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:03 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_StorageAE'。不能在对象 'dbo.StorageAE' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:03 : Execute the BCP command: bcp WGGC.dbo.AFP_Parameters IN E:\BCPdemo\WGGC\AFP_Parameters.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:03 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_AFP_Parameters'。不能在对象 'dbo.AFP_Parameters' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:03 : Execute the BCP command: bcp WGGC.dbo.SMS IN E:\BCPdemo\WGGC\SMS.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:03 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_SMS'。不能在对象 'dbo.SMS' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:03 : Execute the BCP command: bcp WGGC.dbo.ServiceEntity IN E:\BCPdemo\WGGC\ServiceEntity.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:04 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_ServiceEntity'。不能在对象 'dbo.ServiceEntity' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:04 : Execute the BCP command: bcp WGGC.dbo.AFP_PrintMode IN E:\BCPdemo\WGGC\AFP_PrintMode.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:04 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_AFP_PrintMode'。不能在对象 'dbo.AFP_PrintMode' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:04 : Execute the BCP command: bcp WGGC.dbo.PacsSection IN E:\BCPdemo\WGGC\PacsSection.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:04 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_PacsSection'。不能在对象 'dbo.PacsSection' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:04 : Execute the BCP command: bcp WGGC.dbo.StorageAccess IN E:\BCPdemo\WGGC\StorageAccess.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:05 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:05 : Execute the BCP command: bcp WGGC.dbo.acq_log IN E:\BCPdemo\WGGC\acq_log.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:05 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:05 : Execute the BCP command: bcp WGGC.dbo.modality_profile IN E:\BCPdemo\WGGC\modality_profile.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:05 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:05 : Execute the BCP command: bcp WGGC.dbo.AFP_ReportInfo IN E:\BCPdemo\WGGC\AFP_ReportInfo.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:05 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_AFP_ReportInfo'。不能在对象 'dbo.AFP_ReportInfo' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:05 : Execute the BCP command: bcp WGGC.dbo.HangingProtocol IN E:\BCPdemo\WGGC\HangingProtocol.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:06 : Execute command result: 
+开始复制...
+
+已复制 6 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 375.00 行。)
+2019-04-10 13:46:06 : Execute the BCP command: bcp WGGC.dbo.AFP_eFilmWorklistColumn IN E:\BCPdemo\WGGC\AFP_eFilmWorklistColumn.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:06 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_AFP_eFilmWorklistColumn'。不能在对象 'dbo.AFP_eFilmWorklistColumn' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:06 : Execute the BCP command: bcp WGGC.dbo.PrintProtocol IN E:\BCPdemo\WGGC\PrintProtocol.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:06 : Execute command result: 
+开始复制...
+
+已复制 8 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 32     平均值: (每秒 250.00 行。)
+2019-04-10 13:46:06 : Execute the BCP command: bcp WGGC.dbo.lock_table IN E:\BCPdemo\WGGC\lock_table.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:07 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_lock_table'。不能在对象 'dbo.lock_table' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:07 : Execute the BCP command: bcp WGGC.dbo.AFP_RolePermission IN E:\BCPdemo\WGGC\AFP_RolePermission.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:07 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_RolePermission'。不能在对象 'dbo.AFP_RolePermission' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:07 : Execute the BCP command: bcp WGGC.dbo.temp_patient IN E:\BCPdemo\WGGC\temp_patient.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:07 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:07 : Execute the BCP command: bcp WGGC.dbo.AFP_FilmInfo IN E:\BCPdemo\WGGC\AFP_FilmInfo.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:08 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_AFP_FilmInfo'。不能在对象 'dbo.AFP_FilmInfo' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:08 : Execute the BCP command: bcp WGGC.dbo.ACErrorList IN E:\BCPdemo\WGGC\ACErrorList.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:08 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:08 : Execute the BCP command: bcp WGGC.dbo.AFP_MessageQueue IN E:\BCPdemo\WGGC\AFP_MessageQueue.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:08 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:08 : Execute the BCP command: bcp WGGC.dbo.section_code IN E:\BCPdemo\WGGC\section_code.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:09 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_section_code'。不能在对象 'dbo.section_code' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:09 : Execute the BCP command: bcp WGGC.dbo.standard_resource_code IN E:\BCPdemo\WGGC\standard_resource_code.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:09 : Execute command result: 
+开始复制...
+
+已复制 6 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 31     平均值: (每秒 193.55 行。)
+2019-04-10 13:46:09 : Execute the BCP command: bcp WGGC.dbo.RIS_FO IN E:\BCPdemo\WGGC\RIS_FO.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:09 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:09 : Execute the BCP command: bcp WGGC.dbo.AFP_PatientTypeDescription IN E:\BCPdemo\WGGC\AFP_PatientTypeDescription.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:09 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_AFP_PatientTypeDescription'。不能在对象 'dbo.AFP_PatientTypeDescription' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:09 : Execute the BCP command: bcp WGGC.dbo.GCCommandParamRecv IN E:\BCPdemo\WGGC\GCCommandParamRecv.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:10 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:10 : Execute the BCP command: bcp WGGC.dbo.GCCommandParamSend IN E:\BCPdemo\WGGC\GCCommandParamSend.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:10 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:10 : Execute the BCP command: bcp WGGC.dbo.AFP_PrintModeDescription IN E:\BCPdemo\WGGC\AFP_PrintModeDescription.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:10 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_AFP_PrintModeDescription'。不能在对象 'dbo.AFP_PrintModeDescription' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:10 : Execute the BCP command: bcp WGGC.dbo.GCCommandRecv IN E:\BCPdemo\WGGC\GCCommandRecv.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:11 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:11 : Execute the BCP command: bcp WGGC.dbo.AFP_CloudFilmConfiguration IN E:\BCPdemo\WGGC\AFP_CloudFilmConfiguration.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:11 : Execute command result: 
+开始复制...
+
+已复制 2 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 31     平均值: (每秒 64.52 行。)
+2019-04-10 13:46:11 : Execute the BCP command: bcp WGGC.dbo.AFP_Department IN E:\BCPdemo\WGGC\AFP_Department.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:11 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'MTL_PK_ModalityType'。不能在对象 'dbo.ModalityTypeList' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:11 : Execute the BCP command: bcp WGGC.dbo.GCCommandSend IN E:\BCPdemo\WGGC\GCCommandSend.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:12 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:12 : Execute the BCP command: bcp WGGC.dbo.AFP_ExamInfo IN E:\BCPdemo\WGGC\AFP_ExamInfo.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:12 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_AFP_ExamInfo'。不能在对象 'dbo.AFP_ExamInfo' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:12 : Execute the BCP command: bcp WGGC.dbo.AFP_TerminalStatus IN E:\BCPdemo\WGGC\AFP_TerminalStatus.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:12 : Execute command result: 
+开始复制...
+
+已复制 224 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 15     平均值: (每秒 14933.33 行。)
+2019-04-10 13:46:12 : Execute the BCP command: bcp WGGC.dbo.AFP_ReportPrinterStatus IN E:\BCPdemo\WGGC\AFP_ReportPrinterStatus.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:13 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'U_PK_AFP_ReportPrinterStatus'。不能在对象 'dbo.AFP_ReportPrinterStatus' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:13 : Execute the BCP command: bcp WGGC.dbo.AFP_ReportPrinterStatusMap IN E:\BCPdemo\WGGC\AFP_ReportPrinterStatusMap.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:13 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_AFP_ReportPrinterStatusMap'。不能在对象 'dbo.AFP_ReportPrinterStatusMap' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:13 : Execute the BCP command: bcp WGGC.dbo.AFP_PrintTime IN E:\BCPdemo\WGGC\AFP_PrintTime.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:13 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:13 : Execute the BCP command: bcp WGGC.dbo.SMS_PROBLEM_LOG IN E:\BCPdemo\WGGC\SMS_PROBLEM_LOG.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:14 : Execute command result: 
+开始复制...
+
+已复制 2 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 125.00 行。)
+2019-04-10 13:46:14 : Execute the BCP command: bcp WGGC.dbo.Staff IN E:\BCPdemo\WGGC\Staff.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:14 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:14 : Execute the BCP command: bcp WGGC.dbo.AFP_PrintTerminalInfo IN E:\BCPdemo\WGGC\AFP_PrintTerminalInfo.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:14 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_AFP_PrintTerminalInfo'。不能在对象 'dbo.AFP_PrintTerminalInfo' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:14 : Execute the BCP command: bcp WGGC.dbo.DataStorage IN E:\BCPdemo\WGGC\DataStorage.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:14 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:14 : Execute the BCP command: bcp WGGC.dbo.ProcCodeMapping IN E:\BCPdemo\WGGC\ProcCodeMapping.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:15 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:15 : Execute the BCP command: bcp WGGC.dbo.BodyPartList IN E:\BCPdemo\WGGC\BodyPartList.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:15 : Execute command result: 
+开始复制...
+
+已复制 68 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 31     平均值: (每秒 2193.55 行。)
+2019-04-10 13:46:15 : Execute the BCP command: bcp WGGC.dbo.ViewPositionList IN E:\BCPdemo\WGGC\ViewPositionList.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:15 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:15 : Execute the BCP command: bcp AUDIT.dbo.Audit_Log IN E:\BCPdemo\AUDIT\Audit_Log.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:16 : Execute command result: 
+开始复制...
+1000 rows sent to SQL Server. Total sent: 1000
+1000 rows sent to SQL Server. Total sent: 2000
+
+已复制 2448 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 109    平均值: (每秒 22458.71 行。)
+2019-04-10 13:46:16 : Execute the BCP command: bcp AUDIT.dbo.QC_Log IN E:\BCPdemo\AUDIT\QC_Log.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:16 : Execute command result: 
+开始复制...
+
+已复制 2 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 2000.00 行。)
+2019-04-10 13:46:16 : Execute the BCP command: bcp Printer.dbo.Page IN E:\BCPdemo\Printer\Page.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:16 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_Page'。不能在对象 'dbo.Page' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:16 : Execute the BCP command: bcp Printer.dbo.Media IN E:\BCPdemo\Printer\Media.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:17 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_Media'。不能在对象 'dbo.Media' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:17 : Execute the BCP command: bcp Printer.dbo.ImageBox IN E:\BCPdemo\Printer\ImageBox.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:17 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_ImageBox'。不能在对象 'dbo.ImageBox' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:17 : Execute the BCP command: bcp Printer.dbo.DeliveryJob IN E:\BCPdemo\Printer\DeliveryJob.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:17 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_DeliveryJob'。不能在对象 'dbo.DeliveryJob' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:17 : Execute the BCP command: bcp Printer.dbo.AutoForwardRule IN E:\BCPdemo\Printer\AutoForwardRule.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:18 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:18 : Execute the BCP command: bcp Printer.dbo.OCRCache IN E:\BCPdemo\Printer\OCRCache.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:18 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:18 : Execute the BCP command: bcp Printer.dbo.Session IN E:\BCPdemo\Printer\Session.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:18 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'PK_SessionInstanceUID'。不能在对象 'dbo.Session' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:18 : Execute the BCP command: bcp Printer.dbo.PLut IN E:\BCPdemo\Printer\PLut.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:19 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:19 : Execute the BCP command: bcp OCRConfigDB.dbo.KeyField IN E:\BCPdemo\OCRConfigDB\KeyField.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:19 : Execute command result: 
+开始复制...
+
+已复制 28 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 15     平均值: (每秒 1866.67 行。)
+2019-04-10 13:46:19 : Execute the BCP command: bcp OCRConfigDB.dbo.ROI IN E:\BCPdemo\OCRConfigDB\ROI.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:19 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'STY_PK_StudyInstUID'。不能在对象 'dbo.Study' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:19 : Execute the BCP command: bcp OCRConfigDB.dbo.ROICoord IN E:\BCPdemo\OCRConfigDB\ROICoord.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:20 : Execute command result: 
+开始复制...
+
+已复制 12 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 750.00 行。)
+2019-04-10 13:46:20 : Execute the BCP command: bcp OCRConfigDB.dbo.SCUIdentity IN E:\BCPdemo\OCRConfigDB\SCUIdentity.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:20 : Execute command result: 
+开始复制...
+
+已复制 14 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 14000.00 行。)
+2019-04-10 13:46:20 : Execute the BCP command: bcp OCRConfigDB.dbo.KeyFields IN E:\BCPdemo\OCRConfigDB\KeyFields.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:20 : Execute command result: 
+开始复制...
+
+已复制 14 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 875.00 行。)
+2019-04-10 13:46:20 : Execute the BCP command: bcp ECS.dbo.Patient IN E:\BCPdemo\ECS\Patient.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:21 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:21 : Execute the BCP command: bcp ECS.dbo.Treatment IN E:\BCPdemo\ECS\Treatment.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:21 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:21 : Execute the BCP command: bcp ECS.dbo.Reservation IN E:\BCPdemo\ECS\Reservation.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:21 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:21 : Execute the BCP command: bcp ECS.dbo.PlaceOrder IN E:\BCPdemo\ECS\PlaceOrder.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:22 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:22 : Execute the BCP command: bcp ECS.dbo.Request IN E:\BCPdemo\ECS\Request.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:22 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:22 : Execute the BCP command: bcp ECS.dbo.ExamReservation IN E:\BCPdemo\ECS\ExamReservation.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:22 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:22 : Execute the BCP command: bcp ECS.dbo.Examination IN E:\BCPdemo\ECS\Examination.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:23 : Execute command result: 
+开始复制...
+SQLState = 23000, NativeError = 2627
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]违反了 PRIMARY KEY 约束 'IMG_PK_SOPInstUID'。不能在对象 'dbo.Image' 中插入重复键。
+SQLState = 01000, NativeError = 3621
+Warning = [Microsoft][SQL Server Native Client 10.0][SQL Server]语句已终止。
+
+BCP 复制 in 失败
+2019-04-10 13:46:23 : Execute the BCP command: bcp ECS.dbo.ExamType IN E:\BCPdemo\ECS\ExamType.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:23 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:23 : Execute the BCP command: bcp ECS.dbo.Queue IN E:\BCPdemo\ECS\Queue.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:23 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:23 : Execute the BCP command: bcp ECS.dbo.PatientQueue IN E:\BCPdemo\ECS\PatientQueue.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:23 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:23 : Execute the BCP command: bcp ECS.dbo.FilmReportStatus IN E:\BCPdemo\ECS\FilmReportStatus.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:24 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:24 : Execute the BCP command: bcp ECS.dbo.StatusDictionary IN E:\BCPdemo\ECS\StatusDictionary.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:24 : Execute command result: 
+开始复制...
+
+已复制 62 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 3875.00 行。)
+2019-04-10 13:46:24 : Execute the BCP command: bcp ECS.dbo.Memo IN E:\BCPdemo\ECS\Memo.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:24 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:24 : Execute the BCP command: bcp ECS.dbo.PatientInfo IN E:\BCPdemo\ECS\PatientInfo.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:25 : Execute command result: 
+开始复制...
+
+已复制 14 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 875.00 行。)
+2019-04-10 13:46:25 : Execute the BCP command: bcp ECS.dbo.ExamInfo IN E:\BCPdemo\ECS\ExamInfo.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:25 : Execute command result: 
+开始复制...
+
+已复制 14 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 875.00 行。)
+2019-04-10 13:46:25 : Execute the BCP command: bcp ECS.dbo.FilmInfo IN E:\BCPdemo\ECS\FilmInfo.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:25 : Execute command result: 
+开始复制...
+
+已复制 14 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 14000.00 行。)
+2019-04-10 13:46:25 : Execute the BCP command: bcp ECS.dbo.ReportInfo IN E:\BCPdemo\ECS\ReportInfo.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:26 : Execute command result: 
+开始复制...
+
+已复制 10 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 625.00 行。)
+2019-04-10 13:46:26 : Execute the BCP command: bcp ECS.dbo.FileInfo IN E:\BCPdemo\ECS\FileInfo.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:26 : Execute command result: 
+开始复制...
+
+已复制 34 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 2125.00 行。)
+2019-04-10 13:46:26 : Execute the BCP command: bcp ECS.dbo.BasicDataQueue IN E:\BCPdemo\ECS\BasicDataQueue.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:26 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:26 : Execute the BCP command: bcp ECS.dbo.FileQueue IN E:\BCPdemo\ECS\FileQueue.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:27 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-10 13:46:27 : Execute the BCP command: bcp ECS.dbo.UpdateInformation IN E:\BCPdemo\ECS\UpdateInformation.txt -e E:\BCPdemo\ImportErroLog.log -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-10 13:46:27 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     

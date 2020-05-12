@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.4 on win32)" generated="20191120 23:03:13.185" rpa="false">
+<suite id="s1" name="SmokeTest" source="D:\PUMA_AUTO\RF_PUMA\PUMA\SmokeTest.robot">
+<test id="s1-t1" name="SmokeTest_005_Core_4715_03.01.01 Report receive from Virtual Print success.">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Step 1\n Description:\n1. Create a patient with an exam in RIS or local table in PS.\nExpected:\n 1. The patient with an exam can create successfully.</arg>
+</arguments>
+<msg timestamp="20191120 23:03:13.697" level="INFO">Step 1
+Description:
+1. Create a patient with an exam in RIS or local table in PS.
+Expected:
+1. The patient with an exam can create successfully.</msg>
+<status status="PASS" starttime="20191120 23:03:13.697" endtime="20191120 23:03:13.697"></status>
+</kw>
+<kw name="Patient Create Randomly" library="PUMA_PatientLibrary">
+<doc>create patient with random information</doc>
+<assign>
+<var>${patientinfo}</var>
+</assign>
+<msg timestamp="20191120 23:03:13.702" level="DEBUG">Starting new HTTP connection (1): 10.112.20.84:80</msg>
+<msg timestamp="20191120 23:03:13.719" level="DEBUG">http://10.112.20.84:80 "POST /NotifyServer/NotifyService.asmx HTTP/1.1" 200 373</msg>
+<msg timestamp="20191120 23:03:13.720" level="INFO">Patient.patient_create_randomly:Patient create successfully.
+ {"Status": true, "CreateDT": "2019-11-20 23:03:13.697850", "UpdateDT": "2019-11-20 23:03:13.697850", "PatientID": "P20191120230313697850", "AccessionNumber": "A20191120230313697850", "StudyInstanceUID": "UID20191120230313697850", "NameCN": "CN20191120230313697850", "NameEN": "EN20191120230313697850", "Gender": "M", "Birthday": "2013-11-21", "Modality": "CT", "ModalityName": "XA", "PatientType": "\u95e8\u8bca\u75c5\u4eba", "VisitID": "", "RequestID": "", "RequestDepartment": 1, "RequestDT": "2019-11-20 23:03:13.697850", "RegisterDT": "2019-11-20 23:03:13.697850", "ExamDT": "2019-11-20 23:03:13.697850", "ReportDT": "2019-11-20 23:03:13.697850", "SubmitDT": "2019-11-20 23:03:13.697850", "ApproveDT": "2019-11-20 23:03:13.697850", "PDFReportURL": "", "StudyStatus": "", "OutHospitalNo": "", "InHospitalNo": "", "PhysicalNumber": "", "ExamName": "Exam20191120230313697850", "ExamBodyPart": "Leg", "RefferingDepartment": "", "Optional0": "", "Optional1": "", "Optional2": "", "Optional3": "", "Optional4": "", "Optional5": "", "Optional6": "", "Optional7": "", "Optional8": "", "Optional9": "", "notifyserver_url": "http://10.112.20.84/NotifyServer/NotifyService.asmx"}</msg>
+<msg timestamp="20191120 23:03:13.720" level="INFO">${patientinfo} = {"Status": true, "CreateDT": "2019-11-20 23:03:13.697850", "UpdateDT": "2019-11-20 23:03:13.697850", "PatientID": "P20191120230313697850", "AccessionNumber": "A20191120230313697850", "StudyInstanceUID...</msg>
+<status status="PASS" starttime="20191120 23:03:13.697" endtime="20191120 23:03:13.720"></status>
+</kw>
+<kw name="Convert String to JSON" library="JSONLibrary">
+<doc>Convert String to JSON object</doc>
+<arguments>
+<arg>${patientinfo}</arg>
+</arguments>
+<assign>
+<var>${json_object}</var>
+</assign>
+<msg timestamp="20191120 23:03:13.721" level="INFO">${json_object} = {'Status': True, 'CreateDT': '2019-11-20 23:03:13.697850', 'UpdateDT': '2019-11-20 23:03:13.697850', 'PatientID': 'P20191120230313697850', 'AccessionNumber': 'A20191120230313697850', 'StudyInstanceUID...</msg>
+<status status="PASS" starttime="20191120 23:03:13.721" endtime="20191120 23:03:13.721"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${json_object}</arg>
+<arg>Status</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<msg timestamp="20191120 23:03:13.764" level="INFO">${status} = [True]</msg>
+<status status="PASS" starttime="20191120 23:03:13.721" endtime="20191120 23:03:13.764"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${status}[0]</arg>
+<arg>Patient create successfully.</arg>
+</arguments>
+<status status="PASS" starttime="20191120 23:03:13.765" endtime="20191120 23:03:13.765"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${json_object}</arg>
+<arg>PatientID</arg>
+</arguments>
+<assign>
+<var>${patientID}</var>
+</assign>
+<msg timestamp="20191120 23:03:13.803" level="INFO">${patientID} = ['P20191120230313697850']</msg>
+<status status="PASS" starttime="20191120 23:03:13.765" endtime="20191120 23:03:13.803"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${json_object}</arg>
+<arg>AccessionNumber</arg>
+</arguments>
+<assign>
+<var>${AccessionNumber}</var>
+</assign>
+<msg timestamp="20191120 23:03:13.840" level="INFO">${AccessionNumber} = ['A20191120230313697850']</msg>
+<status status="PASS" starttime="20191120 23:03:13.803" endtime="20191120 23:03:13.840"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${json_object}</arg>
+<arg>NameCN</arg>
+</arguments>
+<assign>
+<var>${PatientName}</var>
+</assign>
+<msg timestamp="20191120 23:03:13.878" level="INFO">${PatientName} = ['CN20191120230313697850']</msg>
+<status status="PASS" starttime="20191120 23:03:13.841" endtime="20191120 23:03:13.878"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Step 2: \n Description \n 1. Configure the report OCR service in PS. \n 2. Make sure it can identify the patient report in step1. \n Expected:\n The operation can execute successfully.</arg>
+</arguments>
+<msg timestamp="20191120 23:03:13.879" level="INFO">Step 2: 
+Description 
+1. Configure the report OCR service in PS. 
+2. Make sure it can identify the patient report in step1. 
+Expected:
+The operation can execute successfully.</msg>
+<status status="PASS" starttime="20191120 23:03:13.878" endtime="20191120 23:03:13.879"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Step 3: \n Description \n 1. Prepare a report of patient which create in step1. \n 2. Print the report to PS by virtul printing. \n Expected: \n 1. The report can print to PS successfully. \n</arg>
+</arguments>
+<msg timestamp="20191120 23:03:13.879" level="INFO">Step 3: 
+Description 
+1. Prepare a report of patient which create in step1. 
+2. Print the report to PS by virtul printing. 
+Expected: 
+1. The report can print to PS successfully. 
+</msg>
+<status status="PASS" starttime="20191120 23:03:13.879" endtime="20191120 23:03:13.879"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20191120 23:03:18.882" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20191120 23:03:13.879" endtime="20191120 23:03:18.882"></status>
+</kw>
+<kw name="Report Create Report With Sample" library="PUMA_ReportLibrary">
+<doc>report create report with sample</doc>
+<arguments>
+<arg>${patientID}[0]</arg>
+<arg>${AccessionNumber}[0]</arg>
+</arguments>
+<assign>
+<var>${Report_archived_Info}</var>
+</assign>
+<msg timestamp="20191120 23:05:18.926" level="INFO">PUMA_ReportLibrary.print_report_from_template: Win32print result
+Report archived failed.
+Report achived failed. {"Status": false, "server": "10.112.20.84", "patient_id": "P20191120230313697850", "accession_number": "A20191120230313697850", "report_file": "D:\\PUMA_AUTO\\RF_PUMA\\PUMA\\Libs\\PUMA_ReportLibrary\\ReportSample\\Report.txt", "report_template_file": "D:\\PUMA_AUTO\\RF_PUMA\\PUMA\\Libs\\PUMA_ReportLibrary\\ReportSample\\Template.txt", "powershell_path": "D:\\PUMA_AUTO\\RF_PUMA\\PUMA\\Libs\\PUMA_ReportLibrary\\PowerShellScripts", "default_printer": "PDFCreator", "report_check_file_path": "", "notify_server_url": "http://10.112.20.84/NotifyServer/NotifyService.asmx?wsdl", "print_server_url": "http://10.112.20.84/PrintServer/PrintService.asmx?wsdl", "reportstatus_mode_value": {"not ready": "0", "temporary": "1", "formal": "2"}, "Reportstatus_value_mode": {"0": "not ready", "1": "temporary", "2": "formal"}}</msg>
+<msg timestamp="20191120 23:05:18.927" level="INFO">${Report_archived_Info} = {"Status": false, "server": "10.112.20.84", "patient_id": "P20191120230313697850", "accession_number": "A20191120230313697850", "report_file": "D:\\PUMA_AUTO\\RF_PUMA\\PUMA\\Libs\\PUMA_ReportLibrary\\...</msg>
+<status status="PASS" starttime="20191120 23:03:18.882" endtime="20191120 23:05:18.927"></status>
+</kw>
+<kw name="Convert String to JSON" library="JSONLibrary">
+<doc>Convert String to JSON object</doc>
+<arguments>
+<arg>${Report_archived_Info}</arg>
+</arguments>
+<assign>
+<var>${Report_archived_Info_Json}</var>
+</assign>
+<msg timestamp="20191120 23:05:18.927" level="INFO">${Report_archived_Info_Json} = {'Status': False, 'server': '10.112.20.84', 'patient_id': 'P20191120230313697850', 'accession_number': 'A20191120230313697850', 'report_file': 'D:\\PUMA_AUTO\\RF_PUMA\\PUMA\\Libs\\PUMA_ReportLibrary\\...</msg>
+<status status="PASS" starttime="20191120 23:05:18.927" endtime="20191120 23:05:18.927"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${Report_archived_Info_Json}</arg>
+<arg>Status</arg>
+</arguments>
+<assign>
+<var>${Report_archived_result}</var>
+</assign>
+<msg timestamp="20191120 23:05:18.966" level="INFO">${Report_archived_result} = [False]</msg>
+<status status="PASS" starttime="20191120 23:05:18.928" endtime="20191120 23:05:18.966"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${Report_archived_result}[0] == True</arg>
+<arg>The report can print to PS successfully.</arg>
+</arguments>
+<msg timestamp="20191120 23:05:18.966" level="FAIL">The report can print to PS successfully.</msg>
+<msg timestamp="20191120 23:05:18.966" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" starttime="20191120 23:05:18.966" endtime="20191120 23:05:18.966"></status>
+</kw>
+<tags>
+<tag>Fail</tag>
+<tag>Smoke</tag>
+</tags>
+<status status="FAIL" starttime="20191120 23:03:13.696" endtime="20191120 23:05:18.967" critical="yes">The report can print to PS successfully.</status>
+</test>
+<status status="FAIL" starttime="20191120 23:03:13.188" endtime="20191120 23:05:18.967"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">Fail</stat>
+<stat pass="0" fail="1">Smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="SmokeTest">SmokeTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

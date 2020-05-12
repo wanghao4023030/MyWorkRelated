@@ -1,0 +1,1218 @@
+2019-04-09 12:52:10 : Start to export the data....
+2019-04-09 12:52:13 : Connection to database successful!
+2019-04-09 12:52:13 : The folder for WGGC is exist:E:\BCPdemo\WGGC
+2019-04-09 12:52:13 : Export WGGC.dbo.AFP_EFilmUploadStatus to file:E:\BCPdemo\WGGC\AFP_EFilmUploadStatus.txt
+2019-04-09 12:52:13 : Execute command bcp WGGC.dbo.AFP_EFilmUploadStatus out E:\BCPdemo\WGGC\AFP_EFilmUploadStatus.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:13 : Execute command result: 
+开始复制...
+
+已复制 5 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 312.50 行。)
+2019-04-09 12:52:13 : Export WGGC.dbo.EclipseApplication to file:E:\BCPdemo\WGGC\EclipseApplication.txt
+2019-04-09 12:52:13 : Execute command bcp WGGC.dbo.EclipseApplication out E:\BCPdemo\WGGC\EclipseApplication.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:13 : Execute command result: 
+开始复制...
+
+已复制 792 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 792000.00 行。)
+2019-04-09 12:52:13 : Export WGGC.dbo.CDJobList to file:E:\BCPdemo\WGGC\CDJobList.txt
+2019-04-09 12:52:13 : Execute command bcp WGGC.dbo.CDJobList out E:\BCPdemo\WGGC\CDJobList.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:14 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:14 : Export WGGC.dbo.AFP_SupportedPrinter to file:E:\BCPdemo\WGGC\AFP_SupportedPrinter.txt
+2019-04-09 12:52:14 : Execute command bcp WGGC.dbo.AFP_SupportedPrinter out E:\BCPdemo\WGGC\AFP_SupportedPrinter.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:14 : Execute command result: 
+开始复制...
+
+已复制 1 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 1000.00 行。)
+2019-04-09 12:52:14 : Export WGGC.dbo.AFP_QRCodeSetting to file:E:\BCPdemo\WGGC\AFP_QRCodeSetting.txt
+2019-04-09 12:52:14 : Execute command bcp WGGC.dbo.AFP_QRCodeSetting out E:\BCPdemo\WGGC\AFP_QRCodeSetting.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:14 : Execute command result: 
+开始复制...
+
+已复制 2 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 2000.00 行。)
+2019-04-09 12:52:14 : Export WGGC.dbo.AFP_PrintTaskOfFilm to file:E:\BCPdemo\WGGC\AFP_PrintTaskOfFilm.txt
+2019-04-09 12:52:14 : Execute command bcp WGGC.dbo.AFP_PrintTaskOfFilm out E:\BCPdemo\WGGC\AFP_PrintTaskOfFilm.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:14 : Execute command result: 
+开始复制...
+
+已复制 121 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 121000.00 行。)
+2019-04-09 12:52:14 : Export WGGC.dbo.ModalityTypeList to file:E:\BCPdemo\WGGC\ModalityTypeList.txt
+2019-04-09 12:52:14 : Execute command bcp WGGC.dbo.ModalityTypeList out E:\BCPdemo\WGGC\ModalityTypeList.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:15 : Execute command result: 
+开始复制...
+
+已复制 16 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 16000.00 行。)
+2019-04-09 12:52:15 : Export WGGC.dbo.Alarm_Message to file:E:\BCPdemo\WGGC\Alarm_Message.txt
+2019-04-09 12:52:15 : Execute command bcp WGGC.dbo.Alarm_Message out E:\BCPdemo\WGGC\Alarm_Message.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:15 : Execute command result: 
+开始复制...
+1000 rows successfully bulk-copied to host-file. Total received: 1000
+1000 rows successfully bulk-copied to host-file. Total received: 2000
+1000 rows successfully bulk-copied to host-file. Total received: 3000
+1000 rows successfully bulk-copied to host-file. Total received: 4000
+1000 rows successfully bulk-copied to host-file. Total received: 5000
+1000 rows successfully bulk-copied to host-file. Total received: 6000
+1000 rows successfully bulk-copied to host-file. Total received: 7000
+1000 rows successfully bulk-copied to host-file. Total received: 8000
+1000 rows successfully bulk-copied to host-file. Total received: 9000
+1000 rows successfully bulk-copied to host-file. Total received: 10000
+1000 rows successfully bulk-copied to host-file. Total received: 11000
+1000 rows successfully bulk-copied to host-file. Total received: 12000
+1000 rows successfully bulk-copied to host-file. Total received: 13000
+1000 rows successfully bulk-copied to host-file. Total received: 14000
+1000 rows successfully bulk-copied to host-file. Total received: 15000
+1000 rows successfully bulk-copied to host-file. Total received: 16000
+1000 rows successfully bulk-copied to host-file. Total received: 17000
+1000 rows successfully bulk-copied to host-file. Total received: 18000
+1000 rows successfully bulk-copied to host-file. Total received: 19000
+
+已复制 19324 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 78     平均值: (每秒 247743.59 行。)
+2019-04-09 12:52:15 : Export WGGC.dbo.NetAE to file:E:\BCPdemo\WGGC\NetAE.txt
+2019-04-09 12:52:15 : Execute command bcp WGGC.dbo.NetAE out E:\BCPdemo\WGGC\NetAE.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:15 : Execute command result: 
+开始复制...
+
+已复制 13 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 13000.00 行。)
+2019-04-09 12:52:15 : Export WGGC.dbo.AFP_PrintTask to file:E:\BCPdemo\WGGC\AFP_PrintTask.txt
+2019-04-09 12:52:15 : Execute command bcp WGGC.dbo.AFP_PrintTask out E:\BCPdemo\WGGC\AFP_PrintTask.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:16 : Execute command result: 
+开始复制...
+
+已复制 224 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 224000.00 行。)
+2019-04-09 12:52:16 : Export WGGC.dbo.Patient to file:E:\BCPdemo\WGGC\Patient.txt
+2019-04-09 12:52:16 : Execute command bcp WGGC.dbo.Patient out E:\BCPdemo\WGGC\Patient.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:16 : Execute command result: 
+开始复制...
+
+已复制 98 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 98000.00 行。)
+2019-04-09 12:52:16 : Export WGGC.dbo.Alarm_ReceiverList to file:E:\BCPdemo\WGGC\Alarm_ReceiverList.txt
+2019-04-09 12:52:16 : Execute command bcp WGGC.dbo.Alarm_ReceiverList out E:\BCPdemo\WGGC\Alarm_ReceiverList.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:16 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:16 : Export WGGC.dbo.AFP_FilmPrinterStatus to file:E:\BCPdemo\WGGC\AFP_FilmPrinterStatus.txt
+2019-04-09 12:52:16 : Execute command bcp WGGC.dbo.AFP_FilmPrinterStatus out E:\BCPdemo\WGGC\AFP_FilmPrinterStatus.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:17 : Execute command result: 
+开始复制...
+
+已复制 4 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 4000.00 行。)
+2019-04-09 12:52:17 : Export WGGC.dbo.AFP_WorkingCalendar to file:E:\BCPdemo\WGGC\AFP_WorkingCalendar.txt
+2019-04-09 12:52:17 : Execute command bcp WGGC.dbo.AFP_WorkingCalendar out E:\BCPdemo\WGGC\AFP_WorkingCalendar.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:17 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:17 : Export WGGC.dbo.PrintJob to file:E:\BCPdemo\WGGC\PrintJob.txt
+2019-04-09 12:52:17 : Execute command bcp WGGC.dbo.PrintJob out E:\BCPdemo\WGGC\PrintJob.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:17 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:17 : Export WGGC.dbo.UserFollowTerminals to file:E:\BCPdemo\WGGC\UserFollowTerminals.txt
+2019-04-09 12:52:17 : Execute command bcp WGGC.dbo.UserFollowTerminals out E:\BCPdemo\WGGC\UserFollowTerminals.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:18 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:18 : Export WGGC.dbo.AFP_PrintTaskOfReport to file:E:\BCPdemo\WGGC\AFP_PrintTaskOfReport.txt
+2019-04-09 12:52:18 : Execute command bcp WGGC.dbo.AFP_PrintTaskOfReport out E:\BCPdemo\WGGC\AFP_PrintTaskOfReport.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:18 : Execute command result: 
+开始复制...
+
+已复制 75 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 75000.00 行。)
+2019-04-09 12:52:18 : Export WGGC.dbo.AFP_ModalityTypeExt to file:E:\BCPdemo\WGGC\AFP_ModalityTypeExt.txt
+2019-04-09 12:52:18 : Execute command bcp WGGC.dbo.AFP_ModalityTypeExt out E:\BCPdemo\WGGC\AFP_ModalityTypeExt.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:18 : Execute command result: 
+开始复制...
+
+已复制 16 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 16000.00 行。)
+2019-04-09 12:52:18 : Export WGGC.dbo.Alarm_Dispatch to file:E:\BCPdemo\WGGC\Alarm_Dispatch.txt
+2019-04-09 12:52:18 : Execute command bcp WGGC.dbo.Alarm_Dispatch out E:\BCPdemo\WGGC\Alarm_Dispatch.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:18 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:18 : Export WGGC.dbo.PrintStatistic to file:E:\BCPdemo\WGGC\PrintStatistic.txt
+2019-04-09 12:52:18 : Execute command bcp WGGC.dbo.PrintStatistic out E:\BCPdemo\WGGC\PrintStatistic.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:19 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:19 : Export WGGC.dbo.PrinterReg to file:E:\BCPdemo\WGGC\PrinterReg.txt
+2019-04-09 12:52:19 : Execute command bcp WGGC.dbo.PrinterReg out E:\BCPdemo\WGGC\PrinterReg.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:19 : Execute command result: 
+开始复制...
+
+已复制 5 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 5000.00 行。)
+2019-04-09 12:52:19 : Export WGGC.dbo.Alarm_Dispatch_P3F to file:E:\BCPdemo\WGGC\Alarm_Dispatch_P3F.txt
+2019-04-09 12:52:19 : Execute command bcp WGGC.dbo.Alarm_Dispatch_P3F out E:\BCPdemo\WGGC\Alarm_Dispatch_P3F.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:19 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:19 : Export WGGC.dbo.T_Integration_RecognizeParam to file:E:\BCPdemo\WGGC\T_Integration_RecognizeParam.txt
+2019-04-09 12:52:19 : Execute command bcp WGGC.dbo.T_Integration_RecognizeParam out E:\BCPdemo\WGGC\T_Integration_RecognizeParam.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:20 : Execute command result: 
+开始复制...
+
+已复制 2 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 2000.00 行。)
+2019-04-09 12:52:20 : Export WGGC.dbo.PrinterInfo to file:E:\BCPdemo\WGGC\PrinterInfo.txt
+2019-04-09 12:52:20 : Execute command bcp WGGC.dbo.PrinterInfo out E:\BCPdemo\WGGC\PrinterInfo.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:20 : Execute command result: 
+开始复制...
+
+已复制 50 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 50000.00 行。)
+2019-04-09 12:52:20 : Export WGGC.dbo.RoleProfile to file:E:\BCPdemo\WGGC\RoleProfile.txt
+2019-04-09 12:52:20 : Execute command bcp WGGC.dbo.RoleProfile out E:\BCPdemo\WGGC\RoleProfile.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:20 : Execute command result: 
+开始复制...
+
+已复制 726 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 726000.00 行。)
+2019-04-09 12:52:20 : Export WGGC.dbo.RuleJob to file:E:\BCPdemo\WGGC\RuleJob.txt
+2019-04-09 12:52:20 : Execute command bcp WGGC.dbo.RuleJob out E:\BCPdemo\WGGC\RuleJob.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:21 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:21 : Export WGGC.dbo.RuleJobItem to file:E:\BCPdemo\WGGC\RuleJobItem.txt
+2019-04-09 12:52:21 : Execute command bcp WGGC.dbo.RuleJobItem out E:\BCPdemo\WGGC\RuleJobItem.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:21 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:21 : Export WGGC.dbo.RuleList to file:E:\BCPdemo\WGGC\RuleList.txt
+2019-04-09 12:52:21 : Execute command bcp WGGC.dbo.RuleList out E:\BCPdemo\WGGC\RuleList.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:21 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:21 : Export WGGC.dbo.SystemProfile to file:E:\BCPdemo\WGGC\SystemProfile.txt
+2019-04-09 12:52:21 : Execute command bcp WGGC.dbo.SystemProfile out E:\BCPdemo\WGGC\SystemProfile.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:21 : Execute command result: 
+开始复制...
+
+已复制 660 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 660000.00 行。)
+2019-04-09 12:52:21 : Export WGGC.dbo.T_Integration_Dictionary to file:E:\BCPdemo\WGGC\T_Integration_Dictionary.txt
+2019-04-09 12:52:21 : Execute command bcp WGGC.dbo.T_Integration_Dictionary out E:\BCPdemo\WGGC\T_Integration_Dictionary.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:22 : Execute command result: 
+开始复制...
+
+已复制 268 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 268000.00 行。)
+2019-04-09 12:52:22 : Export WGGC.dbo.UserProfile to file:E:\BCPdemo\WGGC\UserProfile.txt
+2019-04-09 12:52:22 : Execute command bcp WGGC.dbo.UserProfile out E:\BCPdemo\WGGC\UserProfile.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:22 : Execute command result: 
+开始复制...
+
+已复制 38 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 38000.00 行。)
+2019-04-09 12:52:22 : Export WGGC.dbo.T_Integration_ExamInfo to file:E:\BCPdemo\WGGC\T_Integration_ExamInfo.txt
+2019-04-09 12:52:22 : Execute command bcp WGGC.dbo.T_Integration_ExamInfo out E:\BCPdemo\WGGC\T_Integration_ExamInfo.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:22 : Execute command result: 
+开始复制...
+
+已复制 334 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 20875.00 行。)
+2019-04-09 12:52:22 : Export WGGC.dbo.AFP_ReportPrinterProperty to file:E:\BCPdemo\WGGC\AFP_ReportPrinterProperty.txt
+2019-04-09 12:52:22 : Execute command bcp WGGC.dbo.AFP_ReportPrinterProperty out E:\BCPdemo\WGGC\AFP_ReportPrinterProperty.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:23 : Execute command result: 
+开始复制...
+
+已复制 28 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 28000.00 行。)
+2019-04-09 12:52:23 : Export WGGC.dbo.Users to file:E:\BCPdemo\WGGC\Users.txt
+2019-04-09 12:52:23 : Execute command bcp WGGC.dbo.Users out E:\BCPdemo\WGGC\Users.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:23 : Execute command result: 
+开始复制...
+
+已复制 3 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 3000.00 行。)
+2019-04-09 12:52:23 : Export WGGC.dbo.BodyPartSynonym to file:E:\BCPdemo\WGGC\BodyPartSynonym.txt
+2019-04-09 12:52:23 : Execute command bcp WGGC.dbo.BodyPartSynonym out E:\BCPdemo\WGGC\BodyPartSynonym.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:23 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:23 : Export WGGC.dbo.MWLPatient to file:E:\BCPdemo\WGGC\MWLPatient.txt
+2019-04-09 12:52:23 : Execute command bcp WGGC.dbo.MWLPatient out E:\BCPdemo\WGGC\MWLPatient.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:24 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:24 : Export WGGC.dbo.Study to file:E:\BCPdemo\WGGC\Study.txt
+2019-04-09 12:52:24 : Execute command bcp WGGC.dbo.Study out E:\BCPdemo\WGGC\Study.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:24 : Execute command result: 
+开始复制...
+
+已复制 113 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 113000.00 行。)
+2019-04-09 12:52:24 : Export WGGC.dbo.AFP_CustomizedStatistics to file:E:\BCPdemo\WGGC\AFP_CustomizedStatistics.txt
+2019-04-09 12:52:24 : Execute command bcp WGGC.dbo.AFP_CustomizedStatistics out E:\BCPdemo\WGGC\AFP_CustomizedStatistics.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:24 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:24 : Export WGGC.dbo.FunctionList to file:E:\BCPdemo\WGGC\FunctionList.txt
+2019-04-09 12:52:24 : Execute command bcp WGGC.dbo.FunctionList out E:\BCPdemo\WGGC\FunctionList.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:25 : Execute command result: 
+开始复制...
+
+已复制 31 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 31000.00 行。)
+2019-04-09 12:52:25 : Export WGGC.dbo.NotificationConfigure to file:E:\BCPdemo\WGGC\NotificationConfigure.txt
+2019-04-09 12:52:25 : Execute command bcp WGGC.dbo.NotificationConfigure out E:\BCPdemo\WGGC\NotificationConfigure.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:25 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:25 : Export WGGC.dbo.OverlayGroup to file:E:\BCPdemo\WGGC\OverlayGroup.txt
+2019-04-09 12:52:25 : Execute command bcp WGGC.dbo.OverlayGroup out E:\BCPdemo\WGGC\OverlayGroup.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:25 : Execute command result: 
+开始复制...
+1000 rows successfully bulk-copied to host-file. Total received: 1000
+1000 rows successfully bulk-copied to host-file. Total received: 2000
+
+已复制 2079 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 129937.50 行。)
+2019-04-09 12:52:25 : Export WGGC.dbo.vi_KIOSK_ExamInfo_Patient to file:E:\BCPdemo\WGGC\vi_KIOSK_ExamInfo_Patient.txt
+2019-04-09 12:52:25 : Execute command bcp WGGC.dbo.vi_KIOSK_ExamInfo_Patient out E:\BCPdemo\WGGC\vi_KIOSK_ExamInfo_Patient.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:25 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:25 : Export WGGC.dbo.HotkeyMenuGroup to file:E:\BCPdemo\WGGC\HotkeyMenuGroup.txt
+2019-04-09 12:52:25 : Execute command bcp WGGC.dbo.HotkeyMenuGroup out E:\BCPdemo\WGGC\HotkeyMenuGroup.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:26 : Execute command result: 
+开始复制...
+
+已复制 37 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 37000.00 行。)
+2019-04-09 12:52:26 : Export WGGC.dbo.WorklistColumnGroup_Language to file:E:\BCPdemo\WGGC\WorklistColumnGroup_Language.txt
+2019-04-09 12:52:26 : Execute command bcp WGGC.dbo.WorklistColumnGroup_Language out E:\BCPdemo\WGGC\WorklistColumnGroup_Language.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:26 : Execute command result: 
+开始复制...
+
+已复制 78 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 78000.00 行。)
+2019-04-09 12:52:26 : Export WGGC.dbo.Role to file:E:\BCPdemo\WGGC\Role.txt
+2019-04-09 12:52:26 : Execute command bcp WGGC.dbo.Role out E:\BCPdemo\WGGC\Role.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:26 : Execute command result: 
+开始复制...
+
+已复制 4 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 4000.00 行。)
+2019-04-09 12:52:26 : Export WGGC.dbo.AFP_FilmPrinterProperty to file:E:\BCPdemo\WGGC\AFP_FilmPrinterProperty.txt
+2019-04-09 12:52:26 : Execute command bcp WGGC.dbo.AFP_FilmPrinterProperty out E:\BCPdemo\WGGC\AFP_FilmPrinterProperty.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:27 : Execute command result: 
+开始复制...
+
+已复制 28 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 28000.00 行。)
+2019-04-09 12:52:27 : Export WGGC.dbo.RoleFunction to file:E:\BCPdemo\WGGC\RoleFunction.txt
+2019-04-09 12:52:27 : Execute command bcp WGGC.dbo.RoleFunction out E:\BCPdemo\WGGC\RoleFunction.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:27 : Execute command result: 
+开始复制...
+
+已复制 33 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 33000.00 行。)
+2019-04-09 12:52:27 : Export WGGC.dbo.Overlay_Language to file:E:\BCPdemo\WGGC\Overlay_Language.txt
+2019-04-09 12:52:27 : Execute command bcp WGGC.dbo.Overlay_Language out E:\BCPdemo\WGGC\Overlay_Language.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:27 : Execute command result: 
+开始复制...
+
+已复制 110 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 110000.00 行。)
+2019-04-09 12:52:27 : Export WGGC.dbo.WebReport to file:E:\BCPdemo\WGGC\WebReport.txt
+2019-04-09 12:52:27 : Execute command bcp WGGC.dbo.WebReport out E:\BCPdemo\WGGC\WebReport.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:28 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:28 : Export WGGC.dbo.Series to file:E:\BCPdemo\WGGC\Series.txt
+2019-04-09 12:52:28 : Execute command bcp WGGC.dbo.Series out E:\BCPdemo\WGGC\Series.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:28 : Execute command result: 
+开始复制...
+
+已复制 122 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 122000.00 行。)
+2019-04-09 12:52:28 : Export WGGC.dbo.vi_KIOSK_ExamInfo_Order to file:E:\BCPdemo\WGGC\vi_KIOSK_ExamInfo_Order.txt
+2019-04-09 12:52:28 : Execute command bcp WGGC.dbo.vi_KIOSK_ExamInfo_Order out E:\BCPdemo\WGGC\vi_KIOSK_ExamInfo_Order.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:28 : Execute command result: 
+开始复制...
+
+已复制 34 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 34000.00 行。)
+2019-04-09 12:52:28 : Export WGGC.dbo.Image to file:E:\BCPdemo\WGGC\Image.txt
+2019-04-09 12:52:28 : Execute command bcp WGGC.dbo.Image out E:\BCPdemo\WGGC\Image.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:28 : Execute command result: 
+开始复制...
+
+已复制 721 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 721000.00 行。)
+2019-04-09 12:52:28 : Export WGGC.dbo.WebReportDiagnosesHistory to file:E:\BCPdemo\WGGC\WebReportDiagnosesHistory.txt
+2019-04-09 12:52:28 : Execute command bcp WGGC.dbo.WebReportDiagnosesHistory out E:\BCPdemo\WGGC\WebReportDiagnosesHistory.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:29 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:29 : Export WGGC.dbo.AFP_IncompleteTaskRule to file:E:\BCPdemo\WGGC\AFP_IncompleteTaskRule.txt
+2019-04-09 12:52:29 : Execute command bcp WGGC.dbo.AFP_IncompleteTaskRule out E:\BCPdemo\WGGC\AFP_IncompleteTaskRule.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:29 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:29 : Export WGGC.dbo.DiagnosesTemplate to file:E:\BCPdemo\WGGC\DiagnosesTemplate.txt
+2019-04-09 12:52:29 : Execute command bcp WGGC.dbo.DiagnosesTemplate out E:\BCPdemo\WGGC\DiagnosesTemplate.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:29 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:29 : Export WGGC.dbo.SiteInfo to file:E:\BCPdemo\WGGC\SiteInfo.txt
+2019-04-09 12:52:29 : Execute command bcp WGGC.dbo.SiteInfo out E:\BCPdemo\WGGC\SiteInfo.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:30 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:30 : Export WGGC.dbo.TransferSyntaxPolicy to file:E:\BCPdemo\WGGC\TransferSyntaxPolicy.txt
+2019-04-09 12:52:30 : Execute command bcp WGGC.dbo.TransferSyntaxPolicy out E:\BCPdemo\WGGC\TransferSyntaxPolicy.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:30 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:30 : Export WGGC.dbo.Element to file:E:\BCPdemo\WGGC\Element.txt
+2019-04-09 12:52:30 : Execute command bcp WGGC.dbo.Element out E:\BCPdemo\WGGC\Element.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:30 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:30 : Export WGGC.dbo.AFP_Memo to file:E:\BCPdemo\WGGC\AFP_Memo.txt
+2019-04-09 12:52:30 : Execute command bcp WGGC.dbo.AFP_Memo out E:\BCPdemo\WGGC\AFP_Memo.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:31 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:31 : Export WGGC.dbo.Element_setting to file:E:\BCPdemo\WGGC\Element_setting.txt
+2019-04-09 12:52:31 : Execute command bcp WGGC.dbo.Element_setting out E:\BCPdemo\WGGC\Element_setting.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:31 : Execute command result: 
+开始复制...
+
+已复制 60 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 60000.00 行。)
+2019-04-09 12:52:31 : Export WGGC.dbo.AFP_Message to file:E:\BCPdemo\WGGC\AFP_Message.txt
+2019-04-09 12:52:31 : Execute command bcp WGGC.dbo.AFP_Message out E:\BCPdemo\WGGC\AFP_Message.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:31 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:31 : Export WGGC.dbo.Report to file:E:\BCPdemo\WGGC\Report.txt
+2019-04-09 12:52:31 : Execute command bcp WGGC.dbo.Report out E:\BCPdemo\WGGC\Report.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:31 : Execute command result: 
+开始复制...
+
+已复制 224 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 224000.00 行。)
+2019-04-09 12:52:31 : Export WGGC.dbo.MWLStatus to file:E:\BCPdemo\WGGC\MWLStatus.txt
+2019-04-09 12:52:31 : Execute command bcp WGGC.dbo.MWLStatus out E:\BCPdemo\WGGC\MWLStatus.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:32 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:32 : Export WGGC.dbo.ClientAE to file:E:\BCPdemo\WGGC\ClientAE.txt
+2019-04-09 12:52:32 : Execute command bcp WGGC.dbo.ClientAE out E:\BCPdemo\WGGC\ClientAE.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:32 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:32 : Export WGGC.dbo.AFP_ExceptionalStudy to file:E:\BCPdemo\WGGC\AFP_ExceptionalStudy.txt
+2019-04-09 12:52:32 : Execute command bcp WGGC.dbo.AFP_ExceptionalStudy out E:\BCPdemo\WGGC\AFP_ExceptionalStudy.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:32 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:32 : Export WGGC.dbo.StorageAE to file:E:\BCPdemo\WGGC\StorageAE.txt
+2019-04-09 12:52:32 : Execute command bcp WGGC.dbo.StorageAE out E:\BCPdemo\WGGC\StorageAE.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:33 : Execute command result: 
+开始复制...
+
+已复制 2 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 2000.00 行。)
+2019-04-09 12:52:33 : Export WGGC.dbo.AFP_Parameters to file:E:\BCPdemo\WGGC\AFP_Parameters.txt
+2019-04-09 12:52:33 : Execute command bcp WGGC.dbo.AFP_Parameters out E:\BCPdemo\WGGC\AFP_Parameters.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:33 : Execute command result: 
+开始复制...
+
+已复制 104 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 104000.00 行。)
+2019-04-09 12:52:33 : Export WGGC.dbo.SMS to file:E:\BCPdemo\WGGC\SMS.txt
+2019-04-09 12:52:33 : Execute command bcp WGGC.dbo.SMS out E:\BCPdemo\WGGC\SMS.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:33 : Execute command result: 
+开始复制...
+
+已复制 113 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 113000.00 行。)
+2019-04-09 12:52:33 : Export WGGC.dbo.ServiceEntity to file:E:\BCPdemo\WGGC\ServiceEntity.txt
+2019-04-09 12:52:33 : Execute command bcp WGGC.dbo.ServiceEntity out E:\BCPdemo\WGGC\ServiceEntity.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:34 : Execute command result: 
+开始复制...
+
+已复制 10 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 10000.00 行。)
+2019-04-09 12:52:34 : Export WGGC.dbo.AFP_PrintMode to file:E:\BCPdemo\WGGC\AFP_PrintMode.txt
+2019-04-09 12:52:34 : Execute command bcp WGGC.dbo.AFP_PrintMode out E:\BCPdemo\WGGC\AFP_PrintMode.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:34 : Execute command result: 
+开始复制...
+
+已复制 26 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 26000.00 行。)
+2019-04-09 12:52:34 : Export WGGC.dbo.PacsSection to file:E:\BCPdemo\WGGC\PacsSection.txt
+2019-04-09 12:52:34 : Execute command bcp WGGC.dbo.PacsSection out E:\BCPdemo\WGGC\PacsSection.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:34 : Execute command result: 
+开始复制...
+
+已复制 1 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 1000.00 行。)
+2019-04-09 12:52:34 : Export WGGC.dbo.StorageAccess to file:E:\BCPdemo\WGGC\StorageAccess.txt
+2019-04-09 12:52:34 : Execute command bcp WGGC.dbo.StorageAccess out E:\BCPdemo\WGGC\StorageAccess.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:35 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:35 : Export WGGC.dbo.acq_log to file:E:\BCPdemo\WGGC\acq_log.txt
+2019-04-09 12:52:35 : Execute command bcp WGGC.dbo.acq_log out E:\BCPdemo\WGGC\acq_log.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:35 : Execute command result: 
+开始复制...
+
+已复制 2 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 2000.00 行。)
+2019-04-09 12:52:35 : Export WGGC.dbo.modality_profile to file:E:\BCPdemo\WGGC\modality_profile.txt
+2019-04-09 12:52:35 : Execute command bcp WGGC.dbo.modality_profile out E:\BCPdemo\WGGC\modality_profile.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:35 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:35 : Export WGGC.dbo.AFP_ReportInfo to file:E:\BCPdemo\WGGC\AFP_ReportInfo.txt
+2019-04-09 12:52:35 : Execute command bcp WGGC.dbo.AFP_ReportInfo out E:\BCPdemo\WGGC\AFP_ReportInfo.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:36 : Execute command result: 
+开始复制...
+
+已复制 16 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 16000.00 行。)
+2019-04-09 12:52:36 : Export WGGC.dbo.HangingProtocol to file:E:\BCPdemo\WGGC\HangingProtocol.txt
+2019-04-09 12:52:36 : Execute command bcp WGGC.dbo.HangingProtocol out E:\BCPdemo\WGGC\HangingProtocol.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:36 : Execute command result: 
+开始复制...
+
+已复制 6 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 6000.00 行。)
+2019-04-09 12:52:36 : Export WGGC.dbo.AFP_eFilmWorklistColumn to file:E:\BCPdemo\WGGC\AFP_eFilmWorklistColumn.txt
+2019-04-09 12:52:36 : Execute command bcp WGGC.dbo.AFP_eFilmWorklistColumn out E:\BCPdemo\WGGC\AFP_eFilmWorklistColumn.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:36 : Execute command result: 
+开始复制...
+
+已复制 68 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 68000.00 行。)
+2019-04-09 12:52:36 : Export WGGC.dbo.PrintProtocol to file:E:\BCPdemo\WGGC\PrintProtocol.txt
+2019-04-09 12:52:36 : Execute command bcp WGGC.dbo.PrintProtocol out E:\BCPdemo\WGGC\PrintProtocol.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:36 : Execute command result: 
+开始复制...
+
+已复制 8 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 8000.00 行。)
+2019-04-09 12:52:36 : Export WGGC.dbo.lock_table to file:E:\BCPdemo\WGGC\lock_table.txt
+2019-04-09 12:52:36 : Execute command bcp WGGC.dbo.lock_table out E:\BCPdemo\WGGC\lock_table.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:37 : Execute command result: 
+开始复制...
+
+已复制 2 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 2000.00 行。)
+2019-04-09 12:52:37 : Export WGGC.dbo.AFP_RolePermission to file:E:\BCPdemo\WGGC\AFP_RolePermission.txt
+2019-04-09 12:52:37 : Execute command bcp WGGC.dbo.AFP_RolePermission out E:\BCPdemo\WGGC\AFP_RolePermission.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:37 : Execute command result: 
+开始复制...
+
+已复制 19 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 19000.00 行。)
+2019-04-09 12:52:37 : Export WGGC.dbo.temp_patient to file:E:\BCPdemo\WGGC\temp_patient.txt
+2019-04-09 12:52:37 : Execute command bcp WGGC.dbo.temp_patient out E:\BCPdemo\WGGC\temp_patient.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:37 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:37 : Export WGGC.dbo.AFP_FilmInfo to file:E:\BCPdemo\WGGC\AFP_FilmInfo.txt
+2019-04-09 12:52:37 : Execute command bcp WGGC.dbo.AFP_FilmInfo out E:\BCPdemo\WGGC\AFP_FilmInfo.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:38 : Execute command result: 
+开始复制...
+
+已复制 113 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 113000.00 行。)
+2019-04-09 12:52:38 : Export WGGC.dbo.ACErrorList to file:E:\BCPdemo\WGGC\ACErrorList.txt
+2019-04-09 12:52:38 : Execute command bcp WGGC.dbo.ACErrorList out E:\BCPdemo\WGGC\ACErrorList.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:38 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:38 : Export WGGC.dbo.AFP_MessageQueue to file:E:\BCPdemo\WGGC\AFP_MessageQueue.txt
+2019-04-09 12:52:38 : Execute command bcp WGGC.dbo.AFP_MessageQueue out E:\BCPdemo\WGGC\AFP_MessageQueue.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:38 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:38 : Export WGGC.dbo.section_code to file:E:\BCPdemo\WGGC\section_code.txt
+2019-04-09 12:52:38 : Execute command bcp WGGC.dbo.section_code out E:\BCPdemo\WGGC\section_code.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:39 : Execute command result: 
+开始复制...
+
+已复制 5 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 5000.00 行。)
+2019-04-09 12:52:39 : Export WGGC.dbo.standard_resource_code to file:E:\BCPdemo\WGGC\standard_resource_code.txt
+2019-04-09 12:52:39 : Execute command bcp WGGC.dbo.standard_resource_code out E:\BCPdemo\WGGC\standard_resource_code.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:39 : Execute command result: 
+开始复制...
+
+已复制 6 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 6000.00 行。)
+2019-04-09 12:52:39 : Export WGGC.dbo.RIS_FO to file:E:\BCPdemo\WGGC\RIS_FO.txt
+2019-04-09 12:52:39 : Execute command bcp WGGC.dbo.RIS_FO out E:\BCPdemo\WGGC\RIS_FO.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:39 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:39 : Export WGGC.dbo.AFP_PatientTypeDescription to file:E:\BCPdemo\WGGC\AFP_PatientTypeDescription.txt
+2019-04-09 12:52:39 : Execute command bcp WGGC.dbo.AFP_PatientTypeDescription out E:\BCPdemo\WGGC\AFP_PatientTypeDescription.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:40 : Execute command result: 
+开始复制...
+
+已复制 5 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 5000.00 行。)
+2019-04-09 12:52:40 : Export WGGC.dbo.GCCommandParamRecv to file:E:\BCPdemo\WGGC\GCCommandParamRecv.txt
+2019-04-09 12:52:40 : Execute command bcp WGGC.dbo.GCCommandParamRecv out E:\BCPdemo\WGGC\GCCommandParamRecv.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:40 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:40 : Export WGGC.dbo.GCCommandParamSend to file:E:\BCPdemo\WGGC\GCCommandParamSend.txt
+2019-04-09 12:52:40 : Execute command bcp WGGC.dbo.GCCommandParamSend out E:\BCPdemo\WGGC\GCCommandParamSend.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:40 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:40 : Export WGGC.dbo.AFP_PrintModeDescription to file:E:\BCPdemo\WGGC\AFP_PrintModeDescription.txt
+2019-04-09 12:52:40 : Execute command bcp WGGC.dbo.AFP_PrintModeDescription out E:\BCPdemo\WGGC\AFP_PrintModeDescription.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:40 : Execute command result: 
+开始复制...
+
+已复制 5 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 5000.00 行。)
+2019-04-09 12:52:40 : Export WGGC.dbo.GCCommandRecv to file:E:\BCPdemo\WGGC\GCCommandRecv.txt
+2019-04-09 12:52:40 : Execute command bcp WGGC.dbo.GCCommandRecv out E:\BCPdemo\WGGC\GCCommandRecv.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:41 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:41 : Export WGGC.dbo.AFP_CloudFilmConfiguration to file:E:\BCPdemo\WGGC\AFP_CloudFilmConfiguration.txt
+2019-04-09 12:52:41 : Execute command bcp WGGC.dbo.AFP_CloudFilmConfiguration out E:\BCPdemo\WGGC\AFP_CloudFilmConfiguration.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:41 : Execute command result: 
+开始复制...
+
+已复制 2 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 2000.00 行。)
+2019-04-09 12:52:41 : Export WGGC.dbo.AFP_Department to file:E:\BCPdemo\WGGC\AFP_Department.txt
+2019-04-09 12:52:41 : Execute command bcp WGGC.dbo.AFP_Department out E:\BCPdemo\WGGC\AFP_Department.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:41 : Execute command result: 
+开始复制...
+
+已复制 110 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 110000.00 行。)
+2019-04-09 12:52:41 : Export WGGC.dbo.GCCommandSend to file:E:\BCPdemo\WGGC\GCCommandSend.txt
+2019-04-09 12:52:41 : Execute command bcp WGGC.dbo.GCCommandSend out E:\BCPdemo\WGGC\GCCommandSend.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:42 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:42 : Export WGGC.dbo.AFP_ExamInfo to file:E:\BCPdemo\WGGC\AFP_ExamInfo.txt
+2019-04-09 12:52:42 : Execute command bcp WGGC.dbo.AFP_ExamInfo out E:\BCPdemo\WGGC\AFP_ExamInfo.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:42 : Execute command result: 
+开始复制...
+
+已复制 94 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 94000.00 行。)
+2019-04-09 12:52:42 : Export WGGC.dbo.AFP_TerminalStatus to file:E:\BCPdemo\WGGC\AFP_TerminalStatus.txt
+2019-04-09 12:52:42 : Execute command bcp WGGC.dbo.AFP_TerminalStatus out E:\BCPdemo\WGGC\AFP_TerminalStatus.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:42 : Execute command result: 
+开始复制...
+
+已复制 5 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 5000.00 行。)
+2019-04-09 12:52:42 : Export WGGC.dbo.AFP_ReportPrinterStatus to file:E:\BCPdemo\WGGC\AFP_ReportPrinterStatus.txt
+2019-04-09 12:52:42 : Execute command bcp WGGC.dbo.AFP_ReportPrinterStatus out E:\BCPdemo\WGGC\AFP_ReportPrinterStatus.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:43 : Execute command result: 
+开始复制...
+
+已复制 5 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 5000.00 行。)
+2019-04-09 12:52:43 : Export WGGC.dbo.AFP_ReportPrinterStatusMap to file:E:\BCPdemo\WGGC\AFP_ReportPrinterStatusMap.txt
+2019-04-09 12:52:43 : Execute command bcp WGGC.dbo.AFP_ReportPrinterStatusMap out E:\BCPdemo\WGGC\AFP_ReportPrinterStatusMap.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:43 : Execute command result: 
+开始复制...
+
+已复制 31 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 31000.00 行。)
+2019-04-09 12:52:43 : Export WGGC.dbo.AFP_PrintTime to file:E:\BCPdemo\WGGC\AFP_PrintTime.txt
+2019-04-09 12:52:43 : Execute command bcp WGGC.dbo.AFP_PrintTime out E:\BCPdemo\WGGC\AFP_PrintTime.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:43 : Execute command result: 
+开始复制...
+
+已复制 20 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 20000.00 行。)
+2019-04-09 12:52:43 : Export WGGC.dbo.SMS_PROBLEM_LOG to file:E:\BCPdemo\WGGC\SMS_PROBLEM_LOG.txt
+2019-04-09 12:52:43 : Execute command bcp WGGC.dbo.SMS_PROBLEM_LOG out E:\BCPdemo\WGGC\SMS_PROBLEM_LOG.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:43 : Execute command result: 
+开始复制...
+
+已复制 2 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 2000.00 行。)
+2019-04-09 12:52:43 : Export WGGC.dbo.Staff to file:E:\BCPdemo\WGGC\Staff.txt
+2019-04-09 12:52:43 : Execute command bcp WGGC.dbo.Staff out E:\BCPdemo\WGGC\Staff.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:44 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:44 : Export WGGC.dbo.AFP_PrintTerminalInfo to file:E:\BCPdemo\WGGC\AFP_PrintTerminalInfo.txt
+2019-04-09 12:52:44 : Execute command bcp WGGC.dbo.AFP_PrintTerminalInfo out E:\BCPdemo\WGGC\AFP_PrintTerminalInfo.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:44 : Execute command result: 
+开始复制...
+
+已复制 5 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 5000.00 行。)
+2019-04-09 12:52:44 : Export WGGC.dbo.DataStorage to file:E:\BCPdemo\WGGC\DataStorage.txt
+2019-04-09 12:52:44 : Execute command bcp WGGC.dbo.DataStorage out E:\BCPdemo\WGGC\DataStorage.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:44 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:44 : Export WGGC.dbo.ProcCodeMapping to file:E:\BCPdemo\WGGC\ProcCodeMapping.txt
+2019-04-09 12:52:44 : Execute command bcp WGGC.dbo.ProcCodeMapping out E:\BCPdemo\WGGC\ProcCodeMapping.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:45 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:45 : Export WGGC.dbo.BodyPartList to file:E:\BCPdemo\WGGC\BodyPartList.txt
+2019-04-09 12:52:45 : Execute command bcp WGGC.dbo.BodyPartList out E:\BCPdemo\WGGC\BodyPartList.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:45 : Execute command result: 
+开始复制...
+
+已复制 68 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 68000.00 行。)
+2019-04-09 12:52:45 : Export WGGC.dbo.ViewPositionList to file:E:\BCPdemo\WGGC\ViewPositionList.txt
+2019-04-09 12:52:45 : Execute command bcp WGGC.dbo.ViewPositionList out E:\BCPdemo\WGGC\ViewPositionList.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:45 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:45 : The folder for AUDIT is exist:E:\BCPdemo\AUDIT
+2019-04-09 12:52:45 : Export AUDIT.dbo.Audit_Log to file:E:\BCPdemo\AUDIT\Audit_Log.txt
+2019-04-09 12:52:45 : Execute command bcp AUDIT.dbo.Audit_Log out E:\BCPdemo\AUDIT\Audit_Log.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:46 : Execute command result: 
+开始复制...
+1000 rows successfully bulk-copied to host-file. Total received: 1000
+1000 rows successfully bulk-copied to host-file. Total received: 2000
+
+已复制 2448 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 2448000.00 行。)
+2019-04-09 12:52:46 : Export AUDIT.dbo.QC_Log to file:E:\BCPdemo\AUDIT\QC_Log.txt
+2019-04-09 12:52:46 : Execute command bcp AUDIT.dbo.QC_Log out E:\BCPdemo\AUDIT\QC_Log.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:46 : Execute command result: 
+开始复制...
+
+已复制 2 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 2000.00 行。)
+2019-04-09 12:52:46 : The folder for Printer is exist:E:\BCPdemo\Printer
+2019-04-09 12:52:46 : Export Printer.dbo.Page to file:E:\BCPdemo\Printer\Page.txt
+2019-04-09 12:52:46 : Execute command bcp Printer.dbo.Page out E:\BCPdemo\Printer\Page.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:46 : Execute command result: 
+开始复制...
+
+已复制 34 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 34000.00 行。)
+2019-04-09 12:52:46 : Export Printer.dbo.Media to file:E:\BCPdemo\Printer\Media.txt
+2019-04-09 12:52:46 : Execute command bcp Printer.dbo.Media out E:\BCPdemo\Printer\Media.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:47 : Execute command result: 
+开始复制...
+
+已复制 13 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 13000.00 行。)
+2019-04-09 12:52:47 : Export Printer.dbo.ImageBox to file:E:\BCPdemo\Printer\ImageBox.txt
+2019-04-09 12:52:47 : Execute command bcp Printer.dbo.ImageBox out E:\BCPdemo\Printer\ImageBox.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:47 : Execute command result: 
+开始复制...
+
+已复制 34 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 34000.00 行。)
+2019-04-09 12:52:47 : Export Printer.dbo.DeliveryJob to file:E:\BCPdemo\Printer\DeliveryJob.txt
+2019-04-09 12:52:47 : Execute command bcp Printer.dbo.DeliveryJob out E:\BCPdemo\Printer\DeliveryJob.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:47 : Execute command result: 
+开始复制...
+
+已复制 34 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 2125.00 行。)
+2019-04-09 12:52:47 : Export Printer.dbo.AutoForwardRule to file:E:\BCPdemo\Printer\AutoForwardRule.txt
+2019-04-09 12:52:47 : Execute command bcp Printer.dbo.AutoForwardRule out E:\BCPdemo\Printer\AutoForwardRule.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:47 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:47 : Export Printer.dbo.OCRCache to file:E:\BCPdemo\Printer\OCRCache.txt
+2019-04-09 12:52:47 : Execute command bcp Printer.dbo.OCRCache out E:\BCPdemo\Printer\OCRCache.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:48 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:48 : Export Printer.dbo.Session to file:E:\BCPdemo\Printer\Session.txt
+2019-04-09 12:52:48 : Execute command bcp Printer.dbo.Session out E:\BCPdemo\Printer\Session.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:48 : Execute command result: 
+开始复制...
+
+已复制 30 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 30000.00 行。)
+2019-04-09 12:52:48 : Export Printer.dbo.PLut to file:E:\BCPdemo\Printer\PLut.txt
+2019-04-09 12:52:48 : Execute command bcp Printer.dbo.PLut out E:\BCPdemo\Printer\PLut.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:48 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:48 : The folder for OCRConfigDB is exist:E:\BCPdemo\OCRConfigDB
+2019-04-09 12:52:49 : Export OCRConfigDB.dbo.KeyField to file:E:\BCPdemo\OCRConfigDB\KeyField.txt
+2019-04-09 12:52:49 : Execute command bcp OCRConfigDB.dbo.KeyField out E:\BCPdemo\OCRConfigDB\KeyField.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:49 : Execute command result: 
+开始复制...
+
+已复制 28 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 1750.00 行。)
+2019-04-09 12:52:49 : Export OCRConfigDB.dbo.ROI to file:E:\BCPdemo\OCRConfigDB\ROI.txt
+2019-04-09 12:52:49 : Execute command bcp OCRConfigDB.dbo.ROI out E:\BCPdemo\OCRConfigDB\ROI.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:49 : Execute command result: 
+开始复制...
+
+已复制 12 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 12000.00 行。)
+2019-04-09 12:52:49 : Export OCRConfigDB.dbo.ROICoord to file:E:\BCPdemo\OCRConfigDB\ROICoord.txt
+2019-04-09 12:52:49 : Execute command bcp OCRConfigDB.dbo.ROICoord out E:\BCPdemo\OCRConfigDB\ROICoord.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:50 : Execute command result: 
+开始复制...
+
+已复制 12 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 12000.00 行。)
+2019-04-09 12:52:50 : Export OCRConfigDB.dbo.SCUIdentity to file:E:\BCPdemo\OCRConfigDB\SCUIdentity.txt
+2019-04-09 12:52:50 : Execute command bcp OCRConfigDB.dbo.SCUIdentity out E:\BCPdemo\OCRConfigDB\SCUIdentity.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:50 : Execute command result: 
+开始复制...
+
+已复制 3 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 3000.00 行。)
+2019-04-09 12:52:50 : Export OCRConfigDB.dbo.KeyFields to file:E:\BCPdemo\OCRConfigDB\KeyFields.txt
+2019-04-09 12:52:50 : Execute command bcp OCRConfigDB.dbo.KeyFields out E:\BCPdemo\OCRConfigDB\KeyFields.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:50 : Execute command result: 
+开始复制...
+
+已复制 14 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 14000.00 行。)
+2019-04-09 12:52:50 : The folder for ECS is exist:E:\BCPdemo\ECS
+2019-04-09 12:52:50 : Export ECS.dbo.Patient to file:E:\BCPdemo\ECS\Patient.txt
+2019-04-09 12:52:50 : Execute command bcp ECS.dbo.Patient out E:\BCPdemo\ECS\Patient.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:50 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:50 : Export ECS.dbo.Treatment to file:E:\BCPdemo\ECS\Treatment.txt
+2019-04-09 12:52:50 : Execute command bcp ECS.dbo.Treatment out E:\BCPdemo\ECS\Treatment.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:51 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:51 : Export ECS.dbo.Reservation to file:E:\BCPdemo\ECS\Reservation.txt
+2019-04-09 12:52:51 : Execute command bcp ECS.dbo.Reservation out E:\BCPdemo\ECS\Reservation.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:51 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:51 : Export ECS.dbo.PlaceOrder to file:E:\BCPdemo\ECS\PlaceOrder.txt
+2019-04-09 12:52:51 : Execute command bcp ECS.dbo.PlaceOrder out E:\BCPdemo\ECS\PlaceOrder.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:51 : Execute command result: 
+开始复制...
+1000 rows successfully bulk-copied to host-file. Total received: 1000
+1000 rows successfully bulk-copied to host-file. Total received: 2000
+
+已复制 2079 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 129937.50 行。)
+2019-04-09 12:52:51 : Export ECS.dbo.Request to file:E:\BCPdemo\ECS\Request.txt
+2019-04-09 12:52:51 : Execute command bcp ECS.dbo.Request out E:\BCPdemo\ECS\Request.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:52 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:52 : Export ECS.dbo.ExamReservation to file:E:\BCPdemo\ECS\ExamReservation.txt
+2019-04-09 12:52:52 : Execute command bcp ECS.dbo.ExamReservation out E:\BCPdemo\ECS\ExamReservation.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:52 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:52 : Export ECS.dbo.Examination to file:E:\BCPdemo\ECS\Examination.txt
+2019-04-09 12:52:52 : Execute command bcp ECS.dbo.Examination out E:\BCPdemo\ECS\Examination.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:52 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:52 : Export ECS.dbo.ExamType to file:E:\BCPdemo\ECS\ExamType.txt
+2019-04-09 12:52:52 : Execute command bcp ECS.dbo.ExamType out E:\BCPdemo\ECS\ExamType.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:53 : Execute command result: 
+开始复制...
+
+已复制 33 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 33000.00 行。)
+2019-04-09 12:52:53 : Export ECS.dbo.Queue to file:E:\BCPdemo\ECS\Queue.txt
+2019-04-09 12:52:53 : Execute command bcp ECS.dbo.Queue out E:\BCPdemo\ECS\Queue.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:53 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:53 : Export ECS.dbo.PatientQueue to file:E:\BCPdemo\ECS\PatientQueue.txt
+2019-04-09 12:52:53 : Execute command bcp ECS.dbo.PatientQueue out E:\BCPdemo\ECS\PatientQueue.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:53 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:53 : Export ECS.dbo.FilmReportStatus to file:E:\BCPdemo\ECS\FilmReportStatus.txt
+2019-04-09 12:52:53 : Execute command bcp ECS.dbo.FilmReportStatus out E:\BCPdemo\ECS\FilmReportStatus.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:54 : Execute command result: 
+开始复制...
+
+已复制 94 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 94000.00 行。)
+2019-04-09 12:52:54 : Export ECS.dbo.StatusDictionary to file:E:\BCPdemo\ECS\StatusDictionary.txt
+2019-04-09 12:52:54 : Execute command bcp ECS.dbo.StatusDictionary out E:\BCPdemo\ECS\StatusDictionary.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:54 : Execute command result: 
+开始复制...
+
+已复制 62 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 62000.00 行。)
+2019-04-09 12:52:54 : Export ECS.dbo.Memo to file:E:\BCPdemo\ECS\Memo.txt
+2019-04-09 12:52:54 : Execute command bcp ECS.dbo.Memo out E:\BCPdemo\ECS\Memo.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:54 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:54 : Export ECS.dbo.PatientInfo to file:E:\BCPdemo\ECS\PatientInfo.txt
+2019-04-09 12:52:54 : Execute command bcp ECS.dbo.PatientInfo out E:\BCPdemo\ECS\PatientInfo.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:54 : Execute command result: 
+开始复制...
+
+已复制 14 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 14000.00 行。)
+2019-04-09 12:52:54 : Export ECS.dbo.ExamInfo to file:E:\BCPdemo\ECS\ExamInfo.txt
+2019-04-09 12:52:54 : Execute command bcp ECS.dbo.ExamInfo out E:\BCPdemo\ECS\ExamInfo.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:55 : Execute command result: 
+开始复制...
+
+已复制 2 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 2000.00 行。)
+2019-04-09 12:52:55 : Export ECS.dbo.FilmInfo to file:E:\BCPdemo\ECS\FilmInfo.txt
+2019-04-09 12:52:55 : Execute command bcp ECS.dbo.FilmInfo out E:\BCPdemo\ECS\FilmInfo.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:55 : Execute command result: 
+开始复制...
+
+已复制 14 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 14000.00 行。)
+2019-04-09 12:52:55 : Export ECS.dbo.ReportInfo to file:E:\BCPdemo\ECS\ReportInfo.txt
+2019-04-09 12:52:55 : Execute command bcp ECS.dbo.ReportInfo out E:\BCPdemo\ECS\ReportInfo.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:55 : Execute command result: 
+开始复制...
+
+已复制 10 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1      平均值: (每秒 10000.00 行。)
+2019-04-09 12:52:55 : Export ECS.dbo.FileInfo to file:E:\BCPdemo\ECS\FileInfo.txt
+2019-04-09 12:52:55 : Execute command bcp ECS.dbo.FileInfo out E:\BCPdemo\ECS\FileInfo.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:56 : Execute command result: 
+开始复制...
+
+已复制 34 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 16     平均值: (每秒 2125.00 行。)
+2019-04-09 12:52:56 : Export ECS.dbo.BasicDataQueue to file:E:\BCPdemo\ECS\BasicDataQueue.txt
+2019-04-09 12:52:56 : Execute command bcp ECS.dbo.BasicDataQueue out E:\BCPdemo\ECS\BasicDataQueue.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:56 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:56 : Export ECS.dbo.FileQueue to file:E:\BCPdemo\ECS\FileQueue.txt
+2019-04-09 12:52:56 : Execute command bcp ECS.dbo.FileQueue out E:\BCPdemo\ECS\FileQueue.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:56 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:56 : Export ECS.dbo.UpdateInformation to file:E:\BCPdemo\ECS\UpdateInformation.txt
+2019-04-09 12:52:56 : Execute command bcp ECS.dbo.UpdateInformation out E:\BCPdemo\ECS\UpdateInformation.txt -c -T -S localhost\GCPACSWS -U sa -P sa20021224$
+2019-04-09 12:52:57 : Execute command result: 
+开始复制...
+
+已复制 0 行。
+网络数据包大小(字节): 4096
+总时钟时间(毫秒)     : 1     
+2019-04-09 12:52:57 : Change the data of PrinterReg.txt: 
+2019-04-09 12:52:57 : Over write the file of  PrinterReg.txt: 1	dv6800          	0	213	128	65535	BLUE FILM           	400	400	21	300	1	CUBIC           	NORMAL          	1000023007	DV6800          
+2019-04-09 12:52:57 : Over write the file of  PrinterReg.txt: 2	Demo110         	0	213	128	65535	BLUE FILM           	400	400	21	300	1	CUBIC           	NORMAL          	1000023008	DV6850          
+2019-04-09 12:52:57 : Over write the file of  PrinterReg.txt: 3	IP86            	0	213	4	65535	BLUE FILM           	400	400	21	300	1	CUBIC           	NORMAL          	1000023009	DV6950          
+2019-04-09 12:52:57 : Over write the file of  PrinterReg.txt: 4	Demo112         	0	213	64	65535	BLUE FILM           	400	400	21	300	1	CUBIC           	NORMAL          	1000023010	DV6850          
+2019-04-09 12:52:57 : Change the data of NetAE.txt: 
+2019-04-09 12:52:57 : Over write the file of  NetAE.txt: 1000023004	From174                         	OTHERWGGC                       	SSCU            				10.184.129.174  	kpacsFIR        	548		1		CR,CT,DR,DX,IO,KO,MG,MR,NM,OT,PR,PT,RF,SR,US,XA			0	60	0	
+2019-04-09 12:52:57 : Over write the file of  NetAE.txt: 1000023005	WS179                           	OTHERWGGC                       	SSCU            				10.184.129.179  	ImageSuite179   	548		1		CR,CT,DR,DX,IO,KO,MG,MR,NM,OT,PR,PT,RF,SR,US,XA			0	60	0	
+2019-04-09 12:52:57 : Over write the file of  NetAE.txt: 1000023006	ImageSuite144                   	OTHERWGGC                       	SSCU            				10.184.129.144  	ImageSuite144   	548		1		CR,CT,DR,DX,IO,KO,MG,MR,NM,OT,PR,PT,RF,SR,US,XA			0	60	0	
+2019-04-09 12:52:57 : Over write the file of  NetAE.txt: 1000023007	dv6800                          	DCMPRINTER                      	PSCP            	 	 	 	10.184.129.113  	NER_6800        	5040	 	1	1	 	 	                	0	0	0	
+2019-04-09 12:52:57 : Over write the file of  NetAE.txt: 1000023008	Demo110                         	DCMPRINTER                      	PSCP            		 		10.184.129.110  	NER6850         	5040		1	1				0	0	0	
+2019-04-09 12:52:57 : Over write the file of  NetAE.txt: 1000023009	IP86                            	DCMPRINTER                      	PSCP            		 		10.184.129.86   	NER_6950        	5040		1	1				0	0	0	
+2019-04-09 12:52:57 : Over write the file of  NetAE.txt: 1000023010	Demo112                         	DCMPRINTER                      	PSCP            		 		10.184.129.112  	NER_6850        	5040		1	1				0	0	0	
+2019-04-09 12:52:57 : Over write the file of  NetAE.txt: 1000023011	From174                         	OTHERWGGC                       	SSCU            				10.184.129.174  	kpacsFIR        	548		1		CR,CT,DR,DX,IO,KO,MG,MR,NM,OT,PR,PT,RF,SR,US,XA			0	60	0	
+2019-04-09 12:52:57 : Over write the file of  NetAE.txt: 1000023012	WS179                           	OTHERWGGC                       	SSCU            				10.184.129.179  	ImageSuite179   	548		1		CR,CT,DR,DX,IO,KO,MG,MR,NM,OT,PR,PT,RF,SR,US,XA			0	60	0	
+2019-04-09 12:52:57 : Over write the file of  NetAE.txt: 1000023013	ImageSuite144                   	OTHERWGGC                       	SSCU            				10.184.129.144  	ImageSuite144   	548		1		CR,CT,DR,DX,IO,KO,MG,MR,NM,OT,PR,PT,RF,SR,US,XA			0	60	0	
+2019-04-09 12:52:57 : Change the data of AFP_Department.txt: 
+2019-04-09 12:52:57 : Over write the file of  AFP_Department.txt: 1		其他科室		1	
+2019-04-09 12:52:57 : Over write the file of  AFP_Department.txt: 3		其他科室		1	
+2019-04-09 12:52:57 : Change the data of Users.txt: 
+2019-04-09 12:52:57 : Over write the file of  Users.txt: 3	1                               	1	49CE5FB6D05148ACB66A				 	Administrator	0	1	2018-12-26 16:01:01.920	DX,DR
+2019-04-09 12:52:57 : Change the data of UserProfile.txt: 
+2019-04-09 12:52:57 : Over write the file of  UserProfile.txt: 1	Administrator	permission	CentralPrint	1	0	N                             
+2019-04-09 12:52:57 : Over write the file of  UserProfile.txt: 1	Administrator	permission	ChangeHoldFlag	1	0	N                             
+2019-04-09 12:52:57 : Over write the file of  UserProfile.txt: 1	Administrator	permission	ChangePrintMode	1	0	N                             
+2019-04-09 12:52:57 : Over write the file of  UserProfile.txt: 1	Administrator	permission	ChangePrintStatus	1	0	N                             
+2019-04-09 12:52:57 : Over write the file of  UserProfile.txt: 1	Administrator	permission	config	1	0	N                             
+2019-04-09 12:52:57 : Over write the file of  UserProfile.txt: 1	Administrator	permission	ConfigRole	1	0	N                             
+2019-04-09 12:52:57 : Over write the file of  UserProfile.txt: 1	Administrator	permission	ConfigSystem	1	0	N                             
+2019-04-09 12:52:57 : Over write the file of  UserProfile.txt: 1	Administrator	permission	ConfigUser	1	0	N                             
+2019-04-09 12:52:57 : Over write the file of  UserProfile.txt: 1	Administrator	permission	CorrectReconciliation	1	0	N                             
+2019-04-09 12:52:57 : Over write the file of  UserProfile.txt: 1	Administrator	permission	Delete	1	0	N                             
+2019-04-09 12:52:57 : Over write the file of  UserProfile.txt: 1	Administrator	permission	PrinterMonitor	1	0	N                             
+2019-04-09 12:52:57 : Over write the file of  UserProfile.txt: 1	Administrator	permission	PrintTaskManagement	1	0	N                             
+2019-04-09 12:52:57 : Over write the file of  UserProfile.txt: 1	Administrator	permission	QCLog	1	0	N                             
+2019-04-09 12:52:57 : Over write the file of  UserProfile.txt: 1	Administrator	permission	Reconciliation	1	0	N                             
+2019-04-09 12:52:57 : Over write the file of  UserProfile.txt: 1	Administrator	permission	Reprint	1	0	N                             
+2019-04-09 12:52:57 : Over write the file of  UserProfile.txt: 1	Administrator	permission	RestoreFilm	1	0	N                             
+2019-04-09 12:52:57 : Over write the file of  UserProfile.txt: 1	Administrator	permission	StatisticsReport	0	0	N                             
+2019-04-09 12:52:57 : Over write the file of  UserProfile.txt: 1	Administrator	permission	UploadTaskManagement	0	0	N                             
+2019-04-09 12:52:57 : Over write the file of  UserProfile.txt: 1	Administrator	permission	worklist	1	0	N                             
+2019-04-09 12:52:57 : Over write the file of  UserProfile.txt: 1	Administrator	worklistDisplayMode	onlyReport	false	0	N                             

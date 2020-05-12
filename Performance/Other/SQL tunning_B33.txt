@@ -1,0 +1,186 @@
+SQL1: 
+DELETE [AFP_MessageQueue]  WHERE [SN]=@1
+SELECT * FROM AFP_MessageQueue ORDER BY PublishDate
+
+Issue: There are too much logic read.
+
+
+SQL2:
+CREATE PROCEDURE [dbo].[AFP_SP_GetForwardJobs] 
+
+AS
+BEGIN
+
+	SET NOCOUNT ON;
+
+SELECT JobInstanceUID, ForwardStatus = CASE WHEN ForwardStatus IS NULL THEN -1 ELSE ForwardStatus END,
+ForwardFlag = CASE WHEN ForwardFlag IS NULL THEN -1 ELSE ForwardFlag END,ForwardDestination,ModalityType, CallingAE ,CallingIP,PatientName,PatientID,
+PatientType = CASE WHEN PatientType IS NULL THEN '' ELSE PatientType END
+FROM Printer.dbo.DeliveryJob J INNER JOIN printer.dbo.Session S
+ON J.SessionInstanceUID = S.SessionInstanceUID
+WHERE J.DeleteStatus = 0 AND (
+(ForwardStatus = -1 OR ForwardStatus IS NULL ) OR
+(ForwardStatus = 0 AND ForwardFlag = 1)
+)
+
+
+Issue: There are many lookup issues.
+Suggest: add index or include the columns with index. 
+
+
+
+SQL3:
+SELECT top 1  CONVERT(nvarchar(20),sn) as SN,sn as snNum, PatientID,AFP_PrintTerminalInfo.FilmPrinterID,PrinterReg.PrinterName,
+		AFP_PrintTerminalInfo.ReportPrinterFullName, EnableReportPrint,AFP_PrintTerminalInfo.TerminalID, ErrorCode,
+        CheckFilmPrinterState, CheckReportPrinterState, RC.PrinterDBID AS ColorFilmPrinterID, RC.PrinterName AS ColorFilmPrinterName,
+		CheckColorFilmPrinterState into #tempTable
+	FROM AFP_PrintTask  WITH(NOLOCK)
+	INNER JOIN AFP_PrintTerminalInfo ON
+		AFP_PrintTask.TerminalID= AFP_PrintTerminalInfo.TerminalID 
+	LEFT JOIN PrinterReg ON 
+		AFP_PrintTerminalInfo.FilmPrinterID=PrinterReg.PrinterDBID 
+	LEFT JOIN PrinterReg RC ON 
+		AFP_PrintTerminalInfo.ColorFilmPrinterId=RC.PrinterDBID 
+	WHERE AFP_PrintTask.TerminalID=@TerminalId AND AFP_PrintTask.Status =0 ORDER BY SN	
+    
+Issue: 
+The SQL execute too many time during the testing. Does it really need and shall we have operation can enhance the SQL.
+The SQL exist the lookup issues.
+The SQL will use the temp table.
+
+
+SQl4:
+CREATE FUNCTION [dbo].[AFP_F_GetFilmPrinterStatusByID] 
+(
+	-- Add the parameters for the function here
+	@TerminalID nvarchar(20),
+	@PrinterId int
+)
+RETURNS INT
+AS
+BEGIN
+	-- Declare the return variable here
+	DECLARE @val int
+
+	-- Add the T-SQL statements to compute the return value here
+	SELECT @val=(CASE 
+		WHEN dbo.AFP_PrintTerminalInfo.CheckFilmPrinterState = 0 THEN 8
+	    WHEN (ISNULL(dbo.AFP_FilmPrinterStatus.FilmCount1, 0) = 0)
+            AND (ISNULL(dbo.AFP_FilmPrinterStatus.FilmCount2, 0) = 0)
+            AND (ISNULL(dbo.AFP_FilmPrinterStatus.FilmCount3, 0) = 0) 
+            AND (dbo.AFP_FilmPrinterStatus.PrintState = 1) 
+            AND (dbo.AFP_FilmPrinterStatus.Status = 7) THEN 8
+		WHEN DateDiff(second,dbo.AFP_FilmPrinterStatus.RefreshTime, GetDate()) < dbo.AFP_F_GetTerminalStatusTimeout() THEN [Status] 
+		ELSE 6 END)
+    FROM dbo.AFP_PrintTerminalInfo 
+	LEFT JOIN AFP_FilmPrinterStatus ON FilmPrinterID = PrinterID AND PrinterID=@PrinterId
+	WHERE AFP_PrintTerminalInfo.TerminalID = @TerminalID
+
+	-- Return the result of the function
+
+Issue: The SQL execute many times during the testing.
+
+
+
+
+USE [WGGC]
+GO
+/****** Object:  StoredProcedure [dbo].[AFP_SP_GetPrintTask]    Script Date: 09/17/2019 15:45:15 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		Song Yang
+-- Create date: 2017/03/20
+-- Description:	Add more selected columns
+-- =============================================
+ALTER PROCEDURE [dbo].[AFP_SP_GetPrintTask]  
+	@TerminalId nvarchar(20)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	
+    -- Insert statements for procedure here
+	DECLARE @sn int = 0
+
+	IF exists (SELECT * FROM tempdb.dbo.sysobjects WHERE id = object_id(N'tempdb..#tempTable') and type='U')
+	BEGIN
+	  DROP TABLE #tempTable
+	END
+    
+	SELECT top 1  CONVERT(nvarchar(20),sn) as SN,sn as snNum, PatientID,AFP_PrintTerminalInfo.FilmPrinterID,PrinterReg.PrinterName,
+		AFP_PrintTerminalInfo.ReportPrinterFullName, EnableReportPrint,AFP_PrintTerminalInfo.TerminalID, ErrorCode,
+        CheckFilmPrinterState, CheckReportPrinterState, RC.PrinterDBID AS ColorFilmPrinterID, RC.PrinterName AS ColorFilmPrinterName,
+		CheckColorFilmPrinterState into #tempTable
+	FROM AFP_PrintTask  WITH(NOLOCK)
+	INNER JOIN AFP_PrintTerminalInfo ON
+		AFP_PrintTask.TerminalID= AFP_PrintTerminalInfo.TerminalID 
+	LEFT JOIN PrinterReg ON 
+		AFP_PrintTerminalInfo.FilmPrinterID=PrinterReg.PrinterDBID 
+	LEFT JOIN PrinterReg RC ON 
+		AFP_PrintTerminalInfo.ColorFilmPrinterId=RC.PrinterDBID 
+	WHERE AFP_PrintTask.TerminalID=@TerminalId AND AFP_PrintTask.Status =0 ORDER BY SN	
+    SELECT @sn = snNum FROM  #tempTable
+	UPDATE AFP_PrintTask SET ExecuteTime=GETDATE() WHERE SN=@sn 
+
+	SELECT * FROM #tempTable
+	IF exists (SELECT * FROM tempdb.dbo.sysobjects WHERE id = object_id(N'tempdb..#tempTable') and type='U')
+	BEGIN
+	  DROP TABLE #tempTable
+	END
+END
+
+
+
+Issue: The SQl used the temp table and exist lookup issues.
+Suggest: Use the CTE instead the temp table.
+
+
+
+
+SQL5:
+USE [WGGC]
+GO
+/****** Object:  StoredProcedure [dbo].[AFP_SP_GetPrintTaskStatus]    Script Date: 09/17/2019 15:45:19 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROCEDURE [dbo].[AFP_SP_GetPrintTaskStatus]
+	@TaskId numeric(12,0),
+	@TerminalId nvarchar(20)
+AS
+BEGIN
+	SET NOCOUNT ON;
+	SELECT * FROM AFP_View_PrintTaskStatus WHERE SN=@TaskId AND TerminalId=@TerminalId
+END
+
+
+USE [WGGC]
+GO
+
+/****** Object:  View [dbo].[AFP_View_PrintTaskStatus]    Script Date: 09/17/2019 15:46:15 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE VIEW [dbo].[AFP_View_PrintTaskStatus]
+AS
+SELECT     SN, PatientID, TerminalID, Status, ImageCount, ReportCount, EstimateTime, CASE Status WHEN 1 THEN DateDiff(second, ExecuteTime, GetDate()) 
+                      ELSE 0 END AS PrintingTime,ISNULL(ErrorCode, 0) AS ErrorCode, ISNULL(ErrorDesc,'') AS ErrorDesc, CreateTime, ExecuteTime, FinishTime, ISNULL(ImagePrinted,0) AS ImagePrinted, ISNULL(ReportPrinted,0) AS ReportPrinted,
+					  ColorImageCount,ISNULL(ColorImagePrinted,0) AS ColorImagePrinted
+FROM         dbo.AFP_PrintTask
+
+GO
+
+Issue: It seemed we need not use the AFP_View_PrintTaskStatus view.
+suggest: Use the SQL query statement or CTE insead the view.
+	
